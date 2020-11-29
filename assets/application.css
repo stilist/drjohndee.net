@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  color-scheme: light dark;
+
+  /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
+  --neutral-0--components: 1 1 0.9882; // #fffffc
+  --neutral-5--components: 0.9922 0.9882 0.9804; // #fdfcfa
+  --neutral-10--components: 0.9843 0.9804 0.9725; // #fbfaf8
+  --neutral-20--components: 0.9569 0.9529 0.9412; // #f4f3f0
+  --neutral-30--components: 0.9137 0.9098 0.9020; // #e9e8e6
+  // foreground color inverts here
+  --neutral-40--components: 0.8510 0.8510 0.8431; // #d9d9d7
+  --neutral-50--components: 0.7725 0.7686 0.7608; // #c5c4c2
+  --neutral-60--components: 0.6667 0.6627 0.6549; // #aaa9a7
+  --neutral-70--components: 0.5294 0.5294 0.5255; // #878786
+  --neutral-80--components: 0.3686 0.3686 0.3647; // #5e5e5d
+  --neutral-90--components: 0.1882 0.1843 0.1843; // #302f2f
+  --neutral-100--components: 0 0 0; // #000
+  --neutral-0: var(--neutral-0--components);
+  --neutral-5: var(--neutral-5--components);
+  --neutral-10: var(--neutral-10--components);
+  --neutral-20: var(--neutral-20--components);
+  --neutral-30: var(--neutral-30--components);
+  --neutral-40: var(--neutral-40--components);
+  --neutral-50: var(--neutral-50--components);
+  --neutral-60: var(--neutral-60--components);
+  --neutral-70: var(--neutral-70--components);
+  --neutral-80: var(--neutral-80--components);
+  --neutral-90: var(--neutral-90--components);
+  --neutral-100: var(--neutral-100--components);
+
+  --font-serif: 'EB Garamond', Garamond, serif;
+  --font-sans-serif: system-ui, sans-serif;
+
+  --foreground: var(--neutral-100);
+  --background: var(--neutral-0);
+
+  --invalid-data--components: 1 0 0.88; // #f0c
+  --invalid-data: var(--invalid-data--components);
+
+  --column-count: 12;
+  --column-width: 5rem;
+  --gutter-width: 0.5rem;
+  /* The grid columns are fairly small, so it's useful to have a pre-defined
+     variable for two columns (plus their gutter). */
+  --double-column: calc((var(--column-width) * 2) +
+                        var(--gutter-width));
+
+  --vertical-rhythm: calc(var(--gutter-width) * 2);
+
+  --gutter-count: calc(var(--column-count) - 1);
+  --content-width: calc(calc(var(--column-count) * var(--column-width)) +
+                        calc(var(--gutter-count) * var(--gutter-width)));
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --neutral-0: color(display-p3 var(--neutral-0--components));
+    --neutral-5: color(display-p3 var(--neutral-5--components));
+    --neutral-10: color(display-p3 var(--neutral-10--components));
+    --neutral-20: color(display-p3 var(--neutral-20--components));
+    --neutral-30: color(display-p3 var(--neutral-30--components));
+    // foreground color inverts here
+    --neutral-40: color(display-p3 var(--neutral-40--components));
+    --neutral-50: color(display-p3 var(--neutral-50--components));
+    --neutral-60: color(display-p3 var(--neutral-60--components));
+    --neutral-70: color(display-p3 var(--neutral-70--components));
+    --neutral-80: color(display-p3 var(--neutral-80--components));
+    --neutral-90: color(display-p3 var(--neutral-90--components));
+    --neutral-100: color(display-p3 var(--neutral-100--components));
+
+    --invalid-data: color(display-p3 var(--invalid-data--components));
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: var(--neutral-0);
+    --background: var(--neutral-100);
+  }
+}
+
+:lang(en-emodeng) {
+  quotes: '‘' '’' '“' '”';
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-serif);;
+  line-height: 1em;
+  margin: calc(var(--vertical-rhythm) * 3) auto
+          calc(var(--vertical-rhythm) * 2) auto;
+  min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: var(--vertical-rhythm);
+}
+ol > li,
+ul > li {
+  line-height: var(--vertical-rhythm);
+  margin-bottom: var(--vertical-rhythm);
+}
+ol ol, ol ul,
+ul ol, ul ul {
+  margin-bottom: 0;
+  margin-left: calc(var(--gutter-width) * 4);
+  margin-top: var(--vertical-rhythm);
+}
+blockquote {
+  border-left: 4px solid var(--neutral-20);
+  color: var(--neutral-80);
+  margin-left: calc((var(--gutter-width) * -2) - 4px);
+  padding-left: calc(var(--gutter-width) * 2);
+}
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    border-left: 4px solid var(--neutral-80);
+    color: var(--neutral-20);
+  }
+}
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.125;
+  margin: calc(var(--vertical-rhythm) * 1.8) 0 var(--vertical-rhythm);
+}
+h3 {
+  font-size: 1.625rem;
+  margin-top: 2.5rem;
+}
+h2 + h3 {
+  margin-top: 0;
+}
+h4 {
+  font-size: 1.25rem;
+}
+ins::before,
+ins::after {
+  font-family: var(--font-sans-serif);
+}
+ins::before {
+  content: '[';
+}
+ins::after {
+  content: ']';
+}
+p {
+  line-height: calc(var(--vertical-rhythm) * 2);
+}
+
+
+#site-header,
+.page-content {
+  margin-left: calc(var(--vertical-rhythm) * 2);
+  margin-right: calc(var(--vertical-rhythm) * 2);
+  max-width: var(--content-width);
+  width: var(--content-width);
+}
+#site-header {
+  margin-bottom: calc((var(--vertical-rhythm) * 3.6));
+}
+#site-header h1 {
+  cursor: default;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: calc(var(--vertical-rhythm) * 2.4);
+  margin: 0;
+  text-align: left;
+}
+
+
+.post,
+.post-summary {
+  font-family: var(--font-serif);
+}
+.post-header p {
+  margin-bottom: calc(var(--vertical-rhythm) * 0.6);
+  margin-top: calc(var(--vertical-rhythm) * 1.1);
+  padding: calc(var(--vertical-rhythm) * 2.5) 0 0;
+}
+.post-author,
+.post-source,
+.post-title {
+  display: block;
+}
+.post-title {
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: calc(var(--vertical-rhythm) * 3);
+  position: relative;
+}
+.post-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: calc(var(--vertical-rhythm) * 2);
+  margin-top: var(--vertical-rhythm);
+}
+.post-content {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-bottom: calc(var(--vertical-rhythm) * 2);
+}
+.post-content blockquote {
+  margin-bottom: var(--vertical-rhythm);
+  margin-top: var(--vertical-rhythm);
+}
+.post-content figure {
+  box-shadow: inset 0 0 1px var(--neutral-50);
+  position: relative;
+}
+.post-content figure img {
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.post-content h3 {
+  margin-bottom: calc(var(--vertical-rhythm) * 1.45);
+  margin-top: calc(var(--vertical-rhythm) * 2);
+}
+.post-content img {
+  max-width: 100%;
+}
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.post-content tbody tr {
+  border-top: 1px solid var(--foreground);
+}
+.post-content td + td {
+  border-left: 1px solid var(--foreground);
+}
+.post-content td {
+  padding: 2px 7px;
+}
+.post-content > ol,
+.post-content > ul {
+  margin-top: calc(var(--vertical-rhythm) * 1.5);
+}
+.post-content > ol + h2,
+.post-content > ul + h2 {
+  margin-top: calc(var(--vertical-rhythm) * 2.25);
+}
+.post-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+#annotations {
+  margin-top: calc(var(--vertical-rhythm) * 2.5);
+}
+#annotations blockquote {
+  margin-top: calc(var(--vertical-rhythm) * 1.5);
+}
+
+
+time[datetime],
+.data-money,
+.data-person,
+.data-place,
+.data-source {
+  margin-left: 1.3em;
+  position: relative;
+}
+time[datetime]::before,
+.data-money::before,
+.data-person::before,
+.data-place::before,
+.data-source::before {
+  font-size: 0.8em;
+  font-style: normal;
+  left: -1.7em;
+  position: absolute;
+}
+time[datetime]::before {
+  content: '📅';
+}
+time[datetime*='T']::before {
+  content: '⌚️';
+}
+.data-person::before {
+  content: '👤';
+}
+.data-place::before {
+  content: '🗺';
+}
+.data-source::before {
+  content: '📚';
+}
+.data-money {
+  margin-left: 1.25em;
+}
+.data-money::before {
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 0.75em;
+  left: -1.25em;
+  top: 0.2em;
+  width: 0.75em;
+}
+.data-money::before {
+  background-color: #060;
+}
+
+
+.debug time,
+.debug .is-unknown-reference {
+  background-color: var(--invalid-data);
+  color: var(--background);
+}
+.debug time[datetime] {
+  background-color: transparent;
+  color: inherit;
+}
+
+
+#scale {
+  display: none;
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--content-width);
+  right: 0;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: -1;
+}
+#scale .row {
+  display: flex;
+  border-bottom: 1px solid var(--foreground);
+  opacity: 0.4;
+}
+#scale span {
+  background-color: #f00;
+  display: block;
+  height: calc(var(--vertical-rhythm) - 1px);
+  opacity: 0.4;
+  width: var(--column-width);
+}
+#scale span + span {
+  margin-left: var(--gutter-width);
+}

@@ -1,0 +1,11 @@
+<header id=site-header role=banner>
+  <h1>
+    {%- if page.url != "/" -%}
+    <a href="{{ "/" | relative_url }}">
+    {%- endif -%}
+    {{ site.title | escape }}
+    {%- if page.url != "/" -%}
+    </a>
+    {%- endif -%}
+  </h1>
+</header>

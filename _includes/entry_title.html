@@ -1,0 +1,36 @@
+{%- assign entry = include.entry -%}
+{%- assign hyperlink = include.hyperlink | default: false -%}
+{%- assign title_tag = include.title_tag | default: "span" -%}
+
+{%- if entry.location -%}
+{%- assign country = entry.location.country | default: entry.author.country -%}
+{%- else -%}
+{%- assign country = entry.author.country -%}
+{%- endif -%}
+
+<{{ title_tag }} class="post-title p-name" itemprop="name headline">
+  {%- if hyperlink -%}
+  <a class=post-link href="{{ entry.url | relative_url }}">
+    {{ entry.date | time_text: country }}
+  </a>
+  {%- else -%}
+  {{ page.date | time_text: author.country }}
+  {%- endif -%}
+</{{ title_tag }}>
+
+{{ page.date | time_tag: author.country, "dt-published", "datePublished" }}
+
+{%- if entry.author -%}
+<span class=post-author>
+  Written by&#32;
+  <span itemprop=author class="p-author h-card">
+    {{ entry.author | person_tag }}
+  </span>
+</span>
+{%- endif -%}
+
+{%- if entry.source -%}
+<span class=post-source>Source:&#32;
+  {{ entry.source | source_tag: entry.source_location }}
+</span>
+{%- endif -%}

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class=home>
+  {%- if page.title -%}
+  <h1 class=page-heading>{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <ul class=post-list>
+    {%- for post in site.posts -%}
+    {%- assign author = post.author | collection_entry: "people" -%}
+    <li class=post-summary>
+      {%- include entry_title.html entry=post hyperlink=true title_tag="h3" -%}
+      {%- if site.show_excerpts -%}
+      <div lang={{ post.lang | default: author.lang | default: site.lang | default: "en" }}>
+        {{ post.excerpt }}
+      </div>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</div>

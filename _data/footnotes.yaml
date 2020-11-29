@@ -1,0 +1,32 @@
+"1577-01-16-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 2
+  text: >-
+    <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+      dwelt in a house
+      neere the water side, a little westward from the church
+      <ins>at
+        {{ "Mortlake, England" | place_tag: "Mortlake" }}</ins>.
+      The buildings which
+      {{ "Crane, Francis" | person_tag: "Sir <abbr title='Francis'>Fr.</abbr> Crane" }}
+      erected for working of tapestry hangings, and are still
+      (<time datetime="1673">1673</time>)
+      employed to that use, were built upon the ground whereon
+      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+      laboratory and other roomes for that use stood. Upon the west is a square
+      court, and the next is the house wherein
+      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+      dwelt, now inhabited by one
+      {{ "Selbury" | person_tag: "<abbr>Mr.</abbr> Selbury" }},
+      and further west his garden.</q>
+      —<cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788,
+        <abbr title="folio">fol.</abbr>
+        149.
+      </cite>
+      The same account says that
+      <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        was wel beloved and respected of all persons of quality thereabouts,
+        who very often invited him to their houses or came to his.</q>

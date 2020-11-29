@@ -1,0 +1,61 @@
+"Dee, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Dee
+      type: familyName
+  birthDate: 1527-07-13
+  deathDate: 1608-12
+  id: https://www.wikidata.org/entity/Q201484
+  livedIn:
+    - Mortlake, England
+  country: England
+  lang: en-emodeng
+  source: The Private Diary of Dr. John Dee
+"Dyer, Edward":
+  name:
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Dyer
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16869738
+  birthDate: 1543
+  deathDate: 1607
+  id: https://www.wikidata.org/entity/Q5342682
+  knows:
+    - Dee, John
+  source: The Private Diary of Dr. John Dee
+"Sidney, Philip":
+  name:
+    - text: Philip
+      type: givenName
+      id: https://www.wikidata.org/entity/Q827311
+    - text: Sidney
+      type: familyName
+      id: https://www.wikidata.org/entity/Q13583278
+  birthDate: 1554-11-30
+  deathDate: 1587-10-17
+  id: https://www.wikidata.org/entity/Q315509
+  knows:
+    - Dee, John
+    - Walsingham, Frances
+  source: The Private Diary of Dr. John Dee
+
+"Earl of Leicester":
+  name:
+    - text: Robert
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4927937
+    - text: Dudley
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16869701
+    - text: Earl of Leicester
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1532-06-24
+  deathDate: 1588-09-04
+  id: https://www.wikidata.org/entity/Q318017
+  knows:
+    - Dee, John

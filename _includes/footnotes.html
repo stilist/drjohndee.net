@@ -1,0 +1,20 @@
+{%- if include.references.size > 0 -%}
+<section id=annotations-footnotes>
+  <h1>Footnotes</h1>
+
+  <ul>
+    {%- for reference in include.references -%}
+    {%- assign footnote = reference | collection_entry: "footnotes" -%}
+    {%- if footnote -%}
+    <li>
+      <p lang="{{ footnote.lang | default: include.lang }}">{{ footnote.text | liquify }}</p>
+
+      <p>Source:&#32;
+        {{ footnote.source | source_tag: footnote.source_location }}
+      </p>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
