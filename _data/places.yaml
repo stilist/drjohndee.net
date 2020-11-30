@@ -115,6 +115,11 @@
   region: Yorkshire
   country: England
   url: https://www.sthelenwithstmartinyork.org.uk
+"St Julians, Newport, Wales":
+  locality: St Julians
+  region: Newport
+  country: Wales
+  id: https://www.wikidata.org/entity/Q7593879
 "St Martin le Grand, York, England":
   latitude: 53.9593
   longitude: -1.08459
@@ -139,6 +144,12 @@
   locality: London
   country: England
   id: https://www.wikidata.org/entity/Q499565
+"Windsor Castle, England":
+  latitude: 51.4838
+  longitude: -0.60483
+  region: Windsor
+  country: England
+  id: https://www.wikidata.org/entity/Q42646
 "Wymondham, England":
   locality: Wymondham
   region: South Norfolk
