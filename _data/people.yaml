@@ -1,3 +1,44 @@
+"Ashmole, Elias":
+  name:
+    - text: Elias
+      type: givenName
+      id: https://www.wikidata.org/entity/Q11878157
+    - text: Ashmole
+      type: familyName
+  birthDate: 1617-06-02
+  birthPlace: Lichfield, England
+  deathDate: 1692-05-28
+  deathPlace: Lambeth, England
+  id: https://www.wikidata.org/entity/Q471406
+  gender: male
+"Besbich, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Besbyche
+      type: familyName
+  birthDate: 1555
+  gender: male
+  footnotes:
+    - "thomas-besbich"
+  knows:
+    - Dee, John
+    - Murfyn, Vincent
+"Besbyche, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Besbyche
+      type: familyName
+  gender: male
+  children:
+    - Besbich, Thomas
+  gender: male
+"Dayrell, Thomas":
+  birthDate: 1611
+  deathDate: 1669
 "Dee, John":
   name:
     - text: John
@@ -8,11 +49,11 @@
   birthDate: 1527-07-13
   deathDate: 1608-12
   id: https://www.wikidata.org/entity/Q201484
+  gender: male
   livedIn:
     - Mortlake, England
   country: England
   lang: en-emodeng
-  source: The Private Diary of Dr. John Dee
 "Dyer, Edward":
   name:
     - text: Edward
@@ -24,9 +65,273 @@
   birthDate: 1543
   deathDate: 1607
   id: https://www.wikidata.org/entity/Q5342682
+  gender: male
   knows:
     - Dee, John
-  source: The Private Diary of Dr. John Dee
+"Edward, Roger":
+  name:
+    - text: Edward
+      type: familyName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Roger
+      type: givenName
+  gender: male
+"Grey, Henry":
+  name:
+    - text: Henry
+      type: givenName
+      id:
+    - text: Grey
+      type: familyName
+      id:
+    - text: 1<sup>st</sup> Duke of Suffolk
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: 3<sup>rd</sup> Marquess of Dorset
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1517-01-17
+  deathDate: 1554-02-23
+  deathPlace: Tower Hill, London, England
+  id: https://www.wikidata.org/entity/Q4490179
+  gender: male
+"Gilbert, Humphrey":
+  name:
+    - text: Humphrey
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1637225
+    - text: Gilbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158185
+  birthDate: 1539-09-09
+  birthPlace: Devon, England
+  deathDate: 1583-09-09
+  knows:
+    - Dee, John
+  id: https://www.wikidata.org/entity/Q447200
+"Halliwell, James":
+  name:
+    - text: James
+      type: givenName
+      id: https://www.wikidata.org/entity/Q677191
+    - text: Halliwell-Phillips
+      type: familyName
+  birthDate: 1820-06-21
+  birthPlace: London, England
+  deathDate: 1889-01-03
+  gender: male
+"Hatton, Christopher":
+  name:
+    - text: Christopher
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1084472
+    - text: Hatton
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37438520
+  birthDate: 1540
+  deathDate: 1591-11-20
+  id: https://www.wikidata.org/entity/Q1216173
+  gender: male
+"Herbert, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Herbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870718
+  birthDate: 1553
+  deathDate: 1593-03-04
+  id: https://www.wikidata.org/entity/Q8012240
+  gender: male
+  knows:
+    - Dee, John
+"Hilton, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Hilton
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158419
+  gender: male
+  livedIn:
+    - Fulham, England
+  knows:
+    - Dee, John
+"Hooper, Walter":
+  name:
+    - text: Walter
+      type: givenName
+      id: https://www.wikidata.org/entity/Q499249
+    - text: Hooper
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870871
+  gender: male
+  livedIn:
+    - Chiswick, England
+  knows:
+    - Dee, John
+"Hynde, Edward":
+  name:
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Hynde
+      type: familyName
+      id: https://www.wikidata.org/entity/Q59482529
+  deathDate: 1632
+  footnotes:
+    - "edward-hynde"
+  gender: male
+  knows:
+    - Dee, John
+  url: https://www.geni.com/people/Sir-Edward-Hynde/6000000031478818173
+"Hynde, Francis":
+  name:
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Hynde
+      type: familyName
+      id: https://www.wikidata.org/entity/Q59482529
+  birthDate: 1532
+  deathDate: 1596-03-21
+  id: https://www.wikidata.org/entity/Q16240009
+  gender: male
+  children:
+    - Hynde, Edward
+    - Hynde, William
+"Hynde, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Hynde
+      type: familyName
+      id: https://www.wikidata.org/entity/Q59482529
+  deathDate: 1606
+  gender: male
+"Lyne, Ellen":
+  name:
+    - text: Ellen
+      type: givenName
+      id: https://www.wikidata.org/entity/Q2235472
+    - text: Lyne
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1668082
+  gender: female
+  knows:
+    - Dee, John
+"Murfyn, Vincent":
+  name:
+    - text: Vincent
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4928254
+    - text: Murfyn
+      type: familyName
+  gender: male
+  knows:
+    - Dee, John
+"Newsam, Bartholomew":
+  name:
+    - text: Bartholomew
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4926315
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+  birthDate: 1530
+  birthPlace: York, England
+  deathDate: 1593
+  id: https://www.wikidata.org/entity/Q267855
+  gender: male
+  livedIn:
+    # @see https://en.wikisource.org/entity/Newsam,_Bartholomew_(DNB00)
+    - Strand, England
+  knows:
+    - Dee, John
+    # @see https://en.wikisource.org/entity/Newsam,_Bartholomew_(DNB00)
+    - Sidney, Philip
+  spouse:
+    - Newsam, Parnell
+  children:
+    - Newsam, William
+    - Newsam, Edward
+    - Newsam, Margaret
+    - Newsam, Rose
+"Newsam, Edward":
+  name:
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+"Newsam, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+"Newsam, Margaret":
+  name:
+    - text: Margaret
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4963612
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+"Newsam, Parnell":
+  name:
+    - text: Parnell
+      type: givenName
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+  birthName:
+    - text: Parnell
+      type: givenName
+    - text: Younge
+      type: familyName
+      id: https://www.wikidata.org/entity/Q64041118
+  gender: female
+"Newsam, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+  birthDate: 1570-12-27
+"Newsam, Rose":
+  name:
+    - text: Rose
+      type: givenName
+      id: https://www.wikidata.org/entity/Q3585338
+    - text: Newsam
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37531037
+"Radford, Emma Louisa":
+  name:
+    - text: Emma
+      type: givenName
+      id: https://www.wikidata.org/entity/Q541194
+    - text: Louisa
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16420967
+    - text: Radford
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16881784
+  birthDate: 1856
+  deathDate: 1937-04-26
+  id: https://www.wikidata.org/entity/Q18910924
+  gender: male
+  spouses:
+    - Radford, George Heynes
 "Sidney, Philip":
   name:
     - text: Philip
@@ -38,11 +343,91 @@
   birthDate: 1554-11-30
   deathDate: 1587-10-17
   id: https://www.wikidata.org/entity/Q315509
+  gender: male
   knows:
     - Dee, John
     - Walsingham, Frances
-  source: The Private Diary of Dr. John Dee
+"Simon, Alexander":
+  name:
+    - text: Alexander
+      type: givenName
+      id: https://www.wikidata.org/entity/Q923
+    - text: Simon
+      type: familyName
+      id: https://www.wikidata.org/entity/Q2287331
+  gender: male
+  knows:
+    - Dee, John
+"Urseau, Nicholas":
+  name:
+    - text: Nicholas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q42771
+    - text: Urseau
+      type: familyName
+  knows:
+    - Queen Mary
+    - Queen Elizabeth
+"Walsingham, Francis":
+  name:
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Walsingham
+      type: familyName
+      id: https://www.wikidata.org/entity/Q21428403
+  birthDate: 1532
+  birthPlace: Chislehurst, England
+  deathDate: 1590-04-06
+  deathPlace: London, England
+  id: https://www.wikidata.org/entity/Q138409
+  gender: male
+  children:
+    - Walsingham, Frances
+  knows:
+    - Dee, John
+    - Sidney, Philip
+  spouses:
+    - St. Barbe, Ursula
 
+"Duke of Bedford":
+  name:
+    - text: Jasper
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1665973
+    - text: Tudor
+      type: familyName
+      id: https://www.wikidata.org/entity/Q7851265
+    - text: Duke of Bedford
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q1264488
+    - text: Earl of Pembroke
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q956588
+  birthDate: 1431-11
+  birthPlace: Hatfield, Hertfordshire, England
+  deathDate: 1495-12-21
+  deathPlace: Thornbury Castle, England
+  id: https://www.wikidata.org/entity/Q385679
+  gender: male
+"Earl of Bedford":
+  name:
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Russell
+      type: familyName
+    - text: Earl of Bedford
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1527
+  deathDate: 1585-07-28
+  id: https://www.wikidata.org/entity/Q2084556
+  gender: male
+  knows:
+    - Dee, John
 "Earl of Leicester":
   name:
     - text: Robert
@@ -56,6 +441,49 @@
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: 1532-06-24
   deathDate: 1588-09-04
+  gender: male
   id: https://www.wikidata.org/entity/Q318017
+  knows:
+    - Dee, John
+"Queen Elizabeth":
+  name:
+    - text: Elizabeth
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16870774
+    - text: Ⅰ
+      type: additionalName
+      alternateType: https://w3id.org/pnv#disambiguatingDescription
+    - text: Queen of England and Ireland
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1533-09-07
+  birthPlace: Palace of Placentia
+  deathDate: 1603-04-03
+  deathPlace: Richmond Palace, Surrey, England
+  coronation: 1558-11-17
+  gender: female
+  id: https://www.wikidata.org/entity/Q7207
+"Queen Mary":
+  name:
+    - text: Marie
+      type: givenName
+      id: https://www.wikidata.org/entity/Q734578
+    - text: Stuart
+      type: familyName
+      id: https://www.wikidata.org/entity/Q23041619
+    - text: Monarch of Scotland
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1542-12-08
+  birthPlace: Linlithgow, Scotland
+  deathDate: 1587-02-08
+  deathPlace: Fotheringay Castle, England
+  gender: female
+  id: https://www.wikidata.org/entity/Q131412
+"Rogers, William":
+  deathDate: 1577-11-03
+  gender: male
+  livedIn:
+    - Mortlake, England
   knows:
     - Dee, John

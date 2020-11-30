@@ -12,10 +12,11 @@ module Jekyll
     end
 
     def place_tag(key, display_text = nil)
-      return "<span class='data-place is-unknown-reference'>#{display_text}</span>" if !display_text.nil?
-
+      fallback = "<span class='data-place #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</span>"
       record = data_collection_entry('places', key)
       return fallback if record.nil?
+
+      return "<span class='data-place'>#{display_text}</span>" if !display_text.nil?
 
       hidden_keys = %w(
         latitude
@@ -45,14 +46,11 @@ module Jekyll
       return fallback if markup.empty?
 
       <<~EOM
-      #{display_text}
-      <ins>
       <span class="data-place" itemscope itemtype="http://schema.org/Place">
       <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      #{markup.join(' ')}
+      #{markup.join(', ')}
       </span>
       </span>
-      </ins>
       EOM
     end
   end

@@ -7,11 +7,14 @@
     {%- assign footnote = reference | collection_entry: "footnotes" -%}
     {%- if footnote -%}
     <li>
-      <p lang="{{ footnote.lang | default: include.lang }}">{{ footnote.text | liquify }}</p>
-
-      <p>Source:&#32;
-        {{ footnote.source | source_tag: footnote.source_location }}
-      </p>
+      <figure>
+        {{ footnote.text | liquify }}
+        {%- if footnote.source -%}
+        <figcaption>
+          Source: {{ footnote.source | source_tag: footnote.source, footnote.source_location }}
+        </figcaption>
+        {%- endif -%}
+      </figure>
     </li>
     {%- endif -%}
     {%- endfor -%}

@@ -12,7 +12,15 @@ module Jekyll
     end
 
     def person_tag(key, display_text = nil)
-      return "<span class='data-person is-unknown-reference'>#{display_text}</span>" if !display_text.nil?
+      return if key.nil?
+
+      fallback = "<span class='data-person #{UNKNOWN_REFERENCE_CLASS}'>#{key}</span>"
+      parts = data_collection_entry('people', key)
+
+      if !display_text.nil?
+        return fallback if parts.nil?
+        return "<span class='data-person'>#{display_text}</span>"
+      end
 
       combined = combine_person_name_parts(key) do |part|
         attributes = {
@@ -24,7 +32,7 @@ module Jekyll
 
         "<span #{attributes}>#{part['text']}</span>"
       end
-      return "<span class='data-person is-unknown-reference'>#{key}</span>" if combined.nil?
+      return fallback if combined.nil?
 
       <<~EOM
       <span class="data-person" itemscope itemtype="http://schema.org/Person">

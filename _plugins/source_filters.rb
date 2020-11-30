@@ -11,15 +11,15 @@ module Jekyll
       data_collection_entry('sources', key)&.dig('title') || key
     end
 
-    def source_tag(key, source_location = nil)
+    def source_tag(key, display_text = nil, source_location = nil)
       record = data_collection_entry('sources', key)
-      return "<cite class='data-source is-unknown-reference'>#{key}</cite>" if record.nil?
+      return "<cite class='data-source #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</cite>" if record.nil?
 
-      person = person_tag(record['author']) || '(unknown author)'
-      title = "<span class='data-source'>#{record['title']}</span>"
+      title = "<span class='data-source' lang=#{record['language']}>#{display_text || record['title']}</span>"
+      volume = "volume #{record['volume_number']}" if record.key?('volume_number')
       parts = [
-        person,
         title,
+        volume,
         source_location,
       ].compact
 

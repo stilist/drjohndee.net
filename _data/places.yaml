@@ -1,7 +1,158 @@
+"British Museum":
+  latitude: 51.519489
+  longitude: -0.127022
+  streetAddress: Great Russell St
+  locality: London Borough of Camden
+  country: England
+  id: https://www.wikidata.org/entity/Q6373
+"Castle Camps, England":
+  latitude: 52.0569
+  longitude: 0.370319
+  region: Cambridgeshire
+  country: England
+  id: https://www.wikidata.org/wiki/Q5050015
+"Chiswick, England":
+  locality: Chiswick
+  region: Greater London
+  country: England
+  id: https://www.wikidata.org/entity/Q845015
+"Coney Street, York, England":
+  locality: York
+  region: Yorkshire
+  country: England
 "Dee's house, Mortlake, England":
   latitude: 51.469593
   longitude: -0.262421
   locality: Mortlake
   region: London
   country: England
+"Estotiland":
+  country: Canada
+  id: https://www.wikidata.org/entity/Q3059031
+  url: https://en.wikipedia.org/wiki/Estotiland
+"Fleet, England":
+  locality: Fleet
+  region: South Holland
+  country: England
+  id: https://www.wikidata.org/entity/Q5458375
+"Friesland":
+  country: Habsburg Netherlands
+  region: Friesland
+  id: https://www.wikidata.org/wiki/Q770
+"Fulham, England":
+  locality: Fulham
+  region: Greater London
+  country: England
+  id: https://www.wikidata.org/entity/Q3367868
+"Greenland":
+  region: Greenland
+  country: Denmark–Norway
+  id: https://www.wikidata.org/wiki/Q223
+"Kent, England":
+  region: Kent
+  country: England
+  id: https://www.wikidata.org/entity/Q67479626
+"Llanllwni, Wales":
+  locality: Llanllwni
+  region: Carmarthenshire
+  country: Wales
+  id: https://www.wikidata.org/entity/Q6661644
+  footnotes:
+    - "llanlluney-wales-1"
+    - "llanlluney-wales-2"
+"Llanllwni Church, Wales":
+  latitude: 52.049
+  longitude: -4.2276
+  locality: Llanllwni
+  region: Carmarthenshire
+  country: Wales
+  url: http://llanllwni.cymru/clubs/church/
+"London, England":
+  locality: London
+  region: Greater London
+  country: England
+  id: https://www.wikidata.org/entity/Q84
+"Mortlake, England":
+  locality: Mortlake
+  region: London
+  country: England
   id: https://www.wikidata.org/entity/Q2456238
+"Newsam's house, Strand, England":
+  locality: City of Westminster
+  country: England
+"Palace of Placentia":
+  latitude: 51.482222
+  longitude: -0.006667
+  streetAddress: Palace of Placentia
+  locality: Royal Borough of Greenwich
+  country: England
+  id: https://www.wikidata.org/entity/Q1424839
+"Palace of Whitehall":
+  streetAddress: Palace of Whitehall
+  locality: City of Westminster
+  region: Middlesex
+  country: England
+  id: https://www.wikidata.org/entity/Q391620
+"Pembroke, Wales":
+  locality: Pembroke
+  region: Pembrokeshire
+  country: Wales
+  id: https://www.wikidata.org/entity/Q1762242
+"Safavid Iran":
+  country: Iran
+  id: https://www.wikidata.org/entity/Q18234383
+"Somerset House":
+  streetAddress: Somerset House, Strand
+  locality: City of Westminster
+  country: England
+  id: https://www.wikidata.org/entity/Q1344889
+"St Clement Danes parish, Westminster, England":
+  locality: City of Westminster
+  country: England
+  id: https://www.wikidata.org/entity/Q7592834
+"St Helen with St Martin, York, England":
+  locality: York
+  region: Yorkshire
+  country: England
+  url: https://www.sthelenwithstmartinyork.org.uk
+"St Martin le Grand, York, England":
+  latitude: 53.9593
+  longitude: -1.08459
+  locality: York
+  region: Yorkshire
+  country: England
+  id: https://www.wikidata.org/entity/Q17549993
+  url: https://www.sthelenwithstmartinyork.org.uk
+"Strand, England":
+  locality: City of Westminster
+  country: England
+  id: https://www.wikidata.org/entity/Q756819
+"Temple Bar, England":
+  latitude: 51.5143
+  longitude: -0.09955
+  locality: City of London
+  country: England
+  id: https://www.wikidata.org/entity/Q1256932
+"Tower Hill, London, England":
+  latitude: 51.5085
+  longitude: -0.0782
+  locality: London
+  country: England
+  id: https://www.wikidata.org/entity/Q499565
+"Wymondham, England":
+  locality: Wymondham
+  region: South Norfolk
+  country: England
+  id: https://www.wikidata.org/entity/Q1787230
+"Wymondham Abbey, England":
+  latitude: 52.570556
+  longitude: 1.108333
+  locality: Wymondham
+  region: South Norfolk
+  country: England
+  id: https://www.wikidata.org/entity/Q8039988
+"York, England":
+  locality: York
+  region: Yorkshire
+  country: England
+  id: https://www.wikidata.org/entity/Q42462

@@ -5,31 +5,58 @@
   color-scheme: light dark;
 
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
-  --neutral-0--components: 1 1 0.9882; // #fffffc
-  --neutral-5--components: 0.9922 0.9882 0.9804; // #fdfcfa
-  --neutral-10--components: 0.9843 0.9804 0.9725; // #fbfaf8
-  --neutral-20--components: 0.9569 0.9529 0.9412; // #f4f3f0
-  --neutral-30--components: 0.9137 0.9098 0.9020; // #e9e8e6
-  // foreground color inverts here
-  --neutral-40--components: 0.8510 0.8510 0.8431; // #d9d9d7
-  --neutral-50--components: 0.7725 0.7686 0.7608; // #c5c4c2
-  --neutral-60--components: 0.6667 0.6627 0.6549; // #aaa9a7
-  --neutral-70--components: 0.5294 0.5294 0.5255; // #878786
-  --neutral-80--components: 0.3686 0.3686 0.3647; // #5e5e5d
-  --neutral-90--components: 0.1882 0.1843 0.1843; // #302f2f
-  --neutral-100--components: 0 0 0; // #000
-  --neutral-0: var(--neutral-0--components);
-  --neutral-5: var(--neutral-5--components);
-  --neutral-10: var(--neutral-10--components);
-  --neutral-20: var(--neutral-20--components);
-  --neutral-30: var(--neutral-30--components);
-  --neutral-40: var(--neutral-40--components);
-  --neutral-50: var(--neutral-50--components);
-  --neutral-60: var(--neutral-60--components);
-  --neutral-70: var(--neutral-70--components);
-  --neutral-80: var(--neutral-80--components);
-  --neutral-90: var(--neutral-90--components);
-  --neutral-100: var(--neutral-100--components);
+  --neutral-0--components: 1 1 0.9882; /* #fffffc */
+  --neutral-5--components: 0.9922 0.9882 0.9804; /* #fdfcfa */
+  --neutral-10--components: 0.9843 0.9804 0.9725; /* #fbfaf8 */
+  --neutral-20--components: 0.9569 0.9529 0.9412; /* #f4f3f0 */
+  --neutral-30--components: 0.9137 0.9098 0.9020; /* #e9e8e6 */
+  /* foreground color inverts here */
+  --neutral-40--components: 0.8510 0.8510 0.8431; /* #d9d9d7 */
+  --neutral-50--components: 0.7725 0.7686 0.7608; /* #c5c4c2 */
+  --neutral-60--components: 0.6667 0.6627 0.6549; /* #aaa9a7 */
+  --neutral-70--components: 0.5294 0.5294 0.5255; /* #878786 */
+  --neutral-80--components: 0.3686 0.3686 0.3647; /* #5e5e5d */
+  --neutral-90--components: 0.1882 0.1843 0.1843; /* #302f2f */
+  --neutral-100--components: 0 0 0; /* #000 */
+  --neutral-0: hsl(var(--neutral-0--components));
+  --neutral-5: hsl(var(--neutral-5--components));
+  --neutral-10: hsl(var(--neutral-10--components));
+  --neutral-20: hsl(var(--neutral-20--components));
+  --neutral-30: hsl(var(--neutral-30--components));
+  --neutral-40: hsl(var(--neutral-40--components));
+  --neutral-50: hsl(var(--neutral-50--components));
+  --neutral-60: hsl(var(--neutral-60--components));
+  --neutral-70: hsl(var(--neutral-70--components));
+  --neutral-80: hsl(var(--neutral-80--components));
+  --neutral-90: hsl(var(--neutral-90--components));
+  --neutral-100: hsl(var(--neutral-100--components));
+
+  /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
+  --accent-0--components: 1.0000 0.9804 0.9490; /* #fffaf2 */
+  --accent-5--components: 0.9961 0.9412 0.8992; /* #fef0d6 */
+  --accent-10--components: 0.9922 0.8980 0.7333; /* #fde5bb */
+  --accent-20--components: 0.9804 0.8078 0.5255; /* #face86 */
+  --accent-30--components: 0.9608 0.7137 0.3412; /* #f5b657 */
+  --accent-40--components: 0.9294 0.6157 0.1882; /* #ed9d30 */
+  --accent-50--components: 0.8941 0.5098 0.0745; /* #e48213 */
+  --accent-60--components: 0.8431 0.4000 0; /* #d76600 */
+  /* foreground color inverts here */
+  --accent-70--components: 0.7803 0.3176 0; /* #c75100 */
+  --accent-80--components: 0.6020 0.2352 0; /* #b33c00 */
+  --accent-90--components: 0.6196 0.1568 0; /* #9e2800 */
+  --accent-100--components: 0.5294 0.0980 0; /* #871900 */
+  --accent-0: hsl(var(--accent-0--components));
+  --accent-5: hsl(var(--accent-5--components));
+  --accent-10: hsl(var(--accent-10--components));
+  --accent-20: hsl(var(--accent-20--components));
+  --accent-30: hsl(var(--accent-30--components));
+  --accent-40: hsl(var(--accent-40--components));
+  --accent-50: hsl(var(--accent-50--components));
+  --accent-60: hsl(var(--accent-60--components));
+  --accent-70: hsl(var(--accent-70--components));
+  --accent-80: hsl(var(--accent-80--components));
+  --accent-90: hsl(var(--accent-90--components));
+  --accent-100: hsl(var(--accent-100--components));
 
   --font-serif: 'EB Garamond', Garamond, serif;
   --font-sans-serif: system-ui, sans-serif;
@@ -37,8 +64,8 @@
   --foreground: var(--neutral-100);
   --background: var(--neutral-0);
 
-  --invalid-data--components: 1 0 0.88; // #f0c
-  --invalid-data: var(--invalid-data--components);
+  --invalid-data--components: 1 0 0.88; /* #f0c */
+  --invalid-data: hsl(var(--invalid-data--components));
 
   --column-count: 12;
   --column-width: 5rem;
@@ -61,7 +88,7 @@
     --neutral-10: color(display-p3 var(--neutral-10--components));
     --neutral-20: color(display-p3 var(--neutral-20--components));
     --neutral-30: color(display-p3 var(--neutral-30--components));
-    // foreground color inverts here
+    /* foreground color inverts here */
     --neutral-40: color(display-p3 var(--neutral-40--components));
     --neutral-50: color(display-p3 var(--neutral-50--components));
     --neutral-60: color(display-p3 var(--neutral-60--components));
@@ -71,6 +98,20 @@
     --neutral-100: color(display-p3 var(--neutral-100--components));
 
     --invalid-data: color(display-p3 var(--invalid-data--components));
+
+    --accent-0: color(display-p3 var(--accent-0--components));
+    --accent-5: color(display-p3 var(--accent-5--components));
+    --accent-10: color(display-p3 var(--accent-10--components));
+    --accent-20: color(display-p3 var(--accent-20--components));
+    --accent-30: color(display-p3 var(--accent-30--components));
+    --accent-40: color(display-p3 var(--accent-40--components));
+    --accent-50: color(display-p3 var(--accent-50--components));
+    --accent-60: color(display-p3 var(--accent-60--components));
+    /* foreground color inverts here */
+    --accent-70: color(display-p3 var(--accent-70--components));
+    --accent-80: color(display-p3 var(--accent-80--components));
+    --accent-90: color(display-p3 var(--accent-90--components));
+    --accent-100: color(display-p3 var(--accent-100--components));
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -78,6 +119,9 @@
     --foreground: var(--neutral-0);
     --background: var(--neutral-100);
   }
+}
+@media (max-width: 960px) {
+  --column-count: 9;
 }
 
 :lang(en-emodeng) {
@@ -98,6 +142,26 @@ body {
   margin: calc(var(--vertical-rhythm) * 3) auto
           calc(var(--vertical-rhythm) * 2) auto;
   min-height: 100vh;
+}
+a {
+  color: var(--accent-80);
+}
+a:visited {
+  color: var(--accent-100);
+}
+a:hover {
+  color: var(--accent-60);
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--accent-20);
+  }
+  a:visited {
+    color: var(--accent-40);
+  }
+  a:hover {
+    color: var(--accent-10);
+  }
 }
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -170,7 +234,6 @@ p {
   margin-left: calc(var(--vertical-rhythm) * 2);
   margin-right: calc(var(--vertical-rhythm) * 2);
   max-width: var(--content-width);
-  width: var(--content-width);
 }
 #site-header {
   margin-bottom: calc((var(--vertical-rhythm) * 3.6));
@@ -294,6 +357,9 @@ time[datetime]::before {
 time[datetime*='T']::before {
   content: '⌚️';
 }
+.data-money::before {
+  content: '🪙';
+}
 .data-person::before {
   content: '👤';
 }
@@ -302,21 +368,6 @@ time[datetime*='T']::before {
 }
 .data-source::before {
   content: '📚';
-}
-.data-money {
-  margin-left: 1.25em;
-}
-.data-money::before {
-  border-radius: 50%;
-  content: '';
-  display: block;
-  height: 0.75em;
-  left: -1.25em;
-  top: 0.2em;
-  width: 0.75em;
-}
-.data-money::before {
-  background-color: #060;
 }
 
 

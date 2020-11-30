@@ -14,15 +14,14 @@ module Jekyll
       end
     end
 
-    def time_tag(input, country, classes = nil, itemprop = nil)
+    def time_tag(input, country, itemprop = nil)
       attributes = []
-      attributes << "class='#{classes}'" if !classes.nil?
       attributes << "itemprop='#{itemprop}'" if !itemprop.nil?
 
       begin
         date = input.is_a?(Time) ? input.to_date : DateTime.parse(input)
         formatted = date.strftime('%A, %-d %B %Y')
-        attributes << "datetime='#{date.iso8601}'"
+        attributes << "datetime=#{date.iso8601}"
       rescue
         formatted = input
       end

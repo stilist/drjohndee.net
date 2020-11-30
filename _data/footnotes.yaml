@@ -2,23 +2,24 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 2
   text: >-
-    <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
-      dwelt in a house
-      neere the water side, a little westward from the church
-      <ins>at
-        {{ "Mortlake, England" | place_tag: "Mortlake" }}</ins>.
-      The buildings which
-      {{ "Crane, Francis" | person_tag: "Sir <abbr title='Francis'>Fr.</abbr> Crane" }}
-      erected for working of tapestry hangings, and are still
-      (<time datetime="1673">1673</time>)
-      employed to that use, were built upon the ground whereon
-      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
-      laboratory and other roomes for that use stood. Upon the west is a square
-      court, and the next is the house wherein
-      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
-      dwelt, now inhabited by one
-      {{ "Selbury" | person_tag: "<abbr>Mr.</abbr> Selbury" }},
-      and further west his garden.</q>
+    <blockquote><p>
+      <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        dwelt in a house
+        neere the water side, a little westward from the church
+        <ins>at
+          {{ "Mortlake, England" | place_tag: "Mortlake" }}</ins>.
+        The buildings which
+        {{ "Crane, Francis" | person_tag: "Sir <abbr title='Francis'>Fr.</abbr> Crane" }}
+        erected for working of tapestry hangings, and are still
+        (<time datetime=1673>1673</time>)
+        employed to that use, were built upon the ground whereon
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+        laboratory and other roomes for that use stood. Upon the west is a square
+        court, and the next is the house wherein
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        dwelt, now inhabited by one
+        {{ "Selbury" | person_tag: "<abbr>Mr.</abbr> Selbury" }},
+        and further west his garden.</q>
       —<cite>
         <abbr title="manuscript">MS.</abbr>
         <abbr title="Ashmole">Ashm.</abbr>
@@ -30,3 +31,343 @@
       <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
         was wel beloved and respected of all persons of quality thereabouts,
         who very often invited him to their houses or came to his.</q>
+    </p></blockquote>
+"1577-05-01-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 3
+  text: >-
+    <blockquote><p>
+      This of course is his celebrated
+      {{ "Monas Hieroglyphica" | source_tag }},
+      frequently printed, and the nature of which
+      {{ "Halliwell, James" | person_tag: "I" }}
+      attempted to explain in a paper read before the
+      {{ "Somerset House" | place_tag: "Society of Antiquaries" }}.
+      {{ "Herbert, William" | person_tag: "<abbr>Mr.</abbr> Herbert" }},
+      according to
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788</cite>,
+      <q lang="en-emodeng">dwelt then in
+        {{ "Mortlake, England" | place_tag: "Mortlack" }}
+        and was an intimate friend of
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s.</q>
+    </p></blockquote>
+"1577-08-19-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 3
+  text: >-
+    <blockquote><p>
+      This was his work printed in
+      <time datetime=1577>1577</time>
+      under the title of
+      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials pertayning to the perfect Art of Navigation" }},
+      in folio, now a book of the greatest rarity. The original manuscript of
+      it is in
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1789</cite>,
+      and
+      {{ "Dee, John" | person_tag: "Dee" }}’s
+      own copy of the published work with
+      <abbr title="manuscript">MS.</abbr>
+      notes and additions is preserved in the
+      {{ "British Museum" | place_tag: "British Museum" }}.
+      In his
+      <cite>
+        Letter Apologetical,
+        <abbr title="quarto">4to.</abbr>
+        <abbr>Lond.</abbr>
+        1603</cite>,
+      he cites this work under the title of
+      <span lang="en-emodeng">The Brytish Monarchie</span>,
+      as having been written in the year
+      <time datetime=1576>1576</time>.
+    </p></blockquote>
+"1577-11-28-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 4
+  text: >-
+    <blockquote><p>
+      {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
+      informs us that
+      {{ "Walsingham, Francis" | person_tag: "Walsingham" }}
+      continued for a length of time one of
+      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+      best patrons.
+    </p></blockquote>
+
+"bartholomew-newsam":
+  source: Dictionary of National Biography, 1885–1900
+  source_location: pages 366, 367
+  text: >-
+    <p>
+      Biography of
+      {{ "Newsam, Bartholomew" | person_tag: "Bartylmew Newsam" }}:
+    </p>
+    <blockquote>
+      <p>
+        <ins>C</ins>lockmaker to
+        {{ "Queen Elizabeth" | person_tag: "Queen Elizabeth" }}, probably born
+        at
+        {{ "York, England" | place_tag: "York" }},
+        carried on business in
+        {{ "London, England" | place_tag: "London" }}
+        as a clockmaker, apparently from the date of Queen Elizabeth’s
+        accession. He obtained from the crown a
+        <time datetime=P30Y>thirty years</time>’
+        lease of
+        {{ "Newsam's house, Strand, England" | place_tag: "premises" }}
+        in
+        {{ "Strand, England" | place_tag: "the Strand" }},
+        near
+        {{ "Somerset House" | place_tag: "Somerset House" }},
+        <time datetime=1565-04-08>on 8 April 1565</time>,
+        and there he resided through life. He was skilled in his craft, and was
+        on familiar terms with
+        {{ "Sidney, Philip" | person_tag: "Sir Philip Sidney" }}
+        and other men of influence at court.
+        <time datetime=1572>About 1572</time>
+        the post of clock-master to the queen was promised him on the death of
+        {{ "Urseau, Nicholas" | person_tag: "Nicholas Urseau (Ursiu, Veseau, or Orshowe)" }}.
+        The latter had held the office under
+        {{ "Queen Mary" | person_tag: "Queen Mary" }},
+        and was reappointed to it by Queen Elizabeth. Newsam succeeded to the
+        office
+        <time datetime=1582>before 1582</time>.
+        <time datetime=1583-06-04>On 4 June 1583</time>
+        he received, under the privy seal dated
+        <time datetime=1583-05-27>27 May previous</time>,
+        <q lang="en-emodeng">{{ "GBP 32 shillings 8 pence" | currency_tag: "32<abbr>s.</abbr> 8<abbr>d.</abbr>" }}
+          for mending of clockes</q>
+        during
+        <time datetime=1582/P1Y>the past year</time>.
+        With the post of clockmaker he combined that of
+        clock-keeper; the two offices had been held by different persons in
+        Queen Mary’s reign, and Newsam appears to have been the first
+        Englishman appointed as clock-keeper.
+      </p>
+
+      <p><time datetime=1583-08-05>On 5 <abbr>Aug.</abbr> 1583</time> Newsam
+        wrote
+        <q lang=en-emodeng>to the ryghte honorable his very speciall good
+          ffriend
+          {{ "Walsingham, Francis" | person_tag: "<abbr>Sr</abbr> ffrancis Walsingham" }},
+          knighte,</q>
+        beseeching him
+        <q lang=en-emodeng>to be mindfull unto her Matie of my booke
+          concerninge my long and chargeable suite, wherein I have procured
+          {{ "Sidney, Philip" | person_tag: "Sir Philipp Sidney" }}
+          to move you for th’ augmentinge of the yeares (if
+          by any meanes the same may be);</q>
+        <abbr>i.e.</abbr>
+        probably for an extension of his lease of
+        {{ "Newsam's house, Strand, England" | place_tag: "the house in the Strand" }}.
+        <time datetime=1583-09-06>On 6 Sept. 1583</time>, by letters patent, a
+        lease for
+        <time datetime="P21Y">twenty-one years</time>
+        was granted to Newsam of lands
+        <q lang=en-emodeng>at
+          {{ "Fleet, England" | place_tag: "Fleete in Lincolnshire" }},
+          formerly the property of
+          {{ "Grey, Henry" | person_tag: "Henry, marquis of Dorset, late duke of Suffolk" }};
+          also a water-mill
+          {{ "Wymondham, England" | place_tag: "at Wymondham, Norfolk" }},
+          with fishings,
+          <abbr>&c.</abbr>,
+          formerly property of
+          {{ "Wymondham Abbey, England" | place_tag: "the monastery of Wymondham" }}
+          <ins>…</ins>
+          also all
+          <a href=https://en.wiktionary.org/wiki/weir#English>the weare</a>
+          of
+          {{ "Llanllwni, Wales" | place_tag: "Llanlluney, <abbr>co.</abbr> Pembroke" }},
+          and two garden plots lying in
+          {{ "Firkett's Fields" | place_tag: Firkett’s Fields }},
+          in
+          {{ "St Clement Danes parish, Westminster, England" | place_tag: "the parish of <abbr>St.</abbr> Clement Danes" }}
+          without
+          {{ "Temple Bar, England" | place_tag: "Temple Bar" }},</q>
+        <abbr>&c.</abbr>
+        The property in
+        {{ "Pembroke, Wales" | place_tag: "Pembroke" }}
+        had formerly belonged to
+        {{ "Duke of Bedford" | person_tag: "Jasper, duke of Bedford" }}.
+        Newsam also owned lands in
+        {{ "Coney Street, York, England" | place_tag: "Coney Street" }},
+        in
+        {{ "St Helen with St Martin, York, England" | place_tag: "the parish of <abbr>St.</abbr> Martin, York" }}
+        (will). He died before
+        <time datetime=1593-12-18>18 <abbr>Dec.</abbr> 1593</time>,
+        when his will was proved by
+        {{ "Newsam, Parnell" | person_tag: "Parnell" }}, his widow.
+        Her maiden name was Younge, and he had married her at
+        {{ "St Martin le Grand, York, England" | place_tag: "the church of <abbr>St.</abbr> Mary-le-Strand" }}
+        <time datetime=1565-09-10>on 10 <abbr>Sept.</abbr> 1565</time>.
+        He left four children:
+        {{ "Newsam, William" | person_tag: "William" }} (born
+        <time datetime=1570-12-27>27 Dec. 1570</time>),
+        {{ "Newsam, Edward" | person_tag: "Edward" }},
+        {{ "Newsam, Margaret" | person_tag: "Margaret" }},
+        and
+        {{ "Newsam, Rose" | person_tag: "Rose" }}.
+        Edward,
+        <q lang=en-emodeng>on condicion that he become a clockmaker as I am,</q>
+        was to have his father’s tools, except his
+        <q lang=en-emodeng>best Vice save one, a beckhorne to stand upon borde,
+          a greate fore-hammer, and <ins>two</ins> hand hammers, and a grete
+          long beckhorne in my back shoppe;</q>
+        all these were to go to
+        {{ "Newsam, John" | person_tag: "John Newsam" }}
+        of
+        {{ "York, England" | place_tag: "York" }},
+        a clockmaker, and presumably a relative.
+      </p>
+
+      <p>
+        There is in
+        {{ "British Museum" | place_tag: "the British Museum" }}
+        a striking clock made by Newsam, which is still in almost untouched
+        condition. It is of gilded brass, richly engraved. It is very small,
+        not more than four inches high, and contains a compass; it has, of
+        course, no pendulum, and but one hand. It is signed
+        <q lang=en-emodeng>{{ "Newsam, Bartholomew" | person_tag: "Bartilmewe Newsum" }}.</q>
+        The case is divided into two stories, the going train being in the
+        upper, and the striking train in the lower story. Both the trains are
+        arranged vertically, so that the clock is wound from underneath. The
+        wheels are of iron, or perhaps steel, the plates and frames being of
+        brass. It has fusees cut for catgut, which are long, and only slightly
+        tapered. The hand is driven directly from the going fusee at right
+        angles, by means of a contrate-wheel. The escapement is of the verge
+        kind, and it has no balance-spring.
+      </p>
+
+      <p>
+      The bequests in Newsam’s will confirm the evidence of his skill afforded
+      by this clock. Mention is made there of
+      <q lang=en-emodeng>a strickinge clocke in a silken purse, and a
+        sonnedyall to stand upon a post in his garden;</q>
+      of
+      <q lang=en-emodeng>a cristall Jewell with a watch in it garnished with
+        goulde;</q>
+      of
+      <q lang=en-emodeng>a sonnedyall of copper gylte;</q>
+      of
+      <q lang=en-emodeng>a watch gylte to shew the hower;</q>
+      of
+      <q lang=en-emodeng>a great dyall in a greate boxe of ivory, with two and
+        thirteth poyntes of the compos;</q>
+      and of a
+      <q lang=en-emodeng>chamber clocke of five markes price.</q>
+      </p>
+    </blockquote>
+"edward-hynde":
+  source: Wikipedia
+  url: https://en.wikipedia.org/w/index.php?title=Francis_Hynde&oldid=960873924#Children
+  text: >-
+    <blockquote><p>
+      <ins>W</ins>as admitted Fellow-Commoner at
+      {{ "Corpus Christi College, England" | place_tag: "Corpus Christi College, Cambridge" }}
+      <time datetime=1571>in 1571</time>
+      and matriculated
+      <time datetime=1572>in 1572</time>. The Cambridgeshire
+      <a href=https://en.wikipedia.org/wiki/Heraldic_visitation>Visitation</a>
+      of
+      <time datetime=1619>1619</time>,
+      seemingly made in his behalf, shows him to have married
+      {{ "Hynde, Allice" | person_tag: "Allice" }}
+      daughter of
+      {{ "Billett, John" | person_tag: "John Billett" }}
+      of
+      {{ "London, England" | place_tag: "London" }},
+      having several children. He became the husband of
+      {{ "Norton, Mary" | person_tag: "Mary Norton" }}
+      (daughter of
+      {{ "Norton, Thomas" | person_tag: "Thomas Norton" }}
+      of
+      {{ "Hinxton, England" | place_tag: "Hinxton" }}
+      and
+      {{ "St Lowe, Margaret" | person_tag: "Margaret <abbr>St</abbr> Lowe" }}),
+      but
+      <time datetime=1630><abbr>c.</abbr>1630</time>
+      remarried and was survived by
+      {{ "Hynde, Barbara" | person_tag: "his wife Barbara née Powell" }},
+      relict of
+      {{ "Dyrell, Francis" | person_tag: "Francis Dayrell" }}
+      of
+      {{ "Castle Camps, England" | place_tag: "Castle Camps, Cambridgeshire" }},
+      and was therefore stepfather to
+      {{ "Dayrell, Thomas" | person_tag: "Sir Thomas Dayrell" }}.
+      After
+      {{ "Hynde, William" | person_tag: "his brother" }}’s
+      <time datetime=1632>death</time>
+      he succeeded to
+      {{ "Hynde, Francis" | person_tag: "his father" }}’s
+      estate, and was knighted
+      <time datetime=1615>in 1615</time>.
+    </p></blockquote>
+"llanlluney-wales-1":
+  source: Tables and Indexes, vol. 41
+  source_location: page 462
+  text: >-
+    <blockquote><p>
+      Making a Road from a Place called
+      {{ "Nantgaredig, Wales" | place_tag: "Nantgaredig" }},
+      adjoining the Turnpike Road leading from
+      {{ "Llandilo Fawr, Wales" | place_tag: "the Town of Llandilofawr" }}
+      to
+      {{ "Carmarthen, Wales" | place_tag: "the Town of Carmarthen" }},
+      through
+      {{ "Brechfa, Wales" | place_tag: "the Village of Brechfâ" }},
+      to
+      {{ "River Teifi, Wales" | place_tag: "the River Tivy" }}
+      near
+      {{ "Llanllwni Church, Wales" | place_tag: "Llanllooney Church" }}
+      <ins>…</ins>
+    </p></blockquote>
+"llanlluney-wales-2":
+  source: Tables and Indexes, vol. 41
+  source_location: page 463
+  text: >-
+    <blockquote><p>
+      {{ "Llanllwni Church, Wales" | place_tag: "Llanllooney Church" }},
+      from
+      {{ "Nantgaredig, Wales" | place_tag: "Nantgaredig" }},
+      through
+      {{ "Brechfa, Wales" | place_tag: "Brechfâ" }},
+      to
+      {{ "River Teifi, Wales" | place_tag: "the River Tivy" }}
+      <ins>…</ins>
+    </p></blockquote>
+"oyle-of-hypericon":
+  text: >-
+    <p>
+      <q lang-"en-emodeng">Oyle of Hypericon</q>
+      refers to a oil infusion of
+      <span itemscope itemtype=http://schema.org/DietarySupplement>
+        <meta itemprop=sameAs content=https://www.wikidata.org/wiki/Q156935>
+        <span itemprop=activeIngredient>Hypericum</span>,
+        commonly known as
+        <span itemprop=nonProprietaryName>
+          <a itemprop=url href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
+            <abbr>St.</abbr> John’s wort</a></span></span>.
+    </p>
+"thomas-besbich":
+  text: >-
+    <p>
+      {{ "New England Historical and Genealogical Register" | source_tag: "New England Historical and Genealogical Register", "pages 33–34" }}
+      lists wills, genealogy, and parish registry entries for a Besbeech family in
+      {{ "Kent, England" | place_tag }},
+      compiled by
+      {{ "Bartlett, Elizabeth French" | person_tag: "Elizabeth French" }}.
+      The Register includes
+      <q>1554
+        {{ "Besbich, Thomas" | person_tag: "Thomas" }}
+        son of
+        {{ "Besbyche, William" | person_tag: "William Besbyche" }}
+        christened
+        <time datetime=1555-03-21>11 March [1554/1555]</time></q>,
+      a reasonable candidate for the Thomas Besbich referenced in the text.
+    </p>

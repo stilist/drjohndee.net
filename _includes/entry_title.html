@@ -18,7 +18,7 @@
   {%- endif -%}
 </{{ title_tag }}>
 
-{{ page.date | time_tag: author.country, "dt-published", "datePublished" }}
+{{ page.date | time_tag: author.country, "datePublished" }}
 
 {%- if entry.author -%}
 <span class=post-author>
@@ -31,6 +31,6 @@
 
 {%- if entry.source -%}
 <span class=post-source>Source:&#32;
-  {{ entry.source | source_tag: entry.source_location }}
+  {{ entry.source | source_tag: entry.source, entry.source_location }}
 </span>
 {%- endif -%}
