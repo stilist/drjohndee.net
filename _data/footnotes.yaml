@@ -154,7 +154,7 @@
         wrote
         <q lang=en-emodeng>to the ryghte honorable his very speciall good
           ffriend
-          {{ "Walsingham, Francis" | person_tag: "<abbr>Sr</abbr> ffrancis Walsingham" }},
+          {{ "Walsingham, Francis" | person_tag: "<abbr title='Sieur'>S<sup>r</sup></abbr> ffrancis Walsingham" }},
           knighte,</q>
         beseeching him
         <q lang=en-emodeng>to be mindfull unto her Matie of my booke
