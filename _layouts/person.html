@@ -19,5 +19,48 @@ layout: default
     {%- endif -%}
   </header>
 
+  <dl>
+    {%- if record.birthDate or record.birthPlace -%}
+    <dt>Birth</dt>
+    <dd>
+      {%- if record.birthDate -%}
+      <time itemprop=birthDate datetime={{ record.birthDate }}>
+        {{ record.birthDate }}
+      </time>
+      {%- endif -%}
+      {%- if record.birthPlace -%}
+      {{ record.birthPlace | place_tag }}
+      {%- endif -%}
+    </dd>
+    {%- endif -%}
+
+    {%- if record.deathDate or record.deathPlace -%}
+    <dt>Death</dt>
+    <dd>
+      {%- if record.deathDate -%}
+      <time itemprop=deathDate datetime={{ record.deathDate }}>
+        {{ record.deathDate }}
+      </time>
+      {%- endif -%}
+      {%- if record.deathPlace -%}
+      {{ record.deathPlace | place_tag }}
+      {%- endif -%}
+    </dd>
+    {%- endif -%}
+
+    {%- if record.livedIn -%}
+    <dt>Lived in</dt>
+    <dd>
+      <ul>
+        {%- for location in record.livedIn -%}
+        <li itemprop=homeLocation>
+          {{ location | place_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </dd>
+    {%- endif -%}
+  </dl>
+
   {%- include annotations.html reference=record -%}
 </article>
