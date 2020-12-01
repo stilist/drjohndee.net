@@ -23,9 +23,10 @@ module Jekyll
         source_location,
       ].compact
 
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{sanitize_url_key(key)}.html")
       <<~EOM
       <cite>
-        #{parts.join(', ')}
+        <a href='#{url}' itemprop=url>#{parts.join(', ')}</a>
       </cite>
       EOM
     end

@@ -7,8 +7,8 @@ module Jekyll
   module PersonFilters
     include ::DataCollection
 
-    def person_name(key, default_text = nil)
-      default_text || key
+    def person_name(key, type = 'name')
+      combine_person_name_parts(key, type: type) || key
     end
 
     def person_tag(key, display_text = nil)
@@ -16,10 +16,11 @@ module Jekyll
 
       fallback = "<span class='data-person #{UNKNOWN_REFERENCE_CLASS}'>#{key}</span>"
       parts = data_collection_entry('people', key)
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_url_key(key)}.html")
 
       if !display_text.nil?
         return fallback if parts.nil?
-        return "<span class='data-person'>#{display_text}</span>"
+        return "<a href=#{url} class='data-person'>#{display_text}</a>"
       end
 
       combined = combine_person_name_parts(key) do |part|
@@ -34,23 +35,25 @@ module Jekyll
       end
       return fallback if combined.nil?
 
+
       <<~EOM
-      <span class="data-person" itemscope itemtype="http://schema.org/Person">
-      #{combined}
+      <span class="data-person" itemscope itemtype=http://schema.org/Person>
+        <a href=#{url} itemprop=url>#{combined}</a>
       </span>
       EOM
     end
 
     private
 
-    def person_name_parts(key)
-      data_collection_entry('people', key)&.dig('name')
+    def person_name_parts(key, type: 'name')
+      data_collection_entry('people', key)&.dig(type)
     end
 
-    def combine_person_name_parts(key)
-      parts = person_name_parts(key)
+    def combine_person_name_parts(key, type: 'name')
+      parts = person_name_parts(key, type: type)
       if parts.nil?
-        Jekyll.logger.info("Unable to find name data for '#{key}'")
+        Jekyll.logger.info('Jekyll::PersonFilters',
+                           "Unable to find #{type} data for '#{key}'")
         return
       end
 

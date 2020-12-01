@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{%- assign record = page.key | collection_entry: "people" -%}
+<article class="post">
+  {%- if record.id -%}
+  <link itemprop=sameAs href={{ record.id }}>
+  {%- endif -%}
+
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.key | person_name }}
+
+    </h1>
+    {%- if record.birthName -%}
+    <h2 class="post-subtitle">
+      born {{ page.key | person_name: "birthName" }}
+    </h2>
+    {%- endif -%}
+  </header>
+</article>

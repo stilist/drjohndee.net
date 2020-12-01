@@ -7,8 +7,15 @@ module Jekyll
   module PlaceFilters
     include ::DataCollection
 
-    def place_name(key, default_text = nil)
-      default_text || key
+    NON_DISPLAYED_PARTS = %w(
+      id
+      latitude
+      longitude
+      url
+    ).freeze
+
+    def place_name(key)
+      combine_place_name_parts(key) || key
     end
 
     def place_tag(key, display_text = nil)
@@ -16,42 +23,61 @@ module Jekyll
       record = data_collection_entry('places', key)
       return fallback if record.nil?
 
-      return "<span class='data-place'>#{display_text}</span>" if !display_text.nil?
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['places']}/#{sanitize_url_key(key)}.html")
+      return "<a href=#{url} class='data-place'>#{display_text}</a>" if !display_text.nil?
 
-      hidden_keys = %w(
-        latitude
-        longitude
-      ).freeze
-      known_keys = [
-        hidden_keys,
-        'streetAddress',
-      ].flatten
-       .map { |key| [key, key] }
+      known_keys = NON_DISPLAYED_PARTS.map { |key| [key, key] }
        .to_h
       known_keys.merge!({
+        'streetAddress' => 'address',
         'locality' => 'addressLocality',
         'region' => 'addressRegion',
         'country' => 'addressCountry',
       }).freeze
-      markup = known_keys.map do |internal, external|
-        next if !record.key?(internal)
 
-        if hidden_keys.include?(internal)
-          "<meta itemprop=#{external} content='#{record[internal]}'>"
+      combined = combine_place_name_parts(key) do |part, value|
+        if NON_DISPLAYED_PARTS.include?(part)
+          "<meta itemprop=#{part} content='#{value}'>"
         else
-          "<span itemprop=#{external}>#{record[internal]}</span>"
+          "<span itemprop=#{part}>#{value}</span>"
         end
       end
-      markup.compact!
-      return fallback if markup.empty?
+      return fallback if combined.nil?
 
       <<~EOM
-      <span class="data-place" itemscope itemtype="http://schema.org/Place">
-      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      #{markup.join(', ')}
-      </span>
+      <span class="data-place" itemscope itemtype=http://schema.org/Place>
+        <span itemprop="address" itemscope itemtype=http://schema.org/PostalAddress>
+          <a href='#{url}' itemprop=url>#{combined}</a>
+        </span>
       </span>
       EOM
+    end
+
+    private
+
+    def place_name_parts(key)
+      data_collection_entry('places', key)
+    end
+
+    def combine_place_name_parts(key)
+      parts = place_name_parts(key)
+      if parts.nil?
+        Jekyll.logger.info('Jekyll::PlaceFilters',
+                           "Unable to find name data for '#{key}'")
+        return
+      end
+
+      parts.reject! { |part, _| NON_DISPLAYED_PARTS.include?(part) }
+      formatted = parts.map do |part, value|
+        if block_given?
+          yield(part, value)
+        else
+          value
+        end
+      end
+
+      joined = formatted.compact.join(', ')
+      joined if joined != ''
     end
   end
 end

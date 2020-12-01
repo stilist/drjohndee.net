@@ -12,8 +12,14 @@ COLLECTION_MAP_PLURAL = COLLECTION_MAP_SINGULAR.map { |key, value| [value, key] 
 module DataCollection
   UNKNOWN_REFERENCE_CLASS = 'is-unknown-reference'
 
-  def data_collection_entry(collection, input)
+  def data_collection_entry(collection, key)
     @context.registers[:site].
-      data.dig(collection, input)
+      data.dig(collection, key)
+  end
+
+  def sanitize_url_key(key)
+    key.gsub(/[^\w-]/, '-').
+      gsub(/-{2,}/, '-').
+      downcase
   end
 end
