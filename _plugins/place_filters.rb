@@ -7,15 +7,23 @@ module Jekyll
   module PlaceFilters
     include ::DataCollection
 
-    NON_DISPLAYED_PARTS = %w(
+    HIDDEN_PARTS = %w(
       id
       latitude
       longitude
       url
     ).freeze
+    UNSTRUCTURED_PARTS = %w(
+      footnotes
+    ).freeze
 
     def place_name(key)
-      combine_place_name_parts(key) || key
+      combined = combine_place_name_parts(key) do |part, value|
+        next if HIDDEN_PARTS.include?(part)
+        value
+      end
+
+      combined || key
     end
 
     def place_tag(key, display_text = nil)
@@ -26,7 +34,7 @@ module Jekyll
       url = relative_url("/#{COLLECTION_MAP_PLURAL['places']}/#{sanitize_url_key(key)}.html")
       return "<a href=#{url} class='data-place'>#{display_text}</a>" if !display_text.nil?
 
-      known_keys = NON_DISPLAYED_PARTS.map { |key| [key, key] }
+      known_keys = HIDDEN_PARTS.map { |key| [key, key] }
        .to_h
       known_keys.merge!({
         'streetAddress' => 'address',
@@ -36,7 +44,7 @@ module Jekyll
       }).freeze
 
       combined = combine_place_name_parts(key) do |part, value|
-        if NON_DISPLAYED_PARTS.include?(part)
+        if HIDDEN_PARTS.include?(part)
           "<meta itemprop=#{part} content='#{value}'>"
         else
           "<span itemprop=#{part}>#{value}</span>"
@@ -67,7 +75,7 @@ module Jekyll
         return
       end
 
-      parts.reject! { |part, _| NON_DISPLAYED_PARTS.include?(part) }
+      parts.reject! { |part, _| UNSTRUCTURED_PARTS.include?(part) }
       formatted = parts.map do |part, value|
         if block_given?
           yield(part, value)
