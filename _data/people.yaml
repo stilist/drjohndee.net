@@ -247,11 +247,9 @@
   id: https://www.wikidata.org/entity/Q267855
   gender: male
   livedIn:
-    # @see https://en.wikisource.org/entity/Newsam,_Bartholomew_(DNB00)
     - Strand, England
   knows:
     - Dee, John
-    # @see https://en.wikisource.org/entity/Newsam,_Bartholomew_(DNB00)
     - Sidney, Philip
   spouse:
     - Newsam, Parnell
@@ -260,6 +258,8 @@
     - Newsam, Edward
     - Newsam, Margaret
     - Newsam, Rose
+  footnotes:
+    - "bartholomew-newsam"
 "Newsam, Edward":
   name:
     - text: Edward
