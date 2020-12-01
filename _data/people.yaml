@@ -247,10 +247,12 @@
   id: https://www.wikidata.org/entity/Q267855
   gender: male
   livedIn:
-    - Strand, England
+    - Newsam's House, Strand, England
   knows:
     - Dee, John
     - Sidney, Philip
+    - Walsingham, Francis
+    - Queen Elizabeth
   spouse:
     - Newsam, Parnell
   children:
@@ -346,7 +348,6 @@
   gender: male
   knows:
     - Dee, John
-    - Walsingham, Frances
 "Simon, Alexander":
   name:
     - text: Alexander
