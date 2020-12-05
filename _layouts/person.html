@@ -60,6 +60,66 @@ layout: default
       </ul>
     </dd>
     {%- endif -%}
+
+    {%- if record.spouses -%}
+    <dt>Married to</dt>
+    <dd>
+      <ul>
+        {%- for spouse in record.spouses -%}
+        <li itemprop="spouse">
+          {{ spouse | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if record.siblings -%}
+    <dt>Siblings</dt>
+    <dd>
+      <ul>
+        {%- for sibling in record.siblings -%}
+        <li itemprop="sibling">
+          {{ sibling | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if record.parents -%}
+    <dt>Parents</dt>
+    <dd>
+      <ul>
+        {%- for parent in record.parents -%}
+        <li itemprop="parent">
+          {{ parent | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if record.children -%}
+    <dt>Children</dt>
+    <dd>
+      <ul>
+        {%- for child in record.children -%}
+        <li itemprop="children">
+          {{ child | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if record.knows -%}
+    <dt>Knows</dt>
+    <dd>
+      <ul>
+        {%- for known in record.knows -%}
+        <li itemprop="knows">
+          {{ known | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
   </dl>
 
   {%- include annotations.html reference=record -%}
