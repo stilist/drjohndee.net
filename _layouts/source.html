@@ -17,7 +17,7 @@ layout: default
 
       &#x200a;—&#x200a;
 
-      {{ page.key | source_name }}
+      {{ page.key | source_tag }}
     </h1>
 
     <h2 class="post-subtitle">
@@ -26,7 +26,7 @@ layout: default
       {%- endif -%}
 
       {%- if record.date -%}
-      &#32;Published <time>{{ record.date }}</time>.
+      Published <time datetime='{{ record.date }}' itemprop=datePublished>{{ record.date }}</time>
       {%- endif -%}
     </h2>
   </header>

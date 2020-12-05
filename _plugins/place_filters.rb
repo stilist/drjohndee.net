@@ -51,9 +51,9 @@ module Jekyll
 
       combined = place_data(key) do |part, value|
         if HIDDEN_PARTS.include?(part)
-          "<meta itemprop=#{part} content='#{value}'>"
+          "<meta itemprop=#{known_keys[part] || part} content='#{value}'>"
         else
-          "<span itemprop=#{part}>#{value}</span>"
+          "<span itemprop=#{known_keys[part] || part}>#{value}</span>"
         end
       end
 

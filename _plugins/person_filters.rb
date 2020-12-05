@@ -7,23 +7,30 @@ module Jekyll
   module PersonFilters
     include ::DataCollection
 
+    # only rendered as metadata
+    HIDDEN_PARTS = %w(
+      url
+    ).freeze
+    # rendered separately, if at all
+    EXCLUDED_PARTS = %w(
+      footnotes
+      id
+      language
+    ).freeze
+
     def person_name(key, type = 'name')
-      combine_person_name_parts(key, type: type) || key
+      person_name_data(key, type: type)&.join(', ') || key
     end
 
     def person_tag(key, display_text = nil)
-      return if key.nil?
-
       fallback = "<span class='data-person #{UNKNOWN_REFERENCE_CLASS}'>#{key}</span>"
-      parts = data_collection_entry('people', key)
+      parts = person_name_data(key)
+      return fallback if parts.empty?
+
       url = relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_url_key(key)}.html")
+      return "<a href=#{url} class='data-person'>#{display_text}</a>" if !display_text.nil?
 
-      if !display_text.nil?
-        return fallback if parts.nil?
-        return "<a href=#{url} class='data-person'>#{display_text}</a>"
-      end
-
-      combined = combine_person_name_parts(key) do |part|
+      combined = person_name_data(key) do |part|
         attributes = {
           itemprop: part['type'],
           itemid: part['id'],
@@ -33,40 +40,29 @@ module Jekyll
 
         "<span #{attributes}>#{part['text']}</span>"
       end
-      return fallback if combined.nil?
 
+      language = data_collection_entry('places', key)&.dig('language')
+      language_tag = "lang=#{language}" if !language.nil?
 
       <<~EOM
-      <span class="data-person" itemscope itemtype=http://schema.org/Person>
-        <a href=#{url} itemprop=url>#{combined}</a>
+      <span class="data-person" itemscope itemtype=http://schema.org/Person #{language_tag}>
+        <a href=#{url} itemprop=url>#{combined.join(' ')}</a>
       </span>
       EOM
     end
 
     private
 
-    def person_name_parts(key, type: 'name')
-      data_collection_entry('people', key)&.dig(type)&.clone
-    end
-
-    def combine_person_name_parts(key, type: 'name')
-      parts = person_name_parts(key, type: type)
+    def person_name_data(key, type: 'name')
+      parts = data_collection_entry('people', key)&.dig(type)&.clone
       if parts.nil?
         Jekyll.logger.warn('Jekyll::PersonFilters:',
                            "Unable to find #{type} data for '#{key}'.")
-        return
+        return []
       end
 
-      formatted = parts.map do |part|
-        if block_given?
-          yield(part)
-        else
-          part['text']
-        end
-      end
-
-      joined = formatted.compact.join(' ')
-      joined if joined != ''
+      return parts.map { |part, value| yield(part, value) } if block_given?
+      parts
     end
   end
 end
