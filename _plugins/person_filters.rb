@@ -46,14 +46,14 @@ module Jekyll
     private
 
     def person_name_parts(key, type: 'name')
-      data_collection_entry('people', key)&.dig(type)
+      data_collection_entry('people', key)&.dig(type)&.clone
     end
 
     def combine_person_name_parts(key, type: 'name')
       parts = person_name_parts(key, type: type)
       if parts.nil?
-        Jekyll.logger.info('Jekyll::PersonFilters',
-                           "Unable to find #{type} data for '#{key}'")
+        Jekyll.logger.warn('Jekyll::PersonFilters:',
+                           "Unable to find #{type} data for '#{key}'.")
         return
       end
 

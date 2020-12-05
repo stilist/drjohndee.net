@@ -11,6 +11,18 @@
   deathPlace: Lambeth, England
   id: https://www.wikidata.org/entity/Q471406
   gender: male
+"Bayley, Francis":
+  name:
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Bayley
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16479591
+  gender: male
+  knows:
+    - Dee, John
+    - Hayward, Rowland
 "Besbich, Thomas":
   name:
     - text: Thomas
@@ -35,10 +47,20 @@
   gender: male
   children:
     - Besbich, Thomas
-  gender: male
 "Dayrell, Thomas":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Dayrell
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27205810
   birthDate: 1611
   deathDate: 1669
+  gender: male
 "Dee, John":
   name:
     - text: John
@@ -76,6 +98,89 @@
     - text: Roger
       type: givenName
   gender: male
+"Fromond, Bartholomew":
+  name:
+    - text: Bartholomew
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4926315
+    - text: Fromond
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27205691
+  gender: male
+  children:
+    - Fromond, Elizabeth
+    - Fromond, Jane
+"Fromond, Elizabeth":
+  name:
+    - text: Elizabeth
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16870774
+    - text: Fromond
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27205691
+  gender: female
+  siblings:
+    - Fromond, Jane
+  knows:
+    - Dee, John
+"Fromond, Jane":
+  name:
+    - text: Jane
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1682564
+    - text: Dee
+      type: familyName
+  birthName:
+    - text: Jane
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1682564
+    - text: Fromond
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27205691
+  id: https://www.wikidata.org/entity/Q19001456
+  birthDate: 1554-04-22T12
+  birthPlace: Cheam, England
+  deathDate: 1604
+  gender: female
+  spouses:
+    - Dee, John
+"Gaele, Jane":
+  name:
+    - text: Jane
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1682564
+    - text: Gayle
+      type: familyName
+  gender: female
+  knows:
+    - Dee, John
+"Geoffrey of Monmouth":
+  name:
+    - text: Geoffrey
+      type: givenName
+      id: https://www.wikidata.org/entity/Q7041317
+  birthDate: 1090/1100
+  deathDate: 1154-12-25/1155-12-24
+  id: https://www.wikidata.org/entity/Q188344
+  gender: male
+"Gilbert, Humphrey":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Humphrey
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1637225
+    - text: Gilbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158185
+  birthDate: 1539-09-09
+  birthPlace: Greenway, Galmpton, England
+  deathDate: 1583-09-09
+  knows:
+    - Dee, John
+  id: https://www.wikidata.org/entity/Q447200
+  gender: male
 "Grey, Henry":
   name:
     - text: Henry
@@ -95,20 +200,31 @@
   deathPlace: Tower Hill, London, England
   id: https://www.wikidata.org/entity/Q4490179
   gender: male
-"Gilbert, Humphrey":
+"Hakluyt, Richard (barrister)":
   name:
-    - text: Humphrey
+    - text: Richard
       type: givenName
-      id: https://www.wikidata.org/entity/Q1637225
-    - text: Gilbert
+      id: https://www.wikidata.org/entity/Q1249148
+    - text: Hakluyt
       type: familyName
-      id: https://www.wikidata.org/entity/Q1158185
-  birthDate: 1539-09-09
-  birthPlace: Devon, England
-  deathDate: 1583-09-09
-  knows:
-    - Dee, John
-  id: https://www.wikidata.org/entity/Q447200
+      id: https://www.wikidata.org/entity/Q56246039
+  birthDate: 1531
+  deathDate: 1591
+  url: https://en.wikipedia.org/entity/Richard_Hakluyt_(barrister)
+  gender: male
+"Hakluyt, Richard (writer)":
+  name:
+    - text: Richard
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1249148
+    - text: Hakluyt
+      type: familyName
+      id: https://www.wikidata.org/entity/Q56246039
+  birthDate: 1553
+  deathDate: 1616-11-23
+  deathPlace: London, England
+  id: https://www.wikidata.org/entity/Q185510
+  gender: male
 "Halliwell, James":
   name:
     - text: James
@@ -132,6 +248,23 @@
   deathDate: 1591-11-20
   id: https://www.wikidata.org/entity/Q1216173
   gender: male
+"Hayward, Rowland":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Rowland
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16281035
+    - text: Hayward
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870619
+  birthDate: 1520
+  deathDate: 1593-12-05
+  id: https://www.wikidata.org/entity/Q16842189
+  gender: male
+  knows:
+    - Dee, John
 "Herbert, William":
   name:
     - text: William
@@ -189,7 +322,7 @@
   url: https://www.geni.com/people/Sir-Edward-Hynde/6000000031478818173
 "Hynde, Francis":
   name:
-    - text: Edward
+    - text: Francis
       type: givenName
       id: https://www.wikidata.org/entity/Q1441346
     - text: Hynde
@@ -220,9 +353,26 @@
     - text: Lyne
       type: familyName
       id: https://www.wikidata.org/entity/Q1668082
+  deathDate: 1578-09-06
   gender: female
   knows:
     - Dee, John
+"Lysons, Daniel":
+  name:
+    - text: Reverend
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q77525167
+    - text: Daniel
+      type: givenName
+      id: https://www.wikidata.org/entity/Q14516546
+    - text: Lysons
+      type: familyName
+      id: https://www.wikidata.org/entity/Q6710268
+  birthDate: 1762-04-28
+  birthPlace: Rodmarton, England
+  deathDate: 1834-01-03
+  id: https://www.wikidata.org/entity/Q5217989
+  gender: male
 "Murfyn, Vincent":
   name:
     - text: Vincent
@@ -270,6 +420,7 @@
     - text: Newsam
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
+  gender: male
 "Newsam, John":
   name:
     - text: John
@@ -278,6 +429,7 @@
     - text: Newsam
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
+  gender: male
 "Newsam, Margaret":
   name:
     - text: Margaret
@@ -286,6 +438,7 @@
     - text: Newsam
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
+  gender: female
 "Newsam, Parnell":
   name:
     - text: Parnell
@@ -300,6 +453,11 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q64041118
   gender: female
+  children:
+    - Newsam, William
+    - Newsam, Edward
+    - Newsam, Margaret
+    - Newsam, Rose
 "Newsam, William":
   name:
     - text: William
@@ -309,6 +467,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
   birthDate: 1570-12-27
+  gender: male
 "Newsam, Rose":
   name:
     - text: Rose
@@ -317,6 +476,7 @@
     - text: Newsam
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
+  gender: female
 "Radford, Emma Louisa":
   name:
     - text: Emma
@@ -332,10 +492,56 @@
   deathDate: 1937-04-26
   id: https://www.wikidata.org/entity/Q18910924
   gender: male
-  spouses:
-    - Radford, George Heynes
+"Raynolds":
+  name:
+    - text: Raynolds
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37199930
+  # unclear; "Mr. Raynolds of Bridewell"
+  livedIn: Bridewell Palace, England
+  gender: male
+  knows:
+    - Dee, John
+    - Gilbert, Humphrey
+"Rogers, Daniel":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Daniel
+      type: givenName
+      id: https://www.wikidata.org/entity/Q14516546
+    - text: Rogers
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16471355
+  birthDate: 1538
+  birthPlace: Lutherstadt Wittenberg, Germany
+  deathDate: 1591
+  id: https://www.wikidata.org/entity/Q16863496
+  gender: male
+  knows:
+    - Dee, John
+    - Hakluyt, Richard (barrister)
+    - Sidney, Philip
+"Rogers, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Rogers
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16471355
+  deathDate: 1577-11-03
+  gender: male
+  livedIn:
+    - Mortlake, England
+  knows:
+    - Dee, John
 "Sidney, Philip":
   name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
     - text: Philip
       type: givenName
       id: https://www.wikidata.org/entity/Q827311
@@ -359,6 +565,44 @@
   gender: male
   knows:
     - Dee, John
+"Stewart, Frances":
+  name:
+    - text: Frances
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1440778
+    - text: Stewart
+      type: familyName
+      id: https://www.wikidata.org/entity/Q2801971
+    - text: Duchess of Richmond
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: Duchess of Lennox
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: Countess of Hertford
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1578-07-27
+  deathDate: 1639-10-08
+  id: https://www.wikidata.org/entity/Q5478727
+  gender: female
+"Tenison, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Tenison
+      type: givenName
+      id: https://www.wikidata.org/entity/Q7699872
+    - text: Archbishop of Canterbury
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q29282
+  birthDate: 1636-09-29
+  birthPlace: Cottenham, Cambridgeshire, England
+  deathDate: 1715-12-14
+  deathPlace: London, England
+  id: https://www.wikidata.org/entity/Q680725
+  gender: male
 "Urseau, Nicholas":
   name:
     - text: Nicholas
@@ -383,13 +627,9 @@
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q138409
   gender: male
-  children:
-    - Walsingham, Frances
   knows:
     - Dee, John
     - Sidney, Philip
-  spouses:
-    - St. Barbe, Ursula
 
 "Duke of Bedford":
   name:
@@ -446,8 +686,23 @@
   id: https://www.wikidata.org/entity/Q318017
   knows:
     - Dee, John
+"King Arthur":
+  name:
+    - text: King
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q12097
+    - text: Arthur
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1778168
+  id: https://www.wikidata.org/entity/Q45792
+  gender: male
+  nationality:
+    - Wales
 "Queen Elizabeth":
   name:
+    - text: Queen Regnant
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q19643
     - text: Elizabeth
       type: givenName
       id: https://www.wikidata.org/entity/Q16870774
@@ -458,14 +713,16 @@
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: 1533-09-07
-  birthPlace: Palace of Placentia
+  birthPlace: Palace of Placentia, England
   deathDate: 1603-04-03
-  deathPlace: Richmond Palace, Surrey, England
-  coronation: 1558-11-17
+  deathPlace: Richmond Palace, England
   gender: female
   id: https://www.wikidata.org/entity/Q7207
 "Queen Mary":
   name:
+    - text: Queen Regnant
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q19643
     - text: Marie
       type: givenName
       id: https://www.wikidata.org/entity/Q734578
@@ -476,15 +733,8 @@
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: 1542-12-08
-  birthPlace: Linlithgow, Scotland
+  birthPlace: Linlithgow Palace, Scotland
   deathDate: 1587-02-08
   deathPlace: Fotheringay Castle, England
   gender: female
   id: https://www.wikidata.org/entity/Q131412
-"Rogers, William":
-  deathDate: 1577-11-03
-  gender: male
-  livedIn:
-    - Mortlake, England
-  knows:
-    - Dee, John

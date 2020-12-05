@@ -13,7 +13,11 @@ module Jekyll
 
     def source_tag(key, display_text = nil, source_location = nil)
       record = data_collection_entry('sources', key)
-      return "<cite class='data-source #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</cite>" if record.nil?
+      if record.nil?
+        Jekyll.logger.warn('Jekyll::SourceFilters:',
+                           "Unable to find data for '#{key}'.")
+        return "<cite class='data-source #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</cite>"
+      end
 
       title = "<span class='data-source' lang=#{record['language']}>#{display_text || record['title']}</span>"
       volume = "volume #{record['volume_number']}" if record.key?('volume_number')

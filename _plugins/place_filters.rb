@@ -7,55 +7,63 @@ module Jekyll
   module PlaceFilters
     include ::DataCollection
 
+    # only rendered as metadata
     HIDDEN_PARTS = %w(
-      id
       latitude
       longitude
       url
     ).freeze
-    UNSTRUCTURED_PARTS = %w(
+    # rendered separately, if at all
+    EXCLUDED_PARTS = %w(
       footnotes
+      id
+      language
     ).freeze
 
     def place_name(key)
-      combined = combine_place_name_parts(key) do |part, value|
+      filtered = place_data(key) do |part, value|
         next if HIDDEN_PARTS.include?(part)
         value
       end
+      return filtered.compact.join(', ') if !filtered.empty?
 
-      combined || key
+      key
     end
 
     def place_tag(key, display_text = nil)
       fallback = "<span class='data-place #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</span>"
-      record = data_collection_entry('places', key)
-      return fallback if record.nil?
+      parts = place_data(key)
+      return fallback if parts.empty?
 
       url = relative_url("/#{COLLECTION_MAP_PLURAL['places']}/#{sanitize_url_key(key)}.html")
       return "<a href=#{url} class='data-place'>#{display_text}</a>" if !display_text.nil?
 
       known_keys = HIDDEN_PARTS.map { |key| [key, key] }
-       .to_h
+        .to_h
       known_keys.merge!({
-        'streetAddress' => 'address',
+        'streetAddress' => 'streetAddress',
         'locality' => 'addressLocality',
         'region' => 'addressRegion',
         'country' => 'addressCountry',
+        'postcode' => 'postalCode',
+        'name' => 'name',
       }).freeze
 
-      combined = combine_place_name_parts(key) do |part, value|
+      combined = place_data(key) do |part, value|
         if HIDDEN_PARTS.include?(part)
           "<meta itemprop=#{part} content='#{value}'>"
         else
           "<span itemprop=#{part}>#{value}</span>"
         end
       end
-      return fallback if combined.nil?
+
+      language = data_collection_entry('places', key)&.dig('language')
+      language_tag = "lang=#{language}" if !language.nil?
 
       <<~EOM
-      <span class="data-place" itemscope itemtype=http://schema.org/Place>
-        <span itemprop="address" itemscope itemtype=http://schema.org/PostalAddress>
-          <a href='#{url}' itemprop=url>#{combined}</a>
+      <span class="data-place" itemscope itemtype=http://schema.org/Place #{language_tag}>
+        <span itemprop=address itemscope itemtype=http://schema.org/PostalAddress>
+          <a href='#{url}' itemprop=url>#{combined.join(' ')}</a>
         </span>
       </span>
       EOM
@@ -63,29 +71,17 @@ module Jekyll
 
     private
 
-    def place_name_parts(key)
-      data_collection_entry('places', key)
-    end
-
-    def combine_place_name_parts(key)
-      parts = place_name_parts(key)
+    def place_data(key)
+      parts = data_collection_entry('places', key)&.clone
       if parts.nil?
-        Jekyll.logger.info('Jekyll::PlaceFilters',
-                           "Unable to find name data for '#{key}'")
-        return
+        Jekyll.logger.warn('Jekyll::PlaceFilters:',
+                           "Unable to find data for '#{key}'.")
+        return []
       end
 
-      parts.reject! { |part, _| UNSTRUCTURED_PARTS.include?(part) }
-      formatted = parts.map do |part, value|
-        if block_given?
-          yield(part, value)
-        else
-          value
-        end
-      end
-
-      joined = formatted.compact.join(', ')
-      joined if joined != ''
+      parts.reject! { |part, _| EXCLUDED_PARTS.include?(part) }
+      return parts.map { |part, value| yield(part, value) } if block_given?
+      parts
     end
   end
 end

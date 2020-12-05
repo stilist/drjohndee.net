@@ -24,7 +24,7 @@ layout: default
     <dt>Birth</dt>
     <dd>
       {%- if record.birthDate -%}
-      <time itemprop=birthDate datetime={{ record.birthDate }}>
+      <time itemprop=birthDate datetime="{{ record.birthDate }}">
         {{ record.birthDate }}
       </time>
       {%- endif -%}
@@ -38,7 +38,7 @@ layout: default
     <dt>Death</dt>
     <dd>
       {%- if record.deathDate -%}
-      <time itemprop=deathDate datetime={{ record.deathDate }}>
+      <time itemprop=deathDate datetime="{{ record.deathDate }}">
         {{ record.deathDate }}
       </time>
       {%- endif -%}

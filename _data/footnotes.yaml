@@ -1,6 +1,7 @@
 "1577-01-16-dees-diary":
   source: The Private Diary of Dr. John Dee
   source_location: page 2
+  author: Halliwell, James
   text: >-
     <blockquote><p>
       <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
@@ -35,6 +36,7 @@
 "1577-05-01-dees-diary":
   source: The Private Diary of Dr. John Dee
   source_location: page 3
+  author: Halliwell, James
   text: >-
     <blockquote><p>
       This of course is his celebrated
@@ -57,6 +59,7 @@
 "1577-08-19-dees-diary":
   source: The Private Diary of Dr. John Dee
   source_location: page 3
+  author: Halliwell, James
   text: >-
     <blockquote><p>
       This was his work printed in
@@ -74,7 +77,7 @@
       own copy of the published work with
       <abbr title="manuscript">MS.</abbr>
       notes and additions is preserved in the
-      {{ "British Museum" | place_tag: "British Museum" }}.
+      {{ "British Museum, England" | place_tag: "British Museum" }}.
       In his
       <cite>
         Letter Apologetical,
@@ -89,6 +92,7 @@
 "1577-11-28-dees-diary":
   source: The Private Diary of Dr. John Dee
   source_location: page 4
+  author: Halliwell, James
   text: >-
     <blockquote><p>
       {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
@@ -98,10 +102,86 @@
       {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
       best patrons.
     </p></blockquote>
+"1578-06-30-dees-diary-1":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Rogers, Daniel" | person_tag: "Rogers" }}
+      was a member of
+      {{ "University of Oxford, England" | place_tag: "the University of Oxford" }},
+      and a large commonplace-book in his handwriting is in
+      {{ "Tenison, Thomas" | person_tag: "Archbishop Tenison" }}’s
+      library in
+      {{ "St Martin-in-the-Fields, England" | place_tag: "St. Martin’s-in-the-Fields" }}.
+    </p></blockquote>
+"1578-06-30-dees-diary-2":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      That is,
+      <span lang=la>
+        {{ "Geoffrey of Monmouth" | person_tag: "Galfridus Monumetensis" }}
+        {{ "De gestis Britonum" | source_tag: "de gestis regum Britanniæ" }}</span>.
+      {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
+      mentions this fact in his collection of voyages.
+    </p></blockquote>
+"1578-08-15-dees-diary-1":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This is the book just mentioned under the title of
+      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials" }},
+      <cite>
+        <abbr>fol.</abbr>
+        <abbr>Lond.</abbr>
+        1577</cite>.
+    </p></blockquote>
+"1578-08-15-dees-diary-2":
+  text: >-
+    <p>
+      The preceding footnote is inaccurate, according to
+      <a href=https://www.jstor.org/stable/3817882>research published in
+        <time datetime=2001>2001</time></a>:
+      <q>
+        {{ "Dee, John" | person_tag: "John Dee" }}’s
+        (<time datetime="1527/1609">1527–1609</time>) manuscript compilation
+        <q>{{ "Brytanici Imperii Limites" | source_tag: "Brytanici Imperii Limites" }},</q>
+        acquired by
+        {{ "British Library, England" | place_tag: "the British Library" }}
+        <time datetime=1976>in 1976</time>,
+        plays a vital role in completing our knowledge of the imperial writings
+        prepared by Dee
+        <time datetime="1577/1580">in the late 1570s</time>.
+        […] For many years it was assumed that these had not survived or were
+        alternate names for works already known.</q>
+    </p>
+"1578-10-16-compendious-rehearsall":
+  source: Autobiographical Tracts of Dr. John Dee
+  source_location: page 22
+  author: Dee, John
+  text: >-
+    <blockquote><p>
+      {{ "Dee, John" | person_tag: "My" }}
+      dutifull service was done, in the diligent conference, which, by
+      {{ "Queen Elizabeth" | person_tag: "her Majesties" }}
+      commandment, I had with
+      {{ "Bayley, Francis" | person_tag: "<abbr>Mr.</abbr> <abbr>Dr.</abbr> Bayly" }},
+      her Majesties Physitian, about her Majesties grievous pangs and paines by
+      reason of toothake and the rheume,
+      <abbr lang=la>&c.</abbr>
+      <time datetime=1578-10><abbr title="Anno" lang=la>A.</abbr>1578, October</time>.
+    </p></blockquote>
 
 "bartholomew-newsam":
   source: Dictionary of National Biography, 1885–1900
   source_location: pages 366, 367
+  author: Radford, Emma Louisa
   text: >-
     <p>
       Biography of
@@ -143,7 +223,7 @@
         <q lang="en-emodeng">{{ "GBP 32 shillings 8 pence" | currency_tag: "32<abbr>s.</abbr> 8<abbr>d.</abbr>" }}
           for mending of clockes</q>
         during
-        <time datetime=1582/P1Y>the past year</time>.
+        <time datetime="1582/P1Y">the past year</time>.
         With the post of clockmaker he combined that of
         clock-keeper; the two offices had been held by different persons in
         Queen Mary’s reign, and Newsam appears to have been the first
@@ -227,8 +307,8 @@
       </p>
 
       <p>
-        There is in
-        {{ "British Museum" | place_tag: "the British Museum" }}
+        There is
+        {{ "British Museum, England" | place_tag: "in the British Museum" }}
         a striking clock made by Newsam, which is still in almost untouched
         condition. It is of gilded brass, richly engraved. It is very small,
         not more than four inches high, and contains a compass; it has, of
@@ -263,13 +343,29 @@
       <q lang=en-emodeng>chamber clocke of five markes price.</q>
       </p>
     </blockquote>
+"cheam-england":
+  source: Environs of London, Surrey
+  source_location: pages 137–158
+  author: Lysons, Daniel
+  url: https://www.british-history.ac.uk/london-environs/vol1/pp137-158
+  text: >-
+    <blockquote><p>
+      In the most ancient record which I have seen relating to this parish, its
+      name is spelt Chieham; it has since been varied to Ceiham, Chayham, and
+      Cheyham, and has now, for
+      <time datetime="P200Y">about two centuries past</time>,
+      been uniformly written Cheam. As there is no word in the Saxon language
+      nearly similar to the first syllable of the ancient appellation, I
+      suppose it to have been a proper name; Ham is well known to mean a
+      dwelling.
+    </p></blockquote>
 "edward-hynde":
   source: Wikipedia
   url: https://en.wikipedia.org/w/index.php?title=Francis_Hynde&oldid=960873924#Children
   text: >-
     <blockquote><p>
       <ins>W</ins>as admitted Fellow-Commoner at
-      {{ "Corpus Christi College, England" | place_tag: "Corpus Christi College, Cambridge" }}
+      {{ "Corpus Christi College, Cambridge, England" | place_tag: "Corpus Christi College, Cambridge" }}
       <time datetime=1571>in 1571</time>
       and matriculated
       <time datetime=1572>in 1572</time>. The Cambridgeshire
@@ -316,7 +412,7 @@
       Making a Road from a Place called
       {{ "Nantgaredig, Wales" | place_tag: "Nantgaredig" }},
       adjoining the Turnpike Road leading from
-      {{ "Llandilo Fawr, Wales" | place_tag: "the Town of Llandilofawr" }}
+      {{ "Llandilo, Wales" | place_tag: "the Town of Llandilofawr" }}
       to
       {{ "Carmarthen, Wales" | place_tag: "the Town of Carmarthen" }},
       through
@@ -349,7 +445,7 @@
       <span itemscope itemtype=http://schema.org/DietarySupplement>
         <meta itemprop=sameAs content=https://www.wikidata.org/wiki/Q156935>
         <span itemprop=activeIngredient>Hypericum</span>,
-        commonly known as
+        which is commonly known as
         <span itemprop=nonProprietaryName>
           <a itemprop=url href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
             <abbr>St.</abbr> John’s wort</a></span></span>.

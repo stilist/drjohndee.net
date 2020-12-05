@@ -11,14 +11,12 @@
 <{{ title_tag }} class="post-title p-name" itemprop="name headline">
   {%- if hyperlink -%}
   <a class=post-link href="{{ entry.url | relative_url }}">
-    {{ entry.date | time_text: country }}
+    {{ entry.date | time_tag: country, "datePublished" }}
   </a>
   {%- else -%}
-  {{ page.date | time_text: author.country }}
+  {{ entry.date | time_tag: country, "datePublished" }}
   {%- endif -%}
 </{{ title_tag }}>
-
-{{ page.date | time_tag: author.country, "datePublished" }}
 
 {%- if entry.author -%}
 <span class=post-author>

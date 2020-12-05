@@ -1,12 +1,35 @@
+"Autobiographical Tracts of Dr. John Dee":
+  title: Autobiographical Tracts of Dr. John Dee, Warden of the College of Manchester
+  author: Dee, John
+  date: 1851
+  license: public domain
+  url: https://archive.org/details/autobiographical00deej/
+  oclc_number: 1039961450
+"Brytanici Imperii Limites":
+  title: Brytanici Imperii Limites
+  author: Dee, John
+  license: public domain
+"De gestis Britonum":
+  title: De gestis Britonum
+  author: Geoffrey of Monmouth
+  date: 1136
+  license: public domain
+  language: la
+  id: https://www.wikidata.org/entity/Q238693
+  oclc_number: 1135980775
 "Dictionary of National Biography, 1885–1900":
   title: Dictionary of National Biography, 1885–1900
-  author: Radford, Emma Louisa
   date: 1900
   license: public domain
   id: https://www.wikidata.org/entity/Q15987216
   url: https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Vol_40_Myllar_-_Nicholls
   oclc_number: 1070788669
   volume_number: 40
+"Environs of London, Surrey":
+  title: The Environs of London
+  author: Lysons, Daniel
+  date: 1792
+  volume_number: 1, County of Surrey
 "Hexameron Brytanicum":
   title: The General and Rare Memorials pertayning to the Perfect Arte of Navigation
   author: Dee, John
@@ -15,6 +38,11 @@
   license: public domain
   url: https://www.bl.uk/collection-items/john-dees-general-and-rare-memorials-bound-with-a-signed-manuscript
   oclc_number: 216607672
+"Imperium Brytanicum":
+  title: Imperium Brytanicum
+  author: Dee, John
+  license: public domain
+  date: 1577/1578
 "Monas Hieroglyphica":
   title: Monas Hieroglyphica
   author: Dee, John

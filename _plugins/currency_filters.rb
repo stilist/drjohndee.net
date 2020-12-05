@@ -60,6 +60,7 @@ module CurrencyFilter
     'guinea' => GBP_SHILLING * 21,
     'pound' => GBP_SOVEREIGN,
     'sovereign' => GBP_SOVEREIGN,
+    'noble' => GBP_SHILLING * 6 + GBP_PENNY * 8,
     'crown' => GBP_SHILLING * 5,
     'half crown' => GBP_SHILLING * 2 + GBP_PENNY * 6,
     'florin' => GBP_SHILLING * 2,

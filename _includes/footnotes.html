@@ -11,7 +11,11 @@
         {{ footnote.text | liquify }}
         {%- if footnote.source -%}
         <figcaption>
-          Source: {{ footnote.source | source_tag: footnote.source, footnote.source_location }}
+          Source:
+          {%- if footnote.author -%}
+          {{ footnote.author | person_tag }},
+          {%- endif -%}
+          {{ footnote.source | source_tag: nil, footnote.source_location }}
         </figcaption>
         {%- endif -%}
       </figure>
