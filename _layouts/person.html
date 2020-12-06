@@ -108,6 +108,18 @@ layout: default
       </ul>
     {%- endif -%}
 
+    {%- if record.relatedTo -%}
+    <dt>Related to</dt>
+    <dd>
+      <ul>
+        {%- for name in record.relatedTo -%}
+        <li itemprop="relatedTo">
+          {{ name | person_tag }}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
     {%- if record.knows -%}
     <dt>Knows</dt>
     <dd>

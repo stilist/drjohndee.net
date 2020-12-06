@@ -9,6 +9,7 @@ module Jekyll
 
     FLAT_RELATIONSHIPS = %w[
       knows
+      relatedTo
       siblings
       spouses
     ].freeze
