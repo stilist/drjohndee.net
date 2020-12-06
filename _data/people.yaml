@@ -68,6 +68,7 @@
       id: https://www.wikidata.org/entity/Q4925477
     - text: Dee
       type: familyName
+      id: https://www.wikidata.org/entity/Q37480086
   birthDate: 1527-07-13
   deathDate: 1608-12
   id: https://www.wikidata.org/entity/Q201484
@@ -130,6 +131,7 @@
       id: https://www.wikidata.org/entity/Q1682564
     - text: Dee
       type: familyName
+      id: https://www.wikidata.org/entity/Q37480086
   birthName:
     - text: Jane
       type: givenName
@@ -238,12 +240,18 @@
   gender: male
 "Hatton, Christopher":
   name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
     - text: Christopher
       type: givenName
       id: https://www.wikidata.org/entity/Q1084472
     - text: Hatton
       type: familyName
       id: https://www.wikidata.org/entity/Q37438520
+    - text: Vice-Chamberlain of the Household
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q426461
   birthDate: 1540
   deathDate: 1591-11-20
   id: https://www.wikidata.org/entity/Q1216173
