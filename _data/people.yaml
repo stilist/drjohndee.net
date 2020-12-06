@@ -383,6 +383,13 @@
   gender: male
   knows:
     - Dee, John
+"Murfyn":
+  name:
+    - text: Murfyn
+      type: familyName
+      gender: male
+  children:
+    - Murfyn, Vincent
 "Newsam, Bartholomew":
   name:
     - text: Bartholomew
