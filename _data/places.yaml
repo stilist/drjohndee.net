@@ -52,7 +52,7 @@
   country: GB
   id: https://www.wikidata.org/entity/Q2240615
   footnotes:
-    - "cheam-england"
+    - cheam-england
 "Chislehurst, England":
   locality: Chislehurst
   region: Greater London
@@ -205,8 +205,8 @@
   id: https://www.wikidata.org/entity/Q6661644
   language: cy
   footnotes:
-    - "llanlluney-wales-1"
-    - "llanlluney-wales-2"
+    - llanlluney-wales-1
+    - llanlluney-wales-2
 "Llanllwni Church, Wales":
   name: Llanllwni Church
   latitude: 52.049

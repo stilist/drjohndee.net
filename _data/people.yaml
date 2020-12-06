@@ -33,7 +33,7 @@
   birthDate: 1555
   gender: male
   footnotes:
-    - "thomas-besbich"
+    - thomas-besbich
   knows:
     - Dee, John
     - Murfyn, Vincent
@@ -315,7 +315,7 @@
       id: https://www.wikidata.org/entity/Q59482529
   deathDate: 1632
   footnotes:
-    - "edward-hynde"
+    - edward-hynde
   gender: male
   knows:
     - Dee, John
@@ -411,7 +411,7 @@
     - Newsam, Margaret
     - Newsam, Rose
   footnotes:
-    - "bartholomew-newsam"
+    - bartholomew-newsam
 "Newsam, Edward":
   name:
     - text: Edward
