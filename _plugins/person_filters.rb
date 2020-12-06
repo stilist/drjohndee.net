@@ -19,7 +19,12 @@ module Jekyll
     ).freeze
 
     def person_name(key, type = 'name')
-      person_name_data(key, type: type)&.join(', ') || key
+      parts = person_name_data(key, type: type)
+      return key if parts.empty?
+
+      parts.reject { |part| HIDDEN_PARTS.include?(part['type']) }
+        .map { |part| part['text'] }
+        .join(' ') || key
     end
 
     def person_tag(key, display_text = nil)
@@ -61,6 +66,7 @@ module Jekyll
         return []
       end
 
+      parts.reject! { |part, _| EXCLUDED_PARTS.include?(part) }
       return parts.map { |part, value| yield(part, value) } if block_given?
       parts
     end
