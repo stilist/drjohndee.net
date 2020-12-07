@@ -65,7 +65,7 @@ layout: default
     <dd>
       <ul>
         {%- for spouse in record.spouses -%}
-        <li itemprop="spouse">
+        <li itemprop=spouse>
           {{ spouse | person_tag }}
         </li>
         {%- endfor -%}
@@ -77,7 +77,7 @@ layout: default
     <dd>
       <ul>
         {%- for sibling in record.siblings -%}
-        <li itemprop="sibling">
+        <li itemprop=sibling>
           {{ sibling | person_tag }}
         </li>
         {%- endfor -%}
@@ -89,7 +89,7 @@ layout: default
     <dd>
       <ul>
         {%- for parent in record.parents -%}
-        <li itemprop="parent">
+        <li itemprop=parent>
           {{ parent | person_tag }}
         </li>
         {%- endfor -%}
@@ -101,7 +101,7 @@ layout: default
     <dd>
       <ul>
         {%- for child in record.children -%}
-        <li itemprop="children">
+        <li itemprop=children>
           {{ child | person_tag }}
         </li>
         {%- endfor -%}
@@ -113,7 +113,7 @@ layout: default
     <dd>
       <ul>
         {%- for name in record.relatedTo -%}
-        <li itemprop="relatedTo">
+        <li itemprop=relatedTo>
           {{ name | person_tag }}
         </li>
         {%- endfor -%}
@@ -125,7 +125,7 @@ layout: default
     <dd>
       <ul>
         {%- for known in record.knows -%}
-        <li itemprop="knows">
+        <li itemprop=knows>
           {{ known | person_tag }}
         </li>
         {%- endfor -%}

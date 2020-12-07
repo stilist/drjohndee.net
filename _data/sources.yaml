@@ -5,6 +5,10 @@
   license: public domain
   url: https://archive.org/details/autobiographical00deej/
   oclc_number: 1039961450
+"British Society for the History of Mathematics":
+  title: The British Society for the History of Mathematics
+  author: Singmaster, David
+  url: https://web.archive.org/web/20120514145358/http://www.dcs.warwick.ac.uk/bshm/gazetteer.html
 "Brytanici Imperii Limites":
   title: Brytanici Imperij Limites
   author: Dee, John
@@ -43,6 +47,17 @@
   author: Dee, John
   license: public domain
   date: 1577/1578
+"John Elmeston essay":
+  title: >-
+    An essay for the discovery and discouraging of the new sprung schism raised
+    and maintained by Mr Simon Henden of Bennenden in Kent. Exhibited in some
+    passages of writing which have gone between Mr John Elmeston of Cranebroke,
+    and the same M. Henden. Published according to order.
+  author: Elmeston, John
+  license: public domain
+  id: http://purl.ox.ac.uk/ota/A43313
+  url: https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A43313?show=full
+  date: 1652
 "Monas Hieroglyphica":
   title: Monas Hieroglyphica
   author: Dee, John

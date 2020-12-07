@@ -11,6 +11,12 @@
   deathPlace: Lambeth, England
   id: https://www.wikidata.org/entity/Q471406
   gender: male
+"Awbrey":
+  name:
+    - text: Aubrey
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q19672745
+  gender: female
 "Bayley, Francis":
   name:
     - text: Francis
@@ -23,6 +29,21 @@
   knows:
     - Dee, John
     - Hayward, Rowland
+"Bartlett, Elizabeth French":
+  name:
+    - text: Elizabeth
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q385468
+    - text: French
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q15304085
+    - text: Bartlett
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q15785662
+  birthDate: 1877-01-27
+  deathDate: 1961-10-24
+  id: https://www.wikidata.org/wiki/Q60621080
+  gender: female
 "Besbich, Thomas":
   name:
     - text: Thomas
@@ -47,6 +68,111 @@
   gender: male
   children:
     - Besbich, Thomas
+"Billett, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Billett
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q36916271
+  gender: male
+  livedIn:
+    - London, England
+"Bullock":
+  name:
+    - text: Bullock
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q16865147
+  gender: male
+  knows:
+    - Dee, John
+    - Fromond, Jane
+    - Taylor
+"Burton":
+  name:
+    - text: Burton
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q1259568
+  gender: male
+  knows:
+    - Dee, John
+    - Fromond, Jane
+  livedIn:
+    - Putney, England
+"Cavendish, Thomas":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Cavendish
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16865452
+  birthDate: 1560-09-19
+  birthPlace: Grimston Hall, England
+  deathDate: 1592-05
+  deathPlace: Atlantic Ocean
+  id: https://www.wikidata.org/entity/Q439123
+  gender: male
+  knows:
+    - Dee, John
+"Cooke, Roger":
+  name:
+    - text: Roger
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925304
+    - text: Cooke
+      type: familyName
+      id: https://www.wikidata.org/entity/Q658676
+  gender: male
+  knows:
+    - Dee, John
+"Crane, Francis":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Crane
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16865841
+  birthDate: 1579
+  deathDate: 1636
+  id: https://www.wikidata.org/entity/Q5480636
+  gender: male
+"Davis, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Davis
+      type: familyName
+      id: https://www.wikidata.org/entity/Q12652678
+  birthDate: 1550-10
+  birthPlace: Sandridge, England
+  deathDate: 1605-12-29
+  deathPlace: Bintan Island, East Indies
+  id: https://www.wikidata.org/entity/Q311652
+  gender: male
+  knows:
+    - Gilbert, Adrian
+    - Dee, John
+"Dayrell, Francis":
+  name:
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Dayrell
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27205810
+  gender: male
+  children:
+    - Dayrell, Thomas
 "Dayrell, Thomas":
   name:
     - text: Sir
@@ -61,6 +187,35 @@
   birthDate: 1611
   deathDate: 1669
   gender: male
+"Dee, Arthur":
+  name:
+    - text: Arthur
+      type: givenName
+    - text: Dee
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37480086
+  birthDate: 1579-07-13
+  parents:
+    - Dee, John
+    - Fromond, Jane
+"Dee, Jane":
+  name:
+    - text: Johanna
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4120836
+    - text: Dee
+      type: familyName
+      id: https://www.wikidata.org/entity/Q37480086
+  birthName:
+    - text: Johanna
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4120836
+    - text: Wild
+      type: familyName
+      id: https://www.wikidata.org/entity/Q2570283
+  gender: female
+  children:
+    - Dee, John
 "Dee, John":
   name:
     - text: John
@@ -74,9 +229,23 @@
   id: https://www.wikidata.org/entity/Q201484
   gender: male
   livedIn:
-    - Mortlake, England
+    - Dee's house, Mortlake, England
   country: England
   language: en-emodeng
+"Duckett, Lionel":
+  name:
+    - text: Lionel
+      type: givenName
+      id: https://www.wikidata.org/entity/Q9022830
+    - text: Duckett
+      type: familyName
+      id: https://www.wikidata.org/entity/Q5311515
+  birthDate: 1511
+  deathDate: 1587-08
+  id: https://www.wikidata.org/entity/Q6555620
+  gender: male
+  knows:
+    - Dee, John
 "Dyer, Edward":
   name:
     - text: Edward
@@ -93,12 +262,36 @@
     - Dee, John
 "Edward, Roger":
   name:
-    - text: Edward
-      type: familyName
-      id: https://www.wikidata.org/entity/Q278835
     - text: Roger
       type: givenName
+      id: https://www.wikidata.org/entity/Q4925304
+    - text: Edward
+      type: familyName
+      id: https://www.wikidata.org/entity/Q21405537
   gender: male
+  knows:
+    - Dee, John
+"Elmeston, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Elmeston
+      type: familyName
+      id:
+  gender: male
+  knows:
+    - Dee, John
+  livedIn:
+    - Cranbrook, England
+  footnotes:
+    - john-elmeston-essay
+"Flowr":
+  name:
+    - text: Flowr
+      type: familyName
+  knows:
+    - Dee, John
 "Fromond, Bartholomew":
   name:
     - text: Bartholomew
@@ -165,6 +358,20 @@
   deathDate: 1154-12-25/1155-12-24
   id: https://www.wikidata.org/entity/Q188344
   gender: male
+"Gilbert, Adrian":
+  name:
+    - text: Adrian
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1158185
+    - text: Gilbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158185
+  birthDate: 1541
+  deathDate: 1628
+  id: https://www.wikidata.org/entity/Q53337907
+  gender: male
+  knows:
+    - Dee, John
 "Gilbert, Humphrey":
   name:
     - text: Sir
@@ -212,8 +419,10 @@
       id: https://www.wikidata.org/entity/Q56246039
   birthDate: 1531
   deathDate: 1591
-  url: https://en.wikipedia.org/entity/Richard_Hakluyt_(barrister)
+  url: https://en.wikipedia.org/wiki/Richard_Hakluyt_(barrister)
   gender: male
+  relatedTo:
+    - Hakluyt, Richard (writer)
 "Hakluyt, Richard (writer)":
   name:
     - text: Richard
@@ -273,6 +482,33 @@
   gender: male
   knows:
     - Dee, John
+"Herbert, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Herbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870718
+    - text: <abbr title="Bachelor of Civil Law">B.C.L.</abbr>
+      type: honorificSuffix
+      id: https://www.wikidata.org/entity/Q2878265
+    - text: Judge of the High Court of Admiralty
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q60768555
+    - text: Member of Parliament
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q18018860
+  deathDate: 1617-07-09
+  id: https://www.wikidata.org/entity/Q3809335
+  gender: male
+  knows:
+    - Awbrey
+    - Dee, Arthur
+    - Dee, John
+    - Dyer, Edward
+    - Lewis, David
+    - Parry, Blanche
 "Herbert, William":
   name:
     - text: William
@@ -287,6 +523,32 @@
   gender: male
   knows:
     - Dee, John
+"Hickman, Bartholomew":
+  name:
+    - text: Bartholomew
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4926315
+    - text: Hickman
+      type: Hickman
+  gender: male
+  knows:
+    - Dee, John
+    - Flowr
+    - Hatton, Christopher
+  relatedTo:
+    - Hickman, Richard
+"Hickman, Richard":
+  name:
+    - text: Richard
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1249148
+    - text: Hickman
+      type: familyName
+  gender: male
+  knows:
+    - Dee, John
+    - Flowr
+    - Hatton, Christopher
 "Hilton, John":
   name:
     - text: John
@@ -298,6 +560,13 @@
   gender: male
   livedIn:
     - Fulham, England
+  knows:
+    - Dee, John
+"Hitchcock":
+  name:
+    - text: Hitchcock
+      type: familyName
+  gender: male
   knows:
     - Dee, John
 "Hooper, Walter":
@@ -313,6 +582,36 @@
     - Chiswick, England
   knows:
     - Dee, John
+"Hynde, Alice":
+  name:
+    - text: Alice
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q650689
+    - text: Hynde
+      type: familyName
+      id: https://www.wikidata.org/entity/Q59482529
+  gender: female
+  parents:
+    - Billett, John
+"Hynde, Barbara":
+  name:
+    - text: Barbara
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q153957
+    - text: Hynde
+      type: familyName
+      id: https://www.wikidata.org/entity/Q59482529
+  birthName:
+    - text: Barbara
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q153957
+    - text: Powell
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q1158612
+  gender: female
+  spouses:
+    - Dayrell, Francis
+    - Hynde, Edward
 "Hynde, Edward":
   name:
     - text: Edward
@@ -327,6 +626,12 @@
   gender: male
   knows:
     - Dee, John
+  spouses:
+    - Hynde, Alice
+    - Norton, Mary
+    - Hynde, Barbara
+  relatedTo:
+    - Dayrell, Thomas
   url: https://www.geni.com/people/Sir-Edward-Hynde/6000000031478818173
 "Hynde, Francis":
   name:
@@ -352,6 +657,61 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q59482529
   deathDate: 1606
+  gender: male
+"Jones, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Jones
+      type: givenName
+      id: https://www.wikidata.org/entity/Q59853
+  gender: male
+  knows:
+    - Dee, John
+"Lewis, David":
+  name:
+    - text: David
+      type: givenName
+      id: https://www.wikidata.org/entity/Q18057751
+    - text: Lewis
+      type: familyName
+      id: https://www.wikidata.org/entity/Q426463
+    - text: <abbr title="Doctor of Civil Law">D.C.L.</abbr>
+      type: honorificSuffix
+      id: https://www.wikidata.org/entity/Q5287501
+    - text: Judge of the High Court of Admiralty
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q60768555
+  birthDate: 1520
+  birthPlace: Abergavenny, Wales
+  deathDate: 1584-04-27
+  id: https://www.wikidata.org/entity/Q5236563
+  gender: male
+  knows:
+    - Awbrey
+    - Dee, Arthur
+    - Dee, John
+    - Dyer, Edward
+    - Herbert, John
+    - Parry, Blanche
+    - Parry, Blanche
+"Lewis, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Lewis
+      type: familyName
+      id: https://www.wikidata.org/entity/Q426463
+  gender: male
+  children:
+    - Lewis
+"Lewis":
+  name:
+    - text: Lewis
+      type: familyName
+      id: https://www.wikidata.org/entity/Q426463
   gender: male
 "Lyne, Ellen":
   name:
@@ -381,6 +741,22 @@
   deathDate: 1834-01-03
   id: https://www.wikidata.org/entity/Q5217989
   gender: male
+"Molyneux, Emery":
+  name:
+    - text: Emery
+      type:  givenName
+      id: https://www.wikidata.org/entity/Q29550323
+    - text: Molyneux
+      type: familyName
+      id: https://www.wikidata.org/entity/Q41660685
+  deathDate: 1598-06
+  deathPlace: Amsterdam, Netherlands
+  id: https://www.wikidata.org/entity/Q2300479
+  gender: male
+  knows:
+    - Davis, John
+    - Dee, John
+    - Gilbert, Adrian
 "Murfyn, Vincent":
   name:
     - text: Vincent
@@ -445,6 +821,8 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
   gender: male
+  knows:
+    - Newsam, Bartholomew
 "Newsam, Margaret":
   name:
     - text: Margaret
@@ -492,6 +870,49 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
   gender: female
+"Norton, Mary":
+  name:
+    - text: Mary
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q734578
+    - text: Norton
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q2790265
+  gender: female
+  parents:
+    - Norton, Thomas
+    - St Lowe, Margaret
+"Norton, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Norton
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q2790265
+  gender: male
+  livedIn:
+    - Hinxton, England
+"Parry, Blanche":
+  name:
+    - text: Blanche
+      type: givenName
+    - text: Parry
+      text: familyName
+  birthDate: 1507
+  birthPlace: Bacton, England
+  deathDate: 1590-02-12
+  deathPlace: London, England
+  id: https://www.wikidata.org/entity/Q3403111
+  gender: female
+  knows:
+    - Awbrey
+    - Herbert, John
+    - Lewis, David
+    - Queen Elizabeth
+  relatedTo:
+    - Dee, Arthur
+    - Dee, John
 "Radford, Emma Louisa":
   name:
     - text: Emma
@@ -552,6 +973,13 @@
     - Mortlake, England
   knows:
     - Dee, John
+"Selbury":
+  name:
+    - text: Selbury
+      type: familyName
+  gender: male
+  livedIn:
+    - Mortlake, England
 "Sidney, Philip":
   name:
     - text: Sir
@@ -580,6 +1008,28 @@
   gender: male
   knows:
     - Dee, John
+"Singmaster, David":
+  name:
+    - text: David
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q18057751
+    - text: Singmaster
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q36908552
+  birthDate: 1938-12
+  birthPlace: Ferguson, Missouri
+  id: https://www.wikidata.org/wiki/Special:EntityPage/Q1176665
+  gender: male
+"St Lowe, Margaret":
+  name:
+    - text: Margaret
+      type: givenName
+      id: https://www.wikidata.org/wiki/Q4963612
+    - text: St Lowe
+      type: familyName
+  gender: female
+  spouses:
+    - Norton, Thomas
 "Stewart, Frances":
   name:
     - text: Frances
@@ -601,6 +1051,18 @@
   deathDate: 1639-10-08
   id: https://www.wikidata.org/entity/Q5478727
   gender: female
+  knows:
+    - Dee, John
+"Taylor":
+  name:
+    - text: Taylor
+      type: familyName
+      id: https://www.wikidata.org/wiki/Q15080511
+  gender: male
+  knows:
+    - Bullock
+    - Dee, John
+    - Fromond, Jane
 "Tenison, Thomas":
   name:
     - text: Thomas
@@ -701,6 +1163,88 @@
   id: https://www.wikidata.org/entity/Q318017
   knows:
     - Dee, John
+"Earl of Lincoln":
+  name:
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Clinton
+      type: familyName
+      id: https://www.wikidata.org/entity/Q11003143
+    - text: Earl of Leicester
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q1277346
+  birthDate: 1512
+  birthPlace: Manor of Scrivelsby, England
+  deathDate: 1585-01-16
+  deathPlace: London, England
+  id: https://www.wikidata.org/entity/Q1291914
+  gender: male
+  knows:
+    - Dee, John
+"Monsieur Francis":
+  name:
+    - text: Monsieur
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q1092777
+      language: fr
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Duke of Évreux
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: Duke of Alençon
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q1848228
+    - text: Duke of Château-Thierry
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: Duke of Anjou
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q770768
+    - text: Duke of Berry
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://en.wikipedia.org/wiki/Duke_of_Berry
+    - text: Duke of Touraine
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://en.wikipedia.org/wiki/Duke_of_Touraine
+    - text: Count of Perche
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q2629622
+    - text: Count of Meulan
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+      id: https://www.wikidata.org/entity/Q1541754
+    - text: Count of Mantes
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthName:
+    - text: Hercule
+      type: givenName
+      id: https://www.wikidata.org/entity/Q18180933
+      language: fr
+    - text: François
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1166840
+      language: fr
+    - text: de France
+      language: fr
+  birthDate: 1555-03-18
+  birthPlace: Saint-Germain-en-Laye, France
+  deathDate: 1584-06-10
+  deathPlace: Château-Thierry, France
+  id: https://www.wikidata.org/entity/Q318380
+  gender: male
+  language: fr
+  knows:
+    - Queen Elizabeth
 "King Arthur":
   name:
     - text: King

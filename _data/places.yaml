@@ -1,3 +1,8 @@
+"Bacton, England":
+  locality: Bacton
+  region: Herefordshire
+  country: GB
+  id: https://www.wikidata.org/entity/Q2294131
 "Brechfa, Wales":
   locality: Brechfa
   region: Carmarthenshire
@@ -43,6 +48,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q835835
   language: cy
+"Château-Thierry, France":
+  locality: Château-Thierry
+  region: Hauts-de-France
+  country: FR
+  id: https://www.wikidata.org/entity/Q194145
+  language: fr
 "Cheam, England":
   name: Cheam
   latitude: 51.3478
@@ -79,6 +90,11 @@
   region: Cambridgeshire
   country: GB
   id: https://www.wikidata.org/entity/Q536282
+"Cranbrook, England":
+  locality: Cranbrook
+  region: Kent
+  country: GB
+  id: https://www.wikidata.org/entity/Q2160826
 "Dartmouth, England":
   locality: Dartmouth
   region: Devon
@@ -91,21 +107,20 @@
   locality: Mortlake
   region: Greater London
   country: GB
-"Rodmarton, England":
-  locality: Rodmarton
-  region: Gloucestershire
+"East Sheen, England":
+  locality: East Sheen
+  region: Greater London
   country: GB
-  id: https://www.wikidata.org/entity/Q7356816
-"Greenway, Galmpton, England":
-  name: Greenway House
-  locality: Galmpton
-  region: Devon
-  country: GB
-  id: https://www.wikidata.org/entity/Q1544827
+  id: https://www.wikidata.org/entity/Q2530557
 "Estotiland":
   country: CA
   id: https://www.wikidata.org/entity/Q3059031
-  url: https://en.wikipedia.org/entity/Estotiland
+  url: https://en.wikipedia.org/wiki/Estotiland
+"Ferguson, Missouri":
+  locality: Ferguson
+  region: Missouri
+  country: US
+  id: https://www.wikidata.org/wiki/Q954855
 "Fleet, England":
   locality: Fleet
   region: South Holland
@@ -142,6 +157,18 @@
   region: Greenland
   country: Denmark–Norway
   id: https://www.wikidata.org/entity/Q223
+"Greenway, Galmpton, England":
+  name: Greenway House
+  locality: Galmpton
+  region: Devon
+  country: GB
+  id: https://www.wikidata.org/entity/Q1544827
+"Grimston Hall, England":
+  name: Grimston Hall
+  locality: Trimley St Martin
+  region: Suffolk
+  country: GB
+  id: https://www.wikidata.org/wiki/Q26282257
 "Hamburg, Germany":
   locality: Free and Hanseatic City of Hamburg
   region: Hamburg
@@ -169,6 +196,17 @@
   region: Kent
   country: GB
   id: https://www.wikidata.org/entity/Q67479626
+"Kew, England":
+  locality: Kew
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/wiki/Q1740301
+"Leadenham parish, England":
+  name: Leadenham parish
+  locality: Leadenham
+  region: Lincolnshire
+  country: GB
+  id: https://www.wikidata.org/wiki/Special:EntityPage/Q6508465
 "Lambeth, England":
   locality: Lambeth
   region: Greater London
@@ -226,6 +264,12 @@
   region: Saxony-Anhalt
   country: DE
   id: https://www.wikidata.org/entity/Q6837
+"Manor of Scrivelsby, England":
+  name: Manor of Scrivelsby
+  locality: Scrivelsby
+  region: Lincolnshire
+  country: GB
+  id: https://www.wikidata.org/wiki/Q6751399
 "Middle Temple, London, England":
   name: Middle Temple
   latitude: 51.5125
@@ -242,6 +286,11 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q2456238
+"Mortlake Tapestry Works, England":
+  locality: Mortlake
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/entity/Q6914781
 "Nantgaredig, Wales":
   locality: Nantgaredig
   region: Carmarthenshire
@@ -276,6 +325,11 @@
   country: Wales
   id: https://www.wikidata.org/entity/Q1762242
   language: cy
+"Putney, England":
+  locality: Putney
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/wiki/Special:EntityPage/Q2465220
 "Richmond Palace, England":
   name: Richmond Palace
   latitude: 51.460389
@@ -289,33 +343,49 @@
   country: GB
   id: https://www.wikidata.org/entity/Q1523834
   language: cy
+"Rodmarton, England":
+  locality: Rodmarton
+  region: Gloucestershire
+  country: GB
+  id: https://www.wikidata.org/entity/Q7356816
 "Safavid Iran":
   country: Safavid Iran
   id: https://www.wikidata.org/entity/Q18234383
+"Saint-Germain-en-Laye, France":
+  locality: Saint-Germain-en-Laye
+  region: Île-de-France
+  country: FR
+  id: https://www.wikidata.org/entity/Q185075
+  language: fr
+"Skirbeck, England":
+  locality: Skirbeck
+  region: East Midlands
+  country: GB
+  id: https://www.wikidata.org/entity/Q7535882
 "Somerset House":
   name: Somerset House
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q1344889
 "St Clement Danes parish, Westminster, England":
-  name: St Clement Danes parish
+  name: <abbr>St</abbr> Clement Danes parish
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q7592834
 "St Helen with St Martin, York, England":
-  name: St Helen with St Martin
+  name: <abbr>St</abbr> Helen with <abbr>St</abbr> Martin
   locality: York
   region: Yorkshire
   country: GB
   url: https://www.sthelenwithstmartinyork.org.uk
 "St Julians, Newport, Wales":
-  locality: St Julians
+  locality: <abbr>St</abbr> Julians
   region: Newport
   country: GB
   id: https://www.wikidata.org/entity/Q7593879
   language: cy
 "St Martin le Grand, York, England":
-  name: St Martin le Grand
+  name: <abbr>St</abbr> Martin le Grand
   latitude: 53.9593
   longitude: -1.08459
   locality: York
@@ -324,7 +394,7 @@
   id: https://www.wikidata.org/entity/Q17549993
   url: https://www.sthelenwithstmartinyork.org.uk
 "St Martin-in-the-Fields, England":
-  name: St Martin-in-the-Fields
+  name: <abbr>St</abbr> Martin-in-the-Fields
   latitude: 51.508889
   longitude: -0.126944
   locality: Trafalgar Square
@@ -332,6 +402,21 @@
   country: GB
   id: https://www.wikidata.org/entity/Q1335201
   url: http://www.stmartin-in-the-fields.org/
+"St Mary's Church, Wimbledon, England":
+  name: <abbr>St</abbr> Mary’s Church
+  locality: Wimbledon
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/wiki/Special:EntityPage/Q7594457
+  url: http://www.stmaryswimbledon.org/
+"St Mary the Virgin Mortlake, England":
+  name: <abbr>St</abbr> Mary the Virgin
+  locality: Mortlake
+  locality: Mortlake
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/entity/Q7594666
+  url: https://stmarymortlake.org.uk
 "Strand, England":
   name: Strand
   locality: City of Westminster
@@ -366,6 +451,11 @@
   region: Oxfordshire
   country: GB
   id: https://www.wikidata.org/entity/Q34433
+"Wimbledon, England":
+  locality: Wimbledon
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/wiki/Q736742
 "Windsor Castle, England":
   name: Windsor Castle
   latitude: 51.4838

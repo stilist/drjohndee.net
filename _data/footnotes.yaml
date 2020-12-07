@@ -4,7 +4,7 @@
   author: Halliwell, James
   text: >-
     <blockquote><p>
-      <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+      <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
         dwelt
         {{ "Dee's house, Mortlake, England" | place_tag: "in a house" }}
         neere the water side, a little westward from
@@ -31,7 +31,7 @@
         149.
       </cite>
       The same account says that
-      <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+      <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
         was wel beloved and respected of all persons of quality thereabouts,
         who very often invited him to their houses or came to his.</q>
     </p></blockquote>
@@ -53,7 +53,7 @@
         <abbr title="manuscript">MS.</abbr>
         <abbr title="Ashmole">Ashm.</abbr>
         1788</cite>,
-      <q lang="en-emodeng">dwelt then in
+      <q lang=en-emodeng>dwelt then in
         {{ "Mortlake, England" | place_tag: "Mortlack" }}
         and was an intimate friend of
         {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s.</q>
@@ -87,7 +87,7 @@
         <abbr>Lond.</abbr>
         1603</cite>,
       he cites this work under the title of
-      <span lang="en-emodeng">The Brytish Monarchie</span>,
+      <span lang=en-emodeng>The Brytish Monarchie</span>,
       as having been written in the year
       <time datetime=1576>1576</time>.
     </p></blockquote>
@@ -217,7 +217,133 @@
       of every dayes journey or abode for those hundred dayes account may
       suffice.
     </p></blockquote>
-
+"1579-06-15-church":
+  text: >-
+    <p>
+      There are
+      <a href=https://en.wikipedia.org/w/index.php?title=Wimbledon_(ecclesiastical_parish)&oldid=886322495>
+        currently five churches
+      </a>
+      in
+      {{ "Wimbledon, England" | place_tag: "Wimbledon" }}
+      parish — {{ "St Mary's Church, Wimbledon, England" | place_tag: "St Mary’s" }}
+      seems like a reasonable guess for what
+      <q>the church</q>
+      refers to, as it’s been there for many centuries.
+    </p>
+"1579-07-13-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 6
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Dee, Arthur" | person_tag: "His" }}
+      horoscope is in
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788</cite>.
+      <q><abbr>Mr.</abbr> Arthur Dee’s
+        birth was accompanied by the unhappy accident of the death of
+        {{ "Fromond, Bartholomew" | person_tag: "<abbr>Mr.</abbr> Fromonds" }},
+        {{ "Fromond, Jane" | person_tag: "his mother" }}’s
+        father, who died that morning.</q> — <cite><abbr title="manuscript">MS.</abbr>
+      <abbr title="Ashmole">Ashm.</abbr>
+      1790,
+      <abbr title="folio">fol.</abbr>
+      63</cite>.
+    </p></blockquote>
+"1579-07-13-latin":
+  text: >-
+    <p>
+      Using
+      <a href=https://en.wiktionary.org/wiki/>Wiktionary</a>,
+      the Latin might be more accurately transcribed as
+      <q lang=la>Nātus puer māne hōra quārta trīgintā minūta ferē, vel potius
+      minūta vīgintī quīnque, in ipſō ortū ſōlis, ut exīſtimō.</q>
+      I can’t read Latin and don’t understand its grammar, but my go at a rough
+      modern English rendering is
+      <q>I’d say the child was born at 04:30, or perhaps 04:25; just at
+        sunrise, I think.</q>
+    </p>
+"1579-08-08-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 6
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This person is not noticed by the Oxford biographers.
+    </p></blockquote>
+"1579-09-10-latin":
+  text: >-
+    <p>
+      <q lang=la><ins>S</ins>ine mē nihil poteſtis facere</q>
+      translates to English as
+      <q>without me, you can do nothing</q>.
+    </p>
+"1579-11-25-long-leadnam":
+  source: British Society for the History of Mathematics
+  url: https://web.archive.org/web/20120619023348/http://www.dcs.warwick.ac.uk/bshm/zingaz/L.html#ll
+  text: >-
+    <blockquote><p>
+      {{ "Dee, John" | person_tag: "John Dee" }}
+      held the living (rectorship) of
+      Long Leadenham
+      <time datetime="1553/1583">from 1553 until 1583</time>
+      when it was forfeited due to his not attending to legalities on his
+      departure from England for six years. It’s not clear if he ever visited.
+    </p></blockquote>
+"1579-12-09-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 7
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Dee, John" | person_tag: "Dee" }}
+      has occasionally made use of Greek letters for the preservation of his
+      notes, still retaining the English language. The present passage may as
+      well be given: — <q>This
+        night
+        {{ "Fromond, Jane" | person_tag: "my wife" }}
+        dreamed that one cam to her and touched her, saying,
+        <q>Mistres Dee, you are conceived of child, whose name must be
+        Zacharias; be of good chere, he sal do well as this doth!</q></q>
+    </p></blockquote>
+"1579-12-28-dees-diary":
+  source: The Private Diary of Dr. John Dee
+  source_location: page 7
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      In a more appropriate place
+      {{ "Halliwell, James" | person_tag: "I" }}
+      shall give from an Ashmolean manuscript a traditionary anecdote relating
+      to this
+      {{ "Cooke, Roger" | person_tag: "Roger Coke, or Cooke" }},
+      and the great secret which
+      {{ "Dee, John" | person_tag: "Dee" }}
+      revealed to him.
+    </p></blockquote>
+"1579-12-28-greek":
+  text: >-
+    <p>
+      As in {{ "1579-12-09-dee" | post_link }},
+      <q lang=en-Grek-emodeng>οφ ακετελς ονε υππον α υνδρεδ</q>
+      is English text roughly transliterated to Greek script. Transliterating
+      back to English characters, we get
+      <q>of aketels one upon a hundred</q>.
+      {{ "Dee, John" | person_tag: "Dee" }} uses
+      <q lang=el>κ</q>
+      for both
+      <q>c</q>
+      and
+      <q>k</q>,
+      so perhaps
+      <q>salt of aketels</q>
+      refers to
+      <a href=https://en.wikipedia.org/wiki/Sodium_acetate>sodium acetate</a>
+      or some other acetyl compound.
+    </p>
 
 "bartholomew-newsam":
   source: Dictionary of National Biography, 1885–1900
@@ -261,7 +387,7 @@
         <time datetime=1583-06-04>On 4 June 1583</time>
         he received, under the privy seal dated
         <time datetime=1583-05-27>27 May previous</time>,
-        <q lang="en-emodeng">{{ "GBP 32 shillings 8 pence" | currency_tag: "32<abbr>s.</abbr> 8<abbr>d.</abbr>" }}
+        <q lang=en-emodeng>{{ "GBP 32 shillings 8 pence" | currency_tag: "32<abbr>s.</abbr> 8<abbr>d.</abbr>" }}
           for mending of clockes</q>
         during
         <time datetime="1582/P1Y">the past year</time>.
@@ -288,7 +414,7 @@
         {{ "Newsam's house, Strand, England" | place_tag: "the house in the Strand" }}.
         <time datetime=1583-09-06>On 6 Sept. 1583</time>, by letters patent, a
         lease for
-        <time datetime="P21Y">twenty-one years</time>
+        <time datetime=P21Y>twenty-one years</time>
         was granted to Newsam of lands
         <q lang=en-emodeng>at
           {{ "Fleet, England" | place_tag: "Fleete in Lincolnshire" }},
@@ -394,7 +520,7 @@
       In the most ancient record which I have seen relating to this parish, its
       name is spelt Chieham; it has since been varied to Ceiham, Chayham, and
       Cheyham, and has now, for
-      <time datetime="P200Y">about two centuries past</time>,
+      <time datetime=P200Y>about two centuries past</time>,
       been uniformly written Cheam. As there is no word in the Saxon language
       nearly similar to the first syllable of the ancient appellation, I
       suppose it to have been a proper name; Ham is well known to mean a
@@ -414,7 +540,7 @@
       of
       <time datetime=1619>1619</time>,
       seemingly made in his behalf, shows him to have married
-      {{ "Hynde, Allice" | person_tag: "Allice" }}
+      {{ "Hynde, Alice" | person_tag: "Allice" }}
       daughter of
       {{ "Billett, John" | person_tag: "John Billett" }}
       of
@@ -432,19 +558,28 @@
       remarried and was survived by
       {{ "Hynde, Barbara" | person_tag: "his wife Barbara née Powell" }},
       relict of
-      {{ "Dyrell, Francis" | person_tag: "Francis Dayrell" }}
+      {{ "Dayrell, Francis" | person_tag: "Francis Dayrell" }}
       of
       {{ "Castle Camps, England" | place_tag: "Castle Camps, Cambridgeshire" }},
       and was therefore stepfather to
       {{ "Dayrell, Thomas" | person_tag: "Sir Thomas Dayrell" }}.
       After
       {{ "Hynde, William" | person_tag: "his brother" }}’s
-      <time datetime=1632>death</time>
-      he succeeded to
+      death he succeeded to
       {{ "Hynde, Francis" | person_tag: "his father" }}’s
       estate, and was knighted
       <time datetime=1615>in 1615</time>.
     </p></blockquote>
+"john-elmeston-essay":
+  text: >-
+    <p>
+      This may be the
+      {{ "Elmeston, John" | person_tag: "John Elmeston" }}
+      who published
+      {{ "John Elmeston essay" | source_tag }}
+      in
+      <time datetime=1652>1652</time>.
+    </p>
 "llanlluney-wales-1":
   source: Tables and Indexes, vol. 41
   source_location: page 462
