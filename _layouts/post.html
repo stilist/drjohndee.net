@@ -10,7 +10,7 @@ layout: default
 
   <div class="post-content e-content"
        itemprop=articleBody
-       lang={{ page.lang | default: author.lang | default: site.lang | default: "en" }}>
+       lang={{ page.language | default: author.language | default: site.language | default: "en" }}>
     {{ content }}
   </div>
 

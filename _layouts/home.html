@@ -15,7 +15,7 @@ layout: default
     <li class=post-summary>
       {%- include entry_title.html entry=post hyperlink=true title_tag="h3" -%}
       {%- if site.show_excerpts -%}
-      <div lang={{ post.lang | default: author.lang | default: site.lang | default: "en" }}>
+      <div lang={{ post.language | default: author.language | default: site.language | default: "en" }}>
         {{ post.excerpt }}
       </div>
       {%- endif -%}
