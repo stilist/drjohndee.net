@@ -102,6 +102,21 @@
       {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
       best patrons.
     </p></blockquote>
+"1577-12-30-latin":
+  text: >-
+    <p>
+      <q lang=la>Inexpliſſima <ins>?</ins> illa calumnia dē
+        {{ "Edward, Roger" | person_tag: "Roger Edward" }},
+        inīquiſſime aliqua ex parte in mē dēnūntiābātur: ante aliquōs ēlāpſōs
+        diēs, sed <ins>…</ins> sua sapientia mē innocentem.</q>
+      An extremely questionable translation to English:
+      <q>Most inexplicable false charges from
+        {{ "Edward, Roger" | person_tag: "Roger Edward" }},
+        repeatedly declared, very unfairly in my absence: before some days
+        elapsed, but
+        <ins>…</ins>
+        he discerned my innocence.</q>
+    </p>
 "1578-06-30-dees-diary-1":
   source: The Private Diary of Dr. John Dee
   source_location: page 4
