@@ -3,51 +3,39 @@
 require 'jekyll'
 
 module Jekyll
-  class PeopleReverseRelations < Generator
-    priority :highest
+  class PeopleRelations < Generator
     safe true
 
-    FLAT_RELATIONSHIPS = %w[
+    FLAT_TYPES = %w[
       knows
       relatedTo
       siblings
       spouses
     ].freeze
-    RELATIONSHIP_PAIRS = {
-      'children' => 'parents',
-      'parents' => 'children',
-    }.freeze
+    RELATIONSHIPS = FLAT_TYPES
+      .map { |type| [type, type] }
+      .to_h
+      .merge({
+        'children' => 'parents',
+        'parents' => 'children',
+      }).freeze
     def generate(site)
       @collection = site.data['people']
-      @collection.each do |id, person|
-        ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                              "Defining flat relationships for #{id}...")
-        FLAT_RELATIONSHIPS.each do |type|
-          next if !person.key?(type)
+      @collection.each do |key, data|
+        RELATIONSHIPS.each do |from_type, to_type|
+          next if !data.key?(from_type)
 
-          person[type].each do |related_id|
-            apply_relationship(id, related_id, type)
-            ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                                  "* #{id} has '#{type}' relationship with #{related_id}.")
+          data[from_type].each do |related_key|
+            apply_relationship(key, related_key, to_type)
           end
-
-          ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                                "* #{id} has '#{type}' relationships with: #{person[type].join(", ")}")
         end
+      end
 
-        ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                              "Defining pair relationships for #{id}...")
-        RELATIONSHIP_PAIRS.each do |source_type, target_type|
-          next if !person.key?(source_type)
-
-          person[source_type].each do |related_id|
-            apply_relationship(id, related_id, target_type)
-            ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                                  "* #{id} has '#{source_type}' relationship with #{related_id}.")
-          end
-
-          ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                                "* #{id} has '#{source_type}<->#{target_type}' relationships with: #{person[source_type].join("; ")}")
+      types = RELATIONSHIPS.keys.freeze
+      @collection.each do |key, data|
+        if (data.keys & types).empty?
+          ::Jekyll.logger.info('Jekyll::PeopleRelations:',
+                               "#{key} doesn't have any relationships defined.")
         end
       end
 
@@ -56,24 +44,24 @@ module Jekyll
 
     private
 
-    def apply_relationship(source_id, target_id, target_type)
-      if !@collection.key?(target_id)
-        ::Jekyll.logger.warn('Jekyll::PeopleReverseRelations:',
-                             "* #{source_id} has '#{target_type}' relationship with unknown person (#{target_id}).")
+    def apply_relationship(from_key, to_key, target_type)
+      if !@collection.key?(to_key)
+        ::Jekyll.logger.warn('Jekyll::PeopleRelations:',
+                             "#{from_key} has #{target_type} relationship with unknown person '#{to_key}'.")
         return
       end
 
-      @collection[target_id][target_type] ||= []
-      if @collection[target_id][target_type].include?(source_id)
-        ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                              "  * #{target_id} already has '#{target_type}' relationship with #{source_id}.")
+      @collection[to_key][target_type] ||= []
+      if @collection[to_key][target_type].include?(from_key)
+        ::Jekyll.logger.debug('Jekyll::PeopleRelations:',
+                              "'#{to_key}' already has #{target_type} relationship with '#{from_key}'.")
         return
       end
 
-      ::Jekyll.logger.debug('Jekyll::PeopleReverseRelations:',
-                            "* #{target_id} now has '#{target_type}' relationship with #{source_id}.")
+      ::Jekyll.logger.debug('Jekyll::PeopleRelations:',
+                            "'#{to_key}' now has #{target_type} relationship with '#{from_key}'.")
 
-      @collection[target_id][target_type] << source_id
+      @collection[to_key][target_type] << from_key
     end
   end
 end
