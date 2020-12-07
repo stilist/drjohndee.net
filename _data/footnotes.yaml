@@ -20,9 +20,8 @@
         {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
         dwelt, now inhabited by one
         {{ "Selbury" | person_tag: "<abbr>Mr.</abbr> Selbury" }},
-        and further west his garden.</q>
-      —<cite>
-        <abbr title="manuscript">MS.</abbr>
+        and further west his
+        garden.</q> — <cite><abbr title="manuscript">MS.</abbr>
         <abbr title="Ashmole">Ashm.</abbr>
         1788,
         <abbr title="folio">fol.</abbr>
