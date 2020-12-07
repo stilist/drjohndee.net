@@ -5,11 +5,14 @@
   text: >-
     <blockquote><p>
       <q lang="en-emodeng">{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
-        dwelt in a house
-        neere the water side, a little westward from the church
+        dwelt
+        {{ "Dee's house, Mortlake, England" | place_tag: "in a house" }}
+        neere the water side, a little westward from
+        {{ "St Mary the Virgin Mortlake, England" | place_tag: "the church" }}
         <ins>at
           {{ "Mortlake, England" | place_tag: "Mortlake" }}</ins>.
-        The buildings which
+        {{ "Mortlake Tapestry Works, England" | place_tag: "The buildings" }}
+        which
         {{ "Crane, Francis" | person_tag: "Sir <abbr title='Francis'>Fr.</abbr> Crane" }}
         erected for working of tapestry hangings, and are still
         (<time datetime=1673>1673</time>)
@@ -481,7 +484,7 @@
       <q lang-"en-emodeng">Oyle of Hypericon</q>
       refers to a oil infusion of
       <span itemscope itemtype=http://schema.org/DietarySupplement>
-        <meta itemprop=sameAs content=https://www.wikidata.org/wiki/Q156935>
+        <meta itemprop=sameAs content=https://www.wikidata.org/entity/Q156935>
         <span itemprop=activeIngredient>Hypericum</span>,
         which is commonly known as
         <span itemprop=nonProprietaryName>
