@@ -124,8 +124,14 @@
   --column-count: 9;
 }
 
+:lang(en),
 :lang(en-emodeng) {
   quotes: '‘' '’' '“' '”';
+}
+:lang(gr),
+q[lang|="en-Grek-emodeng"],
+q[lang|="la"] {
+  quotes: "«" "»" "“" "”" "‘" "’";
 }
 
 body, h1, h2, h3, h4, h5, h6,
