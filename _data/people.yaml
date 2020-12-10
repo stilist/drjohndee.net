@@ -1297,3 +1297,10 @@
   deathPlace: Fotheringay Castle, England
   gender: female
   id: https://www.wikidata.org/entity/Q131412
+
+"unknown -- strumpet":
+  name:
+    - text: unknown woman
+  gender: female
+  knows:
+    - Dee, John
