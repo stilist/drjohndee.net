@@ -5,12 +5,60 @@
   color-scheme: light dark;
 
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
+  --neutral-0: #fffffc;
+  --neutral-5: #fdfcfa;
+  --neutral-10: #fbfaf8;
+  --neutral-20: #f4f3f0;
+  --neutral-30: #e9e8e6;
+  /* foreground color inverts here */
+  --neutral-40: #d9d9d7;
+  --neutral-50: #c5c4c2;
+  --neutral-60: #aaa9a7;
+  --neutral-70: #878786;
+  --neutral-80: #5e5e5d;
+  --neutral-90: #302f2f;
+  --neutral-100: #000;
+  /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
+  --accent-0: #fffaf2;
+  --accent-5: #fef0d6;
+  --accent-10: #fde5bb;
+  --accent-20: #face86;
+  --accent-30: #f5b657;
+  --accent-40: #ed9d30;
+  --accent-50: #e48213;
+  --accent-60: #d76600;
+  /* foreground color inverts here */
+  --accent-70: #c75100;
+  --accent-80: #b33c00;
+  --accent-90: #9e2800;
+  --accent-100: #871900;
+  --invalid-data: #f0c;
+
+  --font-serif: EB Garamond, Garamond, serif;
+  --font-sans-serif: system-ui, sans-serif;
+
+  --foreground: var(--neutral-100);
+  --background: var(--neutral-0);
+
+  --primary-column-count: 9;
+  --spacing-column-count: 1;
+  --secondary-column-count: 5;
+  --column-count: calc(var(--primary-column-count)
+                     + var(--spacing-column-count)
+                     + var(--secondary-column-count));
+  --column-width: 5rem;
+  --gutter-width: 0.5rem;
+  --content-width: calc(var(--column-count) * var(--column-width)
+                      + calc(var(--column-count) - 1) * var(--gutter-width));
+
+  --vertical-rhythm: calc(var(--gutter-width) * 2);
+}
+@supports (color: hsl(1 1 1)) {
   --neutral-0--components: 1 1 0.9882; /* #fffffc */
   --neutral-5--components: 0.9922 0.9882 0.9804; /* #fdfcfa */
   --neutral-10--components: 0.9843 0.9804 0.9725; /* #fbfaf8 */
   --neutral-20--components: 0.9569 0.9529 0.9412; /* #f4f3f0 */
   --neutral-30--components: 0.9137 0.9098 0.9020; /* #e9e8e6 */
-  /* foreground color inverts here */
   --neutral-40--components: 0.8510 0.8510 0.8431; /* #d9d9d7 */
   --neutral-50--components: 0.7725 0.7686 0.7608; /* #c5c4c2 */
   --neutral-60--components: 0.6667 0.6627 0.6549; /* #aaa9a7 */
@@ -18,20 +66,6 @@
   --neutral-80--components: 0.3686 0.3686 0.3647; /* #5e5e5d */
   --neutral-90--components: 0.1882 0.1843 0.1843; /* #302f2f */
   --neutral-100--components: 0 0 0; /* #000 */
-  --neutral-0: hsl(var(--neutral-0--components));
-  --neutral-5: hsl(var(--neutral-5--components));
-  --neutral-10: hsl(var(--neutral-10--components));
-  --neutral-20: hsl(var(--neutral-20--components));
-  --neutral-30: hsl(var(--neutral-30--components));
-  --neutral-40: hsl(var(--neutral-40--components));
-  --neutral-50: hsl(var(--neutral-50--components));
-  --neutral-60: hsl(var(--neutral-60--components));
-  --neutral-70: hsl(var(--neutral-70--components));
-  --neutral-80: hsl(var(--neutral-80--components));
-  --neutral-90: hsl(var(--neutral-90--components));
-  --neutral-100: hsl(var(--neutral-100--components));
-
-  /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
   --accent-0--components: 1.0000 0.9804 0.9490; /* #fffaf2 */
   --accent-5--components: 0.9961 0.9412 0.8992; /* #fef0d6 */
   --accent-10--components: 0.9922 0.8980 0.7333; /* #fde5bb */
@@ -40,11 +74,12 @@
   --accent-40--components: 0.9294 0.6157 0.1882; /* #ed9d30 */
   --accent-50--components: 0.8941 0.5098 0.0745; /* #e48213 */
   --accent-60--components: 0.8431 0.4000 0; /* #d76600 */
-  /* foreground color inverts here */
   --accent-70--components: 0.7803 0.3176 0; /* #c75100 */
   --accent-80--components: 0.6020 0.2352 0; /* #b33c00 */
   --accent-90--components: 0.6196 0.1568 0; /* #9e2800 */
   --accent-100--components: 0.5294 0.0980 0; /* #871900 */
+  --invalid-data--components: 1 0 0.88; /* #f0c */
+
   --accent-0: hsl(var(--accent-0--components));
   --accent-5: hsl(var(--accent-5--components));
   --accent-10: hsl(var(--accent-10--components));
@@ -57,29 +92,19 @@
   --accent-80: hsl(var(--accent-80--components));
   --accent-90: hsl(var(--accent-90--components));
   --accent-100: hsl(var(--accent-100--components));
-
-  --font-serif: 'EB Garamond', Garamond, serif;
-  --font-sans-serif: system-ui, sans-serif;
-
-  --foreground: var(--neutral-100);
-  --background: var(--neutral-0);
-
-  --invalid-data--components: 1 0 0.88; /* #f0c */
+  --neutral-0: hsl(var(--neutral-0--components));
+  --neutral-5: hsl(var(--neutral-5--components));
+  --neutral-10: hsl(var(--neutral-10--components));
+  --neutral-20: hsl(var(--neutral-20--components));
+  --neutral-30: hsl(var(--neutral-30--components));
+  --neutral-40: hsl(var(--neutral-40--components));
+  --neutral-50: hsl(var(--neutral-50--components));
+  --neutral-60: hsl(var(--neutral-60--components));
+  --neutral-70: hsl(var(--neutral-70--components));
+  --neutral-80: hsl(var(--neutral-80--components));
+  --neutral-90: hsl(var(--neutral-90--components));
+  --neutral-100: hsl(var(--neutral-100--components));
   --invalid-data: hsl(var(--invalid-data--components));
-
-  --column-count: 12;
-  --column-width: 5rem;
-  --gutter-width: 0.5rem;
-  /* The grid columns are fairly small, so it's useful to have a pre-defined
-     variable for two columns (plus their gutter). */
-  --double-column: calc((var(--column-width) * 2) +
-                        var(--gutter-width));
-
-  --vertical-rhythm: calc(var(--gutter-width) * 2);
-
-  --gutter-count: calc(var(--column-count) - 1);
-  --content-width: calc(calc(var(--column-count) * var(--column-width)) +
-                        calc(var(--gutter-count) * var(--gutter-width)));
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
@@ -96,9 +121,6 @@
     --neutral-80: color(display-p3 var(--neutral-80--components));
     --neutral-90: color(display-p3 var(--neutral-90--components));
     --neutral-100: color(display-p3 var(--neutral-100--components));
-
-    --invalid-data: color(display-p3 var(--invalid-data--components));
-
     --accent-0: color(display-p3 var(--accent-0--components));
     --accent-5: color(display-p3 var(--accent-5--components));
     --accent-10: color(display-p3 var(--accent-10--components));
@@ -112,6 +134,7 @@
     --accent-80: color(display-p3 var(--accent-80--components));
     --accent-90: color(display-p3 var(--accent-90--components));
     --accent-100: color(display-p3 var(--accent-100--components));
+    --invalid-data: color(display-p3 var(--invalid-data--components));
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -121,7 +144,8 @@
   }
 }
 @media (max-width: 960px) {
-  --column-count: 9;
+  --primary-column-count: 5;
+  --secondary-column-count: 3;
 }
 
 :lang(en),
@@ -143,11 +167,13 @@ dl, dd, ol, ul, figure {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans-serif);;
+  font-family: var(--font-sans-serif);
+  font-size: 20px;
   line-height: 1em;
   margin: calc(var(--vertical-rhythm) * 3) auto
           calc(var(--vertical-rhythm) * 2) auto;
   min-height: 100vh;
+  width: var(--content-width);
 }
 a {
   color: var(--accent-80);
@@ -186,15 +212,25 @@ ul ol, ul ul {
   margin-top: var(--vertical-rhythm);
 }
 blockquote {
-  border-left: 4px solid var(--neutral-20);
   color: var(--neutral-80);
-  margin-left: calc((var(--gutter-width) * -2) - 4px);
-  padding-left: calc(var(--gutter-width) * 2);
+  padding-left: calc(var(--gutter-width));
+  position: relative;
+}
+blockquote::before {
+  background-color: var(--neutral-20);
+  bottom: 0.5em;
+  content: '';
+  left: calc(var(--gutter-width) * -0.5);
+  position: absolute;
+  top: 0.5em;
+  width: 4px;
 }
 @media (prefers-color-scheme: dark) {
   blockquote {
-    border-left: 4px solid var(--neutral-80);
     color: var(--neutral-20);
+  }
+  blockquote::before {
+    background-color: var(--neutral-80);
   }
 }
 blockquote > :last-child {
@@ -208,7 +244,8 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.125;
-  margin: calc(var(--vertical-rhythm) * 1.8) 0 var(--vertical-rhythm);
+  margin: calc(var(--vertical-rhythm) * 1.8) 0
+          var(--vertical-rhythm);
 }
 h3 {
   font-size: 1.625rem;
@@ -235,14 +272,8 @@ p {
 }
 
 
-#site-header,
-.page-content {
-  margin-left: calc(var(--vertical-rhythm) * 2);
-  margin-right: calc(var(--vertical-rhythm) * 2);
-  max-width: var(--content-width);
-}
 #site-header {
-  margin-bottom: calc((var(--vertical-rhythm) * 3.6));
+  margin-bottom: calc((var(--vertical-rhythm) * 4.1));
 }
 #site-header h1 {
   cursor: default;
@@ -253,25 +284,30 @@ p {
   text-align: left;
 }
 
-
 .post,
 .post-summary {
   font-family: var(--font-serif);
+}
+.post {
+  column-gap: var(--gutter-width);
+  display: grid;
+  grid-template-columns: repeat(auto-fit,
+                                var(--column-width));
+}
+.post-header {
+  grid-column: span var(--column-count);
+  margin-bottom: calc(var(--vertical-rhythm) * 2.4);
 }
 .post-header p {
   margin-bottom: calc(var(--vertical-rhythm) * 0.6);
   margin-top: calc(var(--vertical-rhythm) * 1.1);
   padding: calc(var(--vertical-rhythm) * 2.5) 0 0;
 }
-.post-author,
-.post-source,
-.post-title {
-  display: block;
-}
 .post-title {
   font-size: 2.625rem;
   font-weight: 700;
   line-height: calc(var(--vertical-rhythm) * 3);
+  margin-bottom: calc(var(--vertical-rhythm) * 1.4);
   position: relative;
 }
 .post-subtitle {
@@ -283,7 +319,7 @@ p {
 .post-content {
   font-size: 1.2rem;
   line-height: 1.6rem;
-  margin-bottom: calc(var(--vertical-rhythm) * 2);
+  grid-column: 1 / span var(--primary-column-count);
 }
 .post-content blockquote {
   margin-bottom: var(--vertical-rhythm);
@@ -332,10 +368,21 @@ p {
 
 
 #annotations {
-  margin-top: calc(var(--vertical-rhythm) * 2.5);
+  font-size: 0.9rem;
+  grid-column: calc(var(--primary-column-count) + var(--spacing-column-count) + 1)
+             / span var(--secondary-column-count);
+}
+#annotations li {
+  list-style: none;
+}
+#annotations li + li {
+  margin-top: calc(var(--vertical-rhythm) * 2);
 }
 #annotations blockquote {
-  margin-top: calc(var(--vertical-rhythm) * 1.5);
+  margin-top: calc(var(--vertical-rhythm) * 0.1);
+}
+#annotations blockquote::before {
+  width: 2px;
 }
 
 

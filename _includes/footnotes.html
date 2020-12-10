@@ -1,7 +1,5 @@
 {%- if include.references.size > 0 -%}
 <section id=annotations-footnotes>
-  <h1>Footnotes</h1>
-
   <ul>
     {%- for reference in include.references -%}
     {%- assign footnote = reference | collection_entry: "footnotes" -%}

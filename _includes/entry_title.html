@@ -18,9 +18,9 @@
   {%- endif -%}
 </{{ title_tag }}>
 
+{%- if entry.author or entry.source -%}
 {%- if entry.author -%}
 <span class=post-author>
-  Written by&#32;
   <span itemprop=author class="p-author h-card">
     {{ entry.author | person_tag }}
   </span>
@@ -28,7 +28,8 @@
 {%- endif -%}
 
 {%- if entry.source -%}
-<span class=post-source>Source:&#32;
+<span class=post-source>
   {{ entry.source | source_tag: entry.source, entry.source_location }}
 </span>
+{%- endif -%}
 {%- endif -%}
