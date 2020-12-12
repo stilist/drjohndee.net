@@ -1047,7 +1047,7 @@
     - text: Countess of Hertford
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
-  birthDate: 1578-07-27
+  birthDate: 1578-07-27T21:15
   deathDate: 1639-10-08
   id: https://www.wikidata.org/entity/Q5478727
   gender: female
