@@ -327,7 +327,8 @@
 "1579-12-28-greek":
   text: >-
     <p>
-      As in {{ "1579-12-09-dee" | post_link }},
+      As in
+      {{ "1579-12-09-dee" | post_tag }},
       <q lang=en-Grek-emodeng>οφ ακετελς ονε υππον α υνδρεδ</q>
       is English text roughly transliterated to Greek script. Transliterating
       back to English characters, we get
