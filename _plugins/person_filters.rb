@@ -28,7 +28,7 @@ module Jekyll
     end
 
     def person_tag(key, display_text = nil)
-      fallback = "<span class='data-person #{UNKNOWN_REFERENCE_CLASS}'>#{key}</span>"
+      fallback = "<span class='data-person #{UNKNOWN_REFERENCE_CLASS}'>#{display_text || key}</span>"
       parts = person_name_data(key)
       return fallback if parts.empty?
 
