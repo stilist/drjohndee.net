@@ -2,6 +2,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 2
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
@@ -39,6 +40,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 3
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       This of course is his celebrated
@@ -62,6 +64,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 3
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       This was his work printed in
@@ -95,6 +98,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 4
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
@@ -123,6 +127,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 4
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       {{ "Rogers, Daniel" | person_tag: "Rogers" }}
@@ -137,6 +142,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 4
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       That is,
@@ -150,6 +156,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 4
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       This is the book just mentioned under the title of
@@ -235,6 +242,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 6
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       {{ "Dee, Arthur" | person_tag: "His" }}
@@ -270,6 +278,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 6
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       This person is not noticed by the Oxford biographers.
@@ -297,6 +306,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 7
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       {{ "Dee, John" | person_tag: "Dee" }}
@@ -313,6 +323,7 @@
   source: The Private Diary of Dr. John Dee
   source_location: page 7
   author: Halliwell, James
+  language: en
   text: >-
     <blockquote><p>
       In a more appropriate place
