@@ -60,7 +60,7 @@
   --invalid-data--components: 1 0 0.88; /* #f0c */
   --invalid-data: #f0c;
 
-  --font-serif: EB Garamond, Garamond, serif;
+  --font-serif: EB Garamond, Garamond, Times, Times New Roman, serif;
   --font-sans-serif: system-ui, sans-serif;
 
   --foreground: var(--neutral-100);
