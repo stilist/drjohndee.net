@@ -1,0 +1,21 @@
+{%- assign record = include.reference -%}
+<aside class="annotations annotations-references">
+  <h1>Referenced in this entry</h1>
+  <ul>
+    {%- for key in record.people -%}
+    <li>
+      {{ key | person_tag }}
+    </li>
+    {%- endfor -%}
+    {%- for key in record.places -%}
+    <li>
+      {{ key | place_tag }}
+    </li>
+    {%- endfor -%}
+    {%- for key in record.sources -%}
+    <li>
+      {{ key | source_tag }}
+    </li>
+    {%- endfor -%}
+  </ul>
+</aside>
