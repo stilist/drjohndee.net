@@ -2,23 +2,26 @@
 layout: default
 ---
 {%- assign record = page.key | collection_entry: "people" -%}
-<article class="post">
+<article class="page person"
+         itemprop=person
+         itemscope
+         itemtype="https://schema.org/Person">
   {%- if record.id -%}
   <link itemprop=sameAs href={{ record.id }}>
   {%- endif -%}
 
-  <header class="post-header">
-    <h1 class="post-title">
+  <header class="page-header">
+    <h1 class="page-name">
       {{ page.key | person_tag }}
     </h1>
     {%- if record.birthName -%}
-    <h2 class="post-subtitle">
+    <h2 class="page-subtitle">
       born {{ page.key | person_name: "birthName" }}
     </h2>
     {%- endif -%}
   </header>
 
-  <dl>
+  <dl class="page-metadata">
     {%- if record.birthDate or record.birthPlace -%}
     <dt>Birth</dt>
     <dd>
@@ -121,7 +124,7 @@ layout: default
     {%- endif -%}
 
     {%- if record.knows -%}
-    <dt>Knows</dt>
+    <dt>Knew</dt>
     <dd>
       <ul>
         {%- for known in record.knows -%}

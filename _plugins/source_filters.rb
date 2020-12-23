@@ -21,6 +21,7 @@ module Jekyll
       id
       language
       license
+      subtitle
     ).freeze
 
     def source_name(key)

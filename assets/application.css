@@ -145,19 +145,43 @@
     --background: var(--neutral-100);
   }
 }
+@media (min-width: 1800px) {
+  :root {
+    --column-width: 7rem;
+  }
+}
 @media (max-width: 960px) {
-  --primary-column-count: 5;
-  --secondary-column-count: 3;
+  :root {
+    --primary-column-count: 5;
+    --secondary-column-count: 3;
+  }
 }
 
+:lang(cy) {
+  quotes: '‘ ' ' ’' '“ ' ' ”';
+}
+:lang(dk) {
+  quotes: "»" "«" "›" "‹";
+}
 :lang(en),
 :lang(en-emodeng) {
   quotes: '‘' '’' '“' '”';
 }
+:lang(fr) {
+  quotes: "« " " »" "‹ " " ›";
+}
 :lang(gr),
 q[lang|="en-Grek-emodeng"],
-q[lang|="la"] {
+q:lang(la) {
   quotes: "«" "»" "“" "”" "‘" "’";
+}
+:lang(ja) {
+  quotes: "「" "」" "『" "』";
+}
+:lang(en-modeng),
+:lang(la) {
+  font-variant-alternates: historical-forms;
+  font-variant-ligatures: historical-ligatures;
 }
 
 body, h1, h2, h3, h4, h5, h6,
@@ -219,7 +243,7 @@ blockquote {
   position: relative;
 }
 blockquote::before {
-  background-color: var(--neutral-20);
+  background-color: var(--neutral-40);
   bottom: 0.5em;
   content: '';
   left: calc(var(--gutter-width) * -0.5);
@@ -229,7 +253,7 @@ blockquote::before {
 }
 @media (prefers-color-scheme: dark) {
   blockquote {
-    color: var(--neutral-20);
+    color: var(--neutral-40);
   }
   blockquote::before {
     background-color: var(--neutral-80);
@@ -242,9 +266,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 h2 {
-  font-family: var(--font-serif);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.125;
   margin: calc(var(--vertical-rhythm) * 1.8) 0
           var(--vertical-rhythm);
@@ -286,18 +309,31 @@ p {
   text-align: left;
 }
 
-.post,
-.post-summary {
-  font-family: var(--font-serif);
-}
+
+.page,
 .post {
   column-gap: var(--gutter-width);
   display: grid;
   grid-template-columns: repeat(auto-fit,
                                 var(--column-width));
+  grid-template-rows: auto auto auto;
 }
+.page {
+  grid-template-areas:
+    "header header header header header header header header header header header header header header header"
+    "metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata"
+    "content content content content content . footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes"
+    "events events events events events . footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes";
+}
+.post {
+  grid-template-areas:
+    "header header header header header header header header header header header header header header header"
+    "content content content content content content content content content . footnotes footnotes footnotes footnotes footnotes"
+    "references references references references . events events events events . footnotes footnotes footnotes footnotes footnotes";
+}
+.page-header,
 .post-header {
-  grid-column: span var(--column-count);
+  grid-area: header;
   margin-bottom: calc(var(--vertical-rhythm) * 2.4);
 }
 .post-header p {
@@ -305,86 +341,88 @@ p {
   margin-top: calc(var(--vertical-rhythm) * 1.1);
   padding: calc(var(--vertical-rhythm) * 2.5) 0 0;
 }
-.post-title {
+.page-name,
+.post-title,
+.source-title {
   font-size: 2.625rem;
   font-weight: 700;
   line-height: calc(var(--vertical-rhythm) * 3);
   margin-bottom: calc(var(--vertical-rhythm) * 1.4);
   position: relative;
 }
-.post-subtitle {
+.post-subtitle,
+.source-subtitle {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: calc(var(--vertical-rhythm) * 2);
   margin-top: var(--vertical-rhythm);
 }
-.post-content {
-  font-size: 1.2rem;
+.post-summary {
+  max-width: calc(var(--primary-column-count) * var(--column-width)
+           + calc(var(--primary-column-count) - 1) * var(--gutter-width));
+}
+.page-metadata {
+  column-count: calc(var(--column-count) / 3);
+  column-gap: var(--gutter-width);
+  font-size: 1.0rem;
+  grid-area: metadata;
+  margin-bottom: calc(var(--vertical-rhythm) * 3);
+}
+.page-metadata dt {
+  break-after: column;
+  font-weight: bold;
+}
+.page-metadata dd {
+  break-inside: avoid;
+  margin-bottom: calc(var(--vertical-rhythm) * 1.4);
+}
+.page-content,
+.post-content,
+.post-excerpt {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
   line-height: 1.6rem;
-  grid-column: 1 / span var(--primary-column-count);
+  grid-area: content;
+}
+.post-content {
+  margin-bottom: calc(var(--vertical-rhythm) * 3);
 }
 .post-content blockquote {
   margin-bottom: var(--vertical-rhythm);
   margin-top: var(--vertical-rhythm);
 }
-.post-content figure {
-  box-shadow: inset 0 0 1px var(--neutral-50);
-  position: relative;
-}
-.post-content figure img {
-  display: block;
-  position: relative;
-  z-index: -1;
-}
-.post-content h3 {
-  margin-bottom: calc(var(--vertical-rhythm) * 1.45);
-  margin-top: calc(var(--vertical-rhythm) * 2);
-}
-.post-content img {
-  max-width: 100%;
-}
-.post-content table {
-  border-collapse: collapse;
-  width: 100%;
-}
-.post-content tbody tr {
-  border-top: 1px solid var(--foreground);
-}
-.post-content td + td {
-  border-left: 1px solid var(--foreground);
-}
-.post-content td {
-  padding: 2px 7px;
-}
-.post-content > ol,
-.post-content > ul {
-  margin-top: calc(var(--vertical-rhythm) * 1.5);
-}
-.post-content > ol + h2,
-.post-content > ul + h2 {
-  margin-top: calc(var(--vertical-rhythm) * 2.25);
-}
 .post-content p:last-child {
   margin-bottom: 0;
 }
 
-
-#annotations {
-  font-size: 0.9rem;
-  grid-column: calc(var(--primary-column-count) + var(--spacing-column-count) + 1)
-             / span var(--secondary-column-count);
+.annotations {
+  font-size: 1.1rem;
 }
-#annotations li {
+.annotations-events {
+  grid-area: events;
+}
+.annotations-footnotes {
+  grid-area: footnotes;
+}
+.annotations-references {
+  grid-area: references;
+}
+.annotations li {
   list-style: none;
 }
-#annotations li + li {
+.annotations li + li {
   margin-top: calc(var(--vertical-rhythm) * 2);
 }
-#annotations blockquote {
+.annotations blockquote {
+  font-family: var(--font-serif);
   margin-top: calc(var(--vertical-rhythm) * 0.1);
 }
-#annotations blockquote::before {
+.annotations blockquote::before {
   width: 2px;
+}
+.annotations figcaption {
+  font-size: 1.0rem;
+  line-height: 2rem;
 }
 
 
