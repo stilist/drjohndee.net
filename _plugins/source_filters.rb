@@ -61,7 +61,7 @@ module Jekyll
       end
 
       language = data_collection_entry('places', key)&.dig('language')
-      language_tag = "lang=#{language}" if !language.nil?
+      language_tag = "lang=#{language} translate" if !language.nil?
 
       <<~EOM
       <cite class="data-source" #{language_tag}>

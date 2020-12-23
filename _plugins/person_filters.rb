@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../_lib/collections'
 require 'jekyll'
+require_relative '../_lib/collections'
 
 module Jekyll
   module PersonFilters
@@ -47,7 +47,7 @@ module Jekyll
       end
 
       language = data_collection_entry('places', key)&.dig('language')
-      language_tag = "lang=#{language}" if !language.nil?
+      language_tag = "lang=#{language} translate" if !language.nil?
 
       <<~EOM
       <span class="data-person" itemscope itemtype=http://schema.org/Person #{language_tag}>
