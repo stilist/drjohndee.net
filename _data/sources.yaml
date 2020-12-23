@@ -8,6 +8,7 @@
 "British Society for the History of Mathematics":
   title: The British Society for the History of Mathematics
   author: Singmaster, David
+  language: en
   url: https://web.archive.org/web/20120514145358/http://www.dcs.warwick.ac.uk/bshm/gazetteer.html
 "Brytanici Imperii Limites":
   title: Brytanici Imperij Limites
@@ -17,13 +18,14 @@
   title: De gestis Britonum
   author: Geoffrey of Monmouth
   date: 1136
+  language: la-medieval
   license: public domain
-  language: la
   id: https://www.wikidata.org/entity/Q238693
   oclc_number: 1135980775
 "Dictionary of National Biography, 1885–1900":
   title: Dictionary of National Biography, 1885–1900
   date: 1900
+  language: en
   license: public domain
   id: https://www.wikidata.org/entity/Q15987216
   url: https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Vol_40_Myllar_-_Nicholls
@@ -54,6 +56,7 @@
     passages of writing which have gone between Mr John Elmeston of Cranebroke,
     and the same M. Henden. Published according to order.
   author: Elmeston, John
+  language: en-emodeng
   license: public domain
   id: http://purl.ox.ac.uk/ota/A43313
   url: https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A43313?show=full
@@ -69,6 +72,7 @@
 "New England Historical and Genealogical Register":
   title: The New England Historical and Genealogical Register
   date: 1913
+  language: en
   license: public domain
   id: http://www.worldcat.org/oclc/2564052
   url: https://books.google.com/books?id=IsMMAAAAYAAJ
@@ -77,6 +81,7 @@
 "Tables and Indexes, vol. 41":
   title: Tables and Indexes
   date: 1845
+  language: en
   license: public domain
   url: https://www.google.com/books/edition/Tables_and_Indexes/IxVcAAAAQAAJ
   volume_number: 41

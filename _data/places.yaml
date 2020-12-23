@@ -3,6 +3,7 @@
   region: Herefordshire
   country: GB
   id: https://www.wikidata.org/entity/Q2294131
+  language: en
 "Brechfa, Wales":
   locality: Brechfa
   region: Carmarthenshire
@@ -17,6 +18,7 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q913573
+  language: en
 "British Museum, England":
   name: British Museum
   latitude: 51.519489
@@ -26,6 +28,7 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q6373
+  language: en
 "British Library, England":
   name: British Library
   latitude: 51.529444
@@ -36,12 +39,14 @@
   country: GB
   id: https://www.wikidata.org/entity/Q23308
   url: https://www.bl.uk/
+  language: en
 "Castle Camps, England":
   latitude: 52.0569
   longitude: 0.370319
   region: Cambridgeshire
   country: GB
   id: https://www.wikidata.org/entity/Q5050015
+  language: en
 "Carmarthen, Wales":
   locality: Carmarthen
   region: Carmarthenshire
@@ -62,6 +67,7 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q2240615
+  language: en
   footnotes:
     - cheam-england
 "Chislehurst, England":
@@ -69,37 +75,44 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q122917
+  language: en
 "Chiswick, England":
   locality: Chiswick
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q845015
+  language: en
 "Cottenham, Cambridgeshire, England":
   locality: Cottenham
   region: Cambridgeshire
   country: GB
   id: https://www.wikidata.org/entity/Q1827217
+  language: en
 "Coney Street, York, England":
   name: Coney Street
   locality: York
   region: Yorkshire
   country: GB
+  language: en
 "Corpus Christi College, Cambridge, England":
   name: Corpus Christi College
   locality: Cambridge
   region: Cambridgeshire
   country: GB
   id: https://www.wikidata.org/entity/Q536282
+  language: en
 "Cranbrook, England":
   locality: Cranbrook
   region: Kent
   country: GB
   id: https://www.wikidata.org/entity/Q2160826
+  language: en
 "Dartmouth, England":
   locality: Dartmouth
   region: Devon
   country: GB
   id: https://www.wikidata.org/entity/Q1007083
+  language: en
 "Dee's house, Mortlake, England":
   name: John Dee’s house
   latitude: 51.469593
@@ -107,11 +120,13 @@
   locality: Mortlake
   region: Greater London
   country: GB
+  language: en
 "East Sheen, England":
   locality: East Sheen
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q2530557
+  language: en
 "Estotiland":
   country: CA
   id: https://www.wikidata.org/entity/Q3059031
@@ -120,12 +135,14 @@
   locality: Ferguson
   region: Missouri
   country: US
-  id: https://www.wikidata.org/wiki/Q954855
+  id: https://www.wikidata.org/entity/Q954855
+  language: en
 "Fleet, England":
   locality: Fleet
   region: South Holland
   country: GB
   id: https://www.wikidata.org/entity/Q5458375
+  language: en
 "Fotheringay Castle, England":
   name: Fotheringay Castle
   latitude: 52.5243
@@ -139,6 +156,7 @@
   region: Brandenburg
   country: DE
   id: https://www.wikidata.org/entity/Q4024
+  language: de
 "Friesland":
   region: Friesland
   country: Habsburg Netherlands
@@ -148,42 +166,50 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q3367868
+  language: en
 "Gravesend, England":
   locality: Gravesend
   region: Kent
   country: GB
   id: https://www.wikidata.org/entity/Q676689
+  language: en
 "Greenland":
   region: Greenland
   country: Denmark–Norway
   id: https://www.wikidata.org/entity/Q223
+  language: en
 "Greenway, Galmpton, England":
   name: Greenway House
   locality: Galmpton
   region: Devon
   country: GB
   id: https://www.wikidata.org/entity/Q1544827
+  language: en
 "Grimston Hall, England":
   name: Grimston Hall
   locality: Trimley St Martin
   region: Suffolk
   country: GB
-  id: https://www.wikidata.org/wiki/Q26282257
+  id: https://www.wikidata.org/entity/Q26282257
+  language: en
 "Hamburg, Germany":
   locality: Free and Hanseatic City of Hamburg
   region: Hamburg
   country: DE
   id: https://www.wikidata.org/entity/Q1055
+  language: de
 "Hatfield, Hertfordshire, England":
   locality: Hatfield
   region: Hertfordshire
   country: GB
   id: https://www.wikidata.org/entity/Q19788
+  language: en
 "Hinxton, England":
   locality: Hinxton
   region: South Cambridgeshire
   country: GB
   id: https://www.wikidata.org/entity/Q2356502
+  language: en
 "Hochelaga, Quebec, Canada":
   name: Hochelaga
   latitude: 45.503644
@@ -196,32 +222,38 @@
   region: Kent
   country: GB
   id: https://www.wikidata.org/entity/Q67479626
+  language: en
 "Kew, England":
   locality: Kew
   region: Greater London
   country: GB
-  id: https://www.wikidata.org/wiki/Q1740301
+  id: https://www.wikidata.org/entity/Q1740301
+  language: en
 "Leadenham parish, England":
   name: Leadenham parish
   locality: Leadenham
   region: Lincolnshire
   country: GB
-  id: https://www.wikidata.org/wiki/Special:EntityPage/Q6508465
+  id: https://www.wikidata.org/entity/Q6508465
+  language: en
 "Lambeth, England":
   locality: Lambeth
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q148349
+  language: en
 "Leigh-on-Sea, England":
   locality: Leigh-on-Sea
   region: Essex
   country: GB
   id: https://www.wikidata.org/entity/Q541590
+  language: en
 "Lichfield, England":
   locality: Lichfield
   region: West Midlands
   country: GB
   id: https://www.wikidata.org/entity/Q207371
+  language: en
 "Linlithgow Palace, Scotland":
   name: Linlithgow Palace
   latitude: 55.9785
@@ -259,17 +291,20 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q84
+  language: en
 "Lutherstadt Wittenberg, Germany":
   locality: Lutherstadt Wittenberg
   region: Saxony-Anhalt
   country: DE
   id: https://www.wikidata.org/entity/Q6837
+  language: de
 "Manor of Scrivelsby, England":
   name: Manor of Scrivelsby
   locality: Scrivelsby
   region: Lincolnshire
   country: GB
-  id: https://www.wikidata.org/wiki/Q6751399
+  id: https://www.wikidata.org/entity/Q6751399
+  language: en
 "Middle Temple, London, England":
   name: Middle Temple
   latitude: 51.5125
@@ -281,16 +316,19 @@
   country: GB
   id: https://www.wikidata.org/entity/Q925942
   url: http://www.middletemple.org.uk
+  language: en
 "Mortlake, England":
   locality: Mortlake
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q2456238
+  language: en
 "Mortlake Tapestry Works, England":
   locality: Mortlake
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q6914781
+  language: en
 "Nantgaredig, Wales":
   locality: Nantgaredig
   region: Carmarthenshire
@@ -301,11 +339,13 @@
   name: Bartholomew Newsam’s house
   locality: City of Westminster
   country: GB
+  language: en
 "Norwich, England":
   locality: Norwich
   region: Norfolk
   country: GB
   id: https://www.wikidata.org/entity/Q130191
+  language: en
 "Palace of Placentia, England":
   name: Palace of Placentia
   latitude: 51.482222
@@ -313,12 +353,14 @@
   locality: Royal Borough of Greenwich
   country: GB
   id: https://www.wikidata.org/entity/Q1424839
+  language: en
 "Palace of Whitehall":
   name: Palace of Whitehall
   locality: City of Westminster
   region: Middlesex
   country: GB
   id: https://www.wikidata.org/entity/Q391620
+  language: en
 "Pembroke, Wales":
   locality: Pembroke
   region: Pembrokeshire
@@ -329,7 +371,8 @@
   locality: Putney
   region: Greater London
   country: GB
-  id: https://www.wikidata.org/wiki/Special:EntityPage/Q2465220
+  id: https://www.wikidata.org/entity/Q2465220
+  language: en
 "Richmond Palace, England":
   name: Richmond Palace
   latitude: 51.460389
@@ -338,6 +381,7 @@
   region: Greater London Borough of Richmond upon Thames
   country: GB
   id: https://www.wikidata.org/entity/Q1059945
+  language: en
 "River Teifi, Wales":
   name: River Teifi
   country: GB
@@ -348,6 +392,7 @@
   region: Gloucestershire
   country: GB
   id: https://www.wikidata.org/entity/Q7356816
+  language: en
 "Safavid Iran":
   country: Safavid Iran
   id: https://www.wikidata.org/entity/Q18234383
@@ -362,22 +407,26 @@
   region: East Midlands
   country: GB
   id: https://www.wikidata.org/entity/Q7535882
+  language: en
 "Somerset House":
   name: Somerset House
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q1344889
+  language: en
 "St Clement Danes parish, Westminster, England":
   name: <abbr>St</abbr> Clement Danes parish
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q7592834
+  language: en
 "St Helen with St Martin, York, England":
   name: <abbr>St</abbr> Helen with <abbr>St</abbr> Martin
   locality: York
   region: Yorkshire
   country: GB
   url: https://www.sthelenwithstmartinyork.org.uk
+  language: en
 "St Julians, Newport, Wales":
   locality: <abbr>St</abbr> Julians
   region: Newport
@@ -393,6 +442,7 @@
   country: GB
   id: https://www.wikidata.org/entity/Q17549993
   url: https://www.sthelenwithstmartinyork.org.uk
+  language: en
 "St Martin-in-the-Fields, England":
   name: <abbr>St</abbr> Martin-in-the-Fields
   latitude: 51.508889
@@ -402,13 +452,15 @@
   country: GB
   id: https://www.wikidata.org/entity/Q1335201
   url: http://www.stmartin-in-the-fields.org/
+  language: en
 "St Mary's Church, Wimbledon, England":
   name: <abbr>St</abbr> Mary’s Church
   locality: Wimbledon
   region: Greater London
   country: GB
-  id: https://www.wikidata.org/wiki/Special:EntityPage/Q7594457
+  id: https://www.wikidata.org/entity/Q7594457
   url: http://www.stmaryswimbledon.org/
+  language: en
 "St Mary the Virgin Mortlake, England":
   name: <abbr>St</abbr> Mary the Virgin
   locality: Mortlake
@@ -417,11 +469,13 @@
   country: GB
   id: https://www.wikidata.org/entity/Q7594666
   url: https://stmarymortlake.org.uk
+  language: en
 "Strand, England":
   name: Strand
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q756819
+  language: en
 "Temple Bar, England":
   name: Temple Bar
   latitude: 51.5143
@@ -429,12 +483,14 @@
   locality: City of London
   country: GB
   id: https://www.wikidata.org/entity/Q1256932
+  language: en
 "Thornbury Castle, England":
   name: Thornbury Castle
   locality: Thornbury
   region: Gloucestershire
   country: GB
   id: https://www.wikidata.org/entity/Q7796332
+  language: en
 "Tower Hill, London, England":
   name: Tower Hill
   latitude: 51.5085
@@ -442,6 +498,7 @@
   locality: London
   country: GB
   id: https://www.wikidata.org/entity/Q499565
+  language: en
 "University of Oxford, England":
   name: University of Oxford
   latitude: 51.755
@@ -451,11 +508,13 @@
   region: Oxfordshire
   country: GB
   id: https://www.wikidata.org/entity/Q34433
+  language: en
 "Wimbledon, England":
   locality: Wimbledon
   region: Greater London
   country: GB
-  id: https://www.wikidata.org/wiki/Q736742
+  id: https://www.wikidata.org/entity/Q736742
+  language: en
 "Windsor Castle, England":
   name: Windsor Castle
   latitude: 51.4838
@@ -465,11 +524,13 @@
   region: Windsor
   country: GB
   id: https://www.wikidata.org/entity/Q42646
+  language: en
 "Wymondham, England":
   locality: Wymondham
   region: South Norfolk
   country: GB
   id: https://www.wikidata.org/entity/Q1787230
+  language: en
 "Wymondham Abbey, England":
   name: Wymondham Abbey
   latitude: 52.570556
@@ -478,8 +539,10 @@
   region: South Norfolk
   country: GB
   id: https://www.wikidata.org/entity/Q8039988
+  language: en
 "York, England":
   locality: York
   region: Yorkshire
   country: GB
   id: https://www.wikidata.org/entity/Q42462
+  language: en

@@ -171,15 +171,16 @@
   quotes: "« " " »" "‹ " " ›";
 }
 :lang(gr),
-q[lang|="en-Grek-emodeng"],
-q:lang(la) {
+q[lang|="en-Grek"],
+q[lang|="la"] {
   quotes: "«" "»" "“" "”" "‘" "’";
 }
 :lang(ja) {
   quotes: "「" "」" "『" "』";
 }
 :lang(en-modeng),
-:lang(la) {
+:lang(la-medieval),
+:lang(la-renais) {
   font-variant-alternates: historical-forms;
   font-variant-ligatures: historical-ligatures;
 }

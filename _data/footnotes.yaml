@@ -109,9 +109,10 @@
       best patrons.
     </p></blockquote>
 "1577-12-30-latin":
+  language: en
   text: >-
     <p>
-      <q lang=la>Inexpliſſima <ins>?</ins> illa calumnia dē
+      <q lang=la-renais>Inexpliſſima <ins>?</ins> illa calumnia dē
         {{ "Edward, Roger" | person_tag: "Roger Edward" }},
         inīquiſſime aliqua ex parte in mē dēnūntiābātur: ante aliquōs ēlāpſōs
         diēs, sed <ins>…</ins> sua sapientia mē innocentem.</q>
@@ -146,7 +147,7 @@
   text: >-
     <blockquote><p>
       That is,
-      <span lang=la>
+      <span lang=la-medieval>
         {{ "Geoffrey of Monmouth" | person_tag: "Galfridus Monumetensis" }}
         {{ "De gestis Britonum" | source_tag: "de gestis regum Britanniæ" }}</span>.
       {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
@@ -167,13 +168,13 @@
         1577</cite>.
     </p></blockquote>
 "1578-08-15-dees-diary-2":
+  language: en
   text: >-
     <p>
       The preceding footnote is inaccurate, according to
       <a href=https://www.jstor.org/stable/3817882>research published in
         <time datetime=2001>2001</time></a>:
-      <q>
-        {{ "Dee, John" | person_tag: "John Dee" }}’s
+      <q>{{ "Dee, John" | person_tag: "John Dee" }}’s
         (<time datetime="1527/1609">1527–1609</time>) manuscript compilation
         <q>{{ "Brytanici Imperii Limites" | source_tag: "Brytanici Imperii Limites" }},</q>
         acquired by
@@ -189,6 +190,7 @@
   source: Autobiographical Tracts of Dr. John Dee
   source_location: page 22
   author: Dee, John
+  language: en-emodeng
   text: >-
     <blockquote><p>
       {{ "Dee, John" | person_tag: "My" }}
@@ -205,6 +207,7 @@
   source: Autobiographical Tracts of Dr. John Dee
   source_location: page 22
   author: Dee, John
+  language: en-emodeng
   text: >-
     <blockquote><p>
       {{ "Dee, John" | person_tag: "My" }}
@@ -225,6 +228,7 @@
       suffice.
     </p></blockquote>
 "1579-06-15-church":
+  language: en
   text: >-
     <p>
       There are
@@ -262,12 +266,13 @@
       63</cite>.
     </p></blockquote>
 "1579-07-13-latin":
+  language: en
   text: >-
     <p>
       Using
       <a href=https://en.wiktionary.org/wiki/>Wiktionary</a>,
       the Latin might be more accurately transcribed as
-      <q lang=la><ins>N</ins>ātus puer māne hōra quārta trīgintā minūta ferē,
+      <q lang=la-renais><ins>N</ins>ātus puer māne hōra quārta trīgintā minūta ferē,
         vel potius minūta vīgintī quīnque, in ipſō ortū ſōlis, ut exīſtimō.</q>
       I can’t read Latin and don’t understand its grammar, but my go at a rough
       modern English rendering is
@@ -284,15 +289,17 @@
       This person is not noticed by the Oxford biographers.
     </p></blockquote>
 "1579-09-10-latin":
+  language: en
   text: >-
     <p>
-      <q lang=la><ins>S</ins>ine mē nihil poteſtis facere</q>
+      <q lang=la-renais><ins>S</ins>ine mē nihil poteſtis facere</q>
       translates to English as
       <q>without me, you can do nothing</q>.
     </p>
 "1579-11-25-long-leadnam":
   source: British Society for the History of Mathematics
   url: https://web.archive.org/web/20120619023348/http://www.dcs.warwick.ac.uk/bshm/zingaz/L.html#ll
+  language: en
   text: >-
     <blockquote><p>
       {{ "Dee, John" | person_tag: "John Dee" }}
@@ -336,6 +343,7 @@
       revealed to him.
     </p></blockquote>
 "1579-12-28-greek":
+  language: en
   text: >-
     <p>
       As in
@@ -358,6 +366,7 @@
     </p>
 
 "a-meridie":
+  language: en
   text: >-
     <p>
       A literal translation of <q lang=la>ā merīdiē</q> is <q>from midday</q>,
@@ -369,6 +378,7 @@
   source: Dictionary of National Biography, 1885–1900
   source_location: pages 366, 367
   author: Radford, Emma Louisa
+  language: en
   text: >-
     <p>
       Biography of
@@ -415,8 +425,6 @@
         clock-keeper; the two offices had been held by different persons in
         Queen Mary’s reign, and Newsam appears to have been the first
         Englishman appointed as clock-keeper.
-      </p>
-
       <p><time datetime=1583-08-05>On 5 <abbr>Aug.</abbr> 1583</time> Newsam
         wrote
         <q lang=en-emodeng>to the ryghte honorable his very speciall good
@@ -491,8 +499,6 @@
         of
         {{ "York, England" | place_tag: "York" }},
         a clockmaker, and presumably a relative.
-      </p>
-
       <p>
         There is
         {{ "British Museum, England" | place_tag: "in the British Museum" }}
@@ -509,31 +515,30 @@
         tapered. The hand is driven directly from the going fusee at right
         angles, by means of a contrate-wheel. The escapement is of the verge
         kind, and it has no balance-spring.
-      </p>
-
       <p>
-      The bequests in Newsam’s will confirm the evidence of his skill afforded
-      by this clock. Mention is made there of
-      <q lang=en-emodeng>a strickinge clocke in a silken purse, and a
-        sonnedyall to stand upon a post in his garden;</q>
-      of
-      <q lang=en-emodeng>a cristall Jewell with a watch in it garnished with
-        goulde;</q>
-      of
-      <q lang=en-emodeng>a sonnedyall of copper gylte;</q>
-      of
-      <q lang=en-emodeng>a watch gylte to shew the hower;</q>
-      of
-      <q lang=en-emodeng>a great dyall in a greate boxe of ivory, with two and
-        thirteth poyntes of the compos;</q>
-      and of a
-      <q lang=en-emodeng>chamber clocke of five markes price.</q>
+        The bequests in Newsam’s will confirm the evidence of his skill
+        afforded by this clock. Mention is made there of
+        <q lang=en-emodeng>a strickinge clocke in a silken purse, and a
+          sonnedyall to stand upon a post in his garden;</q>
+        of
+        <q lang=en-emodeng>a cristall Jewell with a watch in it garnished with
+          goulde;</q>
+        of
+        <q lang=en-emodeng>a sonnedyall of copper gylte;</q>
+        of
+        <q lang=en-emodeng>a watch gylte to shew the hower;</q>
+        of
+        <q lang=en-emodeng>a great dyall in a greate boxe of ivory, with two
+        and thirteth poyntes of the compos;</q>
+        and of a
+        <q lang=en-emodeng>chamber clocke of five markes price.</q>
       </p>
     </blockquote>
 "cheam-england":
   source: Environs of London, Surrey
   source_location: pages 137–158
   author: Lysons, Daniel
+  language: en
   url: https://www.british-history.ac.uk/london-environs/vol1/pp137-158
   text: >-
     <blockquote><p>
@@ -549,6 +554,7 @@
 "edward-hynde":
   source: Wikipedia
   url: https://en.wikipedia.org/w/index.php?title=Francis_Hynde&oldid=960873924#Children
+  language: en
   text: >-
     <blockquote><p>
       <ins>W</ins>as admitted Fellow-Commoner at
@@ -591,6 +597,7 @@
       <time datetime=1615>in 1615</time>.
     </p></blockquote>
 "john-elmeston-essay":
+  language: en
   text: >-
     <p>
       This may be the
@@ -603,6 +610,7 @@
 "llanlluney-wales-1":
   source: Tables and Indexes, vol. 41
   source_location: page 462
+  language: en
   text: >-
     <blockquote><p>
       Making a Road from a Place called
@@ -622,6 +630,7 @@
 "llanlluney-wales-2":
   source: Tables and Indexes, vol. 41
   source_location: page 463
+  language: en
   text: >-
     <blockquote><p>
       {{ "Llanllwni Church, Wales" | place_tag: "Llanllooney Church" }},
