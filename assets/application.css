@@ -426,59 +426,8 @@ p {
   line-height: 2rem;
 }
 
-
-time[datetime],
-.data-money,
-.data-person,
-.data-place,
-.data-source {
-  margin-left: 1.3em;
-  position: relative;
-}
-time[datetime]::before,
-.data-money::before,
-.data-person::before,
-.data-place::before,
-.data-source::before {
-  font-size: 0.8em;
-  font-style: normal;
-  left: -1.7em;
-  position: absolute;
-}
-time[datetime]::before {
-  content: '📅';
-}
-time[datetime*='T']::before {
-  content: '⌚️';
-}
-.data-money::before {
-  content: '🪙';
-}
-.data-person::before {
-  content: '👤';
-}
-.data-place::before {
-  content: '🗺';
-}
-.data-source::before {
-  content: '📚';
-}
-
-
-.debug time,
-.debug .is-unknown-reference {
-  background-color: var(--invalid-data);
-  color: var(--background);
-}
-.debug time[datetime] {
-  background-color: transparent;
-  color: inherit;
-}
-
-
 #scale {
   display: none;
-  /* display: block; */
   position: absolute;
   top: 0;
   left: 0;
@@ -502,4 +451,55 @@ time[datetime*='T']::before {
 }
 #scale span + span {
   margin-left: var(--gutter-width);
+}
+.debug time,
+.debug .is-unknown-reference {
+  background-color: var(--invalid-data);
+  color: var(--background);
+}
+.debug time[datetime] {
+  background-color: transparent;
+  color: inherit;
+}
+.debug time[datetime],
+.debug .data-money,
+.debug .data-person,
+.debug .data-place,
+.debug .data-source {
+  margin-left: 1.3em;
+  position: relative;
+}
+time[datetime]::before,
+.data-money::before,
+.data-person::before,
+.data-place::before,
+.data-source::before {
+  font-size: 0.8em;
+  font-style: normal;
+  left: -1.7em;
+  position: absolute;
+}
+.debug time[datetime]::before {
+  content: '📅';
+}
+.debug time[datetime*='T']::before {
+  content: '⌚️';
+}
+.debug .data-event::before {
+  content: '📰';
+}
+.debug .data-money::before {
+  content: '🪙';
+}
+.debug .data-person::before {
+  content: '👤';
+}
+.debug .data-place::before {
+  content: '🗺';
+}
+.debug .data-source::before {
+  content: '📚';
+}
+.debug #scale {
+  display: block;
 }
