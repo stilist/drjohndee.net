@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- assign record = page.key | collection_entry: "events" -%}
+<article class="page event"
+         itemprop=event
+         itemscope
+         itemtype="https://schema.org/Event"
+         lang={{ record.language | default: site.language | default: "en" }}>
+  {%- if record.id -%}
+  <link itemprop=sameAs href={{ record.id }}>
+  {%- endif -%}
+  <header class="page-header">
+    <h1 class="page-name" itemprop=name>
+      {{ record.name }}
+    </h1>
+  </header>
+
+  <div class="page-content">
+    <dl>
+      {%- if record.startDate -%}
+      <dt>Started</dt>
+      <dd>
+        <time datetime="{{ record.startDate }}" itemprop=startDate>
+          {{ record.startDate }}
+        </time>
+      </dd>
+      {%- endif -%}
+      {%- if record.endDate -%}
+      <dt>Ended</dt>
+      <dd>
+        <time datetime="{{ record.endDate }}" itemprop=endDate>
+          {{ record.endDate }}
+        </time>
+      </dd>
+      {%- endif -%}
+    </dl>
+  </div>
+
+  {%- include annotations.html reference=record -%}
+</article>

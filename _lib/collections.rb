@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 COLLECTION_MAP_SINGULAR = {
+  'event' => 'events',
   'person' => 'people',
   'place' => 'places',
   'source' => 'sources',

@@ -29,3 +29,4 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem 'byebug', '~> 11.1.3', require: false
 gem 'kramdown-parser-gfm', '~> 1.1.0'
 gem 'ox', '~> 2.13.4'
+gem 'iso8601', '~> 0.13.0', require: false

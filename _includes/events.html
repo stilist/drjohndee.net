@@ -1,0 +1,41 @@
+{%- assign reference = include.reference -%}
+{%- assign records = reference.date | relevant_events -%}
+{%- if records.size > 0 -%}
+<aside class="annotations annotations-events">
+  <h1>Historical context</h1>
+  <ul>
+    {%- for record in records -%}
+    <li>
+      {%- assign source = record.source | collection_entry: "sources" -%}
+      {%- assign author_key = record.author | default: source.author -%}
+      {%- assign author = author_key | collection_entry: "people" -%}
+      {%- assign language = record.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
+      <figure lang={{language}}>
+        {%- if record.type == 'event' -%}
+        {{ record.key | event_tag }}
+        {%- endif -%}
+        {%- if record.text -%}
+        {{ record.text | liquify }}
+        {%- endif -%}
+
+        <meta content="{{ record.startDate }}" itemprop=startDate>
+        <meta content="{{ record.endDate }}" itemprop=endDate>
+        <time datetime="{{ record.startDate }}/{{ record.endDate }}">
+          {{ record.rawTimestamp }}
+        </time>
+
+        {%- if record.source -%}
+        <figcaption>
+          Source:
+          {%- if author_key -%}
+          {{ author_key | person_tag }},
+          {%- endif -%}
+          {{ record.source | source_tag: nil, record.source_location }}
+        </figcaption>
+        {%- endif -%}
+      </figure>
+    </li>
+    {%- endfor -%}
+  </ul>
+</aside>
+{%- endif -%}
