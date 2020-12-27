@@ -6,6 +6,12 @@ layout: default
 
   <header class=post-header>
     {%- include entry_title.html entry=page title_tag="h1" -%}
+
+    {%- if page.source -%}
+    <span class=post-source>
+      {{ page.source | source_tag: page.source, page.source_location }}
+    </span>
+    {%- endif -%}
   </header>
 
   <div class="post-content e-content"

@@ -18,18 +18,12 @@
   {%- endif -%}
 </{{ title_tag }}>
 
-{%- if entry.author or entry.source -%}
-{%- if entry.author -%}
+{%- assign source_record = entry.source | collection_entry: "sources" -%}
+{%- assign author = entry.author | default: source_record.author -%}
+{%- if author -%}
 <span class=post-author>
   <span itemprop=author class="p-author h-card">
-    {{ entry.author | person_tag }}
+    {{ author | person_tag }}
   </span>
 </span>
-{%- endif -%}
-
-{%- if entry.source -%}
-<span class=post-source>
-  {{ entry.source | source_tag: entry.source, entry.source_location }}
-</span>
-{%- endif -%}
 {%- endif -%}
