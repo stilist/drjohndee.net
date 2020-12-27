@@ -78,6 +78,11 @@
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
 }
+@media (prefers-reduced-data: reduced) {
+  :root {
+    --font-serif: Garamond, Times, Times New Roman, serif;
+  }
+}
 @supports (color: hsl(1 1 1)) {
   :root {
     --accent-0: hsl(var(--accent-0--components));
@@ -166,7 +171,7 @@
 :lang(en-emodeng) {
   quotes: '‘' '’' '“' '”';
 }
-:lang(fr) {
+*[lang|="fr"] {
   quotes: "« " " »" "‹ " " ›";
 }
 :lang(gr),
@@ -212,7 +217,7 @@ a:hover {
 }
 @media (prefers-color-scheme: dark) {
   a {
-    color: var(--accent-20);
+    color: var(--accent-30);
   }
   a:visited {
     color: var(--accent-40);
