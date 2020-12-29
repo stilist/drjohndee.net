@@ -26,12 +26,12 @@ module PostFilters
   def find_post_country(post)
     location = post.data['location']
     if !location.nil?
-      country = data_collection_entry('places', location)&.dig('country')
+      country = data_collection_record('places', location)&.dig('country')
     end
 
     if country.nil?
       author = post.data['author']
-      country = data_collection_entry('people', author)&.dig('country')
+      country = data_collection_record('people', author)&.dig('country')
     end
 
     country

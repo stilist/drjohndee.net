@@ -60,7 +60,7 @@ module Jekyll
         end
       end
 
-      language = data_collection_entry('places', key)&.dig('language')
+      language = data_collection_record('places', key)&.dig('language')
       language_tag = "lang=#{language} translate" if !language.nil?
 
       <<~EOM
@@ -73,7 +73,7 @@ module Jekyll
     private
 
     def source_data(key)
-      parts = data_collection_entry('sources', key)&.clone
+      parts = data_collection_record('sources', key)&.clone
       if parts.nil?
         Jekyll.logger.warn('Jekyll::SourceFilters:',
                            "Unable to find data for '#{key}'.")

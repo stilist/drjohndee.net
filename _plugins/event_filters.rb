@@ -18,7 +18,7 @@ module Jekyll
       url = relative_url("/#{COLLECTION_MAP_PLURAL['events']}/#{sanitize_url_key(key)}.html")
       return "<a href=#{url} class='#{EVENT_CLASS_NAME}'>#{display_text}</a>" if !display_text.nil?
 
-      data = data_collection_entry('events', key)
+      data = data_collection_record('events', key)
 
       language = data['language']
       language_tag = "lang=#{language} translate" if !language.nil?
@@ -63,7 +63,7 @@ module Jekyll
     end
 
     def event_data(key)
-      parts = data_collection_entry('events', key)&.clone
+      parts = data_collection_record('events', key)&.clone
       if parts.nil?
         Jekyll.logger.warn('Jekyll::EventFilters:',
                            "Unable to find data for '#{key}'.")

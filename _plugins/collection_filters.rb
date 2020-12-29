@@ -8,7 +8,11 @@ module Jekyll
     include ::DataCollection
 
     def collection_entry(key, collection)
-      data_collection_entry(collection, key)
+      data_collection_record(collection, key)
+    end
+
+    def collection_entries(collection)
+      data_collection_records(collection)
     end
   end
 end

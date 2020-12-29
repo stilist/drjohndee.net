@@ -46,7 +46,7 @@ module Jekyll
         "<span #{attributes}>#{part['text']}</span>"
       end
 
-      language = data_collection_entry('places', key)&.dig('language')
+      language = data_collection_record('places', key)&.dig('language')
       language_tag = "lang=#{language} translate" if !language.nil?
 
       <<~EOM
@@ -59,7 +59,7 @@ module Jekyll
     private
 
     def person_name_data(key, type: 'name')
-      parts = data_collection_entry('people', key)&.dig(type)&.clone
+      parts = data_collection_record('people', key)&.dig(type)&.clone
       if parts.nil?
         Jekyll.logger.warn('Jekyll::PersonFilters:',
                            "Unable to find #{type} data for '#{key}'.")
