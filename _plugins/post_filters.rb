@@ -14,7 +14,7 @@ module PostFilters
     return key if post.nil?
 
     url = "{% post_url #{key} %}"
-    return "<a href=#{url}>#{display_text}</a>" if !display_text.nil?
+    return liquify("<a href=#{url}>#{display_text}</a>") if !display_text.nil?
 
     date = post.date.strftime('%F')
     country = find_post_country(post)
