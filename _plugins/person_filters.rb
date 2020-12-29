@@ -32,7 +32,7 @@ module Jekyll
       parts = person_name_data(key)
       return fallback if parts.empty?
 
-      url = relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_url_key(key)}.html")
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_key(key)}.html")
       return "<a href=#{url} class='data-person'>#{display_text}</a>" if !display_text.nil?
 
       combined = person_name_data(key) do |part|

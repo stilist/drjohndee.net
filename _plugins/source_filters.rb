@@ -39,7 +39,7 @@ module Jekyll
       parts = source_data(key)
       return fallback if parts.empty?
 
-      url = relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{sanitize_url_key(key)}.html")
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{sanitize_key(key)}.html")
       return "<a href=#{url} class='data-source'>#{display_text}</a>" if !display_text.nil?
 
       known_keys = HIDDEN_PARTS.map { |key| [key, key] }

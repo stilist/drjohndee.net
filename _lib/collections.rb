@@ -24,14 +24,11 @@ module DataCollection
       return
     end
 
-    internal_key = key.gsub(/[^\w\s-]/, '').downcase
     records = data_collection_records(collection_name)
-    records[internal_key] || records[key]
+    records[sanitize_key(key)] || records[key]
   end
 
-  def sanitize_url_key(key)
-    key.gsub(/[^\w-]/, '-').
-      gsub(/-{2,}/, '-').
-      downcase
+  def sanitize_key(key)
+    key.gsub(/[^\w-]/, '_').downcase
   end
 end
