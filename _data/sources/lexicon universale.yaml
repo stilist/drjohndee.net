@@ -1,0 +1,17 @@
+---
+work:
+  author: "Hofmann, Johann Jacob"
+  license: "public domain"
+  name: >-4
+      Lexicon Vniversale, Historiam Sacram et Profanam
+  type: Book
+editions:
+  -
+    date: 1698
+    format: ebook
+    language: la-renais
+    name: >-4
+        Lexicon Vniversale, Historiam Sacram et Profanam, editis absolutissima
+    number_of_pages: 1072
+    source_url: "https://www.google.com/books/edition/_/YXILPR8SjhAC"
+    volume_number: A-C

@@ -1,0 +1,20 @@
+---
+work:
+  author: "House of Lords"
+  license: "public domain"
+  name: >-4
+      The Sessional Papers printed by order of the House of Lords, or presented
+      by royal command, in the Session 1845,
+      (<abbr>8°</abbr> & <abbr>9°</abbr> Victoriæ,) arranged in volumes.
+editions:
+  -
+    date: 1845
+    format: ebook
+    language: en
+    number_of_pages: 656
+    source_url: "https://www.google.com/books/edition/Tables_and_Indexes/IxVcAAAAQAAJ"
+    subtitle: >-4
+        Tables and Indexes. (Three Volumes,) Continued; Subject of this Volume:
+        An Index to the Statutes, Public and Private. 1801–1884.
+        (Part ⅠⅠ. — Local and Personal and Private Acts in Classes.)
+    volume_number: ⅩⅬⅠ

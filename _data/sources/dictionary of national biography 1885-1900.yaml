@@ -1,0 +1,14 @@
+---
+work:
+  language: en
+  license: "public domain"
+  name: >-4
+      Dictionary of National Biography, 1885–1900
+editions:
+  -
+    date: 1900
+    format: ebook
+    id: https://www.wikidata.org/entity/Q15987216
+    oclc_number: 1070788669
+    source_url: "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Vol_40_Myllar_-_Nicholls"
+    volume_number: 40
