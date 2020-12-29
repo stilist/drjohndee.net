@@ -50,9 +50,9 @@ module Jekyll
       records.reduce([]) do |memo, (key, value)|
         if value.is_a?(Array)
           formatted = value.map do |record|
-            format_event_data(record, type).merge(source: key)
+            format_event_data(record, type)&.merge(source: key)
           end
-          memo.concat(formatted)
+          memo.concat(formatted.compact)
         else
           format_event_data(value || key, type)
         end
