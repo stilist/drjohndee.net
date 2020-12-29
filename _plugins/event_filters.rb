@@ -36,9 +36,10 @@ module Jekyll
 
       data = @context.registers[:site].data
 
-      all_events = {
-        'event' => data['events'],
-      }.reduce([]) { |memo, (type, records)| memo.concat(structure_event_records(records, type)) }
+      all_events = %w[diseases events weather]
+       .map { |type| [type, data_collection_records(type)] }
+       .to_h
+       .reduce([]) { |memo, (type, records)| memo.concat(structure_event_records(records, type)) }
        .select { |event| event['date'] && event['timestamp'].intersect?(timestamp) }
        .sort_by { |event| [event['timestamp'].startsAt.to_f, event['timestamp'].endsAt.to_f] }
     end
@@ -47,19 +48,30 @@ module Jekyll
 
     def structure_event_records(records, type)
       records.reduce([]) do |memo, (key, value)|
-        next(memo) if value['date'].nil?
-        next(memo.push(value)) if value.key?('timestamp')
+        if value.is_a?(Array)
+          formatted = value.map do |record|
+            format_event_data(record, type).merge(source: key)
+          end
+          memo.concat(formatted)
+        else
+          format_event_data(value || key, type)
+        end
 
-        timestamp = Timestamp.new(value['date'])
-        memo.push(value.merge({
-          'endDate' => timestamp.endsAt&.to_s,
-          'key' => key,
-          'rawTimestamp' => timestamp.raw_timestamp_string,
-          'startDate' => timestamp.startsAt&.to_s,
-          'timestamp' => timestamp,
-          'type' => type,
-        }))
+        memo
       end
+    end
+
+    def format_event_data(record, event_type)
+      return if record['date'].nil?
+
+      timestamp = Timestamp.new(record['date'])
+      record.merge({
+        'endDate' => timestamp.endsAt&.to_s,
+        'rawTimestamp' => timestamp.raw_timestamp_string,
+        'startDate' => timestamp.startsAt&.to_s,
+        'timestamp' => timestamp,
+        'type' => event_type,
+      })
     end
 
     def event_data(key)
