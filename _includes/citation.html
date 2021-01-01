@@ -1,0 +1,29 @@
+{%- assign key = include.source_key -%}
+{%- assign data = key | source_citation_data -%}
+
+{%- if data -%}
+  {%- if data.author_name -%}
+  <a href='{{ data.author_key | person_permalink }}' class='data-person'>
+    {{ data.author_name.familyName | join: " " }}
+    {%- if data.author_name.familyName and data.author_name.givenName -%},&#32;{%- endif -%}
+    {{ data.author_name.givenName | join: " " }}</a>.&#32;
+  {%- elsif data.author_key -%}
+  <span class='data-person is-unknown-reference'>{{ data.author_key }}</span>.&#32;
+  {%- endif -%}
+
+  <span class='data-source data-source--{{ data.publication_type | downcase }}'>
+    {{ data.work_name }}</span>.
+
+  {{ data.publication_city }},
+  {{ data.publisher }},
+  {{ data.publication_date }}.
+{%- else -%}
+🤷{{ key }}
+{%- endif -%}
+
+{% comment %}
+Author. Title. Title of container (do not list container for standalone books, e.g. novels), Other contributors (translators or editors), Version (edition), Number (vol. and/or no.), Publisher, Publication Date, Location (pages, paragraphs URL or DOI). 2nd container’s title, Other contributors, Version, Number, Publisher, Publication date, Location, Date of Access (if applicable).
+
+Last Name, First Name. Title of Book. City of Publication, Publisher, Publication Date.
+*Note: the City of Publication should only be used if the book was published before 1900, if the publisher has offices in more than one country, or if the publisher is unknown in North America.
+{% endcomment %}

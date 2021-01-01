@@ -70,6 +70,29 @@ module Jekyll
       EOM
     end
 
+    def source_citation_data(key, edition_key = nil)
+      record = data_collection_record('sources', key)&.clone
+      work = record['work']
+
+      if edition_key && record['editions'].is_a?(Hash)
+        edition = record['editions'][editor_key]
+      end
+      edition ||= record['editions'].first
+
+      {
+        'author_key' => work['author'],
+        'author_name' => person_name(work['author']),
+        'editor_key' => work['editor'],
+        'editor_name' => person_name(work['editor']),
+        'publication_city' => edition['publication_city'],
+        'publication_date' => edition['date'],
+        'publication_type' => work['type'],
+        'publisher' => edition['publisher'],
+        'work_name' => edition['name'] || work['name'],
+        'work_volume' => edition['volume'],
+      }.freeze
+    end
+
     private
 
     def source_data(key)

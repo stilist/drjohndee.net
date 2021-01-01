@@ -61,13 +61,25 @@ module Jekyll
       relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_key(key)}.html")
     end
 
-    def person_name_data(key, type: 'name')
+    def person_name(key, type = 'name')
       parts = data_collection_record('people', key)&.dig(type)&.clone
       if parts.nil?
-        Jekyll.logger.warn('Jekyll::PersonFilters:',
+        Jekyll.logger.debug('Jekyll::PersonFilters:',
                            "Unable to find #{type} data for '#{key}'.")
-        return []
+        return
       end
+
+      parts.each_with_object({}) do |part, memo|
+        type = part['type']
+        memo[type] ||= []
+        memo[type] << part['text']
+      end
+    end
+
+    def person_name_data(key, type: 'name')
+      # XXX
+      parts = data_collection_record('people', key)&.dig(type)&.clone
+      return [] if parts.nil?
 
       parts.reject! { |part, _| EXCLUDED_PARTS.include?(part) }
       return parts.map { |part, value| yield(part, value) } if block_given?

@@ -26,11 +26,7 @@
 
         {%- if record.source -%}
         <figcaption>
-          Source:
-          {%- if author_key -%}
-          {{ author_key | person_tag }},
-          {%- endif -%}
-          {{ record.source | source_tag: nil, record.source_location }}
+          {%- include citation.html source_key=record.source source_location=record.source_location -%}
         </figcaption>
         {%- endif -%}
       </figure>
