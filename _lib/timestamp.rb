@@ -60,7 +60,13 @@ class Timestamp
       @interval = nil
       @type = :duration
     else
-      @parsed = ISO8601::DateTime.new(as_string)
+      # gregorian italy england
+      begin
+        @parsed = ISO8601::DateTime.new(as_string)
+      rescue ISO8601::Errors::RangeError
+        safe_parse = Date.rfc3339(as_string, Date::ENGLAND)
+        @parsed = ISO8601::DateTime.new(safe_parse.strftime('%Y-%j'))
+      end
       @interval = ISO8601::TimeInterval.from_datetimes(@parsed, @parsed)
       @raw_end = as_string
       @raw_start = as_string
