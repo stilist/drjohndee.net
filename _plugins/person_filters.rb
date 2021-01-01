@@ -32,7 +32,7 @@ module Jekyll
       parts = person_name_data(key)
       return fallback if parts.empty?
 
-      url = relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_key(key)}.html")
+      url = person_permalink(key)
       return "<a href=#{url} class='data-person'>#{display_text}</a>" if !display_text.nil?
 
       combined = person_name_data(key) do |part|
@@ -56,7 +56,10 @@ module Jekyll
       EOM
     end
 
-    private
+    def person_permalink(key)
+      return if key.nil?
+      relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_key(key)}.html")
+    end
 
     def person_name_data(key, type: 'name')
       parts = data_collection_record('people', key)&.dig(type)&.clone
