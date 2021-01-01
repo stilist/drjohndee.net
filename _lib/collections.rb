@@ -19,13 +19,19 @@ module DataCollection
 
   def data_collection_record(collection_name, key)
     if key.nil?
-      Jekyll.logger.warn('DataCollection:',
-                         "Requested nil key from #{collection_name} data set.")
+      Jekyll.logger.debug('DataCollection:',
+                          "Requested nil key from #{collection_name} data set.")
       return
     end
 
     records = data_collection_records(collection_name)
-    records[sanitize_key(key)] || records[key]
+
+    prefix, suffix = key.split('/')
+    sanitized_prefix = sanitize_key(prefix)
+
+    record = records[sanitized_prefix] || records[key]
+    return record if suffix.nil?
+    record[suffix]
   end
 
   def sanitize_key(key)

@@ -1,0 +1,234 @@
+---
+"1577-01-16":
+  source_location: page 2
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        dwelt
+        {{ "Dee's house, Mortlake, England" | place_tag: "in a house" }}
+        neere the water side, a little westward from
+        {{ "St Mary the Virgin Mortlake, England" | place_tag: "the church" }}
+        <ins>at
+          {{ "Mortlake, England" | place_tag: "Mortlake" }}</ins>.
+        {{ "Mortlake Tapestry Works, England" | place_tag: "The buildings" }}
+        which
+        {{ "Crane, Francis" | person_tag: "Sir <abbr title='Francis'>Fr.</abbr> Crane" }}
+        erected for working of tapestry hangings, and are still
+        (<time datetime=1673>1673</time>)
+        employed to that use, were built upon the ground whereon
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+        laboratory and other roomes for that use stood. Upon the west is a square
+        court, and the next is the house wherein
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        dwelt, now inhabited by one
+        {{ "Selbury" | person_tag: "<abbr>Mr.</abbr> Selbury" }},
+        and further west his
+        garden.</q> — <cite><abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788,
+        <abbr title="folio">fol.</abbr>
+        149.
+      </cite>
+      The same account says that
+      <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        was wel beloved and respected of all persons of quality thereabouts,
+        who very often invited him to their houses or came to his.</q>
+    </p></blockquote>
+"1577-05-01":
+  source_location: page 3
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This of course is his celebrated
+      {{ "Monas Hieroglyphica" | source_tag }},
+      frequently printed, and the nature of which
+      {{ "Halliwell, James" | person_tag: "I" }}
+      attempted to explain in a paper read before the
+      {{ "Somerset House" | place_tag: "Society of Antiquaries" }}.
+      {{ "Herbert, William" | person_tag: "<abbr>Mr.</abbr> Herbert" }},
+      according to
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788</cite>,
+      <q lang=en-emodeng>dwelt then in
+        {{ "Mortlake, England" | place_tag: "Mortlack" }}
+        and was an intimate friend of
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s.</q>
+    </p></blockquote>
+"1577-08-19":
+  source_location: page 3
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This was his work printed in
+      <time datetime=1577>1577</time>
+      under the title of
+      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials pertayning to the perfect Art of Navigation" }},
+      in folio, now a book of the greatest rarity. The original manuscript of
+      it is in
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1789</cite>,
+      and
+      {{ "Dee, John" | person_tag: "Dee" }}’s
+      own copy of the published work with
+      <abbr title="manuscript">MS.</abbr>
+      notes and additions is preserved in the
+      {{ "British Museum, England" | place_tag: "British Museum" }}.
+      In his
+      <cite>
+        Letter Apologetical,
+        <abbr title="quarto">4to.</abbr>
+        <abbr>Lond.</abbr>
+        1603</cite>,
+      he cites this work under the title of
+      <span lang=en-emodeng>The Brytish Monarchie</span>,
+      as having been written in the year
+      <time datetime=1576>1576</time>.
+    </p></blockquote>
+"1577-11-28":
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
+      informs us that
+      {{ "Walsingham, Francis" | person_tag: "Walsingham" }}
+      continued for a length of time one of
+      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+      best patrons.
+    </p></blockquote>
+"1578-06-30--1":
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Rogers, Daniel" | person_tag: "Rogers" }}
+      was a member of
+      {{ "University of Oxford, England" | place_tag: "the University of Oxford" }},
+      and a large commonplace-book in his handwriting is in
+      {{ "Tenison, Thomas" | person_tag: "Archbishop Tenison" }}’s
+      library in
+      {{ "St Martin-in-the-Fields, England" | place_tag: "St. Martin’s-in-the-Fields" }}.
+    </p></blockquote>
+"1578-06-30--2":
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      That is,
+      <span lang=la-medieval>
+        {{ "Geoffrey of Monmouth" | person_tag: "Galfridus Monumetensis" }}
+        {{ "De gestis Britonum" | source_tag: "de gestis regum Britanniæ" }}</span>.
+      {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
+      mentions this fact in his collection of voyages.
+    </p></blockquote>
+"1578-08-15":
+  source_location: page 4
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This is the book just mentioned under the title of
+      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials" }},
+      <cite>
+        <abbr>fol.</abbr>
+        <abbr>Lond.</abbr>
+        1577</cite>.
+    </p></blockquote>
+"1579-07-13":
+  source_location: page 6
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Dee, Arthur" | person_tag: "His" }}
+      horoscope is in
+      <cite>
+        <abbr title="manuscript">MS.</abbr>
+        <abbr title="Ashmole">Ashm.</abbr>
+        1788</cite>.
+      <q><abbr>Mr.</abbr> Arthur Dee’s
+        birth was accompanied by the unhappy accident of the death of
+        {{ "Fromond, Bartholomew" | person_tag: "<abbr>Mr.</abbr> Fromonds" }},
+        {{ "Fromond, Jane" | person_tag: "his mother" }}’s
+        father, who died that morning.</q> — <cite><abbr title="manuscript">MS.</abbr>
+      <abbr title="Ashmole">Ashm.</abbr>
+      1790,
+      <abbr title="folio">fol.</abbr>
+      63</cite>.
+    </p></blockquote>
+"1579-08-08":
+  source_location: page 6
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      This person is not noticed by the Oxford biographers.
+    </p></blockquote>
+"1579-12-09":
+  source_location: page 7
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Dee, John" | person_tag: "Dee" }}
+      has occasionally made use of Greek letters for the preservation of his
+      notes, still retaining the English language. The present passage may as
+      well be given: — <q>This
+        night
+        {{ "Fromond, Jane" | person_tag: "my wife" }}
+        dreamed that one cam to her and touched her, saying,
+        <q>Mistres Dee, you are conceived of child, whose name must be
+        Zacharias; be of good chere, he sal do well as this doth!</q></q>
+    </p></blockquote>
+"1579-12-28":
+  source_location: page 7
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      In a more appropriate place
+      {{ "Halliwell, James" | person_tag: "I" }}
+      shall give from an Ashmolean manuscript a traditionary anecdote relating
+      to this
+      {{ "Cooke, Roger" | person_tag: "Roger Coke, or Cooke" }},
+      and the great secret which
+      {{ "Dee, John" | person_tag: "Dee" }}
+      revealed to him.
+    </p></blockquote>
+"1580-10-10":
+  source_location: page 9-10
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Constable, Katherine" | person_tag: "His first wife" }}
+      died
+      <time datetime=1575-03-16>on the 16th of March 1575</time>,
+      when
+      <q lang=en-emodeng>{{ "Queen Elizabeth" | person_tag: "the Queen’s Majestie" }},
+        with her most honourable Privy Council, and other her Lords and
+        Nobility, came purposely to have visited
+        {{ "Dee's house, Mortlake, England" | place_tag: "my library" }}:
+        but finding that my wife was
+        <time datetime="P4H">within four houres before</time>
+        buried out of the house, her Majestie refused to come in; but willed to
+        fetch my glass so famous, and to show unto her some of the properties
+        of it, which
+        {{ "Dee, John" | person_tag: "I" }}
+        did; her Majestie being taken down from her horse by the
+        {{ "Earl of Leicester" | person_tag: "Earle of Leicester" }},
+        Master of the Horse,
+        {{ "St Mary the Virgin Mortlake, England" | place_tag: "at the church wall of Mortlake" }},
+        did see some of the properties of that glass, to her Majestie’s great
+        contentment and delight.</q> — {{ "Compendious Memorial" | source_tag: "Compendious Memorial", "<abbr>p.</abbr> 516" }}.
+        This glass is spoken of again.
+    </p></blockquote>
+"1580-11-22":
+  source_location: page 10
+  author: Halliwell, James
+  text: >-
+    <blockquote><p>
+      {{ "Dee, John" | person_tag: "Dee" }}
+      has made a rough sketch of the appearance of this comet, with its long
+      tail, on the margin of the
+      <abbr title="manuscript">MS.</abbr>
+    </p></blockquote>

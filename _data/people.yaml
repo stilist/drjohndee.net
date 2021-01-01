@@ -54,7 +54,7 @@
   birthDate: 1555
   gender: male
   footnotes:
-    - thomas-besbich
+    - "jordan cole/thomas-besbich"
   knows:
     - Dee, John
     - Murfyn, Vincent
@@ -278,14 +278,13 @@
       id: https://www.wikidata.org/entity/Q4925477
     - text: Elmeston
       type: familyName
-      id:
   gender: male
   knows:
     - Dee, John
   livedIn:
     - Cranbrook, England
   footnotes:
-    - john-elmeston-essay
+    - "jordan cole/john-elmeston-essay"
 "Flowr":
   name:
     - text: Flowr
@@ -622,7 +621,7 @@
       id: https://www.wikidata.org/entity/Q59482529
   deathDate: 1632
   footnotes:
-    - edward-hynde
+    - "wikipedia/edward-hynde"
   gender: male
   knows:
     - Dee, John
@@ -802,7 +801,7 @@
     - Newsam, Margaret
     - Newsam, Rose
   footnotes:
-    - bartholomew-newsam
+    - "dictionary of national biography 1885-1900/bartholomew-newsam"
 "Newsam, Edward":
   name:
     - text: Edward
