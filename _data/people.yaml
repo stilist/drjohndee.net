@@ -15,7 +15,7 @@
   name:
     - text: Aubrey
       type: givenName
-      id: https://www.wikidata.org/wiki/Q19672745
+      id: https://www.wikidata.org/entity/Q19672745
   gender: female
 "Bayley, Francis":
   name:
@@ -33,16 +33,17 @@
   name:
     - text: Elizabeth
       type: givenName
-      id: https://www.wikidata.org/wiki/Q385468
+      id: https://www.wikidata.org/entity/Q385468
     - text: French
       type: familyName
-      id: https://www.wikidata.org/wiki/Q15304085
+      id: https://www.wikidata.org/entity/Q15304085
     - text: Bartlett
       type: familyName
-      id: https://www.wikidata.org/wiki/Q15785662
+      id: https://www.wikidata.org/entity/Q15785662
+  date: 1877-01-27/1961-10-24
   birthDate: 1877-01-27
   deathDate: 1961-10-24
-  id: https://www.wikidata.org/wiki/Q60621080
+  id: https://www.wikidata.org/entity/Q60621080
   gender: female
 "Besbich, Thomas":
   name:
@@ -75,7 +76,7 @@
       id: https://www.wikidata.org/entity/Q4925477
     - text: Billett
       type: familyName
-      id: https://www.wikidata.org/wiki/Q36916271
+      id: https://www.wikidata.org/entity/Q36916271
   gender: male
   livedIn:
     - London, England
@@ -83,7 +84,7 @@
   name:
     - text: Bullock
       type: familyName
-      id: https://www.wikidata.org/wiki/Q16865147
+      id: https://www.wikidata.org/entity/Q16865147
   gender: male
   knows:
     - Dee, John
@@ -93,7 +94,7 @@
   name:
     - text: Burton
       type: familyName
-      id: https://www.wikidata.org/wiki/Q1259568
+      id: https://www.wikidata.org/entity/Q1259568
   gender: male
   knows:
     - Dee, John
@@ -331,9 +332,9 @@
     - text: Fromond
       type: familyName
       id: https://www.wikidata.org/entity/Q27205691
-  id: https://www.wikidata.org/entity/Q19001456
   birthDate: 1554-04-22T12
   birthPlace: Cheam, England
+  id: https://www.wikidata.org/entity/Q19001456
   deathDate: 1604
   gender: female
   spouses:
@@ -393,10 +394,10 @@
   name:
     - text: Henry
       type: givenName
-      id:
+      id: https://www.wikidata.org/entity/Q1158477
     - text: Grey
       type: familyName
-      id:
+      id: https://www.wikidata.org/entity/Q2703557
     - text: 1<sup>st</sup> Duke of Suffolk
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
@@ -585,7 +586,7 @@
   name:
     - text: Alice
       type: givenName
-      id: https://www.wikidata.org/wiki/Q650689
+      id: https://www.wikidata.org/entity/Q650689
     - text: Hynde
       type: familyName
       id: https://www.wikidata.org/entity/Q59482529
@@ -596,17 +597,17 @@
   name:
     - text: Barbara
       type: givenName
-      id: https://www.wikidata.org/wiki/Q153957
+      id: https://www.wikidata.org/entity/Q153957
     - text: Hynde
       type: familyName
       id: https://www.wikidata.org/entity/Q59482529
   birthName:
     - text: Barbara
       type: givenName
-      id: https://www.wikidata.org/wiki/Q153957
+      id: https://www.wikidata.org/entity/Q153957
     - text: Powell
       type: familyName
-      id: https://www.wikidata.org/wiki/Q1158612
+      id: https://www.wikidata.org/entity/Q1158612
   gender: female
   spouses:
     - Dayrell, Francis
@@ -873,10 +874,10 @@
   name:
     - text: Mary
       type: givenName
-      id: https://www.wikidata.org/wiki/Q734578
+      id: https://www.wikidata.org/entity/Q734578
     - text: Norton
       type: familyName
-      id: https://www.wikidata.org/wiki/Q2790265
+      id: https://www.wikidata.org/entity/Q2790265
   gender: female
   parents:
     - Norton, Thomas
@@ -888,7 +889,7 @@
       id: https://www.wikidata.org/entity/Q16428906
     - text: Norton
       type: familyName
-      id: https://www.wikidata.org/wiki/Q2790265
+      id: https://www.wikidata.org/entity/Q2790265
   gender: male
   livedIn:
     - Hinxton, England
@@ -1011,19 +1012,19 @@
   name:
     - text: David
       type: givenName
-      id: https://www.wikidata.org/wiki/Q18057751
+      id: https://www.wikidata.org/entity/Q18057751
     - text: Singmaster
       type: familyName
-      id: https://www.wikidata.org/wiki/Q36908552
+      id: https://www.wikidata.org/entity/Q36908552
   birthDate: 1938-12
   birthPlace: Ferguson, Missouri
-  id: https://www.wikidata.org/wiki/Special:EntityPage/Q1176665
+  id: https://www.wikidata.org/entity/Q1176665
   gender: male
 "St Lowe, Margaret":
   name:
     - text: Margaret
       type: givenName
-      id: https://www.wikidata.org/wiki/Q4963612
+      id: https://www.wikidata.org/entity/Q4963612
     - text: St Lowe
       type: familyName
   gender: female
@@ -1056,7 +1057,7 @@
   name:
     - text: Taylor
       type: familyName
-      id: https://www.wikidata.org/wiki/Q15080511
+      id: https://www.wikidata.org/entity/Q15080511
   gender: male
   knows:
     - Bullock
