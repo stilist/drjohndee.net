@@ -10,7 +10,8 @@ layout: default
       {%- include entry_title.html entry=post hyperlink=true title_tag="h3" -%}
       {%- if site.show_excerpts -%}
       <div class="post-excerpt"
-           lang={{ post.language | default: author.language | default: site.language | default: "en" }}>
+           lang={{ post.language | default: author.language | default: site.language | default: "en" }}
+           translate>
         {{ post.excerpt }}
       </div>
       {%- endif -%}

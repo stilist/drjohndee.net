@@ -8,7 +8,7 @@
       {%- assign author = footnote.author | collection_entry: "people" -%}
       {%- assign source = footnote.source | collection_entry: "sources" -%}
       {%- assign language = footnote.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
-      <figure lang={{language}}>
+      <figure lang={{language}} translate>
         {{ footnote.text | liquify }}
         {%- if footnote.source -%}
         <figcaption>
