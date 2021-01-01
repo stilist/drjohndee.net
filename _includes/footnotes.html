@@ -3,8 +3,8 @@
   <ul>
     {%- for reference in include.references -%}
     {%- assign footnote = reference | collection_entry: "footnotes" -%}
-    {%- if footnote -%}
     <li>
+      {%- if footnote -%}
       {%- assign author = footnote.author | collection_entry: "people" -%}
       {%- assign source = footnote.source | collection_entry: "sources" -%}
       {%- assign language = footnote.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
@@ -20,8 +20,10 @@
         </figcaption>
         {%- endif -%}
       </figure>
+      {%- else -%}
+      Missing footnote: {{ reference }}
+      {%- endif -%}
     </li>
-    {%- endif -%}
     {%- endfor -%}
   </ul>
 </aside>
