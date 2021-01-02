@@ -4,10 +4,10 @@ work:
   editor: "Halliwell, James"
   license: "public domain"
   name: >-4
-      The Private Diary of Dr. John Dee, and the Catalog of His Manuscripts
-  subtitle: >-4
+      The Private Diary of Dr. John Dee, and the Catalog of His Manuscripts,
       from the original manuscripts in the Ashmolean Museum at Oxford, and
       Trinity College Library, Cambridge
+  type: Book
 editions:
   -
     date: 1842
@@ -15,4 +15,6 @@ editions:
     id: "http://www.worldcat.org/oclc/1050791672"
     language: en
     oclc_number: 1050791672
+    publication_city: "London, England"
+    publisher: The Camden Society
     source_url: "https://archive.org/details/privatediaryofdr00deejuoft"

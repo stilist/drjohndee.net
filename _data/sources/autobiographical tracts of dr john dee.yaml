@@ -6,8 +6,11 @@ work:
   name: >-4
       Autobiographical Tracts of <abbr>Dr.</abbr> John Dee, Warden of the
       College of Manchester
+  type: Book
 editions:
   - date: 1851
+    format: ebook
     number_of_pages: 83
     oclc_number: 1039961450
+    publisher: "The Chetham Society"
     source_url: "https://archive.org/details/autobiographical00deej/"

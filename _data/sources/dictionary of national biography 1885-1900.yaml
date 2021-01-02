@@ -4,6 +4,7 @@ work:
   license: "public domain"
   name: >-4
       Dictionary of National Biography, 1885–1900
+  type: Book
 editions:
   -
     date: 1900

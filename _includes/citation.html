@@ -11,8 +11,21 @@
   <span class='data-person is-unknown-reference'>{{ data.author_key }}</span>.&#32;
   {%- endif -%}
 
-  <span class='data-source data-source--{{ data.publication_type | downcase }}'>
-    {{ data.work_name }}</span>.
+  <a href='{{ data.source_key | source_permalink }}'
+     class='data-source data-source--{{ data.publication_type | downcase }}'>
+    {%- if data.editor_key -%}
+      {{ data.work_name }}</a>, edited by
+      <a href='{{ data.editor_key | person_permalink }}' class='data-person'>
+      {%- if data.editor_name -%}
+        {{ data.editor_name.givenName | join: " " }}
+        {%- if data.editor_name.familyName and data.editor_name.givenName -%}&#32;{%- endif -%}
+        {{ data.editor_name.familyName | join: " " }}
+      {%- else -%}
+        {{ data.editor_key }}
+      {%- endif -%}</a>.&#32;
+    {%- else -%}
+      {{ data.work_name }}</a>.&#32;
+    {%- endif -%}
 
   {{ data.publication_city }},
   {{ data.publisher }},

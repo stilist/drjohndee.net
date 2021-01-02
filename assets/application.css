@@ -429,6 +429,9 @@ p {
   font-size: 1.0rem;
   line-height: 2rem;
 }
+.data-source--book {
+  font-style: italic;
+}
 
 #scale {
   display: none;

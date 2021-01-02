@@ -58,7 +58,7 @@ module Jekyll
 
     def person_permalink(key)
       return if key.nil?
-      relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{sanitize_key(key)}.html")
+      relative_url("/#{COLLECTION_MAP_PLURAL['people']}/#{slugify_key(key)}.html")
     end
 
     def person_name(key, type = 'name')

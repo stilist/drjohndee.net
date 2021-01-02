@@ -39,7 +39,7 @@ module Jekyll
       parts = source_data(key)
       return fallback if parts.empty?
 
-      url = relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{sanitize_key(key)}.html")
+      url = relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{slugify_key(key)}.html")
       return "<a href=#{url} class='data-source'>#{display_text}</a>" if !display_text.nil?
 
       known_keys = HIDDEN_PARTS.map { |key| [key, key] }
@@ -72,12 +72,19 @@ module Jekyll
 
     def source_citation_data(key, edition_key = nil)
       record = data_collection_record('sources', key)&.clone
+      if record.nil?
+        Jekyll.logger.warn('source_citation_data:',
+                           "Unable to find data for '#{key}'.")
+        return {}.freeze
+      end
+
       work = record['work']
 
       if edition_key && record['editions'].is_a?(Hash)
         edition = record['editions'][editor_key]
       end
-      edition ||= record['editions'].first
+      edition ||= record['editions']&.first
+      edition ||= {}
 
       {
         'author_key' => work['author'],
@@ -91,6 +98,11 @@ module Jekyll
         'work_name' => edition['name'] || work['name'],
         'work_volume' => edition['volume'],
       }.freeze
+    end
+
+    def source_permalink(key)
+      return if key.nil?
+      relative_url("/#{COLLECTION_MAP_PLURAL['sources']}/#{slugify_key(key)}.html")
     end
 
     private

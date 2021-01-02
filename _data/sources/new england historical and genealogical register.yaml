@@ -3,6 +3,7 @@ work:
   license: "public domain"
   name: >-4
       The New England Historical and Genealogical Register
+  type: Journal
 edition:
   -
     date: 1913

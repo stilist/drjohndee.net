@@ -14,5 +14,16 @@ editions:
   -
     date: 1749
     language: en
+    number_of_pages: 526
+    publication_city: London, England
+    publisher: "T. Longman and A. Millar"
     source_url: "https://books.google.com/books?id=hTMqAAAAYAAJ"
     volume_number: 1
+  -
+    date: 1749
+    language: en
+    number_of_pages: 550
+    publication_city: London, England
+    publisher: "T. Longman and A. Millar"
+    source_url: "https://books.google.com/books?id=47eItwEACAAJ"
+    volume_number: 2

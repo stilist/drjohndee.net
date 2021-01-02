@@ -4,7 +4,8 @@ work:
   license: "public domain"
   name: >-4
       Prosopographiae Herovm Atqve Illvstrivm Virorvm Totivs Germaniæ, Pars
-      Tertia, Eaqve Primaria.
+      Tertia, Eaqve Primaria
+  type: Book
 editions:
   -
     date: 1566

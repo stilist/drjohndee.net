@@ -5,6 +5,7 @@ work:
   name: >-4
       Oversigt over det <abbr title='Kongelige'>Kgl.</abbr> danske Videnskabernes
       Selskabs Forhandlinger.
+  type: Journal
 editions:
   -
     date: 1854

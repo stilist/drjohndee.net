@@ -12,10 +12,10 @@ module Jekyll
       @site = site
       @base = base
       @dir = singular
-      @name = "#{sanitize_key(key)}.html"
+      @name = "#{slugify_key(key)}.html"
 
       Jekyll.logger.debug('Compiling data page:',
-                          "#{singular}/#{sanitize_key(key)}")
+                          "#{singular}/#{slugify_key(key)}")
 
       process(@name)
       read_yaml(File.join(base, '_layouts'), "#{singular}.html")
