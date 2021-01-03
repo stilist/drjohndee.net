@@ -12,7 +12,7 @@
         {{ footnote.text | liquify }}
         {%- if footnote.source -%}
         <figcaption>
-          {%- include citation.html source_key=footnote.source source_location=footnote.source_location -%}
+          {%- include citation.html author_key=footnote.author source_key=footnote.source source_location=footnote.source_location -%}
         </figcaption>
         {%- endif -%}
       </figure>

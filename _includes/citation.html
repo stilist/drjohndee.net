@@ -1,13 +1,18 @@
 {%- assign key = include.source_key -%}
 {%- assign data = key | source_citation_data -%}
+{%- assign author_key = include.author_key | default: data.author_key -%}
 
 {%- if data -%}
-  {%- if data.author_name -%}
-  <a href='{{ data.author_key | person_permalink }}' class='data-person'>
-    {{ data.author_name.familyName | join: " " }}
-    {%- if data.author_name.familyName and data.author_name.givenName -%},&#32;{%- endif -%}
-    {{ data.author_name.givenName | join: " " }}</a>.&#32;
-  {%- elsif data.author_key -%}
+  {%- assign author = author_key | collection_entry: "people" -%}
+
+  {%- if author.name -%}
+  <a href='{{ author_key | person_permalink }}' class='data-person'>
+    {%- assign givenName = author.name | where: "type", "givenName" -%}
+    {%- assign familyName = author.name | where: "type", "familyName" -%}
+    {{ familyName | map: "text" | join: " " }}
+    {%- if givenName and familyName -%},&#32;{%- endif -%}
+    {{ givenName | map: "text" | join: " " }}</a>.&#32;
+  {%- elsif author_key -%}
   <span class='data-person is-unknown-reference'>{{ data.author_key }}</span>.&#32;
   {%- endif -%}
 
