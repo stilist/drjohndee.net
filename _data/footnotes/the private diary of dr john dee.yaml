@@ -1,7 +1,78 @@
 ---
+"1554-08-25":
+  author: "Halliwell, James"
+  source_location: "page 1"
+  text: >-4
+      <blockquote><p>
+        It is almost unnecessary to observe that this and the following are
+        notes of nativities. They are not for the most part contemporary
+        notices, but apparently inserted at various times by
+        {{ "Dee, John" | person_tag: "Dee" }}
+        when professionally consulted as an astrologer.
+      </p></blockquote>
+"1555-08-01":
+  author: "Halliwell, James"
+  source_location: "page 1"
+  text: >-4
+      <blockquote><p>
+        <q lang="la">Anno
+          <time datetime="1555-08-01T16">1555,
+            <abbr>Aug.</abbr> 1,
+            hora quarta a meridie</time>
+          {{ "Worcester, England" | place_link: "Wigorniæ" }}
+          natus
+          {{ "Kelley, Edward" | person_tag: "Dominus Edouardus Kelæus" }}</q>,
+        <cite>
+          <abbr>MS.</abbr>
+          <abbr>Ashm.</abbr>
+          1788,
+          <abbr>fol.</abbr>
+          140</cite>,
+        where there is a horoscope of this nativity in the handwriting of
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}.
+        {{ "Ashmole, Elias" | person_tag: "Ashmole" }},
+        in his
+        <cite>
+          <abbr>MS.</abbr>
+          1780,
+          <abbr>fol.</abbr>
+          58</cite>,
+        says
+        <q lang=en-emodeng>{{ "Lilly" | person_tag: "<abbr>Mr.</abbr> Lilly" }}
+          told
+          {{ "Ashmole, Elias" | person_tag: "me" }}
+          that
+          {{ "Evans, John" | person_tag: "John Evans" }}
+          informed
+          {{ "Lilly" | person_tag: "him" }}
+          that
+          {{ "Evans, John" | person_tag: "he" }}
+          was acquainted with
+          {{ "Kelley, Elizabeth" | person_tag: "Kelly’s sister" }}
+          {{ "Worcester, England" | place_link: "in Worcester" }},
+          that
+          {{ "Kelley, Elizabeth" | person_tag: "she" }}
+          shewed
+          {{ "Evans, John" | person_tag: "him" }}
+          some of the gold
+          {{ "Kelley, Edward" | person_tag: "her brother" }}
+          had transmuted, and that
+          {{ "Kelley, Edward" | person_tag: "Kelly" }}
+          was first an apothecary in
+          {{ "Worcester, England" | place_link: "Worcester" }}.</q>
+"1565-10-17":
+  author: "Halliwell, James"
+  source_location: "page 2"
+  text: >-4
+      <blockquote><p>
+        {{ "Kelly, Thomas" | person_tag: "The brother" }}
+        of
+        {{ "Kelley, Edward" | person_tag: "the celebrated astrologer" }}
+        before mentioned.
+      </p></blockquote>
 "1577-01-16":
-  source_location: page 2
-  author: Halliwell, James
+  author: "Halliwell, James"
+  source_location: "page 2"
   text: >-
     <blockquote><p>
       <q lang=en-emodeng>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
@@ -36,199 +107,641 @@
         who very often invited him to their houses or came to his.</q>
     </p></blockquote>
 "1577-05-01":
-  source_location: page 3
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      This of course is his celebrated
-      {{ "Monas Hieroglyphica" | source_tag }},
-      frequently printed, and the nature of which
-      {{ "Halliwell, James" | person_tag: "I" }}
-      attempted to explain in a paper read before the
-      {{ "Somerset House" | place_tag: "Society of Antiquaries" }}.
-      {{ "Herbert, William" | person_tag: "<abbr>Mr.</abbr> Herbert" }},
-      according to
-      <cite>
-        <abbr title="manuscript">MS.</abbr>
-        <abbr title="Ashmole">Ashm.</abbr>
-        1788</cite>,
-      <q lang=en-emodeng>dwelt then in
-        {{ "Mortlake, England" | place_tag: "Mortlack" }}
-        and was an intimate friend of
-        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s.</q>
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 3"
+  text: >-4
+      <blockquote><p>
+        This of course is
+        {{ "Dee, John" | person_tag: "his" }}
+        celebrated
+        {{ "Monas Hieroglyphica" | source_tag }},
+        frequently printed, and the nature of which
+        {{ "Halliwell, James" | person_tag: "I" }}
+        attempted to explain in a paper read before the
+        {{ "Somerset House" | place_tag: "Society of Antiquaries" }}.
+        {{ "Herbert, William" | person_tag: "<abbr>Mr.</abbr> Herbert" }},
+        according to
+        <cite>
+          <abbr title="manuscript">MS.</abbr>
+          <abbr title="Ashmole">Ashm.</abbr>
+          1788</cite>,
+        <q lang=en-emodeng>dwelt then in
+          {{ "Mortlake, England" | place_tag: "Mortlack" }}
+          and was an intimate friend of
+          {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s.</q>
+      </p></blockquote>
 "1577-08-19":
-  source_location: page 3
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      This was his work printed in
-      <time datetime=1577>1577</time>
-      under the title of
-      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials pertayning to the perfect Art of Navigation" }},
-      in folio, now a book of the greatest rarity. The original manuscript of
-      it is in
-      <cite>
+  author: "Halliwell, James"
+  source_location: "page 3"
+  text: >-4
+      <blockquote><p>
+        This was his work printed in
+        <time datetime=1577>1577</time>
+        under the title of
+        {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials pertayning to the perfect Art of Navigation" }},
+        in folio, now a book of the greatest rarity. The original manuscript of
+        it is in
+        <cite>
+          <abbr title="manuscript">MS.</abbr>
+          <abbr title="Ashmole">Ashm.</abbr>
+          1789</cite>,
+        and
+        {{ "Dee, John" | person_tag: "Dee" }}’s
+        own copy of the published work with
         <abbr title="manuscript">MS.</abbr>
-        <abbr title="Ashmole">Ashm.</abbr>
-        1789</cite>,
-      and
-      {{ "Dee, John" | person_tag: "Dee" }}’s
-      own copy of the published work with
-      <abbr title="manuscript">MS.</abbr>
-      notes and additions is preserved in the
-      {{ "British Museum, England" | place_tag: "British Museum" }}.
-      In his
-      <cite>
-        Letter Apologetical,
-        <abbr title="quarto">4to.</abbr>
-        <abbr>Lond.</abbr>
-        1603</cite>,
-      he cites this work under the title of
-      <span lang=en-emodeng>The Brytish Monarchie</span>,
-      as having been written in the year
-      <time datetime=1576>1576</time>.
-    </p></blockquote>
+        notes and additions is preserved in the
+        {{ "British Museum, England" | place_tag: "British Museum" }}.
+        In
+        {{ "Dee, John" | person_tag: "his" }}
+        <cite>
+          Letter Apologetical,
+          <abbr title="quarto">4to.</abbr>
+          <abbr>Lond.</abbr>
+          1603</cite>,
+        {{ "Dee, John" | person_tag: "he" }}
+        cites this work under the title of
+        <span lang=en-emodeng>The Brytish Monarchie</span>,
+        as having been written in the year
+        <time datetime=1576>1576</time>.
+      </p></blockquote>
 "1577-11-28":
-  source_location: page 4
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
-      informs us that
-      {{ "Walsingham, Francis" | person_tag: "Walsingham" }}
-      continued for a length of time one of
-      {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
-      best patrons.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 4"
+  text: >-4
+      <blockquote><p>
+        {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
+        informs us that
+        {{ "Walsingham, Francis" | person_tag: "Walsingham" }}
+        continued for a length of time one of
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
+        best patrons.
+      </p></blockquote>
 "1578-06-30--1":
-  source_location: page 4
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      {{ "Rogers, Daniel" | person_tag: "Rogers" }}
-      was a member of
-      {{ "University of Oxford, England" | place_tag: "the University of Oxford" }},
-      and a large commonplace-book in his handwriting is in
-      {{ "Tenison, Thomas" | person_tag: "Archbishop Tenison" }}’s
-      library in
-      {{ "St Martin-in-the-Fields, England" | place_tag: "St. Martin’s-in-the-Fields" }}.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 4"
+  text: >-4
+      <blockquote><p>
+        {{ "Rogers, Daniel" | person_tag: "Rogers" }}
+        was a member of
+        {{ "University of Oxford, England" | place_tag: "the University of Oxford" }},
+        and a large commonplace-book in
+        {{ "Rogers, Daniel" | person_tag: "his" }}
+        handwriting is in
+        {{ "Tenison, Thomas" | person_tag: "Archbishop Tenison" }}’s
+        library in
+        {{ "St Martin-in-the-Fields, England" | place_tag: "St. Martin’s-in-the-Fields" }}.
+      </p></blockquote>
 "1578-06-30--2":
-  source_location: page 4
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      That is,
-      <span lang=la-medieval>
-        {{ "Geoffrey of Monmouth" | person_tag: "Galfridus Monumetensis" }}
-        {{ "De gestis Britonum" | source_tag: "de gestis regum Britanniæ" }}</span>.
-      {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
-      mentions this fact in his collection of voyages.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 4"
+  text: >-4
+      <blockquote><p>
+        That is,
+        <span lang=la-medieval>
+          {{ "Geoffrey of Monmouth" | person_tag: "Galfridus Monumetensis" }}
+          {{ "De gestis Britonum" | source_tag: "de gestis regum Britanniæ" }}</span>.
+        {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
+        mentions this fact in
+        {{ "Hakluyt, Richard (writer)" | person_tag: "his" }}
+        collection of voyages.
+      </p></blockquote>
 "1578-08-15":
-  source_location: page 4
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      This is the book just mentioned under the title of
-      {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials" }},
-      <cite>
-        <abbr>fol.</abbr>
-        <abbr>Lond.</abbr>
-        1577</cite>.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 4"
+  text: >-4
+      <blockquote><p>
+        This is the book just mentioned under the title of
+        {{ "Hexameron Brytanicum" | source_tag: "General and Rare Memorials" }},
+        <cite>
+          <abbr>fol.</abbr>
+          <abbr>Lond.</abbr>
+          1577</cite>.
+      </p></blockquote>
 "1579-07-13":
-  source_location: page 6
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      {{ "Dee, Arthur" | person_tag: "His" }}
-      horoscope is in
-      <cite>
-        <abbr title="manuscript">MS.</abbr>
+  author: "Halliwell, James"
+  source_location: "page 6"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, Arthur" | person_tag: "His" }}
+        horoscope is in
+        <cite>
+          <abbr title="manuscript">MS.</abbr>
+          <abbr title="Ashmole">Ashm.</abbr>
+          1788</cite>.
+        <q>{{ "Dee, Arthur" | person_tag: "<abbr>Mr.</abbr> Arthur Dee" }}’s
+          birth was accompanied by the unhappy accident of the death of
+          {{ "Fromond, Bartholomew" | person_tag: "<abbr>Mr.</abbr> Fromonds" }},
+          {{ "Fromond, Jane" | person_tag: "his mother" }}’s
+          father, who died that morning.</q> — <cite><abbr title="manuscript">MS.</abbr>
         <abbr title="Ashmole">Ashm.</abbr>
-        1788</cite>.
-      <q><abbr>Mr.</abbr> Arthur Dee’s
-        birth was accompanied by the unhappy accident of the death of
-        {{ "Fromond, Bartholomew" | person_tag: "<abbr>Mr.</abbr> Fromonds" }},
-        {{ "Fromond, Jane" | person_tag: "his mother" }}’s
-        father, who died that morning.</q> — <cite><abbr title="manuscript">MS.</abbr>
-      <abbr title="Ashmole">Ashm.</abbr>
-      1790,
-      <abbr title="folio">fol.</abbr>
-      63</cite>.
-    </p></blockquote>
+        1790,
+        <abbr title="folio">fol.</abbr>
+        63</cite>.
+      </p></blockquote>
 "1579-08-08":
-  source_location: page 6
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      This person is not noticed by the Oxford biographers.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 6"
+  text: >-4
+      <blockquote><p>
+        This person is not noticed by the Oxford biographers.
+      </p></blockquote>
 "1579-12-09":
-  source_location: page 7
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      {{ "Dee, John" | person_tag: "Dee" }}
-      has occasionally made use of Greek letters for the preservation of his
-      notes, still retaining the English language. The present passage may as
-      well be given: — <q>This
-        night
-        {{ "Fromond, Jane" | person_tag: "my wife" }}
-        dreamed that one cam to her and touched her, saying,
-        <q>Mistres Dee, you are conceived of child, whose name must be
-        Zacharias; be of good chere, he sal do well as this doth!</q></q>
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 7"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, John" | person_tag: "Dee" }}
+        has occasionally made use of Greek letters for the preservation of
+        {{ "Dee, John" | person_tag: "his" }}
+        notes, still retaining the English language. The present passage may as
+        well be given: — <q>This
+          night
+          {{ "Fromond, Jane" | person_tag: "my wife" }}
+          dreamed that one cam to
+          {{ "Fromond, Jane" | person_tag: "her" }}
+          and touched
+          {{ "Fromond, Jane" | person_tag: "her" }},
+          saying,
+          <q lang=en-emodeng>{{ "Fromond, Jane" | person_tag: "Mistres Dee, you" }}
+            are conceived of child, whose name must be Zacharias; be of good
+            chere, he sal do well as this doth!</q></q>
+      </p></blockquote>
 "1579-12-28":
-  source_location: page 7
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      In a more appropriate place
-      {{ "Halliwell, James" | person_tag: "I" }}
-      shall give from an Ashmolean manuscript a traditionary anecdote relating
-      to this
-      {{ "Cooke, Roger" | person_tag: "Roger Coke, or Cooke" }},
-      and the great secret which
-      {{ "Dee, John" | person_tag: "Dee" }}
-      revealed to him.
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 7"
+  text: >-4
+      <blockquote><p>
+        In a more appropriate place
+        {{ "Halliwell, James" | person_tag: "I" }}
+        shall give from an Ashmolean manuscript a traditionary anecdote
+        relating to this
+        {{ "Cooke, Roger" | person_tag: "Roger Coke, or Cooke" }},
+        and the great secret which
+        {{ "Dee, John" | person_tag: "Dee" }}
+        revealed to
+        {{ "Cooke, Roger" | person_tag: "him" }}.
+      </p></blockquote>
 "1580-10-10":
-  source_location: page 9-10
-  author: Halliwell, James
+  author: "Halliwell, James"
+  source_location: "page 9-10"
   text: >-
-    <blockquote><p>
-      {{ "Constable, Katherine" | person_tag: "His first wife" }}
-      died
-      <time datetime=1575-03-16>on the 16th of March 1575</time>,
-      when
-      <q lang=en-emodeng>{{ "Queen Elizabeth" | person_tag: "the Queen’s Majestie" }},
-        with her most honourable Privy Council, and other her Lords and
-        Nobility, came purposely to have visited
-        {{ "Dee's house, Mortlake, England" | place_tag: "my library" }}:
-        but finding that my wife was
-        <time datetime="P4H">within four houres before</time>
-        buried out of the house, her Majestie refused to come in; but willed to
-        fetch my glass so famous, and to show unto her some of the properties
-        of it, which
-        {{ "Dee, John" | person_tag: "I" }}
-        did; her Majestie being taken down from her horse by the
-        {{ "Earl of Leicester" | person_tag: "Earle of Leicester" }},
-        Master of the Horse,
-        {{ "St Mary the Virgin Mortlake, England" | place_tag: "at the church wall of Mortlake" }},
-        did see some of the properties of that glass, to her Majestie’s great
-        contentment and delight.</q> — {{ "Compendious Memorial" | source_tag: "Compendious Memorial", "<abbr>p.</abbr> 516" }}.
-        This glass is spoken of again.
-    </p></blockquote>
+      <blockquote><p>
+        {{ "Constable, Katherine" | person_tag: "His first wife" }}
+        died
+        <time datetime=1575-03-16>on the 16th of March 1575</time>,
+        when
+        <q lang=en-emodeng>{{ "Queen Elizabeth" | person_tag: "the Queen’s Majestie" }},
+          with
+          {{ "Queen Elizabeth" | person_tag: "her" }}
+          most honourable Privy Council, and other
+          {{ "Queen Elizabeth" | person_tag: "her" }}
+          Lords and Nobility, came purposely to have visited
+          {{ "Dee's house, Mortlake, England" | place_tag: "my library" }}:
+          but finding that
+          {{ "Constable, Katherine" | person_tag: "my wife" }}
+          was
+          <time datetime="P4H">within four houres before</time>
+          buried out of
+          {{ "Dee's house, Mortlake, England" | place_tag: "the house" }},
+          {{ "Queen Elizabeth" | person_tag: "her Majestie" }}
+          refused to come in; but willed to fetch
+          {{ "Dee, John" | person_tag: "my" }}
+          glass so famous, and to show unto
+          {{ "Queen Elizabeth" | person_tag: "her" }}
+          some of the properties of it, which
+          {{ "Dee, John" | person_tag: "I" }}
+          did;
+          {{ "Queen Elizabeth" | person_tag: "her Majestie" }}
+          being taken down from
+          {{ "Queen Elizabeth" | person_tag: "her" }}
+          horse by
+          {{ "Earl of Leicester" | person_tag: "the Earle of Leicester" }},
+          Master of the Horse,
+          {{ "St Mary the Virgin Mortlake, England" | place_tag: "at the church wall of Mortlake" }},
+          did see some of the properties of that glass, to
+          {{ "Queen Elizabeth" | person_tag: "her Majestie" }}’s
+          great contentment and
+          delight.</q> — {{ "Compendious Memorial" | source_tag: "Compendious Memorial", "<abbr>p.</abbr> 516" }}.
+          This glass is spoken of again.
+      </p></blockquote>
 "1580-11-22":
-  source_location: page 10
-  author: Halliwell, James
-  text: >-
-    <blockquote><p>
-      {{ "Dee, John" | person_tag: "Dee" }}
-      has made a rough sketch of the appearance of this comet, with its long
-      tail, on the margin of the
-      <abbr title="manuscript">MS.</abbr>
-    </p></blockquote>
+  author: "Halliwell, James"
+  source_location: "page 10"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, John" | person_tag: "Dee" }}
+        has made a rough sketch of the appearance of
+        this comet,
+        {{ "comet of 1580" | event_tag: "with its long" }}
+        tail, on the margin of the
+        <abbr title="manuscript">MS.</abbr>
+      </p></blockquote>
+"1581":
+  author: "Halliwell, James"
+  source_location: "page 10"
+  text: >-4
+      <blockquote><p>
+        An original diary of the chemical experiments made by
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        <time datetime=1581>in this year</time>
+        is preserved
+        {{ "Bodleian Library, University of Oxford" | place_tag: "in the Bodleian Library" }}. — <abbr>MS.</abbr>
+        <abbr>Rawl.</abbr>
+        <abbr>Miscel.</abbr>
+        241</cite>.
+      </p></blockquote>
+"1581-09":
+  author: "Halliwell, James"
+  source_location: "page 12"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        in the
+        <cite>
+          <span>Rawlinson</span>
+          <abbr>MS.</abbr>
+        </cite>
+        just quoted, observes, in
+        {{ "Dee, John" | person_tag: "his" }}
+        notes on
+        <time datetime=1581-09>this month</time>,
+        <q lang=en-emodeng>{{ "Waters, Harry" | person_tag: "<abbr>Mr.</abbr> Harry Waters" }}
+          went away
+          <time datetime=1581-09-02>the 2nd day</time>,
+          malcontent.
+          {{ "Dee, John" | person_tag: "John Dee" }},
+          {{ "God" | person_tag: "Jesus" }}
+          bless
+          {{ "Dee, John" | person_tag: "me" }}!</q>
+      </p></blockquote>
+"1581-09-05":
+  author: "Halliwell, James"
+  source_location: "page 13"
+  text: >-4
+      <blockquote><p>
+        This probably gave rise to the anecdote which is related in
+        <cite>
+          <abbr>MS.</abbr>
+          <abbr>Ashm.</abbr>
+          1788,
+          <abbr>fol.</abbr>
+          147</cite>,
+        <abbr>viz.</abbr>
+        that
+        <q lang=en-emodeng>{{ "Dee, John" | person_tag: "he" }}
+          revealed to
+          {{ "Cooke, Roger" | person_tag: "one Roger Cooke" }}
+          the great secret of the elixar, as he called it, of the salt of
+          metalls, the projection whereof was one upon an hundred.</q>
+      </p></blockquote>
+"1582-03-09":
+  author: "Halliwell, James"
+  source_location: "page 15"
+  text: >-4
+      <blockquote><p>
+        Just above this relation some one has written,
+        <q lang=en-emodeng>you that rede this underwritten assure yourselfe
+          that yt is a shamfull lye, for
+          {{ "Talbot" | person_tag: "Talbot" }}
+          neither studied for any such thinge nor shewed
+          {{ "Talbot" | person_tag: "himselfe" }}
+          dishonest in any thinge.</q>
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}
+        has thus commented upon it: — <q lang=en-emodeng>This
+          is {{ "Talbot" | person_tag: "<abbr>Mr.</abbr> Talbot" }}
+          or that lerned man,
+          {{ "Talbot" | person_tag: "his own" }}
+          writing in
+          {{ "Dee, John" | person_tag: "my" }}
+          boke, very unduely as
+          {{ "Talbot" | person_tag: "he" }}
+          cam by it.</q>
+        There are several other notices
+        {{ "Talbot" | person_tag: "of Talbot" }}
+        erased, but whether by
+        {{ "Talbot" | person_tag: "him" }}
+        or by
+        {{ "Dee, John" | person_tag: "the Doctor" }}
+        it is impossible to say, but most probably the former.
+      </p></blockquote>
+"1583-02-26":
+  author: "Halliwell, James"
+  source_location: "page 19"
+  text: >-4
+      <blockquote><p>
+        This work, although never entirely printed, created much sensation at
+        the time, and was the cause of considerable controversy among the
+        politicians as well as literati. The Memorial on this subject which
+        {{ "Dee, John" | person_tag: "Dee" }}
+        presented to the Privy Council has been printed by
+        {{ "Hearne" | person_tag: "Hearne" }}
+        and others, but it is not generally known that the original manuscript
+        of the actual treatise on the correction of the Calendar is still
+        preserved in
+        <cite>
+          <span>
+            <span>Ashmole</span></span>’s library,
+          <abbr>No.</abbr>
+          1789</cite>,
+        and is the very book which
+        {{ "Dee, John" | person_tag: "Dee" }}
+        alludes to above. It is inscribed
+        <q lang=en-emodeng>to the Right Honorable and
+          {{ "Dee, John" | person_tag: "my" }}
+          singular good Lorde,
+          {{ "Cecil, William" | person_tag: "the Lorde Burghley" }},
+          Lorde Threasorer of Englande,</q>
+        with the following verses: —</p>
+
+        <blockquote><p>
+          To
+          <span lang=gr>ὁτι</span>
+          and
+          <span lang=gr>το διοτι</span>,<br>
+          {{ "Dee, John" | person_tag: "I" }}
+          shew the thing and reason why;<br>
+          At large, in breif, in middle wise,<br>
+          {{ "Dee, John" | person_tag: "I" }}
+          humbly give a playne advise;<br>
+          For want of tyme, the tyme untrew<br>
+          Yf
+          {{ "Dee, John" | person_tag: "I" }}
+          have myst, commaund anew<br>
+          {{ "Cecil, William" | person_tag: "Your honor" }}
+          may. So shall you see<br>
+          That love of truth doth govern
+          {{ "Dee, John" | person_tag: "me" }}.
+        </p></blockquote>
+
+        <p>
+          The work itself is entitled,
+          <q lang=en-emodeng>A playne Discourse and humble Advise for our
+            Gratious
+            {{ "Queen Elizabeth" | person_tag: "Queene Elizabeth" }},
+            her most Excellent Majestie to peruse and consider, as concerning
+            the needful Reformation of the Vulgar Kalender for the civile yeres
+            and daies accompting, or verifyeng, according to the tyme truely
+            spent.</q>
+      </p></blockquote>
+"1583-05-01":
+  author: "Halliwell, James"
+  source_location: "page 20"
+  text: >-4
+      <blockquote><p>
+        <q lang=en-emodeng><time datetime=1583-04-30>The year of our Lorde God
+          1583, the laste daye of Aprill</time>,
+          {{ "Łaski, Olbract" | person_tag: "the Duke or Prince" }}
+          of
+          {{ "Łask, Poland" | place_tag: "Vascos in Polonia" }},
+          came
+          {{ "London, England" | place_tag: "to London" }}
+          and was lodged
+          {{ "Winchester Palace, England" | place_tag: "Winchester Howse" }}.</q> — <cite><abbr>MS.</abbr>
+          Douce,
+          363,
+          <abbr>fol.</abbr>
+          125</cite>.
+        This account differs from
+        {{ "Dee, John" | person_tag: "Dee" }}’s
+        by a single day.
+      </p></blockquote>
+"1583-07-31":
+  author: "Halliwell, James"
+  source_location: "page 21"
+  text: >-4
+      <blockquote><p>
+        <q lang=en-emodeng>{{ "Queen Elizabeth" | person_tag: "Her Majestie" }}
+          being informed by
+          {{ "Earl of Leicester" | person_tag: "the Right Honourable Earle of Leicester" }},
+          that whereas
+          <time datetime=1583-07-31>the same day</time>
+          in the morning
+          {{ "Earl of Leicester" | person_tag: "he" }}
+          had told
+          {{ "Dee, John" | person_tag: "me" }}
+          that
+          {{ "Earl of Leicester" | person_tag: "his Honour" }}
+          and
+          {{ "Łaski, Olbract" | person_tag: "Lord Laskey" }}
+          would dine with
+          {{ "Dee, John" | person_tag: "me" }}
+          <time datetime="1583-07-31/P2D">within two dayes after</time>,
+          {{ "Dee, John" | person_tag: "I" }}
+          confessed sincerely unto
+          {{ "Earl of Leicester" | person_tag: "him" }}
+          that
+          {{ "Dee, John" | person_tag: "I" }}
+          was not able to prepare them a convenient dinner, unless
+          {{ "Dee, John" | person_tag: "I" }}
+          should presently sell some of
+          {{ "Dee, John" | person_tag: "my" }}
+          plate or some of
+          {{ "Dee, John" | person_tag: "my" }}
+          pewter for it. Whereupon
+          {{ "Queen Elizabeth" | person_tag: "her Majestie" }}
+          sent unto
+          {{ "Dee, John" | person_tag: "me" }}
+          very royally
+          <time datetime="P1H">within one hour after</time>
+          {{ "GBP 40 angel 1550" | currency_tag: "forty angels of gold" }}
+          {{ "Richmond Palace, England" | place_tag: "from Sion" }},
+          whether
+          {{ "Queen Elizabeth" | person_tag: "her Majestie" }}
+          was now come by water
+          {{ "Palace of Placentia, England" | place_tag: "from Greenwich" }}.</q> — <cite>{{ "Dee, John" | "<abbr>Dr.</abbr> Dee" }}’s
+            {{ "Compendious Memoriall" | source_tag: "Compendious Memoriall" }},
+            <abbr>p.</abbr>
+            511</cite>.
+      </p></blockquote>
+"1587-02-09":
+  author: "Halliwell, James"
+  source_location: "page 22"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, John" | person_tag: "He" }}
+        frequently speaks of
+        {{ "Łaski, Olbract" | person_tag: "Prince Albert Leski" }}
+        under the title of Illustrissimus.
+      </p></blockquote>
+"1587-02-19":
+  author: "Halliwell, James"
+  source_location: "page 22"
+  text: >-4
+      <blockquote><p>
+        It is almost unnecessary to observe that these initials refer to
+        {{ "Kelley, Edward" | person_tag: "Edward Kelly" }}.
+      </p></blockquote>
+"1587-09-30":
+  author: "Halliwell, James"
+  source_location: "page 24"
+  text: >-4
+      <blockquote><p>
+        That is,
+        {{ "Kelley, Thomas" | person_tag: "Thomas Kelley" }}
+        and
+        {{ "Carp, John" | person_tag: "John Carp" }}.
+      </p></blockquote>
+"1588-12-04":
+  author: "Halliwell, James"
+  source_location: "page 29"
+  text: >-4
+      <blockquote><p>
+        This refers to
+        {{ "The elements of geometrie" | source_tag: "the earliest English translation" }}
+        of
+        {{ "Euclid" | person_tag: "Euclid" }}
+        by
+        {{ "Billingsley, Henry" | person_tag: "Billingsley" }},
+        which was published in
+        <time>1570</time>,
+        with a long preface by
+        {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}.
+        {{ "De Morgan, Augustus" | person_tag: "Professor De Morgan" }}
+        is of opinion that the translation also was by
+        {{ "Dee, John" | person_tag: "Dee" }},
+        or that
+        {{ "Billingsley, Henry" | person_tag: "Billingsley" }}
+        may have been only a pupil who worked immediately under
+        {{ "Dee, John" | person_tag: "his" }}
+        directions. The passage to which
+        {{ "Dee, John" | person_tag: "Dee" }}
+        alludes is as follows: — <q lang="en-emodeng">a
+          man to be curstly affrayed of his owne shadow; yea, so much to feare,
+          that if you, being alone nere a certaine glasse, and proffer, with
+          dagger or sword, to foyne at the glasse, you shall suddenly be moved
+          to give backe (in maner) by reason of an image appearing in the ayre
+          betwene you and the glasse with like hand, sword, or dagger, and with
+          like quicknes, foyning at your very eye, likewise as you do at the
+          glasse. Straunge this is to heare of, but more mervailous to behold
+          then these my wordes cam signifie; and neverthelesse by demonstration
+          opticall the order and cause therof is certified; even so, as the
+          effect is consequent.</q>
+        {{ "Halliwell, James" | person_tag: "I" }}
+        refer the reader also to
+        {{ "Barlow, Peter" | person_tag: "<abbr>Mr.</abbr> Barlow" }}’s
+        History of Optics in
+        {{ "Encyclopedia Metropolitana" | source_tag: "the Encyclopedia Metropolitana" }}.
+      </p></blockquote>
+"1589-12-19":
+  author: "Halliwell, James"
+  source_location: "page 32"
+  text: >-4
+      <blockquote><p>
+        Where, according to
+        {{ "Aubrey" | person_tag: "Aubrey" }},
+        who received
+        {{ "Aubrey" | person_tag: "his" }}
+        information from
+        {{ "Lilly" | person_tag: "Lilly" }},
+        {{ "Dee, John" | person_tag: "he" }}
+        was very favourably received by
+        {{ "Queen Elizabeth" | person_tag: "her Majesty" }}.
+      </p></blockquote>
+"1590-03-27":
+  author: "Halliwell, James"
+  source_location: "page 33"
+  # Google Translate suggests changing 'θεμ' to 'θεμα', 'thema' = 'the subject'.
+  # This gives 'Ιανε ἁδ θεμα' = 'Jane on the subject'.
+  text: >-4
+      <blockquote><p>
+        There are a great many brief notices in this diary relative to
+        {{ "Fromond, Jane" | person_tag: "Jane Dee" }},
+        most of which are expressed in astrological symbols; and as they are
+        exceedingly difficult to decipher satisfactorily, and are certainly of
+        very little, if any importance,
+        {{ "Halliwell, James" | person_tag: "I" }}
+        have thought it expedient to omit them. The
+        entry of
+        <q lang=gr>Ιανε ἁδ θεμ</q>
+        is also of frequent occurrence, though what
+        <q lang=gr>θεμ</q>
+        can refer to
+        {{ "Halliwell, James" | person_tag: "I" }}
+        have not been able to discover.
+      </p></blockquote>
+"1590-05-18":
+  author: "Halliwell, James"
+  source_location: "page 34"
+  text: >-4
+      <blockquote><p>
+        {{ "Dee, John" | person_tag: "Dee" }}
+        has preserved several interesting notices of
+        {{ "Dee, John" | person_tag: "his" }}
+        intimacies with the principal navigators of
+        {{ "Dee, John" | person_tag: "his" }}
+        time. A general reference to
+        {{ "Hakluyt, Richard (writer)" | person_tag: "Hackluyt" }}
+        will be sufficient.
+      </p></blockquote>
+"1591-01-21":
+  author: "Halliwell, James"
+  source_location: "page 37"
+  text: >-4
+      <blockquote><p>
+        See the
+        <q lang=en-emodeng>{{ "Compendious Rehearsall" | source_tag: "Compendious Rehearsall" }},</q>
+        published by
+        {{ "Hearne, Thomas" | person_tag: "Hearne" }}
+        from a Manuscript in the Cottonian collection, now partially destroyed
+        by fire, for a more extended account of this.
+      </p></blockquote>
+"1591-03-26":
+  author: "Halliwell, James"
+  source_location: "page 38"
+  text: >-4
+      <blockquote><p>
+        Now in the Cottonian collection.
+        {{ "Ashmole, Elias" | person_tag: "Ashmole" }}
+        has preserved a copy of it in
+        <cite>
+          <abbr>MS.</abbr>
+          <abbr>Ashm.</abbr>
+          1790</cite>.
+      </p></blockquote>
+"1592-08-26":
+  author: "Halliwell, James"
+  source_location: "page 41"
+  text: >-4
+      <blockquote><p>
+        This entry is not very clear. It either refers perhaps to
+        {{ "Harriot, Thomas" | person_tag: "Harriot" }},
+        the celebrated mathematician,
+        or to
+        {{ "Heriot, George" | person_tag: "the London goldsmith" }}
+        whom
+        {{ "Scott, Walter" | person_tag: "the Abbotsford novelist" }}
+        has immortalized.
+      </p></blockquote>
+"1593-02-21":
+  author: "Halliwell, James"
+  source_location: "page 43"
+  text: >-4
+      <blockquote><p>
+        This notice is particularly interesting, showing the intimate connexion
+        which existed between
+        {{ "Digges, Thomas" | person_tag: "the first English mathematician of the day" }}
+        and
+        {{ "Dee, John" | person_tag: "the philosopher of Mortlake" }}.
+      </p></blockquote>
+"1600-09-29":
+  author: "Halliwell, James"
+  source_location: "page 63"
+  text: >-4
+      <blockquote><p>
+        In a note by
+        {{ "Dee, John" | person_tag: "Dee" }}
+        in
+        <cite>
+          <abbr>MS.</abbr>
+          <abbr>Ashm.</abbr>
+          488</cite>,
+        {{ "Dee, John" | person_tag: "he" }}
+        says,
+        <q lang=en-emodeng>All
+          {{ "Hickman, Bartholomew" | person_tag: "Barthilmew" }}’s
+          reports of sight and hering spirituall wer burnt; a copy of the first
+          part, which was afterward fownd, was burnt before
+          {{ "Dee, John" | person_tag: "me" }}
+          and
+          {{ "Fromond, Jane" | person_tag: "my wife" }}.</q>
+      </p></blockquote>
