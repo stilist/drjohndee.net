@@ -44,5 +44,6 @@ defaults:
 exclude:
   - .gitignore
   - LICENSE.md
+  - _data/templates/
   - _spec/
   - _sources/
