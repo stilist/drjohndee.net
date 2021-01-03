@@ -1,8 +1,6 @@
 @charset "utf-8";
 
 :root {
-  color-scheme: light dark;
-
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
   --neutral-0--components: 1 1 0.9882; /* #fffffc */
   --neutral-0: #fffffc;
@@ -59,6 +57,7 @@
   --invalid-data--components: 1 0 0.88; /* #f0c */
   --invalid-data: #f0c;
 
+  --base-font-size: 18px;
   --font-serif: EB Garamond, Garamond, Times, Times New Roman, serif;
   --font-sans-serif: system-ui, sans-serif;
 
@@ -149,7 +148,7 @@
     --background: var(--neutral-100);
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 2200px) {
   :root {
     --column-width: 7rem;
   }
@@ -195,12 +194,15 @@ dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
+html {
+  font-size: var(--base-font-size);
+}
 body {
   background-color: var(--background);
   color: var(--foreground);
+  color-scheme: light dark;
   font-family: var(--font-sans-serif);
-  font-size: 20px;
-  line-height: 1em;
+  line-height: 1rem;
   margin: calc(var(--vertical-rhythm) * 3) auto
           calc(var(--vertical-rhythm) * 2) auto;
   min-height: 100vh;
@@ -458,6 +460,14 @@ p {
 }
 #scale span + span {
   margin-left: var(--gutter-width);
+}
+#scale span:nth-child(n+16) {
+  display: none;
+}
+@media (max-width: 960px) {
+  #scale span:nth-child(n+9) {
+    display: none;
+  }
 }
 .debug time,
 .debug .is-unknown-reference {
