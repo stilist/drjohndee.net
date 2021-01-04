@@ -1276,6 +1276,30 @@
   gender: male
   livedIn:
     - Mortlake, England
+"Shakelton, Francis":
+  name:
+    - text: Francis
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1441346
+    - text: Shackleton
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16883050
+  gender: male
+"Short, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Short
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16883238
+    - text: <abbr>M.D.</abbr>
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q913404
+  birthDate: 1690
+  deathDate: 1772
+  id: https://www.wikidata.org/entity/Q96409827
+  gender: male
 "Sidney, Philip":
   name:
     - text: Sir
