@@ -1,3 +1,27 @@
+"Anderson, Margaret":
+  name:
+    - text: Margaret
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4963612
+    - text: Anderson
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1848748
+  # @see `1568-09-24-dee`
+  birthDate: 1568-09-24T07/08
+  gender: female
+  knows:
+    - Dee, John
+"Arundell":
+  formatted_name: "<abbr>Mr</abbr> Arundell"
+  name:
+    - text: Arundell
+      type: familyName
+      id: https://www.wikidata.org/entity/Q716674
+  # @see `1557-07-30-dee`
+  birthDate: 1557-07-30T16
+  gender: male
+  knows:
+    - Dee, John
 "Ashmole, Elias":
   name:
     - text: Elias
@@ -11,6 +35,20 @@
   deathPlace: Lambeth, England
   id: https://www.wikidata.org/entity/Q471406
   gender: male
+"Ask, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Ask
+      type: familyName
+      id: https://www.wikidata.org/entity/Q10419770
+  # @see `1563-09-28-dee`
+  birthDate: 1563-09-28T00/12
+  birthPlace: York, Yorkshire and the Humber, GB
+  gender: male
+  knows:
+    - Dee, John
 "Awbrey":
   name:
     - text: Aubrey
@@ -80,6 +118,13 @@
   gender: male
   livedIn:
     - London, England
+"Brown":
+  formatted_name: "<abbr>Mr</abbr> Brown"
+  name:
+    - text: Brown
+      type: familyName
+      id: https://www.wikidata.org/entity/Q13421990
+  gender: male
 "Bullock":
   name:
     - text: Bullock
@@ -120,6 +165,38 @@
   gender: male
   knows:
     - Dee, John
+"Clifford, Margaret":
+  name:
+    - text: Margaret
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4963612
+    - type: Russell
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158262
+    - text: Countess of Cumberland
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  # @see `1560-07-08-dee`
+  birthDate: 1560-07-08T02:09
+  birthPlace: Exeter, South West, GB
+  deathDate: "1616-05-24"
+  gender: female
+  id: https://www.wikidata.org/entity/Q7605533
+  knows:
+    - Dee, John
+"Cooke, Bridget":
+  name:
+    - text: Brigit
+      type: givenName
+      id: https://www.wikidata.org/entity/Q913810
+    - text: Cooke
+      type: familyName
+      id: https://www.wikidata.org/entity/Q658676
+  # @see `1593-03-01-dee`
+  birthDate: 1564-03-01T07
+  gender: female
+  knows:
+    - Dee, John
 "Cooke, Roger":
   name:
     - text: Roger
@@ -131,6 +208,32 @@
   gender: male
   knows:
     - Dee, John
+"Cooper, Jane":
+  name:
+    - text: Jane
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1682564
+    - text: Kelley
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27678531
+  # @see `1563-06-23-dee`
+  # @note 'Evening' is approximated from timeanddate.com's sunset times for
+  #   Mortlake in England, John Dee's personal residence.
+  # @see https://www.timeanddate.com/sun/@11551058?month=6&year=1600
+  birthDate: 1563-06-23T18/20
+  gender: female
+  # @see `1563-06-23-dee`
+  birthName:
+    - text: Jane
+      type: givenName
+      id: https://www.wikidata.org/entity/Q1682564
+    - text: Cooper
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1794217
+  knows:
+    - Dee, John
+  spouses:
+    - Kelley, Edward
 "Crane, Francis":
   name:
     - text: Sir
@@ -286,6 +389,31 @@
     - Cranbrook, England
   footnotes:
     - "jordan cole/john-elmeston-essay"
+"Emery, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Emery
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16275674
+  # @see `1568-07-14-dee`
+  birthDate: 1568-07-14T23
+  birthPlace: Danbury, East, GB
+  gender: male
+  knows:
+    - Dee, John
+"Fennar, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Fennar
+      type: familyName
+  # @see `1563-03-23-dee`
+  birthDate: 1563-03-23T23
+  knows:
+    - Dee, John
 "Flowr":
   name:
     - text: Flowr
@@ -333,7 +461,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q27205691
   birthDate: 1554-04-22T12
-  birthPlace: Cheam, England
+  birthPlace: Cheam, London, GB
   id: https://www.wikidata.org/entity/Q19001456
   deathDate: 1604
   gender: female
@@ -390,6 +518,20 @@
     - Dee, John
   id: https://www.wikidata.org/entity/Q447200
   gender: male
+"Goose, Wenefride":
+  name:
+    - text: Wenefride
+      type: givenName
+      id: https://www.wikidata.org/entity/Q13422280
+    - text: Goose
+      type: familyName
+  # @see `1564-08-21`
+  birthDate: 1564-08-21T21/22
+  birthPlace: Kingston, GB
+  gender: female
+  knows:
+    - Dee, John
+  source: The Private Diary of Dr. John Dee
 "Grey, Henry":
   name:
     - text: Henry
@@ -523,13 +665,31 @@
   gender: male
   knows:
     - Dee, John
+"Heydon":
+  formatted_name: "<abbr>Mr</abbr> Heydon"
+  name:
+    - text: Heydon
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870769
+  # @see `1561-08-14-dee`
+  birthDate: 1561-08-14T23:30
+  birthPlace: Surrey, GB
+  gender: male
+  knows:
+    - Dee, John
 "Hickman, Bartholomew":
   name:
     - text: Bartholomew
       type: givenName
       id: https://www.wikidata.org/entity/Q4926315
     - text: Hickman
-      type: Hickman
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16870774
+  # @see `1554-08-25-dee`
+  # @note 'Evening' is approximated from timeanddate.com's sunset times.
+  # @see https://www.timeanddate.com/sun/@2656031?month=8&year=1600
+  birthDate: 1554-08-25T17/19
+  birthPlace: Lower Shuckburgh, West Midlands, GB
   gender: male
   knows:
     - Dee, John
@@ -582,6 +742,28 @@
     - Chiswick, England
   knows:
     - Dee, John
+"Hudson":
+  formatted_name: "<abbr>Mr</abbr> Hudson"
+  name:
+    - text: Hudson
+      type: familyName
+      id: https://www.wikidata.org/entity/Q2720681
+  # @see +1564-06-20-dee+
+  birthDate: 1564-06-20T07
+  knows:
+    - Dee, John
+"Huyck, Robert":
+  name:
+    - text: Robert
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4927937
+    - text: Huyck
+      type: familyName
+      id: https://www.wikidata.org/entity/Q36949933
+  knows:
+    - Steward, Simon
+    - Queen Elizabeth
+  gender: male
 "Hynde, Alice":
   name:
     - text: Alice
@@ -669,6 +851,38 @@
   gender: male
   knows:
     - Dee, John
+"Kelley, Edward":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: Edward
+      type: givenName
+      id: https://www.wikidata.org/entity/Q278835
+    - text: Kelley
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27678531
+  id: https://www.wikidata.org/entity/Q127080
+  birthDate: 1555-08-11T16
+  birthPlace: Worcester, England
+  deathDate: 1597
+  knows:
+    - Dee, John
+  siblings:
+    - Kelley, Elizabeth
+    - Kelley, Thomas
+"Kelley, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Kelley
+      type: familyName
+      id: https://www.wikidata.org/entity/Q27678531
+  birthDate: 1565-10-17T16
+  birthPlace: Worcester, England
+  knows:
+    - Dee, John
 "Lewis, David":
   name:
     - text: David
@@ -741,6 +955,25 @@
   deathDate: 1834-01-03
   id: https://www.wikidata.org/entity/Q5217989
   gender: male
+"Meulen, Daniel van der":
+  name:
+    - text: Daniel
+      type: givenName
+      id: https://www.wikidata.org/entity/Q14516546
+    - text: van der
+      type: https://w3id.org/pnv#surnamePrefix
+      id: https://www.wikidata.org/entity/Q1258618
+    - text: Meulen
+      type: familyName
+      id: http://www.wikidata.org/entity/Q25126061
+  # @see `1554-10-25`
+  birthDate: 1554-10-25T04
+  birthPlace: Antwerp, Flemish Region, BE
+  # @see https://www.jessesadler.com/project/dvdm-correspondence/
+  deathDate: 1600
+  gender: male
+  knows:
+    - Dee, John
 "Molyneux, Emery":
   name:
     - text: Emery
@@ -757,6 +990,36 @@
     - Davis, John
     - Dee, John
     - Gilbert, Adrian
+"Mownson, Elizabeth":
+  formatted_name: "Elizabeth Brown"
+  name:
+    - text: Elizabeth
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16870774
+    - text: Mownson
+      type: familyName
+  # @see `1563-09-28-dee`
+  birthDate: 1563-09-28T09
+  gender: female
+  siblings:
+    # @see `1563-09-28-dee`
+    - Mownson, Thomas
+  knows:
+    - Dee, John
+  spouses:
+    # @see `1563-09-28-dee`
+    - Brown
+"Mownson, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Mownson
+      type: familyName
+  # @see `1565-12-21-dee`
+  birthDate: 1565-12-21T11
+  knows:
+    - Dee, John
 "Murfyn, Vincent":
   name:
     - text: Vincent
@@ -774,6 +1037,27 @@
       gender: male
   children:
     - Murfyn, Vincent
+"Nevelle, Mary":
+  name:
+    - text: Mary
+      type: givenName
+      id: https://www.wikidata.org/entity/Q734578
+    - text: Nevelle
+      type: familyName
+  aliases:
+    -
+      - text: Mary
+        type: givenName
+        id: https://www.wikidata.org/entity/Q734578
+      - text: Lewknor
+        type: familyName
+        id: https://www.wikidata.org/wiki/Q61045782
+  # @see `1558-12-14-dee`
+  birthDate: 1558-12-14T11/12
+  birthPlace: Chichester, South East, GB
+  gender: female
+  knows:
+    - Dee, John
 "Newsam, Bartholomew":
   name:
     - text: Bartholomew
@@ -913,6 +1197,18 @@
   relatedTo:
     - Dee, Arthur
     - Dee, John
+"Pontoys, John":
+  name:
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Pontoys
+      type: familyName
+  # @see `1565-09-12-dee`
+  birthDate: 1565-09-12T08:43
+  birthPlace: "Stony Stratford, South East, GB"
+  knows:
+    - Dee, John
 "Radford, Emma Louisa":
   name:
     - text: Emma
@@ -1030,6 +1326,24 @@
   gender: female
   spouses:
     - Norton, Thomas
+"Steward, Simon":
+  name:
+    - text: Simon
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4117588
+    - text: Steward
+      type: familyName
+      id: https://www.wikidata.org/entity/Q16883847
+  # @see `1575-07-31-dee`
+  birthDate: 1575-07-31T04:35/11:30
+  birthPlace: Shinfield, South East, GB
+  deathDate: "1632-02-10"
+  id: https://www.wikidata.org/entity/Q13522529
+  gender: male
+  knows:
+    - Dee, John
+  relatedTo:
+    - Huyck, Robert
 "Stewart, Frances":
   name:
     - text: Frances
@@ -1051,6 +1365,20 @@
   deathDate: 1639-10-08
   id: https://www.wikidata.org/entity/Q5478727
   gender: female
+  knows:
+    - Dee, John
+"Swallow, Samuel":
+  name:
+    - text: Samuel
+      type: givenName
+      id: https://www.wikidata.org/entity/Q629347
+    - text: Swallow
+      type: familyName
+      id: https://www.wikidata.org/entity/Q20727140
+  # @see `1571-02-15-dee`
+  birthDate: 1571-02-15T11/12
+  birthPlace: "Thaxted, East, GB"
+  gender: male
   knows:
     - Dee, John
 "Taylor":
@@ -1181,6 +1509,25 @@
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q1291914
   gender: male
+  knows:
+    - Dee, John
+"Lord Willoughby":
+  name:
+    - text: Peregrine
+      type: givenName
+    - text: Bertie
+      type: familyName
+    - text: 13th
+      type: additionalName
+      alternateType: https://w3id.org/pnv#disambiguatingDescription
+    - text: Baron Willoughby de Eresby
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+  birthDate: 1555-10-12T07
+  birthPlace: Wessel, Netherlands
+  deathDate: "1601-06-25"
+  primary_language: en-emodeng
+  id: https://www.wikidata.org/entity/Q3459641
   knows:
     - Dee, John
 "Monsieur Francis":

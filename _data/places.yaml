@@ -1,9 +1,20 @@
+"Antwerp, Flemish Region, BE":
+  locality: Antwerpen
+  region: Flemish Region
+  country: BE
+  id: https://www.wikidata.org/wiki/Special:EntityPage/Q12892
+  language: be
 "Bacton, England":
   locality: Bacton
   region: Herefordshire
   country: GB
   id: https://www.wikidata.org/entity/Q2294131
   language: en
+"Baconsthorpe, East, GB":
+  locality: Baconsthorpe
+  region: East
+  country: GB
+  id: https://www.wikidata.org/entity/Q2343935
 "Brechfa, Wales":
   locality: Brechfa
   region: Carmarthenshire
@@ -59,17 +70,20 @@
   country: FR
   id: https://www.wikidata.org/entity/Q194145
   language: fr
-"Cheam, England":
-  name: Cheam
-  latitude: 51.3478
-  longitude: -0.2113
-  locality: London Borough of Sutton
-  region: Greater London
+"Cheam, London, GB":
+  locality: Cheam
+  region: London
   country: GB
   id: https://www.wikidata.org/entity/Q2240615
   language: en
   footnotes:
     - "environs of london/cheam-england"
+"Chichester, South East, GB":
+  locality: Chichester
+  region: South East
+  country: GB
+  id: https://www.wikidata.org/entity/Q207639
+  language: en
 "Chislehurst, England":
   locality: Chislehurst
   region: Greater London
@@ -81,6 +95,11 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q845015
+  language: en
+"Cornwall, GB":
+  region: Cornwall
+  country: GB
+  id: https://www.wikidata.org/entity/Q23148
   language: en
 "Cottenham, Cambridgeshire, England":
   locality: Cottenham
@@ -107,6 +126,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q2160826
   language: en
+"Danbury, East, GB":
+  locality: Danbury
+  region: East
+  country: GB
+  id: https://www.wikidata.org/entity/Q1021042
+  language: en
 "Dartmouth, England":
   locality: Dartmouth
   region: Devon
@@ -131,6 +156,12 @@
   country: CA
   id: https://www.wikidata.org/entity/Q3059031
   url: https://en.wikipedia.org/wiki/Estotiland
+"Exeter, South West, GB":
+  region: Exeter
+  region: South West
+  country: GB
+  id: https://www.wikidata.org/entity/Q134672
+  language: en
 "Ferguson, Missouri":
   locality: Ferguson
   region: Missouri
@@ -229,6 +260,10 @@
   country: GB
   id: https://www.wikidata.org/entity/Q1740301
   language: en
+"Kingstone, England":
+  locality: Kingston
+  country: GB
+  language: en
 "Leadenham parish, England":
   name: Leadenham parish
   locality: Leadenham
@@ -291,6 +326,12 @@
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q84
+  language: en
+"Lower Shuckburgh, West Midlands, GB":
+  locality: Lower Shuckburgh
+  region: West Midlands
+  country: GB
+  id: https://www.wikidata.org/entity/Q6693807
   language: en
 "Lutherstadt Wittenberg, Germany":
   locality: Lutherstadt Wittenberg
@@ -402,6 +443,12 @@
   country: FR
   id: https://www.wikidata.org/entity/Q185075
   language: fr
+"Shinfield, South East, GB":
+  locality: Shinfield
+  region: South East
+  country: GB
+  id: https://www.wikidata.org/entity/Q2566965
+  language: en
 "Skirbeck, England":
   locality: Skirbeck
   region: East Midlands
@@ -470,11 +517,22 @@
   id: https://www.wikidata.org/entity/Q7594666
   url: https://stmarymortlake.org.uk
   language: en
+"Stony Stratford, South East, GB":
+  locality: Stony Stratford
+  region: South East
+  country: GB
+  id: https://www.wikidata.org/entity/Q787279
+  language: en
 "Strand, England":
   name: Strand
   locality: City of Westminster
   country: GB
   id: https://www.wikidata.org/entity/Q756819
+  language: en
+"Surrey, GB":
+  region: Surrey
+  country: England
+  id: https://www.wikidata.org/entity/Q23276
   language: en
 "Temple Bar, England":
   name: Temple Bar
@@ -483,6 +541,12 @@
   locality: City of London
   country: GB
   id: https://www.wikidata.org/entity/Q1256932
+  language: en
+"Thaxted, East, GB":
+  locality: Thaxted
+  region: East
+  country: GB
+  id: https://www.wikidata.org/entity/Q2283481
   language: en
 "Thornbury Castle, England":
   name: Thornbury Castle
@@ -509,6 +573,18 @@
   country: GB
   id: https://www.wikidata.org/entity/Q34433
   language: en
+"Wesel, North Rhine-Westphalia, DE":
+  locality: Wesel
+  region: North Rhine-Westphalia
+  country: DE
+  id: https://www.wikidata.org/entity/Q4011
+  language: de
+"Wessel, Gelderland, NL":
+  locality: Wessel
+  region: Gelderland
+  country: NL
+  id: https://www.wikidata.org/entity/Q2395920
+  language: nl
 "Wimbledon, England":
   locality: Wimbledon
   region: Greater London
@@ -525,6 +601,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q42646
   language: en
+"Worcester, West Midlands, GB":
+  locality: Worcester
+  region: "West Midlands"
+  country: GB
+  id: https://www.wikidata.org/entity/Q1646181
+  language: en
 "Wymondham, England":
   locality: Wymondham
   region: South Norfolk
@@ -540,9 +622,9 @@
   country: GB
   id: https://www.wikidata.org/entity/Q8039988
   language: en
-"York, England":
+"York, Yorkshire and the Humber, GB":
   locality: York
-  region: Yorkshire
+  region: Yorkshire and the Humber
   country: GB
   id: https://www.wikidata.org/entity/Q42462
   language: en

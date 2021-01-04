@@ -1,12 +1,72 @@
 ---
-1577-12-30:
-  language: en
-  text: >-
+"1555-08-01":
+  text: >-4
       <p>
-        <q lang=la-renais>Inexpliſſima <ins>?</ins> illa calumnia dē
-          {{ "Edward, Roger" | person_tag: "Roger Edward" }},
-          inīquiſſime aliqua ex parte in mē dēnūntiābātur: ante aliquōs ēlāpſōs
-          diēs, sed <ins>…</ins> sua sapientia mē innocentem.</q>
+        <q lang=la-renais><ins>N</ins>ātus hōra quārta ā merīdiē ut annotātum
+          relīquit pater ejus.</q>
+        Perhaps
+          <q>Born four hours after noon, as observed by his forsaken
+            father</q>?
+      </p>
+"1555-10-12":
+  text: >-4
+      <p>
+        Although there <em>is</em> a
+        {{ "Wessel, Gelderland, NL" | place_tag: "Wesell in Gelderland" }}
+        (in the Netherlands), this actually refers to
+        {{ "Wesel, North Rhine-Westphalia, DE" | place_tag: "Wesel in Germany" }}.
+      </p>
+"1563-09-28":
+  text: >-4
+      <p>
+        <q lang=la-renais><ins>S</ins>oror magiſtri Thomas Mownson et uxor
+          magiſtri Brown</q>:
+        <q>Sister of <abbr>Mr</abbr> Thomas Mownson and wife of <abbr>Mr</abbr>
+          Brown</q>.
+      </p>
+"1564-08-21":
+  text: >-4
+      <p>
+        <q>Kingstone</q> here is ambigous: there are
+        <a href=https://en.wikipedia.org/w/index.php?title=Kingstone&oldid=907342295>multiple
+          towns in England named <q>Kingstone</q></a>,
+        as well as the town
+        <a href=https://en.wikipedia.org/w/index.php?title=Kingston_upon_Thames&oldid=997487039>Kingston
+          upon Thames</a>.
+      </p>
+"1565-09-12":
+  text: >-4
+      <p>
+        <q lang=la-renais><ins>P</ins>rope Stony-Stratford; putō potius hora 8
+          minute 43</q>:
+        <q>Near Stony-Stratford; at 08:43, I estimate.</q>
+      </p>
+"1575-07-31":
+  text: >-4
+      <p>
+        <q lang=la-renais><ins>N</ins>atus ante diluculum per horam ½</q>:
+        <q>Born some time between morning twilight and 11:30.</q>
+      </p>
+"1577-03-11":
+  text: >-4
+      <p>
+        <q lang-"en-emodeng">Oyle of Hypericon</q>
+        refers to a oil infusion of
+        <span itemscope itemtype=http://schema.org/DietarySupplement>
+          <meta itemprop=sameAs content=https://www.wikidata.org/entity/Q156935>
+          <span itemprop=activeIngredient>Hypericum</span>,
+          which is commonly known as
+          <span itemprop=nonProprietaryName>
+            <a itemprop=url href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
+              <abbr>St.</abbr> John’s wort</a></span></span>.
+      </p>
+"1577-12-30":
+  text: >-4
+      <p>
+        <q lang=la-renais>Inexpliſſima illa calumnia dē
+          {{ "Edward, Roger" | person_tag: "Roger Edward" }} ,
+          inīquiſſime aliqua ex parte in mē dēnūntiābātur : ante aliquōs ēlāpſōs
+          diēs, sed <ins>…</ins> sua sapientia mē innocentem .</q>
         An extremely questionable translation to English:
         <q>Most inexplicable false charges from
           {{ "Edward, Roger" | person_tag: "Roger Edward" }},
