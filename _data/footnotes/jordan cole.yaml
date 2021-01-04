@@ -75,9 +75,8 @@
           <ins>…</ins>
           he discerned my innocence.</q>
       </p>
-1578-08-15:
-  language: en
-  text: >-
+"1578-08-15":
+  text: >-4
       <p>
         The preceding footnote is inaccurate, according to
         <a href=https://www.jstor.org/stable/3817882>research published in
@@ -94,9 +93,8 @@
           […] For many years it was assumed that these had not survived or were
           alternate names for works already known.</q>
       </p>
-1579-06-15:
-  language: en
-  text: >-
+"1579-06-15":
+  text: >-4
       <p>
         There are
         <a href=https://en.wikipedia.org/w/index.php?title=Wimbledon_(ecclesiastical_parish)&oldid=886322495>
@@ -109,31 +107,29 @@
         <q>the church</q>
         refers to, as it’s been there for many centuries.
       </p>
-1579-07-13:
-  language: en
-  text: >-
+"1579-07-13":
+  text: >-4
       <p>
-        Using
-        <a href=https://en.wiktionary.org/wiki/>Wiktionary</a>,
-        the Latin might be more accurately transcribed as
-        <q lang=la-renais><ins>N</ins>ātus puer māne hōra quārta trīgintā minūta ferē,
-          vel potius minūta vīgintī quīnque, in ipſō ortū ſōlis, ut exīſtimō.</q>
-        I can’t read Latin and don’t understand its grammar, but my go at a rough
-        modern English rendering is
-        <q>I’d say the child was born at 04:30, or perhaps 04:25; just at
-          sunrise, I think.</q>
+        <q lang=la-renais><ins>N</ins>ātus puer māne hōra quārta trīgintā
+          minūta ferē , vel potius minūta vīgintī quīnque , in ipſō ortū ſōlis ,
+          ut exīſtimō .</q>
+        Something like:
+        <q>{{ "Dee, John" | person_tag: "I’d" }}
+          say
+          {{ "Dee, Arthur" | person_tag: "the child" }}
+          was born at 04:30, or perhaps 04:25; just at sunrise,
+          {{ "Dee, John" | person_tag: "I" }}
+          think.</q>
       </p>
-1579-09-10:
-  language: en
-  text: >-
+"1579-09-10":
+  text: >-4
       <p>
         <q lang=la-renais><ins>S</ins>ine mē nihil poteſtis facere</q>
         translates to English as
         <q>without me, you can do nothing</q>.
       </p>
-1579-12-28:
-  language: en
-  text: >-
+"1579-12-28":
+  text: >-4
       <p>
         As in
         {{ "1579-12-09-dee" | post_tag }},
@@ -154,8 +150,7 @@
         or some other acetyl compound.
       </p>
 a-meridie:
-  language: en
-  text: >-
+  text: >-4
       <p>
         A literal translation of
         <q lang=la>ā merīdiē</q>
@@ -166,8 +161,7 @@ a-meridie:
           specifically refers to a time <em>after</em> midday</a>.
       </p>
 john-elmeston-essay:
-  language: en
-  text: >-
+  text: >-4
       <p>
         This may be the
         {{ "Elmeston, John" | person_tag: "John Elmeston" }}
@@ -176,26 +170,12 @@ john-elmeston-essay:
         in
         <time datetime=1652>1652</time>.
       </p>
-oyle-of-hypericon:
-  language: en
-  text: >-
-      <p>
-        <q lang-"en-emodeng">Oyle of Hypericon</q>
-        refers to a oil infusion of
-        <span itemscope itemtype=http://schema.org/DietarySupplement>
-          <meta itemprop=sameAs content=https://www.wikidata.org/entity/Q156935>
-          <span itemprop=activeIngredient>Hypericum</span>,
-          which is commonly known as
-          <span itemprop=nonProprietaryName>
-            <a itemprop=url href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
-              <abbr>St.</abbr> John’s wort</a></span></span>.
-      </p>
 thomas-besbich:
-  language: en
-  text: >-
+  text: >-4
       <p>
         {{ "New England Historical and Genealogical Register" | source_tag: "New England Historical and Genealogical Register", "pages 33–34" }}
-        lists wills, genealogy, and parish registry entries for a Besbeech family in
+        lists wills, genealogy, and parish registry entries for a Besbeech
+        family in
         {{ "Kent, England" | place_tag }},
         compiled by
         {{ "Bartlett, Elizabeth French" | person_tag: "Elizabeth French" }}.
