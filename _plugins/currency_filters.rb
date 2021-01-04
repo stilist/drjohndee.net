@@ -57,6 +57,8 @@ module CurrencyFilter
   GBP_SOVEREIGN = GBP_SHILLING * 20
   GBP_PENNY = GBP_SHILLING / 12
   GBP_DENOMINATIONS = {
+    # @see https://en.wikipedia.org/w/index.php?title=Angel_(coin)&oldid=970297722#Value
+    'angel 1550' => GBP_SHILLING * 10,
     'guinea' => GBP_SHILLING * 21,
     'pound' => GBP_SOVEREIGN,
     'sovereign' => GBP_SOVEREIGN,
