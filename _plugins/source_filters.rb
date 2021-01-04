@@ -86,11 +86,15 @@ module Jekyll
       edition ||= record['editions']&.first
       edition ||= {}
 
+      author = data_collection_record('people', work['author'])
+      author ||= {}
+
       {
         'author_key' => work['author'],
         'author_name' => person_name(work['author']),
         'editor_key' => work['editor'],
         'editor_name' => person_name(work['editor']),
+        'language' => edition['language'] || author['primary_language'],
         'publication_city' => edition['publication_city'],
         'publication_date' => edition['date'],
         'publication_type' => work['type'],

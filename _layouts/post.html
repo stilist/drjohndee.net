@@ -18,7 +18,7 @@ layout: default
 
   <div class="post-content e-content"
        itemprop=articleBody
-       lang={{ page.language | default: author.language | default: site.language | default: "en" }}>
+       lang={{ page.language | default: source_data.language | default: site.language | default: "en" }}>
     {{ content }}
   </div>
 

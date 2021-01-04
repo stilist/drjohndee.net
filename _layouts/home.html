@@ -5,15 +5,16 @@ layout: default
   {%- if site.posts.size > 0 -%}
   <ul class="post-list">
     {%- for post in site.posts -%}
-    {%- assign author = post.author | collection_entry: "people" -%}
     <li class="post-summary">
       {%- include entry_title.html entry=post hyperlink=true title_tag="h3" -%}
       {%- if site.show_excerpts -%}
-      <div class="post-excerpt"
-           lang={{ post.language | default: author.language | default: site.language | default: "en" }}
-           translate>
-        {{ post.excerpt }}
-      </div>
+        {%- assign source = post.source | source_citation_data -%}
+        {%- assign language = post.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
+        <div class="post-excerpt"
+             lang={{ language }}
+             translate>
+          {{ post.excerpt }}
+        </div>
       {%- endif -%}
     </li>
     {%- endfor -%}
