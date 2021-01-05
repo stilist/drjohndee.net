@@ -1661,6 +1661,12 @@
   gender: male
   nationality:
     - Wales
+"Madoc":
+  name:
+    - text: Madoc
+      type: givenName
+  id: https://www.wikidata.org/entity/Q1883439
+  gender: male
 "Queen Elizabeth":
   name:
     - text: Queen Regnant
