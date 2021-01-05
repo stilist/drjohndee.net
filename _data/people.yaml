@@ -937,6 +937,22 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q426463
   gender: male
+"Lilly, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Lilly
+      type: familyName
+  birthDate: "1602-05-01"
+  birthPlace: "Diseworth, East Midlands, GB"
+  deathDate: "1681-06-09"
+  deathPlace: "Hersham, South East, GB"
+  id: http://www.wikidata.org/entity/Q1382501
+  gender: male
+  primary_language: en-emodeng
+  knows:
+    - Ashmole, Elias
 "Lyne, Ellen":
   name:
     - text: Ellen

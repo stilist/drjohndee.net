@@ -38,13 +38,13 @@
           <abbr>fol.</abbr>
           58</cite>,
         says
-        <q lang=en-emodeng>{{ "Lilly" | person_tag: "<abbr>Mr.</abbr> Lilly" }}
+        <q lang=en-emodeng>{{ "Lilly, William" | person_tag: "<abbr>Mr.</abbr> Lilly" }}
           told
           {{ "Ashmole, Elias" | person_tag: "me" }}
           that
           {{ "Evans, John" | person_tag: "John Evans" }}
           informed
-          {{ "Lilly" | person_tag: "him" }}
+          {{ "Lilly, William" | person_tag: "him" }}
           that
           {{ "Evans, John" | person_tag: "he" }}
           was acquainted with
@@ -632,7 +632,7 @@
         who received
         {{ "Aubrey" | person_tag: "his" }}
         information from
-        {{ "Lilly" | person_tag: "Lilly" }},
+        {{ "Lilly, William" | person_tag: "Lilly" }},
         {{ "Dee, John" | person_tag: "he" }}
         was very favourably received by
         {{ "Queen Elizabeth" | person_tag: "her Majesty" }}.
