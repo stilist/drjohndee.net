@@ -264,18 +264,18 @@
   locality: Kingston
   country: GB
   language: en
+"Lambeth, England":
+  locality: Lambeth
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/entity/Q148349
+  language: en
 "Leadenham parish, England":
   name: Leadenham parish
   locality: Leadenham
   region: Lincolnshire
   country: GB
   id: https://www.wikidata.org/entity/Q6508465
-  language: en
-"Lambeth, England":
-  locality: Lambeth
-  region: Greater London
-  country: GB
-  id: https://www.wikidata.org/entity/Q148349
   language: en
 "Leigh-on-Sea, England":
   locality: Leigh-on-Sea

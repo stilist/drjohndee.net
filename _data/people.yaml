@@ -29,9 +29,9 @@
       id: https://www.wikidata.org/entity/Q11878157
     - text: Ashmole
       type: familyName
-  birthDate: 1617-06-02
+  birthDate: "1617-06-02"
   birthPlace: Lichfield, England
-  deathDate: 1692-05-28
+  deathDate: "1692-05-28"
   deathPlace: Lambeth, England
   id: https://www.wikidata.org/entity/Q471406
   gender: male
@@ -78,9 +78,8 @@
     - text: Bartlett
       type: familyName
       id: https://www.wikidata.org/entity/Q15785662
-  date: 1877-01-27/1961-10-24
-  birthDate: 1877-01-27
-  deathDate: 1961-10-24
+  birthDate: "1877-01-27"
+  deathDate: "1961-10-24"
   id: https://www.wikidata.org/entity/Q60621080
   gender: female
 "Besbich, Thomas":
@@ -157,7 +156,7 @@
     - text: Cavendish
       type: familyName
       id: https://www.wikidata.org/entity/Q16865452
-  birthDate: 1560-09-19
+  birthDate: "1560-09-19"
   birthPlace: Grimston Hall, England
   deathDate: 1592-05
   deathPlace: Atlantic Ocean
@@ -259,7 +258,7 @@
       id: https://www.wikidata.org/entity/Q12652678
   birthDate: 1550-10
   birthPlace: Sandridge, England
-  deathDate: 1605-12-29
+  deathDate: "1605-12-29"
   deathPlace: Bintan Island, East Indies
   id: https://www.wikidata.org/entity/Q311652
   gender: male
@@ -298,7 +297,7 @@
     - text: Dee
       type: familyName
       id: https://www.wikidata.org/entity/Q37480086
-  birthDate: 1579-07-13
+  birthDate: "1579-07-13"
   parents:
     - Dee, John
     - Fromond, Jane
@@ -328,14 +327,16 @@
     - text: Dee
       type: familyName
       id: https://www.wikidata.org/entity/Q37480086
-  birthDate: 1527-07-13
+  birthDate: "1527-07-13"
   deathDate: 1608-12
   id: https://www.wikidata.org/entity/Q201484
   gender: male
   livedIn:
     - Dee's house, Mortlake, England
   country: England
-  language: en-emodeng
+  primary_language: en-emodeng
+  spouses:
+    - Constable, Katherine
 "Duckett, Lionel":
   name:
     - text: Lionel
@@ -412,6 +413,7 @@
       type: familyName
   # @see `1563-03-23-dee`
   birthDate: 1563-03-23T23
+  gender: male
   knows:
     - Dee, John
 "Flowr":
@@ -462,8 +464,8 @@
       id: https://www.wikidata.org/entity/Q27205691
   birthDate: 1554-04-22T12
   birthPlace: Cheam, London, GB
-  id: https://www.wikidata.org/entity/Q19001456
   deathDate: 1604
+  id: https://www.wikidata.org/entity/Q19001456
   gender: female
   spouses:
     - Dee, John
@@ -511,9 +513,9 @@
     - text: Gilbert
       type: familyName
       id: https://www.wikidata.org/entity/Q1158185
-  birthDate: 1539-09-09
+  birthDate: "1539-09-09"
   birthPlace: Greenway, Galmpton, England
-  deathDate: 1583-09-09
+  deathDate: "1583-09-09"
   knows:
     - Dee, John
   id: https://www.wikidata.org/entity/Q447200
@@ -546,8 +548,8 @@
     - text: 3<sup>rd</sup> Marquess of Dorset
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
-  birthDate: 1517-01-17
-  deathDate: 1554-02-23
+  birthDate: "1517-01-17"
+  deathDate: "1554-02-23"
   deathPlace: Tower Hill, London, England
   id: https://www.wikidata.org/entity/Q4490179
   gender: male
@@ -574,7 +576,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q56246039
   birthDate: 1553
-  deathDate: 1616-11-23
+  deathDate: "1616-11-23"
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q185510
   gender: male
@@ -585,9 +587,9 @@
       id: https://www.wikidata.org/entity/Q677191
     - text: Halliwell-Phillips
       type: familyName
-  birthDate: 1820-06-21
+  birthDate: "1820-06-21"
   birthPlace: London, England
-  deathDate: 1889-01-03
+  deathDate: "1889-01-03"
   gender: male
 "Hatton, Christopher":
   name:
@@ -604,7 +606,7 @@
       type: jobTitle
       id: https://www.wikidata.org/entity/Q426461
   birthDate: 1540
-  deathDate: 1591-11-20
+  deathDate: "1591-11-20"
   id: https://www.wikidata.org/entity/Q1216173
   gender: male
 "Hayward, Rowland":
@@ -619,7 +621,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q16870619
   birthDate: 1520
-  deathDate: 1593-12-05
+  deathDate: "1593-12-05"
   id: https://www.wikidata.org/entity/Q16842189
   gender: male
   knows:
@@ -641,7 +643,7 @@
     - text: Member of Parliament
       type: jobTitle
       id: https://www.wikidata.org/entity/Q18018860
-  deathDate: 1617-07-09
+  deathDate: "1617-07-09"
   id: https://www.wikidata.org/entity/Q3809335
   gender: male
   knows:
@@ -653,6 +655,9 @@
     - Parry, Blanche
 "Herbert, William":
   name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
     - text: William
       type: givenName
       id: https://www.wikidata.org/entity/Q12344159
@@ -660,7 +665,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q16870718
   birthDate: 1553
-  deathDate: 1593-03-04
+  deathDate: "1593-03-04"
   id: https://www.wikidata.org/entity/Q8012240
   gender: male
   knows:
@@ -824,7 +829,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q59482529
   birthDate: 1532
-  deathDate: 1596-03-21
+  deathDate: "1596-03-21"
   id: https://www.wikidata.org/entity/Q16240009
   gender: male
   children:
@@ -866,6 +871,7 @@
   birthDate: 1555-08-11T16
   birthPlace: Worcester, England
   deathDate: 1597
+  gender: male
   knows:
     - Dee, John
   siblings:
@@ -879,8 +885,12 @@
     - text: Kelley
       type: familyName
       id: https://www.wikidata.org/entity/Q27678531
+  # @see `1565-10-17-dee`
   birthDate: 1565-10-17T16
-  birthPlace: Worcester, England
+  birthPlace: Worcester, West Midlands, GB
+  gender: male
+  knows:
+    - Dee, John
   knows:
     - Dee, John
 "Lewis, David":
@@ -899,7 +909,7 @@
       id: https://www.wikidata.org/entity/Q60768555
   birthDate: 1520
   birthPlace: Abergavenny, Wales
-  deathDate: 1584-04-27
+  deathDate: "1584-04-27"
   id: https://www.wikidata.org/entity/Q5236563
   gender: male
   knows:
@@ -935,7 +945,7 @@
     - text: Lyne
       type: familyName
       id: https://www.wikidata.org/entity/Q1668082
-  deathDate: 1578-09-06
+  deathDate: "1578-09-06"
   gender: female
   knows:
     - Dee, John
@@ -950,9 +960,9 @@
     - text: Lysons
       type: familyName
       id: https://www.wikidata.org/entity/Q6710268
-  birthDate: 1762-04-28
+  birthDate: "1762-04-28"
   birthPlace: Rodmarton, England
-  deathDate: 1834-01-03
+  deathDate: "1834-01-03"
   id: https://www.wikidata.org/entity/Q5217989
   gender: male
 "Meulen, Daniel van der":
@@ -977,7 +987,7 @@
 "Molyneux, Emery":
   name:
     - text: Emery
-      type:  givenName
+      type: givenName
       id: https://www.wikidata.org/entity/Q29550323
     - text: Molyneux
       type: familyName
@@ -1078,7 +1088,7 @@
     - Sidney, Philip
     - Walsingham, Francis
     - Queen Elizabeth
-  spouse:
+  spouses:
     - Newsam, Parnell
   children:
     - Newsam, William
@@ -1143,7 +1153,7 @@
     - text: Newsam
       type: familyName
       id: https://www.wikidata.org/entity/Q37531037
-  birthDate: 1570-12-27
+  birthDate: "1570-12-27"
   gender: male
 "Newsam, Rose":
   name:
@@ -1185,7 +1195,7 @@
       text: familyName
   birthDate: 1507
   birthPlace: Bacton, England
-  deathDate: 1590-02-12
+  deathDate: "1590-02-12"
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q3403111
   gender: female
@@ -1221,7 +1231,7 @@
       type: familyName
       id: https://www.wikidata.org/entity/Q16881784
   birthDate: 1856
-  deathDate: 1937-04-26
+  deathDate: "1937-04-26"
   id: https://www.wikidata.org/entity/Q18910924
   gender: male
 "Raynolds":
@@ -1263,7 +1273,7 @@
     - text: Rogers
       type: familyName
       id: https://www.wikidata.org/entity/Q16471355
-  deathDate: 1577-11-03
+  deathDate: "1577-11-03"
   gender: male
   livedIn:
     - Mortlake, England
@@ -1311,8 +1321,8 @@
     - text: Sidney
       type: familyName
       id: https://www.wikidata.org/entity/Q13583278
-  birthDate: 1554-11-30
-  deathDate: 1587-10-17
+  birthDate: "1554-11-30"
+  deathDate: "1587-10-17"
   id: https://www.wikidata.org/entity/Q315509
   gender: male
   knows:
@@ -1386,7 +1396,7 @@
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: 1578-07-27T21:15
-  deathDate: 1639-10-08
+  deathDate: "1639-10-08"
   id: https://www.wikidata.org/entity/Q5478727
   gender: female
   knows:
@@ -1417,6 +1427,12 @@
     - Fromond, Jane
 "Tenison, Thomas":
   name:
+    - text: The Most Reverend
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q13407949
+    - text: The Right Honourable
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q1480896
     - text: Thomas
       type: givenName
       id: https://www.wikidata.org/entity/Q16428906
@@ -1426,9 +1442,9 @@
     - text: Archbishop of Canterbury
       type: jobTitle
       id: https://www.wikidata.org/entity/Q29282
-  birthDate: 1636-09-29
+  birthDate: "1636-09-29"
   birthPlace: Cottenham, Cambridgeshire, England
-  deathDate: 1715-12-14
+  deathDate: "1715-12-14"
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q680725
   gender: male
@@ -1452,7 +1468,7 @@
       id: https://www.wikidata.org/entity/Q21428403
   birthDate: 1532
   birthPlace: Chislehurst, England
-  deathDate: 1590-04-06
+  deathDate: "1590-04-06"
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q138409
   gender: male
@@ -1478,7 +1494,7 @@
       id: https://www.wikidata.org/entity/Q956588
   birthDate: 1431-11
   birthPlace: Hatfield, Hertfordshire, England
-  deathDate: 1495-12-21
+  deathDate: "1495-12-21"
   deathPlace: Thornbury Castle, England
   id: https://www.wikidata.org/entity/Q385679
   gender: male
@@ -1493,7 +1509,7 @@
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: 1527
-  deathDate: 1585-07-28
+  deathDate: "1585-07-28"
   id: https://www.wikidata.org/entity/Q2084556
   gender: male
   knows:
@@ -1509,8 +1525,8 @@
     - text: Earl of Leicester
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
-  birthDate: 1532-06-24
-  deathDate: 1588-09-04
+  birthDate: "1532-06-24"
+  deathDate: "1588-09-04"
   gender: male
   id: https://www.wikidata.org/entity/Q318017
   knows:
@@ -1529,7 +1545,7 @@
       id: https://www.wikidata.org/entity/Q1277346
   birthDate: 1512
   birthPlace: Manor of Scrivelsby, England
-  deathDate: 1585-01-16
+  deathDate: "1585-01-16"
   deathPlace: London, England
   id: https://www.wikidata.org/entity/Q1291914
   gender: male
@@ -1552,6 +1568,7 @@
   deathDate: "1601-06-25"
   primary_language: en-emodeng
   id: https://www.wikidata.org/entity/Q3459641
+  gender: male
   knows:
     - Dee, John
 "Monsieur Francis":
@@ -1607,13 +1624,13 @@
       language: fr
     - text: de France
       language: fr
-  birthDate: 1555-03-18
+  birthDate: "1555-03-18"
   birthPlace: Saint-Germain-en-Laye, France
-  deathDate: 1584-06-10
+  deathDate: "1584-06-10"
   deathPlace: Château-Thierry, France
   id: https://www.wikidata.org/entity/Q318380
   gender: male
-  language: fr
+  primary_language: fr-1606nict
   knows:
     - Queen Elizabeth
 "King Arthur":
@@ -1642,9 +1659,9 @@
     - text: Queen of England and Ireland
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
-  birthDate: 1533-09-07
+  birthDate: "1533-09-07"
   birthPlace: Palace of Placentia, England
-  deathDate: 1603-04-03
+  deathDate: "1603-04-03"
   deathPlace: Richmond Palace, England
   gender: female
   id: https://www.wikidata.org/entity/Q7207
@@ -1662,9 +1679,9 @@
     - text: Monarch of Scotland
       type: additionalName
       alternateType: https://w3id.org/pnv#honorificSuffix
-  birthDate: 1542-12-08
+  birthDate: "1542-12-08"
   birthPlace: Linlithgow Palace, Scotland
-  deathDate: 1587-02-08
+  deathDate: "1587-02-08"
   deathPlace: Fotheringay Castle, England
   gender: female
   id: https://www.wikidata.org/entity/Q131412
