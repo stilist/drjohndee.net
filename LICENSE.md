@@ -1,6 +1,6 @@
 This project is provided under two licenses:
 
-* Data and text (stored in the `_data/` and `_posts/` directories) are under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) ([overview](https://choosealicense.com/licenses/cc0-1.0/)) unless otherwise indicated. (For example, in `_data/sources.yaml` entries may have a `license` attribute stating a license other than CC0-1.0.)
+* Data and text (stored in the `_data/` and `_posts/` directories) are under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) ([overview](https://choosealicense.com/licenses/cc0-1.0/)) unless otherwise indicated. (For example, in `_data/sources/` files may have a `license` attribute stating a license other than CC0-1.0.)
 * Code (files not stored in the data and text directories) is under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) ([overview](https://choosealicense.com/licenses/gpl-3.0/)).
 
 The text of these licenses is provided below.
