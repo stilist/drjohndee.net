@@ -3,7 +3,7 @@
   text: >-4
       <p>
         <q lang=la-renais><ins>N</ins>ātus hōra quārta ā merīdiē ut annotātum
-          relīquit pater ejus.</q>
+          relīquit pater ejus</q>:
         Perhaps
           <q>Born four hours after noon, as observed by his forsaken
             father</q>?
@@ -37,15 +37,15 @@
 "1565-09-12":
   text: >-4
       <p>
-        <q lang=la-renais><ins>P</ins>rope Stony-Stratford; putō potius hora 8
+        <q lang=la-renais><ins>P</ins>rope Stony-Stratford; putō potius hōra 8
           minute 43</q>:
         <q>Near Stony-Stratford; at 08:43, I estimate.</q>
       </p>
 "1575-07-31":
   text: >-4
       <p>
-        <q lang=la-renais><ins>N</ins>atus ante diluculum per horam ½</q>:
-        <q>Born some time between morning twilight and 11:30.</q>
+        <q lang=la-renais><ins>N</ins>ātus ante dīlūculum per hōram ½</q>:
+        <q>Born an hour and a half before sunrise.</q>
       </p>
 "1577-03-11":
   text: >-4
@@ -149,6 +149,45 @@
         <a href=https://en.wikipedia.org/wiki/Sodium_acetate>sodium acetate</a>
         or some other acetyl compound.
       </p>
+"1598-01-24":
+  text: >-4
+      <p>
+        <q lang=la-renais>Amāritūdō mea circā mediam noctem</q>:
+        <q>I felt troubled around midnight</q>.
+      </p>
+"1598-02-26":
+  text: >-4
+      <p>
+        <q lang=la-renais>Circā mediam noctem amāritūdō mea</q>:
+        <q>I was sorrowful around the middle of the night</q>.
+      </p>
+"1600-08-10":
+  text: >-4
+      <p>
+        <q lang=la-renais>Eucharistam ſuscēpimus, egō, uxor, fīlia Katharina,
+          et Marīa Nicolls</q>:
+        <q>I received the eucharist with my wife, my daughter Katherine, and
+          Mary Nichols</q>.
+      </p>
+"1600-09-11":
+  text: >-4
+      <p>
+        <q lang=la-renais><ins>E</ins>ōdem tempore</q>:
+        <q>at that time</q>.
+      </p>
+"1601-02-02":
+  text: >-4
+      <p>
+        <q lang=la-renais>Ō Deus, līberā nōs ā malō!</q>:
+        <q>O God, deliver us from evil!</q>.
+      </p>
+"1601-02-25":
+  text: >-4
+      <p>
+        <q lang=la-renais>Roger Cooke pā̆ctum ſacrum hōra octāva māne</q>:
+        <q>Made a sacred pact with Roger Cook at 8 in the morning</q>.
+      </p>
+
 a-meridie:
   text: >-4
       <p>
