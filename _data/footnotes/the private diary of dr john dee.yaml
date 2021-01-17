@@ -548,7 +548,7 @@
           whether
           {{ "Queen Elizabeth" | person_tag: "her Majestie" }}
           was now come by water
-          {{ "Palace of Placentia, England" | place_tag: "from Greenwich" }}.</q> — <cite>{{ "Dee, John" | "<abbr>Dr.</abbr> Dee" }}’s
+          {{ "Palace of Placentia, England" | place_tag: "from Greenwich" }}.</q> — <cite>{{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
             {{ "Compendious Memoriall" | source_tag: "Compendious Memoriall" }},
             <abbr>p.</abbr>
             511</cite>.
