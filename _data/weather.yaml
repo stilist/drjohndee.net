@@ -153,7 +153,7 @@
       returned to
       {{ "England" | place_tag: "England" }}.
       Many thousands of people died.
-      {{ "London, England" | place_tag: "In London" }},
+      {{ "London, London, GB" | place_tag: "In London" }},
       <time datetime="P7D">in one week</time>,
       2 mayors and 6 aldermen died.
     </p></blockquote>
@@ -224,7 +224,7 @@
     <blockquote><p>
       <time datetime="1500">In 1500</time>,
       there was a dreadful plague
-      {{ "London, England" | place_tag: "in London, England" }},
+      {{ "London, London, GB" | place_tag: "in London, England" }},
       which obligated
       {{ "King Henry VII" | person_tag: "King Henry Ⅶ" }}
       and his Court to remove to
@@ -268,7 +268,7 @@
       The frozen
       {{ "River Thames, England" | place_tag: "River Thames" }}
       at
-      {{ "London, England" | place_tag: "London" }}
+      {{ "London, London, GB" | place_tag: "London" }}
       bore the weight of carriages
       <time datetime="1507-01/02">throughout January</time>.
     </p></blockquote>
@@ -305,7 +305,7 @@
   date: 1513
 - text: >-
     <blockquote><p>
-      {{ "London, England" | place_tag: "London, England" }}
+      {{ "London, London, GB" | place_tag: "London, London, GB" }}
       experienced cold weather
       <time datetime="1514-01">in January 1<ins>5</ins>14</time>,
       and
@@ -322,7 +322,7 @@
       {{ "England" | place_tag: "in England" }}
       was so intense that
       <time datetime="1515-01/02">throughout January</time>
-      {{ "London, England" | place_tag: "in London" }},
+      {{ "London, London, GB" | place_tag: "in London" }},
       carriages crossed over
       {{ "River Thames, England" | place_tag: "the River Thames" }}
       on the ice from
@@ -408,7 +408,7 @@
       the fatal
       <q>sweating sickness</q>
       was very violent
-      {{ "London, England" | place_tag: "in London, England" }}.
+      {{ "London, London, GB" | place_tag: "in London, England" }}.
       The disease was mortal
       <time datetime="P3H">in three hours</time>.
       {{ "Oxford, England" | place_tag: "Oxford" }}
@@ -458,7 +458,7 @@
       <time datetime="1521">in 1521</time>,
       there was famine and mortality.
       <q>Wheat sold
-        {{ "London, England" | place_tag: "in London" }}
+        {{ "London, London, GB" | place_tag: "in London" }}
         for
         {{ "GBP 20 shillings" | currency_tag: "20s.", 1521 }}
         a Quarter
@@ -498,7 +498,7 @@
     <blockquote><p>
       {{ "England" | place_tag: "In England" }},
       there was so great a death
-      {{ "London, England" | place_tag: "in London" }},
+      {{ "London, London, GB" | place_tag: "in London" }},
       that the terms were adjourned.
     </p></blockquote>
   source: A Chronological Listing of Early Weather Events
@@ -556,7 +556,7 @@
       during the 19th year of
       {{ "King Henry VIII" | person_tag: "King Henry Ⅷ" }}
       reign — <q>Such scarcitie of bread was
-        {{ "London, England" | place_tag: "at London" }}
+        {{ "London, London, GB" | place_tag: "at London" }}
         and
         {{ "England" | place_tag: "throughout England" }}
         that many dyed for want thereof.
@@ -567,7 +567,7 @@
         <ins>where nearly all the bakings were probably on account proximity to
         {{ "Epping Forest, England" | place_tag: "Epping Forest" }}</ins>
         towards
-        {{ "London, England" | place_tag: "London" }},
+        {{ "London, London, GB" | place_tag: "London" }},
         were met at
         {{ "Mile End, England" | place_tag: "the Mile End" }}
         by a great number of citizens so that the maior and sheriffs were forced
@@ -579,7 +579,7 @@
         brought from
         {{ "Gdańsk, Poland" | place_tag: "Danske <ins>Danzig</ins>" }}
         such store of wheat and rye, that it was better cheape
-        {{ "London, England" | place_tag: "at London" }}
+        {{ "London, London, GB" | place_tag: "at London" }}
         than in any other part of the Realme.</q>
       <ins>The merchants of the steelyard were a famous guild of foreign
         merchants
@@ -704,7 +704,7 @@
       and
       {{ "Essex, England" | place_tag: "Essex" }}
       to
-      {{ "London, England" | place_tag: "London" }}.
+      {{ "London, London, GB" | place_tag: "London" }}.
     </p></blockquote>
   source: A Chronological Listing of Early Weather Events
   source_location: page 380

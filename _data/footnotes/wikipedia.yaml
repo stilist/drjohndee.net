@@ -15,7 +15,7 @@ edward-hynde:
         daughter of
         {{ "Billett, John" | person_tag: "John Billett" }}
         of
-        {{ "London, England" | place_tag: "London" }},
+        {{ "London, London, GB" | place_tag: "London" }},
         having several children. He became the husband of
         {{ "Norton, Mary" | person_tag: "Mary Norton" }}
         (daughter of

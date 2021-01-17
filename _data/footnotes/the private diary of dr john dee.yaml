@@ -494,7 +494,7 @@
           of
           {{ "Łask, Poland" | place_tag: "Vascos in Polonia" }},
           came
-          {{ "London, England" | place_tag: "to London" }}
+          {{ "London, London, GB" | place_tag: "to London" }}
           and was lodged
           {{ "Winchester Palace, England" | place_tag: "Winchester Howse" }}.</q> — <cite><abbr>MS.</abbr>
           Douce,

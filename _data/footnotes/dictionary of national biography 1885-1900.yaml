@@ -13,7 +13,7 @@ bartholomew-newsam:
           probably born
           {{ "York, England" | place_tag: "at York" }},
           carried on business in
-          {{ "London, England" | place_tag: "London" }}
+          {{ "London, London, GB" | place_tag: "London" }}
           as a clockmaker, apparently from the date of
           {{ "Queen Elizabeth" | person_tag: "Queen Elizabeth" }}’s
           accession. He obtained from the crown a
