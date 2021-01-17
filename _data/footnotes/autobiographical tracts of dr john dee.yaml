@@ -7,12 +7,15 @@
         {{ "Dee, John" | person_tag: "My" }}
         dutifull service was done, in the diligent conference, which, by
         {{ "Queen Elizabeth" | person_tag: "her Majesties" }}
-        commandment, I had with
-        {{ "Bayley, Francis" | person_tag: "<abbr>Mr.</abbr> <abbr>Dr.</abbr> Bayly" }},
-        her Majesties Physitian, about her Majesties grievous pangs and paines by
-        reason of toothake and the rheume,
+        commandment,
+        {{ "Dee, John" | person_tag: "I" }}
+        had with
+        {{ "Bayley, Francis" | person_tag: "<abbr>Mr.</abbr> <abbr>Dr.</abbr> Bayly, her Majesties Physitian" }},
+        about
+        {{ "Queen Elizabeth" | person_tag: "her Majesties" }}
+        grievous pangs and paines by reason of toothake and the rheume,
         <abbr lang=la>&c.</abbr>
-        <time datetime=1578-10><abbr title="anno" lang=la>A.</abbr>1578, October</time>.
+        <time datetime=1578-10><abbr lang=la>A.</abbr>1578, October</time>.
       </p></blockquote>
 1578-europe:
   language: en-emodeng
@@ -27,12 +30,17 @@
         health-recovering and preserving ; having by
         {{ "Earl of Leicester" | person_tag: "the right honourable Earle of Leicester" }},
         and
-        {{ "Walsingham, Francis" | person_tag: "Mr. Secretary Walsingham" }}
+        {{ "Walsingham, Francis" | person_tag: "<abbr>Mr.</abbr> Secretary Walsingham" }}
         but
         <time datetime=P100D>one hundred dayes</time>
-        allowed unto me to goe and come againe in,
+        allowed unto
+        {{ "Dee, John" | person_tag: "me" }}
+        to goe and come againe in,
         <time datetime=1578><abbr title="anno" lang=la>A.</abbr> 1578</time>.
-        My pas-port here may somewhat give evidence, and the journall litle book
-        of every dayes journey or abode for those hundred dayes account may
-        suffice.
+        {{ "Dee, John" | person_tag: "My" }}
+        pas-port here may somewhat give evidence, and the journall litle book
+        of every dayes journey or abode for
+        <time datetime=P100D>those hundred dayes</time>
+        hundred dayes
+        account may suffice.
       </p></blockquote>
