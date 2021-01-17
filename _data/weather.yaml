@@ -224,7 +224,7 @@
     <blockquote><p>
       <time datetime="1500">In 1500</time>,
       there was a dreadful plague
-      {{ "London, London, GB" | place_tag: "in London, England" }},
+      {{ "London, London, GB" | place_tag: "in London, London, GB" }},
       which obligated
       {{ "King Henry VII" | person_tag: "King Henry Ⅶ" }}
       and his Court to remove to
@@ -408,7 +408,7 @@
       the fatal
       <q>sweating sickness</q>
       was very violent
-      {{ "London, London, GB" | place_tag: "in London, England" }}.
+      {{ "London, London, GB" | place_tag: "in London, London, GB" }}.
       The disease was mortal
       <time datetime="P3H">in three hours</time>.
       {{ "Oxford, England" | place_tag: "Oxford" }}
@@ -575,7 +575,7 @@
         wheat being then at
         {{ "GBP 15 shillings" | currency_tag: "15s.", 1527 }}
         the quarter <ins>quarter ton</ins>. But shortly after the merchants of
-        {{ "Steelyard, London, England" | place_tag: "the Stiliard <ins>steelyard</ins>" }}
+        {{ "Steelyard, London, London, GB" | place_tag: "the Stiliard <ins>steelyard</ins>" }}
         brought from
         {{ "Gdańsk, Poland" | place_tag: "Danske <ins>Danzig</ins>" }}
         such store of wheat and rye, that it was better cheape

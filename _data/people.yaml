@@ -116,7 +116,7 @@
       id: https://www.wikidata.org/entity/Q36916271
   gender: male
   livedIn:
-    - London, England
+    - London, London, GB
 "Brown":
   formatted_name: "<abbr>Mr</abbr> Brown"
   name:
@@ -550,7 +550,7 @@
       alternateType: https://w3id.org/pnv#honorificSuffix
   birthDate: "1517-01-17"
   deathDate: "1554-02-23"
-  deathPlace: Tower Hill, London, England
+  deathPlace: Tower Hill, London, London, GB
   id: https://www.wikidata.org/entity/Q4490179
   gender: male
 "Hakluyt, Richard (barrister)":
@@ -577,7 +577,7 @@
       id: https://www.wikidata.org/entity/Q56246039
   birthDate: 1553
   deathDate: "1616-11-23"
-  deathPlace: London, England
+  deathPlace: London, London, GB
   id: https://www.wikidata.org/entity/Q185510
   gender: male
 "Halliwell, James":
@@ -588,7 +588,7 @@
     - text: Halliwell-Phillips
       type: familyName
   birthDate: "1820-06-21"
-  birthPlace: London, England
+  birthPlace: London, London, GB
   deathDate: "1889-01-03"
   gender: male
 "Hatton, Christopher":
@@ -1212,7 +1212,7 @@
   birthDate: 1507
   birthPlace: Bacton, England
   deathDate: "1590-02-12"
-  deathPlace: London, England
+  deathPlace: London, London, GB
   id: https://www.wikidata.org/entity/Q3403111
   gender: female
   knows:
@@ -1461,7 +1461,7 @@
   birthDate: "1636-09-29"
   birthPlace: Cottenham, Cambridgeshire, England
   deathDate: "1715-12-14"
-  deathPlace: London, England
+  deathPlace: London, London, GB
   id: https://www.wikidata.org/entity/Q680725
   gender: male
 "Urseau, Nicholas":
@@ -1485,7 +1485,7 @@
   birthDate: 1532
   birthPlace: Chislehurst, England
   deathDate: "1590-04-06"
-  deathPlace: London, England
+  deathPlace: London, London, GB
   id: https://www.wikidata.org/entity/Q138409
   gender: male
   knows:
@@ -1562,7 +1562,7 @@
   birthDate: 1512
   birthPlace: Manor of Scrivelsby, England
   deathDate: "1585-01-16"
-  deathPlace: London, England
+  deathPlace: London, London, GB
   id: https://www.wikidata.org/entity/Q1291914
   gender: male
   knows:
