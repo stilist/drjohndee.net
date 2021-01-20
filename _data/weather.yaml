@@ -391,9 +391,9 @@
       {{ "England" | place_tag: "In England" }},
       it was a very droughty and frosty winter, and a very hot summer, and a very
       early and plentiful harvest. Wheat fell from
-      {{ "GBP 10 shillings" | currency_tag: "10s.", 1517 }}
+      {{ "GBP 10 shillings" | currency_tag: "10<abbr>s.</abbr>", 1517 }}
       a bushel to
-      {{ "GBP 10 pence" | currency_tag: "10d.", 1517 }}
+      {{ "GBP 10 pence" | currency_tag: "10<abbr>d.</abbr>", 1517 }}
       There was a great murraine of kine
       <ins>cattle</ins>.
       The cattle were so mortally infectious, that dogs and ravens feeding on
@@ -460,7 +460,7 @@
       <q>Wheat sold
         {{ "London, London, GB" | place_tag: "in London" }}
         for
-        {{ "GBP 20 shillings" | currency_tag: "20s.", 1521 }}
+        {{ "GBP 20 shillings" | currency_tag: "20<abbr>s.</abbr>", 1521 }}
         a Quarter
         <ins>quarter ton</ins>.
     </p></blockquote>
@@ -573,7 +573,7 @@
         by a great number of citizens so that the maior and sheriffs were forced
         to goe and rescue the same, and see them brought to the market appointed,
         wheat being then at
-        {{ "GBP 15 shillings" | currency_tag: "15s.", 1527 }}
+        {{ "GBP 15 shillings" | currency_tag: "15<abbr>s.</abbr>", 1527 }}
         the quarter <ins>quarter ton</ins>. But shortly after the merchants of
         {{ "Steelyard, London, London, GB" | place_tag: "the Stiliard <ins>steelyard</ins>" }}
         brought from

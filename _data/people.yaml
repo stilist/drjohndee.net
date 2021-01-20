@@ -55,6 +55,28 @@
       type: givenName
       id: https://www.wikidata.org/entity/Q19672745
   gender: female
+"Aylmer, John":
+  name:
+    - text: The Right Reverend
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q5476350
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Aylmer
+      type: familyName
+      id: https://www.wikidata.org/entity/Q21491392
+    - text: Bishop of London
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q1587771
+  birthDate: 1521
+  birthPlace: Tivetshall St Margaret, England
+  deathDate: "1594-06-03"
+  deathPlace: Fulham Palace, England
+  id: https://www.wikidata.org/entity/Q675190
+  gender: male
+  knows:
+    - Dee, John
 "Bayley, Francis":
   name:
     - text: Francis
@@ -106,6 +128,22 @@
   gender: male
   children:
     - Besbich, Thomas
+"Beuther, Michael":
+  name:
+    - text: Michael
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4927524
+    - text: Beuther
+      type: familyName
+  birthDate: "1522-10-18"
+  birthPlace: Karlstadt am Main, Main-Spessart, Unterfranken, Bavaria, DE
+  deathDate: "1587-10-27"
+  deathPlace: Strasbourg, Bas-Rhin, Grand Est, FR
+  id: https://www.wikidata.org/entity/Q109071
+  gender: male
+  footnotes:
+    - "lexicon universale/michael-beuther"
+    - "prosopographiae heroum/michael-beuther"
 "Billett, John":
   name:
     - text: John
@@ -117,6 +155,20 @@
   gender: male
   livedIn:
     - London, London, GB
+"Brahe, Tycho":
+  name:
+    - text: Tyge
+      type: givenName
+      id: https://www.wikidata.org/entity/Q18941424
+    - text: Brahe
+      type: givenName
+      id: https://www.wikidata.org/entity/Q35799957
+  birthDate: "1546-12-14"
+  birthPlace: Knutstorp Castle, Denmark-Norway
+  deathDate: "1601-10-24"
+  deathPlace: Prague, Czech Republic
+  id: https://www.wikidata.org/entity/Q36620
+  gender: male
 "Brown":
   formatted_name: "<abbr>Mr</abbr> Brown"
   name:
@@ -164,6 +216,31 @@
   gender: male
   knows:
     - Dee, John
+"Cecil, William":
+  name:
+    - text: William
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12344159
+    - text: Cecil
+      type: familyName
+    - text: 1st
+      type: additionalName
+      alternateType: https://w3id.org/pnv#disambiguatingDescription
+    - text: Baron Burghley
+      type: additionalName
+      alternateType: https://w3id.org/pnv#honorificSuffix
+    - text: Lord High Treasurer
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q944583
+  birthDate: "1520-09-13"
+  birthPlace: Bourne, England
+  deathDate: 1598-08-04/05
+  deathPlace: Westminster, England
+  id: https://www.wikidata.org/entity/Q354309
+  gender: male
+  knows:
+    - Dee, John
+    - Queen Elizabeth
 "Clifford, Margaret":
   name:
     - text: Margaret
@@ -183,6 +260,39 @@
   id: https://www.wikidata.org/entity/Q7605533
   knows:
     - Dee, John
+"Cole, Helen":
+  name:
+    - text: Helen
+      type: givenName
+      id: https://www.wikidata.org/entity/Q13376892
+    - text: Cole
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1128028
+  knows:
+    - Dee, John
+    - Fromond, Jane
+  gender: female
+"Constable, Katherine":
+  name:
+    - text: Katherine
+      type: givenName
+      id: https://www.wikidata.org/entity/Q108631
+    - text: Constable
+      type: familyName
+      id: https://www.wikidata.org/entity/Q20726765
+  deathDate: 1574
+  gender: female
+"Constable, Mary":
+  name:
+    - text: Mary
+      type: givenName
+      id: https://www.wikidata.org/entity/Q734578
+    - text: Constable
+      type: familyName
+      id: https://www.wikidata.org/entity/Q20726765
+  knows:
+    - Dee, John
+  gender: female
 "Cooke, Bridget":
   name:
     - text: Brigit
@@ -337,6 +447,26 @@
   primary_language: en-emodeng
   spouses:
     - Constable, Katherine
+"Dryer, Johan Ludvig Emil":
+  name:
+    - text: Johan
+      type: givenName
+      id: https://www.wikidata.org/entity/Q10989273
+    - text: Ludvig
+      type: givenName
+      id: https://www.wikidata.org/entity/Q12233911
+    - text: Emil
+      type: givenName
+      id: https://www.wikidata.org/entity/Q989320
+    - text: Dryer
+      type: familyName
+      id: https://www.wikidata.org/entity/Q21507264
+  birthDate: "1852-02-13"
+  birthPlace: Copenhagen, Denmark
+  deathDate: "1926-09-14"
+  deathPlace: Oxford, England
+  id: https://www.wikidata.org/entity/Q265015
+  gender: male
 "Duckett, Lionel":
   name:
     - text: Lionel
@@ -520,6 +650,22 @@
     - Dee, John
   id: https://www.wikidata.org/entity/Q447200
   gender: male
+"Gilbert, John":
+  name:
+    - text: Sir
+      type: honorificPrefix
+      id: https://www.wikidata.org/entity/Q209690
+    - text: John
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4925477
+    - text: Gilbert
+      type: familyName
+      id: https://www.wikidata.org/entity/Q1158185
+  birthDate: 1533
+  deathDate: 1596
+  gender: male
+  knows:
+    - Queen Elizabeth
 "Goose, Wenefride":
   name:
     - text: Wenefride
@@ -553,6 +699,26 @@
   deathPlace: Tower Hill, London, London, GB
   id: https://www.wikidata.org/entity/Q4490179
   gender: male
+"Hájek, Tadeáš":
+  name:
+    - text: Tadeáš
+      type: givenName
+      id: https://www.wikidata.org/entity/Q21069440
+    - text: Hájek
+      type: familyName
+      id: https://www.wikidata.org/entity/Q164308
+  birthDate: "1525-12-01"
+  birthPlace: Prague, Czech Republic
+  deathDate: "1600-09-01"
+  deathPlace: Prague, Czech Republic
+  id: https://www.wikidata.org/entity/Q1355663
+  gender: male
+  primary_language: la-renais
+  knows:
+    - Brahe, Tycho
+    - Dee, John
+    # https://cs.wikipedia.org/wiki/Tadeáš_Hájek_z_Hájku#Zaj%C3%ADmavosti
+    # - Kelly, Edward
 "Hakluyt, Richard (barrister)":
   name:
     - text: Richard
@@ -891,8 +1057,24 @@
   gender: male
   knows:
     - Dee, John
+"Kyffin, Morris":
+  name:
+    - text: Morris
+      type: givenName
+    - text: Kyffin
+      type: familyName
+  birthDate: 1555
+  deathDate: "1598-01-02"
+  id: https://www.wikidata.org/entity/Q6913779
+  gender: male
   knows:
     - Dee, John
+    # https://en.wikipedia.org/wiki/Morris_Kyffin
+    # - Camden, William
+    # - Spenser, Edmund
+    # - Harington, John
+    # https://biography.wales/article/s-KYFF-MOR-1555
+    # - Sackville, Thomas (Lord Buckhurst)
 "Lewis, David":
   name:
     - text: David
@@ -981,6 +1163,20 @@
   deathDate: "1834-01-03"
   id: https://www.wikidata.org/entity/Q5217989
   gender: male
+"Maestlin, Michael":
+  name:
+    - text: Michael
+      type: givenName
+      id: https://www.wikidata.org/entity/Q4927524
+    - text: Mästlin
+      type: familyName
+  birthDate: "1550-09-30"
+  birthPlace: Göppingen, Germany
+  deathDate: 1631-10-20/30
+  deathPlace: Tübingen, Germany
+  id: https://www.wikidata.org/entity/Q75797
+  gender: male
+  primary_language: la-renais
 "Meulen, Daniel van der":
   name:
     - text: Daniel
@@ -1302,6 +1498,23 @@
   gender: male
   livedIn:
     - Mortlake, England
+"Schjellerup, Hans":
+  name:
+    - text: Hans
+      type: givenName
+    - text: Carl
+      type: givenName
+    - text: Frederik
+      type: givenName
+    - text: Christian
+      type: givenName
+    - text: Schjellerup
+      type: family
+  birthDate: "1827-02-08"
+  birthPlace: Odense, Denmark
+  deathDate: "1887-11-13"
+  deathPlace: Copenhagen, Denmark
+  id: https://www.wikidata.org/entity/Q4992451
 "Shakelton, Francis":
   name:
     - text: Francis
@@ -1417,6 +1630,17 @@
   gender: female
   knows:
     - Dee, John
+"Suttley, Thomas":
+  name:
+    - text: Thomas
+      type: givenName
+      id: https://www.wikidata.org/entity/Q16428906
+    - text: Suttley
+      type: familyName
+  gender: male
+  knows:
+    - Dee, John
+    - Tenison, Thomas
 "Swallow, Samuel":
   name:
     - text: Samuel
@@ -1666,6 +1890,29 @@
     - text: Madoc
       type: givenName
   id: https://www.wikidata.org/entity/Q1883439
+  gender: male
+"Pope Gregory XIII":
+  name:
+    - text: Ugo
+      type: givenName
+      id: https://www.wikidata.org/entity/Q18010581
+    - text: Boncompagni
+      type: familyName
+      id: https://www.wikidata.org/entity/Q56238896
+    - text: Pope
+      type: jobTitle
+      id: https://www.wikidata.org/entity/Q19546
+    - text: Gregorius
+      type: givenName
+      id: https://www.wikidata.org/entity/Q18558712
+    - text: ⅩⅠⅠⅠ
+      type: additionalName
+      alternateType: https://w3id.org/pnv#disambiguatingDescription
+  birthDate: "1502-01-01"
+  birthPlace: Bologna, Italy
+  deathDate: "1585-04-10"
+  deathPlace: Rome, Italy
+  id: https://www.wikidata.org/entity/Q83029
   gender: male
 "Queen Elizabeth":
   name:

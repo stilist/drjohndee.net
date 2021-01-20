@@ -96,6 +96,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q845015
   language: en
+"Copenhagen, Denmark":
+  locality: København
+  region: Region Hovedstaden
+  country: DK
+  id: https://www.wikidata.org/entity/Q1748
+  language: dk
 "Cornwall, GB":
   region: Cornwall
   country: GB
@@ -146,6 +152,12 @@
   region: Greater London
   country: GB
   language: en
+"Diseworth, East Midlands, GB":
+  locality: Diseworth
+  region: East Midlands
+  country: GB
+  id: https://www.wikidata.org/entity/Q5282164
+  language: en
 "East Sheen, England":
   locality: East Sheen
   region: Greater London
@@ -192,12 +204,25 @@
   region: Friesland
   country: Habsburg Netherlands
   id: https://www.wikidata.org/entity/Q770
+"Fulham Palace, England":
+  name: Fulham Palace
+  locality: Fulham
+  region: Greater London
+  country: GB
+  id: https://www.wikidata.org/entity/Q5507927
+  language: en
 "Fulham, England":
   locality: Fulham
   region: Greater London
   country: GB
   id: https://www.wikidata.org/entity/Q3367868
   language: en
+"Göppingen, Germany":
+  locality: Göppingen
+  region: Baden-Württemberg
+  country: DE
+  id: https://www.wikidata.org/entity/Q4072
+  language: de
 "Gravesend, England":
   locality: Gravesend
   region: Kent
@@ -223,6 +248,13 @@
   country: GB
   id: https://www.wikidata.org/entity/Q26282257
   language: en
+"Guildhall, England":
+  name: Guildhall
+  locality: City of London
+  region: London
+  country: GB
+  id: https://www.wikidata.org/entity/Q81279
+  language: en
 "Hamburg, Germany":
   locality: Free and Hanseatic City of Hamburg
   region: Hamburg
@@ -234,6 +266,12 @@
   region: Hertfordshire
   country: GB
   id: https://www.wikidata.org/entity/Q19788
+  language: en
+"Hersham, South East, GB":
+  locality: Hersham
+  region: South East
+  country: GB
+  id: https://www.wikidata.org/entity/Q5744439
   language: en
 "Hinxton, England":
   locality: Hinxton
@@ -249,6 +287,11 @@
   region: Quebec
   country: CA
   id: https://www.wikidata.org/entity/Q544356
+"Ireland":
+  name: Éire
+  country: IE
+  id: https://www.wikidata.org/entity/Q22890
+  language: ie
 "Kent, England":
   region: Kent
   country: GB
@@ -264,6 +307,13 @@
   locality: Kingston
   country: GB
   language: en
+"Knutstorp Castle, Denmark-Norway":
+  name: Knutstorps borg
+  locality: Svavlövs kommun
+  region: Scania
+  country: SE
+  id: https://www.wikidata.org/entity/Q1807458
+  language: dk
 "Lambeth, England":
   locality: Lambeth
   region: Greater London
@@ -387,6 +437,18 @@
   country: GB
   id: https://www.wikidata.org/entity/Q130191
   language: en
+"Odense, Denmark":
+  locality: Odense
+  region: Syddanmark
+  country: DK
+  id: https://www.wikidata.org/entity/Q25331
+  language: dk
+"Oxford, England":
+  locality: Oxford
+  region: Oxfordshire
+  country: GB
+  id: https://www.wikidata.org/entity/Q34217
+  language: en
 "Palace of Placentia, England":
   name: Palace of Placentia
   latitude: 51.482222
@@ -408,6 +470,12 @@
   country: Wales
   id: https://www.wikidata.org/entity/Q1762242
   language: cy
+"Prague, Czech Republic":
+  locality: Praha
+  region: Hlavní město Praha
+  country: CZ
+  id: https://www.wikidata.org/entity/Q1085
+  language: cs
 "Putney, England":
   locality: Putney
   region: Greater London
@@ -434,6 +502,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q7356816
   language: en
+"Rome, Italy":
+  locality: Roma
+  region: Lazio
+  country: IT
+  id: https://www.wikidata.org/entity/Q220
+  language: it
 "Safavid Iran":
   country: Safavid Iran
   id: https://www.wikidata.org/entity/Q18234383
@@ -555,7 +629,13 @@
   country: GB
   id: https://www.wikidata.org/entity/Q7796332
   language: en
-"Tower Hill, London, England":
+"Tivetshall St Margaret":
+  locality: Tivetshall <abbr>St</abbr> Margaret
+  region: Norfolk
+  country: GB
+  id: https://www.wikidata.org/entity/Q1817703
+  language: en
+"Tower Hill, London, London, GB":
   name: Tower Hill
   latitude: 51.5085
   longitude: -0.0782
@@ -563,6 +643,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q499565
   language: en
+"Tübingen, Germany":
+  locality: Tübingen
+  region: Baden-Württemberg
+  country: DE
+  id: https://www.wikidata.org/entity/Q3806
+  language: de
 "University of Oxford, England":
   name: University of Oxford
   latitude: 51.755
@@ -573,6 +659,12 @@
   country: GB
   id: https://www.wikidata.org/entity/Q34433
   language: en
+"Ven, Sweden":
+  locality: Ven
+  region: Skåne län
+  country: SE
+  id: https://www.wikidata.org/entity/Q509682
+  language: se
 "Wesel, North Rhine-Westphalia, DE":
   locality: Wesel
   region: North Rhine-Westphalia
@@ -606,6 +698,13 @@
   region: "West Midlands"
   country: GB
   id: https://www.wikidata.org/entity/Q1646181
+  language: en
+"Wych Cross, England":
+  name: Wych Ross
+  locality: Ashdown Forest
+  region: East Sussex
+  country: GB
+  id: https://www.wikidata.org/entity/Q8039543
   language: en
 "Wymondham, England":
   locality: Wymondham
