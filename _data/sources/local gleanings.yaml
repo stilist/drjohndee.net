@@ -1,0 +1,16 @@
+---
+work:
+  editor: "Earwaker, J. P."
+  language: en
+  license: "public domain"
+  name: >-4
+      Local Gleanings: an Archælogical & Historical Magazine,
+      Chiefly Relating to Lancashire & Cheshire
+  type: Book
+editions:
+  -
+    format: ebook
+    id: http://www.worldcat.org/oclc/265618046
+    oclc_number: 265618046
+    source_url: "https://www.google.com/books/edition/_/SaM-AQAAMAAJ"
+    volume_number: Ⅰ
