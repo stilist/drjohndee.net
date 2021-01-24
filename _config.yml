@@ -47,3 +47,6 @@ exclude:
   - _data/templates/
   - _spec/
   - _sources/
+
+collections:
+  entries:

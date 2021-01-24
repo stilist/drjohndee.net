@@ -4,12 +4,12 @@ module CurrencyFilter
   include ::DataCollection
 
   def currency_tag(input, display_text, date = nil)
+    date ||= @context.registers[:page]['date']
     if date.is_a?(Integer)
       date = Date.new(date)
     elsif date.is_a?(String)
-      date = Date.new(*date.split('-'))
+      date = DateTime.iso8601(date, Date::ENGLAND)
     end
-    date ||= @context.registers[:page]['date']
 
     currency, raw_value = input.match(/\A([A-Z]{3})\s(.+)\z/).captures
     method = "currency_#{currency.downcase}"

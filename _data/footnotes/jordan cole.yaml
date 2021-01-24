@@ -1,13 +1,4 @@
 ---
-"1555-08-01":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>N</ins>ātus hōra quārta ā merīdiē ut annotātum
-          relīquit pater ejus</q>:
-        Perhaps
-          <q>Born four hours after noon, as observed by his forsaken
-            father</q>?
-      </p>
 "1555-10-12":
   text: >-4
       <p>
@@ -15,14 +6,6 @@
         {{ "Wessel, Gelderland, NL" | place_tag: "Wesell in Gelderland" }}
         (in the Netherlands), this actually refers to
         {{ "Wesel, North Rhine-Westphalia, DE" | place_tag: "Wesel in Germany" }}.
-      </p>
-"1563-09-28":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>S</ins>oror magiſtri Thomas Mownson et uxor
-          magiſtri Brown</q>:
-        <q>Sister of <abbr>Mr</abbr> Thomas Mownson and wife of <abbr>Mr</abbr>
-          Brown</q>.
       </p>
 "1564-08-21":
   text: >-4
@@ -33,19 +16,6 @@
         as well as the town
         <a href=https://en.wikipedia.org/w/index.php?title=Kingston_upon_Thames&oldid=997487039>Kingston
           upon Thames</a>.
-      </p>
-"1565-09-12":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>P</ins>rope Stony-Stratford; putō potius hōra 8
-          minute 43</q>:
-        <q>Near Stony-Stratford; at 08:43, I estimate.</q>
-      </p>
-"1575-07-31":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>N</ins>ātus ante dīlūculum per hōram ½</q>:
-        <q>Born an hour and a half before sunrise.</q>
       </p>
 "1577-03-11":
   text: >-4
@@ -59,21 +29,6 @@
           <span itemprop=nonProprietaryName>
             <a itemprop=url href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
               <abbr>St.</abbr> John’s wort</a></span></span>.
-      </p>
-"1577-12-30":
-  text: >-4
-      <p>
-        <q lang=la-renais>Inexpliſſima illa calumnia dē
-          {{ "Edward, Roger" | person_tag: "Roger Edward" }} ,
-          inīquiſſime aliqua ex parte in mē dēnūntiābātur : ante aliquōs ēlāpſōs
-          diēs, sed <ins>…</ins> sua sapientia mē innocentem .</q>
-        An extremely questionable translation to English:
-        <q>Most inexplicable false charges from
-          {{ "Edward, Roger" | person_tag: "Roger Edward" }},
-          repeatedly declared, very unfairly in my absence: before some days
-          elapsed, but
-          <ins>…</ins>
-          he discerned my innocence.</q>
       </p>
 "1578-08-15":
   text: >-4
@@ -107,27 +62,6 @@
         <q>the church</q>
         refers to, as it’s been there for many centuries.
       </p>
-"1579-07-13":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>N</ins>ātus puer māne hōra quārta trīgintā
-          minūta ferē , vel potius minūta vīgintī quīnque , in ipſō ortū ſōlis ,
-          ut exīſtimō .</q>
-        Something like:
-        <q>{{ "Dee, John" | person_tag: "I’d" }}
-          say
-          {{ "Dee, Arthur" | person_tag: "the child" }}
-          was born at 04:30, or perhaps 04:25; just at sunrise,
-          {{ "Dee, John" | person_tag: "I" }}
-          think.</q>
-      </p>
-"1579-09-10":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>S</ins>ine mē nihil poteſtis facere</q>
-        translates to English as
-        <q>without me, you can do nothing</q>.
-      </p>
 "1579-12-28":
   text: >-4
       <p>
@@ -148,44 +82,6 @@
         refers to
         <a href=https://en.wikipedia.org/wiki/Sodium_acetate>sodium acetate</a>
         or some other acetyl compound.
-      </p>
-"1598-01-24":
-  text: >-4
-      <p>
-        <q lang=la-renais>Amāritūdō mea circā mediam noctem</q>:
-        <q>I felt troubled around midnight</q>.
-      </p>
-"1598-02-26":
-  text: >-4
-      <p>
-        <q lang=la-renais>Circā mediam noctem amāritūdō mea</q>:
-        <q>I was sorrowful around the middle of the night</q>.
-      </p>
-"1600-08-10":
-  text: >-4
-      <p>
-        <q lang=la-renais>Eucharistam ſuscēpimus, egō, uxor, fīlia Katharina,
-          et Marīa Nicolls</q>:
-        <q>I received the eucharist with my wife, my daughter Katherine, and
-          Mary Nichols</q>.
-      </p>
-"1600-09-11":
-  text: >-4
-      <p>
-        <q lang=la-renais><ins>E</ins>ōdem tempore</q>:
-        <q>at that time</q>.
-      </p>
-"1601-02-02":
-  text: >-4
-      <p>
-        <q lang=la-renais>Ō Deus, līberā nōs ā malō!</q>:
-        <q>O God, deliver us from evil!</q>.
-      </p>
-"1601-02-25":
-  text: >-4
-      <p>
-        <q lang=la-renais>Roger Cooke pā̆ctum ſacrum hōra octāva māne</q>:
-        <q>Made a sacred pact with Roger Cook at 8 in the morning</q>.
       </p>
 
 a-meridie:
