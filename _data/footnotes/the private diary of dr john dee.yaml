@@ -176,7 +176,7 @@
         {{ "Dee, John" | person_tag: "<abbr>Dr.</abbr> Dee" }}’s
         best patrons.
       </p></blockquote>
-"1578-06-30--1":
+"1578-06-30.1":
   author: "Halliwell, James"
   source_location: "page 4"
   text: >-4
@@ -191,7 +191,7 @@
         library in
         {{ "St Martin-in-the-Fields, England" | place_tag: "St. Martin’s-in-the-Fields" }}.
       </p></blockquote>
-"1578-06-30--2":
+"1578-06-30.2":
   author: "Halliwell, James"
   source_location: "page 4"
   text: >-4
