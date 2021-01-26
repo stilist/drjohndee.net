@@ -60,6 +60,7 @@ class Timestamp
       @interval = nil
       @type = :duration
     else
+      as_string = as_string.ljust(10, '-01')
       # @note `ISO8601::DateTime`'s constructor uses the default `DateTime`
       #   constructor, which defaults to `Date::ITALY` (1582-10-15) for the
       #   date the Gregorian calendar reform takes effect. This is fine for

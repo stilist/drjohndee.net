@@ -36,6 +36,9 @@ layout: default
     {% endfor %}
   </ul>
 
-  {%- include annotations.html reference=page -%}
+  {%- assign footnotes = page.raw_timestamp | relevant_footnotes -%}
+  {%- include footnotes.html references=footnotes -%}
+
+  {%- include events.html reference=page -%}
   {%- include references.html reference=page -%}
 </article>

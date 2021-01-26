@@ -1,5 +1,5 @@
 {%- assign reference = include.reference -%}
-{%- assign records = reference.date | relevant_events -%}
+{%- assign records = reference.raw_timestamp | relevant_events -%}
 {%- if records.size > 0 -%}
 <aside class="annotations annotations-events">
   <h1>Historical context</h1>

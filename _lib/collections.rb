@@ -43,6 +43,41 @@ module DataCollection
     slugify(key, mode: :pretty).gsub(/[,\.]/, '')
   end
 
+  SIMPLE_DATE_PATTERN = /
+    \A
+    (?<year>\d{4})
+    (?:
+      -
+      (?<month>\d{2})
+      (?:
+        -
+        (?<day>\d{2})
+      )?
+    )?
+  /x
+  # @todo Use `Timestamp#intersect?`
+  def footnotes_by_timestamp
+    return @footnotes_by_timestamp if defined?(@footnotes_by_timestamp)
+    @footnotes_by_timestamp = {}
+
+    by_source = data_collection_records('footnotes')
+    by_source.each do |source, records|
+      records.keys.each do |key|
+        if key.is_a?(Date)
+          timestamp = key.strftime('%F')
+        else
+          timestamp = key.match(SIMPLE_DATE_PATTERN)&.to_s
+          next if timestamp.nil?
+        end
+
+        @footnotes_by_timestamp[timestamp] ||= []
+        @footnotes_by_timestamp[timestamp] << "#{source}/#{key}"
+      end
+    end
+
+    @footnotes_by_timestamp
+  end
+
   private
 
   # @see https://github.com/jekyll/jekyll/blob/7d8a839a2132cadd940a3b4f8d7c5f9f6b0f9f62/lib/jekyll/readers/data_reader.rb#L71-L74
