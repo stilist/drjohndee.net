@@ -1,43 +1,41 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype=http://schema.org/BlogPosting>
+<article class='post'>
   <a class=u-url href="{{ page.url | relative_url }}" hidden></a>
   <header class=post-header>
-    <h1 class="post-title p-name" itemprop="name headline">
-      {{ page.date | time_tag: "England", "datePublished" }}
+    <h1 class='post-title p-name' itemprop='name headline'>
+      {{ page.raw_timestamp | time_tag: "England", "datePublished" }}
     </h1>
   </header>
 
-  <div class="post-content e-content"
-       itemprop=articleBody>
-    <ul>
-      {%- assign entries_for_date = site.pages | where: 'date', page.date -%}
-      {%- for entry in entries_for_date -%}
-      {%- assign source_data = entry.source | source_citation_data -%}
-      <li translate
-          lang={{ entry.language | default: source_data.language | default: site.language | default: "en" }}>
-        {%- if source_data -%}
-        <a href='{{ entry.source | source_permalink }}'
-           class='data-source data-source--{{ source_data.publication_type | downcase }}'>
-          {{ source_data.work_name }}
-        </a>
-        {%- else -%}
-        {{ entry.source }}
-        {%- endif -%}
+  <ul class='entries'>
+    {%- assign entries = page.raw_timestamp | entries_for_date -%}
+    {%- for entry in entries -%}
+    {%- assign source_data = entry.source | source_citation_data -%}
+    {%- assign language = entry.language | default: source_data.language -%}
+    <li class='h-entry'
+        itemscope itemtype=http://schema.org/BlogPosting
+        lang='{{ language }}' translate>
+      {%- include citation.html source_key=entry.source source_location=entry.source_location -%}
 
-        {%- assign author = entry.author | default: source_record.author -%}
-        {%- if author -%}
-        <span class=post-author>
-          <span itemprop=author class="p-author h-card">
-            {{ author | person_tag }}
-          </span>
+      {%- assign author = entry.author | default: source_record.author -%}
+      {%- if author -%}
+      <span class=post-author>
+        <span itemprop=author class='p-author h-card'>
+          {{ author | person_tag }}
         </span>
-        {%- endif -%}
+      </span>
+      {%- endif -%}
 
-        {{ entry.content | liquify }}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+      <div class='post-content e-content'
+           itemprop=articleBody>
+        <p>{{ entry.content | liquify }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {%- include annotations.html reference=page -%}
+  {%- include references.html reference=page -%}
 </article>

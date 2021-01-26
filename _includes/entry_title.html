@@ -11,7 +11,7 @@
 <{{ title_tag }} class="post-title p-name" itemprop="name headline">
   {%- if hyperlink -%}
   <a class=post-link href="{{ entry.url | relative_url }}">
-    {{ entry.date | time_tag: country, "datePublished" }}
+    {{ entry.raw_timestamp | time_tag: country, "datePublished" }}
   </a>
   {%- else -%}
   {{ entry.date | time_tag: country, "datePublished" }}

@@ -60,13 +60,17 @@ class Timestamp
       @interval = nil
       @type = :duration
     else
-      # gregorian italy england
-      begin
-        @parsed = ISO8601::DateTime.new(as_string)
-      rescue ISO8601::Errors::RangeError
-        safe_parse = Date.rfc3339(as_string, Date::ENGLAND)
-        @parsed = ISO8601::DateTime.new(safe_parse.strftime('%Y-%j'))
-      end
+      # @note `ISO8601::DateTime`'s constructor uses the default `DateTime`
+      #   constructor, which defaults to `Date::ITALY` (1582-10-15) for the
+      #   date the Gregorian calendar reform takes effect. This is fine for
+      #   most people, but this project is in the context of England/United
+      #   Kingdom and uses Julian dates throughout, so the correct transition
+      #   date is `Date::ENGLAND` (1752-09-14). This indirection allows for
+      #   dates that are valid in England, but not Italy. (For example,
+      #   1582-10-12.)
+      julian_parse = DateTime.iso8601(as_string, Date::ENGLAND)
+      @parsed = ISO8601::DateTime.new(julian_parse.strftime('%Y-%j'))
+
       @interval = ISO8601::TimeInterval.from_datetimes(@parsed, @parsed)
       @raw_end = as_string
       @raw_start = as_string

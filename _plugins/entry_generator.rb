@@ -2,29 +2,31 @@
 
 require 'date'
 require 'jekyll'
+require_relative '../_lib/timestamp'
 
 module HistoricalDiary
   class DatePage < Jekyll::Page
-    def initialize(site, date:)
+    def initialize(site, raw_timestamp:, timestamp:)
       @site = site
       @base = site.source
       # "1500-01-02" => ["1500", "01", "02"]
       # "1500-01-02--03" => ["1500", "01", "02"]
-      date_parts = date.
-        split('--').
-        first.
-        split('-')
-      @dir = date_parts.first(2).join('/')
+      date_parts = timestamp.startsAt.atoms
+      @dir = date_parts.first(2).
+        map { |atom| atom.to_s.rjust(2, '0') }.
+        join(File::SEPARATOR)
 
-      @basename = date_parts.last
+      @basename = date_parts[2].to_s.rjust(2, '0')
       @ext = '.html'
       @name = "#{@basename}#{@ext}"
-      # require 'byebug' ; byebug
 
       read_yaml(File.join(@base, '_layouts'), 'date.html')
       @data = {
-        'date' => date,
-        'date_object' => DateTime.iso8601(date, Date::ENGLAND),
+        'raw_timestamp' => raw_timestamp,
+        # XXX
+        'date_atoms' => date_parts.first(3),
+        # 'timestamp' => timestamp,
+        'footnotes' => [],
       }
       data.default_proc = proc do |_, key|
         site.frontmatter_defaults.find(relative_path, :entries, key)
@@ -32,7 +34,9 @@ module HistoricalDiary
     end
 
     def <=>(other)
-      data['date_object'] <=> other.data['date_object']
+      data['date_atoms'] <=> other.data['date_atoms']
+      # data['timestamp'].first <=> other.data['timestamp'].first &&
+      # data['timestamp'].last <=> other.data['timestamp'].last
     end
 
     def url_placeholders
@@ -49,23 +53,39 @@ module HistoricalDiary
     safe true
 
     def generate(site)
-      by_date = {}
+      pages_by_timestamp = {}
+      processed_timestamps = []
 
       site.collections['entries'].docs.each do |document|
-        iso8601_date = document.basename_without_ext.match(/\d{4}-\d{2}-\d{2}/)[0]
+        raw_timestamp = document.basename_without_ext.sub('--', '/')
         source_name = document.relative_path.split(File::SEPARATOR)[1]
-        by_date[iso8601_date] ||= {}
-        by_date[iso8601_date][source_name] = document
+        pages_by_timestamp[raw_timestamp] ||= {}
+        pages_by_timestamp[raw_timestamp][source_name] = document
       end
 
-      by_date.each do |date, parts|
-        parts.each do |source_name, document|
-          document.data['date'] = date
+      pages_by_timestamp.each do |raw_timestamp, documents|
+        timestamp = Timestamp.new(raw_timestamp)
+
+        if !processed_timestamps.include?(timestamp.startsAt)
+          date_page = DatePage.new(site,
+                                   raw_timestamp: raw_timestamp,
+                                   timestamp: timestamp)
+        end
+
+        documents.each do |source_name, document|
+          document.data['raw_timestamp'] = raw_timestamp
+          document.data['timestamp'] = timestamp
           document.data['source'] ||= source_name
+
+          if !date_page.nil? && document.data.key?('footnotes')
+            date_page.data['footnotes'].concat(document.data['footnotes'])
+          end
+
           site.pages << document
         end
 
-        site.posts.docs << DatePage.new(site, date: date)
+        processed_timestamps << timestamp.startsAt
+        site.posts.docs << date_page if !date_page.nil?
       end
     end
   end

@@ -327,21 +327,26 @@ p {
 }
 .page {
   grid-template-areas:
-    "header header header header header header header header header header header header header header header"
-    "metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata metadata"
-    "content content content content content . footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes"
-    "events events events events events . footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes";
+    "header   header   header   header   header   header   header    header    header    header    header    header    header    header    header   "
+    "metadata metadata metadata metadata metadata metadata metadata  metadata  metadata  metadata  metadata  metadata  metadata  metadata  metadata "
+    "content  content  content  content  content     .     footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes"
+    "events   events   events   events   events      .     footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes";
 }
 .post {
   grid-template-areas:
-    "header header header header header header header header header header header header header header header"
-    "content content content content content content content content content . footnotes footnotes footnotes footnotes footnotes"
-    "references references references references . events events events events . footnotes footnotes footnotes footnotes footnotes";
+    "header    header    header    header    header  header     header     header     header     .   .      .      .      .      .   "
+    "content   content   content   content   content content    content    content    content    . events events events events events"
+    "footnotes footnotes footnotes footnotes    .    references references references references . events events events events events";
 }
 .page-header,
 .post-header {
   grid-area: header;
+}
+.page-header {
   margin-bottom: calc(var(--vertical-rhythm) * 2.4);
+}
+.post-header {
+  margin-bottom: calc(var(--vertical-rhythm) * 0.4);
 }
 .post-header p {
   margin-bottom: calc(var(--vertical-rhythm) * 0.6);
@@ -383,16 +388,26 @@ p {
   break-inside: avoid;
   margin-bottom: calc(var(--vertical-rhythm) * 1.4);
 }
-.page-content,
-.post-content,
-.post-excerpt {
+.page-content {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   line-height: 1.6rem;
   grid-area: content;
 }
+.entries {
+  grid-area: content;
+  list-style: none;
+}
+.h-entry .citation {
+  display: block;
+  line-height: 1.4rem;
+  margin-bottom: calc(var(--vertical-rhythm) * 1);
+}
 .post-content {
-  margin-bottom: calc(var(--vertical-rhythm) * 3);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  margin-bottom: calc(var(--vertical-rhythm) * 2);
 }
 .post-content blockquote {
   margin-bottom: var(--vertical-rhythm);
