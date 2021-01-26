@@ -397,6 +397,18 @@ p {
 .entries {
   grid-area: content;
   list-style: none;
+  margin-bottom: calc(var(--vertical-rhythm) * 4);
+  position: relative;
+}
+.entries::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid var(--foreground);
+  bottom: -1rem;
+  left: 50%;
+  margin-left: -15%;
+  position: absolute;
+  width: 30%;
 }
 .h-entry .citation {
   display: block;
