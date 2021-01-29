@@ -271,6 +271,7 @@ blockquote > :last-child {
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+  line-height: 1em;
 }
 h2 {
   font-size: 2rem;
@@ -305,14 +306,15 @@ p {
 
 
 #site-header {
-  margin-bottom: calc((var(--vertical-rhythm) * 4.1));
+  margin-bottom: calc((var(--vertical-rhythm) * 3.8));
 }
 #site-header h1 {
   cursor: default;
   font-size: 2rem;
   font-weight: 700;
-  line-height: calc(var(--vertical-rhythm) * 2.4);
+  line-height: calc(var(--vertical-rhythm) * 2.8);
   margin: 0;
+  padding-bottom: calc(var(--vertical-rhythm) * 0.2);
   text-align: left;
 }
 
@@ -345,9 +347,6 @@ p {
 .page-header {
   margin-bottom: calc(var(--vertical-rhythm) * 2.4);
 }
-.post-header {
-  margin-bottom: calc(var(--vertical-rhythm) * 0.4);
-}
 .post-header p {
   margin-bottom: calc(var(--vertical-rhythm) * 0.6);
   margin-top: calc(var(--vertical-rhythm) * 1.1);
@@ -358,8 +357,8 @@ p {
 .source-title {
   font-size: 2.625rem;
   font-weight: 700;
-  line-height: calc(var(--vertical-rhythm) * 3);
-  margin-bottom: calc(var(--vertical-rhythm) * 1.4);
+  line-height: calc(var(--vertical-rhythm) * 2.9);
+  margin-bottom: calc(var(--vertical-rhythm) * 2);
   position: relative;
 }
 .post-subtitle,
@@ -397,33 +396,46 @@ p {
 .entries {
   grid-area: content;
   list-style: none;
-  margin-bottom: calc(var(--vertical-rhythm) * 4);
+  margin-bottom: 0;
+  margin-bottom: calc(var(--vertical-rhythm) * 5);
   position: relative;
 }
 .entries::after {
   content: '';
   display: block;
   border-bottom: 1px solid var(--foreground);
-  bottom: -1rem;
+  bottom: calc(var(--vertical-rhythm) * -2.5);
   left: 50%;
   margin-left: -15%;
   position: absolute;
   width: 30%;
 }
+.entries .h-entry {
+  margin-bottom: 0;
+}
+.h-entry + .h-entry {
+  margin-top: calc(var(--vertical-rhythm) * 2.2);
+}
 .h-entry .citation {
   display: block;
-  line-height: 1.4rem;
-  margin-bottom: calc(var(--vertical-rhythm) * 1);
+  line-height: calc(var(--vertical-rhythm) * 2);
+  margin-bottom: calc(var(--vertical-rhythm) * 0.8);
 }
 .post-content {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   line-height: 1.6rem;
-  margin-bottom: calc(var(--vertical-rhythm) * 2);
+  margin-bottom: var(--vertical-rhythm);
+}
+.entries .post-content:last-child {
+  margin-bottom: 0;
 }
 .post-content blockquote {
   margin-bottom: var(--vertical-rhythm);
   margin-top: var(--vertical-rhythm);
+}
+.post-content p {
+  margin-bottom: calc(var(--vertical-rhythm) * 1);
 }
 .post-content p:last-child {
   margin-bottom: 0;
@@ -431,6 +443,10 @@ p {
 
 .annotations {
   font-size: 1.1rem;
+}
+.annotations h1 {
+  line-height: calc(var(--vertical-rhythm) * 2);
+  margin-bottom: calc(var(--vertical-rhythm) * 2);
 }
 .annotations-events {
   grid-area: events;
@@ -495,6 +511,9 @@ p {
   #scale span:nth-child(n+9) {
     display: none;
   }
+}
+.debug * {
+  background-color: #0000ff05;
 }
 .debug time,
 .debug .is-unknown-reference {
