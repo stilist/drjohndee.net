@@ -6,7 +6,7 @@ layout: default
          itemprop=event
          itemscope
          itemtype="https://schema.org/Event"
-         lang={{ record.language | default: site.language | default: "en" }}>
+         lang={{ record.language | default: site.lang | default: "en" }}>
   {%- if record.id -%}
   <link itemprop=sameAs href={{ record.id }}>
   {%- endif -%}

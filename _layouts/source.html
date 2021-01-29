@@ -5,7 +5,7 @@ layout: default
 {%- assign work = record.work -%}
 {%- assign author_record = work.author | collection_entry: "people" -%}
 <article class="page">
-  {%- assign language = edition.language | default: author_record.language | default: site.language | default: "en" -%}
+  {%- assign language = edition.language | default: author_record.language | default: site.lang | default: "en" -%}
   <header class="page-header data-source"
           lang={{ language }}
           itemscope

@@ -9,7 +9,7 @@
       {%- assign source = record.source | collection_entry: "sources" -%}
       {%- assign author_key = record.author | default: source.author -%}
       {%- assign author = author_key | collection_entry: "people" -%}
-      {%- assign language = record.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
+      {%- assign language = record.language | default: source.language | default: author.language | default: site.lang | default: "en" -%}
       <figure lang={{language}} translate>
         {%- if record.type == 'event' -%}
         {{ record.key | event_tag }}
