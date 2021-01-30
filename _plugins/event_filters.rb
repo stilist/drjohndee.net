@@ -77,8 +77,8 @@ module Jekyll
     def event_data(key)
       parts = data_collection_record('events', key)&.clone
       if parts.nil?
-        Jekyll.logger.warn('Jekyll::EventFilters:',
-                           "Unable to find data for '#{key}'.")
+        Jekyll.logger.debug('Jekyll::EventFilters:',
+                            "Unable to find data for '#{key}'.")
         return []
       end
 

@@ -34,8 +34,8 @@ module Jekyll
       types = RELATIONSHIPS.keys.freeze
       @collection.each do |key, data|
         if (data.keys & types).empty?
-          ::Jekyll.logger.info('Jekyll::PeopleRelations:',
-                               "#{key} doesn't have any relationships defined.")
+          ::Jekyll.logger.debug('Jekyll::PeopleRelations:',
+                                "#{key} doesn't have any relationships defined.")
         end
       end
 
@@ -46,8 +46,8 @@ module Jekyll
 
     def apply_relationship(from_key, to_key, target_type)
       if !@collection.key?(to_key)
-        ::Jekyll.logger.warn('Jekyll::PeopleRelations:',
-                             "#{from_key} has #{target_type} relationship with unknown person '#{to_key}'.")
+        ::Jekyll.logger.debug('Jekyll::PeopleRelations:',
+                              "#{from_key} has #{target_type} relationship with unknown person '#{to_key}'.")
         return
       end
 

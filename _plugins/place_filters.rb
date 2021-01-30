@@ -74,8 +74,8 @@ module Jekyll
     def place_data(key)
       parts = data_collection_record('places', key)&.clone
       if parts.nil?
-        Jekyll.logger.warn('Jekyll::PlaceFilters:',
-                           "Unable to find data for '#{key}'.")
+        Jekyll.logger.debug('Jekyll::PlaceFilters:',
+                            "Unable to find data for '#{key}'.")
         return []
       end
 

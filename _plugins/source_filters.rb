@@ -73,8 +73,8 @@ module Jekyll
     def source_citation_data(key, edition_key = nil)
       record = data_collection_record('sources', key)&.clone
       if record.nil?
-        Jekyll.logger.warn('source_citation_data:',
-                           "Unable to find data for '#{key}'.")
+        Jekyll.logger.debug('source_citation_data:',
+                            "Unable to find data for '#{key}'.")
         return {}.freeze
       end
 
@@ -114,8 +114,8 @@ module Jekyll
     def source_data(key)
       parts = data_collection_record('sources', key)&.clone
       if parts.nil?
-        Jekyll.logger.warn('Jekyll::SourceFilters:',
-                           "Unable to find data for '#{key}'.")
+        Jekyll.logger.debug('Jekyll::SourceFilters:',
+                            "Unable to find data for '#{key}'.")
         return []
       end
 
