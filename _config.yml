@@ -18,13 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The life of Dr John Dee
+title: The life and times of Dr John Dee
 author:
   name: Jordan Cole
   email: feedback@drjohndee.net
 description: >- # this means to ignore newlines until "baseurl:"
-  This project explores the life and times of Dr John Dee, using public-domain
-  source material and open-source code.
+  <a href=/license rel=license>Copyright and license policy</a>;
+  <a href=/contributing>how to contribute to this project</a>;
+  <a href=https://github.com/stilist/john-dee>view the project’s source files</a>.
+  This website doesn’t track any information, because there’s no need to.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -36,23 +38,31 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+# for `jekyll-seo-tag`
+twitter:
+  username: stilist
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
 exclude:
   - .gitignore
-  - LICENSE.md
   - _data/templates/
-  - _spec/
   - _sources/
-
-collections:
-  entries:

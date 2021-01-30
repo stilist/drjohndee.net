@@ -1,23 +1,22 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-  </div>
+  <p>
+    {%- if site.description -%}
+    {{ site.description | escape }}
+    {% endif -%}
+    {% if site.author -%}
+    {% if site.author.name -%}
+    Created by <span class="p-name">{{ site.author.name | escape }}</span>.
+    {% endif -%}
+    {% if site.author.email -%}
+    <a class="u-email" href="mailto:{{ site.author.email }}">Send feedback to
+      {{ site.author.email }}</a>
+    {%- endif -%}
+    {%- endif -%}
+  <p>
+    <a href=/license.html rel=license>Copyright and license policy</a>;
+    <a href=/contributing.html>how to contribute to this project</a>;
+    <a href=https://github.com/stilist/john-dee>view the project’s source files</a>.
+    This website doesn’t track you.
 </footer>
