@@ -30,7 +30,16 @@ layout: default
 
       <div class='post-content e-content'
            itemprop=articleBody>
-        <p>{{ entry.content | liquify }}
+        {%- assign processed_content = entry.content | liquify -%}
+        {%- if entry.ext == ".md" -%}
+        {%- assign processed_content = processed_content | markdownify -%}
+        {%- endif -%}
+        {%- assign maybe_p = processed_content | slice: 0, 3 -%}
+        {%- if maybe_p == "<p>" -%}
+          {{ processed_content }}
+        {%- else -%}
+          <p>{{ processed_content }}
+        {%- endif -%}
       </div>
     </li>
     {% endfor %}
