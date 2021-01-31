@@ -23,9 +23,9 @@ module DataCollection
   end
 
   def data_collection_record(collection_name, key)
-    if key.nil?
+    if key.nil? || key.strip == ''
       Jekyll.logger.debug('DataCollection:',
-                          "Requested nil key from #{collection_name} data set.")
+                          "Requested empty key from #{collection_name} data set.")
       return
     end
 
