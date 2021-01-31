@@ -336,9 +336,9 @@ p {
 }
 .post {
   grid-template-areas:
-    "header    header    header    header    header  header     header     header     header     header header header header header header"
-    "content   content   content   content   content content    content    content    content      .    events events events events events"
-    "footnotes footnotes footnotes footnotes    .    references references references references   .    events events events events events";
+    "header    header    header    header    header    header    header    header    header     header header header header header header"
+    "content   content   content   content   content   content   content   content   content       .   events events events events events"
+    "footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes     .   events events events events events";
 }
 .page-header,
 .post-header {
