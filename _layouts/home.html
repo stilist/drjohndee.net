@@ -6,16 +6,10 @@ layout: default
   <ul class="post-list">
     {%- for post in site.posts -%}
     <li class="post-summary">
-      {%- include entry_title.html entry=post hyperlink=true title_tag="h3" -%}
-      {%- if site.show_excerpts -%}
-        {%- assign source = post.source | source_citation_data -%}
-        {%- assign language = post.language | default: source.language | default: author.language | default: site.language | default: "en" -%}
-        <div class="post-excerpt"
-             lang={{ language }}
-             translate>
-          {{ post.excerpt }}
-        </div>
-      {%- endif -%}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {%- assign country = post.author.country -%}
+        {{ post.raw_timestamp | time_tag: country, "datePublished" }}
+      </a>
     </li>
     {%- endfor -%}
   </ul>
