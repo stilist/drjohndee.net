@@ -478,6 +478,10 @@ p {
   font-style: italic;
 }
 
+#site-footer {
+  margin-top: calc(var(--vertical-rhythm) * 5);
+}
+
 #scale {
   display: none;
   position: absolute;
