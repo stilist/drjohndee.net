@@ -19,23 +19,31 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-<article class="page">
+<article class="page"
+         itemscope itemtype="http://schema.org/BlogPosting">
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+
   <header class="page-header">
     <h1 class="page-name p-name"
-        itemprop="name headline">
-      {{ page.timestamp }}
+        itemprop="name">
+      <meta itemprop=headline content="Events and text for {{ page.timestamp }}">
+      <time class="dt-published"
+            itemprop=datePublished>
+        {{ page.timestamp }}
+      </time>
     </h1>
   </header>
 
   <section class="page-content">
-    <ul class="entries h-entry"
-        itemscope itemtype=http://schema.org/BlogPosting>
+    <ul class="entries h-entry">
       {% assign entries = page.timestamp | source_material_for_date -%}
       {% for entry in entries -%}
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
           lang="{{ language }}" translate>
-        <span class="citation">
+        <span class="citation"
+              itemprop=citation>
           {{ entry.source_key | mla_citation: entry.location, entry.edition, entry.author_key }}
         </span>
 
@@ -47,6 +55,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor %}
     </ul>
+
+    {% assign entry = entries | first -%}
+    {% assign source = entry.source_key | collection_entry: "sources" -%}
+    {% assign author_key = entry.author_key | default: source.work.author_key -%}
+    {% assign author = author_key | collection_entry: "people" -%}
+    {% if author -%}
+    <span class="p-author h-card"
+          itemprop=author
+          itemscope itemtype="http://schema.org/Person">
+      <meta itemprop=name content="{{ author.presentational_name.givenName }} {{ author.presentational_name.familyName }}">
+      <meta itemprop=url content="{{ author_key | collection_entry_url: "people" }}">
+    </span>
+    {% endif -%}
 
     {% assign commentary = page.timestamp | commentary_for_date -%}
     {% include commentary.html references=commentary -%}

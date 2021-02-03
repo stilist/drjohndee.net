@@ -37,7 +37,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h1>
     {% if work.author_key -%}
     <h2 class="page-subtitle"
-        itemprop="author person"
+        itemprop="editor person"
         itemscope
         itemtype="https://schema.org/Person">
       {% include person_link.html person_key=work.author_key -%}
@@ -46,6 +46,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </header>
 
   <section class="page-content">
+    <h2>Editions</h2>
     <ul>
       {% for edition_hash in record.editions -%}
       {% assign edition_key = edition_hash | first -%}

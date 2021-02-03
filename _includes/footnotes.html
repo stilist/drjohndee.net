@@ -23,16 +23,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign previous_source_key = null -%}
     {% for reference in include.references -%}
     {% assign f_record = reference | collection_entry: "footnotes" -%}
-    <li>
+    <li itemprop=comment
+        itemscope itemtype="https://schema.org/Comment">
       {% if f_record -%}
       {% assign s_record = f_record.source_key | collection_entry: "sources" -%}
       {% assign language = f_record.language | default: s_record.work.language -%}
       <figure lang="{{ language }}" translate>
-        <blockquote class="source-material">
+        <blockquote class="source-material"
+                    itemprop=text>
+          {% if f_record.symbol -%}
+          {{ f_record.symbol }}
+          {% endif -%}
           {{ f_record.text | markdownify }}
         </blockquote>
+
         {% if f_record.source_key -%}
-        <figcaption class="caption">
+        <figcaption class="caption"
+                    itemprop=citation
+                    itemscope itemtype="https://schema.org/{{ f_record.work.type }}">
+          <meta itemprop=url content="{{ f_record.source_key | collection_entry_url: "sources" }}">
+          <meta itemprop=pagination content="{{ f_record.location }}">
+
           {% if f_record.source_key == previous_source_key -%}
           <a href="{{ f_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
           {{ f_record.location }}
@@ -41,7 +52,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {% endif -%}
 
           {% if f_record.author_key != source.author_key -%}
-          <br>Footnote written by
+          <br>Note written by
           {% include person_link.html person_key=f_record.author_key -%}
           {% endif -%}
         </figcaption>

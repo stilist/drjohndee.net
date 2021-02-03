@@ -23,26 +23,29 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign previous_source_key = null -%}
     {% for reference in include.references -%}
     {% assign c_record = reference | collection_entry: "commentary" -%}
-    <li>
+    <li itemprop=comment
+        itemscope itemtype="https://schema.org/Comment">
       {% if c_record -%}
       {% assign s_record = c_record.source_key | collection_entry: "sources" -%}
       {% assign language = c_record.language | default: s_record.work.language -%}
       <figure lang="{{ language }}" translate>
-        <blockquote class="source-material">
+        <blockquote class="source-material"
+                    itemprop=text>
           {{ c_record.text | markdownify }}
         </blockquote>
+
         {% if c_record.source_key -%}
-        <figcaption class="caption">
+        <figcaption class="caption"
+                    itemprop=citation
+                    itemscope itemtype="https://schema.org/{{ s_record.work.type }}">
+          <meta itemprop=url content="{{ c_record.source_key | collection_entry_url: "sources" }}">
+          <meta itemprop=pagination content="{{ c_record.location }}">
+
           {% if c_record.source_key == previous_source_key -%}
           <a href="{{ c_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
           {{ c_record.location }}
           {% else -%}
-          {{ c_record.source_key | mla_citation: c_record.location, c_record.edition }}
-          {% endif -%}
-
-          {% if c_record.author_key != source.author_key -%}
-          <br>Footnote written by
-          {% include person_link.html person_key=c_record.author_key -%}
+          {{ c_record.source_key | mla_citation: c_record.location, c_record.edition, c_record.author_key }}
           {% endif -%}
         </figcaption>
         {% endif -%}
