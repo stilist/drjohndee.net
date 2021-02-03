@@ -1,19 +1,38 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
 <footer id=site-footer class="h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <p>
-    {%- if site.description -%}
+    {% if site.description -%}
     {{ site.description | escape }}
     {% endif -%}
-    {% if site.author -%}
-    {% if site.author.name -%}
-    Created by <span class="p-name">{{ site.author.name | escape }}</span>.
+    {% assign author_name = site.author.name | default: site.author.email | escape -%}
+    {% if site.author.key -%}
+    Created by <a href="{{ site.author.key | collection_entry_url: "people" }}" class="p-name">{{ author_name }}</a>.
+    {% else -%}
+    Created by <span class="p-name">{{ author_name }}</span>.
     {% endif -%}
     {% if site.author.email -%}
     <a class="u-email" href="mailto:{{ site.author.email }}">Send feedback to
-      {{ site.author.email }}</a>
-    {%- endif -%}
-    {%- endif -%}
+      {{ site.author.email | escape }}</a>
+    {% endif -%}
   <p>
     <a href=/license.html rel=license>Copyright and license policy</a>;
     <a href=/contributing.html>how to contribute to this project</a>;

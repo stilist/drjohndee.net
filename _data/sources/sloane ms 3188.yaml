@@ -1,16 +1,24 @@
 ---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
 work:
-  author: "Dee, John"
+  author_key: "Dee, John"
   language: "en-emodeng"
   license: "public domain"
-  name: >-4
-      Dr. John Dee’s conference with angels from Dec. 22. 1581. to May 30.
-      1583. being what preceeds ? other conferences printed by Dr. Meric
-      Causabon
-  type: Book
+  name: >-
+    Dr. John Dee’s conference with angels from Dec. 22. 1581. to May 30. 1583.
+    being what preceeds yͤ other conferences printed by Dr. Meric Causabon Lond.
+    1659. in folio
 editions:
-  -
-    date: 1659
-    format: ebook
-    publication_city: "London, London, GB"
-    publisher: "Causabon, Meric"
+  manuscript:
+    date: 1583
+    type: manuscript
+    name: >-
+      Anno 1581 1582 Mysteriorum Liber Primus. Mortlaci, Ⅰ
+  book:
+    type: book
+    url: "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Sloane_MS_3188"

@@ -1,8 +1,10 @@
+---
+---
 This project uses several licenses, each for a specific purpose.
 
 * Source code is under the [AGPLv3+](https://www.gnu.org/licenses/agpl.html) ([overview](https://choosealicense.com/licenses/agpl-3.0/)), to ensure improvements are shared with the original project.
 * Unicode transcriptions of public-domain source material are under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) ([overview](https://choosealicense.com/licenses/cc0-1.0/)), to ensure the transcriptions remain in the public domain.
-* Annotations are under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode) ([overview](https://creativecommons.org/licenses/by-sa/4.0/)), to ensure attribution is retained and the annotations are not captured by external copyright.
+* Annotations and metadata are under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode) ([overview](https://creativecommons.org/licenses/by-sa/4.0/)), to ensure attribution is retained and the annotations are not captured by external copyright.
 
 Files in the repository document their license, to prevent confusion. The full text of each license is provided below.
 
@@ -797,6 +799,8 @@ express Statement of Purpose.
     party to this document and has no duty or obligation with respect to
     this CC0 or use of the Work.
 ```
+
+* * *
 
 ```
 Creative Commons Attribution-ShareAlike 4.0 International Public License

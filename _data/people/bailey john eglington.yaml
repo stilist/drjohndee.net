@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "http://www.wikidata.org/entity/Q6231497"
+presentational_name:
+  givenName: John Eglington
+  familyName: Bailey
+full_name:
+  - text: John
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q4925477"
+  - text: Eglington
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q41622826"
+  - text: Bailey
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q2658113"
+birth_date: "1840-02-13"
+death_date: "1888-08-23"

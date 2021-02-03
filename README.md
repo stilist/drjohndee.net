@@ -2,7 +2,7 @@
 
 This project is inspired by [Phil Gyford](https://www.gyford.com)’s [The Diary of Samuel Pepys](https://www.pepysdiary.com), though I’ve made some different choices: in particular, I’ve chosen licenses and a project structure that emphasize making this accessible to as many people as possible.
 
-The website and its data are [available via git](https://github.com/stilist/john-dee), and provided under strong open licenses. (See [`LICENSE.md`](LICENSE.md) for details.) Content is stored using open standards — source material is Unicode text with no markup, commentary and markup are stored using the W3C Recommendations from the [Web Annotation Working Group](https://www.w3.org/annotation/), and the website makes heavy use of [structured data](https://developers.google.com/search/docs/guides/intro-structured-data), which is built on [schema.org](https://schema.org) definitions.
+The website and its data are [available via git](https://github.com/stilist/john-dee), and provided under strong open licenses. (See [`LICENSE.md`](LICENSE.md) for details.) The content uses open standards — source material is Unicode text with no markup, and the website makes heavy use of [structured data](https://developers.google.com/search/docs/guides/intro-structured-data), which is built on [schema.org](https://schema.org) definitions.
 
 ## How to run this project on your own machine
 

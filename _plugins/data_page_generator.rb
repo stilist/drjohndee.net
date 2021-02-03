@@ -1,47 +1,68 @@
 # frozen_string_literal: true
 
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 require 'jekyll'
 require_relative '../_lib/collections'
 
-module Jekyll
-  class DataPage < Page
+module HistoricalDiary
+  class DataPage < ::Jekyll::Page
     include ::DataCollection
 
-    def initialize(site, base, dir, category:, key:)
-      singular = COLLECTION_MAP_PLURAL[category]
+    def initialize(site, collection_name, key:)
+      singular = ::DataCollection::PLURAL_TO_SINGULAR[collection_name]
       @site = site
-      @base = base
-      @dir = singular
-      @name = "#{slugify_key(key)}.html"
+      @base = site.source
+      @dir = collection_name
 
-      Jekyll.logger.debug('Compiling data page:',
-                          "#{singular}/#{slugify_key(key)}")
+      @basename = slugify_key(key)
+      @ext = '.html'
+      @name = "#{@basename}#{@ext}"
 
-      process(@name)
-      read_yaml(File.join(base, '_layouts'), "#{singular}.html")
+      read_yaml(File.join(@base, '_layouts'), "#{singular}.html")
 
-      # used in the layout's Liquid filters
-      self.data['key'] = key
+      @data ||= {}
+      data["#{singular}_key"] = key
 
-      title = site.data.dig(type, key, 'name')
-      title = title.map { |part| part['text'] }.join(' ') if title.is_a?(Array)
-      self.data['title'] = title || key.capitalize
+      record = send(:"#{singular}_data", key)
+      title = case collection_name
+              when :people
+                record['presentational_name'].values.join(' ')
+              when :source
+                record.dig('work', 'name')
+              end
+      data['title'] = title
+
+      data.default_proc = proc do |_, key|
+        site.frontmatter_defaults.find(relative_path, :source_material, key)
+      end
     end
   end
 
-  class DataPageGenerator < Generator
-    priority :lower
+  class DataGenerator < ::Jekyll::Generator
     safe true
 
     def generate(site)
-      @site = site
-      page_categories = COLLECTION_MAP_PLURAL.keys - ['footnotes']
-      page_categories.freeze
-
-      page_categories.each do |category|
-        site.data[category].each do |key, value|
-          site.pages << DataPage.new(site, site.source, category,
-                                     category: category, key: key)
+      collections = ::DataCollection::PLURAL_TO_SINGULAR.keys -
+                    ::DataCollection::TRANSCLUDED_COLLECTIONS
+      collections.each do |collection_name|
+        site.data[collection_name].each do |key, _|
+          site.pages << DataPage.new(site, collection_name,
+                                     key: key)
         end
       end
     end

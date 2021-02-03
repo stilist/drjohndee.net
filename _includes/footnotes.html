@@ -1,26 +1,56 @@
-{%- if include.references.size > 0 -%}
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% if include.references.size > 0 -%}
 <aside class="annotations annotations-footnotes">
-  <ul>
-    {%- for reference in include.references -%}
-    {%- assign footnote = reference | collection_entry: "footnotes" -%}
+  <h1>Footnotes</h1>
+  <ul class="annotation-content">
+    {% assign previous_source_key = null -%}
+    {% for reference in include.references -%}
+    {% assign f_record = reference | collection_entry: "footnotes" -%}
     <li>
-      {%- if footnote -%}
-      {%- assign author = footnote.author | collection_entry: "people" -%}
-      {%- assign source = footnote.source | collection_entry: "sources" -%}
-      {%- assign language = footnote.language | default: source.language | default: author.language | default: site.lang | default: "en" -%}
-      <figure lang={{language}} translate>
-        {{ footnote.text | liquify }}
-        {%- if footnote.source -%}
-        <figcaption>
-          {%- include citation.html author_key=footnote.author source_key=footnote.source source_location=footnote.source_location -%}
+      {% if f_record -%}
+      {% assign s_record = f_record.source_key | collection_entry: "sources" -%}
+      {% assign language = f_record.language | default: s_record.work.language -%}
+      <figure lang="{{ language }}" translate>
+        <blockquote class="source-material">
+          {{ f_record.text | markdownify }}
+        </blockquote>
+        {% if f_record.source_key -%}
+        <figcaption class="caption">
+          {% if f_record.source_key == previous_source_key -%}
+          <a href="{{ f_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
+          {{ f_record.location }}
+          {% else -%}
+          {{ f_record.source_key | mla_citation: f_record.location, f_record.edition }}
+          {% endif -%}
+
+          {% if f_record.author_key != source.author_key -%}
+          <br>Footnote written by
+          {% include person_link.html person_key=f_record.author_key -%}
+          {% endif -%}
         </figcaption>
-        {%- endif -%}
+        {% endif -%}
       </figure>
-      {%- else -%}
-      Missing footnote: {{ reference }}
-      {%- endif -%}
+      {% endif -%}
     </li>
-    {%- endfor -%}
+    {% assign previous_source_key = f_record.source_key -%}
+    {% endfor -%}
   </ul>
 </aside>
-{%- endif -%}
+{% endif -%}

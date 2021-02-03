@@ -1,138 +1,46 @@
 ---
 layout: default
 ---
-{%- assign record = page.key | collection_entry: "people" -%}
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign record = page.person_key | collection_entry: "people" -%}
 <article class="page person"
          itemprop=person
          itemscope
          itemtype="https://schema.org/Person">
-  {%- if record.id -%}
-  <link itemprop=sameAs href={{ record.id }}>
-  {%- endif -%}
+  {% if record.id -%}
+  <link itemprop=sameAs href="{{ record.id }}">
+  {% endif -%}
+  {% if record.orcid -%}
+  <link itemprop=sameAs href="{{ record.orcid }}">
+  {% endif -%}
 
   <header class="page-header">
     <h1 class="page-name">
-      {{ page.key | person_tag }}
+      {{ record.presentational_name.givenName }}
+      {{ record.presentational_name.familyName }}
     </h1>
-    {%- if record.birthName -%}
+
+    {% if record.birth_date or record.death_date -%}
     <h2 class="page-subtitle">
-      born {{ page.key | person_name: "birthName" }}
+      <time itemprop=birthDate>{{ record.birth_date | default: "?" }}</time>/<time itemprop=deathDate>{{ record.death_date | default: "?" }}</time>
     </h2>
-    {%- endif -%}
+    {% endif -%}
   </header>
-
-  <dl class="page-metadata">
-    {%- if record.birthDate or record.birthPlace -%}
-    <dt>Birth</dt>
-    <dd>
-      {%- if record.birthDate -%}
-      <time itemprop=birthDate datetime="{{ record.birthDate }}">
-        {{ record.birthDate }}
-      </time>
-      {%- endif -%}
-      {%- if record.birthPlace -%}
-      {{ record.birthPlace | place_tag }}
-      {%- endif -%}
-    </dd>
-    {%- endif -%}
-
-    {%- if record.deathDate or record.deathPlace -%}
-    <dt>Death</dt>
-    <dd>
-      {%- if record.deathDate -%}
-      <time itemprop=deathDate datetime="{{ record.deathDate }}">
-        {{ record.deathDate }}
-      </time>
-      {%- endif -%}
-      {%- if record.deathPlace -%}
-      {{ record.deathPlace | place_tag }}
-      {%- endif -%}
-    </dd>
-    {%- endif -%}
-
-    {%- if record.livedIn -%}
-    <dt>Lived in</dt>
-    <dd>
-      <ul>
-        {%- for location in record.livedIn -%}
-        <li itemprop=homeLocation>
-          {{ location | place_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    </dd>
-    {%- endif -%}
-
-    {%- if record.spouses -%}
-    <dt>Married to</dt>
-    <dd>
-      <ul>
-        {%- for spouse in record.spouses -%}
-        <li itemprop=spouse>
-          {{ spouse | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    {%- if record.siblings -%}
-    <dt>Siblings</dt>
-    <dd>
-      <ul>
-        {%- for sibling in record.siblings -%}
-        <li itemprop=sibling>
-          {{ sibling | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    {%- if record.parents -%}
-    <dt>Parents</dt>
-    <dd>
-      <ul>
-        {%- for parent in record.parents -%}
-        <li itemprop=parent>
-          {{ parent | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    {%- if record.children -%}
-    <dt>Children</dt>
-    <dd>
-      <ul>
-        {%- for child in record.children -%}
-        <li itemprop=children>
-          {{ child | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    {%- if record.relatedTo -%}
-    <dt>Related to</dt>
-    <dd>
-      <ul>
-        {%- for name in record.relatedTo -%}
-        <li itemprop=relatedTo>
-          {{ name | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-
-    {%- if record.knows -%}
-    <dt>Knew</dt>
-    <dd>
-      <ul>
-        {%- for known in record.knows -%}
-        <li itemprop=knows>
-          {{ known | person_tag }}
-        </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  </dl>
 </article>

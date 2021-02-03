@@ -1,0 +1,56 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% if include.references.size > 0 -%}
+<aside class="annotations annotations-commentary">
+  <h2>Commentary</h2>
+  <ul class="annotation-content">
+    {% assign previous_source_key = null -%}
+    {% for reference in include.references -%}
+    {% assign c_record = reference | collection_entry: "commentary" -%}
+    <li>
+      {% if c_record -%}
+      {% assign s_record = c_record.source_key | collection_entry: "sources" -%}
+      {% assign language = c_record.language | default: s_record.work.language -%}
+      <figure lang="{{ language }}" translate>
+        <blockquote class="source-material">
+          {{ c_record.text | markdownify }}
+        </blockquote>
+        {% if c_record.source_key -%}
+        <figcaption class="caption">
+          {% if c_record.source_key == previous_source_key -%}
+          <a href="{{ c_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
+          {{ c_record.location }}
+          {% else -%}
+          {{ c_record.source_key | mla_citation: c_record.location, c_record.edition }}
+          {% endif -%}
+
+          {% if c_record.author_key != source.author_key -%}
+          <br>Footnote written by
+          {% include person_link.html person_key=c_record.author_key -%}
+          {% endif -%}
+        </figcaption>
+        {% endif -%}
+      </figure>
+      {% endif -%}
+    </li>
+    {% assign previous_source_key = c_record.source_key -%}
+    {% endfor -%}
+  </ul>
+</aside>
+{% endif -%}

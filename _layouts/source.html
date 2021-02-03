@@ -1,121 +1,86 @@
 ---
 layout: default
 ---
-{%- assign record = page.key | collection_entry: "sources" -%}
-{%- assign work = record.work -%}
-{%- assign author_record = work.author | collection_entry: "people" -%}
-<article class="page">
-  {%- assign language = edition.language | default: author_record.language | default: site.lang | default: "en" -%}
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign record = page.source_key | collection_entry: "sources" -%}
+{% assign work = record.work -%}
+<article class="page source">
   <header class="page-header data-source"
-          lang={{ language }}
+          lang="{{ work.language }}" translate
           itemscope
           itemtype="https://schema.org/Book"
           itemid="#work">
-    <h1 class="page-name source-title"
+    {% for edition_hash in record.editions -%}
+    {% assign edition_key = edition_hash | first -%}
+    <link itemprop="hasPart" href="#edition--{{ edition_key }}">
+    {% endfor -%}
+    <h1 class="page-name"
         itemprop=name>
       {{ work.name }}
     </h1>
-    {%- if work.subtitle -%}
-    <h2 class="page-subtitle source-subtitle">
-      {{ work.subtitle }}
+    {% if work.author_key -%}
+    <h2 class="page-subtitle"
+        itemprop="author person"
+        itemscope
+        itemtype="https://schema.org/Person">
+      {% include person_link.html person_key=work.author_key -%}
     </h2>
-    {%- endif -%}
-
-    {%- for edition in record.editions -%}
-    <link itemprop="hasPart" href="#edition{{ forloop.index }}">
-    {%- endfor -%}
-
-    <dl>
-      {%- if work.author -%}
-      <dt>Author</dt>
-      <dd itemprop=author
-          itemscope
-          itemtype="https://schema.org/Person"
-          itemid="#author">
-        {%- if author_record -%}
-          {%- if author_record.id -%}
-          <link itemprop=sameAs href={{ author_record.id }}>
-          {%- endif -%}
-
-          {%- assign name = author_record.name -%}
-          <a href="{{ work.author | person_permalink }}"
-             itemprop=name>
-            {%- if name.formattedName -%}
-            {{ name.formattedName }}
-            {%- else -%}
-            {%- assign givenName = name | where: "type", "givenName" -%}
-            {%- assign familyName = name | where: "type", "familyName" -%}
-            {{ givenName | map: "text" | join: " " }}
-            {%- if givenName and familyName -%}&#32;{%- endif -%}
-            {{ familyName | map: "text" | join: " " }}
-            {%- endif -%}
-          </a>
-        {%- else -%}
-        {{ work.author }}
-        {%- endif -%}
-      </dd>
-      {%- endif -%}
-
-      {%- if work.editor -%}
-      <dt>Editor</dt>
-      <dd itemprop=editor
-          itemscope
-          itemtype="https://schema.org/Person"
-          itemid="#editor">
-        {%- if editor_record -%}
-          {%- if editor_record.id -%}
-          <link itemprop=sameAs href={{ editor_record.id }}>
-          {%- endif -%}
-
-          {%- assign name = editor_record.name -%}
-          <a href="{{ work.author | person_permalink }}"
-             itemprop=name>
-            {%- if name.formattedName -%}
-            {{ name.formattedName }}
-            {%- else -%}
-            {%- assign givenName = name | where: "type", "givenName" -%}
-            {%- assign familyName = name | where: "type", "familyName" -%}
-            {{ givenName | map: "text" | join: " " }}
-            {%- if givenName and familyName -%}&#32;{%- endif -%}
-            {{ familyName | map: "text" | join: " " }}
-            {%- endif -%}
-          </a>
-        {%- else -%}
-        {{ work.editor }}
-        {%- endif -%}
-      </dd>
-      {%- endif -%}
-    </dl>
+    {% endif -%}
   </header>
 
-  <ul>
-    {%- for edition in record.editions -%}
-    <li itemscope itemtype="https://schema.org/Book https://schema.org/PublicationVolume" itemid="#edition{{ forloop.index }}">
-      <link itemprop=author href="#author">
-      <link itemprop=isPartOf href="#work">
-      {%- if edition.language -%}
-      <meta itemprop=inLanguage content={{ edition.language }}>
-      {%- endif -%}
-      {%- if edition.id -%}
-      <link itemprop=sameAs href={{ edition.id }}>
-      {%- endif -%}
-      {%- if edition.oclc_number -%}
-      <meta itemprop=oclc_number content={{ edition.oclc_number }}>
-      {%- endif -%}
-      {%- if edition.volume_number -%}
-      Volume <span itemprop=volumeNumber>{{ edition.volume_number }}</span>
-      {%- endif -%}
+  <section class="page-content">
+    <ul>
+      {% for edition_hash in record.editions -%}
+      {% assign edition_key = edition_hash | first -%}
+      {% assign edition = edition_hash | last -%}
+      <li itemscope
+          itemtype="https://schema.org/{{ edition.type | capitalize }} https://schema.org/PublicationVolume"
+          itemid="#edition--{{ edition_key }}">
+        <link itemprop=author href="#author">
+        <link itemprop=isPartOf href="#work">
+        {% if edition.language -%}
+        <meta itemprop=inLanguage content="{{ edition.language }}">
+        {% endif -%}
+        {% if edition.id -%}
+        <link itemprop=sameAs href={{ edition.id }}>
+        {% endif -%}
+        {% if edition.oclc_number -%}
+        <meta itemprop=oclc_number content={{ edition.oclc_number }}>
+        {% endif -%}
+        {% if edition.volume_number -%}
+        Volume <span itemprop=volumeNumber>{{ edition.volume_number }}</span>
+        {% endif -%}
 
-      {%- if edition.name -%}
-      <span itemprop=name>{{ edition.name }}</span>
-      {%- endif -%}
+        {% if edition.url -%}
+        <a href="{{ edition.url }}" itemprop=name>{{ edition.name | default: work.name }}</a>
+        {% else -%}
+        <span itemprop=name>{{ edition.name | default: work.name }}</span>
+        {% endif -%}
 
-      {%- if edition.date -%}
-      Published <time datetime="{{ edition.date }}" itemprop=datePublished>
-        {{ edition.date }}
-      </time>
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
+        {% if edition.date -%}
+        Published <time itemprop=datePublished>
+          {{ edition.date }}
+        </time>
+        {% endif -%}
+      </li>
+      {% endfor -%}
+    </ul>
+  </section>
 </article>

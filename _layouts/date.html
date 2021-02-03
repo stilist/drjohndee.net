@@ -1,52 +1,57 @@
 ---
 layout: default
 ---
-<article class='post'>
-  <a class=u-url href="{{ page.url | relative_url }}" hidden></a>
-  <header class=post-header>
-    <h1 class='post-title p-name' itemprop='name headline'>
-      {{ page.raw_timestamp | time_tag: "England", "datePublished" }}
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+<article class="page">
+  <header class="page-header">
+    <h1 class="page-name p-name"
+        itemprop="name headline">
+      {{ page.timestamp }}
     </h1>
   </header>
 
-  <ul class='entries'>
-    {%- assign entries = page.raw_timestamp | entries_for_date -%}
-    {%- for entry in entries -%}
-    {%- assign source_data = entry.source | source_citation_data -%}
-    {%- assign language = entry.language | default: source_data.language -%}
-    <li class='h-entry'
-        itemscope itemtype=http://schema.org/BlogPosting
-        lang='{{ language }}' translate>
-      {%- include citation.html source_key=entry.source source_location=entry.source_location -%}
-
-      {%- assign author = entry.author | default: source_record.author -%}
-      {%- if author -%}
-      <span class=post-author>
-        <span itemprop=author class='p-author h-card'>
-          {{ author | person_tag }}
+  <section class="page-content">
+    <ul class="entries h-entry"
+        itemscope itemtype=http://schema.org/BlogPosting>
+      {% assign entries = page.timestamp | source_material_for_date -%}
+      {% for entry in entries -%}
+      {% assign language = entry.language | default: source_data.language -%}
+      <li class="entry"
+          lang="{{ language }}" translate>
+        <span class="citation">
+          {{ entry.source_key | mla_citation: entry.location, entry.edition, entry.author_key }}
         </span>
-      </span>
-      {%- endif -%}
 
-      <div class='post-content e-content'
-           itemprop=articleBody>
-        {%- assign processed_content = entry.content | liquify -%}
-        {%- if entry.ext == ".md" -%}
-        {%- assign processed_content = processed_content | markdownify -%}
-        {%- endif -%}
-        {%- assign maybe_p = processed_content | slice: 0, 3 -%}
-        {%- if maybe_p == "<p>" -%}
+        <div class="source-material e-content"
+             itemprop=articleBody>
+          {% assign processed_content = entry.content | markdownify -%}
           {{ processed_content }}
-        {%- else -%}
-          <p>{{ processed_content }}
-        {%- endif -%}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
 
-  {%- assign footnotes = page.raw_timestamp | relevant_footnotes -%}
-  {%- include footnotes.html references=footnotes -%}
+    {% assign commentary = page.timestamp | commentary_for_date -%}
+    {% include commentary.html references=commentary -%}
+  </section>
 
-  {%- include events.html reference=page -%}
+  {% assign footnotes = page.timestamp | relevant_footnotes -%}
+  {% include footnotes.html references=footnotes -%}
 </article>

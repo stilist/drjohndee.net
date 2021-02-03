@@ -1,60 +1,79 @@
+/**
+ * The life and times of Dr John Dee
+ * Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 @charset "utf-8";
 
 :root {
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
-  --neutral-0--components: 1 1 0.9882; /* #fffffc */
+  --neutral-0--components: 1 1 0.9882;
   --neutral-0: #fffffc;
-  --neutral-10--components: 0.9843 0.9804 0.9725; /* #fbfaf8 */
+  --neutral-10--components: 0.9843 0.9804 0.9725;
   --neutral-10: #fbfaf8;
-  --neutral-20--components: 0.9569 0.9529 0.9412; /* #f4f3f0 */
+  --neutral-20--components: 0.9569 0.9529 0.9412;
   --neutral-20: #f4f3f0;
-  --neutral-30--components: 0.9137 0.9098 0.9020; /* #e9e8e6 */
+  --neutral-30--components: 0.9137 0.9098 0.9020;
   --neutral-30: #e9e8e6;
-  --neutral-5--components: 0.9922 0.9882 0.9804; /* #fdfcfa */
+  --neutral-5--components: 0.9922 0.9882 0.9804;
   --neutral-5: #fdfcfa;
   /* foreground color inverts here */
-  --neutral-100--components: 0 0 0; /* #000 */
+  --neutral-100--components: 0 0 0;
   --neutral-100: #000;
-  --neutral-40--components: 0.8510 0.8510 0.8431; /* #d9d9d7 */
+  --neutral-40--components: 0.8510 0.8510 0.8431;
   --neutral-40: #d9d9d7;
-  --neutral-50--components: 0.7725 0.7686 0.7608; /* #c5c4c2 */
+  --neutral-50--components: 0.7725 0.7686 0.7608;
   --neutral-50: #c5c4c2;
-  --neutral-60--components: 0.6667 0.6627 0.6549; /* #aaa9a7 */
+  --neutral-60--components: 0.6667 0.6627 0.6549;
   --neutral-60: #aaa9a7;
-  --neutral-70--components: 0.5294 0.5294 0.5255; /* #878786 */
+  --neutral-70--components: 0.5294 0.5294 0.5255;
   --neutral-70: #878786;
-  --neutral-80--components: 0.3686 0.3686 0.3647; /* #5e5e5d */
+  --neutral-80--components: 0.3686 0.3686 0.3647;
   --neutral-80: #5e5e5d;
-  --neutral-90--components: 0.1882 0.1843 0.1843; /* #302f2f */
+  --neutral-90--components: 0.1882 0.1843 0.1843;
   --neutral-90: #302f2f;
+
   /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
-  --accent-0--components: 1.0000 0.9804 0.9490; /* #fffaf2 */
+  --accent-0--components: 1.0000 0.9804 0.9490;
   --accent-0: #fffaf2;
-  --accent-10--components: 0.9922 0.8980 0.7333; /* #fde5bb */
+  --accent-10--components: 0.9922 0.8980 0.7333;
   --accent-10: #fde5bb;
-  --accent-20--components: 0.9804 0.8078 0.5255; /* #face86 */
+  --accent-20--components: 0.9804 0.8078 0.5255;
   --accent-20: #face86;
-  --accent-30--components: 0.9608 0.7137 0.3412; /* #f5b657 */
+  --accent-30--components: 0.9608 0.7137 0.3412;
   --accent-30: #f5b657;
-  --accent-40--components: 0.9294 0.6157 0.1882; /* #ed9d30 */
+  --accent-40--components: 0.9294 0.6157 0.1882;
   --accent-40: #ed9d30;
-  --accent-5--components: 0.9961 0.9412 0.8992; /* #fef0d6 */
+  --accent-5--components: 0.9961 0.9412 0.8992;
   --accent-5: #fef0d6;
-  --accent-50--components: 0.8941 0.5098 0.0745; /* #e48213 */
+  --accent-50--components: 0.8941 0.5098 0.0745;
   --accent-50: #e48213;
-  --accent-60--components: 0.8431 0.4000 0; /* #d76600 */
+  --accent-60--components: 0.8431 0.4000 0;
   --accent-60: #d76600;
   /* foreground color inverts here */
-  --accent-100--components: 0.5294 0.0980 0; /* #871900 */
+  --accent-100--components: 0.5294 0.0980 0;
   --accent-100: #871900;
-  --accent-70--components: 0.7803 0.3176 0; /* #c75100 */
+  --accent-70--components: 0.7803 0.3176 0;
   --accent-70: #c75100;
-  --accent-80--components: 0.6020 0.2352 0; /* #b33c00 */
+  --accent-80--components: 0.6020 0.2352 0;
   --accent-80: #b33c00;
-  --accent-90--components: 0.6196 0.1568 0; /* #9e2800 */
+  --accent-90--components: 0.6196 0.1568 0;
   --accent-90: #9e2800;
 
-  --invalid-data--components: 1 0 0.88; /* #f0c */
+  --invalid-data--components: 1 0 0.88;
   --invalid-data: #f0c;
 
   --base-font-size: 18px;
@@ -118,7 +137,6 @@
     --neutral-10: color(display-p3 var(--neutral-10--components));
     --neutral-20: color(display-p3 var(--neutral-20--components));
     --neutral-30: color(display-p3 var(--neutral-30--components));
-    /* foreground color inverts here */
     --neutral-40: color(display-p3 var(--neutral-40--components));
     --neutral-50: color(display-p3 var(--neutral-50--components));
     --neutral-60: color(display-p3 var(--neutral-60--components));
@@ -134,7 +152,6 @@
     --accent-40: color(display-p3 var(--accent-40--components));
     --accent-50: color(display-p3 var(--accent-50--components));
     --accent-60: color(display-p3 var(--accent-60--components));
-    /* foreground color inverts here */
     --accent-70: color(display-p3 var(--accent-70--components));
     --accent-80: color(display-p3 var(--accent-80--components));
     --accent-90: color(display-p3 var(--accent-90--components));
@@ -160,30 +177,11 @@
   }
 }
 
-:lang(cy) {
-  quotes: '‘ ' ' ’' '“ ' ' ”';
-}
-:lang(dk) {
-  quotes: "»" "«" "›" "‹";
-}
 :lang(en),
 :lang(en-emodeng) {
   quotes: '‘' '’' '“' '”';
 }
-*[lang|="fr"] {
-  quotes: "« " " »" "‹ " " ›";
-}
-:lang(gr),
-q[lang|="en-Grek"],
-q[lang|="la"] {
-  quotes: "«" "»" "“" "”" "‘" "’";
-}
-:lang(ja) {
-  quotes: "「" "」" "『" "』";
-}
-:lang(en-modeng),
-:lang(la-medieval),
-:lang(la-renais) {
+:lang(en-modeng) {
   font-variant-alternates: historical-forms;
   font-variant-ligatures: historical-ligatures;
 }
@@ -238,12 +236,6 @@ ul > li {
   line-height: var(--vertical-rhythm);
   margin-bottom: var(--vertical-rhythm);
 }
-ol ol, ol ul,
-ul ol, ul ul {
-  margin-bottom: 0;
-  margin-left: calc(var(--gutter-width) * 4);
-  margin-top: var(--vertical-rhythm);
-}
 blockquote {
   color: var(--neutral-80);
   padding-left: calc(var(--gutter-width));
@@ -269,36 +261,26 @@ blockquote::before {
 blockquote > :last-child {
   margin-bottom: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2 {
   font-weight: 400;
   line-height: 1em;
 }
 h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.125;
+  line-height: calc(var(--vertical-rhythm) * 1.2);
   margin: calc(var(--vertical-rhythm) * 1.8) 0
-          var(--vertical-rhythm);
+          calc(var(--vertical-rhythm) * 0.8);
 }
-h3 {
-  font-size: 1.625rem;
-  margin-top: 2.5rem;
-}
-h2 + h3 {
-  margin-top: 0;
-}
-h4 {
-  font-size: 1.25rem;
-}
-ins::before,
-ins::after {
-  font-family: var(--font-sans-serif);
-}
-ins::before {
-  content: '[';
-}
-ins::after {
-  content: ']';
+hr {
+  border: 0;
+  background-color: var(--foreground);
+  height: 1px;
+  left: 50%;
+  margin-bottom: calc(var(--vertical-rhythm) * 1.5);
+  margin-left: -15%;
+  margin-top: calc(var(--vertical-rhythm) * 1.45);
+  position: relative;
+  width: 30%;
 }
 p {
   line-height: calc(var(--vertical-rhythm) * 2);
@@ -319,82 +301,31 @@ p {
 }
 
 
-.page,
-.post {
+.page {
   column-gap: var(--gutter-width);
   display: grid;
   grid-template-columns: repeat(auto-fit,
                                 var(--column-width));
-  grid-template-rows: auto auto auto;
-}
-.page {
+  grid-template-rows: auto auto;
   grid-template-areas:
-    "header   header   header   header   header   header   header    header    header    header    header    header    header    header    header   "
-    "metadata metadata metadata metadata metadata metadata metadata  metadata  metadata  metadata  metadata  metadata  metadata  metadata  metadata "
-    "content  content  content  content  content     .     footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes"
-    "events   events   events   events   events      .     footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes";
-}
-.post {
-  grid-template-areas:
-    "header    header    header    header    header    header    header    header    header     header header header header header header"
-    "content   content   content   content   content   content   content   content   content       .   events events events events events"
-    "footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes footnotes     .   events events events events events";
-}
-.page-header,
-.post-header {
-  grid-area: header;
+    "header  header  header  header  header  header  header  header  header  header header    header    header    header    header"
+    "content content content content content content content content content   .    footnotes footnotes footnotes footnotes footnotes";
 }
 .page-header {
-  margin-bottom: calc(var(--vertical-rhythm) * 2.4);
+  grid-area: header;
+  margin-bottom: calc(var(--vertical-rhythm) * 1.9);
 }
-.post-header p {
-  margin-bottom: calc(var(--vertical-rhythm) * 0.6);
-  margin-top: calc(var(--vertical-rhythm) * 1.1);
-  padding: calc(var(--vertical-rhythm) * 2.5) 0 0;
-}
-.page-name,
-.post-title,
-.source-title {
+.page-name {
   font-size: 2.625rem;
   font-weight: 700;
-  line-height: calc(var(--vertical-rhythm) * 2.9);
+  line-height: calc(var(--vertical-rhythm) * 3);
   margin-bottom: calc(var(--vertical-rhythm) * 2);
   position: relative;
 }
-.post-subtitle,
-.source-subtitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: calc(var(--vertical-rhythm) * 2);
-  margin-top: var(--vertical-rhythm);
-}
-.post-summary {
-  max-width: calc(var(--primary-column-count) * var(--column-width)
-           + calc(var(--primary-column-count) - 1) * var(--gutter-width));
-}
-.page-metadata {
-  column-count: calc(var(--column-count) / 3);
-  column-gap: var(--gutter-width);
-  font-size: 1.0rem;
-  grid-area: metadata;
-  margin-bottom: calc(var(--vertical-rhythm) * 3);
-}
-.page-metadata dt {
-  break-after: column;
-  font-weight: bold;
-}
-.page-metadata dd {
-  break-inside: avoid;
-  margin-bottom: calc(var(--vertical-rhythm) * 1.4);
-}
-.page-content {
+.source-material {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  grid-area: content;
 }
 .entries {
-  grid-area: content;
   list-style: none;
   margin-bottom: 0;
   margin-bottom: calc(var(--vertical-rhythm) * 5);
@@ -410,58 +341,51 @@ p {
   position: absolute;
   width: 30%;
 }
-.entries .h-entry {
+.entries .entry {
   margin-bottom: 0;
 }
-.h-entry + .h-entry {
+.entry + .entry {
   margin-top: calc(var(--vertical-rhythm) * 2.2);
 }
-.h-entry .citation {
+.entry .citation {
   display: block;
   line-height: calc(var(--vertical-rhythm) * 2);
   margin-bottom: calc(var(--vertical-rhythm) * 0.8);
 }
-.post-content {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  margin-bottom: var(--vertical-rhythm);
-}
-.entries .post-content:last-child {
+.entries .page-content:last-child {
   margin-bottom: 0;
 }
-.post-content blockquote {
+.page-content {
+  grid-area: content;
+  line-height: 1.6rem;
+  margin-bottom: calc(var(--vertical-rhythm) * 1.2);
+}
+.page-content .e-content {
+  font-size: 1.3rem;
+}
+.page-content blockquote {
   margin-bottom: var(--vertical-rhythm);
   margin-top: var(--vertical-rhythm);
 }
-.post-content p {
+.page-content p {
   margin-bottom: calc(var(--vertical-rhythm) * 1);
 }
-.post-content p:last-child {
+.page-content p:last-child {
   margin-bottom: 0;
 }
-
-.annotations {
-  font-size: 1.1rem;
-}
-.annotations h1 {
+.page-content li {
   line-height: calc(var(--vertical-rhythm) * 2);
+}
+
+.annotations h1 {
+  line-height: calc(var(--vertical-rhythm) * 1.9);
   margin-bottom: calc(var(--vertical-rhythm) * 2);
-}
-.annotations-events {
-  grid-area: events;
-}
-.annotations-footnotes {
-  grid-area: footnotes;
-}
-.annotations-references {
-  grid-area: references;
 }
 .annotations li {
   list-style: none;
 }
 .annotations li + li {
-  margin-top: calc(var(--vertical-rhythm) * 2);
+  margin-top: calc(var(--vertical-rhythm) * 1.9);
 }
 .annotations blockquote {
   font-family: var(--font-serif);
@@ -471,102 +395,17 @@ p {
   width: 2px;
 }
 .annotations figcaption {
-  font-size: 1.0rem;
-  line-height: 2rem;
+  font-size: 0.9rem;
+  line-height: calc(var(--vertical-rhythm) * 2);
+  margin-top: calc(var(--vertical-rhythm) * 1.1);
 }
-.data-source--book {
-  font-style: italic;
+.annotations-commentary .annotation-content {
+  font-size: 1.1rem;
+}
+.annotations-footnotes {
+  grid-area: footnotes;
 }
 
 #site-footer {
   margin-top: calc(var(--vertical-rhythm) * 5);
-}
-
-#scale {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--content-width);
-  right: 0;
-  margin: 0 auto;
-  pointer-events: none;
-  z-index: -1;
-}
-#scale .row {
-  display: flex;
-  border-bottom: 1px solid var(--foreground);
-  opacity: 0.4;
-}
-#scale span {
-  background-color: #f00;
-  display: block;
-  height: calc(var(--vertical-rhythm) - 1px);
-  opacity: 0.4;
-  width: var(--column-width);
-}
-#scale span + span {
-  margin-left: var(--gutter-width);
-}
-#scale span:nth-child(n+16) {
-  display: none;
-}
-@media (max-width: 960px) {
-  #scale span:nth-child(n+9) {
-    display: none;
-  }
-}
-.debug * {
-  background-color: #0000ff05;
-}
-.debug time,
-.debug .is-unknown-reference {
-  background-color: var(--invalid-data);
-  color: var(--background);
-}
-.debug time[datetime] {
-  background-color: transparent;
-  color: inherit;
-}
-.debug time[datetime],
-.debug .data-money,
-.debug .data-person,
-.debug .data-place,
-.debug .data-source {
-  margin-left: 1.3em;
-  position: relative;
-}
-time[datetime]::before,
-.data-money::before,
-.data-person::before,
-.data-place::before,
-.data-source::before {
-  font-size: 0.8em;
-  font-style: normal;
-  left: -1.7em;
-  position: absolute;
-}
-.debug time[datetime]::before {
-  content: '📅';
-}
-.debug time[datetime*='T']::before {
-  content: '⌚️';
-}
-.debug .data-event::before {
-  content: '📰';
-}
-.debug .data-money::before {
-  content: '🪙';
-}
-.debug .data-person::before {
-  content: '👤';
-}
-.debug .data-place::before {
-  content: '🗺';
-}
-.debug .data-source::before {
-  content: '📚';
-}
-.debug #scale {
-  display: block;
 }

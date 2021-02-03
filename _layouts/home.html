@@ -1,17 +1,34 @@
 ---
 layout: default
 ---
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
 <div class="home">
-  {%- if site.posts.size > 0 -%}
+  {% if site.posts.size > 0 -%}
   <ul class="post-list">
-    {%- for post in site.posts -%}
+    {% for post in site.posts -%}
     <li class="post-summary">
       <a class="post-link" href="{{ post.url | relative_url }}">
-        {%- assign country = post.author.country -%}
-        {{ post.raw_timestamp | time_tag: country, "datePublished" }}
+        {{ post.timestamp }}
       </a>
     </li>
-    {%- endfor -%}
+    {% endfor -%}
   </ul>
-  {%- endif -%}
+  {% endif -%}
 </div>

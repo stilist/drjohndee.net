@@ -1,16 +1,21 @@
 ---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
 work:
-  editor: "Earwaker, J. P."
+  author_key: "Various authors"
+  editor_key: "Earwaker, J. P."
   language: en
   license: "public domain"
-  name: >-4
-      Local Gleanings: an Archælogical & Historical Magazine,
-      Chiefly Relating to Lancashire & Cheshire
-  type: Book
+  name: >-
+    Local Gleanings: an Archælogical & Historical Magazine, Chiefly Relating to
+    Lancashire & Cheshire
 editions:
-  -
-    format: ebook
-    id: http://www.worldcat.org/oclc/265618046
-    oclc_number: 265618046
-    source_url: "https://www.google.com/books/edition/_/SaM-AQAAMAAJ"
-    volume_number: Ⅰ
+  compilation:
+    id: "http://www.worldcat.org/oclc/265618046"
+    oclc_number: "265618046"
+    type: book
+    url: "https://www.google.com/books/edition/_/SaM-AQAAMAAJ"
