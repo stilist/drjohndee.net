@@ -65,7 +65,8 @@ module HistoricalDiary
         edition['publisher'],
         edition['date'],
         location.sub('-', '–'),
-      ].compact.join(', ').capitalize
+      ].compact.join(', ')
+      publishing_info[0] = publishing_info[0].capitalize
 
       source_name = edition['name'] || source.dig('work', 'name')
       output = [
