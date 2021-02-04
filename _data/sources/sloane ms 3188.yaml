@@ -16,9 +16,9 @@ work:
 editions:
   manuscript:
     date: 1583
-    type: manuscript
+    type: Manuscript
     name: >-
       Anno 1581 1582 Mysteriorum Liber Primus. Mortlaci, Ⅰ
   book:
-    type: book
+    type: Book
     url: "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Sloane_MS_3188"

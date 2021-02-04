@@ -7,7 +7,6 @@ work:
     The Private Diary of Dr. John Dee, and the Catalog of His Manuscripts, from
     the original manuscripts in the Ashmolean Museum at Oxford, and Trinity
     College Library, Cambridge
-  type: Book
 editions:
   book:
     date: "1842"
@@ -16,4 +15,5 @@ editions:
     oclc_number: "1050791672"
     city: "London"
     publisher: "The Camden Society"
+    type: Book
     url: "https://archive.org/details/privatediaryofdr00deejuoft"
