@@ -46,7 +46,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         </div>
 
         <span class="citation"
-              itemprop=citation>
+              itemprop=citation
+              itemscope>
+          {% include source_data.html source_key=entry.source_key
+                                      edition_key=entry.edition_key
+                                      location=entry.location
+                                      volume=entry.volume -%}
           {{ entry.source_key | mla_citation: entry.location,
                                               entry.edition,
                                               entry.volume,

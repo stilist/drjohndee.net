@@ -34,12 +34,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {{ c_record.text | markdownify }}
         </blockquote>
 
+        {% assign author_key = c_record.author_key | default: s_record.work.author_key -%}
+        {% include person_data.html person_key=author_key itemprop="creator" -%}
+
         {% if c_record.source_key -%}
         <figcaption class="caption"
                     itemprop=citation
-                    itemscope itemtype="https://schema.org/{{ s_record.work.type }}">
-          <meta itemprop=url content="{{ c_record.source_key | collection_entry_url: "sources" }}">
-          <meta itemprop=pagination content="{{ c_record.location }}">
+                    itemscope>
+          {% include source_data.html source_key=c_record.source_key
+                                      edition_key=c_record.edition_key
+                                      location=c_record.location
+                                      volume=c_record.volume -%}
 
           {% if c_record.source_key == previous_source_key -%}
           <a href="{{ c_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,

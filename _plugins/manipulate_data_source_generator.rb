@@ -20,7 +20,7 @@ require_relative '../_lib/collections'
 require 'jekyll'
 
 module HistoricalDiary
-  class InjectDataSourceGenerator < ::Jekyll::Generator
+  class ManipulateDataGenerator < ::Jekyll::Generator
     priority :high
     safe true
 
@@ -32,6 +32,12 @@ module HistoricalDiary
           records.each do |_, record|
             record['source_key'] = source_key
           end
+        end
+      end
+
+      site.data['sources'].values.each do |source_record|
+        source_record['editions'].each do |key, record|
+          record['edition_key'] = key
         end
       end
     end

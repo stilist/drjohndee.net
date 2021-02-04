@@ -40,9 +40,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% if f_record.source_key -%}
         <figcaption class="caption"
                     itemprop=citation
-                    itemscope itemtype="https://schema.org/{{ f_record.work.type }}">
-          <meta itemprop=url content="{{ f_record.source_key | collection_entry_url: "sources" }}">
-          <meta itemprop=pagination content="{{ f_record.location }}">
+                    itemscope>
+          {% include source_data.html source_key=f_record.source_key
+                                      edition_key=f_record.edition_key
+                                      location=f_record.location
+                                      volume=f_record.volume -%}
 
           {% if f_record.source_key == previous_source_key -%}
           <a href="{{ f_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,

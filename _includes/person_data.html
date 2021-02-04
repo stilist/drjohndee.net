@@ -1,0 +1,29 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign person_key = include.person_key -%}
+{% assign p_record = person_key | collection_entry: "people" -%}
+{% if p_record -%}
+<span itemprop="{{ include.itemprop }} person"
+      itemscope
+      itemtype="https://schema.org/Person"
+      itemid="{{ include.person_key }}">
+  <meta itemprop=name content="{{ p_record.presentational_name.givenName }} {{ p_record.presentational_name.familyName }}">
+  <meta itemprop=url content="{{ person_key | collection_entry_url: "people" }}">
+</span>
+{% endif -%}
