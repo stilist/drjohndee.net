@@ -243,11 +243,11 @@ blockquote {
 }
 blockquote::before {
   background-color: var(--neutral-40);
-  bottom: 0.5em;
+  bottom: 0;
   content: '';
   left: calc(var(--gutter-width) * -0.5);
   position: absolute;
-  top: 0.5em;
+  top: 0;
   width: 4px;
 }
 @media (prefers-color-scheme: dark) {
@@ -400,7 +400,7 @@ p {
   margin-top: calc(var(--vertical-rhythm) * 1.1);
 }
 .annotations-commentary .annotation-content {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .annotations-footnotes {
   grid-area: footnotes;
