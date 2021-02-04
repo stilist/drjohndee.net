@@ -6,7 +6,7 @@
 
 "1554-08-25":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 1"
   symbol: "*"
   text: >-
@@ -15,7 +15,7 @@
     inserted at various times by Dee when professionally consulted as an astrologer.
 "1555-08-01":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 1"
   symbol: "†"
   text: >-
@@ -27,14 +27,14 @@
     Kelly was first an apothecary in Worcester.”
 "1565-10-17":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 2"
   symbol: "*"
   text: >-
     The brother of the celebrated astrologer before mentioned.
 "1577-01-16":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 2"
   symbol: "†"
   text: >-
@@ -48,7 +48,7 @@
     thereabouts, who very often invited him to their houses or came to his.”
 "1577-05-01":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 3"
   symbol: "*"
   text: >-
@@ -58,7 +58,7 @@
     an intimate friend of Dr. Dee’s.”
 "1577-08-19":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 3"
   symbol: "†"
   text: >-
@@ -70,7 +70,7 @@
     Monarchie, as having been written in the year 1576.
 "1577-11-28":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 4"
   symbol: "*"
   text: >-
@@ -78,7 +78,7 @@
     Dee’s best patrons.
 "1578-06-30.1":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 4"
   symbol: "†"
   text: >-
@@ -86,7 +86,7 @@
     in his handwriting is in Archbishop Tenison’s library in St. Martin’s-in-the-Fields.
 "1578-06-30.2":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 4"
   symbol: "‡"
   text: >-
@@ -94,7 +94,7 @@
     mentions this fact in his collection of voyages.
 "1578-08-15":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 4"
   symbol: "§"
   text: >-
@@ -102,7 +102,7 @@
     Lond. 1577.
 "1579-07-13":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 6"
   symbol: "*"
   text: >-
@@ -111,14 +111,14 @@
     that morning.” — MS. Ashm. 1790, fol. 63.
 "1579-08-08":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 6"
   symbol: "†"
   text: >-
     This person is not noticed by the Oxford biographers.
 "1579-12-09":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 7"
   symbol: "*"
   text: >-
@@ -129,7 +129,7 @@
     sal do well as this doth ! ’”
 "1579-12-28":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 7"
   symbol: "†"
   text: >-
@@ -138,7 +138,7 @@
     Dee revealed to him.
 "1580-10-10":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 9-10"
   symbol: "*"
   text: >-
@@ -153,7 +153,7 @@
     glass is spoken of again.
 "1580-11-22":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 10"
   symbol: "*"
   text: >-
@@ -161,7 +161,7 @@
     on the margin of the MS.
 "1581":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 10"
   symbol: "†"
   text: >-
@@ -169,7 +169,7 @@
     preserved in the Bodleian Library. — MS. Rawl. Miscel. 241.
 "1581-09":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 12"
   symbol: "*"
   text: >-
@@ -178,7 +178,7 @@
     me ! ”
 "1581-09-05":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 13"
   symbol: "*"
   text: >-
@@ -187,7 +187,7 @@
     called it, of the salt of metalls, the projection whereof was one upon an hundred.”
 "1582-03-09":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 15"
   symbol: "*"
   text: >-
@@ -199,7 +199,7 @@
     whether by him or by the Doctor it is impossible to say, but most probably the former.
 "1583-02-26":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 19"
   symbol: "*"
   text: >-
@@ -225,7 +225,7 @@
     accompting, or verifyeng, according to the tyme truely spent.”
 "1583-05-01":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 20"
   symbol: "*"
   text: >-
@@ -234,7 +234,7 @@
     Douce, 363, fol. 125. This account differs from Dee’s by a single day.
 "1583-07-31":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 21"
   symbol: "*"
   text: >-
@@ -247,28 +247,28 @@
     come by water from Greenwich.” — Dr. Dee’s Compendious Memoriall, p. 511.
 "1587-02-09":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 22"
   symbol: "*"
   text: >-
     He frequently speaks of Prince Albert Leski under the title of Illustrissimus.
 "1587-02-19":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 22"
   symbol: "†"
   text: >-
     It is almost unnecessary to observe that these initials refer to Edward Kelly.
 "1587-09-30":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 24"
   symbol: "*"
   text: >-
     That is, Thomas Kelley and John Carp.
 "1588-12-04":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 29"
   symbol: "*"
   text: >-
@@ -287,7 +287,7 @@
     reader also to Mr. Barlow’s History of Optics in the Encyclopedia Metropolitana.
 "1589-12-19":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 32"
   symbol: "*"
   text: >-
@@ -295,7 +295,7 @@
     very favourably received by her Majesty.
 "1590-03-27":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 33"
   symbol: "*"
   text: >-
@@ -306,7 +306,7 @@
     occurrence, though what “ θεμ ” can refer to I have not been able to discover.
 "1590-05-18":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 34"
   symbol: "*"
   text: >-
@@ -314,7 +314,7 @@
     navigators of his time. A general reference to Hackluyt will be sufficient.
 "1591-01-21":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 37"
   symbol: "*"
   text: >-
@@ -323,7 +323,7 @@
     of this.
 "1591-03-26":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 38"
   symbol: "*"
   text: >-
@@ -331,7 +331,7 @@
     Ashm. 1790.
 "1592-08-26":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 41"
   symbol: "*"
   text: >-
@@ -340,7 +340,7 @@
     immortalized.
 "1593-02-21":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 43"
   symbol: "*"
   text: >-
@@ -349,7 +349,7 @@
     Mortlake.
 "1600-09-29":
   author_key: "Halliwell, James"
-  edition: book
+  edition_key: "book"
   location: "page 63"
   symbol: "*"
   text: >-

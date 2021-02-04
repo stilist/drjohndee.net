@@ -6,7 +6,7 @@
 
 "1597-05-04.1":
   author_key: "Bailey, John Eglington"
-  edition: compilation
+  edition_key: "compilation"
   location: "page 132"
   symbol: "*"
   volume: "Ⅰ"
@@ -14,7 +14,7 @@
     ‘ Of the parish” is an insertion.
 "1597-05-04.2":
   author_key: "Bailey, John Eglington"
-  edition: compilation
+  edition_key: "compilation"
   location: "page 132"
   symbol: "†"
   volume: "Ⅰ"
@@ -24,7 +24,7 @@
     title that a parish priest can enjoy.
 "1597-05-04.3":
   author_key: "Bailey, John Eglington"
-  edition: compilation
+  edition_key: "compilation"
   location: "page 133"
   symbol: "*"
   volume: "Ⅰ"
