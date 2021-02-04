@@ -48,7 +48,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           <a href="{{ f_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
           {{ f_record.location }}
           {% else -%}
-          {{ f_record.source_key | mla_citation: f_record.location, f_record.edition }}
+          {{ f_record.source_key | mla_citation: f_record.location,
+                                                 f_record.edition,
+                                                 f_record.volume }}
           {% endif -%}
 
           {% if f_record.author_key != source.author_key -%}

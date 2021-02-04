@@ -47,7 +47,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <span class="citation"
               itemprop=citation>
-          {{ entry.source_key | mla_citation: entry.location, entry.edition, entry.author_key }}
+          {{ entry.source_key | mla_citation: entry.location,
+                                              entry.edition,
+                                              entry.volume,
+                                              entry.author_key }}
         </span>
       </li>
       {% endfor %}

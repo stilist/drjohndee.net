@@ -45,7 +45,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           <a href="{{ c_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
           {{ c_record.location }}
           {% else -%}
-          {{ c_record.source_key | mla_citation: c_record.location, c_record.edition, c_record.author_key }}
+          {{ c_record.source_key | mla_citation: c_record.location,
+                                                 c_record.edition,
+                                                 c_record.volume,
+                                                 c_record.author_key }}
           {% endif -%}
         </figcaption>
         {% endif -%}
