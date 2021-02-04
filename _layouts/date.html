@@ -21,13 +21,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 <article class="page"
          itemscope itemtype="http://schema.org/BlogPosting">
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-
   <header class="page-header">
     <h1 class="page-name p-name"
         itemprop="name">
-      <meta itemprop=headline content="Events and text for {{ page.timestamp }}">
+      <meta itemprop=headline content="Events and writings for {{ page.timestamp }}">
       <time class="dt-published"
             itemprop=datePublished>
         {{ page.timestamp }}
@@ -42,16 +39,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
           lang="{{ language }}" translate>
-        <span class="citation"
-              itemprop=citation>
-          {{ entry.source_key | mla_citation: entry.location, entry.edition, entry.author_key }}
-        </span>
-
         <div class="source-material e-content"
              itemprop=articleBody>
           {% assign processed_content = entry.content | markdownify -%}
           {{ processed_content }}
         </div>
+
+        <span class="citation"
+              itemprop=citation>
+          {{ entry.source_key | mla_citation: entry.location, entry.edition, entry.author_key }}
+        </span>
       </li>
       {% endfor %}
     </ul>
