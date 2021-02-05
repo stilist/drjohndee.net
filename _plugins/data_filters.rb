@@ -33,15 +33,11 @@ module HistoricalDiary
     end
 
     def commentary_for_date(timestamp)
-      return [] if timestamp.nil?
-
-      date = timestamp.split(/(--|\/)/).first
-      commentary_by_timestamp[date]
+      transclusions_for_timestamp('commentary', timestamp)
     end
 
-    # @todo
     def context_for_date(timestamp)
-      []
+      transclusions_for_timestamp('context', timestamp)
     end
 
     # > Author. Title. Title of container (do not list container for standalone
@@ -114,10 +110,7 @@ module HistoricalDiary
     end
 
     def relevant_footnotes(timestamp)
-      return [] if timestamp.nil?
-
-      date = timestamp.split(/(--|\/)/).first
-      footnotes_by_timestamp[date]
+      transclusions_for_timestamp('footnotes', timestamp)
     end
 
     def source_material_for_date(timestamp)

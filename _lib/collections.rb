@@ -17,6 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
+require_relative 'timestamp_range'
 
 module DataCollection
   # for 'slugify'
@@ -38,6 +39,7 @@ module DataCollection
   PLURAL_TO_SINGULAR = SINGULAR_TO_PLURAL.map { |key, value| [value, key] }.
     to_h.
     freeze
+  TRANSCLUSIONS = {}
 
   def data_collection_records(collection_name)
     site = @site
@@ -80,44 +82,18 @@ module DataCollection
     end
   end
 
-  SIMPLE_DATE_PATTERN = /\A\d{4}-\d{2}-\d{2}/
-  def commentary_by_timestamp
-    return @commentary_by_timestamp if defined?(@commentary_by_timestamp)
-    @commentary_by_timestamp = {}
+  def transclusions_for_timestamp(collection_name, timestamp)
+    timestamp_range = TimestampRange.new(timestamp)
 
-    by_source = data_collection_records('commentary')
-    by_source.each do |source, records|
-      next if records.nil?
-
-      records.keys.each do |key|
-        timestamp = key.match(SIMPLE_DATE_PATTERN)&.to_s
-        next if timestamp.nil?
-
-        @commentary_by_timestamp[timestamp] ||= []
-        @commentary_by_timestamp[timestamp] << "#{source}/#{key}"
-      end
+    date_strings = timestamp_range.dates.
+      map { |date| date.strftime('%F') }.
+      freeze
+    matches = []
+    ensure_transclusions_by_date(collection_name)
+    TRANSCLUSIONS[collection_name].each do |date, keys|
+      matches.concat(keys) if date_strings.include?(date)
     end
-    @commentary_by_timestamp
-  end
-
-  def footnotes_by_timestamp
-    return @footnotes_by_timestamp if defined?(@footnotes_by_timestamp)
-    @footnotes_by_timestamp = {}
-
-    by_source = data_collection_records('footnotes')
-    by_source.each do |source, records|
-      next if records.nil?
-
-      records.keys.each do |key|
-        timestamp = key.match(SIMPLE_DATE_PATTERN)&.to_s
-        next if timestamp.nil?
-
-        @footnotes_by_timestamp[timestamp] ||= []
-        @footnotes_by_timestamp[timestamp] << "#{source}/#{key}"
-      end
-    end
-
-    @footnotes_by_timestamp
+    matches
   end
 
   private
@@ -127,5 +103,28 @@ module DataCollection
     key.gsub(%r![^\w\s-]+|(?<=^|\b\s)\s+(?=$|\s?\b)!, "")
       .gsub(%r!\s+!, "_")
       .downcase
+  end
+
+  def ensure_transclusions_by_date(collection_name)
+    return TRANSCLUSIONS[collection_name] if TRANSCLUSIONS.key?(collection_name)
+
+    TRANSCLUSIONS[collection_name] = {}
+
+    by_source = data_collection_records(collection_name)
+    by_source.each do |source, records|
+      next if records.nil?
+
+      records.keys.each do |key|
+        raw_timestamps = key.split(',')
+        raw_timestamps.each do |raw_timestamp|
+          timestamp_range = TimestampRange.new(raw_timestamp)
+          timestamp_range.dates.each do |date|
+            as_string = date.strftime('%F')
+            TRANSCLUSIONS[collection_name][as_string] ||= []
+            TRANSCLUSIONS[collection_name][as_string] << "#{source}/#{key}"
+          end
+        end
+      end
+    end
   end
 end
