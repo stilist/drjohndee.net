@@ -8,3 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - All of John Dee’s diary entries recorded in ‘The Private Diary of Dr. John Dee’, with footnotes
 - All of John Dee’s diary entries recorded in ‘Local Gleanings: an Archælogical & Historical Magazine, Chiefly Relating to Lancashire & Cheshire’, with commentary and footnotes
+- A few entries from Sloane MS 3188, manually trascribed
+- Site provides day-by-day access to entries, with additional pages for people and sources
+- Site uses structured data for entries, people, and sources
