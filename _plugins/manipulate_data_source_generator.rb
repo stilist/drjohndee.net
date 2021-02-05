@@ -25,8 +25,8 @@ module HistoricalDiary
     safe true
 
     def generate(site)
-      ::DataCollection::TRANSCLUDED_COLLECTIONS.each do |type|
-        site.data[type].each do |source_key, records|
+      ::DataCollection::TRANSCLUDED_COLLECTIONS.each do |name|
+        site.data[name].each do |source_key, records|
           next if records.nil?
 
           records.each do |_, record|
@@ -35,9 +35,9 @@ module HistoricalDiary
         end
       end
 
-      site.data['sources'].values.each do |source_record|
-        source_record['editions'].each do |key, record|
-          record['edition_key'] = key
+      site.data['sources'].values.each do |source|
+        source['editions'].each do |key, edition|
+          edition['edition_key'] = key
         end
       end
     end
