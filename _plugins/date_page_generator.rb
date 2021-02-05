@@ -17,26 +17,28 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
+require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
   class DatePage < ::Jekyll::Page
-    def initialize(site, timestamp:)
+    def initialize(site, date:)
       @site = site
       @base = site.source
       # "1500-01-02" => [1500, 1, 2]
-      date_parts = timestamp.split('-').map(&:to_i)
-      @dir = date_parts.first(2).
-        map { |atom| atom.to_s.rjust(2, '0') }.
-        join(::File::SEPARATOR)
+      @dir = [
+        date.strftime('%Y'),
+        date.strftime('%m'),
+      ].join(::File::SEPARATOR)
 
-      @basename = date_parts[2].to_s.rjust(2, '0')
+      @basename = date.strftime('%d')
       @ext = '.html'
       @name = "#{@basename}#{@ext}"
 
       read_yaml(::File.join(@base, '_layouts'), 'date.html')
 
       @data ||= {}
-      data['date_atoms'] = date_parts.first(3)
+      data['date'] = date
+      timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
       data['title'] = timestamp
       data.default_proc = proc do |_, key|
@@ -45,7 +47,7 @@ module HistoricalDiary
     end
 
     def <=>(other)
-      data['date_atoms'] <=> other.data['date_atoms']
+      data['date'] <=> other.data['date']
     end
 
     def url_placeholders
@@ -65,6 +67,7 @@ module HistoricalDiary
 
     def generate(site)
       pages_by_timestamp = {}
+      known_dates = []
 
       site.collections['source_material'].docs.each do |document|
         timestamp = document.basename_without_ext
@@ -74,16 +77,22 @@ module HistoricalDiary
       end
 
       pages_by_timestamp.each do |timestamp, documents|
+        timestamp_range = TimestampRange.new(timestamp)
+
         documents.each do |source_key, document|
           document.data['source_key'] = source_key
           document.data['timestamp'] = timestamp
+          document.data['timestamp_range'] = timestamp_range
 
           site.pages << document
         end
 
-        date_page = DatePage.new(site,
-                                 timestamp: timestamp)
-        site.posts.docs << date_page
+        timestamp_range.dates.each do |date|
+          next if known_dates.include?(date)
+
+          site.posts.docs << DatePage.new(site, date: date)
+          known_dates << date
+        end
       end
     end
   end

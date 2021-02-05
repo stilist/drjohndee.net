@@ -16,8 +16,9 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-require_relative '../_lib/collections'
 require 'jekyll'
+require_relative '../_lib/collections'
+require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
   module DataFilters
@@ -120,9 +121,13 @@ module HistoricalDiary
     end
 
     def source_material_for_date(timestamp)
-      @context.registers[:site].
-        pages.
-        select { |doc| doc.data['timestamp'] == timestamp }
+      timestamp_range = TimestampRange.new(timestamp)
+
+      candidates = @context.registers[:site].pages.
+        select { |document| document.data.key?('timestamp_range') }
+      candidates.select do |document|
+        document.data['timestamp_range'].intersect?(timestamp_range)
+      end
     end
   end
 end
