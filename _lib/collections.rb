@@ -22,12 +22,15 @@ module DataCollection
   # for 'slugify'
   include ::Jekyll::Utils
 
-  TRANSCLUDED_COLLECTIONS = %w(
+  RENDERED_COLLECTIONS = %w[
+    people
+    sources
+  ].freeze
+  TRANSCLUDED_COLLECTIONS = %w[
     commentary
     footnotes
-  ).freeze
+  ].freeze
   SINGULAR_TO_PLURAL = {
-    'commentary' => 'commentary',
     'person' => 'people',
     'source' => 'sources',
   }.freeze

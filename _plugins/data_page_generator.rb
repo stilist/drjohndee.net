@@ -57,9 +57,7 @@ module HistoricalDiary
     safe true
 
     def generate(site)
-      collections = ::DataCollection::PLURAL_TO_SINGULAR.keys -
-                    ::DataCollection::TRANSCLUDED_COLLECTIONS
-      collections.each do |collection_name|
+      ::DataCollection::RENDERED_COLLECTIONS.each do |collection_name|
         site.data[collection_name].each do |key, _|
           site.pages << DataPage.new(site, collection_name,
                                      key: key)
