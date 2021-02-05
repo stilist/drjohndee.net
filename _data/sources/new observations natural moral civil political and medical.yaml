@@ -1,0 +1,22 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Short, Thomas"
+  language: en
+  license: "public domain"
+  name: >-
+    New Observations, Natural, Moral, Civil, Political and Medical, on City,
+    Town, and Country Bills of Mortality, With an Appendix on the Weather and
+    Meteors
+editions:
+  book:
+    date: "1750"
+    id: "http://www.worldcat.org/oclc/504163296"
+    oclc_number: "504163296"
+    type: Book
+    url: "https://books.google.com/books?id=gwMqAAAAYAAJ"
