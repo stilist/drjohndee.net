@@ -64,12 +64,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor %}
     </ul>
-    {% assign commentary = page.timestamp | commentary_for_date -%}
-    {% include commentary.html references=commentary -%}
+
+    {% assign commentary_keys = page.timestamp | commentary_for_date -%}
+    {% include transcludes.html keys=commentary_keys collection="commentary" -%}
   </section>
 
-  {% assign context = page.timestamp | relevant_context -%}
-  {% include context.html references=context -%}
-  {% assign footnotes = page.timestamp | relevant_footnotes -%}
-  {% include footnotes.html references=footnotes -%}
+  {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
+  {% include transcludes.html keys=footnote_keys collection="footnotes" -%}
 </article>

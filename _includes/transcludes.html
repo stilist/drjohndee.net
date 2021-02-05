@@ -1,0 +1,76 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% if include.keys.size > 0 -%}
+<aside class="annotations annotations-{{ include.collection }}">
+  <h3>{{ include.collection, | capitalize }}</h3>
+  <ul class="annotation-content">
+  {% assign previous_source_key = null -%}
+
+  {% for key in include.keys -%}
+    {% assign transclude_record = key | collection_entry: include.collection -%}
+    {% if transclude_record -%}
+    {% assign source_record = transclude_record.source_key | collection_entry: "sources" -%}
+    <li itemprop=comment
+        itemscope itemtype="https://schema.org/Comment"
+        itemid="{{ page.url | relative_url }}#{{ include.collection }}--{{ key }}">
+      {% assign creator_key = transclude_record.author_key | default: source_record.author_key -%}
+      {% include person_data.html person_key=creator_key
+                                  itemprop="creator" -%}
+
+      {% assign language = transclude_record.language | default: source_record.work.language -%}
+      <figure lang="{{ language }}" translate>
+        <blockquote class="source-material"
+                    itemprop=text>
+          {{ transclude_record.symbol }}
+          {{ transclude_record.text | markdownify }}
+        </blockquote>
+
+        {% if transclude_record.source_key -%}
+        <figcaption class="caption"
+                    itemprop=citation
+                    itemscope>
+          {% include source_data.html source_key=transclude_record.source_key
+                                      edition_key=transclude_record.edition_key
+                                      location=transclude_record.location
+                                      volume=transclude_record.volume -%}
+
+          {% if transclude_record.source_key == previous_source_key -%}
+          <a href="{{ transclude_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
+          {{ transclude_record.location }}
+          {% else -%}
+          {{ transclude_record.source_key | mla_citation: transclude_record.location,
+                                               transclude_record.edition,
+                                               transclude_record.volume }}
+          {% endif -%}
+
+          {% if transclude_record.author_key != source_record.author_key -%}
+          <br>Written by
+          {% include person_link.html person_key=transclude_record.author_key -%}
+          {% endif -%}
+        </figcaption>
+        {% endif -%}
+      </figure>
+    </li>
+    {% endif -%}
+
+    {% assign previous_source_key = transclude_record.source_key -%}
+  {% endfor -%}
+  </ul>
+</aside>
+{% endif -%}
