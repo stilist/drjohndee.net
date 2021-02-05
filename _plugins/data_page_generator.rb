@@ -40,9 +40,9 @@ module HistoricalDiary
 
       record = send(:"#{singular}_data", key)
       title = case collection_name
-              when :people
+              when 'people'
                 record['presentational_name'].values.join(' ')
-              when :source
+              when 'sources'
                 record.dig('work', 'name')
               end
       data['title'] = title
