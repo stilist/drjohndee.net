@@ -38,6 +38,11 @@ module HistoricalDiary
       commentary_by_timestamp[date]
     end
 
+    # @todo
+    def context_for_date(timestamp)
+      []
+    end
+
     # > Author. Title. Title of container (do not list container for standalone
     # > books, e.g. novels), Other contributors (translators or editors),
     # > Version (edition), Number (vol. and/or no.), Publisher, Publication

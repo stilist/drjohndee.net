@@ -28,6 +28,7 @@ module DataCollection
   ].freeze
   TRANSCLUDED_COLLECTIONS = %w[
     commentary
+    context
     footnotes
   ].freeze
   SINGULAR_TO_PLURAL = {
