@@ -22,7 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <span itemprop="{{ include.itemprop }} person"
       itemscope
       itemtype="https://schema.org/Person"
-      itemid="{{ include.person_key }}">
+      itemid="{{ page.url | relative_url }}#person--{{ person_key | slugify }}">
   <meta itemprop=name content="{{ p_record.presentational_name.givenName }} {{ p_record.presentational_name.familyName }}">
   <meta itemprop=url content="{{ person_key | collection_entry_url: "people" }}">
 </span>

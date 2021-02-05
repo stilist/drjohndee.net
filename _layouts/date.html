@@ -32,15 +32,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h1>
   </header>
 
-  <section class="page-content">
+  <section class="page-content"
+           itemprop=articleBody>
     <ul class="entries h-entry">
       {% assign entries = page.timestamp | source_material_for_date -%}
       {% for entry in entries -%}
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
           lang="{{ language }}" translate>
-        <div class="source-material e-content"
-             itemprop=articleBody>
+        {% assign author_key = entry.author_key | default: source.work.author_key -%}
+        {% include person_data.html person_key=author_key
+                                    itemprop="author" -%}
+
+        <div class="source-material e-content">
           {% assign processed_content = entry.content | markdownify -%}
           {{ processed_content }}
         </div>
@@ -60,24 +64,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor %}
     </ul>
-
-    {% assign entry = entries | first -%}
-    {% assign source = entry.source_key | collection_entry: "sources" -%}
-    {% assign author_key = entry.author_key | default: source.work.author_key -%}
-    {% assign author = author_key | collection_entry: "people" -%}
-    {% if author -%}
-    <span class="p-author h-card"
-          itemprop=author
-          itemscope itemtype="http://schema.org/Person">
-      <meta itemprop=name content="{{ author.presentational_name.givenName }} {{ author.presentational_name.familyName }}">
-      <meta itemprop=url content="{{ author_key | collection_entry_url: "people" }}">
-    </span>
-    {% endif -%}
-
     {% assign commentary = page.timestamp | commentary_for_date -%}
     {% include commentary.html references=commentary -%}
   </section>
 
+  {% assign context = page.timestamp | relevant_context -%}
+  {% include context.html references=context -%}
   {% assign footnotes = page.timestamp | relevant_footnotes -%}
   {% include footnotes.html references=footnotes -%}
 </article>

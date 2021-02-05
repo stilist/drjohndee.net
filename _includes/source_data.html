@@ -26,7 +26,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% assign edition = s_record.editions | find: "edition_key", include.edition_key -%}
   <span itemtype="https://schema.org/{{ itemtype }} https://schema.org/{{ edition.type }}"
-        itemid="{{ include.source_key | slugify }}">
+        itemid="{{ page.url | relative_url }}#source--{{ include.source_key | slugify }}">
     <meta itemprop=url content="{{ include.source_key | collection_entry_url: "sources" }}">
     <meta itemprop=pagination content="{{ include.location }}">
 

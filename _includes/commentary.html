@@ -20,22 +20,23 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <aside class="annotations annotations-commentary">
   <h2>Commentary</h2>
   <ul class="annotation-content">
-    {% assign previous_source_key = null -%}
-    {% for reference in include.references -%}
+  {% assign previous_source_key = null -%}
+  {% for reference in include.references -%}
     {% assign c_record = reference | collection_entry: "commentary" -%}
+    {% if c_record -%}
+    {% assign s_record = c_record.source_key | collection_entry: "sources" -%}
     <li itemprop=comment
-        itemscope itemtype="https://schema.org/Comment">
-      {% if c_record -%}
-      {% assign s_record = c_record.source_key | collection_entry: "sources" -%}
+        itemscope itemtype="https://schema.org/Comment"
+        itemid="{{ page.url | relative_url }}#commentary--{{ reference | slugify }}">
+      {% assign author_key = c_record.author_key | default: s_record.work.author_key -%}
+      {% include person_data.html person_key=author_key itemprop="creator" -%}
+
       {% assign language = c_record.language | default: s_record.work.language -%}
       <figure lang="{{ language }}" translate>
         <blockquote class="source-material"
                     itemprop=text>
           {{ c_record.text | markdownify }}
         </blockquote>
-
-        {% assign author_key = c_record.author_key | default: s_record.work.author_key -%}
-        {% include person_data.html person_key=author_key itemprop="creator" -%}
 
         {% if c_record.source_key -%}
         <figcaption class="caption"
@@ -60,8 +61,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </figure>
       {% endif -%}
     </li>
-    {% assign previous_source_key = c_record.source_key -%}
-    {% endfor -%}
+  {% assign previous_source_key = c_record.source_key -%}
+  {% endfor -%}
   </ul>
 </aside>
 {% endif -%}
