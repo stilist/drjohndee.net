@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Set `license` property where possible
 - `person_name` Liquid filter simplifies displaying names from `people` data
+- Page title and `headline` property now have more than just the date
 
 ## [1.0.1] - 2021-02-05
 ### Added

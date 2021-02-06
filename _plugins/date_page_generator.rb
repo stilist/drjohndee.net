@@ -40,7 +40,8 @@ module HistoricalDiary
       data['date'] = date
       timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
-      data['title'] = timestamp
+      data['title'] = "Events and writings for #{timestamp}"
+
       data.default_proc = proc do |_, key|
         site.frontmatter_defaults.find(relative_path, :source_material, key)
       end
