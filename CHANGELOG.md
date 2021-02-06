@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `person_name` Liquid filter simplifies displaying names from `people` data
 - Page title and `headline` property now have more than just the date
 - `people` data for Thomas Short (author of ‘New Observations, Natural, Moral, Civil, Political and Medical…’)
+- Link to DOI if available
 
 ### Changed
 - Manually render page metadata instead of using `jekyll-seo-tag` plugin -- the plugin doesn't have a way to disable JSON-LD output, but, that output is a secondary, lower-quality version of the structured data applied throughout the site

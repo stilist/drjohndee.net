@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 lang: en-US
 
+doi: "10.5281/zenodo.4511512"
 license_key: "CC BY-SA 4.0"
 
 # Build settings

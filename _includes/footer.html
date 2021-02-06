@@ -36,5 +36,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <a href=/license.html rel=license>Copyright and license policy</a>;
     <a href=/contributing.html>how to contribute to this project</a>;
     <a href=https://github.com/stilist/john-dee>view the project’s source files</a>.
+
+    {% if site.doi -%}
+    <a href="https://doi.org/{{ site.doi }}" rel=identifier>DOI: {{ site.doi }}</a>.
+    {% endif -%}
+
     This website doesn’t track you.
 </footer>
