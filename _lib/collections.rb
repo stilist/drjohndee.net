@@ -50,7 +50,7 @@ module DataCollection
   def data_collection_record(collection_name, key)
     return if key.nil? || key.strip == ''
 
-    prefix, suffix = key.split('/')
+    prefix, suffix = key.split('/', 2)
     sanitized_prefix = escape_key(prefix)
 
     records = data_collection_records(collection_name)
