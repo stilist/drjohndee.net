@@ -83,17 +83,11 @@ module DataCollection
   end
 
   def transclusions_for_timestamp(collection_name, timestamp)
-    timestamp_range = TimestampRange.new(timestamp)
+    return [] if collection_name.nil?
+    return [] if timestamp.nil?
 
-    date_strings = timestamp_range.dates.
-      map { |date| date.strftime('%F') }.
-      freeze
-    matches = []
     ensure_transclusions_by_date(collection_name)
-    TRANSCLUSIONS[collection_name].each do |date, keys|
-      matches.concat(keys) if date_strings.include?(date)
-    end
-    matches
+    TRANSCLUSIONS[collection_name][timestamp] || []
   end
 
   private
