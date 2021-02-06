@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Don’t try to render `person_data` include for source author/editor unless the key is available
+- Remove unnecessary `person` property from `person_data` include’s `itemscope`
 
 ## [1.0.1] - 2021-02-05
 ### Added

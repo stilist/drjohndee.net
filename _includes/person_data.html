@@ -18,7 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% assign person_key = include.person_key -%}
 {% if person_key -%}
-<span itemprop="{{ include.itemprop }} person"
+<span itemprop="{{ include.itemprop }}"
       itemscope
       itemtype="https://schema.org/Person"
       itemid="{{ page.url | relative_url }}#person--{{ person_key | slugify }}">
