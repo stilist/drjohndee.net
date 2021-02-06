@@ -30,6 +30,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% if record.orcid -%}
   <link itemprop=sameAs href="{{ record.orcid }}">
   {% endif -%}
+  {% if site.license_key -%}
+  <meta itemprop=license content="{{ site.license_key | license_url }}">
+  {% endif -%}
 
   <header class="page-header">
     <h1 class="page-name">

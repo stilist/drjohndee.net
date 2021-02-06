@@ -27,6 +27,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           itemscope
           itemtype="https://schema.org/CreativeWork"
           itemid="work">
+    {% if work.license_key -%}
+    <meta itemprop=license content="{{ work.license_key | license_url }}">
+    {% endif -%}
+
     {% for edition_hash in record.editions -%}
     {% assign edition_key = edition_hash | first -%}
     <link itemprop="hasPart" href="#{{ page.source_key | slugify }}--edition-{{ edition_key }}">

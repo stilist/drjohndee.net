@@ -40,6 +40,20 @@ module HistoricalDiary
       transclusions_for_timestamp('context', timestamp)
     end
 
+    def license_url(license_key)
+      return if !license_key.is_a?(String)
+
+      version = license_key.match(/\s(\d+(?:\.\d+)?\+?)/)
+      version = version[1].strip if !version.nil?
+      license_shorthand = license_key.sub(/\s*#{version}/, '')
+
+      case license_shorthand
+      when 'CC0' then "https://creativecommons.org/publicdomain/zero/#{version}"
+      when 'CC BY-SA' then "https://creativecommons.org/licenses/by-sa/#{version}"
+      else license_key
+      end
+    end
+
     # > Author. Title. Title of container (do not list container for standalone
     # > books, e.g. novels), Other contributors (translators or editors),
     # > Version (edition), Number (vol. and/or no.), Publisher, Publication

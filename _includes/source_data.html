@@ -30,6 +30,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <meta itemprop=url content="{{ include.source_key | collection_entry_url: "sources" }}">
     <meta itemprop=pagination content="{{ include.location }}">
 
+    {% assign license_key = edition.license_key | default: source_record.work.license_key -%}
+    {% if license_key -%}
+    <meta itemprop=license content="{{ license_key | license_url }}">
+    {% endif -%}
+
     {% if include.volume -%}
     <meta itemprop=volumeNumber content="{{ include.volume }}">
     {% endif -%}
