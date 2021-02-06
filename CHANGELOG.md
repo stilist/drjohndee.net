@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `person_name` Liquid filter simplifies displaying names from `people` data
 - Page title and `headline` property now have more than just the date
 
+### Fixed
+- Don’t try to render `person_data` include for source author/editor unless the key is available
+
 ## [1.0.1] - 2021-02-05
 ### Added
 - Add two weather entries to ‘New Observations, Natural, Moral, Civil, Political and Medical…’ context data

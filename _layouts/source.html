@@ -47,8 +47,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     {% if work.author_key or work.editor_key -%}
     <h2 class="page-subtitle">
-      {% include person_data.html person_key=work.author_key itemprop="author" -%}
       {% if work.author_key -%}
+      {% include person_data.html person_key=work.author_key itemprop="author" -%}
       Written by {% include person_link.html person_key=work.author_key -%}
       {% endif -%}
 
@@ -56,8 +56,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       and
       {% endif -%}
 
-      {% include person_data.html person_key=work.editor_key itemprop="editor" -%}
       {% if work.editor_key -%}
+      {% include person_data.html person_key=work.editor_key itemprop="editor" -%}
       Edited by {% include person_link.html person_key=work.editor_key -%}
       {% endif -%}
     </h2>
