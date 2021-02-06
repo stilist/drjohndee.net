@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Manually render page metadata instead of using `jekyll-seo-tag` plugin -- the plugin doesn't have a way to disable JSON-LD output, but, that output is a secondary, lower-quality version of the structured data applied throughout the site
+- Directly host EB Garamond font files -- CSS and files were assembled using the [`google-webfonts-helper` tool](https://google-webfonts-helper.herokuapp.com/fonts/eb-garamond?subsets=greek,latin,latin-ext)
 
 ### Fixed
 - Don’t try to render `person_data` include for source author/editor unless the key is available
