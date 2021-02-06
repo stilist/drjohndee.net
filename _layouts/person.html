@@ -36,8 +36,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <header class="page-header">
     <h1 class="page-name">
-      {{ record.presentational_name.givenName }}
-      {{ record.presentational_name.familyName }}
+      {{ page.person_key | person_name }}
     </h1>
 
     {% if record.birth_date or record.death_date -%}

@@ -23,12 +23,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% if site.description -%}
     {{ site.description | escape }}
     {% endif -%}
-    {% assign author_name = site.author.name | default: site.author.email | escape -%}
+
     {% if site.author.key -%}
-    Created by <a href="{{ site.author.key | collection_entry_url: "people" }}" class="p-name">{{ author_name }}</a>.
-    {% else -%}
-    Created by <span class="p-name">{{ author_name }}</span>.
+    Created by <a href="{{ site.author.key | collection_entry_url: "people" }}" class="p-name">{{ site.author.key | person_name }}</a>.
     {% endif -%}
+
     {% if site.author.email -%}
     <a class="u-email" href="mailto:{{ site.author.email }}">Send feedback to
       {{ site.author.email | escape }}</a>

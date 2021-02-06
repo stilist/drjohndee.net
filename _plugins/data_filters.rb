@@ -123,6 +123,20 @@ module HistoricalDiary
         sub('..', '.') + '.'
     end
 
+    # @note This returns the name in the order the parts are written in the
+    #   data file--if data is ordered with `familyName` before `givenName`,
+    #   the output will also have `familyName` first. This helps a bit with
+    #   internationalization, as some cultures (like Chinese and Hungarian)
+    #   prefer the family name first, and others (like Australian and Spanish).
+    #   It's not a substitute for proper internationalization support, though.
+    def person_name(key)
+      return '' if key.nil?
+
+      record = person_data(key)
+      return '' if record.nil?
+      record['presentational_name'].values.join(' ')
+    end
+
     def relevant_footnotes(timestamp)
       transclusions_for_timestamp('footnotes', timestamp)
     end
