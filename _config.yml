@@ -36,9 +36,8 @@ license_key: "CC BY-SA 4.0"
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
-# for `jekyll-seo-tag`
+# for page metadata
 twitter:
   username: stilist
 

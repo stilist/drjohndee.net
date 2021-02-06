@@ -17,7 +17,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15"
   # @see https://github.com/tmm1/http_parser.rb/issues/47#issuecomment-544196403
   gem "http_parser.rb", git: "git@github.com:tmm1/http_parser.rb.git"
-  gem "jekyll-seo-tag", "~> 2.7"
 end
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
