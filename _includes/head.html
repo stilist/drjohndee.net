@@ -22,6 +22,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel=stylesheet href="{{ "/assets/application.css" | relative_url }}">
 
+  {% assign author_key = page.author_key | default: site.author.key -%}
+  <meta name="author" content="{{ author_key | person_name }}">
+
   <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="{{ page.lang | default: site.lang | replace: "-", "_" }}">
 
@@ -49,18 +52,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta name="twitter:site" content="@{{ site.twitter.username | remove:'@' }}">
   <meta name="twitter:username" content="@{{ site.twitter.username | remove:'@' }}">
   {% endif -%}
-
-  {% assign author_key = page.author_key | default: site.author.key -%}
-  <meta name="author" content="{{ author_key | person_name }}">
-
-
-
-        {% if site.url %}
-          <link rel="canonical" href="{{ seo_tag.canonical_url }}">
-          <meta property="og:url" content="{{ seo_tag.canonical_url }}">
-        {% endif %}
-
-
 
   {% feed_meta -%}
 </head>
