@@ -28,17 +28,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="{{ page.lang | default: site.lang | replace: "-", "_" }}">
 
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="twitter:title" content="{{ page.title }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="twitter:title" content="{{ page.title | escape }}">
 
   {% if site.description -%}
-  <meta name="description" content="{{ site.description }}">
-  <meta property="og:description" content="{{ site.description }}">
+  <meta name="description" content="{{ site.description | escape }}">
+  <meta property="og:description" content="{{ site.description | escape }}">
   {% endif -%}
 
   {% if site.title -%}
-  <meta property="og:site_name" content="{{ site.title }}">
-  <title>{{ site.title }}</title>
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <title>
+    {% if page.url != "/" -%}
+    {{ page.title | escape }} ·
+    {% endif -%}
+    {{ site.title | escape }}
+  </title>
   {% endif -%}
 
   {% if page.date_object -%}

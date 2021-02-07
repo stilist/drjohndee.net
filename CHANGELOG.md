@@ -18,6 +18,7 @@ details for each edition -- this makes it easy to specify the `numberOfPages` pr
 
 ### Fixed
 - `transclusions_for_timestamp` can now return transclusions for multiple dates, improving the `commentary_for_date`, `context_for_date`, and `relevant_footnotes` Liquid filters
+- Put page title back in `<title>` --- was broken as part of removing the `jekyll-seo-tag` plugin
 
 ## [1.0.2] - 2021-02-06
 ### Added
