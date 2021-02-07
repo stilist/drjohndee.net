@@ -80,20 +80,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <meta itemprop=inLanguage content="{{ edition.language }}">
         {% endif -%}
         {% if edition.id -%}
-        <link itemprop=sameAs href={{ edition.id }}>
+        <link itemprop=sameAs href="{{ edition.id }}">
         {% endif -%}
         {% if edition.oclc_number -%}
-        <meta itemprop=oclc_number content={{ edition.oclc_number }}>
+        <meta itemprop=identifier itemid="OCLC_NUMBER" content="{{ edition.oclc_number }}">
         {% endif -%}
         {% if edition.publisher -%}
-        <meta itemprop=publisher content={{ edition.publisher }}>
+        <meta itemprop=publisher content="{{ edition.publisher }}">
         {% endif -%}
 
-        {% if edition.url -%}
-        <a href="{{ edition.url }}" itemprop=name>{{ edition.name | default: work.name }}</a>
-        {% else -%}
-        <span itemprop=name>{{ edition.name | default: work.name }}</span>
-        {% endif -%}
+        <h3 itemprop=name>{{ edition.name | default: work.name }}</h3>
 
         {% if edition.date -%}
         Published <time itemprop=datePublished>
