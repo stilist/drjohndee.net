@@ -10,15 +10,18 @@ work:
   language: "en-emodeng"
   license_key: "CC0 1.0"
   name: >-
-    Dr. John Dee’s conference with angels from Dec. 22. 1581. to May 30. 1583.
-    being what preceeds yͤ other conferences printed by Dr. Meric Causabon Lond.
-    1659. in folio
+    Dr. John Dee’s conference
+    with angels from Dec. 22. 1581. to
+    May 30. 1583. being what preceeds yͤ other
+    conferences printed by Dr. Meric Casaubon
+    Lond. 1659. in folio.
+    With a preface by Elias Ashmole. An: 1672
 editions:
   manuscript:
-    date: 1583
-    type: Manuscript
+    date: "1583"
     name: >-
       Anno 1581 1582 Mysteriorum Liber Primus. Mortlaci, Ⅰ
+    type: Manuscript
   book:
     type: Book
     url: "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Sloane_MS_3188"

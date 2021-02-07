@@ -11,10 +11,16 @@ work:
   language: en
   license_key: "CC0 1.0"
   name: >-
-    Local Gleanings: an Archælogical & Historical Magazine, Chiefly Relating to
+    Local
+    Gleanings:
+    an
+    Archælogical & Historical
+    Magazine,
+    Chiefly Relating to
     Lancashire & Cheshire
 editions:
   compilation:
+    city: "Manchester"
     id: "http://www.worldcat.org/oclc/265618046"
     oclc_number: "265618046"
     type: Book

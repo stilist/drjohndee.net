@@ -10,11 +10,24 @@ work:
   language: en
   license_key: "CC0 1.0"
   name: >-
-    New Observations, Natural, Moral, Civil, Political and Medical, on City,
-    Town, and Country Bills of Mortality, With an Appendix on the Weather and
-    Meteors
+    New
+    Observations,
+    Natural, Moral, Civil, Political and Medical,
+    on
+    City, Town, and Country
+    Bills of Mortality.
+    To which are added,
+    Large and Clear Abstracts
+    of
+    The beſt Authors who have wrote
+    on that Subject.
+    With an
+    Appendix
+    on the
+    Weather and Meteors
 editions:
   book:
+    city: "London"
     date: "1750"
     id: "http://www.worldcat.org/oclc/504163296"
     oclc_number: "504163296"

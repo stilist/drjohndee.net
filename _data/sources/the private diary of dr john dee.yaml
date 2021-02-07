@@ -9,11 +9,11 @@ work:
     College Library, Cambridge
 editions:
   book:
+    city: "London"
     date: "1842"
     id: "http://www.worldcat.org/oclc/1050791672"
     language: en
     oclc_number: "1050791672"
-    city: "London"
     publisher: "The Camden Society"
     type: Book
     url: "https://archive.org/details/privatediaryofdr00deejuoft"
