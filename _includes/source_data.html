@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% assign source_record = include.source_key | collection_entry: "sources" -%}
+{% assign source_permalink = include.source_key | collection_entry_url: "sources" -%}
 {% if source_record -%}
   {% if include.volume -%}
   {% assign itemtype = "PublicationVolume" -%}
@@ -26,8 +27,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% assign edition = source_record.editions | find: "edition_key", include.edition_key -%}
   <span itemtype="https://schema.org/{{ itemtype }} https://schema.org/{{ edition.type }}"
-        itemid="{{ page.url | relative_url }}#source--{{ include.source_key | slugify }}">
-    <meta itemprop=url content="{{ include.source_key | collection_entry_url: "sources" }}">
+        itemid="{{ source_permalink }}#edition-{{ include.edition_key }}">
+    <meta itemprop=url content="{{ source_permalink }}">
     <meta itemprop=pagination content="{{ include.location }}">
 
     {% assign license_key = edition.license_key | default: source_record.work.license_key -%}

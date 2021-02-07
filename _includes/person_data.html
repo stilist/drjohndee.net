@@ -18,11 +18,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% assign person_key = include.person_key -%}
 {% if person_key -%}
+{% assign person_permalink = include.person_key | collection_entry_url: "people" -%}
 <span itemprop="{{ include.itemprop }}"
       itemscope
       itemtype="https://schema.org/Person"
-      itemid="{{ page.url | relative_url }}#person--{{ person_key | slugify }}">
+      itemid="{{ person_permalink }}#person">
   <meta itemprop=name content="{{ person_key | person_name }}">
-  <meta itemprop=url content="{{ person_key | collection_entry_url: "people" }}">
+  <meta itemprop=url content="{{ person_permalink }}">
 </span>
 {% endif -%}

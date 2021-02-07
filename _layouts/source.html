@@ -20,20 +20,21 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% assign record = page.source_key | collection_entry: "sources" -%}
+{% assign source_permalink = page.source_key | collection_entry_url: "sources" -%}
 {% assign work = record.work -%}
 <article class="page source">
   <header class="page-header data-source"
           lang="{{ work.language }}" translate
           itemscope
           itemtype="https://schema.org/CreativeWork"
-          itemid="work">
+          itemid="{{ source_permalink }}#work">
     {% if work.license_key -%}
     <meta itemprop=license content="{{ work.license_key | license_url }}">
     {% endif -%}
 
     {% for edition_hash in record.editions -%}
     {% assign edition_key = edition_hash | first -%}
-    <link itemprop="hasPart" href="#{{ page.source_key | slugify }}--edition-{{ edition_key }}">
+    <link itemprop="hasPart" href="{{ source_permalink }}#edition-{{ edition_key }}">
     {% endfor -%}
 
     {% if work.language -%}
@@ -70,11 +71,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% for edition_hash in record.editions -%}
       {% assign edition_key = edition_hash | first -%}
       {% assign edition = edition_hash | last -%}
-      <li itemscope
+      <li itemscope itemprop=workExample
           itemtype="https://schema.org/{{ edition.type | capitalize }}"
-          itemid="{{ page.source_key | slugify }}--edition-{{ edition_key }}">
+          itemid="{{ source_permalink }}#edition-{{ edition_key }}">
         <link itemprop=author href="#author">
-        <link itemprop=isPartOf href="#work">
+        <link itemprop=isPartOf href="{{ source_permalink }}">
         {% if edition.language -%}
         <meta itemprop=inLanguage content="{{ edition.language }}">
         {% endif -%}
