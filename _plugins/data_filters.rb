@@ -67,7 +67,7 @@ module HistoricalDiary
     # > *Note: the City of Publication should only be used if the book was
     # > published before 1900, if the publisher has offices in more than one
     # > country, or if the publisher is unknown in North America.
-    def mla_citation(source_key, location, edition_key = nil, volume = nil, author_key = nil)
+    def mla_citation(source_key, location, edition_key = nil, volume_key = nil, author_key = nil)
       source = source_data(source_key)
       return source_key if source.nil?
 
@@ -89,7 +89,10 @@ module HistoricalDiary
         data_collection_record_link('sources', source_key, source_name),
         publishing_info,
       ]
-      output.insert(1, "Volume #{volume}") if !volume.nil?
+      if !volume_key.nil?
+        volume_number = edition.dig('volumes', volume_key, 'volumeNumber')
+        output.insert(1, "Volume #{volume_number}")
+      end
 
       author_key ||= source.dig('work', 'author_key')
       author = person_data(author_key)

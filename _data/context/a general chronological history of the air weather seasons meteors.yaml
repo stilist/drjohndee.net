@@ -9,6 +9,7 @@
 "1528-05":
   edition_key: "book"
   location: "page 207"
+  volume_key: "I"
   text: >-
     Its fourth Viſit bega
     in London in the End of May, 1528 ; ſpread
@@ -17,6 +18,7 @@
 "1551-03/1552-02":
   edition_key: "book"
   location: "page 207"
+  volume_key: "I"
   text: >-
     Its fifth was April the 15th ; it broke
     out at Shrewſbury, and reigned in the North
@@ -32,6 +34,7 @@
 "1527-11-01/1528-02-01":
   edition_key: "book"
   location: "page 211"
+  volume_key: "I"
   text: >-
     From November the 1ſt, to February the 1ſt,
     continual Rains, fearful Floods, terrible
@@ -39,12 +42,14 @@
 "1528-02-01/1528-04-12":
   edition_key: "book"
   location: "page 211"
+  volume_key: "I"
   text: >-
     then
     a Drought to April the 12th ;
 "1528-04-12/1528-06-03":
   edition_key: "book"
   location: "page 211"
+  volume_key: "I"
   text: >-
     from that daily
     Rains to June the 3rd ; hence a Scarcity of
@@ -52,6 +57,7 @@
 "1528-03/1529-02":
   edition_key: "book"
   location: "page 211-213"
+  volume_key: "I"
   text: >-
     The ſame malignant ſpotted Fever, which
     firſt appeared in Europe in 1505, prevailed
@@ -121,6 +127,7 @@
 "1530-11-04/1530-11-05":
   edition_key: "book"
   location: "page 213"
+  volume_key: "I"
   text: >-
     November the 4th and 5th, a great Wind,
     which blew down Houſes and Trees ; then a
@@ -130,6 +137,7 @@
 "1531-03/1532-02.1":
   edition_key: "book"
   location: "page 213-215"
+  volume_key: "I"
   text: >-
     The two or three preceding Years having
     been wholly moiſt, rainy, and ſoutherly, a
@@ -192,6 +200,7 @@
 "1531-03/1532-02.2":
   edition_key: "book"
   location: "page 215"
+  volume_key: "I"
   text: >-
     In Liſbon 1400 Houſes were overthrown by
     an Earthuqake, and 600 more ſo ſhaken, that
@@ -200,6 +209,7 @@
 "1537-03/1538-02.1":
   edition_key: "book"
   location: "page 215"
+  volume_key: "I"
   text: >-
     When a ſoutherly humid Conſtitution had
     prevailed two Years, then were many ſeized
@@ -215,12 +225,14 @@
 "1537-03/1538-01.2":
   edition_key: "book"
   location: "page 215"
+  volume_key: "I"
   text: >-
     In England the
     Summer was exceeding rainy.
 "1537-11/1538-01":
   edition_key: "book"
   location: "page 215"
+  volume_key: "I"
   text: >-
     In December
     and January a great Froſt, the Thames was
@@ -228,6 +240,7 @@
 "1538-03/1539-02":
   edition_key: "book"
   location: "page 215"
+  volume_key: "I"
   text: >-
     The Sea by the Kingdom of Naples was dry
     for eight Miles together ; out of which Places
@@ -238,6 +251,7 @@
 "1538-09-29":
   edition_key: "book"
   location: "page 215-216"
+  volume_key: "I"
   text: >-
     September the 29th, an
     Earthquake at Puteoli ; it raiſed a hill four Miles
@@ -246,12 +260,14 @@
 "1539-03/1540-02":
   edition_key: "book"
   location: "page 216"
+  volume_key: "I"
   text: >-
     A moſt peſtiferous contagious Dyſentery
     reigned this Year. Holerius.
 "1540-03/1541-02":
   edition_key: "book"
   location: "page 216"
+  volume_key: "I"
   text: >-
     In Summer was an exceſſive Drought ; Wells,
     Brooks, and Rivers, were dried up ; the
@@ -265,12 +281,14 @@
 "1542-06-14":
   edition_key: "book"
   location: "page 216"
+  volume_key: "I"
   text: >-
     June the 14th, a terrible Tempeſt at Buda.
     Teincell. de Mirac.
 "1543-03/1544-02":
   edition_key: "book"
   location: "page 216"
+  volume_key: "I"
   text: >-
     The Weather was ſo cold, that the
     Provence Wines ordained for the Army being
@@ -290,12 +308,14 @@
 "1544-03/1545-02":
   edition_key: "book"
   location: "page 216"
+  volume_key: "I"
   text: >-
     A great Eclipſe of the Sun, and three
     of the Moon the ſame Year. Sleidan.
 "1545-03/1546-02":
   edition_key: "book"
   location: "page 216-217"
+  volume_key: "I"
   text: >-
     All over France and Britain, raged a
     peſtilential Epidemic (ſays Valeriola) called the
@@ -319,6 +339,7 @@
 "1546-03/1548-02":
   edition_key: "book"
   location: "page 217-218"
+  volume_key: "I"
   text: >-
     Two Years together a fatal, contagious,
     malignant Diſtemper invaded the Town and
@@ -354,6 +375,7 @@
 "1548-11-06":
   edition_key: "book"
   location: "page 218"
+  volume_key: "I"
   text: >-
     November the 6th, was ſeen a great fiery
     Chaſm, or Opening in the Heavens ; and in
@@ -362,6 +384,7 @@
 "1548-03/1549-02":
   edition_key: "book"
   location: "page 218"
+  volume_key: "I"
   text: >-
     Stow
     ſays there was a great Plague in London.
@@ -377,6 +400,7 @@
 "1549-03/1550-02":
   edition_key: "book"
   location: "page 218"
+  volume_key: "I"
   text: >-
     The Plague alarmed all Pruſſia. Func.
     Becauſe of the Rebellion in England the Harveſt
@@ -385,6 +409,7 @@
 "1550-03/1551-02.1":
   edition_key: "book"
   location: "page 218-219"
+  volume_key: "I"
   text: >-
     Was a very great Dearth, ſo, as Wheat was
     ſold at 16s. per Buſhel, which was ſold at 10d.
@@ -392,12 +417,14 @@
 "1550-03-06/1550-03-10":
   edition_key: "book"
   location: "page 219"
+  volume_key: "I"
   text: >-
     A Comet March the 6th, 7th,
     8th, 9th, and 10th.
 "1550-11/1551-01":
   edition_key: "book"
   location: "page 219"
+  volume_key: "I"
   text: >-
     During the cruel
     Popiſh Perſecution in Scotland, a Comet like a
@@ -406,6 +433,7 @@
 "1550-03/1551-02":
   edition_key: "book"
   location: "page 219"
+  volume_key: "I"
   text: >-
     Great Rivers in the middle
     of Winter were dry, and in Summer ſo great
@@ -422,6 +450,7 @@
 "1551-03/1552-02":
   edition_key: "book"
   location: "page 219"
+  volume_key: "I"
   text: >-
     A great Multitude of People and Cattle were
     drowned by a terrible Tempeſt, the Clouds
@@ -442,6 +471,7 @@
 "1552-03/1553-02,1588-03/1589-02":
   edition_key: "book"
   location: "page 219-220"
+  volume_key: "I"
   text: >-
     Says Platerus, raged at Baſil, a malignant
     contagious epidemic Fever, with a moſt acute
@@ -469,6 +499,7 @@
 "1553-03/1554-02":
   edition_key: "book"
   location: "page 220"
+  volume_key: "I"
   text: >-
     This Year and laſt, prevailed at Ancona,
     Venice, Alcmar, &c. from Auguſt to
@@ -479,6 +510,7 @@
 "1555-02-15":
   edition_key: "book"
   location: "page 220"
+  volume_key: "I"
   text: >-
     February the 15th, appeared in the Sky a
     Rainbow reverſed, the Arch downwards, and
@@ -486,12 +518,14 @@
 "1554-03/1555-02":
   edition_key: "book"
   location: "page 220"
+  volume_key: "I"
   text: >-
     The ſame Year Two
     Suns ſhined at once at a good Diſtance.
 "1555-03/1556-02":
   edition_key: "book"
   location: "page 220-221"
+  volume_key: "I"
   text: >-
     This was a very wet, rainy, floody Year, and
     great Scarcity. Stow. Now began a fatal hot
@@ -510,6 +544,7 @@
 "1555-03/1558-02":
   edition_key: "book"
   location: "page 220-226"
+  volume_key: "I"
   text: >-
     March the 6th, 7th, 8th, and 9th, a Comet
     ſhined all Nights. This Year the hot burning
@@ -682,6 +717,7 @@
 "1558-03/1559-02":
   edition_key: "book"
   location: "page 226-227"
+  volume_key: "I"
   text: >-
     Within a Mile of Nottingham was a
     grievous Tempest with Thunder, which, as it
@@ -727,6 +763,7 @@
 "1559-09-05":
   edition_key: "book"
   location: "page 227"
+  volume_key: "I"
   text: >-
     September the 5th, was a terrible Tempeſt
     of Wind and Thunder.

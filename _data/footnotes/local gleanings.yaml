@@ -9,7 +9,7 @@
   edition_key: "compilation"
   location: "page 132"
   symbol: "*"
-  volume: "Ⅰ"
+  volume_key: "I"
   text: >-
     ‘ Of the parish” is an insertion.
 "1597-05-04.2":
@@ -17,7 +17,7 @@
   edition_key: "compilation"
   location: "page 132"
   symbol: "†"
-  volume: "Ⅰ"
+  volume_key: "I"
   text: >-
     Dee uses the old form of the word, shewing its etymology per-sona. The word
     has been called the most legal, the most beneficial, and most honourable
@@ -27,6 +27,6 @@
   edition_key: "compilation"
   location: "page 133"
   symbol: "*"
-  volume: "Ⅰ"
+  volume_key: "I"
   text: >-
     Confessed is deleted and another word written over it.

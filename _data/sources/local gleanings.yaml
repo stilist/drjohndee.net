@@ -24,4 +24,8 @@ editions:
     id: "http://www.worldcat.org/oclc/265618046"
     oclc_number: "265618046"
     type: Book
-    url: "https://www.google.com/books/edition/_/SaM-AQAAMAAJ"
+    volumes:
+      I:
+        numberOfPages: "480"
+        url: "https://www.google.com/books/edition/_/SaM-AQAAMAAJ"
+        volumeNumber: "Ⅰ"

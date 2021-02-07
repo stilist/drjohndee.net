@@ -48,15 +48,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {% include source_data.html source_key=transclude_record.source_key
                                       edition_key=transclude_record.edition_key
                                       location=transclude_record.location
-                                      volume=transclude_record.volume -%}
+                                      volume_key=transclude_record.volume_key -%}
 
           {% if transclude_record.source_key == previous_source_key -%}
           <a href="{{ transclude_record.source_key | collection_entry_url: "sources" }}"><abbr>Ibid.</abbr></a>,
           {{ transclude_record.location }}
           {% else -%}
           {{ transclude_record.source_key | mla_citation: transclude_record.location,
-                                               transclude_record.edition,
-                                               transclude_record.volume }}
+                                                          transclude_record.edition,
+                                                          transclude_record.volume_key }}
           {% endif -%}
 
           {% if transclude_record.author_key != source_record.author_key -%}
