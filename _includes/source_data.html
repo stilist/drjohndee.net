@@ -36,8 +36,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <meta itemprop=license content="{{ license_key | license_url }}">
     {% endif -%}
 
-    {% if include.volume -%}
-    <meta itemprop=volumeNumber content="{{ include.volume }}">
+    {% if include.volume_key -%}
+    {% for volume_hash in edition.volumes -%}
+      {% assign edition_volume_key = volume_hash | first -%}
+      {% if edition_volume_key == include.volume_key -%}
+      {% assign edition_volume_data = volume_hash | last -%}
+      {% assign volume_number = edition_volume_data.volumeNumber -%}
+      {% endif -%}
+    {% endfor -%}
+    {% if volume_number -%}
+    <meta itemprop=volumeNumber content="{{ volume_number }}">
+    {% endif -%}
     {% endif -%}
 
     {% assign name = edition.name | default: source_record.work.name -%}

@@ -100,6 +100,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {{ edition.date }}
         </time>
         {% endif -%}
+
+        {% if edition.volumes -%}
+        <ol>
+          {% for volume_hash in edition.volumes -%}
+          {% assign volume_key = volume_hash | first -%}
+          {% assign volume = volume_hash | last -%}
+          <li itemscope
+              itemtype="https://schema.org/PublicationVolume"
+              itemid="{{ page.source_key | collection_entry_url: "sources" }}#edition-{{ edition_key }}--volume-{{ volume_key }}">
+            Volume <span itemprop=volumeNumber>{{ volume.volumeNumber }}</span>:
+            <span itemprop=numberOfPages>{{ volume.numberOfPages }} pages</span>
+            {% if volume.url -%}
+            (<a href="{{ volume.url }}" itemprop=url>free download</a>)
+            {% endif -%}
+          </li>
+          {% endfor -%}
+        </ol>
+        {% endif -%}
       </li>
       {% endfor -%}
     </ul>
