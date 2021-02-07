@@ -84,10 +84,17 @@ module DataCollection
 
   def transclusions_for_timestamp(collection_name, timestamp)
     return [] if collection_name.nil?
-    return [] if timestamp.nil?
+    return [] if timestamp.nil? || timestamp.strip == ''
 
     ensure_transclusions_by_date(collection_name)
-    TRANSCLUSIONS[collection_name][timestamp] || []
+
+    timestamp_range = TimestampRange.new(timestamp)
+    out = []
+    timestamp_range.dates.each do |date|
+      out << TRANSCLUSIONS[collection_name][date.strftime('%F')]
+    end
+
+    out.flatten.compact.uniq
   end
 
   private
