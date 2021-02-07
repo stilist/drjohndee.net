@@ -1,0 +1,41 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Short, Thomas"
+  language: en
+  license_key: "CC0 1.0"
+  name: >-
+    A
+    General Chronological
+    History
+    of the
+    Air, Weather, Seasons, Meteors, &c.
+    in
+    Sundry Places and different Times ;
+    more particularly for the Space of 250 Years.
+    Together with ſome of their moſt
+    Remarkable Effects
+    on
+    Animal (eſpecially Human) Bodies,
+    and Vegetables
+editions:
+  book:
+    city: "London"
+    date: "1749"
+    id: "http://www.worldcat.org/oclc/559798626"
+    oclc_number: "559798626"
+    type: Book
+    volumes:
+      I:
+        numberOfPages: "536"
+        url: "https://books.google.com/books?id=hTMqAAAAYAAJ"
+        volumeNumber: "Ⅰ"
+      II:
+        numberOfPages: "494"
+        url: "https://books.google.com/books?id=47eItwEACAAJ"
+        volumeNumber: "ⅠⅠ"
