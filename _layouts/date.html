@@ -49,6 +49,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                     itemprop="author" -%}
 
         <div class="source-material e-content">
+          {% if entry.timestamp_dates.size > 1 -%}
+          ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})
+          {% endif -%}
+
           {% assign processed_content = entry.content | markdownify -%}
           {{ processed_content }}
         </div>

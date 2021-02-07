@@ -83,6 +83,9 @@ module HistoricalDiary
         documents.each do |source_key, document|
           document.data['source_key'] = source_key
           document.data['timestamp'] = timestamp
+          document.data['timestamp_dates'] = timestamp_range.dates.map do |date|
+            date.strftime('%F')
+          end
           document.data['timestamp_range'] = timestamp_range
 
           site.pages << document
