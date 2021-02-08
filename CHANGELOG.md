@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `volume_key` instead of `volume`, and adjust source data to list volume
 details for each edition -- this makes it easy to specify the `numberOfPages` property
 - Create and consistently use permalinks as person and source `itemid`s
+- Improve font loading
 
 ### Fixed
 - `transclusions_for_timestamp` can now return transclusions for multiple dates, improving the `commentary_for_date`, `context_for_date`, and `relevant_footnotes` Liquid filters

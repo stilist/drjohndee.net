@@ -20,6 +20,7 @@
 
 /* selected charsets: `greek`, `latin`, `latin-ext` */
 @font-face {
+  font-display: swap;
   font-family: 'EB Garamond';
   font-style: normal;
   font-weight: 400;
@@ -28,6 +29,7 @@
        url('fonts/eb-garamond-400-normal.woff') format('woff');
 }
 @font-face {
+  font-display: swap;
   font-family: 'EB Garamond';
   font-style: normal;
   font-weight: 700;
@@ -36,6 +38,7 @@
        url('fonts/eb-garamond-700-normal.woff') format('woff');
 }
 @font-face {
+  font-display: swap;
   font-family: 'EB Garamond';
   font-style: italic;
   font-weight: 400;
