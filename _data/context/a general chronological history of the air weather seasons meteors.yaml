@@ -4,9 +4,7 @@
 #
 # This file is provided under the CC0 1.0 license. See LICENSE.md for details.
 
-# 1527/1608
-
-"1528-05":
+"1528-05/1529-02":
   edition_key: "book"
   location: "page 207"
   volume_key: "I"
@@ -31,27 +29,15 @@
     Children, or old People. If they were ſeized in
     their Sleep, they ſounded away, or died on
     their wakening.
-"1527-11-01/1528-02-01":
+"1527-11-01/1528-02-01,1528-02-01/1528-04-12,1528-04-12/1528-06-03":
   edition_key: "book"
   location: "page 211"
   volume_key: "I"
   text: >-
     From November the 1ſt, to February the 1ſt,
     continual Rains, fearful Floods, terrible
-    Deſtruction of Corns, Cattle, and Pastures ;
-"1528-02-01/1528-04-12":
-  edition_key: "book"
-  location: "page 211"
-  volume_key: "I"
-  text: >-
-    then
-    a Drought to April the 12th ;
-"1528-04-12/1528-06-03":
-  edition_key: "book"
-  location: "page 211"
-  volume_key: "I"
-  text: >-
-    from that daily
+    Deſtruction of Corns, Cattle, and Paſtures ; then
+    a Drought to April the 12th ; from that daily
     Rains to June the 3rd ; hence a Scarcity of
     Corn in England, and Dearth.
 "1528-03/1529-02":
