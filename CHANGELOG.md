@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Person pages now display context from the person’s lifetime, if any is available
 - Date pages now indicate if source material spans multiple days
-- Context data from Thomas Short’s ‘A General Chronological History of the Air, Weather, Seasons, Meteors…’, covering 1527–1559 -- more is available
+- Context data from Thomas Short’s ‘A General Chronological History of the Air, Weather, Seasons, Meteors…’, covering 1527–1559, 1577-1608 -- more is available
 - Display information about volumes on source page
 
 ### Changed
