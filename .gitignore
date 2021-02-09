@@ -2,3 +2,9 @@
 _site/
 /.jekyll-cache/
 /vendor/
+
+.terraform/
+/terraform/*.tf-plan
+/terraform/*.tfstate
+/terraform/*.tfstate.backup
+/terraform/secrets.tfvars

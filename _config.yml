@@ -63,6 +63,7 @@ twitter:
 
 exclude:
   - .gitignore
+  - terraform/
 
 collections:
   source_material:
