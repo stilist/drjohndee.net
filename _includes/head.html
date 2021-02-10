@@ -60,6 +60,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% feed_meta -%}
 
+  {% comment -%}
+  The Garamond font isn't used on the home page, so loading it there is wasteful.
+  {% endcomment -%}
+  {% if page.url != "/" -%}
   <link rel=preload as="font" type="font/woff2"
         href="{{ "/assets/fonts/eb-garamond-400-normal.woff2" | relative_url }}">
+  {% endif -%}
 </head>

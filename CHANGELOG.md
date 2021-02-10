@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- The index page doesn’t use the Garamond font, so don’t preload the font files there
 
 ## [1.0.3] - 2021-02-09
 ### Added
@@ -33,7 +35,7 @@ details for each edition -- this makes it easy to specify the `numberOfPages` pr
 - Link to DOI if available
 
 ### Changed
-- Manually render page metadata instead of using `jekyll-seo-tag` plugin -- the plugin doesn't have a way to disable JSON-LD output, but, that output is a secondary, lower-quality version of the structured data applied throughout the site
+- Manually render page metadata instead of using `jekyll-seo-tag` plugin -- the plugin doesn’t have a way to disable JSON-LD output, but, that output is a secondary, lower-quality version of the structured data applied throughout the site
 - Directly host EB Garamond font files -- CSS and files were assembled using the [`google-webfonts-helper` tool](https://google-webfonts-helper.herokuapp.com/fonts/eb-garamond?subsets=greek,latin,latin-ext)
 
 ### Fixed
