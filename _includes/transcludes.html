@@ -17,8 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% if include.keys.size > 0 -%}
-<aside class="annotations annotations-{{ include.collection }}"
-       role="complementary">
+<aside class="annotations annotations-{{ include.collection }}">
   <h3>{{ include.collection, | capitalize }}</h3>
   <ul class="annotation-content">
   {% assign previous_source_key = null -%}

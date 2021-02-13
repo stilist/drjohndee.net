@@ -26,7 +26,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 
   {% assign edition = source_record.editions | find: "edition_key", include.edition_key -%}
-  <span itemtype="https://schema.org/{{ itemtype }} https://schema.org/{{ edition.type }}"
+  <span itemscope
+        itemtype="https://schema.org/{{ itemtype }} https://schema.org/{{ edition.type }}"
         itemid="{{ source_permalink }}#edition-{{ include.edition_key }}">
     <meta itemprop=url content="{{ source_permalink }}">
     <meta itemprop=pagination content="{{ include.location }}">
