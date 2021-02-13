@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Only preload the Garamond font file for pages that need it, determined by a `has_source_material` property in a page’s `data`
+- Add `crossorigin` attribute to font preload -- otherwise the browser won’t use it
 
 ## [1.0.3] - 2021-02-09
 ### Added
