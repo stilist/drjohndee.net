@@ -62,6 +62,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% comment -%}
   The Garamond font isn't used on the home page, so loading it there is wasteful.
+  Also, most pages that use the Garamond font only use the non-italic regular
+  version, so there's no point preloading the other versions.
   {% endcomment -%}
   {% if page.has_source_material -%}
   <link rel=preload as="font" type="font/woff2"
