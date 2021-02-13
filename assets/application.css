@@ -47,6 +47,7 @@
        url('fonts/eb-garamond-400-italic.woff') format('woff');
 }
 
+/* colors */
 :root {
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
   --neutral-0--components: 1 1 0.9882;
@@ -102,42 +103,17 @@
   --accent-90--components: 0.6196 0.1568 0;
   --accent-90: #9e2800;
 
-  --invalid-data--components: 1 0 0.88;
-  --invalid-data: #f0c;
-
-  --base-font-size: 18px;
-  --font-serif: EB Garamond, Garamond, Times, Times New Roman, serif;
-  --font-sans-serif: system-ui, sans-serif;
-
-  --foreground: var(--neutral-100);
   --background: var(--neutral-0);
-
-  --primary-column-count: 9;
-  --spacing-column-count: 1;
-  --secondary-column-count: 5;
-  --column-count: calc(var(--primary-column-count)
-                     + var(--spacing-column-count)
-                     + var(--secondary-column-count));
-  --column-width: 5rem;
-  --gutter-width: 0.5rem;
-  --content-width: calc(var(--column-count) * var(--column-width)
-                      + calc(var(--column-count) - 1) * var(--gutter-width));
-
-  --vertical-rhythm: calc(var(--gutter-width) * 2);
-
-  --calendar-month-column-count: 3;
-  --calendar-month-width: calc(var(--calendar-month-column-count) * var(--column-width)
-                             + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
-  /* one week per row; used as both width and height to make cells square */
-  --calendar-day-size: calc(var(--calendar-month-width) / 7);
+  --blockquote-border-color: var(--neutral-40);
+  --blockquote-content-color: var(--neutral-80);
   --calendar-filler-color: var(--neutral-80);
   --calendar-highlight-color: var(--accent-20);
+  --foreground: var(--neutral-100);
+  --link-color: var(--accent-80);
+  --link-focus-color: var(--accent-60);
+  --link-visted-color: var(--accent-100);
 }
-@media (prefers-reduced-data: reduced) {
-  :root {
-    --font-serif: Garamond, Times, Times New Roman, serif;
-  }
-}
+
 @supports (color: hsl(1 1 1)) {
   :root {
     --accent-0: hsl(var(--accent-0--components));
@@ -164,7 +140,6 @@
     --neutral-80: hsl(var(--neutral-80--components));
     --neutral-90: hsl(var(--neutral-90--components));
     --neutral-100: hsl(var(--neutral-100--components));
-    --invalid-data: hsl(var(--invalid-data--components));
   }
 }
 @supports (color: color(display-p3 1 1 1)) {
@@ -193,17 +168,55 @@
     --accent-80: color(display-p3 var(--accent-80--components));
     --accent-90: color(display-p3 var(--accent-90--components));
     --accent-100: color(display-p3 var(--accent-100--components));
-    --invalid-data: color(display-p3 var(--invalid-data--components));
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --background: var(--neutral-100);
+    --blockquote-border-color: var(--neutral-80);
+    --blockquote-content-color: var(--neutral-40);
     --calendar-filler-color: var(--neutral-70);
     --calendar-highlight-color: var(--accent-80);
-    --calendar-weekend-color: var(--neutral-20);
     --foreground: var(--neutral-0);
-    --background: var(--neutral-100);
+    --link-color: var(--accent-30);
+    --link-focus-color: var(--accent-10);
+    --link-visted-color: var(--accent-40);
   }
+}
+
+/* type */
+:root {
+  --base-font-size: 18px;
+  --font-serif-local: Garamond, Times, Times New Roman, serif;
+  --font-serif: EB Garamond, var(--font-serif-local);
+  --font-sans-serif: system-ui, sans-serif;
+}
+@media (prefers-reduced-data: reduced) {
+  :root {
+    --font-serif: var(--font-serif-local);
+  }
+}
+
+/* grid & layout */
+:root {
+  --primary-column-count: 9;
+  --spacing-column-count: 1;
+  --secondary-column-count: 5;
+  --column-count: calc(var(--primary-column-count)
+                     + var(--spacing-column-count)
+                     + var(--secondary-column-count));
+  --column-width: 5rem;
+  --gutter-width: 0.5rem;
+  --content-width: calc(var(--column-count) * var(--column-width)
+                      + calc(var(--column-count) - 1) * var(--gutter-width));
+
+  --vertical-rhythm: calc(var(--gutter-width) * 2);
+
+  --calendar-month-column-count: 3;
+  --calendar-month-width: calc(var(--calendar-month-column-count) * var(--column-width)
+                             + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
+  /* one week per row; used as both width and height to make cells square */
+  --calendar-day-size: calc(var(--calendar-month-width) / 7);
 }
 @media (min-width: 2200px) {
   :root {
@@ -248,24 +261,15 @@ body {
   width: var(--content-width);
 }
 a {
-  color: var(--accent-80);
+  color: var(--link-color);
 }
-a:visited {
-  color: var(--accent-100);
-}
+a:focus,
 a:hover {
-  color: var(--accent-60);
+  color: var(--link-focus-color);
 }
-@media (prefers-color-scheme: dark) {
-  a {
-    color: var(--accent-30);
-  }
-  a:visited {
-    color: var(--accent-40);
-  }
-  a:hover {
-    color: var(--accent-10);
-  }
+a:active,
+a:visited {
+  color: var(--link-visted-color);
 }
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -278,26 +282,18 @@ ul > li {
   margin-bottom: var(--vertical-rhythm);
 }
 blockquote {
-  color: var(--neutral-80);
+  color: var(--blockquote-content-color);
   padding-left: calc(var(--gutter-width));
   position: relative;
 }
 blockquote::before {
-  background-color: var(--neutral-40);
+  background-color: var(--blockquote-border-color);
   bottom: 0;
   content: '';
   left: calc(var(--gutter-width) * -0.5);
   position: absolute;
   top: 0;
   width: 4px;
-}
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    color: var(--neutral-40);
-  }
-  blockquote::before {
-    background-color: var(--neutral-80);
-  }
 }
 blockquote > :last-child {
   margin-bottom: 0;
