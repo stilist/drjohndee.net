@@ -72,14 +72,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor %}
     </ul>
-
-    {% assign commentary_keys = page.timestamp | commentary_for_date -%}
-    {% include transcludes.html keys=commentary_keys collection="commentary" -%}
   </section>
+  {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
+  {% include transcludes.html keys=footnote_keys collection="footnotes" -%}
+
+  {% assign commentary_keys = page.timestamp | commentary_for_date -%}
+  {% include transcludes.html keys=commentary_keys collection="commentary" -%}
 
   {% assign context_keys = page.timestamp | context_for_date -%}
   {% include transcludes.html keys=context_keys collection="context" -%}
-
-  {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
-  {% include transcludes.html keys=footnote_keys collection="footnotes" -%}
 </article>

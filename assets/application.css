@@ -199,6 +199,7 @@
 
 /* grid & layout */
 :root {
+  --body-side-spacing: auto;
   --primary-column-count: 9;
   --spacing-column-count: 1;
   --secondary-column-count: 5;
@@ -206,9 +207,15 @@
                      + var(--spacing-column-count)
                      + var(--secondary-column-count));
   --column-width: 5rem;
-  --gutter-width: 0.5rem;
+  --gutter-width: calc(var(--column-width) / 10);
   --content-width: calc(var(--column-count) * var(--column-width)
                       + calc(var(--column-count) - 1) * var(--gutter-width));
+  --content-grid-rows: auto auto auto auto;
+  --content-grid-areas:
+    "header     header     header     header     header     header     header     header     header     header header    header    header    header    header"
+    "content    content    content    content    content    content    content    content    content      .    footnotes footnotes footnotes footnotes footnotes"
+    "commentary commentary commentary commentary commentary commentary commentary commentary commentary   .    footnotes footnotes footnotes footnotes footnotes"
+    "context    context    context    context    context    context    context    context    context      .    footnotes footnotes footnotes footnotes footnotes";
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
 
@@ -225,8 +232,20 @@
 }
 @media (max-width: 960px) {
   :root {
+    --body-side-spacing: calc(var(--gutter-width) * 2);
     --primary-column-count: 5;
-    --secondary-column-count: 3;
+    --secondary-column-count: 0;
+    --spacing-column-count: 0;
+    --column-width: 18.5vw;
+    --content-grid-areas:
+      "header     header     header     header     header"
+      "content    content    content    content    content"
+      "footnotes  footnotes  footnotes  footnotes  footnotes"
+      "commentary commentary commentary commentary commentary"
+      "context    context    context    context    context";
+  }
+  body {
+    margin-left:
   }
 }
 
@@ -255,10 +274,10 @@ body {
   color-scheme: light dark;
   font-family: var(--font-sans-serif);
   line-height: 1rem;
-  margin: calc(var(--vertical-rhythm) * 3) auto
-          calc(var(--vertical-rhythm) * 2) auto;
+  margin: calc(var(--vertical-rhythm) * 3) var(--body-side-spacing)
+          calc(var(--vertical-rhythm) * 2) var(--body-side-spacing);
   min-height: 100vh;
-  width: var(--content-width);
+  max-width: var(--content-width);
 }
 a {
   color: var(--link-color);
@@ -346,11 +365,9 @@ table {
   display: grid;
   grid-template-columns: repeat(auto-fit,
                                 var(--column-width));
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header  header  header  header  header  header  header  header  header  header header    header    header    header    header"
-    "content content content content content content content content content   .    footnotes footnotes footnotes footnotes footnotes"
-    "context context context context context context context context context   .    footnotes footnotes footnotes footnotes footnotes";
+  grid-template-rows: var(--content-grid-rows);
+  grid-template-areas: var(--content-grid-areas);
+  max-width: var(--content-width);
 }
 .page-header {
   grid-area: header;
@@ -471,6 +488,9 @@ table {
   font-size: 0.9rem;
   line-height: calc(var(--vertical-rhythm) * 2);
   margin-top: calc(var(--vertical-rhythm) * 1.1);
+}
+.annotations-commentary {
+  grid-area: commentary;
 }
 .annotations-commentary .annotation-content {
   font-size: 1.2rem;
