@@ -54,6 +54,17 @@ module HistoricalDiary
       end
     end
 
+    def lifespan_years(person_key)
+      record = person_data(person_key)
+      return [] if !record.key?('birth_date')
+      return [] if !record.key?('death_date')
+
+      birthYear = record['birth_date'].split('-').first.to_i
+      deathYear = record['death_date'].split('-').first.to_i
+
+      (birthYear..deathYear).to_a
+    end
+
     # > Author. Title. Title of container (do not list container for standalone
     # > books, e.g. novels), Other contributors (translators or editors),
     # > Version (edition), Number (vol. and/or no.), Publisher, Publication

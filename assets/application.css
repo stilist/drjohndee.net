@@ -124,6 +124,14 @@
                       + calc(var(--column-count) - 1) * var(--gutter-width));
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
+
+  --calendar-month-column-count: 3;
+  --calendar-month-width: calc(var(--calendar-month-column-count) * var(--column-width)
+                             + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
+  /* one week per row; used as both width and height to make cells square */
+  --calendar-day-size: calc(var(--calendar-month-width) / 7);
+  --calendar-filler-color: var(--neutral-80);
+  --calendar-highlight-color: var(--accent-20);
 }
 @media (prefers-reduced-data: reduced) {
   :root {
@@ -190,6 +198,9 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --calendar-filler-color: var(--neutral-70);
+    --calendar-highlight-color: var(--accent-80);
+    --calendar-weekend-color: var(--neutral-20);
     --foreground: var(--neutral-0);
     --background: var(--neutral-100);
   }
@@ -217,7 +228,8 @@
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, figure,
+table, tr, td {
   margin: 0;
   padding: 0;
 }
@@ -314,6 +326,9 @@ hr {
 p {
   line-height: calc(var(--vertical-rhythm) * 2);
 }
+table {
+  border-collapse: collapse;
+}
 
 
 #site-header {
@@ -345,13 +360,42 @@ p {
   grid-area: header;
   margin-bottom: calc(var(--vertical-rhythm) * 1.9);
 }
+.page-name,
+.page-nextPrevious {
+  display: inline-block;
+  line-height: calc(var(--vertical-rhythm) * 3);
+}
 .page-name {
   font-size: 2.625rem;
   font-weight: 700;
-  line-height: calc(var(--vertical-rhythm) * 3);
   margin-bottom: calc(var(--vertical-rhythm) * 2);
+  margin-top: 0;
   position: relative;
 }
+.page-nextPrevious {
+  align-items: stretch;
+  flex-direction: column;
+  height: calc(var(--vertical-rhythm) * 3);
+  padding-left: 1rem;
+  vertical-align: top;
+  width: var(--column-width);
+}
+.page-nextPrevious--isNext,
+.page-nextPrevious--isPrevious {
+  display: block;
+  flex-grow: 1;
+  /* half of container's `line-height` */
+  height: calc(var(--vertical-rhythm) * 1.5);
+  line-height: calc(var(--vertical-rhythm) * 1.5);
+  width: 100%;
+}
+.page-nextPrevious--isNext {
+  align-self: end;
+}
+.page-nextPrevious--isPrevious {
+  align-self: start;
+}
+
 .source-material {
   font-family: var(--font-serif);
 }
@@ -389,6 +433,9 @@ p {
   grid-area: content;
   line-height: 1.6rem;
   margin-bottom: calc(var(--vertical-rhythm) * 1.2);
+}
+.page-content--is-fullWidth {
+  grid-column: span var(--column-count);
 }
 .page-content .e-content {
   font-size: 1.3rem;
@@ -441,4 +488,41 @@ p {
 
 #site-footer {
   margin-top: calc(var(--vertical-rhythm) * 5);
+}
+
+.calendar {
+  display: flex;
+  gap: calc(var(--column-width)
+          + calc(var(--gutter-width) * 2));
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: flex-start;
+}
+.calendar-month {
+  margin-bottom: 0;
+  width: var(--calendar-month-width);
+}
+.calendar-monthName {
+  display: block;
+}
+.calendar-date {
+  cursor: default;
+  height: var(--calendar-day-size);
+  /* vertically center text */
+  position: relative;
+  text-align: center;
+  width: var(--calendar-day-size);
+}
+.calendar-date a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.calendar-date--filler {
+  color: var(--calendar-filler-color);
+}
+.calendar-date--content {
+  background-color: var(--calendar-highlight-color);
 }

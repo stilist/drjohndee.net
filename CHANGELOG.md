@@ -5,8 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Generate a calendar page for each year, with a design based on the design of Apple’s Calendar app in macOS Big Sur
+- Add `lifespan_years` Liquid filter that returns an array of the years a given `person` was alive, if both the birth and death year are known
+- Index page now shows list of years, rather than a list of all the dates that have content
+- Index page’s list of years is the `lifespan_years` of `subject_person_key` in `_config.yml`
+- Add `HistoricalDiaryPage` subclass of `Jekyll::Page`
+- Set `has_source_material` property for `HistoricalDiary::DayPage`
+
 ### Fixed
-- The index page doesn’t use the Garamond font, so don’t preload the font files there
+- Only preload the Garamond font file for pages that need it, determined by a `has_source_material` property in a page’s `data`
 
 ## [1.0.3] - 2021-02-09
 ### Added

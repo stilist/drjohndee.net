@@ -20,15 +20,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 <div class="home">
-  {% if site.posts.size > 0 -%}
-  <ul class="post-list">
-    {% for post in site.posts -%}
-    <li class="post-summary">
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        {{ post.timestamp }}
+  {% assign years = site.subject_person_key | lifespan_years %}
+
+  <h2>See information for the year:</h2>
+
+  <ul class="years">
+  {% for year in years reversed -%}
+    {% assign year_mod = year | modulo: 10 -%}
+    <li class="year">
+      {% capture filename -%}{{ year }}.html{% endcapture -%}
+      <a href="{{ filename | relative_url }}">
+        <time>{{ year }}</time>
       </a>
     </li>
-    {% endfor -%}
+  {% endfor -%}
   </ul>
-  {% endif -%}
 </div>

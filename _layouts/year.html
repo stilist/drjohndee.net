@@ -1,0 +1,102 @@
+---
+layout: default
+---
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+<article class="page">
+  <header class="page-header">
+    <h2 class="page-name p-name"
+        itemprop="name">
+      <meta itemprop=headline content="{{ page.title }}">
+      <time aria-label="{{ page.title }}">{{ page.year }}</time>
+    </h2>
+
+    {% if page.next or page.previous -%}
+    <nav class='page-nextPrevious'>
+      {% if page.previous -%}
+      <a href="{{ page.previous.url }}"
+         class="page-nextPrevious--isPrevious"
+         aria-label="View the previous year, {{ page.year | minus: 1 }}">
+        ← {{ page.year | minus: 1 }}
+      </a>
+      {% else -%}
+      <span class="page-nextPrevious--isPrevious"
+            aria-hidden="true"></span>
+      {% endif -%}
+      {% if page.next -%}
+      <a href="{{ page.next.url }}"
+         class="page-nextPrevious--isNext"
+         aria-label="View the following year, {{ page.year | plus: 1 }}">
+        → {{ page.year | plus: 1 }}
+      </a>
+      {% endif -%}
+    </nav>
+    {% endif -%}
+  </header>
+
+  <section class="page-content page-content--is-fullWidth">
+    <ol class="calendar">
+      {% for month_hash in page.legal_year_dates -%}
+      <li class="calendar-month">
+        {% assign month_data = month_hash | last -%}
+
+        <span class='calendar-monthName'>
+          {{ month_data.name }}
+        </span>
+
+        <table class='calendar-days'>
+          {% assign first_day = month_data.days | first -%}
+
+          {% comment -%}
+          Insert spacers for the previous month's days in the first week of
+          this month.
+          {% endcomment -%}
+          {% for n in (1..first_day.day_of_week) -%}
+          {% if n == 0 -%}<tr>{% endif -%}
+          <td class="calendar-date calendar-date--filler"
+              aria-hidden="true"></td>
+          {% if n == 6 -%}</tr>{% endif -%}
+          {% endfor -%}
+
+          {% for day in month_data.days -%}
+          {% if day.day_of_week == 0-%}<tr>{% endif -%}
+          {% if day.type == "no-content" -%}
+          {% assign aria = "role='presentation'" -%}
+          {% elsif day.type == "filler" -%}
+          {% assign aria = "aria-hidden='true'" -%}
+          {% endif -%}
+          <td class="calendar-date calendar-date--{{ day.type }}" {{ aria }}>
+            {% if day.type == "content" -%}
+            <a href="{{ day.url | relative_url }}">
+            {% endif -%}
+            <time datetime="{{ day.string }}">
+              {{ day.day_number }}
+            </time>
+            {% if day.type == "content" -%}
+            </a>
+            {% endif -%}
+          </td>
+          {% if day.day_of_week == 6 -%}</tr>{% endif -%}
+          {% endfor -%}
+        </table>
+      </li>
+      {% endfor -%}
+    </ol>
+  </section>
+</article>

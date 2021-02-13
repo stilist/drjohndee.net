@@ -17,10 +17,88 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
+require_relative '../_lib/collections'
+require_relative '../_lib/historical_diary_page'
 require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
-  class DatePage < ::Jekyll::Page
+  class YearPage < ::HistoricalDiaryPage
+    def initialize(site, dates_with_content:, year:)
+      @site = site
+      @base = site.source
+      @dir = ''
+
+      @basename = year.to_s
+      @ext = '.html'
+      @name = "#{@basename}#{@ext}"
+
+      read_yaml(::File.join(@base, '_layouts'), 'year.html')
+
+      @data ||= {}
+      months = (1..13).map do |n|
+        adjusted_n = n + 2
+        actual_month_number = adjusted_n
+        actual_month_number -= 12 if adjusted_n > 12
+
+        [
+          adjusted_n,
+          {
+            'name' => DateTime.new(2000, actual_month_number).strftime('%B'),
+            'days' => [],
+          },
+        ]
+      end
+      data['date'] = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
+      data['legal_year_dates'] = months.to_h
+      data['title'] = "Events and writings for #{year}"
+      data['year'] = year
+
+      # > In England, Lady Day was New Year's Day (i.e. the new year began on 25
+      # > March) from 1155 until 1752, when the Gregorian calendar was adopted in
+      # > Great Britain and its Empire and with it the first of January as the
+      # > official start of the year in England, Wales and Ireland. […]
+      # > Until this change Lady Day had been used as the start of the legal year
+      # > but also the end of the fiscal and tax year. […] It appears that in
+      # > England and Wales, from at least the late 14th century, New Year's Day
+      # > was celebrated on 1 January as part of Yule.
+      #
+      # @see https://en.wikipedia.org/wiki/Lady_Day
+      legal_year_start = DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
+      next_legal_year_start = DateTime.iso8601("#{year + 1}-03-25", ::Date::ENGLAND)
+      # Generate 13 full months, though ultimately a month of it will be
+      # considered 'filler'.
+      legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
+      next_calendar_year = DateTime.iso8601("#{year + 1}-01-01", ::Date::ENGLAND)
+      TimestampRange.new(legal_year_timestamp).dates.each do |date|
+        calendar_timestamp = date.strftime('%F')
+
+        month = date.strftime('%m')
+        day = date.strftime('%d')
+        type = if dates_with_content.include?(calendar_timestamp) then 'content'
+               elsif date < legal_year_start then 'filler'
+               elsif date > next_legal_year_start then 'filler'
+               else 'no-content'
+               end
+
+        month_number = if date < next_calendar_year then date.month
+                       else date.month + 12
+                       end
+        data['legal_year_dates'][month_number]['days'] << {
+          'day_number' => date.day,
+          'day_of_week' => date.strftime('%w').to_i,
+          'url' => date.strftime('%Y/%m/%d.html'),
+          'string' => calendar_timestamp,
+          'type' => type,
+        }.freeze
+      end
+
+      data.default_proc = proc do |_, key|
+        site.frontmatter_defaults.find(relative_path, :year, key)
+      end
+    end
+  end
+
+  class DayPage < ::HistoricalDiaryPage
     def initialize(site, date:)
       @site = site
       @base = site.source
@@ -37,26 +115,15 @@ module HistoricalDiary
       read_yaml(::File.join(@base, '_layouts'), 'date.html')
 
       @data ||= {}
+      data['has_source_material'] = true
       data['date'] = date
       timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
       data['title'] = "Events and writings for #{timestamp}"
 
       data.default_proc = proc do |_, key|
-        site.frontmatter_defaults.find(relative_path, :source_material, key)
+        site.frontmatter_defaults.find(relative_path, :date, key)
       end
-    end
-
-    def <=>(other)
-      data['date'] <=> other.data['date']
-    end
-
-    def url_placeholders
-      {
-        :path => @dir,
-        :basename => basename,
-        :output_ext => output_ext,
-      }
     end
   end
 
@@ -64,13 +131,22 @@ module HistoricalDiary
   # material, generates a `Jekyll::Post` for each date that has material, and
   # manipulates the front matter of the `Jekyll::Document`s.
   class SourceMaterialGenerator < ::Jekyll::Generator
+    include ::DataCollection
+
     safe true
 
     def generate(site)
-      pages_by_timestamp = {}
-      known_dates = []
+      @site = site
+      generate_day_pages
+      generate_year_pages
+    end
 
-      site.collections['source_material'].docs.each do |document|
+    def generate_day_pages
+      pages_by_timestamp = {}
+      generated_dates = []
+      @pages_by_year = {}
+
+      @site.collections['source_material'].docs.each do |document|
         timestamp = document.basename_without_ext
         pages_by_timestamp[timestamp] ||= {}
         source_key = document.relative_path.split(::File::SEPARATOR)[-2]
@@ -83,20 +159,58 @@ module HistoricalDiary
         documents.each do |source_key, document|
           document.data['source_key'] = source_key
           document.data['timestamp'] = timestamp
-          document.data['timestamp_dates'] = timestamp_range.dates.map do |date|
-            date.strftime('%F')
+          document.data['timestamp_dates'] = []
+          timestamp_range.dates.each do |date|
+            date_string = date.strftime('%F')
+            document.data['timestamp_dates'] << date_string
+
+            # Use legal year, rather than calendar year, to simplify later
+            # logic. This means that for 1600-03-24 `date_string` will
+            # be pushed into `@pages_by_year[1599]`, and 1600-03-25 will be
+            # pushed into `@pages_by_year[1600]`.
+            year = date.year
+            year -= 1 if date < DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
+            @pages_by_year[year] ||= []
+            @pages_by_year[year] << date_string
           end
           document.data['timestamp_range'] = timestamp_range
 
-          site.pages << document
+          @site.pages << document
         end
 
         timestamp_range.dates.each do |date|
-          next if known_dates.include?(date)
+          next if generated_dates.include?(date)
 
-          site.posts.docs << DatePage.new(site, date: date)
-          known_dates << date
+          @site.posts.docs << DayPage.new(@site, date: date)
+          generated_dates << date
         end
+      end
+    end
+
+    def generate_year_pages
+      person_key = @site.config['subject_person_key']
+      record = person_data(person_key)
+      return if record.nil?
+      return if !record.key?('birth_date')
+      return if !record.key?('death_date')
+
+      birthYear = record['birth_date'].split('-').first.to_i
+      deathYear = record['death_date'].split('-').first.to_i
+
+      year_documents = {}
+
+      (birthYear..deathYear).each do |year|
+        dates_with_content = (@pages_by_year[year] || []).uniq.freeze
+        document = YearPage.new(@site,
+                                dates_with_content: dates_with_content,
+                                year: year)
+        year_documents[year] = document
+
+        if year_documents[year - 1]
+          year_documents[year].data['previous'] = year_documents[year - 1]
+          year_documents[year - 1].data['next'] = document
+        end
+        @site.pages << document
       end
     end
   end
