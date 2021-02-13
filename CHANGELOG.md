@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Index page’s list of years is the `lifespan_years` of `subject_person_key` in `_config.yml`
 - Add `HistoricalDiaryPage` subclass of `Jekyll::Page`
 - Set `has_source_material` property for `HistoricalDiary::DayPage`
+- Add CSS for the `prefers-contrast: more` media query
 
 ### Changed
 - Rework CSS so all variables are grouped, and rules use aliases for colors instead of referencing them directly, making it easier to maintain the dark-mode variant

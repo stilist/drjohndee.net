@@ -170,6 +170,11 @@
     --accent-100: color(display-p3 var(--accent-100--components));
   }
 }
+@media (prefers-contrast: more) {
+  :root {
+    --blockquote-content-color: var(--neutral-100);
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--neutral-100);
@@ -181,6 +186,12 @@
     --link-color: var(--accent-30);
     --link-focus-color: var(--accent-10);
     --link-visted-color: var(--accent-40);
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --blockquote-border-color: var(--neutral-60);
+    --blockquote-content-color: var(--neutral-20);
   }
 }
 
