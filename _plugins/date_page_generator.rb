@@ -105,6 +105,8 @@ module HistoricalDiary
                        end
         data['legal_year_dates'][month_number]['days'] << {
           'day_number' => date.day,
+          # used to inject `<tr>` / `</tr>` for week rows
+          'day_of_week' => date.strftime('%w').to_i,
           'url' => date.strftime('%Y/%m/%d.html'),
           'string' => calendar_timestamp,
           'type' => type,
