@@ -68,6 +68,7 @@ module HistoricalDiary
       end
       calendar_year_start = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
       data['date'] = calendar_year_start
+      data['last_modified_at'] = DateTime.now.to_date
       data['legal_year_dates'] = months.to_h
       data['title'] = "Events and writings for #{year}"
       data['year'] = year
@@ -135,6 +136,7 @@ module HistoricalDiary
       @data ||= {}
       data['has_source_material'] = true
       data['date'] = date
+      data['last_modified_at'] = DateTime.now.to_date
       timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
       data['title'] = "Events and writings for #{timestamp}"

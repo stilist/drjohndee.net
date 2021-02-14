@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
+- Set `last_modified_at` in metadata for year and date pages so Google will accept the sitemap
 
 ## [1.0.4] - 2021-02-13
 ### Added
