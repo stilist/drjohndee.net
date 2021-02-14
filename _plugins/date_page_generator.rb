@@ -66,7 +66,8 @@ module HistoricalDiary
           },
         ]
       end
-      data['date'] = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
+      calendar_year_start = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
+      data['date'] = calendar_year_start
       data['legal_year_dates'] = months.to_h
       data['title'] = "Events and writings for #{year}"
       data['year'] = year
@@ -103,7 +104,6 @@ module HistoricalDiary
                        end
         data['legal_year_dates'][month_number]['days'] << {
           'day_number' => date.day,
-          'day_of_week' => date.strftime('%w').to_i,
           'url' => date.strftime('%Y/%m/%d.html'),
           'string' => calendar_timestamp,
           'type' => type,
@@ -140,7 +140,7 @@ module HistoricalDiary
       data['title'] = "Events and writings for #{timestamp}"
 
       data.default_proc = proc do |_, key|
-        site.frontmatter_defaults.find(relative_path, :date, key)
+        site.frontmatter_defaults.find(relative_path, :day, key)
       end
     end
   end
