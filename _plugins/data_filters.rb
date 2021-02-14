@@ -87,10 +87,17 @@ module HistoricalDiary
         edition = source['editions'].values.first
       end
       edition ||= {}
+
+      # Tagging this as an actual date improves the screenreader experience.
+      publication_date = edition['date']
+      if publication_date
+        publication_date = "<time datetime='#{publication_date}'>#{publication_date}</time>"
+      end
+
       publishing_info = [
         edition['city'],
         edition['publisher'],
-        edition['date'],
+        publication_date,
         location.sub('-', '–'),
       ].compact.join(', ')
       publishing_info[0] = publishing_info[0].capitalize
