@@ -30,6 +30,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         itemprop="name">
       <meta itemprop=headline content="{{ page.title }}">
       <time class="dt-published"
+            datetime="{{ page.timestamp }}"
             itemprop=datePublished>
         {{ page.timestamp }}
       </time>
@@ -80,7 +81,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="source-material e-content">
           {% if entry.timestamp_dates.size > 1 -%}
-          ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})
+          <span class="page-dateRange">
+            ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})
+          </span>
           {% endif -%}
 
           {% assign processed_content = entry.content | markdownify -%}
