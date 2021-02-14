@@ -84,7 +84,7 @@ module HistoricalDiary
       #
       # @see https://en.wikipedia.org/wiki/Lady_Day
       legal_year_start = DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
-      next_legal_year_start = DateTime.iso8601("#{year + 1}-03-25", ::Date::ENGLAND)
+      legal_year_end = DateTime.iso8601("#{year + 1}-03-24", ::Date::ENGLAND)
       # Generate 13 full months, though ultimately a month of it will be
       # considered 'filler'.
       legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
@@ -96,7 +96,7 @@ module HistoricalDiary
         day = date.strftime('%d')
         type = if dates_with_content.include?(calendar_timestamp) then 'content'
                elsif date < legal_year_start then 'filler'
-               elsif date > next_legal_year_start then 'filler'
+               elsif date > legal_year_end then 'filler'
                else 'no-content'
                end
 
