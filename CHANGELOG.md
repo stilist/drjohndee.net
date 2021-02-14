@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Generate a sitemap with `jekyll-sitemap`
 - Set `url` in `_config.yml` to get valid `<loc>`s in sitemap
+- Add three entries from Sloane MS 3188
 
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
