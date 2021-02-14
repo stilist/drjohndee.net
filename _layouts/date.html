@@ -34,6 +34,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {{ page.timestamp }}
       </time>
     </h2>
+
+    {% if page.next or page.previous -%}
+    <nav class='page-nextPrevious'>
+      {% if page.previous -%}
+      <a href="{{ page.previous.url }}"
+         class="page-nextPrevious--isPrevious">
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>←</span>
+        <span class="is-assistiveOnly">View the previous entry, on</span>
+        <time datetime="{{ page.previous.timestamp }}">
+          {{ page.previous.timestamp }}
+        </time>
+      </a>
+      {% else -%}
+      <span class="page-nextPrevious--isPrevious"
+            aria-hidden="true"></span>
+      {% endif -%}
+      {% if page.next -%}
+      <a href="{{ page.next.url }}"
+         class="page-nextPrevious--isNext">
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>→</span>
+        <span class="is-assistiveOnly">View the next entry, on</span>
+        <time datetime="{{ page.next.timestamp }}">
+          {{ page.next.timestamp }}
+        </time>
+      </a>
+      {% endif -%}
+    </nav>
+    {% endif -%}
   </header>
 
   <section class="page-content"

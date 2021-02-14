@@ -357,6 +357,17 @@ table {
 }
 
 
+/* @see https://webaim.org/techniques/css/invisiblecontent/ */
+.is-assistiveOnly {
+  height: 1px;
+  left: -1px;
+  overflow: hidden;
+  position:absolute;
+  top: auto;
+  width: 1px;
+}
+
+
 #site-header {
   margin-bottom: calc((var(--vertical-rhythm) * 3.8));
 }
@@ -402,7 +413,7 @@ table {
   height: calc(var(--vertical-rhythm) * 3);
   padding-left: 1rem;
   vertical-align: top;
-  width: var(--column-width);
+  width: calc(var(--column-width) * 2);
 }
 .page-nextPrevious--isNext,
 .page-nextPrevious--isPrevious {

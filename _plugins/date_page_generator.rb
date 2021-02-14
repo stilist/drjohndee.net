@@ -165,7 +165,7 @@ module HistoricalDiary
 
     def generate_day_pages
       pages_by_timestamp = {}
-      generated_dates = []
+      generated_dates = {}
       @pages_by_year = {}
 
       @site.collections['source_material'].docs.each do |document|
@@ -204,10 +204,22 @@ module HistoricalDiary
         end
 
         timestamp_range.dates.each do |date|
-          next if generated_dates.include?(date)
+          next if generated_dates.key?(date)
 
-          @site.posts.docs << DayPage.new(@site, date: date)
-          generated_dates << date
+          document = DayPage.new(@site, date: date)
+          @site.posts.docs << document
+          generated_dates[date] = document
+        end
+      end
+
+      sorted_date_hash = generated_dates.sort.to_h.freeze
+      sorted_documents = sorted_date_hash.values
+      sorted_date_hash.each_with_index do |(date, document), index|
+        if index > 0
+          document.data['previous'] = sorted_documents[index - 1]
+        end
+        if index < sorted_documents.length
+          document.data['next'] = sorted_documents[index + 1]
         end
       end
     end
