@@ -15,6 +15,7 @@ gem "jekyll", "~> 4.2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-sitemap", "~> 1.4.0"
   # @see https://github.com/tmm1/http_parser.rb/issues/47#issuecomment-544196403
   gem "http_parser.rb", git: "git@github.com:tmm1/http_parser.rb.git"
 end

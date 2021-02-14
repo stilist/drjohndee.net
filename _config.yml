@@ -37,6 +37,7 @@ subject_person_key: "Dee, John"
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # for page metadata
 twitter:

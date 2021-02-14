@@ -21,6 +21,24 @@ require_relative '../_lib/collections'
 require_relative '../_lib/historical_diary_page'
 require_relative '../_lib/timestamp_range'
 
+# This monkeypatches an `#html?` method into `Jekyll::Document`.
+# `jekyll-sitemap` calls Jekyll's `site.html_pages`. `site.html_pages`
+# (`Jekyll::Drops::SiteDrop#html_pages`) calls `#html?` to filter the items in
+# `site.pages`. `HistoricalDiary::SourceMaterialGenerator#generate_day_pages`
+# adds the `Jekyll::Document`s from the `source_material` collection to
+# `site.pages`; thus `site.html_pages` will see `Jekyll::Document`s, but it
+# only expects to see `Jekyll::Page`s -- `Jekyll::Page` defines `#html?`, but
+# `Jekyll::Document` doesn't.
+#
+# This monkeypatch simply copies `Jekyll::Page#html?` to `Jekyll::Document`,
+# fixing the crash.
+class Jekyll::Document
+  # @see https://github.com/jekyll/jekyll/blob/v4.2.0/lib/jekyll/page.rb#L171
+  def html?
+    ::Jekyll::Page::HTML_EXTENSIONS.include?(output_ext)
+  end
+end
+
 module HistoricalDiary
   class YearPage < ::HistoricalDiaryPage
     def initialize(site, dates_with_content:, year:)
@@ -157,6 +175,9 @@ module HistoricalDiary
         timestamp_range = TimestampRange.new(timestamp)
 
         documents.each do |source_key, document|
+          # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
+          document.data['sitemap'] = false
+
           document.data['source_key'] = source_key
           document.data['timestamp'] = timestamp
           document.data['timestamp_dates'] = []
