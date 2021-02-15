@@ -67,10 +67,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   </header>
 
+  {% assign entries = page.timestamp | source_material_for_date -%}
+  {% if entries.size > 0 -%}
   <section class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
-      {% assign entries = page.timestamp | source_material_for_date -%}
       {% for entry in entries -%}
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
@@ -106,6 +107,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endfor %}
     </ul>
   </section>
+  {% endif -%}
+
   {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
   {% include transcludes.html keys=footnote_keys collection="footnotes" -%}
 

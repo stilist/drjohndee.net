@@ -175,6 +175,12 @@ module HistoricalDiary
         pages_by_timestamp[timestamp][source_key] = document
       end
 
+      # Some days may have commentary but nosource material: for example, the
+      # dates covered in Dee's Compendious Rehearsall.
+      @site.data['commentary'].values.map(&:keys).flatten.each do |timestamp|
+        pages_by_timestamp[timestamp] ||= {}
+      end
+
       pages_by_timestamp.each do |timestamp, documents|
         timestamp_range = TimestampRange.new(timestamp)
 
@@ -188,15 +194,6 @@ module HistoricalDiary
           timestamp_range.dates.each do |date|
             date_string = date.strftime('%F')
             document.data['timestamp_dates'] << date_string
-
-            # Use legal year, rather than calendar year, to simplify later
-            # logic. This means that for 1600-03-24 `date_string` will
-            # be pushed into `@pages_by_year[1599]`, and 1600-03-25 will be
-            # pushed into `@pages_by_year[1600]`.
-            year = date.year
-            year -= 1 if date < DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
-            @pages_by_year[year] ||= []
-            @pages_by_year[year] << date_string
           end
           document.data['timestamp_range'] = timestamp_range
 
@@ -205,6 +202,15 @@ module HistoricalDiary
 
         timestamp_range.dates.each do |date|
           next if generated_dates.key?(date)
+
+          # Use legal year, rather than calendar year, to simplify later logic.
+          # This means that for 1600-03-24 the timestamp will be pushed into
+          # `@pages_by_year[1599]`, and 1600-03-25 will be pushed into
+          # `@pages_by_year[1600]`.
+          year = date.year
+          year -= 1 if date < DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
+          @pages_by_year[year] ||= []
+          @pages_by_year[year] << date.strftime('%F')
 
           document = DayPage.new(@site, date: date)
           @site.posts.docs << document

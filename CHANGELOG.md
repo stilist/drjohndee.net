@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Generate a sitemap with `jekyll-sitemap`
 - Set `url` in `_config.yml` to get valid `<loc>`s in sitemap
 - Add three entries from Sloane MS 3188
-- Add next/previous links on date pages
+- Add next/previous links on day pages
+- Render day pages that have commentary but no source material
 
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
-- Set `last_modified_at` in metadata for year and date pages so Google will accept the sitemap
+- Set `last_modified_at` in metadata for year and day pages so Google will accept the sitemap
 - Adjust year pages to end on March 24th, not March 25th
 - Put source publication date in `<time>` tag for screenreader
 - Add missing copyright header to data file
