@@ -54,12 +54,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endif -%}
 
       {% if work.author_key and work.editor_key -%}
-      and
+      and edited
+      {% elsif work.editor_key -%}
+      Edited
       {% endif -%}
 
       {% if work.editor_key -%}
       {% include person_data.html person_key=work.editor_key itemprop="editor" -%}
-      Edited by {% include person_link.html person_key=work.editor_key -%}
+      by {% include person_link.html person_key=work.editor_key -%}
       {% endif -%}
     </h2>
     {% endif -%}
