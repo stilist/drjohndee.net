@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add next/previous links on day pages
 - Render day pages that have commentary but no source material
 - Begin adding material from the ‘Autobiographical Tracts of Dr John Dee’
+- Attempt transcription of Mercator’s letter to Dee regarding Rupes Nigra
 
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
