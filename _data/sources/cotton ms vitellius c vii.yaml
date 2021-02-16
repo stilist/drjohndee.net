@@ -1,0 +1,17 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  license_key: "CC0 1.0"
+  name: >-
+    Cotton MS Vitellius C ⅤⅠⅠ
+editions:
+  manuscript:
+    language: en
+    publisher: "The Chetham Society"
+    type: Manuscript
+    url: "http://searcharchives.bl.uk/IAMS_VU2:IAMS040-001103011"

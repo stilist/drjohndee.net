@@ -1,0 +1,21 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q321691"
+
+presentational_name:
+  givenName: Gerardus
+  familyName: Mercator
+full_name:
+  - text: Gerardus
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q18282500"
+  - text: Mercator
+    type: familyName
+    id: "http://www.wikidata.org/entity/Q83372750"
+birth_date: "1512-03-05"
+death_date: "1594-12-02"

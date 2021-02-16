@@ -80,6 +80,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% include person_data.html person_key=author_key
                                     itemprop="author" -%}
 
+        {% if entry.category == "correspondence" -%}
+        <p>
+          Letter from
+          {% include person_link.html person_key=entry.author_key -%}
+          to
+          {% include person_link.html person_key=entry.recipient_key -%}
+        </p>
+        {% endif -%}
+
         <div class="source-material e-content">
           {% if entry.timestamp_dates.size > 1 -%}
           <span class="page-dateRange">
