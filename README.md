@@ -1,12 +1,26 @@
 # The life and times of Dr John Dee
 
-This project is inspired by [Phil Gyford](https://www.gyford.com)’s [The Diary of Samuel Pepys](https://www.pepysdiary.com), though I’ve made some different choices: in particular, I’ve chosen licenses and a project structure that emphasize making this accessible to as many people as possible.
+This is the data and source code for [`drjohndee.net`](https://www.drjohndee.net/), which I’ve described as ‘Dr Dee’s life, presented with context, from source materials’. You can explore Dee’s writings and experiences, shown in the context of world events.
 
-The website and its data are [available via git](https://github.com/stilist/john-dee), and provided under strong open licenses. (See [`LICENSE.md`](LICENSE.md) for details.) The content uses open standards — source material is Unicode text with no markup, and the website makes heavy use of [structured data](https://developers.google.com/search/docs/guides/intro-structured-data), which is built on [schema.org](https://schema.org) definitions.
+The project is inspired by [Phil Gyford](https://www.gyford.com)’s [The Diary of Samuel Pepys](https://www.pepysdiary.com). [The source code](https://github.com/philgyford/pepysdiary) for that project is available, though I don’t see an open-source license; the data doesn’t appear to be available outside of the site itself.
+
+This project is built to ensure the material is accessible to as many people as possible, and can continue to be used in the future: the data and source code in this repository are provided under strong open licenses (see [`LICENSE.md`](LICENSE.md)); source material is stored as plain Unicode text; the website makes heavy use of [structured data](https://developers.google.com/search/docs/guides/intro-structured-data), which is built on [schema.org](https://schema.org) definitions; and I’ve used accessibility-testing tools to ensure the website is usable for a wide range of people.
+
+## How this system works
+
+The project is built on [Jekyll](https://jekyllrb.com), though it could use any [static site generator](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/). This repository has a few parts: data, code to process the data, and code to present the data.
+
+The data is currently split between the `_data` directory (Jekyll’s [built-in system for managing data-sets](https://jekyllrb.com/docs/datafiles/)) and the `_source_material` directory. `_source_material` has the ‘raw’ data, with a handful of annotations using [Jekyll’s ‘front matter’ metadata system](https://jekyllrb.com/docs/front-matter/). The content is transcribed from source books and manuscripts, using the same line structure as the source material. (This makes it easier to locate a line from the source material in the transcription, and vice versa.) The `_data` directory has [Yaml files](https://yaml.org) that contain metadata for the source material. (For example, information about people.)
+
+The `_plugins` directory has [generators](https://jekyllrb.com/docs/plugins/generators/) that create [pages](https://jekyllrb.com/docs/pages/) from data — a page for each year and date that have relevant source material, and for each file in `_data/people` and `_data/sources`.
+
+The [`_includes`](https://jekyllrb.com/docs/includes/) and [`_layouts`](https://jekyllrb.com/docs/layouts/) directories have the HTML files used to generate pages for the site. The `_plugins` directory has [Liquid filters](https://jekyllrb.com/docs/plugins/filters/) that are used by the files in `_includes` and `_layouts`.
+
+Last, the `assets` directory has the CSS and font files that determine the site’s appearance.
 
 ## How to run this project on your own machine
 
-This project is built on [Jekyll](https://jekyllrb.com). You’ll need to have [a supported version of Ruby](https://www.ruby-lang.org/en/downloads/) installed.
+You’ll need to have [a supported version of Ruby](https://www.ruby-lang.org/en/downloads/) installed.
 
 ```shell
 # install Jekyll and dependencies
@@ -20,4 +34,4 @@ bundle exec jekyll serve
 
 ## How to contribute
 
-Improvements and contributions of any kind and any size are welcome: it could be writing new code, improving the website design, adding annotations, correcting transcriptions, or something else! The [`CONTRIBUTING.md` file](CONTRIBUTING.md) has more information about how to contribute.
+Improvements and contributions of any kind and any size are welcome: it could be writing new code, improving the website’s design or source code, correcting transcriptions, or something else! The [`CONTRIBUTING.md` file](CONTRIBUTING.md) has more information about how to contribute.

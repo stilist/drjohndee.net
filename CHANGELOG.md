@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Begin adding material from the ‘Autobiographical Tracts of Dr John Dee’
 - Attempt transcription of Mercator’s letter to Dee regarding Rupes Nigra
 
+### Changed
+- Update `README` to be more accurate and useful
+
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
 - Set `last_modified_at` in metadata for year and day pages so Google will accept the sitemap
