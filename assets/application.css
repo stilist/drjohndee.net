@@ -392,6 +392,8 @@ table {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  max-width: calc(var(--column-width)
+                  * var(--primary-column-count));
 }
 .year {
   width: var(--column-width);
