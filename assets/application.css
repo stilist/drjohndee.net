@@ -498,6 +498,7 @@ table {
 }
 .annotations blockquote {
   font-family: var(--font-serif);
+  font-size: 1.2rem;
   margin-top: calc(var(--vertical-rhythm) * 0.1);
 }
 .annotations blockquote::before {
@@ -510,9 +511,6 @@ table {
 }
 .annotations-commentary {
   grid-area: commentary;
-}
-.annotations-commentary .annotation-content {
-  font-size: 1.2rem;
 }
 .annotations-context {
   grid-area: context;
