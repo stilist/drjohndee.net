@@ -69,7 +69,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% assign entries = page.timestamp | source_material_for_date -%}
   {% if entries.size > 0 -%}
-  <article class="page-content"
+  <div class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
       {% for entry in entries -%}
@@ -115,7 +115,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor %}
     </ul>
-  </article>
+  </div>
   {% endif -%}
 
   {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
