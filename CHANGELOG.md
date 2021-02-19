@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust year pages to end on March 24th, not March 25th
 - Put source publication date in `<time>` tag for screenreader
 - Add missing copyright header to data file
+- Improve usability on mobile devices and small screens
 
 ## [1.0.4] - 2021-02-13
 ### Added

@@ -198,6 +198,7 @@
 /* type */
 :root {
   --base-font-size: 18px;
+  --content-line-height: calc(var(--vertical-rhythm) * 2);
   --font-serif-local: Garamond, Times, Times New Roman, serif;
   --font-serif: EB Garamond, var(--font-serif-local);
   --font-sans-serif: system-ui, sans-serif;
@@ -243,7 +244,9 @@
 }
 @media (max-width: 960px) {
   :root {
+    --base-font-size: 20px;
     --body-side-spacing: calc(var(--gutter-width) * 2);
+    --content-line-height: calc(var(--vertical-rhythm) * 2.5);
     --primary-column-count: 5;
     --secondary-column-count: 0;
     --spacing-column-count: 0;
@@ -303,6 +306,10 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-bottom: var(--vertical-rhythm);
 }
+ol,
+ul {
+  font-size: 1rem;
+}
 ol > li,
 ul > li {
   line-height: var(--vertical-rhythm);
@@ -347,7 +354,7 @@ hr {
   width: 30%;
 }
 p {
-  line-height: calc(var(--vertical-rhythm) * 2);
+  line-height: var(--content-line-height);
 }
 table {
   border-collapse: collapse;
@@ -359,7 +366,7 @@ table {
   height: 1px;
   left: -1px;
   overflow: hidden;
-  position:absolute;
+  position: absolute;
   top: auto;
   width: 1px;
 }
@@ -376,6 +383,21 @@ table {
   margin: 0;
   padding-bottom: calc(var(--vertical-rhythm) * 0.2);
   text-align: left;
+}
+
+.home h2 {
+  line-height: 1em;
+}
+.years {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.year {
+  width: var(--column-width);
+}
+ol.years > .year {
+  line-height: calc(var(--vertical-rhythm) * 2);
 }
 
 
@@ -419,13 +441,16 @@ table {
   /* half of container's `line-height` */
   height: calc(var(--vertical-rhythm) * 1.5);
   line-height: calc(var(--vertical-rhythm) * 1.5);
+  position: relative;
   width: 100%;
 }
 .page-nextPrevious--isNext {
   align-self: end;
+  bottom: calc(var(--vertical-rhythm) * -0.3);
 }
 .page-nextPrevious--isPrevious {
   align-self: start;
+  top: calc(var(--vertical-rhythm) * -0.3);
 }
 
 .source-material {
@@ -455,7 +480,7 @@ table {
 }
 .entry .citation {
   display: block;
-  line-height: calc(var(--vertical-rhythm) * 2);
+  line-height: var(--content-line-height);
   margin-bottom: calc(var(--vertical-rhythm) * 0.8);
 }
 .entries .page-content:last-child {
@@ -506,7 +531,7 @@ table {
 }
 .annotations figcaption {
   font-size: 0.9rem;
-  line-height: calc(var(--vertical-rhythm) * 2);
+  line-height: var(--content-line-height);
   margin-top: calc(var(--vertical-rhythm) * 1.1);
 }
 .annotations-commentary {

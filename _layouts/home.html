@@ -22,17 +22,21 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <div class="home">
   {% assign years = site.subject_person_key | lifespan_years %}
 
-  <h2>See information for the year:</h2>
+  {% if years.size > 1 -%}
+  <h2>Browse by year</h2>
+  {% endif -%}
 
-  <ul class="years">
-  {% for year in years reversed -%}
-    {% assign year_mod = year | modulo: 10 -%}
+  <ol class="years">
+    {% for year in years reversed -%}
+    {% assign count = year | days_with_content_for_year -%}
+    {% if count > 0 -%}
     <li class="year">
       {% capture filename -%}{{ year }}.html{% endcapture -%}
       <a href="{{ filename | relative_url }}">
-        <time>{{ year }}</time>
+        <time datetime="{{ year }}">{{ year }}</time>
       </a>
     </li>
-  {% endfor -%}
-  </ul>
+    {% endif -%}
+    {% endfor -%}
+  </ol>
 </div>
