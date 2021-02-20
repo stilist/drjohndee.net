@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Begin adding material from the ‘Autobiographical Tracts of Dr John Dee’
 - Attempt transcription of Mercator’s letter to Dee regarding Rupes Nigra
 - Add `LegalYear` module to simplify dealing with calendar-vs-legal year
+- Add letter from John Dee to Queen Elizabeth Ⅰ
 
 ### Changed
 - Update `README` to be more accurate and useful
