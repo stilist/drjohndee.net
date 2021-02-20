@@ -65,6 +65,7 @@ module HistoricalDiary
 
     def lifespan_years(person_key)
       record = person_data(person_key)
+      return [] if record.nil?
       return [] if !record.key?('birth_date')
       return [] if !record.key?('death_date')
 

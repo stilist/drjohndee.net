@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add missing copyright header to data file
 - Improve usability on mobile devices and small screens
 - Index page now links years that have content for the *legal* year, rather than the *calendar* year
+- Handle case that the key passed to `lifespan_years` doesn’t correspond to a record
 
 ## [1.0.4] - 2021-02-13
 ### Added
