@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Render day pages that have commentary but no source material
 - Begin adding material from the ‘Autobiographical Tracts of Dr John Dee’
 - Attempt transcription of Mercator’s letter to Dee regarding Rupes Nigra
+- Add `LegalYear` module to simplify dealing with calendar-vs-legal year
 
 ### Changed
 - Update `README` to be more accurate and useful
@@ -24,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Put source publication date in `<time>` tag for screenreader
 - Add missing copyright header to data file
 - Improve usability on mobile devices and small screens
+- Index page now links years that have content for the *legal* year, rather than the *calendar* year
 
 ## [1.0.4] - 2021-02-13
 ### Added

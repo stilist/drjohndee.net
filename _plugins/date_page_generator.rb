@@ -19,6 +19,7 @@
 require 'jekyll'
 require_relative '../_lib/collections'
 require_relative '../_lib/historical_diary_page'
+require_relative '../_lib/legal_year'
 require_relative '../_lib/timestamp_range'
 
 # This monkeypatches an `#html?` method into `Jekyll::Document`.
@@ -41,6 +42,8 @@ end
 
 module HistoricalDiary
   class YearPage < ::HistoricalDiaryPage
+    include LegalYear
+
     def initialize(site, dates_with_content:, year:)
       @site = site
       @base = site.source
@@ -73,18 +76,6 @@ module HistoricalDiary
       data['title'] = "Events and writings for #{year}"
       data['year'] = year
 
-      # > In England, Lady Day was New Year's Day (i.e. the new year began on 25
-      # > March) from 1155 until 1752, when the Gregorian calendar was adopted in
-      # > Great Britain and its Empire and with it the first of January as the
-      # > official start of the year in England, Wales and Ireland. […]
-      # > Until this change Lady Day had been used as the start of the legal year
-      # > but also the end of the fiscal and tax year. […] It appears that in
-      # > England and Wales, from at least the late 14th century, New Year's Day
-      # > was celebrated on 1 January as part of Yule.
-      #
-      # @see https://en.wikipedia.org/wiki/Lady_Day
-      legal_year_start = DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
-      legal_year_end = DateTime.iso8601("#{year + 1}-03-24", ::Date::ENGLAND)
       # Generate 13 full months, though ultimately a month of it will be
       # considered 'filler'.
       legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
@@ -95,8 +86,8 @@ module HistoricalDiary
         month = date.strftime('%m')
         day = date.strftime('%d')
         type = if dates_with_content.include?(calendar_timestamp) then 'content'
-               elsif date < legal_year_start then 'filler'
-               elsif date > legal_year_end then 'filler'
+               elsif date < legal_year_start(year) then 'filler'
+               elsif date > legal_year_end(year) then 'filler'
                else 'no-content'
                end
 
@@ -154,6 +145,7 @@ module HistoricalDiary
   # manipulates the front matter of the `Jekyll::Document`s.
   class SourceMaterialGenerator < ::Jekyll::Generator
     include ::DataCollection
+    include LegalYear
 
     safe true
 
@@ -208,7 +200,7 @@ module HistoricalDiary
           # `@pages_by_year[1599]`, and 1600-03-25 will be pushed into
           # `@pages_by_year[1600]`.
           year = date.year
-          year -= 1 if date < DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
+          year -= 1 if date < legal_year_start(year)
           @pages_by_year[year] ||= []
           @pages_by_year[year] << date.strftime('%F')
 
@@ -228,6 +220,8 @@ module HistoricalDiary
           document.data['next'] = sorted_documents[index + 1]
         end
       end
+
+      @site.data['generated_dates'] = generated_dates.keys
     end
 
     def generate_year_pages

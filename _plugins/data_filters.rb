@@ -18,11 +18,13 @@
 
 require 'jekyll'
 require_relative '../_lib/collections'
+require_relative '../_lib/legal_year'
 require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
   module DataFilters
     include ::DataCollection
+    include LegalYear
 
     def collection_entry(key, collection_name)
       data_collection_record(collection_name, key)
@@ -38,6 +40,13 @@ module HistoricalDiary
 
     def context_for_date(timestamp)
       transclusions_for_timestamp('context', timestamp)
+    end
+
+    def legal_year_has_content(year)
+      known_dates = @context.registers[:site]
+        .data['generated_dates']
+      candidates = legal_year(year)
+      !(candidates & known_dates).empty?
     end
 
     def license_url(license_key)
