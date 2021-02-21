@@ -60,7 +60,7 @@ module HistoricalDiary
 
     def legal_year_has_content(year)
       known_dates = @context.registers[:site]
-        .data['generated_dates']
+        .data['generated_dates'] || []
       candidates = legal_year(year)
       !(candidates & known_dates).empty?
     end

@@ -31,6 +31,8 @@ module HistoricalDiary
 
       site.data['annotations'].each do |source_key, records|
         records.each do |timestamp, record|
+          next if !record
+
           dates = TimestampRange.new(timestamp).dates
 
           dates.each do |date|
