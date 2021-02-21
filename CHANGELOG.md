@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `LegalYear` module to simplify dealing with calendar-vs-legal year
 - Add letter from John Dee to Queen Elizabeth Ⅰ
 - Add annotation mechanism to insert links and other markup in rendered source material
+- Add annotations to entries regarding initial ‘Actions’ with Edward Kelley
 
 ### Changed
 - Update `README` to be more accurate and useful

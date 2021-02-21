@@ -1,0 +1,145 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "reverence and"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "Michael"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "wa{ie}s"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "‸{..} {....} ."
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "‸{....}."
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "went"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "face"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "in"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "for"
+        suffix: "┐"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ "
+      - type: TextQuoteSelector
+        exact: "⸻ Invocate nomen Domini,"
+      - type: TextQuoteSelector
+        exact: "⸺ I am mighty"
+      - type: TextQuoteSelector
+        exact: "⸺ So I will by"
+      - type: TextQuoteSelector
+        exact: "⸺ I am mighty, and"
+      - type: TextQuoteSelector
+        exact: "Sal ⸺ "
+      - type: TextQuoteSelector
+        exact: "Sala ⸺ God determines his"
+      - type: TextQuoteSelector
+        exact: "After that preſently,"
+      - type: TextQuoteSelector
+        exact: "⸺ Lo, this is my name."
+      - type: TextQuoteSelector
+        exact: "Raph ⸺ He is mighty in"
+      - type: TextQuoteSelector
+        exact: "⸺ The strength of God"
+      - type: TextQuoteSelector
+        exact: "For. Dei ⸺"
+      - type: TextQuoteSelector
+        exact: "Blessed be God,"
+      - type: TextQuoteSelector
+        exact: "Vr ⸺"
+      - type: TextQuoteSelector
+        exact: "Raph. ⸺"
+      - type: TextQuoteSelector
+        exact: "F.D ⸺"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "the eare of E.T"
+      - type: TextQuoteSelector
+        exact: "all Myſteries . &c ‸"
+      - type: TextQuoteSelector
+        exact: "Medicine for the sore"
+      - type: TextQuoteSelector
+        exact: "thanks, and honor"
+      - type: TextQuoteSelector
+        exact: "the Almighty Trinitie."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "After "
+        exact: "ET"
+        suffix: " his"
+      - type: TextQuoteSelector
+        exact: "ET the skryer"
+        suffix: " did require"
+      - type: TextQuoteSelector
+        prefix: "the eare of "
+        exact: "E.T."
+      - type: TextQuoteSelector
+        prefix: "spedily to "
+        exact: "E.T"
+      - type: TextQuoteSelector
+        prefix: "diſcloſed vnto "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "which "
+        exact: "he"
+        suffix: " expressed not to me"
+      - type: TextQuoteSelector
+        prefix: "to "
+        exact: "my frende"
+        suffix: " here"

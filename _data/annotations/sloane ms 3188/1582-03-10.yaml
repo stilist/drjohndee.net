@@ -1,0 +1,156 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <hr>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "* * *"
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "an"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "D{uuni}tatis"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "omnis, et gloria."
+      - type: TextQuoteSelector
+        exact: "et spiritus sancto"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺"
+      - type: TextQuoteSelector
+        exact: "VRIEL ⸺ I am."
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Michaël and Raphaël"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Liber ille"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ I can ⸺ But"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Thou ſhallt"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Præſent{ia}s"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ H{æ}c maximè"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Omnis hora"
+      - type: TextQuoteSelector
+        exact: "*VR ⸺ Sigillum hoc"
+      - type: TextQuoteSelector
+        exact: "The same Saterday"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Peace"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ He is to be"
+      - type: TextQuoteSelector
+        exact: "VR.⸺ This is a seat"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ A Mysterie,"
+      - type: TextQuoteSelector
+        exact: "The Table is to"
+      - type: TextQuoteSelector
+        exact: "Vppon this vppermost"
+      - type: TextQuoteSelector
+        exact: "The Table was ſhewed"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ The characters"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ of oyl ſhalbe"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ There is a spirit,"
+      - type: TextQuoteSelector
+        exact: "He is here* now"
+      - type: TextQuoteSelector
+        exact: "Giue him a generall"
+      - type: TextQuoteSelector
+        exact: "He will seke Sauls"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ The Curſed,"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ But Thobias"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ To morrow"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "One M ͬ Edward Talbot"
+      - type: TextQuoteSelector
+        prefix: "and ‸"
+        exact: "he"
+      - type: TextQuoteSelector
+        prefix: "browght forth to "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "sayd vnto "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "I deſyred "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " wold)"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " then ſettled"
+      - type: TextQuoteSelector
+        prefix: "then ſettled "
+        exact: "him ſelf"
+      - type: TextQuoteSelector
+        prefix: "on "
+        exact: "his"
+        suffix: " knees att"
+      - type: TextQuoteSelector
+        prefix: "stone before "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " had sight of"
+      - type: TextQuoteSelector
+        prefix: "but "
+        exact: "he"
+        suffix: " still expected"
+      - type: TextQuoteSelector
+        prefix: "I then cam to "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "hearing of "
+        exact: ".E.T."
+      - type: TextQuoteSelector
+        prefix: "After that "
+        exact: "M ͬ E.T."

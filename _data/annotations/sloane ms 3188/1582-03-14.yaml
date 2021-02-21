@@ -1,0 +1,114 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "God"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "up"
+        suffix: "┐"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Vriel is my name"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺"
+      - type: TextQuoteSelector
+        exact: "Vr. ⸺ The strength of God,"
+      - type: TextQuoteSelector
+        exact: "Vr ⸺ Fortitudo Dei,"
+      - type: TextQuoteSelector
+        exact: "Mi ⸺ Note"
+      - type: TextQuoteSelector
+        exact: "VR ⸺ Lo, things are"
+      - type: TextQuoteSelector
+        exact: "Then the man turned"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ leaue your folly"
+      - type: TextQuoteSelector
+        exact: "MIC ⸺ Thow camſt hither"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ He hath eaten"
+      - type: TextQuoteSelector
+        exact: "MIC ⸺ The strength of God,"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ After this sort,"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ I will reveale"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ So shall it do,"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ Note"
+      - type: TextQuoteSelector
+        exact: "○MI ⸺ This do I do"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ Dowt not for"
+      - type: TextQuoteSelector
+        exact: "MI ⸺ We lead tyme,"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: ": and sayd,"
+      - type: TextQuoteSelector
+        exact: "Deo oi̅s honor"
+      - type: TextQuoteSelector
+        exact: "Laus et Gloria.⸫"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "after that "
+        exact: "ET"
+      - type: TextQuoteSelector
+        prefix: "hearing of "
+        exact: "E.T."
+      - type: TextQuoteSelector
+        exact: "E.T. the skryer"
+      - type: TextQuoteSelector
+        prefix: "Then "
+        exact: ".E.T."
+        suffix: " aſked me"
+      - type: TextQuoteSelector
+        prefix: "bad "
+        exact: "the skryer"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " red "
+      - type: TextQuoteSelector
+        exact: "then I sayde to "
+        suffix: "my skryer"

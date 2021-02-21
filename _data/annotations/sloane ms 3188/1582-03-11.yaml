@@ -1,0 +1,95 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "."
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "axed"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "hed"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "‸{.}"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "sweat"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "⸺ They are Δ*perfect"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺"
+      - type: TextQuoteSelector
+        exact: "VRI ⸺ I am he."
+      - type: TextQuoteSelector
+        exact: "E.T. ⸺ he drew the"
+      - type: TextQuoteSelector
+        exact: "Michaël ⸺ We are blessed"
+      - type: TextQuoteSelector
+        exact: "⸺ Go forward"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "thus much for the"
+      - type: TextQuoteSelector
+        exact: "I will be seen of the"
+      - type: TextQuoteSelector
+        exact: "liuing and converſation"
+      - type: TextQuoteSelector
+        exact: "virtus et Imperium"
+      - type: TextQuoteSelector
+        exact: "invisibili , et"
+      - type: TextQuoteSelector
+        exact: "s{æ}culorũ"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "by. "
+        exact: "E.T."
+      - type: TextQuoteSelector
+        prefix: "hearing of "
+        exact: "my skryer"
+      - type: TextQuoteSelector
+        exact: "E.T."
+        suffix: " ⸺ he drew the wyked"
+      - type: TextQuoteSelector
+        exact: "my skryer"
+        suffix: " ſaw Vriel go away"
+      - type: TextQuoteSelector
+        exact: "My skryer"
+        suffix: " ſaw an innumerable"
