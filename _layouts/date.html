@@ -76,43 +76,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
           lang="{{ language }}" translate>
-        {% assign author_key = entry.author_key | default: source.work.author_key -%}
-        {% include person_data.html person_key=author_key
-                                    itemprop="author" -%}
-
-        {% if entry.category == "correspondence" -%}
-        <p>
-          Letter from
-          {% include person_link.html person_key=entry.author_key -%}
-          to
-          {% include person_link.html person_key=entry.recipient_key -%}
-        </p>
-        {% endif -%}
-
-        <div class="source-material e-content">
-          {% if entry.timestamp_dates.size > 1 -%}
-          <span class="page-dateRange">
-            ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})
-          </span>
-          {% endif -%}
-
-          {% assign content_with_annotations = page.timestamp | annotate_content: entry.content -%}
-          {% assign content_as_html = content_with_annotations | liquify | markdownify -%}
-          {{ content_as_html }}
-        </div>
-
-        <span class="citation"
-              itemprop=citation
-              itemscope>
-          {% include source_data.html source_key=entry.source_key
-                                      edition_key=entry.edition_key
-                                      location=entry.location
-                                      volume=entry.volume -%}
-          {{ entry.source_key | mla_citation: entry.location,
-                                              entry.edition,
-                                              entry.volume,
-                                              entry.author_key }}
-        </span>
+        {% include entry.html entry=entry -%}
       </li>
       {% endfor %}
     </ul>

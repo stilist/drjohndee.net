@@ -1,0 +1,57 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign entry = include.entry -%}
+{% assign source_record = entry.source_key | collection_entry: "sources" -%}
+{% assign author_key = entry.author_key | default: source_record.work.author_key -%}
+{% include person_data.html person_key=author_key
+                            itemprop="author" -%}
+
+{% if entry.category == "correspondence" -%}
+<p>
+  Letter from
+  {% include person_link.html person_key=entry.author_key -%}
+  to
+  {% include person_link.html person_key=entry.recipient_key -%}
+</p>
+{% endif -%}
+
+<div class="source-material e-content">
+  {% if entry.timestamp_dates.size > 1 -%}
+  <span class="page-dateRange">
+    ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})
+  </span>
+  {% endif -%}
+
+  {% assign content_with_annotations = page.timestamp | annotate_content: entry.content -%}
+  {% assign content_as_html = content_with_annotations | liquify | markdownify -%}
+  {{ content_as_html }}
+</div>
+
+<span class="citation"
+      itemprop=citation
+      itemscope>
+  {% include source_data.html source_key=entry.source_key
+                              edition_key=entry.edition_key
+                              location=entry.location
+                              volume=entry.volume -%}
+  {{ entry.source_key | mla_citation: entry.location,
+                                      entry.edition,
+                                      entry.volume,
+                                      entry.author_key }}
+</span>

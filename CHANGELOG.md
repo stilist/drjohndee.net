@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update `README` to be more accurate and useful
 - Begin using a custom mix of [diplomatic and semi-diplomatic transcription](https://www.english.cam.ac.uk/ceres/ehoc/conventions.html#advice): see `README`’s ‘Conventions for transcribing manuscripts’ section for details
+- Make an `entry.html` include file with the contents of the date page’s `<li>` loop
 
 ### Fixed
 - Change footer links to `LICENSE` and `CONTRIBUTING` pages to use uppercase filenames
