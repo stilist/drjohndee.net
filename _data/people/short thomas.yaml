@@ -5,19 +5,19 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-id: https://www.wikidata.org/entity/Q96409827
+id: "https://www.wikidata.org/entity/Q96409827"
 presentational_name:
   givenName: Thomas
   familyName: Short
 full_name:
   - text: Thomas
     type: givenName
-    id: https://www.wikidata.org/entity/Q16428906
+    id: "https://www.wikidata.org/entity/Q16428906"
   - text: Short
     type: familyName
-    id: https://www.wikidata.org/entity/Q16883238
+    id: "https://www.wikidata.org/entity/Q16883238"
   - text: M.D.
     type: jobTitle
-    id: https://www.wikidata.org/entity/Q913404
+    id: "https://www.wikidata.org/entity/Q913404"
 birthDate: "1690"
 deathDate: "1772"
