@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add letter from John Dee to Queen Elizabeth Ⅰ
 - Add annotation mechanism to insert links and other markup in rendered source material
 - Add annotations to entries regarding initial ‘Actions’ with Edward Kelley
+- Use annotations to style signature on letters
 
 ### Changed
 - Update `README` to be more accurate and useful

@@ -1,0 +1,56 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class='correspondence-signature'>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Trebon"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "kingdome of Boemia"
+      - type: TextQuoteSelector
+        exact: "stylo veter"
+      - type: TextQuoteSelector
+        exact: "Sacred and most excellent"
+      - type: TextQuoteSelector
+        exact: "Royall Maiesties"
+      - type: TextQuoteSelector
+        exact: "humble and dutifull"
+      - type: TextQuoteSelector
+        exact: "and Servant :"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Elizabeth I" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Most Gratious Soueraine Lady"
+      - type: TextQuoteSelector
+        exact: "your"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "M.ͬ Kelley"

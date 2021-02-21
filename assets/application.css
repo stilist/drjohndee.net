@@ -488,6 +488,11 @@ ol.years > .year {
 .entries .page-content:last-child {
   margin-bottom: 0;
 }
+
+.correspondence-signature {
+  text-align: right;
+}
+
 .page-content {
   grid-area: content;
   line-height: 1.6rem;
