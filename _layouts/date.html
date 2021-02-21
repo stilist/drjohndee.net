@@ -68,11 +68,20 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </header>
 
   {% assign entries = page.timestamp | source_material_for_date -%}
+  {% assign custom_footnote_keys = '' | split: '' -%}
   {% if entries.size > 0 -%}
   <div class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
       {% for entry in entries -%}
+
+      {% if entry.footnotes -%}
+      {% for footnote in entry.footnotes -%}
+        {% capture footnote_key %}{{ entry.source_key }}/{{footnote}}{% endcapture -%}
+        {% assign custom_footnote_keys = custom_footnote_keys | push: footnote_key %}
+      {% endfor -%}
+      {% endif -%}
+
       {% assign language = entry.language | default: source_data.language -%}
       <li class="entry"
           lang="{{ language }}" translate>
@@ -84,7 +93,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 
   {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
-  {% include transcludes.html keys=footnote_keys collection="footnotes" -%}
+  {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
+  {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}
 
   {% assign commentary_keys = page.timestamp | commentary_for_date -%}
   {% include transcludes.html keys=commentary_keys collection="commentary" -%}
