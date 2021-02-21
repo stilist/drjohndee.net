@@ -34,8 +34,28 @@ module HistoricalDiary
       #   need to be much more complicated to work with the full Web Annotation
       #   set of selectors.
       annotations.each do |annotation|
+        next if annotation['replacement'].nil?
+        next if annotation['selectors'].nil?
+
         annotation['selectors'].each do |selector|
-          content.sub!(/(#{selector['exact']})/, annotation['replacement'])
+          prefix = Regexp.escape(selector['prefix']) if selector['prefix']
+          exact = "(#{Regexp.escape(selector['exact'])})"
+          suffix = Regexp.escape(selector['suffix']) if selector['suffix']
+          pattern = [
+            prefix,
+            exact,
+            suffix,
+          ].compact.join('')
+          replacement = [
+            selector['prefix'],
+            annotation['replacement'],
+            selector['suffix'],
+          ].compact.join('')
+
+          content.gsub!(/#{pattern}/, replacement)
+          # @note `Regexp.escape` will escape asterisks in the text--this is
+          #   useful for the `#gsub!`, but then leaves the text incorrect.
+          content.gsub!('\\', '')
         end
       end
 
