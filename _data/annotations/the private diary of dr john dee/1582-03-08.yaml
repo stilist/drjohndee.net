@@ -1,0 +1,13 @@
+---
+creator_key: "Cole, Jordan"
+
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_link: "\1" }}
+
+    selectors:
+      - type: TextQuoteSelector
+        exact: "his frende"

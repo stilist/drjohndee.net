@@ -67,7 +67,7 @@ module DataCollection
   def data_collection_record_link(collection_name, key, display_text = nil)
     display_text ||= key
     url = data_collection_record_url(collection_name, key)
-    "<a href='#{url}'>#{display_text}</a>"
+    "<a href='#{url}' class='data-#{collection_name}' data-key='#{collection_name}/#{key}'>#{display_text}</a>"
   end
 
   def slugify_key(key)

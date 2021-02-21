@@ -96,8 +96,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           </span>
           {% endif -%}
 
-          {% assign processed_content = entry.content | markdownify -%}
-          {{ processed_content }}
+          {% assign content_with_annotations = page.timestamp | annotate_content: entry.content -%}
+          {% assign content_as_html = content_with_annotations | liquify | markdownify -%}
+          {{ content_as_html }}
         </div>
 
         <span class="citation"

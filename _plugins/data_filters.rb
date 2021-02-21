@@ -26,6 +26,22 @@ module HistoricalDiary
     include ::DataCollection
     include LegalYear
 
+    def annotate_content(timestamp, content)
+      annotations = @context.registers[:site].data['annotations_by_date'][timestamp]
+      return content if annotations.nil?
+
+      # @note This approach is only usable for exact text matches; it would
+      #   need to be much more complicated to work with the full Web Annotation
+      #   set of selectors.
+      annotations.each do |annotation|
+        annotation['selectors'].each do |selector|
+          content.sub!(/(#{selector['exact']})/, annotation['replacement'])
+        end
+      end
+
+      content
+    end
+
     def collection_entry(key, collection_name)
       data_collection_record(collection_name, key)
     end
@@ -131,7 +147,7 @@ module HistoricalDiary
           author.dig('presentational_name', 'familyName'),
           author.dig('presentational_name', 'givenName'),
         ].compact.join(', ')
-        output.unshift(data_collection_record_link('people', author_key, author_name))
+        output.unshift(person_link(author_key, author_name))
       end
 
       editor_key ||= source.dig('work', 'editor_key')
@@ -166,6 +182,10 @@ module HistoricalDiary
       record = person_data(key)
       return '' if record.nil?
       record['presentational_name'].values.join(' ')
+    end
+
+    def person_link(key, display_text)
+      data_collection_record_link('people', key, display_text)
     end
 
     def relevant_footnotes(timestamp)
