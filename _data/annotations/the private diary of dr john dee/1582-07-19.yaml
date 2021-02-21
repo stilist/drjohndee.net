@@ -11,22 +11,11 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Kelley, Edward" | person_link: "\1" }}
-    selectors:
-      - type: TextQuoteSelector
-        exact: "his frende"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
         {{ "Barnabas Saul" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Barnabas"
+        exact: "Barnabas Saul"
       - type: TextQuoteSelector
-        exact: "he"
-        suffix: " lay not"
+        exact: "hym"
       - type: TextQuoteSelector
-        exact: "he"
-        suffix: " went, I say"
+        exact: "his"

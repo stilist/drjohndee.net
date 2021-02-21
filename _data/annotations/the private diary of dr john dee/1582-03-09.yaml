@@ -12,7 +12,6 @@ annotations:
       format: "text/html"
       value: >-
         {{ "Kelley, Edward" | person_link: "\1" }}
-
     selectors:
       - type: TextQuoteSelector
         exact: "Mr. Talbot"
@@ -22,11 +21,21 @@ annotations:
       - type: TextQuoteSelector
         exact: "his frende the lerned man"
       - type: TextQuoteSelector
-        prefix: "borow "
-        exact: "him"
-      - type: TextQuoteSelector
         prefix: "But "
         exact: "his frend"
       - type: TextQuoteSelector
         prefix: "told "
         exact: "him"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Barnabas Saul" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Barnabas"
+      - type: TextQuoteSelector
+        prefix: "that "
+        exact: "he"
+        suffix: " was"

@@ -48,12 +48,12 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Saul, Barnabas" | person_link: "\1" }}
+        {{ "Barnabas Saul" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "the Skryer"
-      - type: TextQuoteSelector
         exact: "Saul"
+      - type: TextQuoteSelector
+        exact: "the Skryer"
       - type: TextQuoteSelector
         exact: "he"
         suffix: " {found}"

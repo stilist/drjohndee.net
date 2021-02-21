@@ -12,7 +12,6 @@ annotations:
       format: "text/html"
       value: >-
         {{ "Kelley, Edward" | person_link: "\1" }}
-
     selectors:
       - type: TextQuoteSelector
         exact: "Mr. Talbot"
