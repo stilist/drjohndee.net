@@ -1,0 +1,66 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "has"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "omnis, et gloria."
+      - type: TextQuoteSelector
+        exact: "et spiritus sancto"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺"
+      - type: TextQuoteSelector
+        exact: "AN. ⸺"
+      - type: TextQuoteSelector
+        exact: "AN ⸺"
+      - type: TextQuoteSelector
+        exact: "done for this tyme"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Saul, Barnabas" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "the Skryer"
+      - type: TextQuoteSelector
+        exact: "Saul"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " {found}"
+      - type: TextQuoteSelector
+        prefix: "after "
+        exact: "his"
+        suffix: " voyce"
+      - type: TextQuoteSelector
+        exact: "his"
+        suffix: " hearing"
