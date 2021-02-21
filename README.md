@@ -46,5 +46,7 @@ Specifically:
   * for example, ‘your’ written as ‘y.ͬ’, or [scribal suspensions](https://en.wikipedia.org/wiki/Scribal_abbreviation#Suspension) like ‘cũ’ for ‘cum’
   * retain capitalization, spelling, line breaks, punctuation, hyphenation: for example, preserve inconsistent use of ‘u’ and ‘v’, ‘i’, ‘y’, and ‘j’
   * retain spacing; make a best guess at whether to use a narrow space (Unicode `U+202F`) no-break space (Unicode `U+00A0`)
-* use `{x}` to transcribe inferred letters (‘x’ in this example), and `{.}` to transcribe lost letters or letters too obscure to be inferred (for example, if the word ‘agayne’ were written too sloppy to read it might be transcribed as something like ‘a{ga..}e’)
+* use `{x}` to transcribe uncertain letters (‘x’ in this example), and `{.}` to transcribe lost letters or letters too obscure to be inferred (for example, if the word ‘agayne’ were written too sloppy to read it might be transcribed as something like ‘a{ga..}e’)
+* use `[x]` to note letters that are obviously missing (for example, ‘[L]undrumguſta’, when all other mentions of the name include an ‘L’)
+* use `┌x┐` to note text that was clearly added at a later time
 * retain deleted text, bracketed with `‹` and `›` (for example, ‘‹has› had’ means ‘has’ was written first, then crossed out)
