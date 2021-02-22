@@ -39,12 +39,16 @@ module HistoricalDiary
       data["#{singular}_key"] = key
 
       record = send(:"#{singular}_data", key)
-      title = case collection_name
-              when 'people'
-                record['presentational_name'].values.join(' ')
-              when 'sources'
-                record.dig('work', 'name')
-              end
+      if record.nil?
+        title = key
+      else
+        title = case collection_name
+                when 'people'
+                  record['presentational_name'].values.join(' ')
+                when 'sources'
+                  record.dig('work', 'name')
+                end
+      end
       data['title'] = title
 
       data.default_proc = proc do |_, key|

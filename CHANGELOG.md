@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
 - `annotate_content` Liquid filter now calls `#clone` on content to avoid mutating content that will render on multiple days
+- In `HistoricalDiary::DataPage`, handle case that fetched record is `nil`
 
 ## [1.0.5] - 2021-02-21
 ### Added
