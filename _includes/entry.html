@@ -51,7 +51,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                               location=entry.location
                               volume=entry.volume -%}
   {{ entry.source_key | mla_citation: entry.location,
-                                      entry.edition,
-                                      entry.volume,
+                                      entry.edition_key,
+                                      entry.volume_key,
                                       entry.author_key }}
 </span>

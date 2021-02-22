@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Handle source material that has a `footnotes:` array in the front matter
 - Add `.terraform/` to Jekyll ignore list
 
+### Fixed
+- Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
+
 ## [1.0.5] - 2021-02-21
 ### Added
 - Generate a sitemap with `jekyll-sitemap`
