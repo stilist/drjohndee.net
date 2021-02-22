@@ -60,6 +60,18 @@ annotations:
         \1<br>
     selectors:
       - type: TextQuoteSelector
+        exact: "God hath blessed the"
+      - type: TextQuoteSelector
+        exact: "be thy Guyde"
+      - type: TextQuoteSelector
+        exact: "vnto thy sechmy"
+      - type: TextQuoteSelector
+        exact: "with thy doings"
+      - type: TextQuoteSelector
+        exact: "Prayſe God ."
+      - type: TextQuoteSelector
+        exact: "be at thy commandment"
+      - type: TextQuoteSelector
         exact: "thus much for the"
       - type: TextQuoteSelector
         exact: "I will be seen of the"
