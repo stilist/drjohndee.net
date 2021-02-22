@@ -1,0 +1,27 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q745833"
+presentational_name:
+  givenName: Dudley
+  familyName: Carlton
+  additionalName: 1st Viscount Dorchester
+full_name:
+  - text: Dudley
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q13907203"
+  - text: Carlton
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q16865377"
+  - text: 1st
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: Viscount Dorchester
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+birth_date: "1573-03-10"
+death_date: "1632-02-15"

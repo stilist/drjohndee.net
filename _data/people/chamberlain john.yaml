@@ -1,0 +1,20 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q6225650"
+presentational_name:
+  givenName: John
+  familyName: Chamberlain
+full_name:
+  - text: John
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q4925477"
+  - text: Chamberlain
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q14917207"
+birth_date: "1553"
+death_date: "1628"

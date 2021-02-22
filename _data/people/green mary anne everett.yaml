@@ -1,0 +1,26 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q15462250"
+presentational_name:
+  givenName: Mary Anne Everett
+  familyName: Green
+full_name:
+  - text: Mary
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q734578"
+  - text: Anne
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q564684"
+  - text: Everett
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q19828983"
+  - text: Green
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q2703137"
+birth_date: "1818-07-19"
+death_date: "1895-11-01"

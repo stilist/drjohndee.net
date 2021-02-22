@@ -26,9 +26,11 @@ module HistoricalDiary
     include ::DataCollection
     include LegalYear
 
-    def annotate_content(timestamp, content)
+    def annotate_content(timestamp, original_content)
       annotations = @context.registers[:site].data['annotations_by_date'][timestamp]
-      return content if annotations.nil?
+      return original_content if annotations.nil?
+
+      content = original_content.clone
 
       # @note This approach is only usable for exact text matches; it would
       #   need to be much more complicated to work with the full Web Annotation
@@ -53,9 +55,6 @@ module HistoricalDiary
           ].compact.join('')
 
           content.gsub!(/#{pattern}/, replacement)
-          # @note `Regexp.escape` will escape asterisks in the text--this is
-          #   useful for the `#gsub!`, but then leaves the text incorrect.
-          content.gsub!('\\', '')
         end
       end
 
