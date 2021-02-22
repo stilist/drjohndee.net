@@ -359,7 +359,11 @@ p {
 table {
   border-collapse: collapse;
 }
-
+/* copied from Safari's Reader Mode styles */
+sup {
+  font-size: 0.75em;
+  line-height: 1em;
+}
 
 /* @see https://webaim.org/techniques/css/invisiblecontent/ */
 .is-assistiveOnly {

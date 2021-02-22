@@ -24,3 +24,12 @@ annotations:
     selectors:
       - type: TextQuoteSelector
         exact: "Dr. Dee"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Chamberlain, John" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "John Chamberlain"

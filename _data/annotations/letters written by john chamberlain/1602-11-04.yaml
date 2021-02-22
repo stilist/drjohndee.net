@@ -1,0 +1,123 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "[Domestic Correspondence,"
+      - type: TextQuoteSelector
+        exact: "SIR"
+      - type: TextQuoteSelector
+        exact: "The Dutch men"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class='correspondence-signature'>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "From London this 4th"
+      - type: TextQuoteSelector
+        exact: "[Addressed,]"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "November, 1602."
+      - type: TextQuoteSelector
+        exact: "[Addressed,]"
+      - type: TextQuoteSelector
+        exact: "goode frende"
+      - type: TextQuoteSelector
+        exact: "Mr. Dudley Carleton"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="la">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "leves gratiœ"
+      - type: TextQuoteSelector
+        exact: "en passant"
+      - type: TextQuoteSelector
+        exact: "tres sequuntur"
+      - type: TextQuoteSelector
+        exact: "mundus vult decipi"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="fr-1606nict">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "en soldat"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "stupent"
+      - type: TextQuoteSelector
+        exact: "en passant"
+      - type: TextQuoteSelector
+        exact: "en soldat"
+      - type: TextQuoteSelector
+        exact: "tria"
+        suffix: "), "
+      - type: TextQuoteSelector
+        exact: "mundus vult decipi"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <sup>\1</sup>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "three great men,"
+        exact: "a"
+      - type: TextQuoteSelector
+        prefix: "your Suisse,"
+        exact: "b"
+      - type: TextQuoteSelector
+        prefix: "that ODonnell,"
+        exact: "c"
+      - type: TextQuoteSelector
+        prefix: "One Perkins,"
+        exact: "a"
+      - type: TextQuoteSelector
+        prefix: "sonne, Captaine Ball,"
+        exact: "b"
+      - type: TextQuoteSelector
+        prefix: "besides Wheeler"
+        exact: "c"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Dr. Dee"

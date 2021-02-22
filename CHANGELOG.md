@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `mla_citation` Liquid filter now prefers information from a specified volume, falling back to the edition, and finally to the work
 - Link to (calendar) year on date page
 - Add references to Dee from ‘Calendar of State Papers, Domestic Series, of the reign of Elizabeth…’
+- Add two letters from John Chamberlain to Dudley Carlton that reference John Dee, from ‘Letters written by John Chamberlain during the Reign of Queen Elizabeth’
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
 - `annotate_content` Liquid filter now calls `#clone` on content to avoid mutating content that will render on multiple days
 - In `HistoricalDiary::DataPage`, handle case that fetched record is `nil`
+- Fix layout of `<sup>` footnote references
 
 ## [1.0.5] - 2021-02-21
 ### Added
