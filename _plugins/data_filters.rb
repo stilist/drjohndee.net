@@ -128,37 +128,39 @@ module HistoricalDiary
       source = source_data(source_key)
       return source_key if source.nil?
 
+      work = source['work']
+
       edition = source.dig('editions', edition_key)
       if edition.nil? && source['editions'].length == 1
         edition = source['editions'].values.first
       end
       edition ||= {}
 
+      volume = edition.dig('volumes', volume_key) if !volume_key.nil?
+      volume ||= {}
+
       # Tagging this as an actual date improves the screenreader experience.
-      publication_date = edition['date']
+      publication_date = volume['date'] || edition['date']
       if publication_date
         publication_date = "<time datetime='#{publication_date}'>#{publication_date}</time>"
       end
 
       publishing_info = [
-        edition['city'],
-        edition['publisher'],
+        volume['city'] || edition['city'],
+        volume['publisher'] || edition['publisher'],
         publication_date,
         location.sub('-', '–'),
       ].compact.join(', ')
       publishing_info[0] = publishing_info[0].capitalize
 
-      source_name = edition['name'] || source.dig('work', 'name')
+      source_name = volume['name'] || edition['name'] || work['name']
       output = [
         data_collection_record_link('sources', source_key, source_name),
         publishing_info,
       ]
-      if !volume_key.nil?
-        volume_number = edition.dig('volumes', volume_key, 'volumeNumber')
-        output.insert(1, "Volume #{volume_number}")
-      end
+      output.insert(1, "Volume #{volume['volume_number']}") if volume.key?('volume_number')
 
-      author_key ||= source.dig('work', 'author_key')
+      author_key ||= work['author_key']
       author = person_data(author_key)
       if author.nil?
         output.unshift(author_key)
@@ -170,7 +172,7 @@ module HistoricalDiary
         output.unshift(person_link(author_key, author_name))
       end
 
-      editor_key ||= source.dig('work', 'editor_key')
+      editor_key = volume['editor_key'] || edition['editor_key'] || work['editor_key']
       editor = person_data(editor_key)
       if editor.nil?
         output.insert(2, editor_key)

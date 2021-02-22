@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Handle source material that has a `footnotes:` array in the front matter
 - Add `.terraform/` to Jekyll ignore list
+- `mla_citation` Liquid filter now prefers information from a specified volume, falling back to the edition, and finally to the work
 
 ### Fixed
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
