@@ -1,0 +1,28 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q3990712"
+presentational_name:
+  givenName: Thomas
+  familyName: Radclyffe
+  additionalName: 3rd Earl of Sussex
+full_name:
+  - text: Thomas
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q16428906"
+  - text: Radclyffe
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q28123780"
+  - text: 3rd
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: Earl of Sussex
+    type: additionalName
+    id: "https://www.wikidata.org/entity/Q1232864"
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+birthDate: "1525"
+deathDate: "1583-06-09"
