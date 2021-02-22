@@ -65,6 +65,7 @@ twitter:
 
 exclude:
   - .gitignore
+  - .terraform/
   - terraform/
 
 collections:

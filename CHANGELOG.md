@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Handle source material that has a `footnotes:` array in the front matter
+- Add `.terraform/` to Jekyll ignore list
 
 ## [1.0.5] - 2021-02-21
 ### Added
