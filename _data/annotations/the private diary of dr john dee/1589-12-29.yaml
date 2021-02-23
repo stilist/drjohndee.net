@@ -14,13 +14,8 @@ annotations:
         {{ "Gilbert, Adrian" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Adrian Gilbert"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
-        {{ "Dee, John" | person_link: "\1" }}
-    selectors:
+        exact: "Mr. Adrian Gilbert"
       - type: TextQuoteSelector
-        exact: "John Dee"
+        prefix: "at "
+        exact: "his"
+        suffix: " hands"

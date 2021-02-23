@@ -11,16 +11,9 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Gilbert, Adrian" | person_link: "\1" }}
+        {{ "Gilbert, Humphrey" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Adrian Gilbert"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
-        {{ "Dee, John" | person_link: "\1" }}
-    selectors:
+        exact: "Sir Humfrey Gilbert"
       - type: TextQuoteSelector
-        exact: "John Dee"
+        exact: "his"
