@@ -264,7 +264,12 @@
 :lang(en-emodeng) {
   quotes: '‘' '’' '“' '”';
 }
-:lang(en-modeng) {
+:lang(en-Grek),
+:lang(la) {
+  quotes: "«" "»" "“" "”" "‘" "’";
+}
+:lang(en-modeng),
+:lang(la-renais) {
   font-variant-alternates: historical-forms;
   font-variant-ligatures: historical-ligatures;
 }
