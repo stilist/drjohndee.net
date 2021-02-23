@@ -224,10 +224,10 @@
                       + calc(var(--column-count) - 1) * var(--gutter-width));
   --content-grid-rows: auto auto auto auto;
   --content-grid-areas:
-    "header     header     header     header     header     header     header     header     header     header header    header    header    header    header"
-    "content    content    content    content    content    content    content    content    content      .    footnotes footnotes footnotes footnotes footnotes"
-    "commentary commentary commentary commentary commentary commentary commentary commentary commentary   .    footnotes footnotes footnotes footnotes footnotes"
-    "context    context    context    context    context    context    context    context    context      .    footnotes footnotes footnotes footnotes footnotes";
+    "header     header     header     header     header     header     header     header     header     . secondary secondary secondary secondary secondary"
+    "content    content    content    content    content    content    content    content    content    . secondary secondary secondary secondary secondary"
+    "commentary commentary commentary commentary commentary commentary commentary commentary commentary . secondary secondary secondary secondary secondary"
+    "context    context    context    context    context    context    context    context    context    . secondary secondary secondary secondary secondary";
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
 
@@ -254,7 +254,7 @@
     --content-grid-areas:
       "header     header     header     header     header"
       "content    content    content    content    content"
-      "footnotes  footnotes  footnotes  footnotes  footnotes"
+      "secondary  secondary  secondary  secondary  secondary"
       "commentary commentary commentary commentary commentary"
       "context    context    context    context    context";
   }
@@ -551,8 +551,9 @@ ol.years > .year {
 .annotations-context {
   grid-area: context;
 }
+.annotations-related_dates,
 .annotations-footnotes {
-  grid-area: footnotes;
+  grid-area: secondary;
 }
 
 #site-footer {

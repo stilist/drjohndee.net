@@ -70,29 +70,51 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   </header>
 
-  {% assign entries = page.timestamp | source_material_for_date -%}
   {% assign custom_footnote_keys = '' | split: '' -%}
+  {% assign related_dates = '' | split: '' -%}
+
+  {% assign entries = page.timestamp | source_material_for_date -%}
   {% if entries.size > 0 -%}
   <div class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
       {% for entry in entries -%}
+        {% if entry.related_dates -%}
+        {% for related_date in entry.related_dates -%}
+          {% assign related_dates = related_dates | push: related_date %}
+        {% endfor -%}
+        {% endif -%}
 
-      {% if entry.footnotes -%}
-      {% for footnote in entry.footnotes -%}
-        {% capture footnote_key %}{{ entry.source_key }}/{{footnote}}{% endcapture -%}
-        {% assign custom_footnote_keys = custom_footnote_keys | push: footnote_key %}
-      {% endfor -%}
-      {% endif -%}
+        {% if entry.footnotes -%}
+        {% for footnote in entry.footnotes -%}
+          {% capture footnote_key %}{{ entry.source_key }}/{{footnote}}{% endcapture -%}
+          {% assign custom_footnote_keys = custom_footnote_keys | push: footnote_key %}
+        {% endfor -%}
+        {% endif -%}
 
-      {% assign language = entry.language | default: source_data.language -%}
-      <li class="entry"
-          lang="{{ language }}" translate>
-        {% include entry.html entry=entry -%}
-      </li>
+        {% assign language = entry.language | default: source_data.language -%}
+        <li class="entry"
+            lang="{{ language }}" translate>
+          {% include entry.html entry=entry -%}
+        </li>
       {% endfor %}
     </ul>
   </div>
+  {% endif -%}
+
+  {% if related_dates.size > 0 -%}
+  <aside class="annotations annotations-related_dates">
+    <h3>Related dates</h3>
+    <ul class="annotation-content">
+      {% for related_date in related_dates -%}
+      <li>
+        {% assign date_path = related_date | split: '-' | join: '/' -%}
+        <a href="{{ date_path | relative_url }}.html">
+          <time datetime="{{ related_date }}">{{ related_date }}</time>
+        </a>
+      {% endfor -%}
+    </ul>
+  </aside>
   {% endif -%}
 
   {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
