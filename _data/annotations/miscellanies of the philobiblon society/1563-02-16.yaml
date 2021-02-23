@@ -139,7 +139,7 @@ annotations:
       - type: TextQuoteSelector
         exact: "Right honorable Sir"
       - type: TextQuoteSelector
-        prefix: "may pleas "
+        prefix: "maye pleas "
         exact: "you"
         suffix: " to"
       - type: TextQuoteSelector
@@ -165,12 +165,16 @@ annotations:
         exact: "you"
         suffix: " onely"
       - type: TextQuoteSelector
+        prefix: "whereby "
+        exact: "your"
+        suffix: " wiſdome juſtice"
+      - type: TextQuoteSelector
         exact: "your"
         suffix: " good will"
       - type: TextQuoteSelector
         prefix: "place before "
         exact: "your"
-        suffix: " yes the"
+        suffix: " eyes the"
       - type: TextQuoteSelector
         prefix: "pray "
         exact: "you"
@@ -200,18 +204,25 @@ annotations:
         prefix: "inferior to this "
         exact: "you"
       - type: TextQuoteSelector
+        prefix: "herin declare "
+        exact: "your"
+        suffix: " wiſdome"
+      - type: TextQuoteSelector
         prefix: "yt may pleas "
         exact: "you"
+      - type: TextQuoteSelector
+        exact: "you"
+        suffix: " is not unknown"
       - type: TextQuoteSelector
         prefix: "for "
         exact: "your Honor"
         suffix: ", or a Prince"
       - type: TextQuoteSelector
-        prefix: "asſure "
+        prefix: "aſſure "
         exact: "you"
         suffix: " the meanes"
       - type: TextQuoteSelector
-        prefix: "if it pleas "
+        prefix: "yf it pleas "
         exact: "you"
         suffix: " to accept"
       - type: TextQuoteSelector
