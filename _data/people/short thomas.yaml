@@ -19,5 +19,5 @@ full_name:
   - text: M.D.
     type: jobTitle
     id: "https://www.wikidata.org/entity/Q913404"
-birthDate: "1690"
-deathDate: "1772"
+birth_date: "1690"
+death_date: "1772"
