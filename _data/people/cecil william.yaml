@@ -1,0 +1,29 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q354309"
+presentational_name:
+  givenName: William
+  familyName: Cecil
+  additionalName: 1st Baron Burghley
+full_name:
+  - text: William
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q12344159"
+  - text: Cecil
+    type: familyName
+  - text: 1st
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: Baron Burghley
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+  - text: Lord High Treasurer
+    type: jobTitle
+    id: "https://www.wikidata.org/entity/Q944583"
+birth_date: "1520-09-13"
+death_date: "1598-08-04"

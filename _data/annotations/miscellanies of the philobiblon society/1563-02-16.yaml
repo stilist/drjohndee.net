@@ -1,0 +1,238 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "I aſſure you"
+      - type: TextQuoteSelector
+        exact: "Domine"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class='correspondence-signature'>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Antwerpiæ apud"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class='correspondence-address'>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "(Superſcribed)"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Silvium"
+      - type: TextQuoteSelector
+        exact: "vulgirater,"
+      - type: TextQuoteSelector
+        exact: "Joannes Dee."
+      - type: TextQuoteSelector
+        exact: "nr̃am"
+      - type: TextQuoteSelector
+        exact: "(Superſcribed)"
+      - type: TextQuoteSelector
+        exact: "right honorable Syr"
+      - type: TextQuoteSelector
+        exact: "William Cecyl, Knight,"
+      - type: TextQuoteSelector
+        exact: "the Quenes moſt"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="la">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "De numeris formalibus"
+      - type: TextQuoteSelector
+        exact: "De Ponderibus myſticis"
+      - type: TextQuoteSelector
+        exact: "De Menſuris divinis"
+      - type: TextQuoteSelector
+        exact: "Steganographia"
+      - type: TextQuoteSelector
+        exact: "Polygraphia"
+      - type: TextQuoteSelector
+        exact: "dulcia illa ocia"
+      - type: TextQuoteSelector
+        exact: "en tota"
+      - type: TextQuoteSelector
+        exact: "præter expectationem"
+      - type: TextQuoteSelector
+        exact: "Antwerpiæ"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span class="source">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Kalender"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "De numeris formalibus"
+      - type: TextQuoteSelector
+        exact: "De Ponderibus myſticis"
+      - type: TextQuoteSelector
+        exact: "De Menſuris divinis"
+      - type: TextQuoteSelector
+        exact: "Tritemij"
+      - type: TextQuoteSelector
+        exact: "Polygraphia"
+      - type: TextQuoteSelector
+        exact: "Kalender"
+      - type: TextQuoteSelector
+        exact: "dulcia illa ocia"
+      - type: TextQuoteSelector
+        exact: "literaria"
+      - type: TextQuoteSelector
+        exact: "præter expectationem"
+      - type: TextQuoteSelector
+        exact: "vocata."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <sup>\1</sup>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "Ma"
+        exact: "tie"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Cecil, William" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Right honorable Sir"
+      - type: TextQuoteSelector
+        prefix: "may pleas "
+        exact: "you"
+        suffix: " to"
+      - type: TextQuoteSelector
+        exact: "you"
+        suffix: ", and the exact"
+      - type: TextQuoteSelector
+        prefix: "doinges in "
+        exact: "your"
+        suffix: " handes"
+      - type: TextQuoteSelector
+        exact: "your"
+        suffix: " tender age"
+      - type: TextQuoteSelector
+        prefix: "hath in "
+        exact: "your"
+        suffix: " breſt"
+      - type: TextQuoteSelector
+        prefix: "now in "
+        exact: "you"
+        suffix: " freſhly flowreth"
+      - type: TextQuoteSelector
+        prefix: "choiſe to "
+        exact: "you"
+        suffix: " onely"
+      - type: TextQuoteSelector
+        exact: "your"
+        suffix: " good will"
+      - type: TextQuoteSelector
+        prefix: "place before "
+        exact: "your"
+        suffix: " yes the"
+      - type: TextQuoteSelector
+        prefix: "pray "
+        exact: "you"
+        suffix: ") by diligent"
+      - type: TextQuoteSelector
+        prefix: "make to "
+        exact: "your Honor"
+      - type: TextQuoteSelector
+        prefix: "petition, that "
+        exact: "ye"
+        suffix: " will charitably"
+      - type: TextQuoteSelector
+        prefix: "of "
+        exact: "your"
+        suffix: " pleaſure"
+      - type: TextQuoteSelector
+        prefix: "whether "
+        exact: "ye"
+        suffix: " will have"
+      - type: TextQuoteSelector
+        prefix: "the honor, "
+        exact: "ye"
+      - type: TextQuoteSelector
+        exact: "you"
+        suffix: " will herin"
+      - type: TextQuoteSelector
+        prefix: "inferior to this "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: "yt may pleas "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: "for "
+        exact: "your Honor"
+        suffix: ", or a Prince"
+      - type: TextQuoteSelector
+        prefix: "asſure "
+        exact: "you"
+        suffix: " the meanes"
+      - type: TextQuoteSelector
+        prefix: "if it pleas "
+        exact: "you"
+        suffix: " to accept"
+      - type: TextQuoteSelector
+        prefix: "give unto "
+        exact: "your Honor"
+        suffix: ", as"
+      - type: TextQuoteSelector
+        exact: "your Honor"
+        suffix: " moſt worthy of"
+      - type: TextQuoteSelector
+        prefix: "ſhall aſcribe to "
+        exact: "your"
+      - type: TextQuoteSelector
+        prefix: "herein that "
+        exact: "your"
+        suffix: " will"
+      - type: TextQuoteSelector
+        prefix: "reſort to "
+        exact: "your"
+        suffix: " will"
+      - type: TextQuoteSelector
+        prefix: "preſerve "
+        exact: "your Honor"
+        suffix: " with contynuance"
