@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Link to (calendar) year on date page
 - Add references to Dee from ‘Calendar of State Papers, Domestic Series, of the reign of Elizabeth…’
 - Add two letters from John Chamberlain to Dudley Carlton that reference John Dee, from ‘Letters written by John Chamberlain during the Reign of Queen Elizabeth’
+- Annotate mentions of Adrian and Humphrey Gilbert
+- Display ‘related dates’ on date pages
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
