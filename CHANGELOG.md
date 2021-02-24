@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add two letters from John Chamberlain to Dudley Carlton that reference John Dee, from ‘Letters written by John Chamberlain during the Reign of Queen Elizabeth’
 - Annotate mentions of Adrian and Humphrey Gilbert
 - Display ‘related dates’ on date pages
-- Add letter from John dee to William Cecil
+- Add letter from John Dee to William Cecil
+- Fully annotate 1581-12-22 scrying session
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting

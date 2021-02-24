@@ -11,11 +11,66 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
+        <sup>\1</sup>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "{found} there "
+        exact: "Δ"
+        suffix: "one,"
+      - type: TextQuoteSelector
+        exact: "┌*┐"
+      - type: TextQuoteSelector
+        exact: "be"
+        suffix: "forgotten"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‸"
+        exact: "in the stone very"
+      - type: TextQuoteSelector
+        prefix: "┌"
+        exact: "*"
+        suffix: "┐"
+      - type: TextQuoteSelector
+        prefix: "not to‸"
+        exact: "be"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <em>\1</em>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "{d}edd mens"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <strong>\1</strong>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Be not hasty in wrath."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
         <del>\1</del>
     selectors:
       - type: TextQuoteSelector
         prefix: "‹"
         exact: "has"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "hebrue"
         suffix: "›"
 
   - body:
@@ -28,6 +83,12 @@ annotations:
         exact: "omnis, et gloria."
       - type: TextQuoteSelector
         exact: "et spiritus sancto"
+      - type: TextQuoteSelector
+        exact: "done for this tyme"
+      - type: TextQuoteSelector
+        exact: "prayer and faſting"
+      - type: TextQuoteSelector
+        exact: "the Sabaath day"
 
   - body:
       type: TextualBody
@@ -36,13 +97,125 @@ annotations:
         <p>\1
     selectors:
       - type: TextQuoteSelector
+        exact: "Δ After my fervent"
+      - type: TextQuoteSelector
         exact: "Δ ⸺"
       - type: TextQuoteSelector
         exact: "AN. ⸺"
       - type: TextQuoteSelector
         exact: "AN ⸺"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="he" translate>\1
+    selectors:
       - type: TextQuoteSelector
-        exact: "done for this tyme"
+        exact: "‏‎מִי‏כָאֵל "
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="la-renais" translate>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "In nomine Jesu"
+      - type: TextQuoteSelector
+        exact: "Potest{as} omnis"
+      - type: TextQuoteSelector
+        prefix: "Δ ⸺ "
+        exact: "qu{æ}"
+        suffix: " ?"
+      - type: TextQuoteSelector
+        exact: "Bona, et mala"
+      - type: TextQuoteSelector
+        exact: "de Thoſaur{o} abſcondito"
+      - type: TextQuoteSelector
+        exact: "Ne perturbes"
+      - type: TextQuoteSelector
+        exact: "Vbi est potestas"
+      - type: TextQuoteSelector
+        exact: "Cur qu{æ}ris"
+      - type: TextQuoteSelector
+        exact: "Cur ? Signifi:"
+      - type: TextQuoteSelector
+        exact: "An bon{us} aliquis"
+      - type: TextQuoteSelector
+        exact: "Etiam ."
+      - type: TextQuoteSelector
+        exact: "Quis ?"
+      - type: TextQuoteSelector
+        exact: "Bo{nus} ne ille"
+      - type: TextQuoteSelector
+        exact: "Maximè ."
+      - type: TextQuoteSelector
+        exact: "Tieri ne potest ,"
+      - type: TextQuoteSelector
+        exact: " Ita."
+      - type: TextQuoteSelector
+        exact: "Quid p{e}r hoc,"
+      - type: TextQuoteSelector
+        exact: "Alterius Angeli"
+      - type: TextQuoteSelector
+        exact: "Cur hîc ;"
+      - type: TextQuoteSelector
+        exact: "Cauſam ob magn[u?]m"
+      - type: TextQuoteSelector
+        exact: "Gloria patri et"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "‏‎מִי‏כָאֵל "
+      - type: TextQuoteSelector
+        exact: "quis tu es"
+      - type: TextQuoteSelector
+        exact: "me sit{a} est ?"
+      - type: TextQuoteSelector
+        prefix: "Δ ⸺ "
+        exact: "qu{æ} ?"
+      - type: TextQuoteSelector
+        exact: "Bona, et mala ."
+      - type: TextQuoteSelector
+        exact: "de Thoſaur{o} abſcondito"
+      - type: TextQuoteSelector
+        exact: "ſ{un}t Nu{.æ}."
+      - type: TextQuoteSelector
+        exact: "potestas tua ?"
+      - type: TextQuoteSelector
+        exact: "potestate aliqua mea ?"
+      - type: TextQuoteSelector
+        exact: "non mihi placet ."
+      - type: TextQuoteSelector
+        exact: "est huic speculo ?"
+      - type: TextQuoteSelector
+        exact: "Etiam ."
+      - type: TextQuoteSelector
+        exact: "Quis ?"
+      - type: TextQuoteSelector
+        exact: "f{..} mentio ?"
+      - type: TextQuoteSelector
+        exact: "Maximè ."
+      - type: TextQuoteSelector
+        exact: "illo a{q}am ?"
+      - type: TextQuoteSelector
+        exact: " Ita."
+      - type: TextQuoteSelector
+        exact: " significare velis ?"
+      - type: TextQuoteSelector
+        exact: "character est ."
+      - type: TextQuoteSelector
+        exact: "nunc ostendis ?"
+      - type: TextQuoteSelector
+        exact: "Cauſam ob magn[u?]m"
+      - type: TextQuoteSelector
+        exact: "sæcula sæculorũ"
 
   - body:
       type: TextualBody
@@ -64,3 +237,95 @@ annotations:
       - type: TextQuoteSelector
         exact: "his"
         suffix: " hearing"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Haniel" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Anael"
+      - type: TextQuoteSelector
+        exact: "Annael"
+      - type: TextQuoteSelector
+        exact: "Anaël"
+      - type: TextQuoteSelector
+        exact: "Annaël"
+      - type: TextQuoteSelector
+        exact: "An other"
+        suffix: " did ap{p...}"
+      - type: TextQuoteSelector
+        prefix: "gold . and"
+        exact: "his"
+      - type: TextQuoteSelector
+        prefix: "from it ; "
+        exact: "his"
+        suffix: " eyes"
+      - type: TextQuoteSelector
+        prefix: "fyrie . "
+        exact: "He"
+      - type: TextQuoteSelector
+        prefix: "down by "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " anſwered to"
+      - type: TextQuoteSelector
+        prefix: "then axing "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " anſwered ,"
+      - type: TextQuoteSelector
+        prefix: "on "
+        exact: "his"
+        suffix: " left hand."
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " ſayd to me,"
+      - type: TextQuoteSelector
+        prefix: "set by "
+        exact: "him"
+        suffix: " , the stone"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " anſwered, by"
+      - type: TextQuoteSelector
+        prefix: "but not by "
+        exact: "me"
+        suffix: "{.}"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " have done for"
+      - type: TextQuoteSelector
+        exact: "My"
+        suffix: " name"
+      - type: TextQuoteSelector
+        prefix: "is "
+        exact: "ANNAEL"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " will speak ones"
+      - type: TextQuoteSelector
+        prefix: "haue "
+        exact: "me"
+        suffix: " any more"
+      - type: TextQuoteSelector
+        prefix: "this, that "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: "as "
+        exact: "he"
+      - type: TextQuoteSelector
+        prefix: "sayd "
+        exact: "his"
+      - type: TextQuoteSelector
+        exact: "him ſelf"
+        suffix: " to be"
+      - type: TextQuoteSelector
+        exact: "AN."
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "AN"
+        suffix: " ⸺"
