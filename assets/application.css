@@ -60,9 +60,6 @@
   --neutral-30: #e9e8e6;
   --neutral-5--components: 0.9922 0.9882 0.9804;
   --neutral-5: #fdfcfa;
-  /* foreground color inverts here */
-  --neutral-100--components: 0 0 0;
-  --neutral-100: #000;
   --neutral-40--components: 0.8510 0.8510 0.8431;
   --neutral-40: #d9d9d7;
   --neutral-50--components: 0.7725 0.7686 0.7608;
@@ -75,6 +72,8 @@
   --neutral-80: #5e5e5d;
   --neutral-90--components: 0.1882 0.1843 0.1843;
   --neutral-90: #302f2f;
+  --neutral-100--components: 0 0 0;
+  --neutral-100: #000;
 
   /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
   --accent-0--components: 1.0000 0.9804 0.9490;
@@ -93,15 +92,14 @@
   --accent-50: #e48213;
   --accent-60--components: 0.8431 0.4000 0;
   --accent-60: #d76600;
-  /* foreground color inverts here */
-  --accent-100--components: 0.5294 0.0980 0;
-  --accent-100: #871900;
   --accent-70--components: 0.7803 0.3176 0;
   --accent-70: #c75100;
   --accent-80--components: 0.6020 0.2352 0;
   --accent-80: #b33c00;
   --accent-90--components: 0.6196 0.1568 0;
   --accent-90: #9e2800;
+  --accent-100--components: 0.5294 0.0980 0;
+  --accent-100: #871900;
 
   --background: var(--neutral-0);
   --blockquote-border-color: var(--neutral-40);

@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `annotate_content` Liquid filter now calls `#clone` on content to avoid mutating content that will render on multiple days
 - In `HistoricalDiary::DataPage`, handle case that fetched record is `nil`
 - Fix layout of `<sup>` footnote references
+- Fix ordering of color declarations in CSS
 
 ## [1.0.5] - 2021-02-21
 ### Added
