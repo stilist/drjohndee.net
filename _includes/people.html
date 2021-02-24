@@ -31,7 +31,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 
 {% for person_key in include.people_keys -%}
-  {% if person_key != highlighted_person_key
+  {% if person_key != highlighted_person_key -%}
   {% assign person_record = person_key | collection_entry: "people" -%}
   <li class='person-avatar'>
     {% assign person_permalink = person_key | collection_entry_url: "people" -%}
