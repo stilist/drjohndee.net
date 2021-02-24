@@ -48,7 +48,7 @@ module DataCollection
   end
 
   def data_collection_record(collection_name, key)
-    return if key.nil? || key.strip == ''
+    return if !key.is_a?(String) || key.strip == ''
 
     prefix, suffix = key.split('/', 2)
     sanitized_prefix = escape_key(prefix)
@@ -60,6 +60,8 @@ module DataCollection
   end
 
   def data_collection_record_url(collection_name, key)
+    return nil if !key.is_a?(String)
+
     sanitized_key = escape_key(key)
     "/#{collection_name}/#{slugify_key(sanitized_key)}.html"
   end
@@ -101,6 +103,8 @@ module DataCollection
 
   # @see https://github.com/jekyll/jekyll/blob/7d8a839a2132cadd940a3b4f8d7c5f9f6b0f9f62/lib/jekyll/readers/data_reader.rb#L71-L74
   def escape_key(key)
+    return key if !key.is_a?(String)
+
     key.gsub(%r![^\w\s-]+|(?<=^|\b\s)\s+(?=$|\s?\b)!, "")
       .gsub(%r!\s+!, "_")
       .downcase
