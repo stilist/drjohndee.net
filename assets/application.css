@@ -238,6 +238,7 @@
   --calendar-day-size: calc(var(--calendar-month-width) / 7);
 
   --avatar-border-width: 2px;
+  --avatar-size: calc(var(--vertical-rhythm) * 2);
 }
 @media (min-width: 2200px) {
   :root {
@@ -611,9 +612,9 @@ ol.years > .year {
 .person-avatar,
 .person-avatar a {
   border-radius: 50%;
-  /* @TODO match vertical rhythm */
-  height: 2rem;
-  width: 2rem;
+  height: var(--avatar-size);
+  line-height: var(--avatar-size);
+  width: var(--avatar-size);
 }
 .person-avatar {
   background-color: var(--avatar-background-color);
