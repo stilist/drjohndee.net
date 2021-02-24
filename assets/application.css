@@ -112,6 +112,7 @@
   --link-color: var(--accent-80);
   --link-focus-color: var(--accent-60);
   --link-visted-color: var(--accent-100);
+  --avatar-background-color: var(--neutral-10);
 }
 
 @supports (color: hsl(1 1 1)) {
@@ -186,6 +187,7 @@
     --link-color: var(--accent-30);
     --link-focus-color: var(--accent-10);
     --link-visted-color: var(--accent-40);
+    --avatar-background-color: var(--neutral-90);
   }
 }
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
@@ -236,6 +238,8 @@
                              + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
   /* one week per row; used as both width and height to make cells square */
   --calendar-day-size: calc(var(--calendar-month-width) / 7);
+
+  --avatar-border-width: 2px;
 }
 @media (min-width: 2200px) {
   :root {
@@ -600,4 +604,44 @@ ol.years > .year {
 }
 .calendar-date--content {
   background-color: var(--calendar-highlight-color);
+}
+
+.people {
+  display: flex;
+  list-style: none;
+}
+.person-avatar,
+.person-avatar a {
+  border-radius: 50%;
+  /* @TODO match vertical rhythm */
+  height: 2rem;
+  width: 2rem;
+}
+.person-avatar {
+  background-color: var(--avatar-background-color);
+  position: relative;
+}
+.person-avatar + .person-avatar {
+  margin-inline-start: var(--gutter-width);
+}
+.person-avatar--isHighlighted {
+  background-color: var(--foreground);
+}
+.person-avatar a {
+  border: var(--avatar-border-width) solid currentColor;
+  display: block;
+  left: calc(var(--avatar-border-width) * -1);
+  position: absolute;
+  text-decoration: none;
+  top: calc(var(--avatar-border-width) * -1);
+}
+.person-avatarInitials {
+  align-items: center;
+  color: var(--foreground);
+  font-family: var(--font-sans-serif);
+  display: flex;
+  justify-content: center;
+}
+.person-avatar--isHighlighted .person-avatarInitials {
+  color: var(--background);
 }

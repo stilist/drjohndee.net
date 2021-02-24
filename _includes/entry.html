@@ -32,6 +32,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endif -%}
 
 <div class="source-material e-content">
+  {% assign highlighted_person_key = entry | get_author_key: entry.edition_key, entry.volume_key -%}
+  {% include people.html people_keys=entry.people
+                         highlighted_person_key=highlighted_person_key -%}
+
   {% if entry.timestamp_dates.size > 1 -%}
   <span class="page-dateRange">
     ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})

@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Display ‘related dates’ on date pages
 - Add letter from John Dee to William Cecil
 - Fully annotate 1581-12-22 scrying session
+- Add widget to display the list of people related to an entry
+- Add `get_author_key` Liquid filter to automatically identify an `author_key` based on the provided object, falling back to the volume, edition, and ‘work’ author of the object’s associated source record
+- Add `person_initials` Liquid filter that generates a string of graphemes representing the initials of a name
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
