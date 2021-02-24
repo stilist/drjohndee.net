@@ -636,7 +636,6 @@ ol.years > .year {
 .person-avatarInitials {
   align-items: center;
   color: var(--foreground);
-  font-family: var(--font-sans-serif);
   display: flex;
   justify-content: center;
 }
