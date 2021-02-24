@@ -324,14 +324,14 @@ ul > li {
 }
 blockquote {
   color: var(--blockquote-content-color);
-  padding-left: calc(var(--gutter-width));
+  padding-inline-start: calc(var(--gutter-width));
   position: relative;
 }
 blockquote::before {
   background-color: var(--blockquote-border-color);
   bottom: 0;
   content: '';
-  left: calc(var(--gutter-width) * -0.5);
+  inset-inline-start: calc(var(--gutter-width) * -0.5);
   position: absolute;
   top: 0;
   width: 4px;
@@ -353,9 +353,9 @@ hr {
   border: 0;
   background-color: var(--foreground);
   height: 1px;
-  left: 50%;
+  inset-inline-start: 50%;
   margin-bottom: calc(var(--vertical-rhythm) * 1.5);
-  margin-left: -15%;
+  margin-inline-start: -15%;
   margin-top: calc(var(--vertical-rhythm) * 1.45);
   position: relative;
   width: 30%;
@@ -393,7 +393,7 @@ sup {
   line-height: calc(var(--vertical-rhythm) * 2.8);
   margin: 0;
   padding-bottom: calc(var(--vertical-rhythm) * 0.2);
-  text-align: left;
+  text-align: start;
 }
 
 .home h2 {
@@ -443,7 +443,7 @@ ol.years > .year {
   align-items: stretch;
   flex-direction: column;
   height: calc(var(--vertical-rhythm) * 3);
-  padding-left: 1rem;
+  padding-inline-start: 1rem;
   vertical-align: top;
   width: calc(var(--column-width) * 2);
 }
@@ -480,8 +480,8 @@ ol.years > .year {
   display: block;
   border-bottom: 1px solid var(--foreground);
   bottom: calc(var(--vertical-rhythm) * -2.5);
-  left: 50%;
-  margin-left: -15%;
+  inset-inline-start: 50%;
+  margin-inline-start: -15%;
   position: absolute;
   width: 30%;
 }
@@ -501,7 +501,7 @@ ol.years > .year {
 }
 
 .correspondence-signature {
-  text-align: right;
+  text-align: end;
 }
 
 .page-content {
@@ -592,7 +592,7 @@ ol.years > .year {
 }
 .calendar-date a {
   height: 100%;
-  left: 0;
+  inset-inline-start: 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -628,7 +628,7 @@ ol.years > .year {
 .person-avatar a {
   border: var(--avatar-border-width) solid currentColor;
   display: block;
-  left: calc(var(--avatar-border-width) * -1);
+  inset-inline-start: calc(var(--avatar-border-width) * -1);
   position: absolute;
   text-decoration: none;
   top: calc(var(--avatar-border-width) * -1);

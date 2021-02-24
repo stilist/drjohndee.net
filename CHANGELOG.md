@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix layout of `<sup>` footnote references
 - Fix ordering of color declarations in CSS
 - Fix crashes in `DataCollection` methods when given an object that’s not a string
+- Layout is now entirely RTL-compatible
 
 ## [1.0.5] - 2021-02-21
 ### Added
