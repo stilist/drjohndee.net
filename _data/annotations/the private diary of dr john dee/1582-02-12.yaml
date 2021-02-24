@@ -19,4 +19,4 @@ annotations:
         exact: "Saul his"
       - type: TextQuoteSelector
         exact: "his"
-        suffix: " laywers at"
+        suffix: " lawyers at"
