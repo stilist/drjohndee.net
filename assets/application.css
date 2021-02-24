@@ -639,6 +639,9 @@ ol.years > .year {
   display: flex;
   justify-content: center;
 }
+.person-avatarInitials:not(lang[he]) {
+  font-size: 0.9em;
+}
 .person-avatar--isHighlighted .person-avatarInitials {
   color: var(--background);
 }

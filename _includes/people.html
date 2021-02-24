@@ -20,9 +20,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <h3 class="is-assistiveOnly">People in this entry</h3>
 <ul class='people'>
   {% if highlighted_person_key -%}
+  {% assign highlighted_person_record = highlighted_person_key | collection_entry: "people" -%}
   <li class='person-avatar person-avatar--isHighlighted'>
     {% assign person_permalink = highlighted_person_key | collection_entry_url: "people" -%}
-    <a href="{{ person_permalink | relative_url }}">
+    <a href="{{ person_permalink | relative_url }}"
+       lang="{{ highlighted_person_record.name_language }}">
       <span class="person-avatarInitials"
             aria-hidden="true">{{ highlighted_person_key | person_initials }}</span>
       <span class="is-assistiveOnly">{{ highlighted_person_key | person_name }}</span>
@@ -35,7 +37,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% assign person_record = person_key | collection_entry: "people" -%}
   <li class='person-avatar'>
     {% assign person_permalink = person_key | collection_entry_url: "people" -%}
-    <a href="{{ person_permalink | relative_url }}">
+    <a href="{{ person_permalink | relative_url }}"
+       lang="{{ person_record.name_language }}">
       <span class="person-avatarInitials"
             aria-hidden="true">{{ person_key | person_initials }}</span>
       <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
