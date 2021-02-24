@@ -63,7 +63,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <span lang="la">\1
+        <span lang="la-renais" translate>\1
     selectors:
       - type: TextQuoteSelector
         exact: "De numeris formalibus"

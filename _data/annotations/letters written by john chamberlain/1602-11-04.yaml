@@ -50,7 +50,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <span lang="la">\1
+        <span lang="la-renais" translate>\1
     selectors:
       - type: TextQuoteSelector
         exact: "leves gratiœ"
@@ -65,7 +65,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <span lang="fr-1606nict">\1
+        <span lang="fr-1606nict" translate>\1
     selectors:
       - type: TextQuoteSelector
         exact: "en soldat"
