@@ -5,11 +5,11 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-id: "https://www.wikidata.org/entity/Q2498218"
+id: "https://www.wikidata.org/entity/Q45581"
 presentational_name:
-  givenName: "חַנִּיאֵל"
+  givenName: "מִיכָאֵל"
 full_name:
-  - text: "חַנִּיאֵל"
+  - text: "מִיכָאֵל"
     type: givenName
 name_is_rtl: true
 name_language: he
