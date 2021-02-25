@@ -11,10 +11,31 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <hr>
+        <sup>\1</sup>
     selectors:
       - type: TextQuoteSelector
-        exact: "* * *"
+        exact: "*"
+        suffix: "cam to my howſe"
+      - type: TextQuoteSelector
+        prefix: "‸"
+        exact: "he"
+        suffix: " being willing"
+      - type: TextQuoteSelector
+        prefix: "there "
+        exact: "Δ"
+        suffix: "appeared"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‸<sup>"
+        exact: "he"
+        suffix: "</sup> being willing"
+
   - body:
       type: TextualBody
       format: "text/html"
@@ -47,6 +68,10 @@ annotations:
       value: >-
         <p>\1
     selectors:
+      - type: TextQuoteSelector
+        exact: "Anno 1582. Martÿ die."
+      - type: TextQuoteSelector
+        exact: "One M ͬ Edward Talbot"
       - type: TextQuoteSelector
         exact: "Δ ⸺"
       - type: TextQuoteSelector
@@ -106,12 +131,74 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Kelley, Edward" | person_link: "\1" }}
+        <span lang="la-renais" translate>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "In nomine Jesv"
+      - type: TextQuoteSelector
+        exact: "Anno 1582."
+      - type: TextQuoteSelector
+        exact: "Aliqui Angeli bom"
+      - type: TextQuoteSelector
+        exact: "Michaël est princeps"
+      - type: TextQuoteSelector
+        exact: "Liber ille,"
+      - type: TextQuoteSelector
+        exact: "solus Michaël"
+      - type: TextQuoteSelector
+        exact: "Præſent{ia}s"
+      - type: TextQuoteSelector
+        exact: "H{æ}c maximè"
+      - type: TextQuoteSelector
+        exact: "Omnis hora ,"
+      - type: TextQuoteSelector
+        exact: "character{iſmus}"
+      - type: TextQuoteSelector
+        exact: "Sigillum hoc"
+      - type: TextQuoteSelector
+        exact: "Soli Deo Honor"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Jesv CHRISTI."
+      - type: TextQuoteSelector
+        exact: "Ante meridiem."
+      - type: TextQuoteSelector
+        exact: "Aliqui Angeli bom ."
+      - type: TextQuoteSelector
+        exact: "operibus nostro{s}"
+      - type: TextQuoteSelector
+        exact: "Angelos Dei bonos ."
+      - type: TextQuoteSelector
+        exact: "est interpretator ."
+      - type: TextQuoteSelector
+        exact: "Lapidem invocandi ."
+      - type: TextQuoteSelector
+        exact: "non vi ."
+      - type: TextQuoteSelector
+        exact: "hora nobis ."
+      - type: TextQuoteSelector
+        exact: "character{iſmus}"
+      - type: TextQuoteSelector
+        exact: "p{ec}tus gestandum."
+      - type: TextQuoteSelector
+        exact: "et gloria."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "One M ͬ Edward Talbot"
       - type: TextQuoteSelector
-        prefix: "and ‸"
+        prefix: "‸<sup><ins>"
         exact: "he"
       - type: TextQuoteSelector
         prefix: "browght forth to "
@@ -154,3 +241,128 @@ annotations:
       - type: TextQuoteSelector
         prefix: "After that "
         exact: "M ͬ E.T."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Anchor" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "the good Angel Anchor"
+      - type: TextQuoteSelector
+        prefix: "to call "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "( namely "
+        exact: "Anchor"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Anachor" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Anachor"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Uriel" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "had sight of "
+        exact: "one"
+        suffix: " in the stone"
+      - type: TextQuoteSelector
+        prefix: "deeming "
+        exact: "this"
+        suffix: " to be one"
+      - type: TextQuoteSelector
+        prefix: "required to know "
+        exact: "his"
+        suffix: " name ."
+      - type: TextQuoteSelector
+        prefix: "And "
+        exact: "he"
+        suffix: " spake plainly"
+      - type: TextQuoteSelector
+        prefix: "that "
+        exact: "his"
+        suffix: " name"
+      - type: TextQuoteSelector
+        prefix: "Are "
+        exact: "you"
+        suffix: " one of them"
+      - type: TextQuoteSelector
+        exact: "VRIEL"
+      - type: TextQuoteSelector
+        exact: "VR"
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "VR."
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: |-2
+          the good
+          Creature
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Anilos" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Anilos"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T11:15">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Anno 1582."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T17">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "The same Saterday"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Saterday."
+      - type: TextQuoteSelector
+        exact: "Hora .5."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <hr>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "* * *"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p><img alt='An illustration of the seal described by Uriel'
+                src='{{ "/assets/1582-03-10.1.svg" | relative_url }}'>
+    selectors:
+      - type: TextQuoteSelector
+        exact: |-2
+          enſ{uing} :

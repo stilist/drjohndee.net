@@ -239,6 +239,9 @@
 
   --avatar-border-width: 2px;
   --avatar-size: calc(var(--vertical-rhythm) * 2);
+
+  --image-width: calc(4 * var(--column-width)
+               + calc(4 - 1) * var(--gutter-width));
 }
 @media (min-width: 2200px) {
   :root {
@@ -499,6 +502,9 @@ ol.years > .year {
 }
 .entries .page-content:last-child {
   margin-bottom: 0;
+}
+.entry img {
+  max-width: var(--image-width);
 }
 
 .correspondence-signature {
