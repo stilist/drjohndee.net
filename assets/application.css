@@ -342,15 +342,18 @@ blockquote::before {
   background-color: var(--blockquote-border-color);
   bottom: 0;
   content: '';
-  left: calc(var(--gutter-width) * -0.5);
   position: absolute;
   top: 0;
   width: 4px;
 }
+@supports not (inset-inline-start: 0) {
+  blockquote::before {
+    left: calc(var(--gutter-width) * -0.5);
+  }
+}
 @supports (inset-inline-start: 0) {
   blockquote::before {
     inset-inline-start: calc(var(--gutter-width) * -0.5);
-    left: auto;
   }
 }
 blockquote > :last-child {
@@ -370,17 +373,20 @@ hr {
   border: 0;
   background-color: var(--foreground);
   height: 1px;
-  left: 50%;
   margin-bottom: calc(var(--vertical-rhythm) * 1.5);
   margin-inline-start: -15%;
   margin-top: calc(var(--vertical-rhythm) * 1.45);
   position: relative;
   width: 30%;
 }
+@supports not (inset-inline-start: 0) {
+  hr {
+    left: 50%;
+  }
+}
 @supports (inset-inline-start: 0) {
   hr {
     inset-inline-start: 50%;
-    left: auto;
   }
 }
 
@@ -507,15 +513,18 @@ ol.years > .year {
   display: block;
   border-bottom: 1px solid var(--foreground);
   bottom: calc(var(--vertical-rhythm) * -2.5);
-  left: 50%;
   margin-inline-start: -15%;
   position: absolute;
   width: 30%;
 }
+@supports not (inset-inline-start: 0) {
+  .entries::after {
+    left: 50%;
+  }
+}
 @supports (inset-inline-start: 0) {
   .entries::after {
     inset-inline-start: 50%;
-    left: auto;
   }
 }
 .entries .entry {
@@ -674,15 +683,18 @@ ol.years > .year {
 .person-avatar a {
   border: var(--avatar-border-width) solid currentColor;
   display: block;
-  left: calc(var(--avatar-border-width) * -1);
   position: absolute;
   text-decoration: none;
   top: calc(var(--avatar-border-width) * -1);
 }
+@supports not (inset-inline-start: 0) {
+  .person-avatar a {
+    left: calc(var(--avatar-border-width) * -1);
+  }
+}
 @supports (inset-inline-start: 0) {
   .person-avatar a {
     inset-inline-start: calc(var(--avatar-border-width) * -1);
-    left: auto;
   }
 }
 .person-avatarInitials {
