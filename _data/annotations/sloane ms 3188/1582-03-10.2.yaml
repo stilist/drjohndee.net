@@ -74,7 +74,17 @@ annotations:
         <p>\1
     selectors:
       - type: TextQuoteSelector
-        exact: "Δ ⸺"
+        exact: "Δ ⸺ After"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ I"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ The"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Then"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ What"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Whan"
       - type: TextQuoteSelector
         exact: "VR ⸺"
       - type: TextQuoteSelector
@@ -96,7 +106,16 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <time datetime="1582-03-20T17">\1
+        <p class="consecration">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Gloria"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T17Z">\1
     selectors:
       - type: TextQuoteSelector
         exact: "The same Saterday"

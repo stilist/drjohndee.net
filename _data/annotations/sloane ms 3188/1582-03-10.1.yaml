@@ -58,15 +58,35 @@ annotations:
       - type: TextQuoteSelector
         exact: "One M ͬ Edward Talbot"
       - type: TextQuoteSelector
-        exact: "Δ ⸺"
+        exact: "Δ ⸺ Are you"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Are there"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ ys my boke"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Will you"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ I was told"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ What may I"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Oh, my great"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Is there"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ After this"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ What is"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ So we ceaſed"
       - type: TextQuoteSelector
         exact: "VRIEL ⸺ I am."
       - type: TextQuoteSelector
-        exact: "VR ⸺"
+        exact: "VR ⸺ Michaël"
       - type: TextQuoteSelector
         exact: "VR ⸺ Liber ille"
       - type: TextQuoteSelector
-        exact: "VR ⸺ I can ⸺ But"
+        exact: "VR ⸺ I can"
       - type: TextQuoteSelector
         exact: "VR ⸺ Thou ſhallt"
       - type: TextQuoteSelector
@@ -82,7 +102,35 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <time datetime="1582-03-20T11:15">\1
+        <sup>\1</sup>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "*"
+        suffix: "VR ⸺"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "<sup>*</sup>"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class="consecration">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Soli Deo"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T11:15Z">\1
     selectors:
       - type: TextQuoteSelector
         exact: "Anno 1582."
