@@ -463,6 +463,9 @@ ol.years > .year {
   margin-top: 0;
   position: relative;
 }
+.page-name .dt-published {
+  padding-inline-end: 2px;
+}
 .page-nextPrevious {
   align-items: stretch;
   flex-direction: column;
