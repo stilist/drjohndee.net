@@ -456,7 +456,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <p><img alt='An illustration of the seal described by Uriel'
+        <p><img alt="John Dee’s illustration of the seal described by Uriel"
                 src='{{ "/assets/1582-03-10.seal.svg" | relative_url }}'>
     selectors:
       - type: TextQuoteSelector
