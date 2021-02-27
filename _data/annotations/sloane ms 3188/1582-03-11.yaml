@@ -11,12 +11,43 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <del>\1</del>
+        <sup>\1</sup>
     selectors:
       - type: TextQuoteSelector
+        prefix: "whome "
+        exact: "asked"
+      - type: TextQuoteSelector
+        prefix: "They are "
+        exact: "Δ*"
+        suffix: "perfect"
+      - type: TextQuoteSelector
         prefix: "‹"
-        exact: "."
+        exact: "‸{.}"
         suffix: "›"
+      - type: TextQuoteSelector
+        exact: "ℕ"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "<sup>"
+        exact: "asked"
+        suffix: "</sup>"
+      - type: TextQuoteSelector
+        prefix: "<sup>"
+        exact: "ℕ"
+        suffix: "</sup>"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
       - type: TextQuoteSelector
         prefix: "‹"
         exact: "axed"
@@ -26,9 +57,9 @@ annotations:
         exact: "hed"
         suffix: "›"
       - type: TextQuoteSelector
-        prefix: "‹"
+        prefix: "<sup>"
         exact: "‸{.}"
-        suffix: "›"
+        suffix: "</sup>"
       - type: TextQuoteSelector
         prefix: "‹"
         exact: "sweat"
@@ -38,33 +69,16 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <p>\1
-    selectors:
-      - type: TextQuoteSelector
-        exact: "⸺ They are Δ*perfect"
-      - type: TextQuoteSelector
-        exact: "Δ ⸺"
-      - type: TextQuoteSelector
-        exact: "VRI ⸺ I am he."
-      - type: TextQuoteSelector
-        exact: "E.T. ⸺ he drew the"
-      - type: TextQuoteSelector
-        exact: "Michaël ⸺ We are blessed"
-      - type: TextQuoteSelector
-        exact: "⸺ Go forward"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
         \1<br>
     selectors:
+      - type: TextQuoteSelector
+        exact: "wer perfect :"
       - type: TextQuoteSelector
         exact: "God hath blessed the"
       - type: TextQuoteSelector
         exact: "be thy Guyde"
       - type: TextQuoteSelector
-        exact: "vnto thy sechmy"
+        exact: "vnto thy sech{ing}"
       - type: TextQuoteSelector
         exact: "with thy doings"
       - type: TextQuoteSelector
@@ -78,6 +92,8 @@ annotations:
       - type: TextQuoteSelector
         exact: "liuing and converſation"
       - type: TextQuoteSelector
+        exact: "are vaniſhed away."
+      - type: TextQuoteSelector
         exact: "virtus et Imperium"
       - type: TextQuoteSelector
         exact: "invisibili , et"
@@ -88,7 +104,148 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Kelley, Edward" | person_link: "\1" }}
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Vriel"
+      - type: TextQuoteSelector
+        exact: "⸺ They are"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Are"
+      - type: TextQuoteSelector
+        exact: "Than preſently cam"
+      - type: TextQuoteSelector
+        exact: "VRI ⸺"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ blessed"
+      - type: TextQuoteSelector
+        exact: "This was thy"
+      - type: TextQuoteSelector
+        exact: "Lo, thus, hath"
+      - type: TextQuoteSelector
+        exact: "E.T. ⸺"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Here vppon"
+      - type: TextQuoteSelector
+        exact: "Michaël ⸺"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ My skryer"
+      - type: TextQuoteSelector
+        exact: "He that sat"
+      - type: TextQuoteSelector
+        exact: "⸺ Go forward"
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ so he departed."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class="consecration">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺ Gloria"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-21T03Z">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "1582"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "circiter"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="la-renais" translate>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "a Meridie"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "circiter"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ"
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " ‹"
+      - type: TextQuoteSelector
+        prefix: "This was "
+        exact: "thy"
+        suffix: " perſecutor"
+      - type: TextQuoteSelector
+        exact: "the"
+        suffix: " see, how God"
+      - type: TextQuoteSelector
+        prefix: "puniſhed "
+        exact: "thy"
+      - type: TextQuoteSelector
+        prefix: "for "
+        exact: "the"
+      - type: TextQuoteSelector
+        prefix: "hath blessed "
+        exact: "the"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " Guyde"
+      - type: TextQuoteSelector
+        prefix: "vnto "
+        exact: "thy"
+        suffix: " sech{ing}"
+      - type: TextQuoteSelector
+        prefix: "with "
+        exact: "thy"
+        suffix: " doings"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " commandment"
+      - type: TextQuoteSelector
+        exact: "Thow"
+        suffix: " shalt"
+      - type: TextQuoteSelector
+        prefix: "seen of "
+        exact: "the"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " liuing"
+      - type: TextQuoteSelector
+        prefix: "sowght "
+        exact: "thy"
+        suffix: " life"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " pen"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
         prefix: "by. "
@@ -105,3 +262,170 @@ annotations:
       - type: TextQuoteSelector
         exact: "My skryer"
         suffix: " ſaw an innumerable"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Uriel" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Vriel"
+      - type: TextQuoteSelector
+        prefix: "cam in "
+        exact: "one"
+      - type: TextQuoteSelector
+        exact: "who"
+        prefix: " cam in"
+      - type: TextQuoteSelector
+        exact: "that spirit"
+      - type: TextQuoteSelector
+        exact: "VRI"
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " am he"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " browght"
+      - type: TextQuoteSelector
+        prefix: "haue "
+        exact: "I"
+        suffix: " delt"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " drew the"
+      - type: TextQuoteSelector
+        prefix: "waſhed "
+        exact: "his"
+      - type: TextQuoteSelector
+        prefix: "of "
+        exact: "his"
+        suffix: " ‹"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " ſeamed"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " cam in agayn"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Lundrumguffa" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "there appeared "
+        exact: "one"
+      - type: TextQuoteSelector
+        prefix: "and on "
+        exact: "his"
+      - type: TextQuoteSelector
+        exact: "his"
+        suffix: " eyes sparkling"
+      - type: TextQuoteSelector
+        prefix: "of "
+        exact: "whome"
+        suffix: " asked"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " anſwered"
+      - type: TextQuoteSelector
+        exact: "the brave spirit"
+      - type: TextQuoteSelector
+        prefix: "bet "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "toke all "
+        exact: "his"
+      - type: TextQuoteSelector
+        prefix: "apparell of "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " remayned"
+      - type: TextQuoteSelector
+        prefix: "was beaten of "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "after "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "perſecutor "
+        exact: "Lundrumguffa"
+      - type: TextQuoteSelector
+        prefix: "browght "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "the wyked spirit"
+      - type: TextQuoteSelector
+        prefix: "threw "
+        exact: "him"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Michael" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Michaël"
+      - type: TextQuoteSelector
+        exact: "an other"
+        suffix: " with"
+      - type: TextQuoteSelector
+        exact: "the other"
+      - type: TextQuoteSelector
+        exact: "his"
+        suffix: " right hand"
+      - type: TextQuoteSelector
+        exact: "his"
+        suffix: " hed"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " had wings"
+      - type: TextQuoteSelector
+        prefix: "and all "
+        exact: "his"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " had a roab"
+      - type: TextQuoteSelector
+        prefix: "ouer "
+        exact: "his"
+      - type: TextQuoteSelector
+        prefix: "light in "
+        exact: "his"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " ſayd"
+      - type: TextQuoteSelector
+        prefix: "Angels abowt "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " that sat"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " will be"
+      - type: TextQuoteSelector
+        prefix: "vnder "
+        exact: "my"
+        suffix: " powre"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " will do"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " will be"
+      - type: TextQuoteSelector
+        exact: "shalt see"
+        suffix: " me"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " will direct"
+      - type: TextQuoteSelector
+        prefix: "so "
+        exact: "he"
+        suffix: " departed"
