@@ -231,7 +231,7 @@
                       + calc(var(--column-count) - 1) * var(--gutter-width));
   --content-grid-rows: auto auto auto auto;
   --content-grid-areas:
-    "header     header     header     header     header     header     header     header     header     . secondary secondary secondary secondary secondary"
+    "header     header     header     header     header     header     header     header     header     header secondary secondary secondary secondary secondary"
     "content    content    content    content    content    content    content    content    content    . secondary secondary secondary secondary secondary"
     "commentary commentary commentary commentary commentary commentary commentary commentary commentary . secondary secondary secondary secondary secondary"
     "context    context    context    context    context    context    context    context    context    . secondary secondary secondary secondary secondary";

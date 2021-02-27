@@ -40,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix crashes in `DataCollection` methods when given an object that’s not a string
 - Layout is now entirely RTL-compatible
 - Fix spelling of ‘Lundrumguffa’
+- Extend `header` grid area by one column to fix collapsed column between primary and secondary content
 
 ### Removed
 - Remove `data_collection_record_link` method -- replaced by private `data_record_link` method
