@@ -20,10 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `get_author_key` Liquid filter to automatically identify an `author_key` based on the provided object, falling back to the volume, edition, and ‘work’ author of the object’s associated source record
 - Add `person_initials` Liquid filter that generates a string of graphemes representing the initials of a name
 - Add stylized SVG rendering of illustrations from 1582-03-10 entries
+- Add `person_reference` Liquid filter
+- Add `data_record_tag_attributes` Liquid filter that provides a consistent class name and `data-key` attribute so everything using the `person_reference` and `person_link` filters be connected
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
 - Split 1582-03-10’s two sessions into separate files
+- Refactor `person_link` Liquid filter to use `data_record_tag_attributes`
 
 ### Fixed
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
@@ -34,6 +37,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix crashes in `DataCollection` methods when given an object that’s not a string
 - Layout is now entirely RTL-compatible
 - Fix spelling of ‘Lundrumguffa’
+
+### Removed
+- Remove `data_collection_record_link` method -- replaced by private `data_record_link` method
 
 ## [1.0.5] - 2021-02-21
 ### Added

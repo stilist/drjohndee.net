@@ -167,7 +167,7 @@ module HistoricalDiary
 
       source_name = volume['name'] || edition['name'] || work['name']
       output = [
-        data_collection_record_link('sources', source_key, source_name),
+        data_record_link('sources', source_key, source_name),
         publishing_info,
       ]
       output.insert(1, "Volume #{volume['volume_number']}") if volume.key?('volume_number')
@@ -193,7 +193,7 @@ module HistoricalDiary
           editor.dig('presentational_name', 'givenName'),
           editor.dig('presentational_name', 'familyName'),
         ].compact.join(' ')
-        out = "Edited by " + data_collection_record_link('people', editor_key, editor_name)
+        out = "Edited by " + data_record_link('people', editor_key, editor_name)
         output.insert(2, out)
       end
 
@@ -219,6 +219,10 @@ module HistoricalDiary
         .join('')
     end
 
+    def person_link(key, display_text)
+      data_record_link('people', key, display_text)
+    end
+
     # @note This returns the name in the order the parts are written in the
     #   data file--if data is ordered with `familyName` before `givenName`,
     #   the output will also have `familyName` first. This helps a bit with
@@ -233,8 +237,8 @@ module HistoricalDiary
       record['presentational_name'].values.join(' ')
     end
 
-    def person_link(key, display_text)
-      data_collection_record_link('people', key, display_text)
+    def person_reference(key, display_text)
+      data_record_reference('people', key, display_text)
     end
 
     def relevant_footnotes(timestamp)
@@ -250,6 +254,33 @@ module HistoricalDiary
         document.data['timestamp_range'].intersect?(timestamp_range)
       end
     end
+
+    def data_record_tag_attributes(key, collection_name)
+      {
+        "class" => "data-entity data-#{collection_name}",
+        "dataKey" => "#{collection_name}/#{slugify_key(key)}",
+      }.freeze
+    end
+
+    private
+
+    def data_record_link(collection_name, key, display_text = nil)
+      url = data_collection_record_url(collection_name, key)
+
+      attributes = data_record_tag_attributes(key, collection_name)
+      "<a " \
+        "href='#{url}' " \
+        "class='#{attributes['class']}' " \
+        "data-key='#{attributes['dataKey']}'>#{display_text || key}</a>"
+    end
+
+    def data_record_reference(collection_name, key, display_text = nil)
+      attributes = data_record_tag_attributes(key, collection_name)
+      "<span " \
+        "class='#{attributes['class']}' " \
+        "data-key='#{attributes['dataKey']}'>#{display_text || key}</span>"
+    end
+
   end
 end
 Liquid::Template.register_filter(HistoricalDiary::DataFilters)

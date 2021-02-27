@@ -221,7 +221,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Barnabas Saul" | person_link: "\1" }}
+        {{ "Barnabas Saul" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "Saul"
@@ -242,7 +242,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Haniel" | person_link: "\1" }}
+        {{ "Haniel" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "Anael"
