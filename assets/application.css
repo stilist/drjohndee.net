@@ -111,6 +111,10 @@
   --link-focus-color: var(--accent-60);
   --link-visted-color: var(--accent-100);
   --avatar-background-color: var(--neutral-10);
+  --avatar-author-background-color: var(--foreground);
+  --highlight-background-color: var(--accent-20);
+  --highlight-outline-color: var(--accent-60);
+  --highlight-alternate-background-color: var(--accent-80);
 }
 
 @supports (color: hsl(1 1 1)) {
@@ -186,6 +190,9 @@
     --link-focus-color: var(--accent-10);
     --link-visted-color: var(--accent-40);
     --avatar-background-color: var(--neutral-90);
+    --highlight-background-color: var(--accent-80);
+    --highlight-outline-color: var(--accent-40);
+    --highlight-alternate-background-color: var(--accent-20);
   }
 }
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
@@ -616,7 +623,8 @@ ol.years > .year {
   list-style: none;
 }
 .person-avatar,
-.person-avatar a {
+.person-avatar a,
+.person-avatarInitials {
   border-radius: 50%;
   height: var(--avatar-size);
   line-height: var(--avatar-size);
@@ -626,11 +634,11 @@ ol.years > .year {
   background-color: var(--avatar-background-color);
   position: relative;
 }
+.person-avatar--is-author {
+  background-color: var(--avatar-author-background-color);
+}
 .person-avatar + .person-avatar {
   margin-inline-start: var(--gutter-width);
-}
-.person-avatar--isHighlighted {
-  background-color: var(--foreground);
 }
 .person-avatar a {
   border: var(--avatar-border-width) solid currentColor;
@@ -642,13 +650,16 @@ ol.years > .year {
 }
 .person-avatarInitials {
   align-items: center;
+  /* trigger border-radius */
+  border: 0;
   color: var(--foreground);
   display: flex;
   justify-content: center;
 }
+.person-avatar--is-author .person-avatarInitials {
+  color: var(--background);
+}
 .person-avatarInitials:not(lang[he]) {
   font-size: 0.9em;
 }
-.person-avatar--isHighlighted .person-avatarInitials {
-  color: var(--background);
 }

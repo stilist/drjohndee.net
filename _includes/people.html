@@ -21,7 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <ul class='people'>
   {% if highlighted_person_key -%}
   {% assign highlighted_person_record = highlighted_person_key | collection_entry: "people" -%}
-  <li class='person-avatar person-avatar--isHighlighted'>
+  <li class='person-avatar person-avatar--is-author'>
     {% assign link_attributes = highlighted_person_key | data_record_tag_attributes: "people" -%}
     {% assign person_permalink = highlighted_person_key | collection_entry_url: "people" -%}
     <a href="{{ person_permalink | relative_url }}"
