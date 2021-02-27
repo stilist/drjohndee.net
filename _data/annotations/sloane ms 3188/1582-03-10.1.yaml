@@ -462,3 +462,14 @@ annotations:
       - type: TextQuoteSelector
         prefix: "enſ{uing} :"
         exact: "\n"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        therevppon
+    selectors:
+      - type: TextQuoteSelector
+        exact: |-2
+          there⹀
+          vppon
