@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Split 1582-03-10’s two sessions into separate files
 - Refactor `person_link` Liquid filter to use `data_record_tag_attributes`
 - `annotate_content` Liquid filter now uses a Yaml file that matches the source material’s filename -- annotation files apply to at most one entry for a date, rather than all
+- Use `data_record_tag_attributes` Liquid filter in `people` include
 
 ### Fixed
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
