@@ -15,11 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Annotate mentions of Adrian and Humphrey Gilbert
 - Display ‘related dates’ on date pages
 - Add letter from John Dee to William Cecil
-- Fully annotate 1581-12-22 scrying session
+- Fully annotate 1581-12-22 and 1582-03-10 entries, including illustrations
+- Add stylized SVG rendering of illustrations from 1582-03-10 entries
 - Add widget to display the list of people related to an entry
 - Add `get_author_key` Liquid filter to automatically identify an `author_key` based on the provided object, falling back to the volume, edition, and ‘work’ author of the object’s associated source record
 - Add `person_initials` Liquid filter that generates a string of graphemes representing the initials of a name
-- Add stylized SVG rendering of illustrations from 1582-03-10 entries
 - Add `person_reference` Liquid filter
 - Add `data_record_tag_attributes` Liquid filter that provides a consistent class name and `data-key` attribute so everything using the `person_reference` and `person_link` filters be connected
 

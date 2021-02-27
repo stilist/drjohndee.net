@@ -1,0 +1,398 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <sup>\1</sup>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "Sigillum "
+        exact: "Dei"
+      - type: TextQuoteSelector
+        exact: "*"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <ins>\1</ins>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "<sup>"
+        exact: "Dei"
+        suffix: "</sup>"
+      - type: TextQuoteSelector
+        prefix: "<sup>"
+        exact: "*"
+        suffix: "</sup>"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "an"
+        suffix: "›"
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "D{uuni}tatis"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <em>\1</em>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Characters and names"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "et spiritus sancto"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ ⸺"
+      - type: TextQuoteSelector
+        exact: "VR ⸺"
+      - type: TextQuoteSelector
+        exact: "VR.⸺"
+      - type: TextQuoteSelector
+        exact: "The Table is to"
+      - type: TextQuoteSelector
+        exact: "Vppon this vppermost"
+      - type: TextQuoteSelector
+        exact: "The Table was ſhewed"
+      - type: TextQuoteSelector
+        exact: "He is here"
+      - type: TextQuoteSelector
+        exact: "Giue him a generall"
+      - type: TextQuoteSelector
+        exact: "He will seke Sauls"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T17">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "The same Saterday"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Hora .5."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <span lang="la-renais" translate>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Sigillum"
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Gloria"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</span>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "tatis</del>"
+      - type: TextQuoteSelector
+        exact: "sicut &c."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Δ"
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " was com͠e"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " then required"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " know no meanes"
+      - type: TextQuoteSelector
+        exact: "you"
+        suffix: " have long sowght"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " axed"
+      - type: TextQuoteSelector
+        prefix: "ſhewed vnto "
+        exact: "the"
+      - type: TextQuoteSelector
+        prefix: "which "
+        exact: "thou"
+        suffix: " hast"
+      - type: TextQuoteSelector
+        prefix: "stone : and "
+        exact: "I"
+      - type: TextQuoteSelector
+        exact: "you"
+        prefix: " must vſe"
+      - type: TextQuoteSelector
+        prefix: "boke of "
+        exact: "thyne"
+      - type: TextQuoteSelector
+        prefix: "opened vnto "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: "vſing "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: "who seketh "
+        exact: "your"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " goods . Diſcharge"
+      - type: TextQuoteSelector
+        prefix: "harmeth "
+        exact: "thy"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " dowghter"
+      - type: TextQuoteSelector
+        prefix: "maymed "
+        exact: "the"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " sholder"
+      - type: TextQuoteSelector
+        prefix: "Yf "
+        exact: "thow"
+      - type: TextQuoteSelector
+        exact: "thy"
+        suffix: " wife and"
+      - type: TextQuoteSelector
+        exact: "your"
+        suffix: " family and howſe"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " know no means"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " did burn in flame"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " fownd"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " had oft forbydden"
+      - type: TextQuoteSelector
+        exact: "my"
+        suffix: " howſe can teſtify"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " beſeche you to"
+      - type: TextQuoteSelector
+        prefix: "Whan ſhall "
+        exact: "I"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "After that "
+        exact: "M ͬ E.T."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Uriel" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Vriel"
+      - type: TextQuoteSelector
+        exact: "VR"
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "VR."
+        suffix: " ⸺"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " mean the pſalmes"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " mean, wax ,"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " haue no respect"
+      - type: TextQuoteSelector
+        exact: "you"
+        suffix: " to diſcharge"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Lundrumguffa" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Lundrumguffa"
+      - type: TextQuoteSelector
+        prefix: "Diſcharge "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " harmeth"
+      - type: TextQuoteSelector
+        exact: "His"
+        suffix: " pretence was"
+      - type: TextQuoteSelector
+        prefix: "do not diſcharge "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "he"
+        suffix: " will hurt"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " is here"
+      - type: TextQuoteSelector
+        prefix: "Giue "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " will seke"
+      - type: TextQuoteSelector
+        prefix: "diſcharge "
+        exact: "him"
+      - type: TextQuoteSelector
+        exact: "him"
+        suffix: " ſom{ware}"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Michael" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Michaël"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " is to be"
+      - type: TextQuoteSelector
+        prefix: "allure "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "wy{nn} "
+        exact: "him"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Saul"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Maherion" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Maherion his"
+        suffix: " name and"
+      - type: TextQuoteSelector
+        prefix: "dealing with "
+        exact: "him"
+      - type: TextQuoteSelector
+        prefix: "yet "
+        exact: "he"
+        suffix: " cam after"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Hilton, Robert" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Robert Hilton"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Raphael" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Raphael"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Asmodeus" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Asmodeus"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p><img alt='An illustration of the cross described by Uriel'
+                src='{{ "/assets/1582-03-10.cross.svg" | relative_url }}'>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "made thus :"
+        exact: "\n"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p><img alt=''
+                src='{{ "/assets/1582-03-10.table.svg" | relative_url }}'>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "of your holines"
+        exact: "\n"

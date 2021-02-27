@@ -40,27 +40,12 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <del>\1</del>
-    selectors:
-      - type: TextQuoteSelector
-        prefix: "‹"
-        exact: "an"
-        suffix: "›"
-      - type: TextQuoteSelector
-        prefix: "‹"
-        exact: "D{uuni}tatis"
-        suffix: "›"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
         \1<br>
     selectors:
       - type: TextQuoteSelector
-        exact: "omnis, et gloria."
+        exact: "et humilitate"
       - type: TextQuoteSelector
-        exact: "et spiritus sancto"
+        exact: "omnis, et gloria."
 
   - body:
       type: TextualBody
@@ -77,7 +62,7 @@ annotations:
       - type: TextQuoteSelector
         exact: "VRIEL ⸺ I am."
       - type: TextQuoteSelector
-        exact: "VR ⸺ Michaël and Raphaël"
+        exact: "VR ⸺"
       - type: TextQuoteSelector
         exact: "VR ⸺ Liber ille"
       - type: TextQuoteSelector
@@ -92,40 +77,24 @@ annotations:
         exact: "VR ⸺ Omnis hora"
       - type: TextQuoteSelector
         exact: "*VR ⸺ Sigillum hoc"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-03-20T11:15">\1
+    selectors:
       - type: TextQuoteSelector
-        exact: "The same Saterday"
+        exact: "Anno 1582."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
       - type: TextQuoteSelector
-        exact: "VR ⸺ Peace"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ He is to be"
-      - type: TextQuoteSelector
-        exact: "VR.⸺ This is a seat"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ A Mysterie,"
-      - type: TextQuoteSelector
-        exact: "The Table is to"
-      - type: TextQuoteSelector
-        exact: "Vppon this vppermost"
-      - type: TextQuoteSelector
-        exact: "The Table was ſhewed"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ The characters"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ of oyl ſhalbe"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ There is a spirit,"
-      - type: TextQuoteSelector
-        exact: "He is here* now"
-      - type: TextQuoteSelector
-        exact: "Giue him a generall"
-      - type: TextQuoteSelector
-        exact: "He will seke Sauls"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ The Curſed,"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ But Thobias"
-      - type: TextQuoteSelector
-        exact: "VR ⸺ To morrow"
+        exact: "Saterday."
 
   - body:
       type: TextualBody
@@ -193,6 +162,120 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
+        {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "cam to "
+        exact: "my"
+        suffix: " howſe"
+      - type: TextQuoteSelector
+        prefix: "wold haue had "
+        exact: "me"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " truely excuſed"
+      - type: TextQuoteSelector
+        exact: "my ſelf"
+      - type: TextQuoteSelector
+        prefix: "haue help in "
+        exact: "my"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " browght forth"
+      - type: TextQuoteSelector
+        exact: "my"
+        suffix: " stone in the frame"
+      - type: TextQuoteSelector
+        prefix: "was given "
+        exact: "me"
+        suffix: " of"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " sayd vnto"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " was credibly"
+      - type: TextQuoteSelector
+        prefix: "And allſo that "
+        exact: "I"
+      - type: TextQuoteSelector
+        prefix: "stone to "
+        exact: "my"
+        suffix: " owne"
+      - type: TextQuoteSelector
+        prefix: "therefore "
+        exact: "I"
+        suffix: " deſyred"
+      - type: TextQuoteSelector
+        prefix: "for "
+        exact: "I"
+        suffix: " was"
+      - type: TextQuoteSelector
+        prefix: "knees att "
+        exact: "my"
+      - type: TextQuoteSelector
+        prefix: "mean space, "
+        exact: "I"
+      - type: TextQuoteSelector
+        exact: "my"
+        suffix: " Oratory"
+      - type: TextQuoteSelector
+        prefix: "But "
+        exact: "I"
+        suffix: " then cam to"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " required to know"
+      - type: TextQuoteSelector
+        exact: "I, Joh͠n Dee"
+      - type: TextQuoteSelector
+        exact: "my"
+        suffix: " boke"
+      - type: TextQuoteSelector
+        prefix: "give "
+        exact: "me"
+        suffix: " any instructions"
+      - type: TextQuoteSelector
+        prefix: "how "
+        exact: "I"
+        suffix: " may read"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " was told"
+      - type: TextQuoteSelector
+        prefix: "after "
+        exact: "I"
+        suffix: " could read"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " shold Liue"
+      - type: TextQuoteSelector
+        exact: "Thou"
+        suffix: " ſhallt Liue"
+      - type: TextQuoteSelector
+        prefix: "What may "
+        exact: "I"
+      - type: TextQuoteSelector
+        prefix: "muſt "
+        exact: "I"
+        suffix: " do,"
+      - type: TextQuoteSelector
+        prefix: "Oh, "
+        exact: "my"
+        suffix: " great"
+      - type: TextQuoteSelector
+        exact: "tuos"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " {...}ſt{..}"
+      - type: TextQuoteSelector
+        exact: "Δ"
+        suffix: " ⸺"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
         {{ "Kelley, Edward" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
@@ -207,7 +290,7 @@ annotations:
         prefix: "sayd vnto "
         exact: "him"
       - type: TextQuoteSelector
-        prefix: "I deſyred "
+        prefix: "deſyred "
         exact: "him"
       - type: TextQuoteSelector
         exact: "he"
@@ -233,14 +316,11 @@ annotations:
         exact: "he"
         suffix: " still expected"
       - type: TextQuoteSelector
-        prefix: "I then cam to "
+        prefix: "then cam to "
         exact: "him"
       - type: TextQuoteSelector
         prefix: "hearing of "
         exact: ".E.T."
-      - type: TextQuoteSelector
-        prefix: "After that "
-        exact: "M ͬ E.T."
 
   - body:
       type: TextualBody
@@ -255,6 +335,9 @@ annotations:
         exact: "him"
       - type: TextQuoteSelector
         prefix: "( namely "
+        exact: "Anchor"
+      - type: TextQuoteSelector
+        prefix: "Et "
         exact: "Anchor"
 
   - body:
@@ -293,6 +376,10 @@ annotations:
         exact: "his"
         suffix: " name"
       - type: TextQuoteSelector
+        exact: |-2
+          the good
+          Creature
+      - type: TextQuoteSelector
         prefix: "Are "
         exact: "you"
         suffix: " one of them"
@@ -305,9 +392,19 @@ annotations:
         exact: "VR."
         suffix: " ⸺"
       - type: TextQuoteSelector
-        exact: |-2
-          the good
-          Creature
+        prefix: " ⸺ "
+        exact: "I"
+        suffix: " am"
+      - type: TextQuoteSelector
+        prefix: " more beſyde "
+        exact: "you"
+      - type: TextQuoteSelector
+        prefix: " Will "
+        exact: "you"
+        suffix: " give"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " can ⸺"
 
   - body:
       type: TextualBody
@@ -322,47 +419,46 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        <time datetime="1582-03-20T11:15">\1
+        {{ "Michael" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Anno 1582."
+        exact: "Michaël"
+        suffix: " and"
+      - type: TextQuoteSelector
+        exact: "Michaël"
+        suffix: " est princeps"
+      - type: TextQuoteSelector
+        prefix: "But solus "
+        exact: "Michaël"
+      - type: TextQuoteSelector
+        exact: "Michael, that blessed Angel"
+      - type: TextQuoteSelector
+        prefix: "reſp{i}ciunt "
+        exact: "Michaëlem"
+      - type: TextQuoteSelector
+        exact: "Michaël"
+        suffix: " est Angelus"
+      - type: TextQuoteSelector
+        prefix: "enioym{y} of "
+        exact: "Michael"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        <time datetime="1582-03-20T17">\1
+        {{ "Raphael" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "The same Saterday"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
-        \1</time>
-    selectors:
-      - type: TextQuoteSelector
-        exact: "Saterday."
-      - type: TextQuoteSelector
-        exact: "Hora .5."
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
-        <hr>
-    selectors:
-      - type: TextQuoteSelector
-        exact: "* * *"
+        prefix: "and "
+        exact: "Raphaël"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
         <p><img alt='An illustration of the seal described by Uriel'
-                src='{{ "/assets/1582-03-10.1.svg" | relative_url }}'>
+                src='{{ "/assets/1582-03-10.seal.svg" | relative_url }}'>
     selectors:
       - type: TextQuoteSelector
-        exact: |-2
-          enſ{uing} :
+        prefix: "enſ{uing} :"
+        exact: "\n"
