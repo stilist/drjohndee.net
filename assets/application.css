@@ -671,4 +671,12 @@ ol.years > .year {
 .person-avatarInitials:not(lang[he]) {
   font-size: 0.9em;
 }
+
+.is-highlighted {
+  background-color: var(--highlight-background-color);
+  outline: auto;
+  outline-color: var(--highlight-outline-color);
+}
+.person-avatar--is-author .is-highlighted {
+  background-color: var(--highlight-alternate-background-color);
 }

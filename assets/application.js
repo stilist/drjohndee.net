@@ -15,3 +15,37 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+
+'use strict'
+
+function prepareDataRecordHints() {
+  const links = document.querySelectorAll('.data-entity')
+  const activatingEventTypes = [
+    'focus',
+    'pointerenter',
+    'mouseenter',
+  ]
+  const deactivatingEventTypes = [
+    'blur',
+    'pointerleave',
+    'mouseleave',
+  ]
+
+  const handleEvent = (event) => {
+    const target = event.target
+    const allMatches = document.querySelectorAll(`[data-key='${target.dataset.key}']`)
+    const isActivating = activatingEventTypes.includes(event.type)
+    for (let element of allMatches) {
+      element.classList.toggle('is-highlighted', isActivating)
+    }
+  }
+  const eventTypes = activatingEventTypes.concat(deactivatingEventTypes)
+  for (let link of links) {
+    for (let eventType of eventTypes) {
+      link.addEventListener(eventType, handleEvent, {
+        passive: true,
+      })
+    }
+  }
+}
+prepareDataRecordHints()
