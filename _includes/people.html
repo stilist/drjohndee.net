@@ -17,7 +17,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% if include.people_keys -%}
-<ul class='people' aria-label="People in this entry">
+<h3 class="is-assistiveOnly">People in this entry</h3>
+<ul class='people'>
   {% if highlighted_person_key -%}
   {% assign highlighted_person_record = highlighted_person_key | collection_entry: "people" -%}
   <li class='person-avatar person-avatar--is-author'>
