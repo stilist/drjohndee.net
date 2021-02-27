@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
+- Split 1582-03-10’s two sessions into separate files
 
 ### Fixed
 - Code that called the `mla_citation` Liquid filter on date pages was using the incorrect variables for edition and volume
