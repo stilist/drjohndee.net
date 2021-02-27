@@ -42,7 +42,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </span>
   {% endif -%}
 
-  {% assign content_with_annotations = page.timestamp | annotate_content: entry.content -%}
+  {% assign content_with_annotations = entry | annotate_content -%}
   {% assign content_as_html = content_with_annotations | liquify -%}
   <p>{{ content_as_html }}</p>
 </div>

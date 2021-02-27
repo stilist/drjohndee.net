@@ -26,20 +26,28 @@ module HistoricalDiary
     include ::DataCollection
     include LegalYear
 
-    def annotate_content(timestamp, original_content)
-      annotations = @context.registers[:site].data['annotations_by_date'][timestamp]
-      return original_content if annotations.nil?
+    def annotate_content(object)
+      path_segments = object['relative_path'].split(File::SEPARATOR)
+      timestamp = File.basename(path_segments.last, '.md')
+      annotations = @context.registers[:site]
+        .data['annotations']
+        .dig(escape_key(object['source_key']),
+             escape_key(timestamp),
+             'annotations')
+      return object.content if annotations.nil?
 
-      content = original_content.clone
+      content = object.content.clone
 
       # @note This approach is only usable for exact text matches; it would
       #   need to be much more complicated to work with the full Web Annotation
       #   set of selectors.
       annotations.each do |annotation|
-        next if annotation['replacement'].nil?
+        exact_replacement = annotation.dig('body', 'value')
+        next if exact_replacement.nil?
         next if annotation['selectors'].nil?
 
         annotation['selectors'].each do |selector|
+
           prefix = Regexp.escape(selector['prefix']) if selector['prefix']
           exact = "(#{Regexp.escape(selector['exact'])})"
           suffix = Regexp.escape(selector['suffix']) if selector['suffix']
@@ -50,7 +58,7 @@ module HistoricalDiary
           ].compact.join('')
           replacement = [
             selector['prefix'],
-            annotation['replacement'],
+            exact_replacement,
             selector['suffix'],
           ].compact.join('')
 
