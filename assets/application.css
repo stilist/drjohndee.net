@@ -52,14 +52,14 @@
   /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
   --neutral-0--components: 1 1 0.9882;
   --neutral-0: #fffffc;
+  --neutral-5--components: 0.9922 0.9882 0.9804;
+  --neutral-5: #fdfcfa;
   --neutral-10--components: 0.9843 0.9804 0.9725;
   --neutral-10: #fbfaf8;
   --neutral-20--components: 0.9569 0.9529 0.9412;
   --neutral-20: #f4f3f0;
   --neutral-30--components: 0.9137 0.9098 0.9020;
   --neutral-30: #e9e8e6;
-  --neutral-5--components: 0.9922 0.9882 0.9804;
-  --neutral-5: #fdfcfa;
   --neutral-40--components: 0.8510 0.8510 0.8431;
   --neutral-40: #d9d9d7;
   --neutral-50--components: 0.7725 0.7686 0.7608;
@@ -78,6 +78,8 @@
   /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
   --accent-0--components: 1.0000 0.9804 0.9490;
   --accent-0: #fffaf2;
+  --accent-5--components: 0.9961 0.9412 0.8992;
+  --accent-5: #fef0d6;
   --accent-10--components: 0.9922 0.8980 0.7333;
   --accent-10: #fde5bb;
   --accent-20--components: 0.9804 0.8078 0.5255;
@@ -86,8 +88,6 @@
   --accent-30: #f5b657;
   --accent-40--components: 0.9294 0.6157 0.1882;
   --accent-40: #ed9d30;
-  --accent-5--components: 0.9961 0.9412 0.8992;
-  --accent-5: #fef0d6;
   --accent-50--components: 0.8941 0.5098 0.0745;
   --accent-50: #e48213;
   --accent-60--components: 0.8431 0.4000 0;
