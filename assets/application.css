@@ -342,10 +342,16 @@ blockquote::before {
   background-color: var(--blockquote-border-color);
   bottom: 0;
   content: '';
-  inset-inline-start: calc(var(--gutter-width) * -0.5);
+  left: calc(var(--gutter-width) * -0.5);
   position: absolute;
   top: 0;
   width: 4px;
+}
+@supports (inset-inline-start: 0) {
+  blockquote::before {
+    inset-inline-start: calc(var(--gutter-width) * -0.5);
+    left: auto;
+  }
 }
 blockquote > :last-child {
   margin-bottom: 0;
@@ -364,13 +370,20 @@ hr {
   border: 0;
   background-color: var(--foreground);
   height: 1px;
-  inset-inline-start: 50%;
+  left: 50%;
   margin-bottom: calc(var(--vertical-rhythm) * 1.5);
   margin-inline-start: -15%;
   margin-top: calc(var(--vertical-rhythm) * 1.45);
   position: relative;
   width: 30%;
 }
+@supports (inset-inline-start: 0) {
+  hr {
+    inset-inline-start: 50%;
+    left: auto;
+  }
+}
+
 p {
   line-height: var(--content-line-height);
 }
@@ -491,10 +504,16 @@ ol.years > .year {
   display: block;
   border-bottom: 1px solid var(--foreground);
   bottom: calc(var(--vertical-rhythm) * -2.5);
-  inset-inline-start: 50%;
+  left: 50%;
   margin-inline-start: -15%;
   position: absolute;
   width: 30%;
+}
+@supports (inset-inline-start: 0) {
+  .entries::after {
+    inset-inline-start: 50%;
+    left: auto;
+  }
 }
 .entries .entry {
   margin-bottom: 0;
@@ -609,16 +628,16 @@ ol.years > .year {
   cursor: default;
   height: var(--calendar-day-size);
   /* vertically center text */
-  position: relative;
+  line-height: var(--calendar-day-size);
   text-align: center;
   width: var(--calendar-day-size);
 }
 .calendar-date a {
-  height: 100%;
-  inset-inline-start: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  height: var(--calendar-day-size);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: var(--calendar-day-size);
 }
 .calendar-date--filler {
   color: var(--calendar-filler-color);
@@ -652,10 +671,16 @@ ol.years > .year {
 .person-avatar a {
   border: var(--avatar-border-width) solid currentColor;
   display: block;
-  inset-inline-start: calc(var(--avatar-border-width) * -1);
+  left: calc(var(--avatar-border-width) * -1);
   position: absolute;
   text-decoration: none;
   top: calc(var(--avatar-border-width) * -1);
+}
+@supports (inset-inline-start: 0) {
+  .person-avatar a {
+    inset-inline-start: calc(var(--avatar-border-width) * -1);
+    left: auto;
+  }
 }
 .person-avatarInitials {
   align-items: center;
