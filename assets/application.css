@@ -231,7 +231,7 @@
                       + calc(var(--column-count) - 1) * var(--gutter-width));
   --content-grid-rows: auto auto auto auto;
   --content-grid-areas:
-    "header     header     header     header     header     header     header     header     header     header secondary secondary secondary secondary secondary"
+    "header     header     header     header     header     header     header     header     header     header related_links related_links related_links related_links related_links"
     "content    content    content    content    content    content    content    content    content    . secondary secondary secondary secondary secondary"
     "commentary commentary commentary commentary commentary commentary commentary commentary commentary . secondary secondary secondary secondary secondary"
     "context    context    context    context    context    context    context    context    context    . secondary secondary secondary secondary secondary";
@@ -266,6 +266,7 @@
     --column-width: 18.5vw;
     --content-grid-areas:
       "header     header     header     header     header"
+      "related_links    related_links    related_links    related_links    related_links"
       "content    content    content    content    content"
       "secondary  secondary  secondary  secondary  secondary"
       "commentary commentary commentary commentary commentary"
@@ -603,7 +604,9 @@ ol.years > .year {
 .annotations-context {
   grid-area: context;
 }
-.annotations-related_dates,
+.annotations-related_dates {
+  grid-area: related_links;
+}
 .annotations-footnotes {
   grid-area: secondary;
 }
