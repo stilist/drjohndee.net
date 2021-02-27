@@ -577,6 +577,15 @@ ol.years > .year {
   grid-area: secondary;
 }
 
+.source-material em,
+.source-material strong {
+  text-decoration-line: underline;
+  font-style: normal;
+}
+.source-material strong {
+  text-decoration-style: double;
+}
+
 #site-footer {
   margin-top: calc(var(--vertical-rhythm) * 5);
 }

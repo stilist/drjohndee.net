@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `person_initials` Liquid filter that generates a string of graphemes representing the initials of a name
 - Add `person_reference` Liquid filter
 - Add `data_record_tag_attributes` Liquid filter that provides a consistent class name and `data-key` attribute so everything using the `person_reference` and `person_link` filters be connected
+- Add styling for `<em>` and `<strong>`
 
 ### Changed
 - Remove `markdownify` filter from `entry` `include` -- source material is raw text without Markdown formatting
