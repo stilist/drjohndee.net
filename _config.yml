@@ -23,7 +23,7 @@ author:
   key: "Cole, Jordan"
   email: feedback@drjohndee.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Dr Dee’s life, presented with context, from source materials.
+  Dr Dee’s life and writings, presented with context, from source materials.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.drjohndee.net" # the base hostname & protocol for your site, e.g. http://example.com
 
