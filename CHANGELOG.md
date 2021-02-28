@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Provide a message for placeholder entries
 - A few entries are copied in another hand -- add those page numbers to the relevant source files
 - Initial transcript of 1582-03-21 entries
-- Tag all source material related to Bartholomew Hickman
+- Tag all source material related to Bartholomew Hickman, Jane Dee, Edward Kelley, Jane Kelley, and Thomas Kelley
 - Add `dates_for_person` Liquid filter and display related dates on person page
 - Add `date_to_url` Liquid filter for converting Ruby `Date` and `DateTime` objects to URLs to dates
 
