@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% if include.people_keys -%}
+{% assign highlighted_person_key = include.highlighted_person_key | escape_data_key -%}
 <h3 class="is-assistiveOnly">People in this entry</h3>
 <ul class='people'>
   {% if highlighted_person_key -%}

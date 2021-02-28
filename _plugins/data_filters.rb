@@ -97,6 +97,10 @@ module HistoricalDiary
       date.strftime('/%Y/%m/%d.html')
     end
 
+    def escape_data_key(key)
+      escape_key(key)
+    end
+
     def get_author_key(object, edition_key=nil, volume_key=nil)
       return object['author_key'] if object.key?('author_key')
 
