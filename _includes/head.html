@@ -19,6 +19,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <head>
   <meta charset=utf-8>
   <link rel=icon href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  {% if site.google_site_verification_key -%}
+  <meta name="google-site-verification" content="{{ site.google_site_verification_key }}">
+  {% endif -%}
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel=stylesheet href="{{ "/assets/application.css" | relative_url }}">
 

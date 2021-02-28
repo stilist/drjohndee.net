@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust person pages to display aliases and birth names
 - Adjust markup/CSS to handle long lists of related dates
 - Add `robots.txt` to advertise sitemap
+- Add `<meta>` tag for Google site verification
 
 ### Fixed
 - Safari 14 doesn’t support the [`inset-inline-start` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/inset-inline-start) -- use `left` by default, and switch to `inset-inline-start` when available. Note that this means the layout is *not* fully RTL-compatible in Safari unless `right` rules are added to compensate for reversed layout.

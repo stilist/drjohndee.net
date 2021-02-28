@@ -40,6 +40,7 @@ plugins:
   - jekyll-sitemap
 
 # for page metadata
+google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
 twitter:
   username: stilist
 
