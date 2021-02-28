@@ -102,6 +102,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </div>
   {% endif -%}
 
+  {% assign commentary_keys = page.timestamp | commentary_for_date -%}
+  {% include transcludes.html keys=commentary_keys collection="commentary" -%}
+
   <section class='secondary'>
     {% if related_dates.size > 0 -%}
     <aside class="annotations annotations-related_dates">
@@ -123,9 +126,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
     {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}
   </section>
-
-  {% assign commentary_keys = page.timestamp | commentary_for_date -%}
-  {% include transcludes.html keys=commentary_keys collection="commentary" -%}
 
   {% assign context_keys = page.timestamp | context_for_date -%}
   {% include transcludes.html keys=context_keys collection="context" -%}
