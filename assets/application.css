@@ -105,7 +105,7 @@
   --blockquote-border-color: var(--neutral-40);
   --blockquote-content-color: var(--neutral-80);
   --calendar-filler-color: var(--neutral-80);
-  --calendar-highlight-color: var(--accent-20);
+  --calendar-highlight-color: var(--accent-10);
   --foreground: var(--neutral-100);
   --link-color: var(--accent-80);
   --link-focus-color: var(--accent-60);
@@ -184,7 +184,7 @@
     --blockquote-border-color: var(--neutral-80);
     --blockquote-content-color: var(--neutral-40);
     --calendar-filler-color: var(--neutral-70);
-    --calendar-highlight-color: var(--accent-80);
+    --calendar-highlight-color: var(--accent-90);
     --foreground: var(--neutral-0);
     --link-color: var(--accent-30);
     --link-focus-color: var(--accent-10);

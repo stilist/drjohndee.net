@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Person page and source page now use `<h2>` and `<h3>` for proper hierarchy (reported by Bing)
 - Fix bug with logic for removing entry author from list of related people
 - Dates with content on year page were being marked as `aria-hidden`
+- Reduce intensity of 'content'-indicating background-color on calendar to fix constrast issue
 
 ## [1.0.6] - 2021-02-26
 ### Added
