@@ -1,0 +1,25 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name:
+  givenName: Daniel
+  surnamePrefix: van der
+  familyName: Meulen
+
+full_name:
+  - text: Daniel
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q14516546"
+  - text: van der
+    type: "https://w3id.org/pnv#surnamePrefix"
+    id: "https://www.wikidata.org/entity/Q1258618"
+  - text: Meulen
+    type: familyName
+    id: "http://www.wikidata.org/entity/Q25126061"
+birth_date: "1554-10-25"
+# @see https://www.jessesadler.com/project/dvdm-correspondence/
+death_date: "1600"
