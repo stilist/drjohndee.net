@@ -41,13 +41,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <meta itemprop=inLanguage content="{{ work.language }}">
     {% endif -%}
 
-    <h1 class="page-name"
+    <h2 class="page-name"
         itemprop=name>
       {{ work.name }}
-    </h1>
+    </h2>
 
     {% if work.author_key or work.editor_key -%}
-    <h2 class="page-subtitle">
+    <h3 class="page-subtitle">
       {% if work.author_key -%}
       {% include person_data.html person_key=work.author_key itemprop="author" -%}
       Written by {% include person_link.html person_key=work.author_key -%}
@@ -63,7 +63,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% include person_data.html person_key=work.editor_key itemprop="editor" -%}
       by {% include person_link.html person_key=work.editor_key -%}
       {% endif -%}
-    </h2>
+    </h3>
     {% endif -%}
   </header>
 
