@@ -17,7 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `date_to_url` Liquid filter for converting Ruby `Date` and `DateTime` objects to URLs to dates
 - Adjust person pages to display aliases and birth names
 - Adjust markup/CSS to handle long lists of related dates
-- Add `robots.txt` to advertise sitemap
 - Add `<meta>` tag for Google site verification
 
 ### Fixed
