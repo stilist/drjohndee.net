@@ -55,8 +55,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% if site.title -%}
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <title>
-    {% if page.url != "/" -%}
-    {{ page.title | escape }} ·
+    {% if page.url != "/" and page.title -%}
+    {{ page.title | escape }} -
     {% endif -%}
     {{ site.title | escape }}
   </title>

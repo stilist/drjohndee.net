@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Generation `destination` is now `_site.nosync` -- `.nosync` prevents iCloud from syncing files
 - Render commentary markup before related dates & footnotes
 - Use shorter titles for year & date pages
+- Use `-` instead of `·` in page title, to improve screenreader experience
 
 ### Fixed
 - Safari 14 doesn’t support the [`inset-inline-start` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/inset-inline-start) -- use `left` by default, and switch to `inset-inline-start` when available. Note that this means the layout is *not* fully RTL-compatible in Safari unless `right` rules are added to compensate for reversed layout.
