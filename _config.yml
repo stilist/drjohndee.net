@@ -34,6 +34,7 @@ license_key: "CC BY-SA 4.0"
 subject_person_key: "Dee, John"
 
 # Build settings
+destination: _site.nosync # `.nosync` prevents iCloud from syncing files
 markdown: kramdown
 plugins:
   - jekyll-feed
