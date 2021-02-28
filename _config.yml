@@ -30,8 +30,18 @@ url: "https://www.drjohndee.net" # the base hostname & protocol for your site, e
 lang: en-US
 
 doi: "10.5281/zenodo.4511512"
+icon_name: heiroglyph
+icon_sizes:
+  - 16
+  - 32
+  - 64
+  - 96
+  - 128
+  - 192
 license_key: "CC BY-SA 4.0"
 subject_person_key: "Dee, John"
+# --accent-60
+theme_color: "#d76600"
 
 # Build settings
 destination: _site.nosync # `.nosync` prevents iCloud from syncing files

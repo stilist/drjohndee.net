@@ -18,12 +18,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 <head>
   <meta charset=utf-8>
+
+  {% if site.icon_sizes and site.icon_name -%}
+  {% for size in site.icon_sizes -%}
+  {% capture icon_path %}/assets/{{ site.icon_name }}{{ size }}.png{% endcapture -%}
+  <link rel="icon" sizes="{{ size }}x{{ size }}" href="{{ icon_path | relative_url }}">
+  {% endfor -%}
+  {% else -%}
+  {% comment -%}
+  1x1 transparent GIF
+  {% endcomment -%}
   <link rel=icon href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  {% endif -%}
+
   {% if site.google_site_verification_key -%}
   <meta name="google-site-verification" content="{{ site.google_site_verification_key }}">
   {% endif -%}
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel=stylesheet href="{{ "/assets/application.css" | relative_url }}">
+  {% if site.theme_color -%}
+  <meta name="theme-color" content="{{ site.theme_color }}">
+  {% endif -%}
 
   {% assign author_key = page.author_key | default: site.author.key -%}
   <meta name="author" content="{{ author_key | person_name }}">

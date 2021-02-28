@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust person pages to display aliases and birth names
 - Adjust markup/CSS to handle long lists of related dates
 - Add `<meta>` tag for Google site verification
+- Add website icon
+- Set `theme-color` for whatever happens to support it 🤷
 
 ### Changed
 - Generation `destination` is now `_site.nosync` -- `.nosync` prevents iCloud from syncing files
