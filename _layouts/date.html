@@ -35,7 +35,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% assign year = page.date | date: '%Y' -%}
         {% assign month = page.date | date: '%m' -%}
         {% assign day = page.date | date: '%d' -%}
-        <a href="{{ year | relative_url }}">{{ year }}</a>-{{ month }}-{{ day }}
+        <a href="{{ year | relative_url }}.html">{{ year }}</a>-{{ month }}-{{ day }}
       </time>
     </h2>
 

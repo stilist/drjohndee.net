@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix bug with logic for removing entry author from list of related people
 - Dates with content on year page were being marked as `aria-hidden`
 - Reduce intensity of 'content'-indicating background-color on calendar to fix constrast issue
+- Year-page link on date page was incorrect
 
 ## [1.0.6] - 2021-02-26
 ### Added
