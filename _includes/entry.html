@@ -44,7 +44,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   {% assign content_with_annotations = entry | annotate_content -%}
   {% assign content_as_html = content_with_annotations | liquify -%}
+  {% if content_as_html == "" -%}
+  <p class='missing-content'>This entry’s text has not been entered yet.</p>
+  {% else -%}
   <p>{{ content_as_html }}</p>
+  {% endif -%}
 </div>
 
 <span class="citation"

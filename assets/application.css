@@ -546,7 +546,8 @@ ol.years > .year {
   max-width: var(--image-width);
 }
 
-.consecration {
+.consecration,
+.missing-content {
   text-align: center;
 }
 .correspondence-signature {

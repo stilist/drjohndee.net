@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Set `class` and `data-key` attributes on ‘Ibid.’ citations
 - Annotations for 1582-03-11 entry
+- Add placeholder files for all other dates in Sloane MS 3188
+- Provide a message for placeholder entries
 - A few entries are copied in another hand -- add those page numbers to the relevant source files
 
 ### Fixed
