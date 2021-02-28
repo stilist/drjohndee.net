@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Safari 14 doesn’t support the [`inset-inline-start` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/inset-inline-start) -- use `left` by default, and switch to `inset-inline-start` when available. Note that this means the layout is *not* fully RTL-compatible in Safari unless `right` rules are added to compensate for reversed layout.
 - Person page and source page now use `<h2>` and `<h3>` for proper hierarchy (reported by Bing)
 - Fix bug with logic for removing entry author from list of related people
+- Dates with content on year page were being marked as `aria-hidden`
 
 ## [1.0.6] - 2021-02-26
 ### Added

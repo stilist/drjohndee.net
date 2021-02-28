@@ -78,6 +78,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {% if day.day_of_week == 0-%}<tr>{% endif -%}
           {% if day.type == "no-content" or day.type == "filler" -%}
           {% assign aria = "aria-hidden='true'" -%}
+          {% else -%}
+          {% assign aria = "" -%}
           {% endif -%}
           <td class="calendar-date calendar-date--{{ day.type }}" {{ aria }}>
             {% if day.type == "content" -%}
