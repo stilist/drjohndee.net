@@ -36,12 +36,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta itemprop=license content="{{ site.license_key | license_url }}">
   {% endif -%}
 
-  {% if record.name_is_rtl -%}
-  {% assign text_direction = "rtl" -%}
-  {% else -%}
-  {% assign text_direction = "ltr" -%}
-  {% endif -%}
   <header class="page-header">
+    {% if record.name_is_rtl -%}
+    {% assign text_direction = "rtl" -%}
+    {% else -%}
+    {% assign text_direction = "ltr" -%}
+    {% endif -%}
     <h2 class="page-name"
         lang="{{ record.name_language }}" translate
         dir={{ text_direction }}>
