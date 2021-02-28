@@ -25,9 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <link rel="icon" sizes="{{ size }}x{{ size }}" href="{{ icon_path | relative_url }}">
   {% endfor -%}
   {% else -%}
-  {% comment -%}
-  1x1 transparent GIF
-  {% endcomment -%}
+  {% comment %}1x1 transparent GIF{% endcomment -%}
   <link rel=icon href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
   {% endif -%}
 
