@@ -249,12 +249,16 @@ module HistoricalDiary
     #   internationalization, as some cultures (like Chinese and Hungarian)
     #   prefer the family name first, and others (like Australian and Spanish).
     #   It's not a substitute for proper internationalization support, though.
-    def person_name(key)
+    def person_name(key, name_key = 'presentational_name')
       return '' if key.nil?
 
       record = person_data(key)
       return '' if record.nil?
-      record['presentational_name'].values.join(' ')
+
+      parts = record[name_key]&.values
+      return '' if parts.nil?
+
+      parts.join(' ')
     end
 
     def person_reference(key, display_text)

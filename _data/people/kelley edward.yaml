@@ -6,6 +6,9 @@
 # details.
 
 id: "https://www.wikidata.org/entity/Q127080"
+alias:
+  givenName: Edward
+  familyName: Talbot
 presentational_name:
   givenName: Edward
   familyName: Kelley

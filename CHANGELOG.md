@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tag all source material related to Bartholomew Hickman, Jane Dee, Edward Kelley, Jane Kelley, and Thomas Kelley
 - Add `dates_for_person` Liquid filter and display related dates on person page
 - Add `date_to_url` Liquid filter for converting Ruby `Date` and `DateTime` objects to URLs to dates
+- Adjust person pages to display aliases and birth names
+- Adjust markup/CSS to handle long lists of related dates
 
 ### Fixed
 - Safari 14 doesn’t support the [`inset-inline-start` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/inset-inline-start) -- use `left` by default, and switch to `inset-inline-start` when available. Note that this means the layout is *not* fully RTL-compatible in Safari unless `right` rules are added to compensate for reversed layout.

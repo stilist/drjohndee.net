@@ -102,24 +102,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </div>
   {% endif -%}
 
-  {% if related_dates.size > 0 -%}
-  <aside class="annotations annotations-related_dates">
-    <h3>Related dates</h3>
-    <ul class="annotation-content">
-      {% for related_date in related_dates -%}
-      <li>
-        {% assign date_path = related_date | split: '-' | join: '/' -%}
-        <a href="{{ date_path | relative_url }}.html">
-          <time datetime="{{ related_date }}">{{ related_date }}</time>
-        </a>
-      {% endfor -%}
-    </ul>
-  </aside>
-  {% endif -%}
+  <section class='secondary'>
+    {% if related_dates.size > 0 -%}
+    <aside class="annotations annotations-related_dates">
+      <h3>Related dates</h3>
+      <ul class="annotation-content">
+        {% for related_date in related_dates -%}
+        <li>
+          {% assign date_path = related_date | split: '-' | join: '/' -%}
+          <a href="{{ date_path | relative_url }}.html">
+            <time datetime="{{ related_date }}">{{ related_date }}</time>
+          </a>
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
 
-  {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
-  {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
-  {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}
+    {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
+    {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
+    {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}
+  </section>
 
   {% assign commentary_keys = page.timestamp | commentary_for_date -%}
   {% include transcludes.html keys=commentary_keys collection="commentary" -%}

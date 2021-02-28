@@ -231,10 +231,10 @@
                       + calc(var(--column-count) - 1) * var(--gutter-width));
   --content-grid-rows: auto auto auto auto;
   --content-grid-areas:
-    "header     header     header     header     header     header     header     header     header     header related_links related_links related_links related_links related_links"
-    "content    content    content    content    content    content    content    content    content    . secondary secondary secondary secondary secondary"
-    "commentary commentary commentary commentary commentary commentary commentary commentary commentary . secondary secondary secondary secondary secondary"
-    "context    context    context    context    context    context    context    context    context    . secondary secondary secondary secondary secondary";
+    "header     header     header     header     header     header     header     header     header     header secondary secondary secondary secondary secondary"
+    "content    content    content    content    content    content    content    content    content       .   secondary secondary secondary secondary secondary"
+    "commentary commentary commentary commentary commentary commentary commentary commentary commentary    .   secondary secondary secondary secondary secondary"
+    "context    context    context    context    context    context    context    context    context       .   secondary secondary secondary secondary secondary";
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
 
@@ -266,7 +266,6 @@
     --column-width: 18.5vw;
     --content-grid-areas:
       "header     header     header     header     header"
-      "related_links    related_links    related_links    related_links    related_links"
       "content    content    content    content    content"
       "secondary  secondary  secondary  secondary  secondary"
       "commentary commentary commentary commentary commentary"
@@ -579,6 +578,10 @@ ol.years > .year {
   line-height: calc(var(--vertical-rhythm) * 2);
 }
 
+.secondary {
+  grid-area: secondary;
+}
+
 .annotations h1 {
   line-height: calc(var(--vertical-rhythm) * 1.9);
   margin-bottom: calc(var(--vertical-rhythm) * 2);
@@ -726,4 +729,15 @@ ol.years > .year {
 }
 .person-avatar--is-author .is-highlighted {
   background-color: var(--highlight-alternate-background-color);
+}
+
+.source-material .data-entity,
+.source-material span[lang],
+.source-material em,
+.source-material sup,
+.source-material ins,
+.source-material del,
+.source-material time,
+.source-material strong {
+  background-color: #f0c2;
 }

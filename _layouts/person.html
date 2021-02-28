@@ -46,6 +46,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         lang="{{ record.name_language }}" translate
         dir={{ text_direction }}>
       {{ page.person_key | person_name }}
+      {% if record.alias -%}
+      alias {{ page.person_key | person_name: "alias" }}
+      {% endif -%}
+      {% if record.birth_name -%}
+      (born {{ page.person_key | person_name: "birth_name" }})
+      {% endif -%}
     </h1>
 
     {% if record.birth_date or record.death_date -%}
@@ -55,21 +61,23 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   </header>
 
-  {% assign related_dates = page.person_key | dates_for_person -%}
-  {% if related_dates.size > 0 -%}
-  <aside class="annotations annotations-related_dates">
-    <h3>Related dates</h3>
-    <ul class="annotation-content">
-      {% for related_date in related_dates -%}
-      <li>
-        <a href="{{ related_date | date_to_url | relative_url }}">
-          {{ related_date | date: "%F" }}
-        </a>
-      </li>
-      {% endfor -%}
-    </ul>
-  </aside>
-  {% endif -%}
+  <section class='secondary'>
+    {% assign related_dates = page.person_key | dates_for_person -%}
+    {% if related_dates.size > 0 -%}
+    <aside class="annotations annotations-related_dates">
+      <h3>Related dates</h3>
+      <ul class="annotation-content">
+        {% for related_date in related_dates -%}
+        <li>
+          <a href="{{ related_date | date_to_url | relative_url }}">
+            {{ related_date | date: "%F" }}
+          </a>
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+  </section>
 
   {% capture timestamps %}{{ record.birth_date }} {{ record.death_date }}{% endcapture %}
   {% assign person_timestamp = timestamps | split: " " | join: "/" -%}
