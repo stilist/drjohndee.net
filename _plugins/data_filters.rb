@@ -85,6 +85,18 @@ module HistoricalDiary
       transclusions_for_timestamp('context', timestamp)
     end
 
+    def dates_for_person(key)
+      dates = @context.registers[:site]
+        .data['dates_for_people'][key]
+      return [] if dates.nil?
+      dates.uniq.sort
+    end
+
+    def date_to_url(date)
+      # @see `HistoricalDiary::DayPage`
+      date.strftime('/%Y/%m/%d.html')
+    end
+
     def get_author_key(object, edition_key=nil, volume_key=nil)
       return object['author_key'] if object.key?('author_key')
 
