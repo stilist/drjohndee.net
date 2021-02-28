@@ -73,7 +73,7 @@ module HistoricalDiary
       data['date'] = calendar_year_start
       data['last_modified_at'] = DateTime.now.to_date
       data['legal_year_dates'] = months.to_h
-      data['title'] = "Events and writings for #{year}"
+      data['title'] = year
       data['year'] = year
 
       # Generate 13 full months, though ultimately a month of it will be
@@ -132,7 +132,7 @@ module HistoricalDiary
       data['last_modified_at'] = DateTime.now.to_date
       timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
-      data['title'] = "Events and writings for #{timestamp}"
+      data['title'] = timestamp
 
       data.default_proc = proc do |_, key|
         site.frontmatter_defaults.find(relative_path, :day, key)
