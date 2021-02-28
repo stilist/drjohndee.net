@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add placeholder files for all other dates in Sloane MS 3188
 - Provide a message for placeholder entries
 - A few entries are copied in another hand -- add those page numbers to the relevant source files
+- Initial transcript of 1582-03-21 entries
 
 ### Fixed
 - Safari 14 doesn’t support the [`inset-inline-start` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/inset-inline-start) -- use `left` by default, and switch to `inset-inline-start` when available. Note that this means the layout is *not* fully RTL-compatible in Safari unless `right` rules are added to compensate for reversed layout.
