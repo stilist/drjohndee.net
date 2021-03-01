@@ -183,7 +183,8 @@ module HistoricalDiary
       # Tagging this as an actual date improves the screenreader experience.
       publication_date = volume['date'] || edition['date']
       if publication_date
-        publication_date = "<time datetime='#{publication_date}'>#{publication_date}</time>"
+        year = publication_date.match(/\d{4}/)
+        publication_date = "<time datetime='#{publication_date}'>#{year}</time>"
       end
 
       publishing_info = [

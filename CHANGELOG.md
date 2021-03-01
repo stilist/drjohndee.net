@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Year-page link on date page was incorrect
 - Handle case that `exact` selector is missing or empty
 - Handle case that `mla_citation` is given an empty `location`
+- Hnadle case that publication date is a full date, not just a year
 
 ## [1.0.6] - 2021-02-26
 ### Added
