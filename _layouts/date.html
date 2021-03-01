@@ -29,14 +29,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <h2 class="page-name p-name"
         itemprop="name">
       <meta itemprop=headline content="{{ page.title }}">
+      <meta itemprop=datePublished content="{{ page.timestamp }}">
+
+      {% assign year = page.date | date: '%Y' -%}
+      {% assign month = page.date | date: '%B' -%}
+      {% assign day = page.date | date: '%d' -%}
+
       <time class="dt-published"
-            datetime="{{ page.timestamp }}"
-            itemprop=datePublished>
-        {% assign year = page.date | date: '%Y' -%}
-        {% assign month = page.date | date: '%m' -%}
-        {% assign day = page.date | date: '%d' -%}
-        <a href="{{ year | relative_url }}.html">{{ year }}</a>-{{ month }}-{{ day }}
+            datetime="{{ page.timestamp }}">
+        {{ day }} {{ month }}
       </time>
+      <a href="{{ year | relative_url }}.html">
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>{{ year }}</span>
+        <span class="is-assistiveOnly">
+          View all entries from
+          <time datetime="{{ year }}">{{ year }}</time>
+        </span>
+      </a>
     </h2>
 
     {% if page.next or page.previous -%}
