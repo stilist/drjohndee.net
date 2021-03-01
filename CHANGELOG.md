@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reduce intensity of 'content'-indicating background-color on calendar to fix constrast issue
 - Year-page link on date page was incorrect
 - Handle case that `exact` selector is missing or empty
+- Handle case that `mla_citation` is given an empty `location`
 
 ## [1.0.6] - 2021-02-26
 ### Added

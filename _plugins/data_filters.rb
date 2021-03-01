@@ -190,7 +190,7 @@ module HistoricalDiary
         volume['city'] || edition['city'],
         volume['publisher'] || edition['publisher'],
         publication_date,
-        location.sub('-', '–'),
+        location&.sub('-', '–'),
       ].compact.join(', ')
       publishing_info[0] = publishing_info[0].capitalize
 
