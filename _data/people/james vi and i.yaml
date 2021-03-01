@@ -1,0 +1,30 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q79972"
+presentational_name:
+  givenName: James
+  additionalName: ⅤⅠ and Ⅰ
+full_name:
+  - text: James
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q677191"
+  - text: Charles
+    type: givenName
+    id: "https://www.wikidata.org/entity/"
+  - text: Stuart
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q23041619"
+  - text: ⅤⅠ and Ⅰ
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: King of Great Britain and Ireland
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+calendar: "Julian"
+birth_date: "1566-06-19"
+death_date: "1625-03-27"

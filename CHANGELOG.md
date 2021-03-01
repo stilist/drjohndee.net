@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add website icon
 - Set `theme-color` for whatever happens to support it 🤷
 - Add `escape_data_key` Liquid filter that wraps `DataCollection#escape_key`
+- Add letter from John Dee to King James on 1604-06-05
 
 ### Changed
 - Generation `destination` is now `_site.nosync` -- `.nosync` prevents iCloud from syncing files

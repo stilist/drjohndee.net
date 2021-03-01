@@ -1,0 +1,20 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Dee, John"
+  language: "en-emodeng"
+  license_key: "CC0 1.0"
+  name: >-
+    Assorted works of John Dee, not otherwise collected
+editions:
+  "king james letter":
+    date: "1604-06-05"
+    name: >-
+      To the Kings Most Excellent Maiestie
+    type: Book
+    url: "http://explore.bl.uk/BLVU1:LSCOP-ALL:BLL01000891143"
