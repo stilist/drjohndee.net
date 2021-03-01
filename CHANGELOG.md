@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dates with content on year page were being marked as `aria-hidden`
 - Reduce intensity of 'content'-indicating background-color on calendar to fix constrast issue
 - Year-page link on date page was incorrect
+- Handle case that `exact` selector is missing or empty
 
 ## [1.0.6] - 2021-02-26
 ### Added

@@ -47,6 +47,11 @@ module HistoricalDiary
         next if annotation['selectors'].nil?
 
         annotation['selectors'].each do |selector|
+          if selector['exact'].nil? || selector['exact'] == ''
+            Jekyll.logger.warn("Bad annotation data for #{object.relative_path}")
+            Jekyll.logger.info(selector.inspect)
+            next
+          end
 
           prefix = Regexp.escape(selector['prefix']) if selector['prefix']
           exact = "(#{Regexp.escape(selector['exact'])})"
