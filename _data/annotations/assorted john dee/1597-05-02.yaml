@@ -1,0 +1,121 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <p class='correspondence-signature'>\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Your wurſhips"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1<br>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "homely a ſute ."
+      - type: TextQuoteSelector
+        exact: "Your wurſhips ſincere"
+      - type: TextQuoteSelector
+        exact: "Wellwiller in Chriſte"
+      - type: TextQuoteSelector
+        exact: "John Dee⁂"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <del>\1</del>
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "‹"
+        exact: "by"
+        suffix: "›"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1597-05-02">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Maÿ 5"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1597-05-04T09/10Z">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "on Wenſday"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "of the clok"
+      - type: TextQuoteSelector
+        exact: "1597."
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "my"
+        suffix: " deſire"
+      - type: TextQuoteSelector
+        exact: "My"
+        suffix: " neighbors"
+      - type: TextQuoteSelector
+        exact: "me"
+        suffix: " sufficiently"
+      - type: TextQuoteSelector
+        exact: "I"
+        suffix: " dowt"
+      - type: TextQuoteSelector
+        prefix: "Pardon "
+        exact: "my"
+      - type: TextQuoteSelector
+        exact: "John Dee"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Langley, William" | person_reference: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Wurſhipfull Mr Langley"
+      - type: TextQuoteSelector
+        prefix: "certifie "
+        exact: "you"
+      - type: TextQuoteSelector
+        exact: "your"
+        suffix: " pariſh"
+      - type: TextQuoteSelector
+        exact: "your wurſhip"
+      - type: TextQuoteSelector
+        exact: "You"
+        suffix: " vnderſtand"
+      - type: TextQuoteSelector
+        prefix: "borde "
+        exact: "you"
+      - type: TextQuoteSelector
+        exact: "Your wurſhips"
