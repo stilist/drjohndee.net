@@ -7,15 +7,19 @@
 
 id: "https://www.wikidata.org/entity/Q79972"
 presentational_name:
+  jobTitle: King
   givenName: James
   additionalName: ⅤⅠ and Ⅰ
 full_name:
+  - text: King
+    type: jobTitle
+    id: "https://www.wikidata.org/entity/Q116"
   - text: James
     type: givenName
     id: "https://www.wikidata.org/entity/Q677191"
   - text: Charles
     type: givenName
-    id: "https://www.wikidata.org/entity/"
+    id: "https://www.wikidata.org/entity/Q2958359"
   - text: Stuart
     type: familyName
     id: "https://www.wikidata.org/entity/Q23041619"
