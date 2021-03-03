@@ -120,7 +120,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <aside class="annotations annotations-related_dates">
       <h3>Related dates</h3>
       <ul class="annotation-content">
-        {% for related_date in related_dates -%}
+        {% assign unique_related_dates = related_dates | uniq -%}
+        {% for related_date in unique_related_dates -%}
         <li>
           {% assign date_path = related_date | split: '-' | join: '/' -%}
           <a href="{{ date_path | relative_url }}.html">
