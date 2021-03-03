@@ -86,6 +86,16 @@ module HistoricalDiary
       transclusions_for_timestamp('commentary', timestamp)
     end
 
+    def commentary_keys_for_year(year)
+      legal_year_timestamp = [
+        legal_year_start(year),
+        legal_year_end(year),
+      ].map { |timestamp| timestamp.strftime('%F') }
+        .join('/')
+
+      commentary_for_date(legal_year_timestamp)
+    end
+
     def context_for_date(timestamp)
       transclusions_for_timestamp('context', timestamp)
     end

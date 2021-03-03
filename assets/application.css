@@ -238,7 +238,10 @@
 
   --vertical-rhythm: calc(var(--gutter-width) * 2);
 
+  --calendar-column-count: 10;
   --calendar-month-column-count: 3;
+  --calendar-gap: calc(calc(var(--column-width) / 4)
+                     + calc(var(--gutter-width) * 2));
   --calendar-month-width: calc(var(--calendar-month-column-count) * var(--column-width)
                              + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
   /* one week per row; used as both width and height to make cells square */
@@ -558,8 +561,8 @@ ol.years > .year {
   line-height: 1.6rem;
   margin-bottom: calc(var(--vertical-rhythm) * 1.2);
 }
-.page-content--is-fullWidth {
-  grid-column: span var(--column-count);
+.page-content--isCalendarYear {
+  grid-column: span var(--calendar-column-count);
 }
 .page-content .e-content {
   font-size: 1.3rem;
@@ -633,8 +636,7 @@ ol.years > .year {
 
 .calendar {
   display: flex;
-  gap: calc(var(--column-width)
-          + calc(var(--gutter-width) * 2));
+  gap: var(--calendar-gap);
   flex-wrap: wrap;
   list-style: none;
   justify-content: flex-start;

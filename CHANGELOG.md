@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Letter from John Dee to William Langley on 1597-05-02
+- Display commentary on year pages
 
 ### Fixed
 - Filter out duplicate related dates

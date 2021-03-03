@@ -24,7 +24,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <h2 class="page-name p-name"
         itemprop="name">
       <meta itemprop=headline content="{{ page.title }}">
-      <time aria-label="{{ page.title }}">{{ page.year }}</time>
+      <time datetime="{{ page.year }}">{{ page.year }}</time>
     </h2>
 
     {% if page.next or page.previous -%}
@@ -50,9 +50,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   </header>
 
-  <section class="page-content page-content--is-fullWidth">
+  <section class="page-content page-content--isCalendarYear">
     <ol class="calendar">
-      {% for month_hash in page.legal_year_dates -%}
+      {% for month_hash in page.expanded_legal_year_dates -%}
       <li class="calendar-month">
         {% assign month_data = month_hash | last -%}
 
@@ -99,4 +99,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endfor -%}
     </ol>
   </section>
+
+  {% assign commentary_keys = page.year | commentary_keys_for_year -%}
+  {% if commentary_keys.size > 0 -%}
+  <section class='secondary'>
+    {% include transcludes.html keys=commentary_keys collection="commentary" -%}
+  </section>
+  {% endif -%}
 </article>
