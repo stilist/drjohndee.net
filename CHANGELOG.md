@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Filter out duplicate related dates
+- Handle case that no publication information is available in the `mla_citation` Liquid filter
 
 ## [1.0.7] - 2021-02-28
 ### Added

@@ -203,7 +203,7 @@ module HistoricalDiary
         publication_date,
         location&.sub('-', '–'),
       ].compact.join(', ')
-      publishing_info[0] = publishing_info[0].capitalize
+      publishing_info[0] = publishing_info[0].capitalize if publishing_info.length > 0
 
       source_name = volume['name'] || edition['name'] || work['name']
       output = [
