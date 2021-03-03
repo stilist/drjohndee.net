@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Letter from John Dee to William Langley on 1597-05-02
 - Display commentary on year pages
 - Add two days from Casaubon’s ‘True and Faithful Relation’
+- Tag entries for Olbracht Łaski
 
 ### Changed
 - Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
