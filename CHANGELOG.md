@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Letter from John Dee to William Langley on 1597-05-02
 - Display commentary on year pages
 
+### Changed
+- Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
+
 ### Fixed
 - Filter out duplicate related dates
 - Handle case that no publication information is available in the `mla_citation` Liquid filter

@@ -72,15 +72,15 @@ module HistoricalDiary
       calendar_year_start = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
       data['date'] = calendar_year_start
       data['last_modified_at'] = DateTime.now.to_date
-      data['legal_year_dates'] = months.to_h
+      data['expanded_legal_year_dates'] = months.to_h
       data['title'] = year
       data['year'] = year
 
       # Generate 13 full months, though ultimately a month of it will be
       # considered 'filler'.
-      legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
+      expanded_legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
       next_calendar_year = DateTime.iso8601("#{year + 1}-01-01", ::Date::ENGLAND)
-      TimestampRange.new(legal_year_timestamp).dates.each do |date|
+      TimestampRange.new(expanded_legal_year_timestamp).dates.each do |date|
         calendar_timestamp = date.strftime('%F')
 
         month = date.strftime('%m')
@@ -94,7 +94,7 @@ module HistoricalDiary
         month_number = if date < next_calendar_year then date.month
                        else date.month + 12
                        end
-        data['legal_year_dates'][month_number]['days'] << {
+        data['expanded_legal_year_dates'][month_number]['days'] << {
           'day_number' => date.day,
           # used to inject `<tr>` / `</tr>` for week rows
           'day_of_week' => date.strftime('%w').to_i,
