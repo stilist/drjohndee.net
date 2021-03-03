@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Filter out duplicate related dates
 - Handle case that no publication information is available in the `mla_citation` Liquid filter
 
+### Removed
+- Remove code that generated date pages if only commentary was available -- this is now handled in a better way by rendering the commentary on the year page
+
 ## [1.0.7] - 2021-02-28
 ### Added
 - Set `class` and `data-key` attributes on ‘Ibid.’ citations

@@ -167,12 +167,6 @@ module HistoricalDiary
         pages_by_timestamp[timestamp][source_key] = document
       end
 
-      # Some days may have commentary but nosource material: for example, the
-      # dates covered in Dee's Compendious Rehearsall.
-      @site.data['commentary'].values.map(&:keys).flatten.each do |timestamp|
-        pages_by_timestamp[timestamp] ||= {}
-      end
-
       dates_for_people = {}
       pages_by_timestamp.each do |timestamp, documents|
         timestamp_range = TimestampRange.new(timestamp)
