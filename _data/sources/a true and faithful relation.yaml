@@ -1,0 +1,33 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Casaubon, Meric"
+  language: "en-emodeng"
+  license_key: "CC0 1.0"
+  name: >-
+    A True & Faithful
+    Relation
+    of
+    What paſſed for many Yeeres Between
+    Dr. John Dee
+    (A Mathematician of Great Fame in Q. Eliz.
+    and King James their Reignes) and
+    Some Spirits :
+    Tending (had it Succeeded)
+    To a General Alteration of moſt STATES and
+    KINGDOMES in the World.
+editions:
+  book:
+    city: "London"
+    date: "1659"
+    id: "http://www.worldcat.org/oclc/1130025832"
+    oclc_number: "1130025832"
+    publisher: "D. Maxwell"
+    type: Book
+    numberOfPages: "494"
+    url: "https://books.google.com/books?id=iikdAQAAMAAJ"
