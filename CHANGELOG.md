@@ -16,10 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
 - Adjust ‘missing content’ text to encourage contributions with a link to edit the file, and a link to the source
 - Display ‘Context’ section on year page rather than date page -- in the future it would be ideal to have a concept of ‘relevance’, so a given item of commentary or context is considered relevant to a specific date (or set of dates), or to a year, and only shown in that context
+- Use more robust lookup for `author_key` on date page
 
 ### Fixed
 - Filter out duplicate related dates
 - Handle case that no publication information is available in the `mla_citation` Liquid filter
+- Fix bugs that prevented `author_key` and `recipient_key` from being passed to the `people` `include`
 
 ### Removed
 - Remove code that generated date pages if only commentary was available -- this is now handled in a better way by rendering the commentary on the year page

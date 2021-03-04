@@ -182,7 +182,7 @@ module HistoricalDiary
             author_key
             recipient_key
           ].each do |key|
-            value = document.data[author_key]
+            value = document.data[key]
             people_for_document << value if value
           end
           people_for_document.map! { |key| escape_key(key) }
@@ -192,6 +192,7 @@ module HistoricalDiary
             dates_for_people[key] ||= []
             dates_for_people[key].concat(dates)
           end
+          document.data['all_people_keys'] = people_for_document
 
           document.data['source_key'] = source_key
           document.data['timestamp'] = timestamp

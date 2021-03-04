@@ -18,14 +18,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% assign entry = include.entry -%}
 {% assign source_record = entry.source_key | collection_entry: "sources" -%}
-{% assign author_key = entry.author_key | default: source_record.work.author_key -%}
+
+{% assign source_author_key = entry | get_author_key: entry.edition_key, entry.volume_key -%}
+{% assign author_key = entry.author_key | default: source_author_key -%}
 {% include person_data.html person_key=author_key
                             itemprop="author" -%}
 
-{% assign highlighted_person_key = entry | get_author_key: entry.edition_key, entry.volume_key -%}
-{% include people.html people_keys=entry.people
-                       highlighted_person_key=highlighted_person_key -%}
-
+{% include people.html people_keys=entry.all_people_keys
+                       highlighted_person_key=author_key -%}
 {% if entry.category == "correspondence" -%}
 <p>
   Letter from
