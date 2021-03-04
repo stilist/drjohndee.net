@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Letter from John Dee to William Langley on 1597-05-02
 - Display commentary on year pages
 - Add three days from Casaubon’s ‘True and Faithful Relation’ -- raw transcription without annotations.
+- Add metadata for 1583-06/1584-05 from ‘True and Faithful Relation’
 - Tag entries for Olbracht Łaski
 
 ### Changed
