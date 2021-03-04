@@ -34,8 +34,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   <p>
     <a href=/LICENSE.html rel=license>Copyright and license policy</a>;
-    <a href=/CONTRIBUTING.html>how to contribute to this project</a>;
-    <a href=https://github.com/stilist/john-dee>view the project’s source files</a>.
+    <a href=/CONTRIBUTING.html>how to contribute to this project</a>.
+    {% if site.github_repository_url -%}
+    <a href='{{ site.github_repository_url }}'>View the project’s source files</a>.
+    {% endif -%}
 
     {% if site.doi -%}
     <a href="https://doi.org/{{ site.doi }}" rel=identifier>DOI: {{ site.doi }}</a>.

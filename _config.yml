@@ -50,6 +50,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+github_repository_url: "https://github.com/stilist/john-dee"
+
 # for page metadata
 google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
 twitter:
