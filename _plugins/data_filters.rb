@@ -100,6 +100,16 @@ module HistoricalDiary
       transclusions_for_timestamp('context', timestamp)
     end
 
+    def context_keys_for_year(year)
+      legal_year_timestamp = [
+        legal_year_start(year),
+        legal_year_end(year),
+      ].map { |timestamp| timestamp.strftime('%F') }
+        .join('/')
+
+      context_for_date(legal_year_timestamp)
+    end
+
     def dates_for_person(key)
       dates = @context.registers[:site]
         .data['dates_for_people'][key]

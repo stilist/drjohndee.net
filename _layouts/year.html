@@ -101,9 +101,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </section>
 
   {% assign commentary_keys = page.year | commentary_keys_for_year -%}
-  {% if commentary_keys.size > 0 -%}
+  {% assign context_keys = page.year | context_keys_for_year -%}
   <section class='secondary'>
     {% include transcludes.html keys=commentary_keys collection="commentary" -%}
+    {% include transcludes.html keys=context_keys collection="context" -%}
   </section>
-  {% endif -%}
+
 </article>

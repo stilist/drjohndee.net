@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
-- Adjust ‘missing content’ text to encourage contributions with a link to edit the file, and a link to the source.
+- Adjust ‘missing content’ text to encourage contributions with a link to edit the file, and a link to the source
+- Display ‘Context’ section on year page rather than date page -- in the future it would be ideal to have a concept of ‘relevance’, so a given item of commentary or context is considered relevant to a specific date (or set of dates), or to a year, and only shown in that context
 
 ### Fixed
 - Filter out duplicate related dates
