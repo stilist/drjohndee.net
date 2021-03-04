@@ -35,6 +35,32 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </p>
 {% endif -%}
 
+{% assign content_with_annotations = entry | annotate_content -%}
+{% assign content_as_html = content_with_annotations | liquify -%}
+
+{% if content_as_html == "" -%}
+{% assign edition_data = source_record.editions | find: "edition_key", entry.edition_key -%}
+{% if entry.volume_key -%}
+  {% for volume_hash in edition_data.volumes -%}
+    {% assign edition_volume_key = volume_hash | first -%}
+    {% if edition_volume_key == entry.volume_key -%}
+    {% assign edition_volume_data = volume_hash | last -%}
+    {% endif -%}
+  {% endfor -%}
+{% endif -%}
+{% assign source_url = edition_volume_data.url | default: edition_data.url | default: source_record.url -%}
+
+<p class='missing-content'>
+  The content for <code>{{ entry.path }}</code> has not been entered yet.
+  {% if site.github_repository_url -%}
+  You can help by
+  <a href="{{ site.github_repository_url }}/edit/main/{{ entry.path }}">contributing a transcription</a>.
+  {% endif -%}
+  {% if source_url -%}
+  The content is on {{ entry.location }} of <a href="{{ source_url }}">the source</a>.
+  {% endif -%}
+</p>
+{% else -%}
 <div class="source-material e-content">
   {% if entry.timestamp_dates.size > 1 -%}
   <span class="page-dateRange">
@@ -42,13 +68,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </span>
   {% endif -%}
 
-  {% assign content_with_annotations = entry | annotate_content -%}
-  {% assign content_as_html = content_with_annotations | liquify -%}
-  {% if content_as_html == "" -%}
-  <p class='missing-content'>This entry’s text has not been entered yet.</p>
-  {% else -%}
   <p>{{ content_as_html }}</p>
-  {% endif -%}
 </div>
 
 <span class="citation"
@@ -63,3 +83,4 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                       entry.volume_key,
                                       entry.author_key }}
 </span>
+{% endif -%}

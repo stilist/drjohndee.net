@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
+- Adjust ‘missing content’ text to encourage contributions with a link to edit the file, and a link to the source.
 
 ### Fixed
 - Filter out duplicate related dates

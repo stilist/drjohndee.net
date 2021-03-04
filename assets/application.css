@@ -548,8 +548,7 @@ ol.years > .year {
   max-width: var(--image-width);
 }
 
-.consecration,
-.missing-content {
+.consecration {
   text-align: center;
 }
 .correspondence-signature {
@@ -576,6 +575,11 @@ ol.years > .year {
 }
 .page-content p:last-child {
   margin-bottom: 0;
+}
+.page-content p.missing-content {
+  font-family: var(--font-sans-serif);
+  font-style: italic;
+  margin-bottom: calc(var(--vertical-rhythm) * 3.2);
 }
 .page-content li {
   line-height: calc(var(--vertical-rhythm) * 2);
