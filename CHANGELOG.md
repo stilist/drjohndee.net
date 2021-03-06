@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust ‘missing content’ text to encourage contributions with a link to edit the file, and a link to the source
 - Display ‘Context’ section on year page rather than date page -- in the future it would be ideal to have a concept of ‘relevance’, so a given item of commentary or context is considered relevant to a specific date (or set of dates), or to a year, and only shown in that context
 - Use more robust lookup for `author_key` on date page
+- Use short day number on date page, rather than 0-padded
 
 ### Fixed
 - Filter out duplicate related dates
