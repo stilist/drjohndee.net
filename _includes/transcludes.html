@@ -22,7 +22,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <ul class="annotation-content">
   {% assign previous_source_key = null -%}
 
-  {% for key in include.keys -%}
+  {% assign sorted_keys = include.keys | sort -%}
+  {% for key in sorted_keys -%}
     {% assign transclude_record = key | collection_entry: include.collection -%}
     {% if transclude_record -%}
     {% assign source_record = transclude_record.source_key | collection_entry: "sources" -%}

@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Display ‘Context’ section on year page rather than date page -- in the future it would be ideal to have a concept of ‘relevance’, so a given item of commentary or context is considered relevant to a specific date (or set of dates), or to a year, and only shown in that context
 - Use more robust lookup for `author_key` on date page
 - Use short day number on date page, rather than 0-padded
+- Sort keys in `transclude` `include`, to get more 'ibid's
 
 ### Fixed
 - Filter out duplicate related dates
