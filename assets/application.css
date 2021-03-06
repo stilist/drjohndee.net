@@ -736,14 +736,3 @@ ol.years > .year {
 .person-avatar--is-author .is-highlighted {
   background-color: var(--highlight-alternate-background-color);
 }
-
-.source-material .data-entity,
-.source-material span[lang],
-.source-material em,
-.source-material sup,
-.source-material ins,
-.source-material del,
-.source-material time,
-.source-material strong {
-  background-color: #f0c2;
-}
