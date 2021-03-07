@@ -6,11 +6,12 @@
 # details.
 
 presentational_name:
-  givenName: Emericus
-  familyName: Sunttag
+  givenName: Emeryk
+  familyName: Sontag
 full_name:
-  - text: Emericus
+  - text: Emeryk
     type: givenName
-    id: "https://www.wikidata.org/entity/Q21145683"
-  - text: Sunttag
+    id: "https://www.wikidata.org/entity/"
+  - text: Sontag
     type: familyName
+    id: "https://www.wikidata.org/entity/"
