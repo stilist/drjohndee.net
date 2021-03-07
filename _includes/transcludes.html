@@ -18,7 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% if include.keys.size > 0 -%}
 <aside class="annotations annotations-{{ include.collection }}">
-  <h3>{{ include.collection, | capitalize }}</h3>
+  <h3>{{ include.collection | capitalize }}</h3>
   <ul class="annotation-content">
   {% assign previous_source_key = null -%}
 
