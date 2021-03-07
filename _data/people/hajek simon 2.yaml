@@ -6,12 +6,12 @@
 # details.
 
 presentational_name:
-  givenName: Emeryk
-  familyName: Sontag
+  givenName: Šimon
+  familyName: Hájek
 full_name:
-  - text: Emeryk
+  - text: Šimon
     type: givenName
-    id: "https://www.wikidata.org/entity/Q22102094"
-  - text: Sontag
+    id: "https://www.wikidata.org/entity/Q22343561"
+  - text: Hájek
     type: familyName
-    id: "https://www.wikidata.org/entity/Q47519541"
+    id: "https://www.wikidata.org/entity/Q164308"
