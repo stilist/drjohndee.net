@@ -28,6 +28,7 @@ module DataCollection
     sources
   ].freeze
   TRANSCLUDED_COLLECTIONS = %w[
+    biography
     commentary
     context
     footnotes

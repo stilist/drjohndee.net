@@ -1,0 +1,20 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q4239897"
+presentational_name:
+  givenName: Aleksander
+  familyName: Kraushara
+full_name:
+  - text: Aleksander
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q17520844"
+  - text: Kraushar
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q37462326"
+birth_date: "1843-01-17"
+death_date: "1931-12-11"

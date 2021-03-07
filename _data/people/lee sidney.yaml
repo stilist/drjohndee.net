@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://doi.org/10.1093/ref:odnb/34470"
+presentational_name:
+  givenName: Sidney
+  familyName: Lee
+name:
+  - text: Sir
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q209690"
+  - text: Sidney
+    type: givenName
+    id: "https://www.wikidata.org/entity/"
+  - text: Lee
+    type: familyName
+    id: "https://www.wikidata.org/entity/"
+birth_date: "1859-12-05"
+death_date: "1926"

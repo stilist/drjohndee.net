@@ -1,0 +1,32 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Kraushar, Aleksander"
+  language: pl
+  license_key: "CC0 1.0"
+  name: >-
+    Olbracht Łaski
+    Wojewoda sieradzki.
+    Wizerunek historyzny
+    na tle
+    dziejów Polski ⅩⅤⅠ wieku,
+    przez
+    Alexandra Kraushara
+editions:
+  book:
+    city: "Warszawa"
+    id: "http://www.worldcat.org/oclc/863569832"
+    oclc_number: "863569832"
+    publisher: "Gebethner i Wolff"
+    type: Book
+    volumes:
+      "I":
+        date: "1882"
+        numberOfPages: "300"
+        url: "https://www.google.com/books/edition/_/MXNAAQAAMAAJ"
+        volumeNumber: "Ⅰ"

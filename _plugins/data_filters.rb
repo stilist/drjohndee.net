@@ -87,6 +87,23 @@ module HistoricalDiary
       volume[attribute] || edition[attribute] || work[attribute]
     end
 
+    def biography_for_person(key)
+      matches = []
+
+      records_by_source = data_collection_records('biography')
+      records_by_source.each do |source_key, records|
+        next if records.nil?
+
+        records.each do |record|
+          next if !record.key?('people')
+          escaped_people_keys = record['people'].map { |person_key| escape_key(person_key) }
+          matches << record if escaped_people_keys.include?(key)
+        end
+      end
+
+      matches
+    end
+
     def collection_entry(key, collection_name)
       data_collection_record(collection_name, key)
     end

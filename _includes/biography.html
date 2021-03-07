@@ -1,0 +1,46 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign biography_data = include.person_key | biography_for_person -%}
+{% if biography_data.size > 0 -%}
+<div class="page-content"
+     itemprop=articleBody>
+<h3>Biography</h3>
+<ul class="entries h-entry">
+{% for biography in biography_data -%}
+  {% assign language = biography | attribute_from_record: "language" -%}
+  <li class="entry"
+      lang="{{ language }}" translate>
+    <p>{{ biography.text | liquify }}</p>
+
+    <span class="citation"
+          itemprop=citation
+          itemscope>
+      {% include source_data.html source_key=biography.source_key
+                                  edition_key=biography.edition_key
+                                  location=biography.location
+                                  volume=biography.volume -%}
+      {{ biography.source_key | mla_citation: biography.location,
+                                          biography.edition_key,
+                                          biography.volume_key,
+                                          biography.author_key }}
+    </span>
+  </li>
+{% endfor -%}
+</ul>
+{% endif -%}

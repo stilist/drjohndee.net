@@ -29,8 +29,14 @@ module HistoricalDiary
         site.data[name].each do |source_key, records|
           next if records.nil?
 
-          records.each do |_, record|
-            record['source_key'] = source_key
+          if records.is_a?(Hash)
+            records.each do |_, record|
+              record['source_key'] = source_key
+            end
+          else
+            records.each do |record|
+              record['source_key'] = source_key
+            end
           end
         end
       end
