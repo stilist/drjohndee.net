@@ -19,8 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% assign pl_record = include.person_key | collection_entry: "people" -%}
 {% if pl_record -%}
 <a href="{{ include.person_key | collection_entry_url: "people" }}">
-  {{ include.person_key | person_name }}
-</a>
+  {{ include.person_key | person_name }}</a>
 {% else -%}
 {{ include.person_key }}
 {% endif -%}
