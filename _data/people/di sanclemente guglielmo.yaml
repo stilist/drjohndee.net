@@ -1,0 +1,30 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q15079889"
+presentational_name:
+  givenName: Guillem
+  familyName: de Santcliment
+full_name:
+  - text: Guillem
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q1553978"
+  - text: de
+    type: https://w3id.org/pnv#surnamePrefix
+    id: "https://www.wikidata.org/entity/Q11071485"
+  - text: Santcliment
+    type: https://w3id.org/pnv#baseSurname
+    id: "https://www.wikidata.org/entity/Q41029859"
+  - text: i
+    type: https://w3id.org/pnv#surnamePrefix
+  - text: de
+    type: https://w3id.org/pnv#surnamePrefix
+    id: "https://www.wikidata.org/entity/Q11071485"
+  - text: Centelles
+    type: https://w3id.org/pnv#baseSurname
+    id: "https://www.wikidata.org/entity/Q41029908"
+death_date: "1608-09-03"

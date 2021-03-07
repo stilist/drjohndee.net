@@ -1,0 +1,20 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q10400271"
+presentational_name:
+  givenName: Šimon
+  familyName: Hájek
+full_name:
+  - text: Šimon
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q22343561"
+  - text: Hájek
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q164308"
+birth_date: "1485~"
+death_date: "1551-10-27"
