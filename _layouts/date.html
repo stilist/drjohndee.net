@@ -102,9 +102,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% endfor -%}
         {% endif -%}
 
-        {% assign language = entry.language | default: source_data.language -%}
-        <li class="entry"
-            lang="{{ language }}" translate>
+        <li class="entry">
           {% include entry.html entry=entry -%}
         </li>
       {% endfor %}

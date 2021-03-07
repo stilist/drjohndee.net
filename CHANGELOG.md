@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add three days from Casaubon’s ‘True and Faithful Relation’ -- raw transcription without annotations.
 - Add metadata for all entries from ‘True and Faithful Relation’
 - Tag entries for Olbracht Łaski
+- Add `attribute_from_record` Liquid tag to automatically resolve volumes, editions, etc.
 
 ### Changed
 - Year page generator’s `legal_year_dates` property is now `expanded_legal_year_dates`, to convey it includes the full month of March on both ends
@@ -28,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Filter out duplicate related dates
 - Handle case that no publication information is available in the `mla_citation` Liquid filter
 - Fix bugs that prevented `author_key` and `recipient_key` from being passed to the `people` `include`
+- Correctly tag `lang` attribute on source material
 
 ### Removed
 - Remove code that generated date pages if only commentary was available -- this is now handled in a better way by rendering the commentary on the year page

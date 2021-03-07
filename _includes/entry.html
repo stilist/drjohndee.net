@@ -61,7 +61,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 </p>
 {% else -%}
-<div class="source-material e-content">
+{% assign language = entry | attribute_from_record: "language" -%}
+<div class="source-material e-content"
+     lang="{{ language }}" translate>
   {% if entry.timestamp_dates.size > 1 -%}
   <span class="page-dateRange">
     ({{ entry.timestamp_dates | first }} to {{ entry.timestamp_dates | last }})

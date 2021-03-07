@@ -74,6 +74,19 @@ module HistoricalDiary
       content
     end
 
+    def attribute_from_record(record, attribute)
+      return record[attribute] if record.key?(attribute)
+
+      source = source_data(record['source_key'])
+      return nil if source.nil?
+
+      work = source['work']
+      edition = source.dig('editions', record['edition_key']) || {}
+      volume = edition.dig('volumes', record['volume_key']) || {}
+
+      volume[attribute] || edition[attribute] || work[attribute]
+    end
+
     def collection_entry(key, collection_name)
       data_collection_record(collection_name, key)
     end
