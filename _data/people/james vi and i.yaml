@@ -25,10 +25,10 @@ full_name:
     id: "https://www.wikidata.org/entity/Q23041619"
   - text: ⅤⅠ and Ⅰ
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: King of Great Britain and Ireland
     type: additionalName
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
 calendar: "Julian"
 birth_date: "1566-06-19"
 death_date: "1625-03-27"

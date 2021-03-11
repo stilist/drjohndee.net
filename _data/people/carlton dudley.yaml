@@ -19,9 +19,9 @@ full_name:
     id: "https://www.wikidata.org/entity/Q16865377"
   - text: 1st
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: Viscount Dorchester
     type: additionalName
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
 birth_date: "1573-03-10"
 death_date: "1632-02-15"

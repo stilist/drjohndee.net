@@ -19,10 +19,10 @@ full_name:
     id: "https://www.wikidata.org/entity/Q28123780"
   - text: 3rd
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: Earl of Sussex
     type: additionalName
     id: "https://www.wikidata.org/entity/Q1232864"
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
 birth_date: "1525"
 death_date: "1583-06-09"

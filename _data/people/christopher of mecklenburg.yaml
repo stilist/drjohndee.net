@@ -18,6 +18,6 @@ full_name:
     id: "https://www.wikidata.org/entity/Q37484532"
   - text: Duke of Mecklenburg-Gadebusch
     type: additionalName
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
 birth_date: "1537-07-30"
 death_date: "1592-03-04"

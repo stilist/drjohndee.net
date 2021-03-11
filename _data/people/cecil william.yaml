@@ -18,10 +18,10 @@ full_name:
     type: familyName
   - text: 1st
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: Baron Burghley
     type: additionalName
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
   - text: Lord High Treasurer
     type: jobTitle
     id: "https://www.wikidata.org/entity/Q944583"

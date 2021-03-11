@@ -16,7 +16,7 @@ full_name:
     id: "https://www.wikidata.org/entity/Q18028491"
   - text: ⅠⅠ
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: Holy Roman Emperor
     type: jobTitle
     id: "https://www.wikidata.org/entity/Q181765"

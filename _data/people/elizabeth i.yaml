@@ -19,9 +19,9 @@ full_name:
     id: "https://www.wikidata.org/entity/Q16870774"
   - text: Ⅰ
     type: additionalName
-    alternateType: "https://w3id.org/pnv#disambiguatingDescription"
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
   - text: Queen of England and Ireland
     type: additionalName
-    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
 birth_date: "1533-09-07"
 death_date: "1603-04-03"
