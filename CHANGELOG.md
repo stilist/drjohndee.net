@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Correctly tag `lang` attribute on source material
 - Handle case that ‘source’ data file is empty
+- Increase color contrast for dark-mode year page to meet WCAG AA requirement
 
 ## [1.0.8] - 2021-03-05
 ### Added

@@ -105,7 +105,8 @@
   --blockquote-border-color: var(--neutral-40);
   --blockquote-content-color: var(--neutral-80);
   --calendar-filler-color: var(--neutral-80);
-  --calendar-highlight-color: var(--accent-10);
+  --calendar-highlight-background-color: var(--accent-10);
+  --calendar-highlight-foreground-color: var(--accent-80);
   --foreground: var(--neutral-100);
   --link-color: var(--accent-80);
   --link-focus-color: var(--accent-60);
@@ -184,7 +185,8 @@
     --blockquote-border-color: var(--neutral-80);
     --blockquote-content-color: var(--neutral-40);
     --calendar-filler-color: var(--neutral-70);
-    --calendar-highlight-color: var(--accent-90);
+    --calendar-highlight-background-color: var(--accent-90);
+    --calendar-highlight-foreground-color: var(--accent-20);
     --foreground: var(--neutral-0);
     --link-color: var(--accent-30);
     --link-focus-color: var(--accent-10);
@@ -661,9 +663,10 @@ ol.years > .year {
   width: var(--calendar-day-size);
 }
 .calendar-date a {
-  height: var(--calendar-day-size);
   align-items: center;
+  color: var(--calendar-highlight-foreground-color);
   display: flex;
+  height: var(--calendar-day-size);
   justify-content: center;
   width: var(--calendar-day-size);
 }
@@ -671,7 +674,7 @@ ol.years > .year {
   color: var(--calendar-filler-color);
 }
 .calendar-date--content {
-  background-color: var(--calendar-highlight-color);
+  background-color: var(--calendar-highlight-background-color);
 }
 
 .people {
