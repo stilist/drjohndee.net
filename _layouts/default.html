@@ -22,9 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <body>
     {% include header.html -%}
 
-    <main aria-label="Content">
-      {{ content }}
-    </main>
+    {{ content }}
 
     {% include footer.html -%}
     <script async src="{{ "/assets/application.js" | relative_url }}"></script>

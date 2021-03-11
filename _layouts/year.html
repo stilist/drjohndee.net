@@ -19,8 +19,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-<article class="page">
-  <header class="page-header">
+<div class="page">
+  <nav class="page-header">
     <h2 class="page-name p-name"
         itemprop="name">
       <meta itemprop=headline content="{{ page.title }}">
@@ -28,7 +28,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h2>
 
     {% if page.next or page.previous -%}
-    <nav class='page-nextPrevious'>
+    <div class='page-nextPrevious'>
       {% if page.previous -%}
       <a href="{{ page.previous.url }}"
          class="page-nextPrevious--isPrevious"
@@ -46,11 +46,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         → {{ page.year | plus: 1 }}
       </a>
       {% endif -%}
-    </nav>
+    </div>
     {% endif -%}
-  </header>
+  </nav>
 
-  <section class="page-content page-content--isCalendarYear">
+  <main class="page-content page-content--isCalendarYear">
     <ol class="calendar">
       {% for month_hash in page.expanded_legal_year_dates -%}
       <li class="calendar-month">
@@ -98,13 +98,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </li>
       {% endfor -%}
     </ol>
-  </section>
+  </main>
 
   {% assign commentary_keys = page.year | commentary_keys_for_year -%}
   {% assign context_keys = page.year | context_keys_for_year -%}
-  <section class='secondary'>
+  <div class='secondary'>
     {% include transcludes.html keys=commentary_keys collection="commentary" -%}
     {% include transcludes.html keys=context_keys collection="context" -%}
-  </section>
+  </div>
 
-</article>
+</div>
