@@ -49,107 +49,164 @@
 
 /* colors */
 :root {
-  /* @see https://www.colorbox.io/#steps=11#hue_start=51#hue_end=31#hue_curve=easeInQuad#sat_start=1#sat_end=1#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=0#lum_curve=easeOutQuad#minor_steps_map=0 */
-  --neutral-0--components: 1 1 0.9882;
-  --neutral-0: #fffffc;
-  --neutral-5--components: 0.9922 0.9882 0.9804;
-  --neutral-5: #fdfcfa;
-  --neutral-10--components: 0.9843 0.9804 0.9725;
-  --neutral-10: #fbfaf8;
-  --neutral-20--components: 0.9569 0.9529 0.9412;
-  --neutral-20: #f4f3f0;
-  --neutral-30--components: 0.9137 0.9098 0.9020;
-  --neutral-30: #e9e8e6;
-  --neutral-40--components: 0.8510 0.8510 0.8431;
-  --neutral-40: #d9d9d7;
-  --neutral-50--components: 0.7725 0.7686 0.7608;
-  --neutral-50: #c5c4c2;
-  --neutral-60--components: 0.6667 0.6627 0.6549;
-  --neutral-60: #aaa9a7;
-  --neutral-70--components: 0.5294 0.5294 0.5255;
-  --neutral-70: #878786;
-  --neutral-80--components: 0.3686 0.3686 0.3647;
-  --neutral-80: #5e5e5d;
-  --neutral-90--components: 0.1882 0.1843 0.1843;
-  --neutral-90: #302f2f;
-  --neutral-100--components: 0 0 0;
+  /*
+  https://colorbox.io
+
+  [
+    {
+      "properties": {
+        "steps": 11,
+        "hue": { "start": 39, "end": 11, "curve": "easeInQuad" },
+        "saturation": { "start": 0.01, "end": 0.1, "rate": 1.3, "curve": "linear" },
+        "brightness": { "start": 1, "end": 0, "curve": "linear" }
+      },
+      "options": { "minorSteps": [], "name": "Neutral", "provideInverted": true, "rotation": "counterclockwise" }
+    },
+    {
+      "properties": {
+        "steps": 11,
+        "hue": { "start": 39, "end": 11, "curve": "easeInQuad" },
+        "saturation": { "start": 0.04, "end": 0.9, "rate": 1.3, "curve": "easeOutQuad" },
+        "brightness": { "start": 1, "end": 0.53, "curve": "easeOutQuad" }
+      },
+      "options": { "minorSteps": [], "name": "Accent", "provideInverted": true, "rotation": "counterclockwise" }
+    }
+  ]
+  */
+  /* @note `--components` are RGB in the range [0, 1]
+
+  // Generate component values from hex values:
+  Object.entries({
+    "--neutral-0": "#fffefc;",
+   // ...
+  }).map(([v, h]) => `${v}: ${h}\n${v}--components: ${h.match(/([0-9a-f]){2}/g).map(c => Math.round(100 * parseInt(c, 16) / 255) / 100).join(' ')};`).join('\n')
+  */
+  --neutral-0: #fffefc;
+  --neutral-0--components: 1 1 0.99;
+  --neutral-10: #e6e3e0;
+  --neutral-10--components: 0.9 0.89 0.88;
+  --neutral-20: #ccc9c5;
+  --neutral-20--components: 0.8 0.79 0.77;
+  --neutral-30: #b3afaa;
+  --neutral-30--components: 0.7 0.69 0.67;
+  --neutral-40: #999590;
+  --neutral-40--components: 0.6 0.58 0.56;
+  --neutral-50: #807b76;
+  --neutral-50--components: 0.5 0.48 0.46;
+  --neutral-60: #66625e;
+  --neutral-60--components: 0.4 0.38 0.37;
+  --neutral-70: #4d4845;
+  --neutral-70--components: 0.3 0.28 0.27;
+  --neutral-80: #332f2e;
+  --neutral-80--components: 0.2 0.18 0.18;
+  --neutral-90: #191716;
+  --neutral-90--components: 0.1 0.09 0.09;
   --neutral-100: #000;
-
-  /* @see https://www.colorbox.io/#steps=11#hue_start=39#hue_end=11#hue_curve=easeInQuad#sat_start=4#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#minor_steps_map=0 */
-  --accent-0--components: 1.0000 0.9804 0.9490;
+  --neutral-100--components: 0 0 0;
   --accent-0: #fffaf2;
-  --accent-5--components: 0.9961 0.9412 0.8992;
-  --accent-5: #fef0d6;
-  --accent-10--components: 0.9922 0.8980 0.7333;
-  --accent-10: #fde5bb;
-  --accent-20--components: 0.9804 0.8078 0.5255;
-  --accent-20: #face86;
-  --accent-30--components: 0.9608 0.7137 0.3412;
-  --accent-30: #f5b657;
-  --accent-40--components: 0.9294 0.6157 0.1882;
-  --accent-40: #ed9d30;
-  --accent-50--components: 0.8941 0.5098 0.0745;
-  --accent-50: #e48213;
-  --accent-60--components: 0.8431 0.4000 0;
-  --accent-60: #d76600;
-  --accent-70--components: 0.7803 0.3176 0;
-  --accent-70: #c75100;
-  --accent-80--components: 0.6020 0.2352 0;
-  --accent-80: #b33c00;
-  --accent-90--components: 0.6196 0.1568 0;
-  --accent-90: #9e2800;
-  --accent-100--components: 0.5294 0.0980 0;
+  --accent-0--components: 1 0.98 0.95;
+  --accent-10: #e9d3ac;
+  --accent-10--components: 0.91 0.83 0.67;
+  --accent-20: #d3ae71;
+  --accent-20--components: 0.83 0.68 0.44;
+  --accent-30: #bf8e44;
+  --accent-30--components: 0.75 0.56 0.27;
+  --accent-40: #af7424;
+  --accent-40--components: 0.69 0.45 0.14;
+  --accent-50: #a35d0e;
+  --accent-50--components: 0.64 0.36 0.05;
+  --accent-60: #994900;
+  --accent-60--components: 0.6 0.29 0;
+  --accent-70: #923b00;
+  --accent-70--components: 0.57 0.23 0;
+  --accent-80: #8c2f00;
+  --accent-80--components: 0.55 0.18 0;
+  --accent-90: #892300;
+  --accent-90--components: 0.54 0.14 0;
   --accent-100: #871900;
+  --accent-100--components: 0.53 0.1 0;
 
-  --background: var(--neutral-0);
+  --background-color: var(--neutral-0);
   --blockquote-border-color: var(--neutral-40);
   --blockquote-content-color: var(--neutral-80);
   --calendar-filler-color: var(--neutral-80);
   --calendar-highlight-background-color: var(--accent-10);
   --calendar-highlight-foreground-color: var(--accent-80);
-  --foreground: var(--neutral-100);
-  --link-color: var(--accent-80);
-  --link-focus-color: var(--accent-60);
-  --link-visted-color: var(--accent-100);
+  --foreground-color: var(--neutral-100);
+  --link-foreground-color: var(--accent-80);
+  --link-active-background-color: var(--accent-60);
+  --link-active-foreground-color: var(--accent-10);
+  --link-visited-background-color: var(--accent-80);
+  --link-visited-foreground-color: var(--accent-100);
   --avatar-background-color: var(--neutral-10);
-  --avatar-author-background-color: var(--foreground);
+  --avatar-foreground-color: var(--neutral-100);
+  --avatar-author-background-color: var(--neutral-100);
+  --avatar-author-foreground-color: var(--neutral-0);
   --highlight-background-color: var(--accent-20);
   --highlight-outline-color: var(--accent-60);
   --highlight-alternate-background-color: var(--accent-80);
 }
-
-@supports (color: hsl(1 1 1)) {
+@media (prefers-contrast: more) {
   :root {
-    --accent-0: hsl(var(--accent-0--components));
-    --accent-5: hsl(var(--accent-5--components));
-    --accent-10: hsl(var(--accent-10--components));
-    --accent-20: hsl(var(--accent-20--components));
-    --accent-30: hsl(var(--accent-30--components));
-    --accent-40: hsl(var(--accent-40--components));
-    --accent-50: hsl(var(--accent-50--components));
-    --accent-60: hsl(var(--accent-60--components));
-    --accent-70: hsl(var(--accent-70--components));
-    --accent-80: hsl(var(--accent-80--components));
-    --accent-90: hsl(var(--accent-90--components));
-    --accent-100: hsl(var(--accent-100--components));
-    --neutral-0: hsl(var(--neutral-0--components));
-    --neutral-5: hsl(var(--neutral-5--components));
-    --neutral-10: hsl(var(--neutral-10--components));
-    --neutral-20: hsl(var(--neutral-20--components));
-    --neutral-30: hsl(var(--neutral-30--components));
-    --neutral-40: hsl(var(--neutral-40--components));
-    --neutral-50: hsl(var(--neutral-50--components));
-    --neutral-60: hsl(var(--neutral-60--components));
-    --neutral-70: hsl(var(--neutral-70--components));
-    --neutral-80: hsl(var(--neutral-80--components));
-    --neutral-90: hsl(var(--neutral-90--components));
-    --neutral-100: hsl(var(--neutral-100--components));
+    --blockquote-content-color: var(--neutral-100);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-0: #000000;
+    --neutral-0--components: 0 0 0;
+    --neutral-10: #1a1716;
+    --neutral-10--components: 0.1 0.09 0.09;
+    --neutral-20: #332f2e;
+    --neutral-20--components: 0.2 0.18 0.18;
+    --neutral-30: #4d4845;
+    --neutral-30--components: 0.3 0.28 0.27;
+    --neutral-40: #66625e;
+    --neutral-40--components: 0.4 0.38 0.37;
+    --neutral-50: #807b76;
+    --neutral-50--components: 0.5 0.48 0.46;
+    --neutral-60: #999590;
+    --neutral-60--components: 0.6 0.58 0.56;
+    --neutral-70: #b3afaa;
+    --neutral-70--components: 0.7 0.69 0.67;
+    --neutral-80: #ccc9c5;
+    --neutral-80--components: 0.8 0.79 0.77;
+    --neutral-90: #e6e3e0;
+    --neutral-90--components: 0.9 0.89 0.88;
+    --neutral-100: #fffefc;
+    --neutral-100--components: 1 1 0.99;
+    --accent-0: #871900;
+    --accent-0--components: 0.53 0.1 0;
+    --accent-10: #8d2300;
+    --accent-10--components: 0.55 0.14 0;
+    --accent-20: #932f00;
+    --accent-20--components: 0.58 0.18 0;
+    --accent-30: #993e00;
+    --accent-30--components: 0.6 0.24 0;
+    --accent-40: #9f5108;
+    --accent-40--components: 0.62 0.32 0.03;
+    --accent-50: #a66013;
+    --accent-50--components: 0.65 0.38 0.07;
+    --accent-60: #ae7022;
+    --accent-60--components: 0.68 0.44 0.13;
+    --accent-70: #c18e48;
+    --accent-70--components: 0.76 0.56 0.28;
+    --accent-80: #dab783;
+    --accent-80--components: 0.85 0.72 0.51;
+    --accent-90: #eedbbb;
+    --accent-90--components: 0.93 0.86 0.73;
+    --accent-100: #fffaf2;
+    --accent-100--components: 1 0.98 0.95;
+
+    --link-active-background-color: var(--accent-10);
+    --link-active-foreground-color: var(--accent-80);
+    --link-visited-background-color: var(--accent-0);
+    --link-visited-foreground-color: var(--accent-60);
   }
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
     --neutral-0: color(display-p3 var(--neutral-0--components));
-    --neutral-5: color(display-p3 var(--neutral-5--components));
     --neutral-10: color(display-p3 var(--neutral-10--components));
     --neutral-20: color(display-p3 var(--neutral-20--components));
     --neutral-30: color(display-p3 var(--neutral-30--components));
@@ -161,7 +218,6 @@
     --neutral-90: color(display-p3 var(--neutral-90--components));
     --neutral-100: color(display-p3 var(--neutral-100--components));
     --accent-0: color(display-p3 var(--accent-0--components));
-    --accent-5: color(display-p3 var(--accent-5--components));
     --accent-10: color(display-p3 var(--accent-10--components));
     --accent-20: color(display-p3 var(--accent-20--components));
     --accent-30: color(display-p3 var(--accent-30--components));
@@ -172,29 +228,6 @@
     --accent-80: color(display-p3 var(--accent-80--components));
     --accent-90: color(display-p3 var(--accent-90--components));
     --accent-100: color(display-p3 var(--accent-100--components));
-  }
-}
-@media (prefers-contrast: more) {
-  :root {
-    --blockquote-content-color: var(--neutral-100);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--neutral-100);
-    --blockquote-border-color: var(--neutral-80);
-    --blockquote-content-color: var(--neutral-40);
-    --calendar-filler-color: var(--neutral-70);
-    --calendar-highlight-background-color: var(--accent-90);
-    --calendar-highlight-foreground-color: var(--accent-20);
-    --foreground: var(--neutral-0);
-    --link-color: var(--accent-30);
-    --link-focus-color: var(--accent-10);
-    --link-visted-color: var(--accent-40);
-    --avatar-background-color: var(--neutral-90);
-    --highlight-background-color: var(--accent-80);
-    --highlight-outline-color: var(--accent-40);
-    --highlight-alternate-background-color: var(--accent-20);
   }
 }
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
@@ -303,8 +336,8 @@ html {
   font-size: var(--base-font-size);
 }
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--background-color);
+  color: var(--foreground-color);
   color-scheme: light dark;
   font-family: var(--font-sans-serif);
   line-height: 1rem;
@@ -313,16 +346,23 @@ body {
   min-height: 100vh;
   max-width: var(--content-width);
 }
-a {
-  color: var(--link-color);
+
+a:link {
+  color: var(--link-foreground-color);
 }
-a:focus,
-a:hover {
-  color: var(--link-focus-color);
+a:visited {
+  background-color: var(--link-visited-background-color);
+  color: var(--link-visited-foreground-color);
 }
 a:active,
-a:visited {
-  color: var(--link-visted-color);
+a:focus,
+a:hover {
+  background-color: var(--link-active-background-color);
+  color: var(--link-active-foreground-color);
+}
+a:active,
+a:focus {
+  outline: auto;
 }
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -376,7 +416,7 @@ h2 {
 }
 hr {
   border: 0;
-  background-color: var(--foreground);
+  background-color: var(--foreground-color);
   height: 1px;
   margin-bottom: calc(var(--vertical-rhythm) * 1.5);
   margin-inline-start: -15%;
@@ -516,7 +556,7 @@ ol.years > .year {
 .entries::after {
   content: '';
   display: block;
-  border-bottom: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--foreground-color);
   bottom: calc(var(--vertical-rhythm) * -2.5);
   margin-inline-start: -15%;
   position: absolute;
@@ -720,12 +760,12 @@ ol.years > .year {
   align-items: center;
   /* trigger border-radius */
   border: 0;
-  color: var(--foreground);
+  color: var(--avatar-foreground-color);
   display: flex;
   justify-content: center;
 }
 .person-avatar--is-author .person-avatarInitials {
-  color: var(--background);
+  color: var(--avatar-author-foreground-color);
 }
 .person-avatarInitials:not(lang[he]) {
   font-size: 0.9em;
