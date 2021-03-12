@@ -133,6 +133,7 @@
   --calendar-highlight-background-color: var(--accent-10);
   --calendar-highlight-foreground-color: var(--accent-80);
   --foreground-color: var(--neutral-100);
+  --link-background-color: transparent;
   --link-foreground-color: var(--accent-80);
   --link-active-background-color: var(--accent-60);
   --link-active-foreground-color: var(--accent-10);
@@ -145,11 +146,6 @@
   --highlight-background-color: var(--accent-20);
   --highlight-outline-color: var(--accent-60);
   --highlight-alternate-background-color: var(--accent-80);
-}
-@media (prefers-contrast: more) {
-  :root {
-    --blockquote-content-color: var(--neutral-100);
-  }
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -230,10 +226,29 @@
     --accent-100: color(display-p3 var(--accent-100--components));
   }
 }
+@media (prefers-contrast: more) {
+  :root {
+    --neutral-0: #fff;
+    --neutral-0--components: 1 1 1;
+    --neutral-100: #000;
+    --neutral-100--components: 0 0 0;
+    --blockquote-border-color: var(--neutral-90);
+    --blockquote-content-color: var(--neutral-100);
+    --link-background-color: var(--neutral-10);
+    --link-foreground-color: var(--accent-100);
+    --link-visited-foreground-color: var(--accent-10);
+    --avatar-author-background-color: var(--neutral-100);
+  }
+}
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
   :root {
-    --blockquote-border-color: var(--neutral-60);
-    --blockquote-content-color: var(--neutral-20);
+    --neutral-0: #000;
+    --neutral-0--components: 0 0 0;
+    --neutral-100: #fff;
+    --neutral-100--components: 1 1 1;
+    --link-background-color: var(--neutral-20);
+    --link-foreground-color: var(--accent-90);
+    --link-visited-foreground-color: var(--accent-90);
   }
 }
 
@@ -347,7 +362,8 @@ body {
   max-width: var(--content-width);
 }
 
-a:link {
+a {
+  background-color: var(--link-background-color);
   color: var(--link-foreground-color);
 }
 a:visited {
@@ -740,6 +756,7 @@ ol.years > .year {
   margin-inline-start: var(--gutter-width);
 }
 .person-avatar a {
+  background-color: transparent;
   border: var(--avatar-border-width) solid currentColor;
   display: block;
   position: absolute;
