@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta itemprop=license content="{{ site.license_key | license_url }}">
   {% endif -%}
 
-  <header class="page-header">
+  <nav class="page-header">
     <h2 class="page-name p-name"
         itemprop="name">
       <meta itemprop=headline content="{{ page.title }}">
@@ -50,7 +50,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h2>
 
     {% if page.next or page.previous -%}
-    <nav class='page-nextPrevious'>
+    <div class='page-nextPrevious'>
       {% if page.previous -%}
       <a href="{{ page.previous.url }}"
          class="page-nextPrevious--isPrevious">
@@ -76,16 +76,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         </time>
       </a>
       {% endif -%}
-    </nav>
+    </div>
     {% endif -%}
-  </header>
+  </nav>
 
   {% assign custom_footnote_keys = '' | split: '' -%}
   {% assign related_dates = '' | split: '' -%}
 
   {% assign entries = page.timestamp | source_material_for_date -%}
   {% if entries.size > 0 -%}
-  <div class="page-content"
+  <main class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
       {% for entry in entries -%}
@@ -107,7 +107,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         </li>
       {% endfor %}
     </ul>
-  </div>
+  </main>
   {% endif -%}
 
   {% assign commentary_keys = page.timestamp | commentary_for_date -%}
