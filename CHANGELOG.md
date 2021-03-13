@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `attribute_from_record` Liquid tag to automatically resolve volumes, editions, etc.
 - Add ‘biography’ mechanism to show relevant information on person pages
 - Set `logo` property in page header
+- Tag some additional people and add data
 
 ### Changed
 - Replace `alternateType` in people data with `addtionalType` -- [`additionalType` is a `schema.org` property](https://schema.org/additionalType)

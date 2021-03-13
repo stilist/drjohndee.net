@@ -1,0 +1,17 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name:
+  givenName: Thomas
+  familyName: Sinkinson
+full_name:
+  - text: Thomas
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q16428906"
+  - text: Sinkinson
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q98106004"
