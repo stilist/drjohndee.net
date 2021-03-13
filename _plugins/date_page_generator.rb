@@ -204,6 +204,11 @@ module HistoricalDiary
           document.data['timestamp_range'] = timestamp_range
 
           @site.pages << document
+
+          document.data['tags'].each do |tag|
+            @site.tags[tag] ||= []
+            @site.tags[tag] << document
+          end
         end
 
         timestamp_range.dates.each do |date|
