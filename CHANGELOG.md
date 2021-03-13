@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Replace `alternateType` in people data with `addtionalType` -- [`additionalType` is a `schema.org` property](https://schema.org/additionalType)
 - Rebuild color palette for better contrast and easier maintenance
+- Display day name on date page
 
 ### Fixed
 - Correctly tag `lang` attribute on source material

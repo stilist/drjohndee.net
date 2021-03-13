@@ -31,14 +31,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <meta itemprop=headline content="{{ page.title }}">
       <meta itemprop=datePublished content="{{ page.timestamp }}">
 
+      <span class='display-date'>
+        <span class='day-name'>{{ page.date | date: '%A' }}</span>
+        <time class="dt-published"
+              datetime="{{ page.timestamp }}">
+          {{ page.date | date: '%e %B' }}
+        </time>
+      </span>
       {% assign year = page.date | date: '%Y' -%}
-      {% assign month = page.date | date: '%B' -%}
-      {% assign day = page.date | date: '%e' -%}
-
-      <time class="dt-published"
-            datetime="{{ page.timestamp }}">
-        {{ day }} {{ month }}
-      </time>
       <a href="{{ year | relative_url }}.html">
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>{{ year }}</span>
