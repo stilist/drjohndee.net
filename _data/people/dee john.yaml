@@ -12,9 +12,11 @@ presentational_name:
 full_name:
   - text: John
     type: givenName
+    language: en
     id: "https://www.wikidata.org/entity/Q4925477"
   - text: Dee
     type: familyName
+    language: cy
     id: "https://www.wikidata.org/entity/Q37480086"
 birth_date: "1527-07-13"
 death_date: "1608-12"
