@@ -54,11 +54,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endif -%}
     </h2>
 
-    {% if record.birth_date or record.death_date -%}
     <h3 class="page-subtitle">
+      <span class="name-and-title">
+        {% for part in record.full_name -%}
+        <span itemprop="{{ part.type }}"
+              additionalType="{{ part.additionalType }}"
+              lang="{{ part.language | default: site.lang }}" translate>{{ part.text }}</span>
+        {% endfor -%}
+      </span>
+
+      {% if record.birth_date or record.death_date -%}
       <time itemprop=birthDate>{{ record.birth_date | default: "?" }}</time>/<time itemprop=deathDate>{{ record.death_date | default: "?" }}</time>
+      {% endif -%}
     </h3>
-    {% endif -%}
   </header>
 
   <section class='secondary'>

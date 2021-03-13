@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add ‘biography’ mechanism to show relevant information on person pages
 - Set `logo` property in page header
 - Tag some additional people and add data
+- Display person's full name and title on person page
 
 ### Changed
 - Replace `alternateType` in people data with `addtionalType` -- [`additionalType` is a `schema.org` property](https://schema.org/additionalType)
