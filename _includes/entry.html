@@ -19,8 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% assign entry = include.entry -%}
 {% assign source_record = entry.source_key | collection_entry: "sources" -%}
 
-{% assign source_author_key = entry | get_author_key: entry.edition_key, entry.volume_key -%}
-{% assign author_key = entry.author_key | default: source_author_key -%}
+{% assign author_key = entry | attribute_from_object_or_source_record: "author_key" -%}
 {% include person_data.html person_key=author_key
                             itemprop="author" -%}
 
@@ -61,7 +60,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 </p>
 {% else -%}
-{% assign language = entry | attribute_from_record: "language" -%}
+{% assign language = entry | attribute_from_object_or_source_record: "language" -%}
 <div class="source-material e-content"
      lang="{{ language }}" translate>
   {% if entry.timestamp_dates.size > 1 -%}

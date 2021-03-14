@@ -15,14 +15,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes
 - Redefine `person_initials` and `person_name` Liquid filters to use `Person` class
+- Rename `attribute_from_record` Liquid filter to `attribute_from_object_or_source_record`
+- Refactor `mla_citation` Liquid filter to use `attribute_from_object_or_source_record`
 
 ### Fixed
 - Improve structure of source page
 
+### Removed
+- Remove `get_author_key` Liquid filter -- its function is better done with the `attribute_from_object_or_source_record` filter
+
 ## [1.0.9] - 2021-03-13
 ### Added
 - Add text for some shorter entries and a few letters
-- Add `attribute_from_record` Liquid tag to automatically resolve volumes, editions, etc.
+- Add `attribute_from_record` Liquid filter to automatically resolve volumes, editions, etc.
 - Add ‘biography’ mechanism to show relevant information on person pages
 - Set `logo` property in page header
 - Tag some additional people and add data

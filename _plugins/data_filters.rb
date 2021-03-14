@@ -75,15 +75,15 @@ module HistoricalDiary
       content
     end
 
-    def attribute_from_record(record, attribute)
-      return record[attribute] if record.key?(attribute)
+    def attribute_from_object_or_source_record(object, attribute)
+      return object[attribute] if object.key?(attribute)
 
-      source = source_data(record['source_key'])
+      source = source_data(object['source_key'])
       return nil if source.nil?
 
       work = source['work']
-      edition = source.dig('editions', record['edition_key']) || {}
-      volume = edition.dig('volumes', record['volume_key']) || {}
+      edition = source.dig('editions', object['edition_key']) || {}
+      volume = edition.dig('volumes', object['volume_key']) || {}
 
       volume[attribute] || edition[attribute] || work[attribute]
     end
@@ -164,19 +164,6 @@ module HistoricalDiary
       escape_key(key)
     end
 
-    def get_author_key(object, edition_key=nil, volume_key=nil)
-      return object['author_key'] if object.key?('author_key')
-
-      source = source_data(object['source_key'])
-      return nil if source.nil?
-
-      work = source['work']
-      edition = source.dig('editions', edition_key) || {}
-      volume = edition.dig('volumes', volume_key) || {}
-
-      volume['author_key'] || edition['author_key'] || work['author_key']
-    end
-
     def legal_year_has_content(year)
       known_dates = @context.registers[:site]
         .data['generated_dates'] || []
@@ -228,39 +215,37 @@ module HistoricalDiary
       return source_key if source.nil?
 
       work = source['work']
+      edition = source.dig('editions', edition_key) || {}
+      volume = edition.dig('volumes', volume_key) || {}
 
-      edition = source.dig('editions', edition_key)
-      if edition.nil? && source['editions'].length == 1
-        edition = source['editions'].values.first
-      end
-      edition ||= {}
-
-      volume = edition.dig('volumes', volume_key) if !volume_key.nil?
-      volume ||= {}
-
-      # Tagging this as an actual date improves the screenreader experience.
-      publication_date = volume['date'] || edition['date']
-      if publication_date
-        year = publication_date.match(/\d{4}/)
-        publication_date = "<time datetime='#{publication_date}'>#{year}</time>"
+      lookup_object = {
+        'source_key' => source_key,
+        'edition_key' => edition_key,
+        'volume_key' => volume_key,
+      }.freeze
+      publication_date = attribute_from_object_or_source_record(lookup_object, 'date')
+      if !publication_date.nil?
+        year = publication_date.match(/\A\d{4}/)
+        # Tagging this as an actual date improves the screenreader experience.
+        publication_date = "<time datetime='#{publication_date}'>#{year}</time>" if !year.nil?
       end
 
       publishing_info = [
-        volume['city'] || edition['city'],
-        volume['publisher'] || edition['publisher'],
+        attribute_from_object_or_source_record(lookup_object, 'city'),
+        attribute_from_object_or_source_record(lookup_object, 'publisher'),
         publication_date,
         location&.sub('-', '–'),
       ].compact.join(', ')
       publishing_info[0] = publishing_info[0].capitalize if publishing_info.length > 0
 
-      source_name = volume['name'] || edition['name'] || work['name']
+      source_name = attribute_from_object_or_source_record(lookup_object, 'name')
       output = [
         data_record_link('sources', source_key, source_name),
         publishing_info,
       ]
       output.insert(1, "Volume #{volume['volume_number']}") if volume.key?('volume_number')
 
-      author_key ||= get_author_key({}, editor_key, volume_key)
+      author_key ||= attribute_from_object_or_source_record(lookup_object, 'author_key')
       author = person_data(author_key)
       if author.nil?
         output.unshift(author_key)
@@ -272,7 +257,7 @@ module HistoricalDiary
         output.unshift(person_link(author_key, author_name))
       end
 
-      editor_key = volume['editor_key'] || edition['editor_key'] || work['editor_key']
+      editor_key = attribute_from_object_or_source_record(lookup_object, 'editor_key')
       editor = person_data(editor_key)
       if editor.nil?
         output.insert(2, editor_key)
@@ -289,7 +274,7 @@ module HistoricalDiary
         compact.
         reject { |part| part.strip == '' }.
         join('. ').
-        sub('..', '.') + '.'
+        sub(/\.{2,}/, '.') + '.'
     end
 
     def person_link(key, display_text)
@@ -339,7 +324,6 @@ module HistoricalDiary
         "class='#{attributes['class']}' " \
         "data-key='#{attributes['dataKey']}'>#{display_text || key}</span>"
     end
-
   end
 end
 Liquid::Template.register_filter(HistoricalDiary::DataFilters)

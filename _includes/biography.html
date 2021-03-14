@@ -23,7 +23,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <h3>Biography and relevant history</h3>
 <ul class="entries h-entry">
 {% for biography in biography_data -%}
-  {% assign language = biography | attribute_from_record: "language" -%}
+  {% assign language = biography | attribute_from_object_or_source_record: "language" -%}
   <li class="entry"
       lang="{{ language }}" translate>
     <p>{{ biography.text | liquify }}</p>
