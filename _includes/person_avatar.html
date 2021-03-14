@@ -1,0 +1,40 @@
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign person_record = include.person_key | collection_entry: "people" -%}
+{% if person_record -%}
+
+{% if include.is_highlighted -%}
+{% assign highlighted_class = "person-avatar--is-highlighted" -%}
+{% else -%}
+{% assign highlighted_class = "" -%}
+{% endif -%}
+
+<div class="person-avatar {{ highlighted_class }}">
+  {% assign link_attributes = include.person_key | data_record_tag_attributes: "people" -%}
+  {% assign person_permalink = include.person_key | collection_entry_url: "people" -%}
+  <a href="{{ person_permalink | relative_url }}"
+     lang="{{ person_record.name_language }}" translate
+     class="{{ link_attributes.class }}"
+     data-key="{{ link_attributes.dataKey }}">
+    <span class="person-avatarInitials"
+          aria-hidden="true">{{ person_key | person_initials }}</span>
+    <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
+  </a>
+</div>
+{% endif -%}

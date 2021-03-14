@@ -733,10 +733,14 @@ ol.years > .year {
   background-color: var(--calendar-highlight-background-color);
 }
 
-.people {
+.people-avatars {
   display: flex;
   list-style: none;
 }
+.people-avatars li + li {
+  margin-inline-start: var(--gutter-width);
+}
+
 .person-avatar,
 .person-avatar a,
 .person-avatarInitials {
@@ -749,11 +753,8 @@ ol.years > .year {
   background-color: var(--avatar-background-color);
   position: relative;
 }
-.person-avatar--is-author {
+.person-avatar--is-highlighted {
   background-color: var(--avatar-author-background-color);
-}
-.person-avatar + .person-avatar {
-  margin-inline-start: var(--gutter-width);
 }
 .person-avatar a {
   background-color: transparent;
@@ -781,7 +782,7 @@ ol.years > .year {
   display: flex;
   justify-content: center;
 }
-.person-avatar--is-author .person-avatarInitials {
+.person-avatar--is-highlighted .person-avatarInitials {
   color: var(--avatar-author-foreground-color);
 }
 .person-avatarInitials:not(lang[he]) {

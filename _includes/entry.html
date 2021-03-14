@@ -24,8 +24,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% include person_data.html person_key=author_key
                             itemprop="author" -%}
 
-{% include people.html people_keys=entry.all_people_keys
-                       highlighted_person_key=author_key -%}
+{% include people_avatars.html people_keys=entry.all_people_keys
+                               highlighted_person_key=author_key -%}
 {% if entry.category == "correspondence" -%}
 <p>
   Letter from
