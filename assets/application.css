@@ -682,6 +682,9 @@ ol.years > .year {
 .annotations-footnotes {
   grid-area: secondary;
 }
+.secondary .annotations + .annotations {
+  margin-top: calc(var(--vertical-rhythm) * 3);
+}
 
 .source-material em,
 .source-material strong {

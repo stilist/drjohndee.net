@@ -148,6 +148,13 @@ module HistoricalDiary
       dates.uniq.sort
     end
 
+    def dates_for_source(key)
+      dates = @context.registers[:site]
+        .data['dates_for_sources'][key]
+      return [] if dates.nil?
+      dates.uniq.sort
+    end
+
     def date_to_url(date)
       # @see `HistoricalDiary::DayPage`
       date.strftime('/%Y/%m/%d.html')

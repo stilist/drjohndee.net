@@ -168,12 +168,17 @@ module HistoricalDiary
       end
 
       dates_for_people = {}
+      dates_for_sources = {}
       pages_by_timestamp.each do |timestamp, documents|
         timestamp_range = TimestampRange.new(timestamp)
 
         documents.each do |source_key, document|
           # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
           document.data['sitemap'] = false
+
+          escaped_source_key = escape_key(source_key)
+          dates_for_sources[escaped_source_key] ||= []
+          dates_for_sources[escaped_source_key].concat(timestamp_range.dates)
 
           people_for_document = document.data['people'] || []
           # @note This doesn't include the `author_key` associated with the
@@ -187,10 +192,9 @@ module HistoricalDiary
           end
           people_for_document.map! { |key| escape_key(key) }
           people_for_document.uniq!
-          dates = timestamp_range.dates
           people_for_document.each do |key|
             dates_for_people[key] ||= []
-            dates_for_people[key].concat(dates)
+            dates_for_people[key].concat(timestamp_range.dates)
           end
           document.data['all_people_keys'] = people_for_document
 
@@ -231,6 +235,8 @@ module HistoricalDiary
 
       @site.data['dates_for_people'] = dates_for_people
       @site.data['dates_for_people'].freeze
+      @site.data['dates_for_sources'] = dates_for_sources
+      @site.data['dates_for_sources'].freeze
 
       sorted_date_hash = generated_dates.sort.to_h.freeze
       sorted_documents = sorted_date_hash.values
