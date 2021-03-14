@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `Person` class to centralize functionality
 - Link all people and sources from home page
 - Link relevant dates on source pages
+- Begin adding biography for John Dee from Charlotte Fell Smith’s book ‘John Dee’
 
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes
