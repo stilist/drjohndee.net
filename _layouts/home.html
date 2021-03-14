@@ -39,4 +39,28 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
     {% endfor -%}
   </ol>
+
+  {% if site.data.people.size > 0 -%}
+  <h2>Browse by person</h2>
+  <ul class="grouping people">
+    {% assign sorted_keys = site.data.people | hash_keys | sorted_people_keys -%}
+    {% for person_key in sorted_keys -%}
+    <li class="grouping-item person">
+      {% include person_link.html person_key=person_key -%}
+    </li>
+    {% endfor -%}
+  </ul>
+  {% endif -%}
+
+  {% if site.data.sources.size > 0 -%}
+  <h2>Browse by source</h2>
+  <ul class="grouping sources">
+    {% assign sorted_keys = site.data.sources | hash_keys | sort -%}
+    {% for source_key in sorted_keys -%}
+    <li class="grouping-item source">
+      {% include source_link.html source_key=source_key -%}
+    </li>
+    {% endfor -%}
+  </ul>
+  {% endif -%}
 </div>

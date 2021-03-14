@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add `hash_keys`, `sort_hash`, and `sorted_people_keys` Liquid filters
 - Add `Person` class to centralize functionality
+- Link all people and sources from home page
 
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes
