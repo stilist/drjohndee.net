@@ -69,7 +69,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </span>
   {% endif -%}
 
+  {% if entry.source_key -%}<blockquote>{% endif -%}
   <p>{{ content_as_html }}</p>
+  {% if entry.source_key -%}</blockquote>{% endif -%}
 </div>
 
 <span class="citation"
