@@ -797,6 +797,6 @@ ol.years > .year {
   outline: auto;
   outline-color: var(--highlight-outline-color);
 }
-.person-avatar--is-author .is-highlighted {
+.person-avatar--is-highlighted .is-highlighted {
   background-color: var(--highlight-alternate-background-color);
 }
