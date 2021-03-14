@@ -19,6 +19,7 @@
 require 'jekyll'
 require_relative '../_lib/collections'
 require_relative '../_lib/legal_year'
+require_relative '../_lib/person'
 require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
@@ -284,41 +285,8 @@ module HistoricalDiary
         sub('..', '.') + '.'
     end
 
-    # This extracts word-initial characters in an internationalized, RTL-safe
-    # way, using `#unicode_normalize` and `#each_grapheme_cluster`.
-    #
-    # Examples:
-    #   "test" => "t"
-    #   "Test Abc" => "TA"
-    #   "חַנִּיאֵל" => "חַ"
-    def person_initials(key, maximum_characters = 2)
-      person_name(key)
-        .split(' ')
-        .map { |word| word.unicode_normalize(:nfc).each_grapheme_cluster.first }
-        .first(maximum_characters)
-        .join('')
-    end
-
     def person_link(key, display_text)
       data_record_link('people', key, display_text)
-    end
-
-    # @note This returns the name in the order the parts are written in the
-    #   data file--if data is ordered with `familyName` before `givenName`,
-    #   the output will also have `familyName` first. This helps a bit with
-    #   internationalization, as some cultures (like Chinese and Hungarian)
-    #   prefer the family name first, and others (like Australian and Spanish).
-    #   It's not a substitute for proper internationalization support, though.
-    def person_name(key, name_key = 'presentational_name')
-      return '' if key.nil?
-
-      record = person_data(key)
-      return '' if record.nil?
-
-      parts = record[name_key]&.values
-      return '' if parts.nil?
-
-      parts.join(' ')
     end
 
     def person_reference(key, display_text)

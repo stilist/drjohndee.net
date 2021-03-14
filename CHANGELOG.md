@@ -6,10 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Add `hash_keys` and `sort_hash` Liquid filters
+- Add `hash_keys`, `sort_hash`, and `sorted_people_keys` Liquid filters
+- Add `Person` class to centralize functionality
 
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes
+- Redefine `person_initials` and `person_name` Liquid filters to use `Person` class
 
 ## [1.0.9] - 2021-03-13
 ### Added
