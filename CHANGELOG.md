@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor `mla_citation` Liquid filter to use `attribute_from_object_or_source_record`
 
 ### Fixed
-- Improve structure of source page
+- Improve structure of person and source pages
 
 ### Removed
 - Remove `get_author_key` Liquid filter -- its function is better done with the `attribute_from_object_or_source_record` filter

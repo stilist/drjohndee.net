@@ -18,8 +18,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% assign biography_data = include.person_key | biography_for_person -%}
 {% if biography_data.size > 0 -%}
-<div class="page-content"
-     itemprop=articleBody>
 <h3>Biography and relevant history</h3>
 <ul class="entries h-entry">
 {% for biography in biography_data -%}
@@ -36,9 +34,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                                   location=biography.location
                                   volume=biography.volume -%}
       {{ biography.source_key | mla_citation: biography.location,
-                                          biography.edition_key,
-                                          biography.volume_key,
-                                          biography.author_key }}
+                                              biography.edition_key,
+                                              biography.volume_key,
+                                              biography.author_key }}
     </span>
   </li>
 {% endfor -%}
