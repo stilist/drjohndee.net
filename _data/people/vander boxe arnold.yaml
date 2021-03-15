@@ -13,7 +13,9 @@ full_name:
     type: givenName
     id: "https://www.wikidata.org/entity/Q16766249"
   - text: vander
-    type: https://w3id.org/pnv#surnamePrefix
+    type: additionalName
+    additionalType: https://w3id.org/pnv#surnamePrefix
     id: "https://www.wikidata.org/entity/Q1258618"
   - text: Boxe
-    type: https://w3id.org/pnv#baseSurname
+    type: familyName
+    additionalType: https://w3id.org/pnv#baseSurname
