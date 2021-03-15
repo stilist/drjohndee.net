@@ -1,0 +1,33 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q1677561"
+presentational_name:
+  givenName: Jacob
+  familyName: Kurz
+full_name:
+  - text: Geheimrat
+    type: jobTitle
+    id: "https://www.wikidata.org/entity/Q11165895"
+  - text: Baron
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q165503"
+  - text: Jacob
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q25999604"
+  - text: Kurz
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q12031963"
+  - text: von
+    type: additionalName
+    additionalType: https://w3id.org/pnv#surnamePrefix
+    id: "https://www.wikidata.org/entity/Q69870160"
+  - text: Senftenau
+    type: familyName
+    additionalType: https://w3id.org/pnv#baseSurname
+birth_date: "1553"
+death_date: "1594-03-11"

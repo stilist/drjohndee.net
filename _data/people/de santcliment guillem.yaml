@@ -12,19 +12,30 @@ presentational_name:
 full_name:
   - text: Guillem
     type: givenName
+    language: "ca"
     id: "https://www.wikidata.org/entity/Q1553978"
   - text: de
-    type: https://w3id.org/pnv#surnamePrefix
+    type: familyName
+    additionalType: https://w3id.org/pnv#surnamePrefix
+    language: "ca"
     id: "https://www.wikidata.org/entity/Q11071485"
   - text: Santcliment
-    type: https://w3id.org/pnv#baseSurname
+    type: familyName
+    additionalType: https://w3id.org/pnv#baseSurname
+    language: "ca"
     id: "https://www.wikidata.org/entity/Q41029859"
   - text: i
-    type: https://w3id.org/pnv#surnamePrefix
+    type: familyName
+    additionalType: https://w3id.org/pnv#surnamePrefix
+    language: "ca"
   - text: de
-    type: https://w3id.org/pnv#surnamePrefix
+    type: familyName
+    additionalType: https://w3id.org/pnv#surnamePrefix
+    language: "ca"
     id: "https://www.wikidata.org/entity/Q11071485"
   - text: Centelles
-    type: https://w3id.org/pnv#baseSurname
+    type: familyName
+    additionalType: https://w3id.org/pnv#baseSurname
+    language: "ca"
     id: "https://www.wikidata.org/entity/Q41029908"
 death_date: "1608-09-03"
