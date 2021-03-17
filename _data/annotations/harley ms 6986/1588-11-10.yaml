@@ -39,7 +39,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Elizabeth I" | person_link: "\1" }}
+        {{ "Queen Elizabeth I" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "Most Gratious Soueraine Lady"

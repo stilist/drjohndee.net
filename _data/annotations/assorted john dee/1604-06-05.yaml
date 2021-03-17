@@ -96,7 +96,7 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "James VI and I" | person_reference: "\1" }}
+        {{ "King James VI and I" | person_reference: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "the Kings moſt excellent maieſtie"
