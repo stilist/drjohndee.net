@@ -16,26 +16,26 @@ full_name:
     id: "https://www.wikidata.org/entity/Q1553978"
   - text: de
     type: familyName
-    additionalType: https://w3id.org/pnv#surnamePrefix
+    additionalType: "https://w3id.org/pnv#surnamePrefix"
     language: "ca"
     id: "https://www.wikidata.org/entity/Q11071485"
   - text: Santcliment
     type: familyName
-    additionalType: https://w3id.org/pnv#baseSurname
+    additionalType: "https://w3id.org/pnv#baseSurname"
     language: "ca"
     id: "https://www.wikidata.org/entity/Q41029859"
   - text: i
     type: familyName
-    additionalType: https://w3id.org/pnv#surnamePrefix
+    additionalType: "https://w3id.org/pnv#surnamePrefix"
     language: "ca"
   - text: de
     type: familyName
-    additionalType: https://w3id.org/pnv#surnamePrefix
+    additionalType: "https://w3id.org/pnv#surnamePrefix"
     language: "ca"
     id: "https://www.wikidata.org/entity/Q11071485"
   - text: Centelles
     type: familyName
-    additionalType: https://w3id.org/pnv#baseSurname
+    additionalType: "https://w3id.org/pnv#baseSurname"
     language: "ca"
     id: "https://www.wikidata.org/entity/Q41029908"
 death_date: "1608-09-03"
