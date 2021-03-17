@@ -19,7 +19,7 @@ full_name:
     id: "https://www.wikidata.org/entity/Q1258618"
   - text: Meulen
     type: familyName
-    id: "http://www.wikidata.org/entity/Q25126061"
+    id: "https://www.wikidata.org/entity/Q25126061"
 birth_date: "1554-10-25"
 # @see https://www.jessesadler.com/project/dvdm-correspondence/
 death_date: "1600"

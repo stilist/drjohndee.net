@@ -15,6 +15,6 @@ full_name:
     id: "https://www.wikidata.org/entity/Q18282500"
   - text: Mercator
     type: familyName
-    id: "http://www.wikidata.org/entity/Q83372750"
+    id: "https://www.wikidata.org/entity/Q83372750"
 birth_date: "1512-03-05"
 death_date: "1594-12-02"
