@@ -11,6 +11,9 @@ presentational_name:
   familyName: Cecil
   additionalName: 1st Baron Burghley
 full_name:
+  - text: Lord High Treasurer
+    type: jobTitle
+    id: "https://www.wikidata.org/entity/Q944583"
   - text: William
     type: givenName
     id: "https://www.wikidata.org/entity/Q12344159"
@@ -22,8 +25,5 @@ full_name:
   - text: Baron Burghley
     type: additionalName
     additionalType: "https://w3id.org/pnv#honorificSuffix"
-  - text: Lord High Treasurer
-    type: jobTitle
-    id: "https://www.wikidata.org/entity/Q944583"
 birth_date: "1520-09-13"
 death_date: "1598-08-04"
