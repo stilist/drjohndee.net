@@ -37,4 +37,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
   </a>
 </div>
+{% else -%}
+<div class="person-avatar {{ highlighted_class }}">
+  {% assign link_attributes = include.person_key | data_record_tag_attributes: "people" -%}
+  {% assign person_permalink = include.person_key | collection_entry_url: "people" -%}
+  <span
+     lang="{{ person_record.name_language }}" translate
+     class="{{ link_attributes.class }}"
+     data-key="{{ link_attributes.dataKey }}">
+    <span class="person-avatarInitials"
+          aria-hidden="true">{{ person_key | person_initials | upcase }}</span>
+    <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
+  </span>
+</div>
 {% endif -%}

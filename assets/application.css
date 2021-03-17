@@ -754,6 +754,7 @@ ol.years > .year {
 }
 .person-avatar {
   background-color: var(--avatar-background-color);
+  cursor: default;
   position: relative;
 }
 .person-avatar--is-highlighted {

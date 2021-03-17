@@ -38,8 +38,10 @@ module HistoricalDiary
     #   "Test Abc" => "TA"
     #   "חַנִּיאֵל" => "חַ"
     def name_initials(maximum_characters = 2)
-      parts = record['presentational_name']&.values
-      return '' if parts.nil?
+      parts = if record.nil? then key.split(/[^[:alpha:]]+/)
+              else record['presentational_name']&.values
+              end
+      return if parts.nil?
 
       parts.map { |word| word.unicode_normalize(:nfc).each_grapheme_cluster.first }
         .first(maximum_characters)

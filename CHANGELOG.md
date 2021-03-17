@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Begin adding biography for John Dee from Charlotte Fell Smith’s book ‘John Dee’
 - Continue adding entries and letters
 - Tag people in lots of entries
+- Adjust `people_avatar` include and `Person#name_initials` to handle `people` keys that don't have a corresponding data file
 
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes
