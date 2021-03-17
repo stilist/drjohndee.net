@@ -1,0 +1,20 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q45792"
+presentational_name:
+  jobTitle: King
+  givenName: Arthur
+full_name:
+  - text: Arthur
+    type: givenName
+    language: "cy"
+    id: "https://www.wikidata.org/entity/Q1778168"
+  - text: King of the Britons
+    type: jobTitle
+    language: "en"
+    id: "https://www.wikidata.org/entity/Q4434376"

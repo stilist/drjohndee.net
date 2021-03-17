@@ -1,0 +1,29 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q3459641"
+presentational_name:
+  givenName: Peregrine
+  familyName: Bertie
+  additionalName: Baron Willoughby de Eresby
+full_name:
+  - text: Peregrine
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q19870718"
+  - text: Bertie
+    type: familyName
+    language: "en"
+    id: "https://www.wikidata.org/entity/Q16833343"
+  - text: 13th
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: Baron Willoughby de Eresby
+    type: additionalName
+    id: "https://www.wikidata.org/entity/Q808681"
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
+birth_date: "1555-10-12"
+death_date: "1601-06-25"
