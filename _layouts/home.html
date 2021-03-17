@@ -47,6 +47,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% for person_key in sorted_keys -%}
     <li class="grouping-item person">
       {% include person_link.html person_key=person_key -%}
+      {% assign related_dates = person_key | dates_for_person -%}
+      {% if related_dates.size == 1 -%}
+      (1 appearance)
+      {% else -%}
+      ({{ related_dates.size }} appearances)
+      {% endif -%}
     </li>
     {% endfor -%}
   </ul>

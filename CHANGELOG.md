@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `dates_for_source`, `hash_keys`, `sort_hash`, and `sorted_people_keys` Liquid filters
 - Add `Person` class to centralize functionality
 - Link all people and sources from home page
+- Note how many times each person appears in entries (based on `people` key)
 - Link relevant dates on source pages
 - Begin adding biography for John Dee from Charlotte Fell Smith’s book ‘John Dee’
 - Continue adding entries and letters
