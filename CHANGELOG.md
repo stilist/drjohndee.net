@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename `attribute_from_record` Liquid filter to `attribute_from_object_or_source_record`
 - Refactor `mla_citation` Liquid filter to use `attribute_from_object_or_source_record`
 - Wrap source material in `<blockquote>` tag, to consistently indicate quoted text
+- Convert additional properties from physical to logical: `margin`, `padding`, `height`, `width`, `bottom`, `top`
 
 ### Fixed
 - Improve structure of person and source pages

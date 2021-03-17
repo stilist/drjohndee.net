@@ -275,10 +275,10 @@
   --column-count: calc(var(--primary-column-count)
                      + var(--spacing-column-count)
                      + var(--secondary-column-count));
-  --column-width: 5rem;
-  --gutter-width: calc(var(--column-width) / 10);
-  --content-width: calc(var(--column-count) * var(--column-width)
-                      + calc(var(--column-count) - 1) * var(--gutter-width));
+  --column-inline-size: 5rem;
+  --gutter-inline-size: calc(var(--column-inline-size) / 10);
+  --content-inline-size: calc(var(--column-count) * var(--column-inline-size)
+                            + calc(var(--column-count) - 1) * var(--gutter-inline-size));
   --content-grid-rows: auto auto auto auto;
   --content-grid-areas:
     "header     header     header     header     header     header     header     header     header     header secondary secondary secondary secondary secondary"
@@ -286,37 +286,37 @@
     "commentary commentary commentary commentary commentary commentary commentary commentary commentary    .   secondary secondary secondary secondary secondary"
     "context    context    context    context    context    context    context    context    context       .   secondary secondary secondary secondary secondary";
 
-  --vertical-rhythm: calc(var(--gutter-width) * 2);
+  --vertical-rhythm: calc(var(--gutter-inline-size) * 2);
 
   --calendar-column-count: 10;
   --calendar-month-column-count: 3;
-  --calendar-gap: calc(calc(var(--column-width) / 4)
-                     + calc(var(--gutter-width) * 2));
-  --calendar-month-width: calc(var(--calendar-month-column-count) * var(--column-width)
-                             + calc(var(--calendar-month-column-count) - 1) * var(--gutter-width));
-  /* one week per row; used as both width and height to make cells square */
-  --calendar-day-size: calc(var(--calendar-month-width) / 7);
+  --calendar-gap: calc(calc(var(--column-inline-size) / 4)
+                     + calc(var(--gutter-inline-size) * 2));
+  --calendar-month-inline-size: calc(var(--calendar-month-column-count) * var(--column-inline-size)
+                                   + calc(var(--calendar-month-column-count) - 1) * var(--gutter-inline-size));
+  /* one week per row; used as both inline-size and block-size to make cells square */
+  --calendar-day-size: calc(var(--calendar-month-inline-size) / 7);
 
-  --avatar-border-width: 2px;
+  --avatar-border-inline-size: 2px;
   --avatar-size: calc(var(--vertical-rhythm) * 2);
 
-  --image-width: calc(4 * var(--column-width)
-               + calc(4 - 1) * var(--gutter-width));
+  --image-inline-size: calc(4 * var(--column-inline-size)
+                          + calc(4 - 1) * var(--gutter-inline-size));
 }
-@media (min-width: 2200px) {
+@media (min-inline-size: 2200px) {
   :root {
-    --column-width: 7rem;
+    --column-inline-size: 7rem;
   }
 }
-@media (max-width: 960px) {
+@media (max-inline-size: 960px) {
   :root {
     --base-font-size: 20px;
-    --body-side-spacing: calc(var(--gutter-width) * 2);
+    --body-side-spacing: calc(var(--gutter-inline-size) * 2);
     --content-line-height: calc(var(--vertical-rhythm) * 2.5);
     --primary-column-count: 5;
     --secondary-column-count: 0;
     --spacing-column-count: 0;
-    --column-width: 18.5vw;
+    --column-inline-size: 18.5vw;
     --content-grid-areas:
       "header     header     header     header     header"
       "content    content    content    content    content"
@@ -352,14 +352,16 @@ html {
 }
 body {
   background-color: var(--background-color);
-  color: var(--foreground-color);
   color-scheme: light dark;
+  color: var(--foreground-color);
   font-family: var(--font-sans-serif);
   line-height: 1rem;
-  margin: calc(var(--vertical-rhythm) * 3) var(--body-side-spacing)
-          calc(var(--vertical-rhythm) * 2) var(--body-side-spacing);
-  min-height: 100vh;
-  max-width: var(--content-width);
+  margin-block-end: calc(var(--vertical-rhythm) * 2);
+  margin-block-start: calc(var(--vertical-rhythm) * 3);
+  margin-inline-end: var(--body-side-spacing);
+  margin-inline-start: var(--body-side-spacing);
+  max-inline-size: var(--content-inline-size);
+  min-block-size: 100vh;
 }
 
 a {
@@ -383,7 +385,7 @@ a:focus {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-  margin-bottom: var(--vertical-rhythm);
+  margin-block-end: var(--vertical-rhythm);
 }
 ol,
 ul {
@@ -392,33 +394,39 @@ ul {
 ol > li,
 ul > li {
   line-height: var(--vertical-rhythm);
-  margin-bottom: var(--vertical-rhythm);
+  margin-block-end: var(--vertical-rhythm);
 }
 blockquote {
   color: var(--blockquote-content-color);
-  padding-inline-start: calc(var(--gutter-width));
+  padding-inline-start: calc(var(--gutter-inline-size));
   position: relative;
 }
 blockquote::before {
   background-color: var(--blockquote-border-color);
-  bottom: 0;
   content: '';
+  inline-size: 4px;
+  inset-block-end: 0;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--gutter-inline-size) * -0.5);
   position: absolute;
-  top: 0;
-  width: 4px;
+}
+@supports not (inset-block-end: 0) {
+  blockquote::before {
+    bottom: 0;
+  }
+}
+@supports not (inset-block-start: 0) {
+  blockquote::before {
+    top: 0;
+  }
 }
 @supports not (inset-inline-start: 0) {
   blockquote::before {
-    left: calc(var(--gutter-width) * -0.5);
-  }
-}
-@supports (inset-inline-start: 0) {
-  blockquote::before {
-    inset-inline-start: calc(var(--gutter-width) * -0.5);
+    left: calc(var(--gutter-inline-size) * -0.5);
   }
 }
 blockquote > :last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 h1,
 h2 {
@@ -427,27 +435,23 @@ h2 {
 }
 h2 {
   line-height: calc(var(--vertical-rhythm) * 1.2);
-  margin: calc(var(--vertical-rhythm) * 1.8) 0
-          calc(var(--vertical-rhythm) * 0.8);
+  margin-block-end: calc(var(--vertical-rhythm) * 0.8);
+  margin-block-start: calc(var(--vertical-rhythm) * 1.8);
 }
 hr {
-  border: 0;
   background-color: var(--foreground-color);
-  height: 1px;
-  margin-bottom: calc(var(--vertical-rhythm) * 1.5);
+  block-size: 1px;
+  border: 0;
+  inline-size: 30%;
+  inset-inline-start: 50%;
+  margin-block-end: calc(var(--vertical-rhythm) * 1.5);
+  margin-block-start: calc(var(--vertical-rhythm) * 1.45);
   margin-inline-start: -15%;
-  margin-top: calc(var(--vertical-rhythm) * 1.45);
   position: relative;
-  width: 30%;
 }
 @supports not (inset-inline-start: 0) {
   hr {
     left: 50%;
-  }
-}
-@supports (inset-inline-start: 0) {
-  hr {
-    inset-inline-start: 50%;
   }
 }
 
@@ -465,17 +469,17 @@ sup {
 
 /* @see https://webaim.org/techniques/css/invisiblecontent/ */
 .is-assistiveOnly {
-  height: 1px;
+  block-size: 1px;
   left: -1px;
   overflow: hidden;
   position: absolute;
   top: auto;
-  width: 1px;
+  inline-size: 1px;
 }
 
 
 #site-header {
-  margin-bottom: calc((var(--vertical-rhythm) * 3.8));
+  margin-block-end: calc((var(--vertical-rhythm) * 3.8));
 }
 #site-header h1 {
   cursor: default;
@@ -483,7 +487,7 @@ sup {
   font-weight: 700;
   line-height: calc(var(--vertical-rhythm) * 2.8);
   margin: 0;
-  padding-bottom: calc(var(--vertical-rhythm) * 0.2);
+  padding-block-end: calc(var(--vertical-rhythm) * 0.2);
   text-align: start;
 }
 
@@ -494,11 +498,11 @@ sup {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  max-width: calc(var(--column-width)
-                  * var(--primary-column-count));
+  max-inline-size: calc(var(--column-inline-size)
+                      * var(--primary-column-count));
 }
 .year {
-  width: var(--column-width);
+  inline-size: var(--column-inline-size);
 }
 ol.years > .year {
   line-height: calc(var(--vertical-rhythm) * 2);
@@ -506,17 +510,17 @@ ol.years > .year {
 
 
 .page {
-  column-gap: var(--gutter-width);
+  column-gap: var(--gutter-inline-size);
   display: grid;
   grid-template-columns: repeat(auto-fit,
-                                var(--column-width));
+                                var(--column-inline-size));
   grid-template-rows: var(--content-grid-rows);
   grid-template-areas: var(--content-grid-areas);
-  max-width: var(--content-width);
+  max-inline-size: var(--content-inline-size);
 }
 .page-header {
   grid-area: header;
-  margin-bottom: calc(var(--vertical-rhythm) * 1.9);
+  margin-block-end: calc(var(--vertical-rhythm) * 1.9);
 }
 .page-name,
 .page-nextPrevious {
@@ -526,8 +530,8 @@ ol.years > .year {
 .page-name {
   font-size: 2.625rem;
   font-weight: 700;
-  margin-bottom: calc(var(--vertical-rhythm) * 2);
-  margin-top: 0;
+  margin-block-end: calc(var(--vertical-rhythm) * 2);
+  margin-block-start: 0;
   position: relative;
 }
 .page-name .dt-published {
@@ -535,21 +539,21 @@ ol.years > .year {
 }
 .page-nextPrevious {
   align-items: stretch;
+  block-size: calc(var(--vertical-rhythm) * 3);
   flex-direction: column;
-  height: calc(var(--vertical-rhythm) * 3);
+  inline-size: calc(var(--column-inline-size) * 2);
   padding-inline-start: 1rem;
   vertical-align: top;
-  width: calc(var(--column-width) * 2);
 }
 .page-nextPrevious--isNext,
 .page-nextPrevious--isPrevious {
   display: block;
   flex-grow: 1;
-  /* half of container's `line-height` */
-  height: calc(var(--vertical-rhythm) * 1.5);
-  line-height: calc(var(--vertical-rhythm) * 1.5);
+  inline-size: 100%;
   position: relative;
-  width: 100%;
+  /* half of container's `line-height` */
+  block-size: calc(var(--vertical-rhythm) * 1.5);
+  line-height: calc(var(--vertical-rhythm) * 1.5);
 }
 .page-nextPrevious--isNext {
   align-self: end;
@@ -565,45 +569,40 @@ ol.years > .year {
 }
 .entries {
   list-style: none;
-  margin-bottom: 0;
-  margin-bottom: calc(var(--vertical-rhythm) * 5);
+  margin-block-end: calc(var(--vertical-rhythm) * 5);
   position: relative;
 }
 .entries::after {
   content: '';
   display: block;
-  border-bottom: 1px solid var(--foreground-color);
+  border-block-end: 1px solid var(--foreground-color);
   bottom: calc(var(--vertical-rhythm) * -2.5);
+  inline-size: 30%;
+  inset-inline-start: 50%;
   margin-inline-start: -15%;
   position: absolute;
-  width: 30%;
 }
 @supports not (inset-inline-start: 0) {
   .entries::after {
     left: 50%;
   }
 }
-@supports (inset-inline-start: 0) {
-  .entries::after {
-    inset-inline-start: 50%;
-  }
-}
 .entries .entry {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 .entry + .entry {
-  margin-top: calc(var(--vertical-rhythm) * 2.2);
+  margin-block-start: calc(var(--vertical-rhythm) * 2.2);
 }
 .entry .citation {
   display: block;
   line-height: var(--content-line-height);
-  margin-bottom: calc(var(--vertical-rhythm) * 0.8);
+  margin-block-end: calc(var(--vertical-rhythm) * 0.8);
 }
 .entries .page-content:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 .entry img {
-  max-width: var(--image-width);
+  max-inline-size: var(--image-inline-size);
 }
 
 .consecration {
@@ -616,7 +615,7 @@ ol.years > .year {
 .page-content {
   grid-area: content;
   line-height: 1.6rem;
-  margin-bottom: calc(var(--vertical-rhythm) * 1.2);
+  margin-block-end: calc(var(--vertical-rhythm) * 1.2);
 }
 .page-content--isCalendarYear {
   grid-column: span var(--calendar-column-count);
@@ -625,19 +624,19 @@ ol.years > .year {
   font-size: 1.3rem;
 }
 .page-content blockquote {
-  margin-bottom: var(--vertical-rhythm);
-  margin-top: var(--vertical-rhythm);
+  margin-block-end: var(--vertical-rhythm);
+  margin-block-start: var(--vertical-rhythm);
 }
 .page-content p {
-  margin-bottom: calc(var(--vertical-rhythm) * 1);
+  margin-block-end: calc(var(--vertical-rhythm) * 1);
 }
 .page-content p:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 .page-content p.missing-content {
   font-family: var(--font-sans-serif);
   font-style: italic;
-  margin-bottom: calc(var(--vertical-rhythm) * 3.2);
+  margin-block-end: calc(var(--vertical-rhythm) * 3.2);
 }
 .page-content li {
   line-height: calc(var(--vertical-rhythm) * 2);
@@ -649,26 +648,26 @@ ol.years > .year {
 
 .annotations h1 {
   line-height: calc(var(--vertical-rhythm) * 1.9);
-  margin-bottom: calc(var(--vertical-rhythm) * 2);
+  margin-block-end: calc(var(--vertical-rhythm) * 2);
 }
 .annotations li {
   list-style: none;
 }
 .annotations li + li {
-  margin-top: calc(var(--vertical-rhythm) * 1.9);
+  margin-block-start: calc(var(--vertical-rhythm) * 1.9);
 }
 .annotations blockquote {
   font-family: var(--font-serif);
   font-size: 1.2rem;
-  margin-top: calc(var(--vertical-rhythm) * 0.1);
+  margin-block-start: calc(var(--vertical-rhythm) * 0.1);
 }
 .annotations blockquote::before {
-  width: 2px;
+  inline-size: 2px;
 }
 .annotations figcaption {
   font-size: 0.9rem;
   line-height: var(--content-line-height);
-  margin-top: calc(var(--vertical-rhythm) * 1.1);
+  margin-block-start: calc(var(--vertical-rhythm) * 1.1);
 }
 .annotations-commentary {
   grid-area: commentary;
@@ -683,51 +682,51 @@ ol.years > .year {
   grid-area: secondary;
 }
 .secondary .annotations + .annotations {
-  margin-top: calc(var(--vertical-rhythm) * 3);
+  margin-block-start: calc(var(--vertical-rhythm) * 3);
 }
 
 .source-material em,
 .source-material strong {
-  text-decoration-line: underline;
   font-style: normal;
+  text-decoration-line: underline;
 }
 .source-material strong {
   text-decoration-style: double;
 }
 
 #site-footer {
-  margin-top: calc(var(--vertical-rhythm) * 5);
+  margin-block-start: calc(var(--vertical-rhythm) * 5);
 }
 
 .calendar {
   display: flex;
-  gap: var(--calendar-gap);
   flex-wrap: wrap;
-  list-style: none;
+  gap: var(--calendar-gap);
   justify-content: flex-start;
+  list-style: none;
 }
 .calendar-month {
-  margin-bottom: 0;
-  width: var(--calendar-month-width);
+  inline-size: var(--calendar-month-inline-size);
+  margin-block-end: 0;
 }
 .calendar-monthName {
   display: block;
 }
 .calendar-date {
   cursor: default;
-  height: var(--calendar-day-size);
+  block-size: var(--calendar-day-size);
+  inline-size: var(--calendar-day-size);
   /* vertically center text */
   line-height: var(--calendar-day-size);
   text-align: center;
-  width: var(--calendar-day-size);
 }
 .calendar-date a {
   align-items: center;
+  block-size: var(--calendar-day-size);
   color: var(--calendar-highlight-foreground-color);
   display: flex;
-  height: var(--calendar-day-size);
+  inline-size: var(--calendar-day-size);
   justify-content: center;
-  width: var(--calendar-day-size);
 }
 .calendar-date--filler {
   color: var(--calendar-filler-color);
@@ -741,16 +740,16 @@ ol.years > .year {
   list-style: none;
 }
 .people-avatars li + li {
-  margin-inline-start: var(--gutter-width);
+  margin-inline-start: var(--gutter-inline-size);
 }
 
 .person-avatar,
 .person-avatar a,
 .person-avatarInitials {
+  block-size: var(--avatar-size);
   border-radius: 50%;
-  height: var(--avatar-size);
+  inline-size: var(--avatar-size);
   line-height: var(--avatar-size);
-  width: var(--avatar-size);
 }
 .person-avatar {
   background-color: var(--avatar-background-color);
@@ -762,20 +761,16 @@ ol.years > .year {
 }
 .person-avatar a {
   background-color: transparent;
-  border: var(--avatar-border-width) solid currentColor;
+  border: var(--avatar-border-inline-size) solid currentColor;
   display: block;
+  inset-inline-start: calc(var(--avatar-border-inline-size) * -1);
   position: absolute;
   text-decoration: none;
-  top: calc(var(--avatar-border-width) * -1);
+  top: calc(var(--avatar-border-inline-size) * -1);
 }
 @supports not (inset-inline-start: 0) {
   .person-avatar a {
-    left: calc(var(--avatar-border-width) * -1);
-  }
-}
-@supports (inset-inline-start: 0) {
-  .person-avatar a {
-    inset-inline-start: calc(var(--avatar-border-width) * -1);
+    left: calc(var(--avatar-border-inline-size) * -1);
   }
 }
 .person-avatarInitials {
