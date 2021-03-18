@@ -54,7 +54,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endif -%}
     </h2>
 
-    <h3 class="page-subtitle">
+    <p class="page-subtitle">
       <span class="name-and-title">
         {% for part in record.full_name -%}
         <span itemprop="{{ part.type }}"
@@ -66,13 +66,16 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% if record.birth_date or record.death_date -%}
       <time itemprop=birthDate>{{ record.birth_date | default: "?" }}</time>/<time itemprop=deathDate>{{ record.death_date | default: "?" }}</time>
       {% endif -%}
-    </h3>
+    </p>
   </header>
 
+  {% assign biography_data = page.person_key | biography_for_person -%}
+  {% if biography_data.size > 0 -%}
   <article class="page-content"
            itemprop=articleBody>
     {% include biography.html person_key=page.person_key -%}
   </article>
+  {% endif -%}
 
   <div class='secondary'>
     {% assign related_dates = page.person_key | dates_for_person -%}

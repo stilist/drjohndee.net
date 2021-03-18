@@ -22,11 +22,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <ul class="entries h-entry">
 {% for biography in biography_data -%}
   {% assign language = biography | attribute_from_object_or_source_record: "language" -%}
-  <li class="entry"
-      lang="{{ language }}" translate>
-    {% if biography.source_key -%}<blockquote>{% endif -%}
-    <p>{{ biography.text | liquify }}</p>
-    {% if biography.source_key -%}</blockquote>{% endif -%}
+  <li class="entry">
+    <div class="source-material e-content"
+         lang="{{ language }}" translate>
+      {% if biography.source_key -%}<blockquote>{% endif -%}
+      <p>{{ biography.text | liquify }}</p>
+      {% if biography.source_key -%}</blockquote>{% endif -%}
+    </div>
 
     <span class="citation"
           itemprop=citation

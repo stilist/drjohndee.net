@@ -435,7 +435,7 @@ h2 {
 }
 h2 {
   line-height: calc(var(--vertical-rhythm) * 1.2);
-  margin-block-end: calc(var(--vertical-rhythm) * 0.8);
+  margin-block-end: calc(var(--vertical-rhythm) * 1.45);
   margin-block-start: calc(var(--vertical-rhythm) * 1.8);
 }
 hr {
@@ -520,7 +520,13 @@ ol.years > .year {
 }
 .page-header {
   grid-area: header;
-  margin-block-end: calc(var(--vertical-rhythm) * 1.9);
+  margin-block-end: calc(var(--vertical-rhythm) * 2.15);
+  /* `header` section in grid template is intentionally one column too wide
+     because grid doesn't seem to allow a completely empty column. This padding
+     compensates by adjusting the header width to visually create the empty
+     column. */
+  padding-inline-end: calc(var(--column-inline-size)
+                         + var(--gutter-inline-size));
 }
 .page-name,
 .page-nextPrevious {
@@ -530,9 +536,14 @@ ol.years > .year {
 .page-name {
   font-size: 2.625rem;
   font-weight: 700;
-  margin-block-end: calc(var(--vertical-rhythm) * 2);
+  margin-block-end: calc(var(--vertical-rhythm) * -0.1);
   margin-block-start: 0;
   position: relative;
+}
+.page-subtitle {
+  font-weight: bold;
+  line-height: calc(var(--vertical-rhythm) * 2);
+  margin-block-end: 0;
 }
 .page-name .dt-published {
   padding-inline-end: 2px;
@@ -569,29 +580,13 @@ ol.years > .year {
 }
 .entries {
   list-style: none;
-  margin-block-end: calc(var(--vertical-rhythm) * 5);
   position: relative;
-}
-.entries::after {
-  content: '';
-  display: block;
-  border-block-end: 1px solid var(--foreground-color);
-  bottom: calc(var(--vertical-rhythm) * -2.5);
-  inline-size: 30%;
-  inset-inline-start: 50%;
-  margin-inline-start: -15%;
-  position: absolute;
-}
-@supports not (inset-inline-start: 0) {
-  .entries::after {
-    left: 50%;
-  }
 }
 .entries .entry {
   margin-block-end: 0;
 }
 .entry + .entry {
-  margin-block-start: calc(var(--vertical-rhythm) * 2.2);
+  margin-block-start: calc(var(--vertical-rhythm) * 1.8);
 }
 .entry .citation {
   display: block;
@@ -615,17 +610,21 @@ ol.years > .year {
 .page-content {
   grid-area: content;
   line-height: 1.6rem;
-  margin-block-end: calc(var(--vertical-rhythm) * 1.2);
+  margin-block-end: calc(var(--vertical-rhythm) * 0.45);
 }
 .page-content--isCalendarYear {
   grid-column: span var(--calendar-column-count);
 }
 .page-content .e-content {
   font-size: 1.3rem;
+  margin-block-end: calc(var(--vertical-rhythm) * 1.2);
 }
 .page-content blockquote {
   margin-block-end: var(--vertical-rhythm);
   margin-block-start: var(--vertical-rhythm);
+}
+.page-content h3 {
+  margin-block-end: calc(var(--vertical-rhythm) * 1.05);
 }
 .page-content p {
   margin-block-end: calc(var(--vertical-rhythm) * 1);
@@ -678,8 +677,17 @@ ol.years > .year {
 .annotations-related_dates {
   grid-area: related_links;
 }
+.annotations-related_dates li + li {
+  margin-block-start: var(--vertical-rhythm);
+}
 .annotations-footnotes {
   grid-area: secondary;
+}
+.annotations-footnotes h3 {
+  margin-block-end: calc(var(--vertical-rhythm) * 0.4);
+}
+.secondary .annotations {
+  margin-block-start: calc(var(--vertical-rhythm) * 1.35);
 }
 .secondary .annotations + .annotations {
   margin-block-start: calc(var(--vertical-rhythm) * 3);
@@ -695,7 +703,23 @@ ol.years > .year {
 }
 
 #site-footer {
-  margin-block-start: calc(var(--vertical-rhythm) * 5);
+  margin-block-start: calc(var(--vertical-rhythm) * 5.55);
+  position: relative;
+}
+
+#site-footer::before {
+  content: '';
+  display: block;
+  border-block-end: 1px solid var(--foreground-color);
+  inline-size: 60%;
+  inset-block-start: calc(var(--vertical-rhythm) * -2.75);
+  inset-inline-start: calc(var(--content-inline-size) * 0.20);
+  position: absolute;
+}
+@supports not (inset-inline-start: 0) {
+  .entries::after {
+    left: calc(var(--content-inline-size) * 0.20);
+  }
 }
 
 .calendar {
@@ -738,6 +762,7 @@ ol.years > .year {
 .people-avatars {
   display: flex;
   list-style: none;
+  margin-block-end: calc(var(--vertical-rhythm) * -0.45);
 }
 .people-avatars li + li {
   margin-inline-start: var(--gutter-inline-size);
@@ -785,7 +810,7 @@ ol.years > .year {
   color: var(--avatar-author-foreground-color);
 }
 .person-avatarInitials:not(lang[he]) {
-  font-size: 0.9em;
+  font-size: 0.9;
 }
 
 .is-highlighted {
