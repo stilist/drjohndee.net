@@ -79,6 +79,7 @@ twitter:
 #   - vendor/ruby/
 
 exclude:
+  - _cache.nosync # update this to match `cache_dir`
   - .gitignore
   - .terraform/
   - terraform/

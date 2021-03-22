@@ -143,14 +143,14 @@ module HistoricalDiary
 
     def dates_for_person(key)
       dates = @context.registers[:site]
-        .data['dates_for_people'][key]
+        .data['dates_for_people_keys'][key]
       return [] if dates.nil?
       dates.uniq.sort
     end
 
     def dates_for_source(key)
       dates = @context.registers[:site]
-        .data['dates_for_sources'][key]
+        .data['dates_for_sources_keys'][key]
       return [] if dates.nil?
       dates.uniq.sort
     end
@@ -166,7 +166,7 @@ module HistoricalDiary
 
     def legal_year_has_content(year)
       known_dates = @context.registers[:site]
-        .data['generated_dates'] || []
+        .data['dates_with_content'] || []
       candidates = legal_year(year)
       !(candidates & known_dates).empty?
     end
@@ -290,12 +290,12 @@ module HistoricalDiary
     end
 
     def source_material_for_date(timestamp)
-      timestamp_range = TimestampRange.new(timestamp)
+      timestamp_dates = TimestampRange.new(timestamp).dates
 
       candidates = @context.registers[:site].pages.
-        select { |document| document.data.key?('timestamp_range') }
+        select { |document| document.data.key?('dates') }
       candidates.select do |document|
-        document.data['timestamp_range'].intersect?(timestamp_range)
+        !(document.data['dates'] & timestamp_dates).empty?
       end
     end
 

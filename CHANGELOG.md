@@ -30,6 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename `_lib/collections.rb` to `_lib/data_collection.rb` to match its module name
 - Move ‘Autobiographical Tracts’ information from ‘commentary’ data to ‘context’, which is more appropriate
 - Change Jekyll cache directory to `_cache.nosync`
+- Rewrite `HistoricalDiary::SourceMaterialGenerator` to use Jekyll’s cache system -- `jekyll build` now takes me between 16 seconds and 18 seconds instead of between 23 seconds and 25 seconds if the cache is primed (22%-31% faster), and the code is clearer
+- `HistoricalDiary::SourceMaterialGenerator` now understands filenames with comma-separated dates (for example, `_source_material/the private diary of dr john dee/1564-03-01,1593-03-01.md` will appear on both 1564-03-01 and 1593-03-01)
+- `HistoricalDiary::SourceMaterialGenerator` now extracts `places` and `sources` from source material, in addition to `people` and `tags`
 
 ### Fixed
 - Improve structure of person and source pages

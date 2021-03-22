@@ -110,7 +110,7 @@ module HistoricalDiary
     end
   end
 
-  class DayPage < ::HistoricalDiaryPage
+  class DayPage < HistoricalDiaryPage
     def initialize(site, date:)
       @site = site
       @base = site.source
@@ -144,138 +144,186 @@ module HistoricalDiary
   # material, generates a `Jekyll::Post` for each date that has material, and
   # manipulates the front matter of the `Jekyll::Document`s.
   class SourceMaterialGenerator < ::Jekyll::Generator
-    include ::DataCollection
+    include DataCollection
     include LegalYear
 
     safe true
 
     def generate(site)
       @site = site
+      @data_keys = %i[
+        people_keys
+        places_keys
+        sources_keys
+        tags
+      ]
+
+      @source_material = source_material
+      @documents_by_date, @dates_by_key = index_data_from_source_material
+
+      @data_keys.each do |data_key|
+        global_data_key = data_key == "tags" ? "tags" : "dates_for_#{data_key}"
+        @site.data[global_data_key] = @dates_by_key[data_key]
+      end
+
       generate_day_pages
       generate_year_pages
     end
 
-    def generate_day_pages
-      pages_by_timestamp = {}
-      generated_dates = {}
-      @pages_by_year = {}
+    def cache
+      @@cache ||= Jekyll::Cache.new("HistoricalDiary::SourceMaterialGenerator")
+    end
 
-      @site.collections['source_material'].docs.each do |document|
-        timestamp = document.basename_without_ext
-        pages_by_timestamp[timestamp] ||= {}
-        source_key = document.relative_path.split(::File::SEPARATOR)[-2]
-        pages_by_timestamp[timestamp][source_key] = document
-      end
+    def source_material
+      @site.collections["source_material"].docs.map do |document|
+        timestamp_string = document.basename_without_ext
+        source_key = escape_key(document.relative_path.split(::File::SEPARATOR)[-2])
 
-      dates_for_people = {}
-      dates_for_sources = {}
-      pages_by_timestamp.each do |timestamp, documents|
-        timestamp_range = TimestampRange.new(timestamp)
+        cache_key = [
+          timestamp_string,
+          source_key,
+          document.data,
+          document.content,
+        ].map(&:to_s).join("")
 
-        documents.each do |source_key, document|
+        cache.getset(cache_key) do
+          # Splitting on `,` allows for non-consecutive dates without making
+          # `TimestampRange` more complex.
+          dates = cache.getset(timestamp_string) do
+            timestamp_string.split(",")
+              .map { |timestamp| TimestampRange.new(timestamp).dates }
+              .flatten
+          end
+
+          # SIDE EFFECTS
           # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
-          document.data['sitemap'] = false
-
-          escaped_source_key = escape_key(source_key)
-          dates_for_sources[escaped_source_key] ||= []
-          dates_for_sources[escaped_source_key].concat(timestamp_range.dates)
-
-          people_for_document = document.data['people'] || []
-          # @note This doesn't include the `author_key` associated with the
-          #   `document`'s `source_key`, only explicit `author_key`s.
-          %w[
-            author_key
-            recipient_key
-          ].each do |key|
-            value = document.data[key]
-            people_for_document << value if value
-          end
-          people_for_document.map! { |key| escape_key(key) }
-          people_for_document.uniq!
-          people_for_document.each do |key|
-            dates_for_people[key] ||= []
-            dates_for_people[key].concat(timestamp_range.dates)
-          end
-          document.data['all_people_keys'] = people_for_document
-
-          document.data['source_key'] = source_key
-          document.data['timestamp'] = timestamp
-          document.data['timestamp_dates'] = []
-          timestamp_range.dates.each do |date|
-            date_string = date.strftime('%F')
-            document.data['timestamp_dates'] << date_string
-          end
-          document.data['timestamp_range'] = timestamp_range
-
+          document.data["dates"] = dates
+          document.data["sitemap"] = false
+          document.data["source_key"] = source_key
           @site.pages << document
+          # END SIDE EFFECTS
 
-          document.data['tags'].each do |tag|
-            @site.tags[tag] ||= []
-            @site.tags[tag] << document
+          # @note This doesn"t include the `author_key` associated with the
+          #   `document`"s `source_key`, only explicit `author_key`s.
+          people_keys = [
+            document.data["people"],
+            document.data["author_key"],
+            document.data["recipient_key"],
+          ].flatten.compact.map { |key| escape_key(key) }
+
+          places_keys = [
+            document.data["places"],
+          ].flatten.compact.map { |key| escape_key(key) }
+
+          sources_keys = [
+            source_key,
+            document.data["sources"],
+          ].flatten.compact.map { |key| escape_key(key) }
+
+          {
+            document: document,
+            dates: dates,
+            people_keys: people_keys,
+            places_keys: places_keys,
+            sources_keys: sources_keys,
+            source_key: source_key,
+            tags: document.data["tags"] || [],
+            timestamp_string: timestamp_string,
+          }
+        end
+      end
+    end
+
+    def index_data_from_source_material
+      documents_by_date = {}
+
+      dates_by_key = {}
+      @data_keys.each do |data_key|
+        dates_by_key[data_key] = {}
+      end
+
+      @source_material.each do |item|
+        item[:dates].each do |date|
+          documents_by_date[date] ||= []
+          documents_by_date[date] << item[:document]
+
+          @data_keys.each do |data_key|
+            item[data_key].each do |item_key|
+              dates_by_key[data_key][item_key] ||= []
+              dates_by_key[data_key][item_key] << date
+            end
           end
         end
-
-        timestamp_range.dates.each do |date|
-          next if generated_dates.key?(date)
-
-          # Use legal year, rather than calendar year, to simplify later logic.
-          # This means that for 1600-03-24 the timestamp will be pushed into
-          # `@pages_by_year[1599]`, and 1600-03-25 will be pushed into
-          # `@pages_by_year[1600]`.
-          year = date.year
-          year -= 1 if date < legal_year_start(year)
-          @pages_by_year[year] ||= []
-          @pages_by_year[year] << date.strftime('%F')
-
-          document = DayPage.new(@site, date: date)
-          @site.posts.docs << document
-          generated_dates[date] = document
-        end
       end
 
-      @site.data['dates_for_people'] = dates_for_people
-      @site.data['dates_for_people'].freeze
-      @site.data['dates_for_sources'] = dates_for_sources
-      @site.data['dates_for_sources'].freeze
+      [
+        documents_by_date,
+        dates_by_key,
+      ]
+    end
 
-      sorted_date_hash = generated_dates.sort.to_h.freeze
-      sorted_documents = sorted_date_hash.values
-      sorted_date_hash.each_with_index do |(date, document), index|
+    def generate_day_pages
+      posts_by_date = {}
+      @documents_by_date.each do |date, documents|
+        post_document = DayPage.new(@site, date: date)
+        @site.posts.docs << post_document
+        posts_by_date[date] = post_document
+      end
+      @site.data["dates_with_content"] = posts_by_date
+
+      sorted_posts_by_date = posts_by_date.sort.to_h.freeze
+      sorted_documents = sorted_posts_by_date.values
+      sorted_dates = sorted_posts_by_date.keys
+      sorted_dates.each_with_index do |date, index|
         if index > 0
-          document.data['previous'] = sorted_documents[index - 1]
+          previous_date = sorted_dates[index - 1]
+          posts_by_date[date].data["previous"] = posts_by_date[previous_date]
         end
-        if index < sorted_documents.length
-          document.data['next'] = sorted_documents[index + 1]
+
+        if index < sorted_dates.length
+          next_date = sorted_dates[index + 1]
+          posts_by_date[date].data["next"] = posts_by_date[next_date]
         end
       end
 
-      @site.data['generated_dates'] = generated_dates.keys
+      @site.data['dates_with_content'] = sorted_dates
     end
 
     def generate_year_pages
-      person_key = @site.config['subject_person_key']
+      person_key = @site.config["subject_person_key"]
       record = person_data(person_key)
       return if record.nil?
-      return if !record.key?('birth_date')
-      return if !record.key?('death_date')
+      return if !record.key?("birth_date")
+      return if !record.key?("death_date")
 
-      birthYear = record['birth_date'].split('-').first.to_i
-      deathYear = record['death_date'].split('-').first.to_i
+      birth_year = record["birth_date"].split("-").first.to_i
+      death_year = record["death_date"].split("-").first.to_i
+
+      content_by_year = {}
+      @documents_by_date.keys.each do |date|
+        # Use legal year, rather than calendar year, to simplify later logic.
+        # This means that for 1600-03-24 the timestamp will be pushed into
+        # `@pages_by_year[1599]`, and 1600-03-25 will be pushed into
+        # `@pages_by_year[1600]`.
+        year = date.year
+        year -= 1 if date < legal_year_start(year)
+        content_by_year[year] ||= []
+        content_by_year[year] << date.strftime("%F")
+      end
 
       year_documents = {}
-
-      (birthYear..deathYear).each do |year|
-        dates_with_content = (@pages_by_year[year] || []).uniq.freeze
+      (birth_year..death_year).each do |year|
+        dates_with_content = (content_by_year[year] || []).uniq.freeze
         document = YearPage.new(@site,
                                 dates_with_content: dates_with_content,
                                 year: year)
-        year_documents[year] = document
+        @site.pages << document
 
+        year_documents[year] = document
         if year_documents[year - 1]
           year_documents[year].data['previous'] = year_documents[year - 1]
           year_documents[year - 1].data['next'] = document
         end
-        @site.pages << document
       end
     end
   end
