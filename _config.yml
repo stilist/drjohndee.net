@@ -44,7 +44,8 @@ subject_person_key: "Dee, John"
 theme_color: "#d76600"
 
 # Build settings
-destination: _site.nosync # `.nosync` prevents iCloud from syncing files
+cache_dir: _cache.nosync # `.nosync` prevents iCloud from syncing files
+destination: _site.nosync
 markdown: kramdown
 plugins:
   - jekyll-feed

@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `transcludes.html` structured-data structure to match `entry.html`
 - Rename `_lib/collections.rb` to `_lib/data_collection.rb` to match its module name
 - Move ‘Autobiographical Tracts’ information from ‘commentary’ data to ‘context’, which is more appropriate
+- Change Jekyll cache directory to `_cache.nosync`
 
 ### Fixed
 - Improve structure of person and source pages
