@@ -67,7 +67,8 @@ module HistoricalDiary
     private
 
     def record
-      person_data(key)
+      sanitized_key = key.sub('unknown -- ', '')
+      person_data(sanitized_key)
     end
   end
 end

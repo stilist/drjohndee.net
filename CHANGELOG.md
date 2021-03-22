@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `HistoricalDiary::SourceMaterialGenerator` now understands filenames with comma-separated dates (for example, `_source_material/the private diary of dr john dee/1564-03-01,1593-03-01.md` will appear on both 1564-03-01 and 1593-03-01)
 - `HistoricalDiary::SourceMaterialGenerator` now extracts `places` and `sources` from source material, in addition to `people` and `tags`
 - Update `theme_color` setting
+- `Person` class strips `unknown -- ` from person keys
 
 ### Fixed
 - Improve structure of person and source pages
