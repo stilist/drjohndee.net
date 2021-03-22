@@ -52,10 +52,11 @@ module DataCollection
     return if !key.is_a?(String) || key.strip == ''
 
     prefix, suffix = key.split('/', 2)
-    sanitized_prefix = escape_key(prefix)
+    sanitized_prefix = escape_key(prefix) if prefix != ''
 
     records = data_collection_records(collection_name)
     record = records[sanitized_prefix] || nil
+    return if record.nil?
     return record if suffix.nil?
     record[suffix]
   end

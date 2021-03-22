@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Improve structure of person and source pages
 - Fix CSS selector for highlighted person avatar
+- Adjust `DataCollection#data_collection_record` to handle the case that the `collection_name` collection doesn't have a match for `key`
 
 ### Removed
 - Remove `get_author_key` Liquid filter -- its function is better done with the `attribute_from_object_or_source_record` filter
