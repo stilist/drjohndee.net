@@ -131,6 +131,45 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </aside>
     {% endif -%}
 
+    {% if page.places_keys.size > 0 -%}
+    <aside class="annotations annotations-places">
+      <h3>Places</h3>
+      <ul class="annotation-content">
+        {% for place_key in page.places_keys -%}
+        <li>
+          {{ place_key }}
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+
+    {% if page.tags.size > 0 -%}
+    <aside class="annotations annotations-tags">
+      <h3>Tags</h3>
+      <ul class="annotation-content">
+        {% for tag in page.tags -%}
+        <li>
+          {{ tag }}
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+
+    {% if page.sources_keys.size > 0 -%}
+    <aside class="annotations annotations-sources_keys">
+      <h3>Referenced source material</h3>
+      <ul class="annotation-content">
+        {% for source_key in page.sources_keys -%}
+        <li>
+          {% include source_link.html source_key=source_key -%}
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+
     {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
     {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
     {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}

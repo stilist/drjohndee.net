@@ -111,10 +111,9 @@ module HistoricalDiary
   end
 
   class DayPage < HistoricalDiaryPage
-    def initialize(site, date:)
+    def initialize(site, date:, people_keys:, places_keys:, sources_keys:, tags:)
       @site = site
       @base = site.source
-      # "1500-01-02" => [1500, 1, 2]
       @dir = [
         date.strftime('%Y'),
         date.strftime('%m'),
@@ -133,6 +132,11 @@ module HistoricalDiary
       timestamp = date.strftime('%F')
       data['timestamp'] = timestamp
       data['title'] = timestamp
+
+      data['people_keys'] = people_keys
+      data['places_keys'] = places_keys
+      data['sources_keys'] = sources_keys
+      data['tags'] = tags
 
       data.default_proc = proc do |_, key|
         site.frontmatter_defaults.find(relative_path, :day, key)
@@ -154,12 +158,13 @@ module HistoricalDiary
       @data_keys = %i[
         people_keys
         places_keys
+        referenced_sources_keys
         sources_keys
         tags
       ]
 
       @source_material = source_material
-      @documents_by_date, @dates_by_key = index_data_from_source_material
+      build_data_indexes_from_source_material
 
       @data_keys.each do |data_key|
         global_data_key = data_key == "tags" ? "tags" : "dates_for_#{data_key}"
@@ -213,11 +218,12 @@ module HistoricalDiary
 
           places_keys = [
             document.data["places"],
-          ].flatten.compact.map { |key| escape_key(key) }
+          ].flatten.compact
 
+          referenced_sources_keys = document.data["sources"] || []
           sources_keys = [
             source_key,
-            document.data["sources"],
+            referenced_sources,
           ].flatten.compact.map { |key| escape_key(key) }
 
           {
@@ -225,6 +231,7 @@ module HistoricalDiary
             dates: dates,
             people_keys: people_keys,
             places_keys: places_keys,
+            referenced_sources_keys: referenced_sources_keys,
             sources_keys: sources_keys,
             source_key: source_key,
             tags: document.data["tags"] || [],
@@ -234,38 +241,42 @@ module HistoricalDiary
       end
     end
 
-    def index_data_from_source_material
-      documents_by_date = {}
+    def build_data_indexes_from_source_material
+      @documents_by_date = {}
 
-      dates_by_key = {}
+      @dates_by_key = {}
+      @keys_by_date = {}
       @data_keys.each do |data_key|
-        dates_by_key[data_key] = {}
+        @dates_by_key[data_key] = {}
+        @keys_by_date[data_key] = {}
       end
 
       @source_material.each do |item|
         item[:dates].each do |date|
-          documents_by_date[date] ||= []
-          documents_by_date[date] << item[:document]
+          @documents_by_date[date] ||= []
+          @documents_by_date[date] << item[:document]
 
           @data_keys.each do |data_key|
             item[data_key].each do |item_key|
-              dates_by_key[data_key][item_key] ||= []
-              dates_by_key[data_key][item_key] << date
+              @dates_by_key[data_key][item_key] ||= []
+              @dates_by_key[data_key][item_key] << date
+
+              @keys_by_date[data_key][date] ||= []
+              @keys_by_date[data_key][date] << item_key
             end
           end
         end
       end
-
-      [
-        documents_by_date,
-        dates_by_key,
-      ]
     end
 
     def generate_day_pages
       posts_by_date = {}
       @documents_by_date.each do |date, documents|
-        post_document = DayPage.new(@site, date: date)
+        post_document = DayPage.new(@site, date: date,
+                                           people_keys: @keys_by_date[:people_keys][date],
+                                           places_keys: @keys_by_date[:places_keys][date],
+                                           sources_keys: @keys_by_date[:referenced_sources_keys][date],
+                                           tags: @keys_by_date[:tags][date])
         @site.posts.docs << post_document
         posts_by_date[date] = post_document
       end
