@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Wrap source material in `<blockquote>` tag, to consistently indicate quoted text
 - Convert additional properties from physical to logical: `margin`, `padding`, `height`, `width`, `bottom`, `top`
 - Update styling to follow vertical rhythm
+- Change `transcludes.html` to not use Markdown
+- Change `transcludes.html` structured-data structure to match `entry.html`
 
 ### Fixed
 - Improve structure of person and source pages

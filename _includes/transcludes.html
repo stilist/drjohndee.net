@@ -34,13 +34,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% include person_data.html person_key=creator_key
                                   itemprop="creator" -%}
 
-      {% assign language = transclude_record.language | default: source_record.work.language -%}
-      <figure lang="{{ language }}" translate>
-        <blockquote class="source-material"
-                    itemprop=text>
-          {{ transclude_record.symbol }}
-          {{ transclude_record.text | markdownify }}
-        </blockquote>
+      <figure>
+        {% assign language = transclude_record | attribute_from_object_or_source_record: "language" -%}
+        <div class="source-material"
+             itemprop=text
+             lang="{{ language }}" translate>
+          {% if transclude_record.symbol -%}
+          <p>{{ transclude_record.symbol }}</p>
+          {% endif -%}
+
+          {% if transclude_record.source_key -%}<blockquote>{% endif -%}
+
+          {% assign content_as_html = transclude_record.text | liquify -%}
+          <p>{{ content_as_html }}</p>
+
+          {% if transclude_record.source_key -%}</blockquote>{% endif -%}
+        </div>
 
         {% if transclude_record.source_key -%}
         <figcaption class="caption"
@@ -53,9 +62,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
           {% if transclude_record.source_key == previous_source_key -%}
           {% assign link_attributes = transclude_record.source_key | data_record_tag_attributes: "sources" -%}
-          <a
+          <a class="{{ link_attributes.class }}"
             href="{{ transclude_record.source_key | collection_entry_url: "sources" }}"
-            class="{{ link_attributes.class }}"
             data-key="{{ link_attributes.dataKey }}"><abbr>Ibid.</abbr></a>,
           {{ transclude_record.location }}
           {% else -%}
