@@ -148,9 +148,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <aside class="annotations annotations-tags">
       <h3>Tags</h3>
       <ul class="annotation-content">
-        {% for tag in page.tags -%}
+        {% for tag_text in page.tags -%}
         <li>
-          {{ tag }}
+          {{ tag_text }}
         </li>
         {% endfor -%}
       </ul>
