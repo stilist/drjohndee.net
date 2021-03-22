@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tag people, places, and source material in lots of entries
 - Adjust `people_avatar` include and `Person#name_initials` to handle `people` keys that don't have a corresponding data file
 - Display places, sources, and tags on date pages
+- Add information for several sources
 
 ### Changed
 - Refactor `people` include into `people_avatars` and `person_avatar` includes

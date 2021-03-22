@@ -1,0 +1,26 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Dee, John"
+  language: "en-emodeng"
+  license_key: "CC0 1.0"
+  name: >-
+    General and rare memorials
+    pertayning to the Perfect Arte of
+    navigation:
+    Annexed to the Paradoxal Cumpas, in Playne :
+    now firſt publiſhed : 24. yeres, after the firſt
+    Inuention thereof.
+editions:
+  third:
+    city: "London"
+    place_key: "London, London, GB"
+    date: "1577"
+    id: "https://www.wikidata.org/entity/Q908061"
+    oclc_number: "216607672"
+    type: Book

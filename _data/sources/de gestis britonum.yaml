@@ -1,0 +1,51 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Geoffrey of Monmouth"
+  id: "https://www.wikidata.org/entity/Q238693"
+  language: "la-medieval"
+  license_key: "CC0 1.0"
+  name: >-
+    De Gestis Britonum
+editions:
+  "english_1842":
+    author_key: "Thompson, A"
+    city: "London"
+    place_key: "London, London, GB"
+    date: "1842"
+    editor_key: "Giles, JA"
+    id: "http://www.worldcat.org/oclc/181870237"
+    language: "en"
+    name: >-
+      The
+      British History
+      of
+      Geoffrey on Monmouth.
+      In twelve books
+    oclc_number: "181870237"
+    publisher: "James Bohn"
+    type: Book
+    url: "https://books.google.com/books?id=FUoMAAAAIAAJ"
+  "german_1854":
+    city: "Halle"
+    date: "1854"
+    id: "http://www.worldcat.org/oclc/162981267"
+    language: "la-medieval"
+    name: >-
+      Gottfried’s von Monmouth
+      Historia Regum Brittaniae,
+      mit
+      literar-historischer Einleitung und ausführlichen
+      Anmerkungen,
+      und
+      Brut Tysylio,
+      altwälsche Chronik in deutscher Uebersetzung
+    oclc_number: "162981267"
+    publisher: "San-Marte"
+    type: Book
+    url: "https://books.google.com/books?id=LBw2AAAAMAAJ"
