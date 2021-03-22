@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Note how many times each person appears in entries (based on `people` key)
 - Link relevant dates on source pages
 - Begin adding biography for John Dee from Charlotte Fell Smith’s book ‘John Dee’
+- Add some `people` data
 - Continue adding entries and letters
 - Tag people, places, and source material in lots of entries
 - Adjust `people_avatar` include and `Person#name_initials` to handle `people` keys that don't have a corresponding data file
