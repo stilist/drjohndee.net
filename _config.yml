@@ -40,8 +40,8 @@ icon_sizes:
   - 192
 license_key: "CC BY-SA 4.0"
 subject_person_key: "Dee, John"
-# --accent-60
-theme_color: "#d76600"
+# --accent-60 (light theme)
+theme_color: "#994900"
 
 # Build settings
 cache_dir: _cache.nosync # `.nosync` prevents iCloud from syncing files
