@@ -102,7 +102,10 @@ class TimestampRange
 
     # `@start_date` is just a year (no month or day)
     if @start_date[:month].nil?
+      # Add twelve months...
       @end_date[:object] = @end_date[:object] >> 12
+      # ... and subtract one day. This makes `@end_date[:object]` one calendar
+      # year in the future, automatically handling leap years.
       @end_date[:object] -= 1
       @end_date[:month] = @end_date[:object].month
       @end_date[:day] = @end_date[:object].day
