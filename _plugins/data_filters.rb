@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
-require_relative '../_lib/collections'
+require_relative '../_lib/data_collection'
 require_relative '../_lib/legal_year'
 require_relative '../_lib/person'
 require_relative '../_lib/timestamp_range'
@@ -302,7 +302,7 @@ module HistoricalDiary
     def data_record_tag_attributes(key, collection_name)
       {
         "class" => "data-entity data-#{collection_name}",
-        "dataKey" => "#{collection_name}/#{slugify_key(key)}",
+        "dataKey" => "#{collection_name}/#{escape_key(key)}",
       }.freeze
     end
 

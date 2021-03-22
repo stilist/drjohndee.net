@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
-require_relative '../_lib/collections'
+require_relative '../_lib/data_collection'
 
 module HistoricalDiary
   class DataPage < ::Jekyll::Page

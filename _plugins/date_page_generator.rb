@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
-require_relative '../_lib/collections'
+require_relative '../_lib/data_collection'
 require_relative '../_lib/historical_diary_page'
 require_relative '../_lib/legal_year'
 require_relative '../_lib/timestamp_range'

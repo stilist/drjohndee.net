@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update styling to follow vertical rhythm
 - Change `transcludes.html` to not use Markdown
 - Change `transcludes.html` structured-data structure to match `entry.html`
+- Rename `_lib/collections.rb` to `_lib/data_collection.rb` to match its module name
 
 ### Fixed
 - Improve structure of person and source pages
