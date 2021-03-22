@@ -42,7 +42,8 @@ module HistoricalDiary
       end
 
       site.data['sources'].values.each do |source|
-        next if !source
+        next if !source.is_a?(Hash)
+        next if !source['editions'].is_a?(Hash)
 
         source['editions'].each do |key, edition|
           edition['edition_key'] = key
