@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Upgrade Terraform `aws` provider
+- Move Terraform code from `terraform/aws` to `terraform`
 
 ## [1.0.10] - 2021-03-21
 ### Added
