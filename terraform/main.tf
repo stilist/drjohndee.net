@@ -194,6 +194,7 @@ provider "namecheap" {
 }
 # @note This can't be an A record -- if it is, TXT records for the bare domain
 #   will not be accessible. This is a restriction of the DNS specification.
+# @see https://serverfault.com/a/834403
 resource "namecheap_record" "root_alias" {
   domain  = var.domain
   name    = "@"
