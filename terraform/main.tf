@@ -94,25 +94,14 @@ resource "aws_cloudfront_distribution" "bare_domain" {
   aliases = [var.domain]
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "S3-${var.domain}"
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
+    allowed_methods          = ["GET", "HEAD"]
+    cached_methods           = ["GET", "HEAD"]
+    cache_policy_id          = data.aws_cloudfront_cache_policy.caching_optimized.id
+    compress                 = true
+    origin_request_policy_id = data.aws_cloudfront_origin_request_policy.cors_s3.id
+    target_origin_id         = "S3-${var.domain}"
 
     viewer_protocol_policy = "redirect-to-https"
-
-    # based on AWS' pre-built `Managed-CachingOptimized` policy
-    compress    = true
-    min_ttl     = 1
-    default_ttl = 86400
-    max_ttl     = 31536000
   }
 
   price_class = "PriceClass_All"
@@ -166,25 +155,14 @@ resource "aws_cloudfront_distribution" "www_domain" {
   aliases = ["www.${var.domain}"]
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
-    cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "S3-www.${var.domain}"
-
-    forwarded_values {
-      query_string = false
-
-      cookies {
-        forward = "none"
-      }
-    }
+    allowed_methods          = ["GET", "HEAD", "OPTIONS"]
+    cached_methods           = ["GET", "HEAD"]
+    cache_policy_id          = data.aws_cloudfront_cache_policy.caching_optimized.id
+    compress                 = true
+    origin_request_policy_id = data.aws_cloudfront_origin_request_policy.cors_s3.id
+    target_origin_id         = "S3-www.${var.domain}"
 
     viewer_protocol_policy = "redirect-to-https"
-
-    # based on AWS' pre-built `Managed-CachingOptimized` policy
-    compress    = true
-    min_ttl     = 1
-    default_ttl = 86400
-    max_ttl     = 31536000
   }
 
   price_class = "PriceClass_All"

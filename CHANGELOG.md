@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Manage DNS using Namecheap Terraform module
+- Use CloudFront's managed cache and origin-request policies
 
 ### Changed
 - Upgrade Terraform `aws` provider
