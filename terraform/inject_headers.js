@@ -10,6 +10,7 @@ exports.handler = (event, context, callback) => {
   }
 
   const assetHeaders = {
+    ...globalHeaders,
     // @see https://w3c.github.io/webappsec-post-spectre-webdev/#static-subresources
     "Access-Control-Allow-Origin": "same-origin", // changed from suggested `*`
     "Content-Security-Policy": "sandbox",
@@ -18,10 +19,10 @@ exports.handler = (event, context, callback) => {
     "Timing-Allow-Origin": "same-origin", // changed from suggested `*`
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "DENY",
-    ...globalHeaders,
   }
 
   const documentHeaders = {
+    ...globalHeaders,
     // @see https://w3c.github.io/webappsec-post-spectre-webdev/#documents-isolated
     "Cross-Origin-Opener-Policy": "same-origin", // changed from suggested `same-origin-allow-popups`
     "Cross-Origin-Resource-Policy": "same-origin",
