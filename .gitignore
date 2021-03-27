@@ -9,4 +9,6 @@ _cache.nosync/
 /terraform/*.tf-plan
 /terraform/*.tfstate
 /terraform/*.tfstate.backup
+/terraform/*.tfstate.lock.info
 /terraform/secrets.tfvars
+/terraform/*.zip

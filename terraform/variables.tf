@@ -3,7 +3,11 @@
 # `terraform/secrets.tfvars.example` and name it `terraform/secrets.tfvars`.
 #
 # * aws_account_id
+# * aws_iam_account_id
+# * aws_lambda_account_id
 # * aws_access_key
+# * aws_iam_secret_key
+# * aws_lambda_secret_key
 # * aws_secret_key
 # * domain
 # * namecheap_apiuser
@@ -11,12 +15,42 @@
 # * namecheap_token
 # * namecheap_username
 # * namecheap_use_sandbox
+#
+# @note The AWS IAM user associated with `aws_access_key` / `aws_secret_key`
+#   must have the `AmazonS3FullAccess`, `AWSCertificateManagerFullAccess`, and
+#   `CloudFrontFullAccess` policies attached.
+# @note the AWS IAM user associated with `aws_iam_access_key` /
+#   `aws_iam_secret_key` must have the `IAMFullAccess` policy attached.
+
+# You'll need to create this IAM group manually.
+#
+# When you create the group attach the .
+variable "aws_manager_iam_group_name" {
+  type    = string
+  default = "static-website-manager"
+}
 variable "aws_account_id" {
   type    = number
   default = 400201108990
 }
 
 variable "aws_access_key" {
+  type = string
+}
+
+variable "aws_iam_access_key" {
+  type = string
+}
+
+variable "aws_iam_secret_key" {
+  type = string
+}
+
+variable "aws_lambda_access_key" {
+  type = string
+}
+
+variable "aws_lambda_secret_key" {
   type = string
 }
 
@@ -46,18 +80,10 @@ variable "namecheap_username" {
 
 # You can override these in `terraform/secrets.tfvars` if desired, but the
 # defaults will work.
-# * aws_manager_iam_group_name
-# * aws_region
-# * namecheap_use_sandbox
-
-# You'll need to create this IAM group manually.
 #
-# When you create the group attach the `AmazonS3FullAccess`,
-# `AWSCertificateManagerFullAccess`, and `CloudFrontFullAccess` policies.
-variable "aws_manager_iam_group_name" {
-  type    = string
-  default = "static-website-manager"
-}
+# * aws_region
+# * google_site_verification
+# * namecheap_use_sandbox
 
 # Note that this setting will be ignored for ACM (AWS Certificate Manager):
 # CloudFront can only ACM certificates created in the `us-east-1` region.
