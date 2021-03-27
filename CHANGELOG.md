@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use CloudFront's managed cache and origin-request policies
 - Split Terraform code into multiple files
 - Add Lambda@Edge function to apply security headers -- note this code almost works, but fails with `Update the IAM policy to add permission: lambda:EnableReplication* for resource: arn:aws:lambda:us-east-1:<account id>:function:inject-headers:7 and try again.` and I give up on chasing obscure errors
+- Add debug CSS/JS
 
 ### Changed
 - Upgrade Terraform `aws` provider

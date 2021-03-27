@@ -821,3 +821,47 @@ ol.years > .year {
 .person-avatar--is-highlighted .is-highlighted {
   background-color: var(--highlight-alternate-background-color);
 }
+
+.debug .source-material .data-entity,
+.debug .source-material span[lang],
+.debug .source-material em,
+.debug .source-material sup,
+.debug .source-material ins,
+.debug .source-material del,
+.debug .source-material time,
+.debug .source-material strong {
+  border: 2px dotted #f0c9;
+}
+.debug #scale {
+  inline-size: var(--content-inline-size);
+  left: 0;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.debug #scale .row {
+  border-block-end: 1px solid var(--foreground-color);
+  display: flex;
+  opacity: 0.4;
+}
+.debug #scale span {
+  background-color: #f007;
+  display: block;
+  block-size: calc(var(--vertical-rhythm) - 1px);
+  inline-size: var(--column-inline-size);
+}
+.debug #scale span + span {
+  margin-inline-start: var(--gutter-inline-size);
+}
+.debug #scale span:nth-child(n+16) {
+  display: none;
+}
+@media (max-inline-size: 960px) {
+  .debug #scale span:nth-child(n+9) {
+    display: none;
+  }
+}
