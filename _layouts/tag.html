@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+<main class="page tag">
+  <header class="page-header">
+    <h2 class="page-name">
+      Dates with content tagged ‘{{ page.tag_key }}’
+    </h2>
+  </header>
+
+  <article class="page-content"
+           itemprop=articleBody>
+    {% assign tagged_dates = page.tag_key | collection_entry: "tags" -%}
+    {% if tagged_dates.size > 0 -%}
+    {% assign sorted_tags = tagged_dates | sort -%}
+    <ul>
+      {% for date in tagged_dates -%}
+      <li>{% include day_page_link.html date=date %}</li>
+      {% endfor -%}
+    {% else -%}
+    TESTTEST
+    {% endif -%}
+  </article>
+</main>

@@ -150,7 +150,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <ul class="annotation-content">
         {% for tag_text in page.tags -%}
         <li>
-          {{ tag_text }}
+          {% include tag_link.html tag_text=tag_text -%}
         </li>
         {% endfor -%}
       </ul>

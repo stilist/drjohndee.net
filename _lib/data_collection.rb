@@ -26,6 +26,10 @@ module DataCollection
   RENDERED_COLLECTIONS = %w[
     people
     sources
+    tags
+  ].freeze
+  GENERATED_COLLECTIONS = %w[
+    tags
   ].freeze
   TRANSCLUDED_COLLECTIONS = %w[
     biography
@@ -36,6 +40,7 @@ module DataCollection
   SINGULAR_TO_PLURAL = {
     'person' => 'people',
     'source' => 'sources',
+    'tag' => 'tags',
   }.freeze
   PLURAL_TO_SINGULAR = SINGULAR_TO_PLURAL.map { |key, value| [value, key] }.
     to_h.
@@ -50,6 +55,10 @@ module DataCollection
 
   def data_collection_record(collection_name, key)
     return if !key.is_a?(String) || key.strip == ''
+
+    if GENERATED_COLLECTIONS.include?(collection_name)
+      return data_collection_records(collection_name)[key]
+    end
 
     prefix, suffix = key.split('/', 2)
     sanitized_prefix = escape_key(prefix) if prefix != ''

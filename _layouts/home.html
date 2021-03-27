@@ -40,6 +40,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endfor -%}
   </ol>
 
+  {% if site.tags.size > 0 -%}
+  <h2>Browse by topic</h2>
+  <ul class="grouping topics">
+    {% for tag_hash in site.tags -%}
+    <li class="grouping-item topic">
+      {% assign tag_text = tag_hash | first -%}
+      {% include tag_link.html tag_text=tag_text -%}
+      {% assign tag_count = tag_hash | last | size -%}
+      {% if tag_count == 1 -%}
+      (1 entry)
+      {% else -%}
+      ({{ tag_count }} entries)
+      {% endif -%}
+    </li>
+    {% endfor -%}
+  </ul>
+  {% endif -%}
+
   {% if site.data.people.size > 0 -%}
   <h2>Browse by person</h2>
   <ul class="grouping people">

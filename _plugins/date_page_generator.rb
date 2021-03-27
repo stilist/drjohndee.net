@@ -167,7 +167,7 @@ module HistoricalDiary
       build_data_indexes_from_source_material
 
       @data_keys.each do |data_key|
-        global_data_key = data_key == "tags" ? "tags" : "dates_for_#{data_key}"
+        global_data_key = data_key == :tags ? "tags" : "dates_for_#{data_key}"
         @site.data[global_data_key] = @dates_by_key[data_key]
       end
 

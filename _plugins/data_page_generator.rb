@@ -47,6 +47,8 @@ module HistoricalDiary
                   record['presentational_name'].values.join(' ')
                 when 'sources'
                   record.dig('work', 'name')
+                when 'tags'
+                  "Tag: #{key}"
                 end
       end
       data['title'] = title
@@ -58,6 +60,7 @@ module HistoricalDiary
   end
 
   class DataGenerator < ::Jekyll::Generator
+    priority :low
     safe true
 
     def generate(site)
