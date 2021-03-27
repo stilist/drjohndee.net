@@ -3,7 +3,7 @@
 exports.handler = (event, context, callback) => {
   const globalHeaders = {
     // @see https://aws.amazon.com/blogs/networking-and-content-delivery/adding-http-security-headers-using-lambdaedge-and-amazon-cloudfront/
-    "Content-Security-Policy": "default-src 'none'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'", // added `font-src 'self';`
+    "Content-Security-Policy": "default-src 'none'; font-src 'self'; frame-ancestors 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'", // added `font-src`, `frame-ancestors`
     "Referrer-Policy": "same-origin",
     "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
     "X-XSS-Protection": "1; mode=block",
@@ -27,8 +27,7 @@ exports.handler = (event, context, callback) => {
     "Cross-Origin-Resource-Policy": "same-origin",
     "Vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, Sec-Fetch-User",
     "X-Content-Type-Options": "nosniff",
-    "X-Frame-Options": "SAMEORIGIN",
-    ...globalHeaders,
+    "X-Frame-Options": "DENY", // changed from suggested `SAMEORIGIN`
   }
 
   // @see https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html#lambda-event-structure-response-origin
