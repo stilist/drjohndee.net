@@ -1,6 +1,3 @@
----
-layout: default
----
 {% comment -%}
 The life and times of Dr John Dee
 Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -19,21 +16,6 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-<main class="page tag">
-  <header class="page-header">
-    <h2 class="page-name">
-      Dates with content tagged ‘{{ page.tag_key }}’
-    </h2>
-  </header>
-
-  <article class="page-content"
-           itemprop=articleBody>
-    {% assign tagged_dates = page.tag_key | collection_entry: "tags" | sort -%}
-    {% if tagged_dates.size > 0 -%}
-    <ul>
-      {% for date in tagged_dates -%}
-      <li>{% include day_page_link.html date=date %}</li>
-      {% endfor -%}
-    {% endif -%}
-  </article>
-</main>
+<a href="{{ include.date | date: "/%Y/%m/%d.html" | relative_url }}">
+  <time datetime="{{ include.date | date: "%Y-%m-%d" }}">
+    {{ include.date | date: "%A %e %B %Y" }}</time></a>
