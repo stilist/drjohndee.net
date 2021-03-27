@@ -1,12 +1,35 @@
 "use strict"
 
+const day_in_seconds = 60 * 60 * 24
+
 exports.handler = (event, context, callback) => {
   const globalHeaders = {
     // @see https://aws.amazon.com/blogs/networking-and-content-delivery/adding-http-security-headers-using-lambdaedge-and-amazon-cloudfront/
-    "Content-Security-Policy": "default-src 'none'; font-src 'self'; frame-ancestors 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'", // added `font-src`, `frame-ancestors`
+    "Content-Security-Policy": [
+      "default-src 'none'",
+      "base-uri 'none'", // added
+      "font-src 'self'", // added
+      "frame-ancestors 'none'", // added
+      "img-src 'self'",
+      "object-src 'none'",
+      "prefetch-src 'self'",
+      "script-src 'self'",
+      "style-src 'self'",
+    ].join('; '),
+
     "Referrer-Policy": "same-origin",
     "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
     "X-XSS-Protection": "1; mode=block",
+
+    // @note This intentionally does not use `immutable`, because the URLs
+    //   aren't fingerprinted, and their contents *do* change.
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+    "Cache-Control": [
+      "public",
+      `max-age=${day_in_seconds}`,
+      "must-revalidate",
+      `s-maxage=${day_in_seconds}`,
+    ].join(', '),
   }
 
   const assetHeaders = {
@@ -46,13 +69,6 @@ exports.handler = (event, context, callback) => {
       value,
     }]
   }
-
-  // XXX
-  console.log({
-    requestedUri,
-    typeSpecificHeaders,
-    responseHeaders,
-  });
 
   callback(null, response)
 }
