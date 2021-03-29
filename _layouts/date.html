@@ -148,7 +148,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <aside class="annotations annotations-tags">
       <h3>Tags</h3>
       <ul class="annotation-content">
-        {% for tag_text in page.tags -%}
+        {% assign sanitized_tags = page.tags | sort | uniq -%}
+        {% for tag_text in sanitized_tags -%}
         <li>
           {% include tag_link.html tag_text=tag_text -%}
         </li>

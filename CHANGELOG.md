@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade Terraform `aws` provider
 - Move Terraform code from `terraform/aws` to `terraform`
 
+### Fixed
+- De-duplicate tags listed on day page
+
 ## [1.0.10] - 2021-03-21
 ### Added
 - Add `dates_for_source`, `hash_keys`, `sort_hash`, and `sorted_people_keys` Liquid filters
