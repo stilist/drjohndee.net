@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add debug CSS/JS
 - Add tag pages
 - Add and update metadata on some entries
+- Add and enhance content for 1583 from 'A True and Faithful Relation' (scrying sessions are still absent)
 
 ### Changed
 - Upgrade Terraform `aws` provider
