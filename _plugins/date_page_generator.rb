@@ -164,6 +164,7 @@ module HistoricalDiary
       ]
 
       @source_material = source_material
+      manipulate_source_material_metadata
       build_data_indexes_from_source_material
 
       @data_keys.each do |data_key|
@@ -181,6 +182,8 @@ module HistoricalDiary
 
     def source_material
       @site.collections["source_material"].docs.map do |document|
+        @site.pages << document
+
         timestamp_string = document.basename_without_ext
         source_key = escape_key(document.relative_path.split(::File::SEPARATOR)[-2])
 
@@ -200,15 +203,7 @@ module HistoricalDiary
               .flatten
           end
 
-          # SIDE EFFECTS
-          # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
-          document.data["dates"] = dates
-          document.data["sitemap"] = false
-          document.data["source_key"] = source_key
-          @site.pages << document
-          # END SIDE EFFECTS
-
-          # @note This doesn"t include the `author_key` associated with the
+          # @note This doesn't include the `author_key` associated with the
           #   `document`"s `source_key`, only explicit `author_key`s.
           people_keys = [
             document.data["people"],
@@ -238,6 +233,20 @@ module HistoricalDiary
             timestamp_string: timestamp_string,
           }
         end
+      end
+    end
+
+    # Side effects go here.
+    def manipulate_source_material_metadata
+      @source_material.each do |item|
+        document = item[:document]
+
+        document.data["dates"] = item[:dates]
+
+        # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
+        document.data["sitemap"] = false
+
+        document.data["source_key"] = item[:source_key]
       end
     end
 
