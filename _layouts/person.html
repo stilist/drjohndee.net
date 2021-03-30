@@ -85,9 +85,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <ul class="annotation-content">
         {% for related_date in related_dates -%}
         <li>
-          <a href="{{ related_date | date_to_url | relative_url }}">
-            {{ related_date | date: "%F" }}
-          </a>
+          {% include day_page_link.html date=related_date %}
         </li>
         {% endfor -%}
       </ul>
