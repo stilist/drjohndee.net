@@ -17,14 +17,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% assign person_record = include.person_key | collection_entry: "people" -%}
-{% if person_record -%}
-
 {% if include.is_highlighted -%}
 {% assign highlighted_class = "person-avatar--is-highlighted" -%}
 {% else -%}
 {% assign highlighted_class = "" -%}
 {% endif -%}
 
+{% if person_record -%}
 <div class="person-avatar {{ highlighted_class }}">
   {% assign link_attributes = include.person_key | data_record_tag_attributes: "people" -%}
   {% assign person_permalink = include.person_key | collection_entry_url: "people" -%}

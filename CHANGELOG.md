@@ -29,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - De-duplicate tags listed on day page
+- Restore avatars on day pages
+- Fix bug that would incorrectly highlight avatars without associated data
 
 ## [1.0.10] - 2021-03-21
 ### Added

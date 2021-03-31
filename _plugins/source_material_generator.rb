@@ -156,12 +156,12 @@ module HistoricalDiary
       @source_material_data.each do |item|
         document = item[:document]
 
+        document.data["all_people_keys"] = item[:people_keys]
         document.data["dates"] = item[:dates]
+        document.data["source_key"] = item[:source_key]
 
         # @see https://github.com/jekyll/jekyll-sitemap/blob/aecc559ff6d15e3bea92cdc898b4edeb6fdf774d/README.md#exclusions
         document.data["sitemap"] = false
-
-        document.data["source_key"] = item[:source_key]
       end
     end
 
