@@ -83,12 +83,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% assign custom_footnote_keys = '' | split: '' -%}
   {% assign related_dates = '' | split: '' -%}
 
-  {% assign entries = page.timestamp | source_material_for_date -%}
-  {% if entries.size > 0 -%}
+  {% if page.documents.size > 0 -%}
   <main class="page-content"
            itemprop=articleBody>
     <ul class="entries h-entry">
-      {% for entry in entries -%}
+      {% for entry in page.documents -%}
         {% if entry.related_dates -%}
         {% for related_date in entry.related_dates -%}
           {% assign related_dates = related_dates | push: related_date %}
