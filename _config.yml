@@ -46,7 +46,6 @@ theme_color: "#994900"
 # Build settings
 cache_dir: _cache.nosync # `.nosync` prevents iCloud from syncing files
 destination: _site.nosync
-markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap

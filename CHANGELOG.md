@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move `HistoricalDiary::SourceMaterialGenerator` side-effect code to separate method
 - Use `day_page_link` partial on person page
 - Separate `DayPage` and `YearPage` into individual generators
+- Remove direct `kramdown-parser-gfm` dependency
 
 ### Fixed
 - De-duplicate tags listed on day page
