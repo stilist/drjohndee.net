@@ -23,14 +23,17 @@ module DataCollection
   # for 'slugify'
   include ::Jekyll::Utils
 
+  # static collections that get a page for each item
   RENDERED_COLLECTIONS = %w[
     people
     sources
     tags
   ].freeze
+  # dynamically-generated collections that get a page for each item
   GENERATED_COLLECTIONS = %w[
     tags
   ].freeze
+  # static collections that are only presented as part of another page
   TRANSCLUDED_COLLECTIONS = %w[
     biography
     commentary
