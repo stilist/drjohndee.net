@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `day_page_link` partial on person page
 - Separate `DayPage` and `YearPage` into individual generators
 - Remove direct `kramdown-parser-gfm` dependency
+- Rearrange `_config.yml`
 
 ### Fixed
 - De-duplicate tags listed on day page

@@ -29,7 +29,10 @@ url: "https://www.drjohndee.net" # the base hostname & protocol for your site, e
 
 lang: en-US
 
+# site metadata
 doi: "10.5281/zenodo.4511512"
+github_repository_url: "https://github.com/stilist/john-dee"
+google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
 icon_name: heiroglyph
 icon_sizes:
   - 16
@@ -42,6 +45,8 @@ license_key: "CC BY-SA 4.0"
 subject_person_key: "Dee, John"
 # --accent-60 (light theme)
 theme_color: "#994900"
+twitter:
+  username: stilist
 
 # Build settings
 cache_dir: _cache.nosync # `.nosync` prevents iCloud from syncing files
@@ -49,13 +54,6 @@ destination: _site.nosync
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-github_repository_url: "https://github.com/stilist/john-dee"
-
-# for page metadata
-google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
-twitter:
-  username: stilist
 
 # Exclude from processing.
 # The following items will not be processed, by default.
