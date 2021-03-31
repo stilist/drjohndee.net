@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Separate `DayPage` and `YearPage` into individual generators
 - Remove direct `kramdown-parser-gfm` dependency
 - Rearrange `_config.yml`
+- Refactor `HistoricalDiary::DayPage` to render documents directly instead of via `site.pages` -- this avoids rendering each source-material item as a standalone page in addition to interpolation in day pages
 
 ### Fixed
 - De-duplicate tags listed on day page

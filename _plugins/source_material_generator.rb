@@ -96,10 +96,6 @@ module HistoricalDiary
         Jekyll.logger.debug(self.class.name,
                             "Processing metadata for #{document.relative_path}...")
 
-        # @todo Remove this (and Jekyll monkeypatch) in favor of directly
-        #   rendering documents in `DayPage`.
-        @site.pages << document
-
         timestamp_string = document.basename_without_ext
         source_key = escape_key(document.relative_path.split(File::SEPARATOR)[-2])
 

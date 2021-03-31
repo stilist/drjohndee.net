@@ -44,6 +44,8 @@ module HistoricalDiary
       data["timestamp"] = timestamp
       data["title"] = timestamp
 
+      data["documents"] = documents
+
       data["people_keys"] = people_keys
       data["places_keys"] = places_keys
       data["sources_keys"] = sources_keys
