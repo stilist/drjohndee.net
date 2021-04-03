@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% comment -%}
+The life and times of Dr John Dee
+Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+{% endcomment -%}
+
+{% assign record = page.place_key | collection_entry: "places" -%}
+{% assign place_permalink = page.place_key | collection_entry_url: "places" -%}
+<main class="page place"
+         itemprop=place
+         itemscope
+         itemtype="https://schema.org/Place"
+         itemid="{{ place_permalink }}#place">
+  {% if record.id -%}
+  <link itemprop=sameAs href="{{ record.id }}">
+  {% endif -%}
+  {% if site.license_key -%}
+  <meta itemprop=license content="{{ site.license_key | license_url }}">
+  {% endif -%}
+
+  <header class="page-header">
+    <h2 class="page-name"
+        lang="{{ record.name_language }}" translate>
+      {{ record.presentational_name }}
+    </h2>
+  </header>
+
+  <article class="page-content"
+           itemprop=articleBody>
+    {% static_map_tile %}{{ page.place_key }}{% endstatic_map_tile %}
+  </article>
+
+  <div class='secondary'>
+    {% assign related_dates = page.place_key | dates_for_place -%}
+    {% if related_dates.size > 0 -%}
+    <aside class="annotations annotations-related_dates">
+      <h3>Related dates</h3>
+      <ul class="annotation-content">
+        {% for related_date in related_dates -%}
+        <li>
+          {% include day_page_link.html date=related_date %}
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+  </div>
+</main>

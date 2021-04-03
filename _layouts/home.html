@@ -76,6 +76,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   </ul>
   {% endif -%}
 
+  {% if site.data.places.size > 0 -%}
+  <h2>Browse by place</h2>
+  <ul class="grouping places">
+    {% assign sorted_keys = site.data.places | hash_keys | sort -%}
+    {% for place_key in sorted_keys -%}
+    <li class="grouping-item place">
+      {% include place_link.html place_key=place_key -%}
+      {% assign related_dates = place_key | dates_for_place -%}
+      {% if related_dates.size == 1 -%}
+      (1 appearance)
+      {% else -%}
+      ({{ related_dates.size }} appearances)
+      {% endif -%}
+    </li>
+    {% endfor -%}
+  </ul>
+  {% endif -%}
+
   {% if site.data.sources.size > 0 -%}
   <h2>Browse by source</h2>
   <ul class="grouping sources">

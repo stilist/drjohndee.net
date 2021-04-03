@@ -26,6 +26,7 @@ module DataCollection
   # static collections that get a page for each item
   RENDERED_COLLECTIONS = %w[
     people
+    places
     sources
     tags
   ].freeze
@@ -42,6 +43,7 @@ module DataCollection
   ].freeze
   SINGULAR_TO_PLURAL = {
     'person' => 'people',
+    'place' => 'places',
     'source' => 'sources',
     'tag' => 'tags',
   }.freeze

@@ -128,7 +128,7 @@ module HistoricalDiary
 
           places_keys = [
             document.data["places"],
-          ].flatten.compact
+          ].flatten.compact.map { |key| escape_key(key) }
 
           referenced_sources_keys = document.data["sources"] || []
           sources_keys = [

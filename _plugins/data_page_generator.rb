@@ -45,6 +45,8 @@ module HistoricalDiary
         title = case collection_name
                 when 'people'
                   record['presentational_name'].values.join(' ')
+                when 'places'
+                  record['presentational_name']
                 when 'sources'
                   record.dig('work', 'name')
                 when 'tags'

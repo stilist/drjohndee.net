@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add and enhance content for 1583 from 'A True and Faithful Relation' (scrying sessions are still absent)
 - Add [EditorConfig](https://editorconfig.org) so Visual Studio Code stops indenting things by four spaces
 - Begin adding data files for places
+- Add place pages, which render a static map using MapBox
+- Add `place_link.html` include
 
 ### Changed
 - Upgrade Terraform `aws` provider
