@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Begin adding data files for places
 - Add place pages, which render a static map using MapBox
 - Add `place_link.html` include
+- Make map tile use the full width of the content area
 
 ### Changed
 - Upgrade Terraform `aws` provider

@@ -578,6 +578,9 @@ ol.years > .year {
 .source-material {
   font-family: var(--font-serif);
 }
+.static-map img {
+  inline-size: 100%;
+}
 .entries {
   list-style: none;
   position: relative;
