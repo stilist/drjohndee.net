@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * The life and times of Dr John Dee
  * Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -15,8 +17,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
-@charset "utf-8";
 
 /* selected charsets: `greek`, `latin`, `latin-ext` */
 @font-face {
