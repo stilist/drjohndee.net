@@ -18,7 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Begin adding data files for places
 - Add place pages, which render a static map using MapBox
 - Add `place_link.html` include
+- Add `place.rb`, like `person.rb`, to manage code for a place
 - Make map tile use the full width of the content area
+- Add support for bounding box to `place.rb`
 
 ### Changed
 - Upgrade Terraform `aws` provider

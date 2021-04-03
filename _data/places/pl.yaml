@@ -1,0 +1,22 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Rzeczpospolita Polska"
+bounding_box:
+  - latitude: 50.869389
+    longitude: 24.145611
+  - latitude: 54.830000
+    longitude: 18.300000
+  - latitude: 49.002611
+    longitude: 22.847306
+  - latitude: 52.841389
+    longitude: 14.123306
+latitude: 52
+longitude: 19
+country: "PL"
+id: "https://www.wikidata.org/entity/Q36"
+name_language: "pl"

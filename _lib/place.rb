@@ -61,9 +61,14 @@ module HistoricalDiary
       light: "mapbox/light-v10",
     }.freeze
     URL_BASE = "https://api.mapbox.com/styles/v1"
+    # These values should give reasonable output in most cases. If you need
+    # something more specific, set up a `bounding_box` array on the record
+    # instead.
     ZOOM_LEVELS = {
       address: 14,
-      city: 9,
+      locality: 9,
+      region: 7,
+      country: 3,
     }.freeze
 
     def initialize(key, site)
@@ -105,15 +110,46 @@ module HistoricalDiary
       @site.config["mapbox_access_token"]
     end
 
+    def bounding_box
+      return if !record["bounding_box"].is_a?(Array)
+
+      bounding_box = [
+        coordinates,
+        coordinates
+      ].flatten
+      record["bounding_box"].each do |coordinate|
+        latitude = coordinate["latitude"]
+        longitude = coordinate["longitude"]
+
+        bounding_box[0] = [bounding_box[0], longitude].min
+        bounding_box[1] = [bounding_box[1], latitude].min
+        bounding_box[2] = [bounding_box[2], longitude].max
+        bounding_box[3] = [bounding_box[3], latitude].max
+      end
+
+      bounding_box
+    end
+
     def coordinates
-      return if record.nil?
-      return if record["latitude"].nil?
-      return if record["longitude"].nil?
+      return [] if record.nil?
+      return [] if record["latitude"].nil?
+      return [] if record["longitude"].nil?
 
       coordinates = [
         record["longitude"],
         record["latitude"],
-      ].join(",")
+      ].freeze
+    end
+
+    def record_type
+      return :unknown if record.nil?
+
+      if record["address"] then :address
+      elsif record["locality"] then :locality
+      elsif record["region"] then :region
+      elsif record["country"] then :country
+      else :unknown
+      end
     end
 
     def record
@@ -127,21 +163,26 @@ module HistoricalDiary
           theme,
           contrast ? "contrast" : "accent",
         ].join("_").to_sym
-        marker = "pin-s+#{COLORS[marker_color] || COLORS[:dark_accent]}(#{coordinates})"
+        marker = "pin-s+#{COLORS[marker_color] || COLORS[:dark_accent]}(#{coordinates.join(",")})"
+      end
+
+      if bounding_box
+        location = "[#{bounding_box.join(",")}]"
+      else
+        location = [
+          coordinates,
+          zoom_level,
+          0
+        ].flatten.join(",")
       end
 
       size_in_px = SIZES[size]
-
       parts = [
         URL_BASE,
         TILESETS[theme],
         "static",
         marker,
-        [
-          coordinates,
-          zoom_level,
-          0
-        ].join(","),
+        location,
         [
           size_in_px,
           "x",
@@ -153,7 +194,7 @@ module HistoricalDiary
     end
 
     def zoom_level
-      ZOOM_LEVELS[:city]
+      return ZOOM_LEVELS[record_type] || ZOOM_LEVELS[:locality]
     end
   end
 end
