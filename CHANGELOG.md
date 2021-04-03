@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rearrange `_config.yml`
 - Refactor `HistoricalDiary::DayPage` to render documents directly instead of via `site.pages` -- this avoids rendering each source-material item as a standalone page in addition to interpolation in day pages
 - Adjust `@media` queries to only apply to `screen`
+- Don't force Bundler to install into `vendor/bundle`
 
 ### Fixed
 - De-duplicate tags listed on day page
