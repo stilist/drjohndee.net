@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add support for bounding box to `place.rb`
 - Add structured data to place page
 - Tag `alternateName`s on person page
+- Add a bit of commentary
 
 ### Changed
 - Upgrade Terraform `aws` provider

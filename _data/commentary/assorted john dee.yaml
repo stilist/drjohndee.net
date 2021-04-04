@@ -13,3 +13,15 @@
     <span lang="nl">buurtschap</span> is at 52° 8′ 58″ N</a>, and
     <a href="https://www.wikidata.org/wiki/Q4011">the German city is at
     51° 39′ 31″ N</a>.
+"1577-03-11":
+  author_key: "Cole, Jordan"
+  text: >-2
+    <q lang="en-emodeng">Oyle of Hypericon</q>
+    refers to a oil infusion of
+    <span itemscope itemtype="http://schema.org/DietarySupplement">
+      <meta itemprop="sameAs" content="https://www.wikidata.org/entity/Q156935">
+      <span itemprop="activeIngredient">Hypericum</span>,
+      which is commonly known as
+      <a itemprop="nonProprietaryName url"
+         href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
+        <abbr>St.</abbr> John’s wort</a></span>.
