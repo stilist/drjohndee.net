@@ -16,5 +16,5 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% capture tag_url %}tags/{{ tag_text }}.html{% endcapture -%}
+{% capture tag_url %}tags/{{ tag_text | downcase }}.html{% endcapture -%}
 <a href="{{ tag_url | relative_url }}">{{ tag_text }}</a>
