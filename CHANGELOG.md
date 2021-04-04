@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Use `place_link.html` include on day page instead of just listing keys
 - Refactor `HistoricalDiary::Place`'s map rendering to a separate `HistoricalDiary::MapTile` class
 - Rename `static_map_tile` to `static_map_html`
+- Tag ‘DOI’ as an abbreviation
 
 ### Fixed
 - De-duplicate tags listed on day page

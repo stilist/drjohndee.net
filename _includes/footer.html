@@ -40,7 +40,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
 
     {% if site.doi -%}
-    <a href="https://doi.org/{{ site.doi }}" rel=identifier>DOI: {{ site.doi }}</a>.
+    <a href="https://doi.org/{{ site.doi }}" rel=identifier>
+      <abbr title="digital object identifier">DOI</abbr>: {{ site.doi }}</a>.
     {% endif -%}
 
     This website doesn’t track you.
