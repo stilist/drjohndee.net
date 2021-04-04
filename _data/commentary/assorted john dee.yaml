@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC0 1.0 license. See LICENSE.md for details.
+
+"1555-10-12":
+  author_key: "Cole, Jordan"
+  text: >-2
+    Although there <em>is</em> a Wesell in Gelderland (in the Netherlands),
+    the latitude given is a much closer match for Wesel in Germany:
+    <a href="https://www.wikidata.org/wiki/Q2395920">the Dutch
+    <span lang="nl">buurtschap</span> is at 52° 8′ 58″ N</a>, and
+    <a href="https://www.wikidata.org/wiki/Q4011">the German city is at
+    51° 39′ 31″ N</a>.
