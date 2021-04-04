@@ -17,60 +17,14 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require_relative "data_collection"
+require_relative "map_tile"
 
 module HistoricalDiary
   class Place
     include DataCollection
 
-    attr_reader :key
-
-    BREAKPOINTS = {
-      small: 960,
-      large: 2200,
-    }.freeze
-    COLORS = {
-      # --accent-70
-      dark_accent: "c18e48",
-      light_accent: "923b00",
-      # --neutral-100
-      dark_contrast: "000",
-      light_contrast: "fffefc",
-    }.freeze
-    SIZES = {
-      small: 400,
-      medium: 882,
-      large: 1200,
-    }.freeze
-    MEDIA_QUERIES = {
-      dark: "prefers-color-scheme: dark",
-      logical_large: "min-inline-size: #{BREAKPOINTS[:large]}px",
-      large: "min-width: #{BREAKPOINTS[:large]}px",
-      light: "prefers-color-scheme: light",
-      low_data: "prefers-reduced-data: reduced",
-      logical_small: "max-inline-size: #{BREAKPOINTS[:small]}px",
-      small: "max-width: #{BREAKPOINTS[:small]}px",
-    }.freeze
-    # keys: query, size, theme
-    SOURCES = [
-      { query: %i[dark], theme: :dark },
-      { query: %i[light], theme: :light },
-    ].freeze
-    TILESETS = {
-      dark: "mapbox/dark-v10",
-      default: "mapbox/light-v10",
-      light: "mapbox/light-v10",
-    }.freeze
-    URL_BASE = "https://api.mapbox.com/styles/v1"
-    # These values should give reasonable output in most cases. If you need
-    # something more specific, set up a `bounding_box` array on the record
-    # instead.
-    ZOOM_LEVELS = {
-      address: 14,
-      locality: 9,
-      region: 7,
-      unknown: 5,
-      country: 3,
-    }.freeze
+    attr_reader :key,
+                :site
 
     def initialize(key, site)
       @key = key
@@ -78,38 +32,33 @@ module HistoricalDiary
       @site = site
     end
 
-    def static_map_tile
-      return "" if coordinates.empty?
+    def coordinates
+      return [] if record.nil?
+      return [] if record["latitude"].nil?
+      return [] if record["longitude"].nil?
 
-      sources = SOURCES.map do |source|
-        media_query = source[:query].map { |key| MEDIA_QUERIES[key] }.join(" and ")
-        [
-          "<source srcset='#{tile_url(size: :large, theme: source[:theme])}, #{tile_url(dpi: 2, size: :large, theme: source[:theme])} 2x' " \
-                   "media='(#{media_query}) and (#{MEDIA_QUERIES[:logical_large]}), (#{media_query}) and (#{MEDIA_QUERIES[:large]})'>",
-          "<source srcset='#{tile_url(size: :small, theme: source[:theme])}, #{tile_url(dpi: 2, size: :small, theme: source[:theme])} 2x' " \
-                  "media='(#{media_query}) and (#{MEDIA_QUERIES[:logical_small]}), (#{media_query}) and (#{MEDIA_QUERIES[:small]})'>",
-          "<source srcset='#{tile_url(size: :medium, theme: source[:theme])}, #{tile_url(dpi: 2, size: :medium, theme: source[:theme])} 2x' " \
-                   "media='(#{media_query})'>",
-        ].freeze
-      end
+      coordinates = [
+        record["longitude"],
+        record["latitude"],
+      ].freeze
+    end
 
-      low_data = "<source srcset='#{tile_url(size: :small)}' media='(#{MEDIA_QUERIES[:low_data]})'>"
-      default = "<img src='#{tile_url(size: :medium)}' alt='Map of #{record['presentational_name']}'>"
+    def point
+      {
+        latitude: record["latitude"],
+        longitude: record["longitude"],
+        name: record["presentational_name"],
+        record_type: record_type,
+      }.freeze
+    end
 
-      <<-EOM
-      <picture class="static-map">
-      #{low_data}
-      #{sources.flatten.join("\n")}
-      #{default}
-      </picture>
-      EOM
+    def static_map_html
+      MapTile.new(bounding_box: bounding_box,
+                  points: [point],
+                  site: site).static_map_html
     end
 
     private
-
-    def api_token
-      @site.config["mapbox_access_token"]
-    end
 
     def bounding_box
       return if record.nil?
@@ -132,17 +81,6 @@ module HistoricalDiary
       bounding_box
     end
 
-    def coordinates
-      return [] if record.nil?
-      return [] if record["latitude"].nil?
-      return [] if record["longitude"].nil?
-
-      coordinates = [
-        record["longitude"],
-        record["latitude"],
-      ].freeze
-    end
-
     def record_type
       return :unknown if record.nil?
 
@@ -156,47 +94,6 @@ module HistoricalDiary
 
     def record
       place_data(key)
-    end
-
-    # @see https://docs.mapbox.com/api/maps/static-images/
-    def tile_url(contrast: false, dpi: 1, include_marker: true, size: :medium, theme: :default)
-      if include_marker
-        marker_color = [
-          theme,
-          contrast ? "contrast" : "accent",
-        ].join("_").to_sym
-        marker = "pin-s+#{COLORS[marker_color] || COLORS[:dark_accent]}(#{coordinates.join(",")})"
-      end
-
-      if bounding_box
-        location = "[#{bounding_box.join(",")}]"
-      else
-        location = [
-          coordinates,
-          zoom_level,
-          0
-        ].flatten.join(",")
-      end
-
-      size_in_px = SIZES[size]
-      parts = [
-        URL_BASE,
-        TILESETS[theme],
-        "static",
-        marker,
-        location,
-        [
-          size_in_px,
-          "x",
-          size_in_px,
-          dpi == 1 ? "" : "@2x",
-        ].join(""),
-      ].compact
-      parts.join("/") + "?access_token=#{api_token}&logo=false"
-    end
-
-    def zoom_level
-      return ZOOM_LEVELS[record_type] || ZOOM_LEVELS[:locality]
     end
   end
 end

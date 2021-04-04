@@ -23,7 +23,7 @@ module HistoricalDiary
   class StaticMapTileBlock < Liquid::Block
     def render(context)
       key = super
-      Place.new(key, context.registers[:site]).static_map_tile
+      Place.new(key, context.registers[:site]).static_map_html
     end
   end
 end

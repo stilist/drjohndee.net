@@ -36,6 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust `@media` queries to only apply to `screen`
 - Don't force Bundler to install into `vendor/bundle`
 - Use `place_link.html` include on day page instead of just listing keys
+- Refactor `HistoricalDiary::Place`'s map rendering to a separate `HistoricalDiary::MapTile` class
+- Rename `static_map_tile` to `static_map_html`
 
 ### Fixed
 - De-duplicate tags listed on day page
