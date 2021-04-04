@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
       "base-uri 'none'", // added
       "font-src 'self'", // added
       "frame-ancestors 'none'", // added
-      "img-src 'self' 'https://api.mapbox.com'", // added Mapbox
+      "img-src 'self' https://api.mapbox.com", // added Mapbox
       "object-src 'none'",
       "prefetch-src 'self'",
       "script-src 'self'",
