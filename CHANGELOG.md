@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make map tile use the full width of the content area
 - Add support for bounding box to `place.rb`
 - Add structured data to place page
+- Tag `alternateName`s on person page
 
 ### Changed
 - Upgrade Terraform `aws` provider

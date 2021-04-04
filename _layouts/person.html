@@ -22,10 +22,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% assign record = page.person_key | collection_entry: "people" -%}
 {% assign person_permalink = page.person_key | collection_entry_url: "people" -%}
 <main class="page person"
-         itemprop=person
-         itemscope
-         itemtype="https://schema.org/Person"
-         itemid="{{ person_permalink }}#person">
+      itemprop=person
+      itemscope
+      itemtype="https://schema.org/Person"
+      itemid="{{ person_permalink }}#person">
   {% if record.id -%}
   <link itemprop=sameAs href="{{ record.id }}">
   {% endif -%}
@@ -45,12 +45,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <h2 class="page-name"
         lang="{{ record.name_language }}" translate
         dir={{ text_direction }}>
-      {{ page.person_key | person_name }}
+      <span itemprop="alternateName">{{ page.person_key | person_name }}</span>
       {% if record.alias -%}
-      alias {{ page.person_key | person_name: "alias" }}
+      alias
+      <span itemprop="alternateName">{{ page.person_key | person_name: "alias" }}</span>
       {% endif -%}
       {% if record.birth_name -%}
-      (born {{ page.person_key | person_name: "birth_name" }})
+      (born <span itemprop="alternateName">{{ page.person_key | person_name: "birth_name" }}</span>)
       {% endif -%}
     </h2>
 
