@@ -11,8 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
-- Fix `MapTile` `alt` text formatting
+- Fix `HistoricalDiary::MapTile` `alt` text formatting
 - Fix crash in `HistoricalDiary::Place#point` when there’s not an associated data record
+- Fix crash in `HistoricalDiary::MapTile` when a point is `nil`
 
 ## [1.0.11] - 2021-04-03
 ### Added

@@ -72,7 +72,8 @@ module HistoricalDiary
 
     def initialize(bounding_box: nil, points: [], site:)
       @bounding_box = bounding_box || []
-      @points = points.select { |point| point.key?(:latitude) && point.key?(:longitude) }
+      @points = points.compact.
+        select { |point| point.key?(:latitude) && point.key?(:longitude) }
       @site = site
     end
 
