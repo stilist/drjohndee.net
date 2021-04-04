@@ -22,22 +22,48 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% assign record = page.place_key | collection_entry: "places" -%}
 {% assign place_permalink = page.place_key | collection_entry_url: "places" -%}
 <main class="page place"
-         itemprop=place
-         itemscope
-         itemtype="https://schema.org/Place"
-         itemid="{{ place_permalink }}#place">
+      itemprop=place
+      itemscope
+      itemtype="https://schema.org/Place"
+      itemid="{{ place_permalink }}#place">
   {% if record.id -%}
   <link itemprop=sameAs href="{{ record.id }}">
   {% endif -%}
   {% if site.license_key -%}
   <meta itemprop=license content="{{ site.license_key | license_url }}">
   {% endif -%}
+  <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+    {% if record.latitude -%}
+    <meta itemprop="latitude" content="{{ record.latitude }}">
+    {% endif -%}
+    {% if record.longitude -%}
+    <meta itemprop="longitude" content="{{ record.longitude }}">
+    {% endif -%}
+  </span>
 
   <header class="page-header">
     <h2 class="page-name"
-        lang="{{ record.name_language }}" translate>
+        lang="{{ record.name_language }}" translate
+        itemprop="alternateName">
       {{ record.presentational_name }}
     </h2>
+
+    <p class="page-subtitle"
+       lang="{{ record.name_language }}" translate
+       itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      {% if record.streetAddress -%}
+      <span itemprop="streetAddress">{{ record.streetAddress }}</span>,
+      {% endif -%}
+      {% if record.locality -%}
+      <span itemprop="addressLocality">{{ record.locality }}</span>,
+      {% endif -%}
+      {% if record.region -%}
+      <span itemprop="addressRegion">{{ record.region }}</span>,
+      {% endif -%}
+      {% if record.country -%}
+      <span itemprop="addressCountry">{{ record.country }}</span>
+      {% endif -%}
+    </p>
   </header>
 
   <article class="page-content"
