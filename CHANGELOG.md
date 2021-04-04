@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
+- Fix `MapTile` `alt` text formatting
 
 ## [1.0.11] - 2021-04-03
 ### Added

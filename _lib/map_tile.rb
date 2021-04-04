@@ -92,8 +92,8 @@ module HistoricalDiary
       end
 
       low_data = "<source srcset='#{tile_url(size: :small)}' media='(#{MEDIA_QUERIES[:low_data]})'>"
-      names = if points.length <= 2 then points.first(2).map { |point| point[:name] }
-              else points.first[:name] + "and #{points.length - 2} other places"
+      names = if points.length <= 2 then points.first(2).map { |point| point[:name] }.join(" and ")
+              else points.first[:name] + "and #{points.length - 1} other places"
               end
       default = "<img src='#{tile_url(size: :medium)}' alt='Map of #{names}'>"
 
