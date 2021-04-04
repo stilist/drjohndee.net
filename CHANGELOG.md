@@ -47,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move CSS file's `@charset` to the first line of the file -- required by the standard
 - Change file’s extension from `.md` to `.txt` to avoid interpreting indentation as ‘this is code’
 - Update some incorrect place tags
+- Replace ` ` with `%20` in `CONTRIBUTING.md` to make links work
 
 ## [1.0.10] - 2021-03-21
 ### Added
