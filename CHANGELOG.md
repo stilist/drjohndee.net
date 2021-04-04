@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add structured data to place page
 - Tag `alternateName`s on person page
 - Add a bit of commentary
+- Add `.github/FUNDING.yaml` for sponsorship
 
 ### Changed
 - Upgrade Terraform `aws` provider
