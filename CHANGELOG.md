@@ -5,9 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Tag pages now display a map of associated places
+
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
 - Fix `MapTile` `alt` text formatting
+- Fix crash in `HistoricalDiary::Place#point` when there’s not an associated data record
 
 ## [1.0.11] - 2021-04-03
 ### Added

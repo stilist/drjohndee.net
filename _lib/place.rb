@@ -44,6 +44,8 @@ module HistoricalDiary
     end
 
     def point
+      return if record.nil?
+
       {
         latitude: record["latitude"],
         longitude: record["longitude"],

@@ -36,4 +36,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endfor -%}
     {% endif -%}
   </article>
+
+  <div class='secondary'>
+    {{ page.tag_key | static_map_html_for_tag }}
+  </div>
 </main>

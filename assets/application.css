@@ -285,6 +285,10 @@
     "content    content    content    content    content    content    content    content    content       .   secondary secondary secondary secondary secondary"
     "commentary commentary commentary commentary commentary commentary commentary commentary commentary    .   secondary secondary secondary secondary secondary"
     "context    context    context    context    context    context    context    context    context       .   secondary secondary secondary secondary secondary";
+  --tag-page-grid-areas:
+    "header     header     header     header     header     header  header    header    header    header    header    header    header    header    header"
+    "commentary commentary commentary commentary commentary    .    secondary secondary secondary secondary secondary secondary secondary secondary secondary"
+    "content    content    content    content    content       .    secondary secondary secondary secondary secondary secondary secondary secondary secondary";
 
   --vertical-rhythm: calc(var(--gutter-inline-size) * 2);
 
@@ -323,6 +327,11 @@
       "secondary  secondary  secondary  secondary  secondary"
       "commentary commentary commentary commentary commentary"
       "context    context    context    context    context";
+    --tag-page-grid-areas:
+      "header     header     header     header     header"
+      "commentary commentary commentary commentary commentary"
+      "secondary  secondary  secondary  secondary  secondary"
+      "content    content    content    content    content";
   }
 }
 
@@ -517,6 +526,9 @@ ol.years > .year {
   grid-template-rows: var(--content-grid-rows);
   grid-template-areas: var(--content-grid-areas);
   max-inline-size: var(--content-inline-size);
+}
+.page.tag {
+  grid-template-areas: var(--tag-page-grid-areas);
 }
 .page-header {
   grid-area: header;
