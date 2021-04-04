@@ -1,0 +1,16 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "John Dee’s house in Mortlake, England"
+# @note The address and coordinates are approximate, and could be wrong.
+latitude: 51.469593
+longitude: -0.262421
+address: "103 Mortlake High St"
+locality: "Mortlake"
+region: "Greater London"
+country: "GB"
+name_language: "en"

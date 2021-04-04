@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Tag pages now display a map of associated places
+- Add some more place data
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox

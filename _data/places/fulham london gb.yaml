@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Fulham, England"
+latitude: 51.4828
+longitude: -0.195
+locality: "Fulham"
+region: "Greater London"
+country: "GB"
+id: "https://www.wikidata.org/entity/Q3367868"
+name_language: "en"
