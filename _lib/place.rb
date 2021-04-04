@@ -68,6 +68,7 @@ module HistoricalDiary
       address: 14,
       locality: 9,
       region: 7,
+      unknown: 5,
       country: 3,
     }.freeze
 
@@ -78,7 +79,7 @@ module HistoricalDiary
     end
 
     def static_map_tile
-      return "" if coordinates.nil?
+      return "" if coordinates.empty?
 
       sources = SOURCES.map do |source|
         media_query = source[:query].map { |key| MEDIA_QUERIES[key] }.join(" and ")
@@ -111,6 +112,7 @@ module HistoricalDiary
     end
 
     def bounding_box
+      return if record.nil?
       return if !record["bounding_box"].is_a?(Array)
 
       bounding_box = [
