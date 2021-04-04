@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Osterholz, Deutschland"
+latitude: 53.0586
+longitude: 8.93861
+locality: "Osterholz"
+region: "Niedersachsen"
+country: "DE"
+id: "https://www.wikidata.org/entity/Q2035210"
+name_language: "de"

@@ -5,12 +5,11 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-presentational_name: "Kraków, Polksa"
-latitude: 50.061389
-longitude: 19.937222
-locality: "Kraków"
-region: "Lesser Poland"
+presentational_name: "Szczecin, Polska"
+latitude: 53.4325
+longitude: 14.548056
+locality: "Szczecin"
+region: "Województwo zachodniopomorskie"
 country: "PL"
-id: "https://www.wikidata.org/entity/Q31487"
-url: "https://www.krakow.pl/"
+id: "https://www.wikidata.org/entity/Q393"
 name_language: "pl"

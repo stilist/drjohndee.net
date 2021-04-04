@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Franeker, Nederland"
+latitude: 53.2
+longitude: 5.533333
+locality: "Franeker"
+region: "Friesland"
+country: "NL"
+id: "https://www.wikidata.org/entity/Q41974"
+name_language: "nl"

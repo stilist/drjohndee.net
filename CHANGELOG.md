@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add and update metadata on some entries
 - Add and enhance content for 1583 from 'A True and Faithful Relation' (scrying sessions are still absent)
 - Add [EditorConfig](https://editorconfig.org) so Visual Studio Code stops indenting things by four spaces
-- Begin adding data files for places
+- Add data files for all places mentioned during Dee's trip to Kraków
 - Add place pages, which render a static map using MapBox
 - Add `place_link.html` include
 - Add `place.rb`, like `person.rb`, to manage code for a place

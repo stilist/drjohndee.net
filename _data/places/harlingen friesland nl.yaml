@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Harlingen, Nederland"
+latitude: 53.183333
+longitude: 5.416667
+locality: "Harlingen"
+region: "Friesland"
+country: "NL"
+id: "https://www.wikidata.org/entity/Q2536628"
+name_language: "nl"
