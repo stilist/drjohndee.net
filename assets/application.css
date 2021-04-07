@@ -287,7 +287,6 @@
     "context    context    context    context    context    context    context    context    context       .   secondary secondary secondary secondary secondary";
   --tag-page-grid-areas:
     "header     header     header     header     header     header  header    header    header    header    header    header    header    header    header"
-    "commentary commentary commentary commentary commentary    .    secondary secondary secondary secondary secondary secondary secondary secondary secondary"
     "content    content    content    content    content       .    secondary secondary secondary secondary secondary secondary secondary secondary secondary";
 
   --vertical-rhythm: calc(var(--gutter-inline-size) * 2);
@@ -329,7 +328,6 @@
       "context    context    context    context    context";
     --tag-page-grid-areas:
       "header     header     header     header     header"
-      "commentary commentary commentary commentary commentary"
       "secondary  secondary  secondary  secondary  secondary"
       "content    content    content    content    content";
   }
