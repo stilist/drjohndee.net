@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q1216173"
+presentational_name:
+  givenName: Christopher
+  familyName: Hatton
+full_name:
+  - text: Sir
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q209690"
+  - text: Christopher
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q1084472"
+  - text: Hatton
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q37438520"
+birth_date: "1540"
+death_date: "1591-11-20"

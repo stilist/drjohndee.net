@@ -1,0 +1,26 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Kalaallit Nunaat"
+bounding_box:
+  # Wikidata
+  - latitude: 81.516669
+    longitude: -12.133331
+  # Wikidata
+  - latitude: 76.716669
+    longitude: -72.833331
+  # estimated using Google Maps
+  - latitude: 83.670077
+    longitude: -34.234652
+  # estimated using Google Maps
+  - latitude: 59.777284
+    longitude: -43.914286
+latitude: 72
+longitude: 40
+country: "GL"
+id: "https://www.wikidata.org/entity/Q223"
+name_language: "gl"

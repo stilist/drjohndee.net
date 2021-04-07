@@ -1,0 +1,18 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Estotiland"
+bounding_box:
+  - latitude: 62.8692
+    longitude: -79.9208
+  - latitude: 62.8692
+    longitude: -50.9483
+  - latitude: 46.3898
+    longitude: -79.9208
+  - latitude: 46.3898
+    longitude: -50.9483
+id: "https://www.wikidata.org/entity/Q3059031"

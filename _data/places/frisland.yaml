@@ -1,0 +1,18 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Frisland"
+bounding_box:
+  - latitude: 66.3543
+    longitude: -55.4216
+  - latitude: 66.3543
+    longitude: -10.5075
+  - latitude: 40.7442
+    longitude: -55.4216
+  - latitude: 40.7442
+    longitude: -10.5075
+id: "https://www.wikidata.org/entity/Q930506"

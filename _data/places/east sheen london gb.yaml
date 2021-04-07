@@ -5,11 +5,11 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-presentational_name: "Baconsthorp, England"
-latitude: 52.88964
-longitude: 1.15369
-locality: "Baconsthorp"
-region: "East of England"
+presentational_name: "East Sheen, England"
+latitude: 51.464686
+longitude: -0.266522
+locality: "East Sheen"
+region: "Greater London"
 country: "GB"
-id: "https://www.wikidata.org/entity/Q2343935"
+id: "https://www.wikidata.org/entity/Q2530557"
 name_language: "en"
