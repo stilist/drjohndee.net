@@ -35,7 +35,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endif -%}
 
 {% assign content_with_annotations = entry | annotate_content -%}
-{% assign content_as_html = content_with_annotations | liquify -%}
+{% assign content_as_html = content_with_annotations | liquify | strip -%}
 
 {% if content_as_html == "" -%}
 {% assign edition_data = source_record.editions | find: "edition_key", entry.edition_key -%}
@@ -65,7 +65,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
      lang="{{ language }}" translate>
   {% if entry.dates.size > 1 -%}
   <span class="page-dateRange">
-    ({{ entry.dates | first }} to {{ entry.dates | last }})
+    ({{ entry.dates | first | date: "%F" }} to {{ entry.dates | last | date: "%F" }})
   </span>
   {% endif -%}
 
