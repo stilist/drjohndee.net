@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add some more place data
 - Add metadata to entries
 
+### Changed
+- Add comma after day name on day page
+
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
 - Fix `HistoricalDiary::MapTile` `alt` text formatting
