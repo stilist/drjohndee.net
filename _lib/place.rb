@@ -34,21 +34,22 @@ module HistoricalDiary
 
     def coordinates
       return [] if record.nil?
-      return [] if record["latitude"].nil?
-      return [] if record["longitude"].nil?
+      return [] if latitude.nil?
+      return [] if longitude.nil?
 
       coordinates = [
-        record["longitude"],
-        record["latitude"],
+        latitude,
+        longitude,
       ].freeze
     end
 
     def point
       return if record.nil?
+      return if coordinates.empty?
 
       {
-        latitude: record["latitude"],
-        longitude: record["longitude"],
+        latitude: latitude,
+        longitude: longitude,
         name: record["presentational_name"],
         record_type: record_type,
       }.freeze
@@ -66,21 +67,29 @@ module HistoricalDiary
       return if record.nil?
       return if !record["bounding_box"].is_a?(Array)
 
-      bounding_box = [
-        coordinates,
-        coordinates
-      ].flatten
-      record["bounding_box"].each do |coordinate|
+      record["bounding_box"].each_with_object([]) do |coordinate, bounding_box|
         latitude = coordinate["latitude"]
         longitude = coordinate["longitude"]
 
-        bounding_box[0] = [bounding_box[0], longitude].min
-        bounding_box[1] = [bounding_box[1], latitude].min
-        bounding_box[2] = [bounding_box[2], longitude].max
-        bounding_box[3] = [bounding_box[3], latitude].max
+        bounding_box[0] = [bounding_box[0], longitude].compact.min
+        bounding_box[1] = [bounding_box[1], latitude].compact.min
+        bounding_box[2] = [bounding_box[2], longitude].compact.max
+        bounding_box[3] = [bounding_box[3], latitude].compact.max
       end
+    end
 
-      bounding_box
+    def latitude
+      return record["latitude"] if record["latitude"].is_a?(Float) || record["latitude"].is_a?(Integer)
+      return if bounding_box.nil?
+
+      (bounding_box[1] + bounding_box[3]) / 2
+    end
+
+    def longitude
+      return record["longitude"] if record["longitude"].is_a?(Float) || record["longitude"].is_a?(Integer)
+      return if bounding_box.nil?
+
+      (bounding_box[0] + bounding_box[2]) / 2
     end
 
     def record_type

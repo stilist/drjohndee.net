@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix crash in `HistoricalDiary::MapTile` when a point is `nil`
 - Convert link URLs to lowercase to fix S3 retrieval
 - Fix bug that prevented the 'missing content' state from rendering
+- Change `HistoricalDiary::Place` to handle case that bounding box are specified but latitude and longitude are not
 
 ## [1.0.11] - 2021-04-03
 ### Added
