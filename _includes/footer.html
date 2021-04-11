@@ -41,7 +41,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     {% if site.doi -%}
     <a href="https://doi.org/{{ site.doi }}" rel=identifier>
-      <abbr title="digital object identifier">DOI</abbr>: {{ site.doi }}</a>.
+      <abbr title="digital object identifier">DOI</abbr>:
+      <span class="doi">{{ site.doi }}</span></a>.
     {% endif -%}
 
     This website doesn’t track you.

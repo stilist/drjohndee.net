@@ -10,9 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add some more place data
 - Add metadata to entries
 - Add `calendar` key to more entries
+- Add `--font-monospace` font stack
+- Display DOI in monospace
 
 ### Changed
 - Add comma after day name on day page
+- Expand `--font-sans-serif` font stack
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox

@@ -256,9 +256,16 @@
 :root {
   --base-font-size: 18px;
   --content-line-height: calc(var(--vertical-rhythm) * 2);
+  /* @see https://www.digitalocean.com/community/tutorials/css-system-font-stack */
+  /* @see https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/ */
+  --font-monospace: ui-monospace, SF Mono, Menlo, Monaco, Cascadia Mono,
+      Segoe UI Mono, Roboto Mono, Oxygen Mono, Ubuntu Monospace,
+      Source Code Pro, Fira Mono, Consolas, Liberation Mono, Droid Sans Mono,
+      Courier New, monospace;
   --font-serif-local: Garamond, Times, Times New Roman, serif;
   --font-serif: EB Garamond, var(--font-serif-local);
-  --font-sans-serif: system-ui, sans-serif;
+  --font-sans-serif: system-ui, Segoe UI, Roboto, Oxygen-Sans, Ubuntu,
+      Cantarell, Helvetica, Arial, sans-serif;
 }
 @media only screen and (prefers-reduced-data: reduced) {
   :root {
@@ -402,6 +409,9 @@ ol > li,
 ul > li {
   line-height: var(--vertical-rhythm);
   margin-block-end: var(--vertical-rhythm);
+}
+pre {
+  font-family: var(--font-monospace);
 }
 blockquote {
   color: var(--blockquote-content-color);
@@ -733,6 +743,9 @@ ol.years > .year {
   .entries::after {
     left: calc(var(--content-inline-size) * 0.20);
   }
+}
+#site-footer .doi {
+  font-family: var(--font-monospace);
 }
 
 .calendar {
