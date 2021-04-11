@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tag pages now display a map of associated places
 - Add some more place data
 - Add metadata to entries
+- Add `calendar` key to more entries
 
 ### Changed
 - Add comma after day name on day page
