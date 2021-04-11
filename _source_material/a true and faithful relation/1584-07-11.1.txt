@@ -1,5 +1,6 @@
 ---
 author_key: "Dee, John"
+calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 198"
@@ -7,11 +8,15 @@ people:
   - "Dee, John"
   - "Gabriel"
   - "Kelley, Edward"
+places:
+  - "Krakow, Lesser Poland, PL"
+scryer_key: "Kelley, Edward"
 tags:
-  - scrying
+  - "scrying"
+time_of_day: "06:30"
 ---
-Wedneſday, Julii 11.   Mane hora, 6 ½.     Cracovie.
-Oratione dominica finita, &c.
+              Wedneſday, Julii 11.   Mane hora, 6 ½.     Cracovie.
+          Oratione dominica finita, &c.
 Δ. We await the promiſe, which you made us , O Gabriel.
 A voyce. Not now, but at the fourth hour, declining as before.
 E. K. And why not now as well ?
