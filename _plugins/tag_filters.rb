@@ -36,7 +36,10 @@ module HistoricalDiary
       tag_filters_cache.getset(cache_key) do
         Jekyll.logger.debug(self.class.name,
                             "Not yet cached: #{cache_key}")
-        dates_for_places_keys.select { |place_key, place_dates| !(dates & place_dates).empty? }.keys
+        dates_for_places_keys.
+          select { |place_key, place_dates| !(dates & place_dates).empty? }.
+          keys.
+          uniq
       end
     end
 
