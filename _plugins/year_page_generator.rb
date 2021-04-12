@@ -62,14 +62,16 @@ module HistoricalDiary
       # Generate 13 full months, though ultimately a month of it will be
       # considered 'filler'.
       expanded_legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
+      legal_year_start_date = legal_year_start(year)
+      legal_year_end_date = legal_year_end(year)
       TimestampRange.new(expanded_legal_year_timestamp, "Gregorian").dates.each do |date|
         calendar_timestamp = date.strftime("%F")
 
         month = date.strftime("%m")
         day = date.strftime("%d")
         type = if dates_with_content.include?(calendar_timestamp) then "content"
-               elsif date < legal_year_start(year) then "filler"
-               elsif date > legal_year_end(year) then "filler"
+               elsif date < legal_year_start_date then "filler"
+               elsif date > legal_year_end_date then "filler"
                else "no-content"
                end
 

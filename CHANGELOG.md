@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust `TimestampRange`’s calculated `end_date` when given a `"YYYY"` or `"YYYY-MM"` string -- for `"YYYY"` the `end_date` will be `YYYY` plus one year, and for `"YYYY-MM"` the `end_date` will be `YYYY-MM` plus one month
 - Fix crash in `TimestampRange#parse_raw_timestamp` if the object passed as a timestamp can’t be parsed
 - De-duplicate places in `places_keys_for_tag` Liquid filter
+- Call `#legal_year_start` / `#legal_year_end` outside loop in `HistoricalDiary::YearPage`
 
 ## [1.0.11] - 2021-04-03
 ### Added
