@@ -112,9 +112,10 @@ module HistoricalDiary
 
           # Splitting on `,` allows for non-consecutive dates without making
           # `TimestampRange` more complex.
+          datetime_start = document.data["calendar"] || @site.config["default_calendar_system"]
           dates = cache.getset(timestamp_string) do
             timestamp_string.split(",")
-              .map { |timestamp| TimestampRange.new(timestamp).dates }
+              .map { |timestamp| TimestampRange.new(timestamp, datetime_start).dates }
               .flatten
           end
 

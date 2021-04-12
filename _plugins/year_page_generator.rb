@@ -51,18 +51,18 @@ module HistoricalDiary
           },
         ]
       end
-      calendar_year_start = DateTime.iso8601("#{year}-01-01", ::Date::ENGLAND).to_date
+      calendar_year_start = DateTime.iso8601("#{year}-01-01")
       data["date"] = calendar_year_start
       data["last_modified_at"] = DateTime.now.to_date
       data["expanded_legal_year_dates"] = months.to_h
       data["title"] = year
       data["year"] = year
 
+      next_calendar_year = DateTime.iso8601("#{year + 1}-01-01")
       # Generate 13 full months, though ultimately a month of it will be
       # considered 'filler'.
       expanded_legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
-      next_calendar_year = DateTime.iso8601("#{year + 1}-01-01", ::Date::ENGLAND)
-      TimestampRange.new(expanded_legal_year_timestamp).dates.each do |date|
+      TimestampRange.new(expanded_legal_year_timestamp, "Gregorian").dates.each do |date|
         calendar_timestamp = date.strftime("%F")
 
         month = date.strftime("%m")

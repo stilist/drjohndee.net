@@ -30,6 +30,7 @@ url: "https://www.drjohndee.net" # the base hostname & protocol for your site, e
 lang: en-US
 
 # site metadata
+default_calendar_system: "Julian"
 doi: "10.5281/zenodo.4511512"
 github_repository_url: "https://github.com/stilist/john-dee"
 google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"

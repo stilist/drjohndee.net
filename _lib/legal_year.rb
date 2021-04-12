@@ -29,17 +29,31 @@ require_relative 'timestamp_range'
 # > was celebrated on 1 January as part of Yule.
 #
 # @see https://en.wikipedia.org/wiki/Lady_Day
+#
+# @note This is hard-coded for Great Britain, and doesn't apply for other
+#   countries.
 module LegalYear
   def legal_year(year)
-    timestamp = "#{legal_year_start(year)}/#{legal_year_end(year)}"
-    TimestampRange.new(timestamp).dates
+    legal_year__timestamp_range(year).dates
   end
 
   def legal_year_start(year)
-    DateTime.iso8601("#{year}-03-25", ::Date::ENGLAND)
+    legal_year__timestamp_range(year).start_date[:object]
   end
 
   def legal_year_end(year)
-    DateTime.iso8601("#{year + 1}-03-24", ::Date::ENGLAND)
+    legal_year__timestamp_range(year).end_date[:object]
+  end
+
+  private
+
+  def legal_year__timestamp_range(year)
+    timestamp = "#{year}-03-25/#{year + 1}-03-24"
+    TimestampRange.new(timestamp, legal_year__default_calendar_system)
+  end
+
+  def legal_year__default_calendar_system
+    site = @site || @context.registers[:site]
+    site.config["default_calendar_system"]
   end
 end

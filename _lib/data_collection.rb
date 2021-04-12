@@ -53,9 +53,7 @@ module DataCollection
   TRANSCLUSIONS = {}
 
   def data_collection_records(collection_name)
-    site = @site
-    site ||= @context.registers[:site]
-    site.data[collection_name]
+    data_collection__site_object.data[collection_name]
   end
 
   def data_collection_record(collection_name, key)
@@ -100,7 +98,7 @@ module DataCollection
 
     ensure_transclusions_by_date(collection_name)
 
-    timestamp_range = TimestampRange.new(timestamp)
+    timestamp_range = TimestampRange.new(timestamp, data_collection__default_calendar_system)
     out = []
     timestamp_range.dates.each do |date|
       out << TRANSCLUSIONS[collection_name][date.strftime('%F')]
@@ -110,6 +108,14 @@ module DataCollection
   end
 
   private
+
+  def data_collection__site_object
+    @site || @context.registers[:site]
+  end
+
+  def data_collection__default_calendar_system
+    data_collection__site_object.config["default_calendar_system"]
+  end
 
   # @see https://github.com/jekyll/jekyll/blob/7d8a839a2132cadd940a3b4f8d7c5f9f6b0f9f62/lib/jekyll/readers/data_reader.rb#L71-L74
   def escape_key(key)
@@ -132,7 +138,7 @@ module DataCollection
       records.keys.each do |key|
         raw_timestamps = key.split(',')
         raw_timestamps.each do |raw_timestamp|
-          timestamp_range = TimestampRange.new(raw_timestamp)
+          timestamp_range = TimestampRange.new(raw_timestamp, data_collection__default_calendar_system)
           timestamp_range.dates.each do |date|
             as_string = date.strftime('%F')
             TRANSCLUSIONS[collection_name][as_string] ||= []

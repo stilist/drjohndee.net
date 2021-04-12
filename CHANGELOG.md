@@ -12,10 +12,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `calendar` key to more entries
 - Add `--font-monospace` font stack
 - Display DOI in monospace
+- `TimestampRange` now converts Julian dates to Gregorian when appropriate
+- Add `default_calendar_system` setting to `_config.yml`
 
 ### Changed
 - Add comma after day name on day page
 - Expand `--font-sans-serif` font stack
+- `HistoricalDiary::YearPageGenerator` uses Julian dates until the Gregorian calendar took effect (1580-10-05), and Gregorian dates after -- before all dates were treated as Julian
+- Change `LegalYear`’s `#legal_year_start` and `#legal_year_end` methods to wrap a `TimestampRange`
+- `TimestampRange` now `raise`s `HistoricalDiary::TimestampRangeError` if the object passed as a timestamp can’t be parsed
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
@@ -25,6 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Convert link URLs to lowercase to fix S3 retrieval
 - Fix bug that prevented the 'missing content' state from rendering
 - Change `HistoricalDiary::Place` to handle case that bounding box are specified but latitude and longitude are not
+- Adjust `TimestampRange`’s calculated `end_date` when given a `"YYYY"` or `"YYYY-MM"` string -- for `"YYYY"` the `end_date` will be `YYYY` plus one year, and for `"YYYY-MM"` the `end_date` will be `YYYY-MM` plus one month
+- Fix crash in `TimestampRange#parse_raw_timestamp` if the object passed as a timestamp can’t be parsed
 
 ## [1.0.11] - 2021-04-03
 ### Added

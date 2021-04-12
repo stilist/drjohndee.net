@@ -18,6 +18,10 @@
 
 require 'date'
 
+module HistoricalDiary
+  class TimestampRangeError < ArgumentError ; end
+end
+
 # This is a naïve, simplistic implementation of the ISO 8601 date format and
 # interval syntax. It's only capable of handling very basic inputs, but
 # currently that's all I need. (Notably, it can't handle the shorthand interval
@@ -28,8 +32,9 @@ class TimestampRange
   attr_reader :end_date,
               :start_date
 
-  def initialize(raw_timestamp)
+  def initialize(raw_timestamp, calendar_system="Gregorian")
     @raw_timestamp = raw_timestamp
+    @calendar_system = calendar_system
     parse_raw_timestamp
   end
 
@@ -41,7 +46,7 @@ class TimestampRange
 
     while current_date <= end_date[:object]
       @dates << current_date
-      current_date = current_date + 1
+      current_date = current_date.next_day
     end
 
     @dates
@@ -65,12 +70,14 @@ class TimestampRange
     @raw_start, _, @raw_end = @raw_timestamp.split(/(\/|--)/)
 
     @start_date = parse_raw_date(@raw_start)
-
     @end_date = parse_raw_date(@raw_end)
     ensure_end_date
 
     @start_date.freeze
     @end_date.freeze
+  rescue
+    raise HistoricalDiary::TimestampRangeError,
+          "Unable to parse a timestamp from '#{@raw_timestamp}'"
   end
 
   def parse_raw_date(raw_date)
@@ -85,39 +92,56 @@ class TimestampRange
     ].map { |part| part.to_s.rjust(2, '0') }.
       join('-')
 
+    date_time = DateTime.iso8601(iso8601, datetime_start)
+    if date_time >= Date.jd(Date::ITALY) && @calendar_system == "Julian"
+      adjusted_date_time = date_time.gregorian
+    else
+      adjusted_date_time = date_time
+    end
+
     {
-      object: ::DateTime.iso8601(iso8601, ::Date::ENGLAND),
-      year: year,
-      month: month,
-      day: day,
+      # `#gregorian` creates a new date using `Date::GREGORIAN`, which projects
+      # back infinitely, unlike `Date::ENGLAND` and `Date::ITALY` which have a
+      # defined starting point.
+      #
+      # This matters for dates before `Date::ITALY` (1582-10-15):
+      #     DateTime.iso8601("1500-01-01").gregorian
+      #     #=> #<DateTime: 1500-01-10T00:00:00+00:00 ((2268933j,0s,0n),+0s,-Infj)>
+      # The `#gregorian` behavior is technically correct, but for this project
+      # it's more important to be factually correct, and not project
+      # pre-Gregorian dates as Gregorian.
+      object: adjusted_date_time,
+      year: adjusted_date_time.year,
+      month: adjusted_date_time.month,
+      day: adjusted_date_time.day,
     }
   rescue
-    raise "Unable to parse '#{raw_date}'"
+    raise HistoricalDiary::TimestampRangeError,
+          "Unable to parse a timestamp from '#{raw_date}'"
   end
 
   def ensure_end_date
     return if @end_date.is_a?(Hash)
 
-    @end_date = @start_date.clone
+    @end_date = {
+      object: @start_date[:object].clone,
+    }
 
     # `@start_date` is just a year (no month or day)
     if @start_date[:month].nil?
-      # Add twelve months...
-      @end_date[:object] = @end_date[:object] >> 12
-      # ... and subtract one day. This makes `@end_date[:object]` one calendar
-      # year in the future, automatically handling leap years.
-      @end_date[:object] -= 1
-      @end_date[:month] = @end_date[:object].month
-      @end_date[:day] = @end_date[:object].day
-      return
+      @end_date[:object] = @end_date[:object].next_year
+    # `@start_date` is a year and month (no day)
+    elsif @start_date[:day].nil?
+      # Add one month...
+      @end_date[:object] = @end_date[:object].next_month
     end
 
-    # `@start_date` is a year and month (no day)
-    if @start_date[:day].nil?
-      @end_date[:object] = @end_date[:object] >> 1
-      @end_date[:object] -= 1
-      @end_date[:day] = @end_date[:object].day
-      return
-    end
+    @end_date[:year] = @end_date[:object].year
+    @end_date[:month] = @end_date[:object].month
+    @end_date[:day] = @end_date[:object].day
+  end
+
+  def datetime_start
+    @calendar_system == "Julian" ? Date::ENGLAND : Date::ITALY
   end
 end
