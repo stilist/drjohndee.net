@@ -1,13 +1,23 @@
 ---
 author_key: "Dee, John"
+calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 218"
 people:
   - "Dee, John"
   - "Emperor Rudolf II"
+places:
+  - "Praha, CZ"
 related_dates:
+  - "1584-08-15"
+  - "1584-08-20"
+  - "1584-08-21"
   - "1584-08-24"
+  - "1584-08-27"
+  - "1584-09-01"
+  - "1584-09-02"
+  - "1584-09-03"
   - "1584-09-05"
   - "1584-09-11"
   - "1584-09-12"
@@ -22,7 +32,7 @@ related_dates:
   - "1584-09-28"
   - "1584-09-29"
 ---
-Friday, Auguſti 17.   Mane.           ✝ Pragæ.
-Δ. Becauſe I would make no delay, for the Letter writing to the Emperour Rodolphus , I
+              Friday, Auguſti 17.   Mane.           ✝ Pragæ.
+  Δ. Becauſe I would make no delay, for the Letter writing to the Emperour Rodolphus , I
 framed my ſelf to write, beſeeching God that I might ſo write, as might be ſufficient for the
 purpoſe,&c. And thus I wrote as followeth.

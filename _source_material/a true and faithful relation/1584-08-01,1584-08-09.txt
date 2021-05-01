@@ -1,5 +1,6 @@
 ---
 author_key: "Dee, John"
+calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 212"
@@ -8,11 +9,14 @@ people:
   - "Hilton, Edmond"
   - "Kelley, Edward"
   - "Kelley, Thomas"
+places:
+   - "Praha, CZ"
 tags:
-  - travel
+  - "travel"
+time_of_day: "15"
 ---
-ANNO 1584.
-On Wedneſday the firſt day of Auguſt, at afternoon (hora 3.) we entred on our journey to-
+                               A N N O  1584.
+  On Wedneſday the firſt day of Auguſt, at afternoon (hora 3.) we entred on our journey to-
 ward Prage, in the Kingdom of Beame, whither we came on thurſday ſevenight after, by three
 of the Clock, that is exactly in eight dayes.
 We came by Coach, I, E. K., and his brother, and Edmond Hilton, ſo that we came to

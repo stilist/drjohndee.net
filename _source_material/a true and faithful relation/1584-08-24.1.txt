@@ -1,5 +1,6 @@
 ---
 author_key: "Dee, John"
+calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 225"
@@ -8,8 +9,17 @@ people:
   - "Dee, John"
   - "Emperor Rudolf II"
   - "Sontag, Emeryk"
+places:
+  - "Praha, CZ"
 related_dates:
+  - "1584-08-15"
   - "1584-08-17"
+  - "1584-08-20"
+  - "1584-08-21"
+  - "1584-08-27"
+  - "1584-09-01"
+  - "1584-09-02"
+  - "1584-09-03"
   - "1584-09-05"
   - "1584-09-11"
   - "1584-09-12"
@@ -18,16 +28,15 @@ related_dates:
   - "1584-09-15"
   - "1584-09-17"
   - "1584-09-18"
-  - "1584-09-24"
   - "1584-09-25"
   - "1584-09-27"
   - "1584-09-28"
   - "1584-09-29"
 tags:
-  - correspondence
+  - "correspondence"
 ---
-Friday, Auguſti, 24. à Meridie.     Pragæ.
-Being willed to deal with Rodolphus, firſt by letter, and then by ſpeech :   I thought good
+                    Friday, Auguſti, 24. à Meridie.     Pragæ.
+  Being willed to deal with Rodolphus, firſt by letter, and then by ſpeech :   I thought good
 to ſend the Letter before written, for  the Emperour ; by the Noble Don wilhelmo de St.
 Clemente, the King of Spain his Præfectus Negotiorum with this Emperour : and thereupon by
 Emericus Sunttag, the Lord Laſkie his Secretary, I wrote this to the aforeſaid Don Clemente,
