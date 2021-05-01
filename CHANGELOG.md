@@ -19,8 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add comma after day name on day page
 - Expand `--font-sans-serif` font stack
 - `HistoricalDiary::YearPageGenerator` uses Julian dates until the Gregorian calendar took effect (1580-10-05), and Gregorian dates after -- before all dates were treated as Julian
-- Change `LegalYear`’s `#legal_year_start` and `#legal_year_end` methods to wrap a `TimestampRange`
 - `TimestampRange` now `raise`s `HistoricalDiary::TimestampRangeError` if the object passed as a timestamp can’t be parsed
+- Year pages now use calendar year instead of legal year
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
@@ -33,7 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adjust `TimestampRange`’s calculated `end_date` when given a `"YYYY"` or `"YYYY-MM"` string -- for `"YYYY"` the `end_date` will be `YYYY` plus one year, and for `"YYYY-MM"` the `end_date` will be `YYYY-MM` plus one month
 - Fix crash in `TimestampRange#parse_raw_timestamp` if the object passed as a timestamp can’t be parsed
 - De-duplicate places in `places_keys_for_tag` Liquid filter
-- Call `#legal_year_start` / `#legal_year_end` outside loop in `HistoricalDiary::YearPage`
+
+### Removed
+- Remove `LegalYear` class
 
 ## [1.0.11] - 2021-04-03
 ### Added

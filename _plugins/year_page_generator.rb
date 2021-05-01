@@ -19,13 +19,10 @@
 require "jekyll"
 require_relative "../_lib/data_collection"
 require_relative "../_lib/historical_diary_page"
-require_relative "../_lib/legal_year"
 require_relative "../_lib/timestamp_range"
 
 module HistoricalDiary
   class YearPage < HistoricalDiaryPage
-    include LegalYear
-
     def initialize(site, dates_with_content:, year:)
       @site = site
       @base = site.source
@@ -38,47 +35,29 @@ module HistoricalDiary
       read_yaml(::File.join(@base, "_layouts"), "year.html")
 
       @data ||= {}
-      months = (1..13).map do |n|
-        adjusted_n = n + 2
-        actual_month_number = adjusted_n
-        actual_month_number -= 12 if adjusted_n > 12
-
+      months = (1..12).map do |n|
         [
-          adjusted_n,
+          n,
           {
-            "name" => DateTime.new(2000, actual_month_number).strftime("%B"),
+            "name" => DateTime.new(2000, n).strftime("%B"),
             "days" => [],
           },
         ]
       end
-      calendar_year_start = DateTime.iso8601("#{year}-01-01")
-      data["date"] = calendar_year_start
+      data["date"] = timestamp_range.start_date
       data["last_modified_at"] = DateTime.now.to_date
-      data["expanded_legal_year_dates"] = months.to_h
+      data["months"] = months.to_h
       data["title"] = year
       data["year"] = year
 
-      next_calendar_year = DateTime.iso8601("#{year + 1}-01-01")
-      # Generate 13 full months, though ultimately a month of it will be
-      # considered 'filler'.
-      expanded_legal_year_timestamp = "#{year}-03-01/#{year + 1}-03-31"
-      legal_year_start_date = legal_year_start(year)
-      legal_year_end_date = legal_year_end(year)
-      TimestampRange.new(expanded_legal_year_timestamp, "Gregorian").dates.each do |date|
+      @year = year
+      timestamp_range.dates.each do |date|
         calendar_timestamp = date.strftime("%F")
 
-        month = date.strftime("%m")
-        day = date.strftime("%d")
-        type = if dates_with_content.include?(calendar_timestamp) then "content"
-               elsif date < legal_year_start_date then "filler"
-               elsif date > legal_year_end_date then "filler"
-               else "no-content"
-               end
+        type = "no-content"
+        type = "content" if dates_with_content.include?(calendar_timestamp)
 
-        month_number = if date < next_calendar_year then date.month
-                       else date.month + 12
-                       end
-        data["expanded_legal_year_dates"][month_number]["days"] << {
+        data["months"][date.month]["days"] << {
           "day_number" => date.day,
           # used to inject `<tr>` / `</tr>` for week rows
           "day_of_week" => date.strftime("%w").to_i,
@@ -92,16 +71,18 @@ module HistoricalDiary
         site.frontmatter_defaults.find(relative_path, :year, key)
       end
     end
+
+    def timestamp_range
+      return @timestamp_range if defined?(@timestamp_range)
+      @timestamp_range = TimestampRange.new("#{@year}-01-01/#{@year}-12-31", "Gregorian")
+    end
   end
 
-  # This iterates over the `Jekyll::Document`s for all published source
-  # material, generates a `Jekyll::Post` for each date that has material, and
-  # manipulates the front matter of the `Jekyll::Document`s.
+  # Generates a `Jekyll::Page` for each calendar year in the life of
+  # `subject_person_key`.
   class YearPageGenerator < Jekyll::Generator
-    # for `person_data`
+    # for `#person_data`
     include DataCollection
-    # for `legal_year_start`
-    include LegalYear
 
     safe true
 
@@ -121,12 +102,7 @@ module HistoricalDiary
 
       content_by_year = {}
       site.data["documents_by_date"].keys.each do |date|
-        # Use legal year, rather than calendar year, to simplify later logic.
-        # This means that for 1600-03-24 the timestamp will be pushed into
-        # `@pages_by_year[1599]`, and 1600-03-25 will be pushed into
-        # `@pages_by_year[1600]`.
         year = date.year
-        year -= 1 if date < legal_year_start(year)
         content_by_year[year] ||= []
         content_by_year[year] << date.strftime("%F")
       end

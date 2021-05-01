@@ -18,14 +18,12 @@
 
 require 'jekyll'
 require_relative '../_lib/data_collection'
-require_relative '../_lib/legal_year'
 require_relative '../_lib/person'
 require_relative '../_lib/timestamp_range'
 
 module HistoricalDiary
   module DataFilters
     include ::DataCollection
-    include LegalYear
 
     def annotate_content(object)
       path_segments = object['relative_path'].split(File::SEPARATOR)
@@ -118,13 +116,7 @@ module HistoricalDiary
     end
 
     def commentary_keys_for_year(year)
-      legal_year_timestamp = [
-        legal_year_start(year),
-        legal_year_end(year),
-      ].map { |timestamp| timestamp.strftime('%F') }
-        .join('/')
-
-      commentary_for_date(legal_year_timestamp)
+      commentary_for_date(year.to_s)
     end
 
     def context_for_date(timestamp)
@@ -132,13 +124,7 @@ module HistoricalDiary
     end
 
     def context_keys_for_year(year)
-      legal_year_timestamp = [
-        legal_year_start(year),
-        legal_year_end(year),
-      ].map { |timestamp| timestamp.strftime('%F') }
-        .join('/')
-
-      context_for_date(legal_year_timestamp)
+      context_for_date(year.to_s)
     end
 
     def dates_for_person(key)
@@ -171,10 +157,10 @@ module HistoricalDiary
       escape_key(key)
     end
 
-    def legal_year_has_content(year)
+    def year_has_content(year)
       known_dates = @context.registers[:site]
         .data['dates_with_content'] || []
-      candidates = legal_year(year)
+      candidates = TimestampRange.new(year.to_s).dates
       !(candidates & known_dates).empty?
     end
 

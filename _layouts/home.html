@@ -28,7 +28,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <ol class="years">
     {% for year in years reversed -%}
-    {% assign should_link_year = year | legal_year_has_content -%}
+    {% assign should_link_year = year | year_has_content -%}
     {% if should_link_year -%}
     <li class="year">
       {% capture filename -%}{{ year }}.html{% endcapture -%}

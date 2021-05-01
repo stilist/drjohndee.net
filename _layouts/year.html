@@ -52,7 +52,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <main class="page-content page-content--isCalendarYear">
     <ol class="calendar">
-      {% for month_hash in page.expanded_legal_year_dates -%}
+      {% for month_hash in page.months -%}
       <li class="calendar-month">
         {% assign month_data = month_hash | last -%}
 
