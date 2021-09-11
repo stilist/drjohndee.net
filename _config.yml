@@ -45,8 +45,15 @@ icon_sizes:
 license_key: "CC BY-SA 4.0"
 mapbox_access_token: "pk.eyJ1Ijoic3RpbGlzdCIsImEiOiJ2cXFLaVcwIn0.IrZVlgan0nuWCSTGlzbteg"
 subject_person_key: "Dee, John"
-# --accent-60 (light theme)
-theme_color: "#994900"
+theme_color:
+  # --accent-60 (dark theme)
+  dark: "#ae7022"
+  # --accent-60--components (dark theme)
+  dark_wide_gamut: "0.68 0.44 0.13"
+  # --accent-60 (light theme)
+  light: "#994900"
+  # --accent-60--components (light theme)
+  light_wide_gamut: "0.6 0.29 0"
 twitter:
   username: stilist
 

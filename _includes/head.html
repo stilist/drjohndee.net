@@ -36,7 +36,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel=stylesheet href="{{ "/assets/application.css" | relative_url }}">
   {% if site.theme_color -%}
-  <meta name="theme-color" content="{{ site.theme_color }}">
+  <meta name="theme-color" content="{{ site.theme_color.light }}"
+    media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="color(display-p3 {{ site.theme_color.light_wide_gamut }})"
+    media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="{{ site.theme_color.dark }}"
+    media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="color(display-p3 {{ site.theme_color.dark_wide_gamut }})"
+    media="(prefers-color-scheme: dark)">
   {% endif -%}
 
   {% assign author_key = page.author_key | default: site.author.key -%}
