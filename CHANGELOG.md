@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TimestampRange` now converts Julian dates to Gregorian when appropriate
 - Add `default_calendar_system` setting to `_config.yml`
 - Set separate light- and dark-mode `theme-color`s
+- Add [`CITATION.cff` file](https://citation-file-format.github.io)
 
 ### Changed
 - Add comma after day name on day page
