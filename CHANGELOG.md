@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add explicit `webrick` gem dependency for Ruby 3
 - Update markup in place template
 - Fix issues that caused the index page to only see entries from January first, and that made the year pages always think there was no content
+- Clean up unnecessary escaping
 
 ### Removed
 - Remove `LegalYear` class
