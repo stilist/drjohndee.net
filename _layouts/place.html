@@ -21,11 +21,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 {% assign record = page.place_key | collection_entry: "places" -%}
 {% assign place_permalink = page.place_key | collection_entry_url: "places" -%}
-<main class="page place"
-      itemprop=place
-      itemscope
-      itemtype="https://schema.org/Place"
-      itemid="{{ place_permalink }}#place">
+<article class="page place"
+         itemprop=place
+         itemscope
+         itemtype="https://schema.org/Place"
+         itemid="{{ place_permalink }}#place">
   {% if record.id -%}
   <link itemprop=sameAs href="{{ record.id }}">
   {% endif -%}
@@ -66,12 +66,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </p>
   </header>
 
-  <article class="page-content"
+  <main class="page-content"
            itemprop=articleBody>
     {% static_map_tile %}{{ page.place_key }}{% endstatic_map_tile %}
-  </article>
+  </main>
 
-  <div class='secondary'>
+  <section class='secondary'>
     {% assign related_dates = page.place_key | dates_for_place -%}
     {% if related_dates.size > 0 -%}
     <aside class="annotations annotations-related_dates">
@@ -85,5 +85,5 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       </ul>
     </aside>
     {% endif -%}
-  </div>
-</main>
+  </section>
+</article>

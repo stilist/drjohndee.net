@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix crash in `TimestampRange#parse_raw_timestamp` if the object passed as a timestamp can’t be parsed
 - De-duplicate places in `places_keys_for_tag` Liquid filter
 - Add explicit `webrick` gem dependency for Ruby 3
+- Update markup in place template
 
 ### Removed
 - Remove `LegalYear` class
