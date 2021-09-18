@@ -110,10 +110,10 @@ module HistoricalDiary
           Jekyll.logger.debug(self.class.name,
                               "Not yet cached: #{cache_key}")
 
-          # Splitting on `,` allows for non-consecutive dates without making
-          # `TimestampRange` more complex.
           datetime_start = document.data["calendar"] || @site.config["default_calendar_system"]
           dates = cache.getset(timestamp_string) do
+            # Splitting on `,` allows for non-consecutive dates without making
+            # `TimestampRange` more complex.
             timestamp_string.split(",")
               .map { |timestamp| TimestampRange.new(timestamp, datetime_start).dates }
               .flatten
