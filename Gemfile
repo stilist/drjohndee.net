@@ -14,10 +14,8 @@ gem "jekyll", "~> 4.2.0"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-feed", "~> 0.15.1"
   gem "jekyll-sitemap", "~> 1.4.0"
-  # @see https://github.com/tmm1/http_parser.rb/issues/47#issuecomment-544196403
-  gem "http_parser.rb", git: "git@github.com:tmm1/http_parser.rb.git"
 end
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
