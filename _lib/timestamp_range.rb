@@ -99,6 +99,11 @@ class TimestampRange
       adjusted_date_time = date_time
     end
 
+    explicit_parts = []
+    explicit_parts << :year if year
+    explicit_parts << :month if month
+    explicit_parts << :day if day
+
     {
       # `#gregorian` creates a new date using `Date::GREGORIAN`, which projects
       # back infinitely, unlike `Date::ENGLAND` and `Date::ITALY` which have a
@@ -111,6 +116,7 @@ class TimestampRange
       # it's more important to be factually correct, and not project
       # pre-Gregorian dates as Gregorian.
       object: adjusted_date_time,
+      explicit_parts: explicit_parts,
       year: adjusted_date_time.year,
       month: adjusted_date_time.month,
       day: adjusted_date_time.day,
@@ -125,15 +131,16 @@ class TimestampRange
 
     @end_date = {
       object: @start_date[:object].clone,
+      explicit_parts: [],
     }
 
     # `@start_date` is just a year (no month or day)
-    if @start_date[:month].nil?
-      @end_date[:object] = @end_date[:object].next_year
+    if !@start_date[:explicit_parts].include?(:month)
+      @end_date[:object] = @end_date[:object].next_year.prev_day
     # `@start_date` is a year and month (no day)
-    elsif @start_date[:day].nil?
+    elsif !@start_date[:explicit_parts].include?(:day)
       # Add one month...
-      @end_date[:object] = @end_date[:object].next_month
+      @end_date[:object] = @end_date[:object].next_month.prev_day
     end
 
     @end_date[:year] = @end_date[:object].year

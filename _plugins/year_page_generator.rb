@@ -34,6 +34,8 @@ module HistoricalDiary
 
       read_yaml(::File.join(@base, "_layouts"), "year.html")
 
+      @year = year
+
       @data ||= {}
       months = (1..12).map do |n|
         [
@@ -50,7 +52,6 @@ module HistoricalDiary
       data["title"] = year
       data["year"] = year
 
-      @year = year
       timestamp_range.dates.each do |date|
         calendar_timestamp = date.strftime("%F")
 
@@ -74,7 +75,7 @@ module HistoricalDiary
 
     def timestamp_range
       return @timestamp_range if defined?(@timestamp_range)
-      @timestamp_range = TimestampRange.new("#{@year}-01-01/#{@year}-12-31", "Gregorian")
+      @timestamp_range = TimestampRange.new(@year.to_s, "Gregorian")
     end
   end
 
