@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TimestampRange` now `raise`s `HistoricalDiary::TimestampRangeError` if the object passed as a timestamp can’t be parsed
 - Year pages now use calendar year instead of legal year
 - Upgrade Ruby dependencies
+- Use ‘Dee and Emperor Rudolph II’ tag
+- Rename some files from `.md` to `.txt`
 
 ### Fixed
 - Fix `img-src` CSP domain for Mapbox
