@@ -1,0 +1,63 @@
+---
+author_key: "Dee, John"
+recipient_key: "Emperor Rudolf II"
+calendar: "Gregorian"
+category: correspondence
+edition_key: "book"
+language: "la-renais"
+license: "CC0 1.0"
+location: "page 218"
+people:
+  - "Dee, John"
+  - "Emperor Charles V"
+  - "Emperor Ferdinand I"
+  - "Emperor Maximilian II"
+  - "Emperor Rudolf II"
+places:
+  - "Bratislava, Bratislavsky kraj, SK"
+  - "Brussel-Stad, Hertogdom Brabant"
+  - "HU"
+  - "Praha, CZ"
+tags:
+  - "Dee and Emperor Rudolph II"
+---
+  Omnipotentis Noſtri Creatoris ( Chriſtianorum omnium Imperatorum fæliciſſime , O Ru-
+dolphe) tam eſt hominibus incognita illa , quæ cuncta diſponit perficitque P R O V I D E N-
+T I A , rataque ipſa rerum ſeries & coordinatio (à primo ad ultimum) quòd à pleriſque, te-
+merè, fort{u}ito, vel caſu, hoc illove evenire modo, exiſtimentur omnia, quæ extra præterve ſuo-
+rum Conſilior{u}m de{ſi}gna{t}iones, fieri conſpiciant. Verùm quibus eſt mens Divinæ veritatis lu-
+mine colluſtrata, & ad multiplices longiſque intervallis diſtinctas rerum conſecutiones conſide-
+randas, a{tt}entio{n}, evidentiſſimè deprehenden{.} illi quidem, Quæ, quibus præcurriſſe , tanquam
+cauſas, occaſioneſq{u}e neceſſarias, alio priori, & interdum longe diverſiſſimo, tempore, oportue-
+rat.  Atque ut varietatem nunc omittam exemplorum, (quæ, ex aliorum hominum inter ſe
+collatis vicis, conditionibus, factiſque adferre poſſim,) Exemplum ſatis conſpicuum hoc uni-
+cum fieri poſſi{t} : N{i}mirum illa, (incredibilis ferè) quæ inter ſacram Cæſaream Majeſtatem ve-
+ſtram , & humillimum (in Deo) Mancipium me veſtrum  (ex multiplicibus utrinque præcur-
+rencibus occaſionibus ) jam quaſi inſtare videtur, In un{u}m (idemque admirandum quid) Com-
+binatio, Divinaque conſpiratio.   Ambiverunt me (Juvenem) Illuſtriſſimi Imperatores duo :
+Victorioſiſſimus ille Carolus Quintus, & ejuſdem Frater Ferdinandus, veſtræ Cæſareæ Majeſtatis
+Magnificentiſſimus Avus.  Hic, Poſonii, Hungarie : ille verò, Bruxellæ, Brabantiæ. Hic, An. 1563.
+Ille autem, Anno 1549.  Aſt clementiſſimum Imperatorem Maximilianum , Cæſareæ veſtræ Ma-
+jeſtatis Patrem (Immortali glora dignum) jam tum Hungariæ coronatum Regem, (invitiſſimo
+quidem ipſo Tyranno Turcico) eodem in Poſonio, eodemque, Anno 63. in deliciis habere cœpi:
+illi{ſ}ſque rariſſimas virtutes, cum fideliter colere, tum poſteritati eaſdem reddere commendatiſſi
+mas, opere quodam conabar Hieroglyphico. Quo etiam in labore exantlan-
+do, animus mihi præſagiebat, Auſtriacæ * familiæ; alium fore aliquando ali-
+q{u}em, in quo maxima mea ſpes, & publico Chriſtianorum ſtatui, Res, con-
+firmaretur, (vel confirmari poterit,) Optima, Maximaque. Veſtræ igi-
+tur Cæſareæ Majeſti, Imperatorum Romanorum (ex Auſtriacorum Principum nobiliſſima fami-
+lia) mea ætate {fl}orentium, Q U A R T O : Adſum, & ego, Triplicis Alphabeti, litera * Quar-
+ta.  Atque ita adſum, ut me ipſum ad pedes Cæſareæ Majeſtis veſtræ demiſsè oſculandos offe-
+ram : plurimùm gaviſurus , fi qua in re , Chriftianæ Reipublicæ Imperatori tanto, talique, gra-
+tus, utiliſve eſſe potero.
+
+                                                       Veſtræ ſacræ Cæfareæ Majeſtati, ſoli, ſi hæc
+        Superſcriptio erat hæc.                         aliquandi u conſiare patiemini (neminique
+  Sereniſſimo ac potentiſſimo Principi ac Domino Do-    detegere velitis )  rem facietis valde ne-
+mino Rudolpho, Dei Gratia Romanorum Imperato-           ceſſariam.
+riſemper Auguſto, ac Germaniæ ,Hungariæ, Bohe-             Pragæ, An. 1584. Auguſti 17.
+miæ, &c. Regi, Archiduci Auſtriæ, Duci Burgun-                     Cæſareæ Majeſtis Veſtræ
+diæ Stiriæ Carinthiæ, &c. Comiti Tyrolia, &c.                     Humillimus & fideliſſimius
+Domino meo clementiſſimo                                             Clientulus
+
+                                                                        Joannes Dee.

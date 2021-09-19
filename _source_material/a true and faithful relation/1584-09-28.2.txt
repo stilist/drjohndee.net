@@ -1,0 +1,87 @@
+---
+author_key: "Dee, John"
+recipient_key: "de Santcliment, Guillem"
+edition_key: "book"
+category: correspondence
+language: "la-renais"
+license: "CC0 1.0"
+location: "page 248-249"
+people:
+  - "Commandino, Federico"
+  - "de Santcliment, Guillem"
+  - "Emperor Rudolf II"
+  - "Kurz, Jacob"
+tags:
+  - "books"
+  - "Dee and Emperor Rudolph II"
+---
+      Illuſtriſimo Domino, Domino Don Gulielmo de Sancto Clemente, ſereniſſimi
+            atque Catholici Hiſpaniarum Regis apud ſacram Cæſaream Ma-
+                jeſtatem, &c. Legato, Domino ſuo obſervandiſimo.
+
+Illustris & Magnifice Heros : Multis hoc probari poteſt teſtimoniis & exemplis , quod illa,
+quæ (preter  vulgarium artium & ſcientiarum decreta) Nova, & ſupra vulgariter Studioſo-
+rum expectationem, hominibus (licet piis & candidis quidem) Divinitus revelantur myſteria,
+cum ſumma difficultate vel intelliguntur à pauciſſimis, vel vix ſine ſuſpicione admittuntur, aut
+creduntur à pluri{b}us : Aſt qualis , in noſtris, (ſi rectæ piéque informatæ roſtris adhibeatur
+judicium) eſſe poteſt ſuſpitio ? Nam à Deo Omnipotente, per multos jam annos, fideliter, ar-
+denter, & conſtanter per preces requiſita ſapientia : Una (ſcilicet quæ penes nos quidem) vi-
+detur eſſe radix & occaſio tanti iſtius Doni obtinendi.  Aſt in cœleſti ſuo Palatio, ante condi-
+tum mundum, determinata, & aſſignata erga nos Miſericordia & gratia Omnipotentis Dei,
+præcipuum, ſolidum, immobileque hujus tanti myſterii eſt cenſendum fundamentum : In quo
+myſterio, talis relucet, per potentes fideleſque Angelos Iſagogica Informatio, De Arcanis Dei
+conſiliis, tam in mundi creatione Creaturarumque naturis, & vero uſu, quam in mundi præ-
+ſentis moxque futuri ſtatu : Et preterea, de unius Catholicæ Eccleſiæ (chariſſimæ Jeſu Chri-
+ſti ſpousæ, noſtræque piæ matris) ſanctitate, dignitate, & Authoritate ( veluti in qua etiam
+eſt Sanctorum Communio, & Peccatorum remiſſio ) & de multis nondum per nos revelandis
+Dei Arcanis Magnalibus & Determinationibus : Quòd tantum abeſt, ut aliquis (ſanæ mentis)
+Chriſtianus, Actiones Noſtras Myſticas, Diabolicas eſſe fraudes, contendere, immo ne ſuſpica-
+ri quidem conetur aut poſſit : ut potius , tale Arcanum Dei propoſitum , incredibiliter admi-
+rari, rationem humanam, in eiſdem examinandis , ſubjugare, & Dei erga Electos ſuos admi-
+randam miſericordiam in iſtis eſſe manifeſtam, humillimè, & cum ſummo tremore fateri velit :
+Ego quidem , hactenus, in istis , aliud ( ferè ) nihil , me eſſe invenio , niſi Calamum ſcribæ,
+velociter per me ſcribentis.  Nam viſa auditaque (in mea præſentia) fideliſſimè, de litera in-
+terdum ad literam, interdum, verbatim, interdum pluribus ſimul receptis verbis (ipſo eodem
+temporis momento, quo traduntur) annotare ſum ſolitus.  Aſt jam in quam multa excrevit
+Noſter talis labor volumina ? Ex quibus omnibns illum fructum , ſucceſſumque expectamus,
+qualem præfixit ille, cujus nutui cuncta obediunt. Iſtas autem ad ſuam ſacrem Cæſaream Maje-
+ſtatem literas meas : Cum veſtra magnificentia opportunitatem inveniet primam , ſi meo nomi-
+ne: humillimè eidem exhibere dignabitur ,  Tum magno mihi (Divinitus) injuncto , levatus
+ero onere : Tum magno, à veſtra magnificentia affectus beneficio : Interim verò , Dum ſuæ ſa-
+cræ Majeſtatis Cæſareæ ad iſtas reſponſum dabitur, (nimirum ſi ad 14. vel 16. dies prius ex-
+pectandum eſſet) vel, ſtatim poſt acceptum reſponſum (ſi tam expeditè illud recipere poſſum,
+quàm quod recepi ultimo) ad iter me accingere debeo, propter familiam , libros , & aliquam
+meam ſuppellectilem, huc (ante hyemis aſperitatem) tranſferendam.  Ubi, cum Cæſareæ Ma-
+jeſtatis gratioſo favore, & ſub ipſius Protectione Imperatoria , voluntatem Omnipotentis Dei
+implere, pro viribus, & ſuæ ſacræ Cæſareæ Majeſtati inſervire (tanquam ejuſdem Philoſophus &
+Mathematicus) fideliſſime, de tempore in tempus, paratus eſſe potero.
+
+                                                Illuſtri veſtre Magnificentiæ
+
+                                                    Addictiſſimus
+
+                                                                    Joannes Dee.
+
+            I annexed hereunto a Poſt-ſcript, which followeth :
+
+                                Poſt-ſcriptum.
+
+Mearum eſſe partium , & conſultum eſſe duxi veſtræ Magnificentiæ pauciſſimis verbis
+ſignificare , quod heri , manè,  hora nona , vir egregius , & ſuæ Majeſtis Cæſareæ fi-
+dus Conſiliarius D. Doctor Curtzius, me humaniſſimè inviſebat in meo ergaſtulo , & hy-
+pocauſtato , juxta Bethlehem , ubi videre poterat Bibliothecam preſentem meam , nullam
+(ferè) aliam eſſe ,  præter Sancta Dei Evangelia & Biblia ſacra ipſoſque noſtrorum myſte-
+riorum libros : Ego autem quodam humili modo (inter cæteras querelas meas) de tam lon-
+ga interpoſita mora conquerebar , inter ejuſdem (de meis rebus) factam relationem , &
+Cæſareum de eiſdem recipiendum reſponſum. Ille verò ſe ſimpliciſſimè Cæſareæ Majeſti viſa
+auditaque (penes me ) retuliſſe aſſeruit , nullo ſuo , de eiſdem , adhibito judicio.  Ve-
+rum, Cæſari (dixit) quaſi impoſſibilia vel incredibilia fuiſſe viſa.  Et de reſponſo mihi  (in
+hac parte) dando , ſecum , adhuc , ſuam deliberare velle Majeſtatem Cæfaream.  Unde ego
+de literis meis iſtis , ſuæ Majeſti mittendis , mentionem feci & ſummatim earundem teno-
+rem , eidem enarravi.  Ille eaſdem ſtatim habere voluit , ipſi Cæſareæ Majeſtati à Meridie
+mittendas: Ego quidem Cæſaris me velle ad paucul{o}s dies expectare adventum dixi.  Deinde
+de rebus Mathematicis breviſſime inter nos habito ſermone , illique (ad pervidendum ) dato
+libello quodam Geometrico ( per me & Federicum Commandinuis Urbinatem ) in lucem olim
+dato, & mutuis, poſt, utrinque promiſſis officiis humanitatis & benevolentiæ, abiit.
+
+                                                                1584. Sept.28.

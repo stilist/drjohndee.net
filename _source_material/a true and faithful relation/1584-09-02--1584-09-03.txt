@@ -5,6 +5,7 @@ edition_key: "book"
 license: "CC0 1.0"
 location: "page 229-230"
 people:
+  - "unknown -- Alexander"
   - "Dee, John"
   - "Kelley, Edward"
   - "Kelley, Thomas"
@@ -14,25 +15,8 @@ people:
 places:
   - "Krakow, Lesser Poland, PL"
   - "Praha, CZ"
-related_dates:
-  - "1584-08-15"
-  - "1584-08-17"
-  - "1584-08-20"
-  - "1584-08-21"
-  - "1584-08-24"
-  - "1584-09-01"
-  - "1584-09-05"
-  - "1584-09-11"
-  - "1584-09-12"
-  - "1584-09-13"
-  - "1584-09-14"
-  - "1584-09-15"
-  - "1584-09-17"
-  - "1584-09-18"
-  - "1584-09-24"
-  - "1584-09-25"
-  - "1584-09-28"
-  - "1584-09-29"
+tags:
+  - "Dee and Emperor Rudolph II"
 time_of_day: "00/12"
 ---
                     Monday, Septembris 3. Mane.       † Pragæ.

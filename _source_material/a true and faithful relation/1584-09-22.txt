@@ -2,10 +2,10 @@
 author_key: "Dee, John"
 edition_key: "book"
 license: "CC0 1.0"
-location: "page 249"
+location: "page 243-244"
 places:
   - "Praha, CZ"
 tags:
-  - "correspondence"
   - "Dee and Emperor Rudolph II"
+  - "scrying"
 ---

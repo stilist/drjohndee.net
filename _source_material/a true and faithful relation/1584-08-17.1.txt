@@ -9,28 +9,9 @@ people:
   - "Emperor Rudolf II"
 places:
   - "Praha, CZ"
-related_dates:
-  - "1584-08-15"
-  - "1584-08-20"
-  - "1584-08-21"
-  - "1584-08-24"
-  - "1584-08-27"
-  - "1584-09-01"
-  - "1584-09-02"
-  - "1584-09-03"
-  - "1584-09-05"
-  - "1584-09-11"
-  - "1584-09-12"
-  - "1584-09-13"
-  - "1584-09-14"
-  - "1584-09-15"
-  - "1584-09-17"
-  - "1584-09-18"
-  - "1584-09-24"
-  - "1584-09-25"
-  - "1584-09-27"
-  - "1584-09-28"
-  - "1584-09-29"
+tags:
+  - "correspondence"
+  - "Dee and Emperor Rudolph II"
 ---
               Friday, Auguſti 17.   Mane.           ✝ Pragæ.
   Δ. Becauſe I would make no delay, for the Letter writing to the Emperour Rodolphus , I

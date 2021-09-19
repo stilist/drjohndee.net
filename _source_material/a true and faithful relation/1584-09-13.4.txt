@@ -1,0 +1,15 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 239"
+people:
+  - "Emperor Rudolf II"
+  - "Kurz, Jacob"
+  - "Sontag, Emeryk"
+tags:
+  - "Dee and Emperor Rudolph II"
+time_of_day: "~10"
+---
+  Emericus about 10 of the clock before Noon being in the Ritters Stove (or Guard-Cham-
+ber) ſaw Doctor Curtz come out from the Emperour.

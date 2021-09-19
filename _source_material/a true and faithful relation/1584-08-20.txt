@@ -3,16 +3,19 @@ author_key: "Dee, John"
 calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
-location: "page 229-230"
+location: "page 219-222"
 people:
+  - "Cooper, Jane"
   - "Dee, John"
   - "Emperor Rudolf II"
+  - "Fromond, Jane"
+  - "Kelley, Edward"
+  - "Uriel"
 places:
   - "Praha, CZ"
+scryer_key: "Kelley, Edward"
 tags:
-  - "correspondence"
   - "Dee and Emperor Rudolph II"
-time_of_day: "14"
+  - "scrying"
+time_of_day: "~07"
 ---
-  About 2 of the clock after Noon, came this letter to me , of the  Emperour his  sending
-for me.

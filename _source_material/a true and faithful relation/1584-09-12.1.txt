@@ -1,0 +1,23 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 236"
+people:
+  - "Dee, John"
+  - "Emperor Rudolf II"
+  - "Sontag, Emeryk"
+  - "Spinola, Octavius"
+places:
+  - "Praha, CZ"
+tags:
+  - "correspondence"
+  - "Dee and Emperor Rudolph II"
+time_of_day: "00/12"
+---
+                                Wednesday,Septembris 12. Manè.
+  Δ. This morning, when Emericus Sontag went up to the Caſtle for anſwer from the Empe-
+rour : By the Noble Octavius Spinola, he received the effect of this anſwer ,  which I required
+the ſame Emericus to write down with his own hand (for ſundry reſpects;) which his own
+handwriting I have annexed ad majorem rei fidem. And because his writing is not eaſie  to
+be read, I have written it plainer ſomewhat, as followeth :

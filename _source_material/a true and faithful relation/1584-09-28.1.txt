@@ -1,0 +1,18 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 248"
+people:
+  - "de Santcliment, Guillem"
+  - "Emperor Rudolf II"
+places:
+  - "Praha, CZ"
+tags:
+  - "correspondence"
+  - "Dee and Emperor Rudolph II"
+---
+                        Friday, Septembris, 28.  Pragæ.
+Intending to ſend the Emperours letter ( here before written ) to his Majeſty, by my good
+friend, the Spaniſh Embaſſadour, I wrote this letter to ſend to the Embaſſadour in that be-
+half, and as concerning the credit of theſe Actions.

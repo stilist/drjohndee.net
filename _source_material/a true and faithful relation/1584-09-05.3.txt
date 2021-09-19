@@ -1,0 +1,26 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 235"
+people:
+  - "de Santcliment, Guillem"
+  - "Emperor Rudolf II"
+  - "Sontag, Emeryk"
+  - "Spinola, Octavius"
+places:
+  # There are two possible 'Brandeish'es near Prague: Brandýs nad Labem-Stará
+  # Boleslav, and Brandýs nad Orlicí. The former is 20-25 km away, and the
+  # latter is over 150 km. The former seems more likely.
+  - "Brandys nad Labem-Stara Boleslav, CZ"
+  - "Praha, CZ"
+tags:
+  - "correspondence"
+  - "Dee and Emperor Rudolph II"
+---
+  Emericus went and delivered my Letter to the Spaniſh Ambaſſadour : But this he brought
+back again ; ſaying that the Emperour was ridden very early abroad to Brandeiſh, or elſe-
+where : (not certainly being known) and that this Noble Octavius Spinola was gone with his
+Majeſty.
+  Hereupon I determined with changing the Date, to * ſend unto him at
+the Emperour his Majeſties returning to Prage.  Deus bene vertat.

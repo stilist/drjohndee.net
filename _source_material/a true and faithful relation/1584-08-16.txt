@@ -3,18 +3,18 @@ author_key: "Dee, John"
 calendar: "Gregorian"
 edition_key: "book"
 license: "CC0 1.0"
-location: "page 226-228"
+location: "page 217-218"
 people:
   - "Dee, John"
-  - "Emperor Rudolf II"
   - "Kelley, Edward"
   - "Laski, Olbracht"
-  - "Madimi"
+  - "Madami"
+  - "Nalvage"
 places:
-  - "Praha, CZ"
+  - "Krakow, Lesser Poland, PL"
 scryer_key: "Kelley, Edward"
 tags:
   - "Dee and Emperor Rudolph II"
   - "scrying"
-time_of_day: "~09"
+time_of_day: "~08:40"
 ---

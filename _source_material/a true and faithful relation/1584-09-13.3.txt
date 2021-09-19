@@ -1,0 +1,18 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 239"
+people:
+  - "Emperor Rudolf II"
+  - "Kurz, Jacob"
+  - "Sontag, Emeryk"
+  - "Spinola, Octavius"
+tags:
+  - "Dee and Emperor Rudolph II"
+time_of_day: "00/12"
+---
+                   Thurſday, Septembris 13. Mane.   † Pragæ.
+  Emericus did bring himſelf in ſight of the Chamberlain, the Noble Octavius Spinola : as I
+willed him :  And he called Emericus to him, and told him, that this day Doctor Curtz ſhould
+underſtand the Emperour his pleaſure, to confer with me, &c.

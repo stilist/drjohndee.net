@@ -1,0 +1,30 @@
+---
+author_key: "Dee, John"
+edition_key: "book"
+license: "CC0 1.0"
+location: "page 239"
+people:
+  - "Emperor Rudolf II"
+  - "Hajek, Tadeus"
+  - "Kurz, Jacob"
+  - "Sontag, Emeryk"
+places:
+  - "Praha, CZ"
+tags:
+  - "Dee and Emperor Rudolph II"
+time_of_day: "~10"
+---
+                      Friday, Septemb. 14. Mane, circa 10.
+  I ſent Emericus to Doctor Curtz his houſe in parva parte : with my commendations ; and
+to ſay that before, I underſtood of Doctor Hageck Mr. Doctor Curtz his deſire to be ac-
+quainted with me : whereof I was very glad and desirous : and now I truſt that the Empe-
+rour his majeſty, by his Authority hath taken order with him whereby to begin our ac-
+quaintance, and ( God willing ) our perpetual friendſhip. The Doctor was at home, and to
+Emericus ( ſaying the effect of my meſſage before noted ) the Doctor declared that Captaverat
+antea varias occasiones mecum contrahende amicitiæ, &c. and that now he is very joyful of the
+occaſion offered by the Emperours Majeſty : and that this day ſundry affairs did hinder the
+opportunity of our meeting, but to morrow at any hour ( at my choice ) he would be ready
+to welcome me to his houſe : and ſo with the uſual phrase of offering all his ſervices to my
+pleaſure, he ſent Emericus to me with his ſaid Anſwer.
+                   Quos Deus conjungit, Homo ne ſeparet.   Amen.
+            Quos autem Deus & Cæſar copulat, copulatiſſimi maneant.  Amen.
