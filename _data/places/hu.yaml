@@ -1,0 +1,22 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Magyarország"
+bounding_box:
+  - latitude: 47.95389
+    longitude: 22.8965
+  - latitude: 48.58522
+    longitude: 21.4395
+  - latitude: 45.73704
+    longitude: 18.44686
+  - latitude: 46.86861
+    longitude: 16.1135
+latitude: 47
+longitude: 19
+country: "HU"
+id: "https://www.wikidata.org/entity/Q28"
+name_language: "hu"

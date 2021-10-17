@@ -5,11 +5,11 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-presentational_name: "Antwerpen, Koninkrijk België"
-latitude: 51.217778
-longitude: 4.400278
-locality: "Antwerpen"
-region: "Vlaams Gewest"
+presentational_name: "Brussel-Stad, Koninkrijk België"
+latitude: 50.846667
+longitude: 4.3525
+locality: "Brussel-Stad"
+region: "Brussels Hoofdstedelijk Gewest"
 country: "BE"
-id: "https://www.wikidata.org/entity/Q12892"
+id: "https://www.wikidata.org/entity/Q239"
 name_language: "nl"

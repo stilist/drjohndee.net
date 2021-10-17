@@ -15,7 +15,7 @@ people:
   - "Emperor Rudolf II"
 places:
   - "Bratislava, Bratislavsky kraj, SK"
-  - "Brussel-Stad, Hertogdom Brabant"
+  - "Brussel-Stad, Brussel, BE"
   - "HU"
   - "Praha, CZ"
 tags:

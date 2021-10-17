@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Bratislava, Slovenská republika"
+latitude: 48.143889
+longitude: 17.109722
+locality: "Bratislava"
+region: "Bratislavský kraj"
+country: "SK"
+id: "https://www.wikidata.org/entity/Q1780"
+name_language: "sk"

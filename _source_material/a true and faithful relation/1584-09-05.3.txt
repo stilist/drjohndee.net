@@ -12,7 +12,7 @@ places:
   # There are two possible 'Brandeish'es near Prague: Brandýs nad Labem-Stará
   # Boleslav, and Brandýs nad Orlicí. The former is 20-25 km away, and the
   # latter is over 150 km. The former seems more likely.
-  - "Brandys nad Labem-Stara Boleslav, CZ"
+  - "Brandys nad Labem-Stara Boleslav, Stredocesky kraj, CZ"
   - "Praha, CZ"
 tags:
   - "correspondence"
