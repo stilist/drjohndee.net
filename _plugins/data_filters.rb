@@ -278,6 +278,14 @@ module HistoricalDiary
       data_record_reference('people', key, display_text)
     end
 
+    def place_link(key, display_text)
+      data_record_link('places', key, display_text)
+    end
+
+    def place_reference(key, display_text)
+      data_record_reference('places', key, display_text)
+    end
+
     def relevant_footnotes(timestamp)
       transclusions_for_timestamp('footnotes', timestamp)
     end

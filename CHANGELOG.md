@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add some more place data
+- Add `place_link` and `place_reference` Liquid filters
 
 ### Changed
 - Update Jekyll to v4.2.1
