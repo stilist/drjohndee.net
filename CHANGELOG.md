@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add metadata to entries
 
 ### Changed
-- Update Jekyll to v4.2.1
+- Update Jekyll to v4.2.2
+- Update `jekyll-feed` to v0.16.0
 
 ### Fixed
 - Apply annotations to `.txt` source material
