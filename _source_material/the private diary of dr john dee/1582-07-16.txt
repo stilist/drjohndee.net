@@ -1,9 +1,16 @@
 ---
+author_key: "Dee, John"
+calendar: "Julian"
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 16"
 people:
+  - "Dee, John"
   - "Fromond, Jane"
+  - "Peckham, George"
+places:
+  - "ES"
+  - "PT"
 tags:
   - medicine
   - services

@@ -19,3 +19,24 @@ annotations:
         exact: "hym"
       - type: TextQuoteSelector
         exact: "his"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "see "
+        exact: "me"
+      - type: TextQuoteSelector
+        exact: "I"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee's house in Mortlake, London, GB" | place_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "at Mortlak"

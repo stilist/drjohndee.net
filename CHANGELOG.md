@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add some more place data
 - Add `place_link` and `place_reference` Liquid filters
+- Add annotations to entries
+- Add metadata to entries
 
 ### Changed
 - Update Jekyll to v4.2.1

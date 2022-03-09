@@ -1,0 +1,93 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+annotations:
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Dee, John" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        prefix: "cam to "
+        exact: "me"
+      - type: TextQuoteSelector
+        prefix: "made acquayntance with "
+        exact: "me"
+      - type: TextQuoteSelector
+        prefix: "to "
+        exact: "me"
+        suffix: " to"
+      - type: TextQuoteSelector
+        prefix: "promised "
+        exact: "me"
+      - type: TextQuoteSelector
+        prefix: "be sent "
+        exact: "me"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Fromond, Jane" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Jane my wife"
+      - type: TextQuoteSelector
+        prefix: ": "
+        exact: "she"
+        suffix: " went by water"
+      - type: TextQuoteSelector
+        prefix: "went with "
+        exact: "her"
+      - type: TextQuoteSelector
+        exact: "Jane"
+        suffix: " this night"
+      - type: TextQuoteSelector
+        prefix: "in "
+        exact: "her"
+        suffix: " belly"
+      - type: TextQuoteSelector
+        exact: "she"
+        suffix: " vomyted"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Peckham, George" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Sir George Peckham"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Gerard, Thomas" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Mr. Gerarde"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-07-16T15Z">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "A meridie hor. 3½"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        \1</time>
+    selectors:
+      - type: TextQuoteSelector
+        exact: "A meridie hor. 3½"

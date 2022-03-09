@@ -1,0 +1,22 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Reino de España"
+bounding_box:
+  - latitude: 42.319500
+    longitude: 3.322194
+  - latitude: 43.791222
+    longitude: -7.689278
+  - latitude: 36.000194
+    longitude: -5.610389
+  - latitude: 42.923194
+    longitude: -9.297889
+latitude: 40.433333
+longitude: -3.7
+country: "ES"
+id: "https://www.wikidata.org/entity/Q29"
+name_language: "es"
