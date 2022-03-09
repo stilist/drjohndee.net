@@ -7,7 +7,14 @@ location: "page 16"
 people:
   - "Dee, John"
   - "Fromond, Jane"
+  - "Garret"
   - "Peckham, George"
+  - "Pole, William"
+  # A guess; the Russells were Earls of Bedford, a title which today is
+  # associated with Tavistock. Francis was the oldest living Russell on this
+  # date.
+  - "Russell, Francis"
+  - "Simons, Phillip"
 places:
   - "ES"
   - "PT"
@@ -15,6 +22,7 @@ tags:
   - medicine
   - services
   - travel
+  - "wages"
 ---
 Mr. William Pole, whome Phillip Simons, somtymes barber to
 the old Erle of Tavistok, doth knowe, cam to me, and made

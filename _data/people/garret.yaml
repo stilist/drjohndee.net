@@ -1,0 +1,13 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name:
+  familyName: "Garret"
+full_name:
+  - text: Garret
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q65104607"
