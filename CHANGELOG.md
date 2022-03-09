@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update Jekyll to v4.2.1
 
+### Fixed
+- Apply annotations to `.txt` source material
+
 ## [1.0.12] - 2021-09-18
 ### Added
 - Tag pages now display a map of associated places

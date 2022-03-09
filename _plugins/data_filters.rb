@@ -27,7 +27,7 @@ module HistoricalDiary
 
     def annotate_content(object)
       path_segments = object['relative_path'].split(File::SEPARATOR)
-      timestamp = File.basename(path_segments.last, '.md')
+      timestamp = File.basename(path_segments.last, '.*')
       annotations = @context.registers[:site]
         .data['annotations']
         .dig(escape_key(object['source_key']),
