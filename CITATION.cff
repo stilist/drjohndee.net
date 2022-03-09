@@ -8,7 +8,7 @@ authors:
 date-released: 2021-04-04
 doi: "10.5281/zenodo.4511512"
 license: "AGPL-3.0-or-later"
-repository-artifact: "https://github.com/stilist/drjohndee.net/releases/tag/v1.0.12"
+repository-artifact: "https://github.com/stilist/drjohndee.net/releases/tag/v1.0.13"
 repository-code: "https://github.com/stilist/drjohndee.net"
 title: "The life and times of Dr John Dee"
-version: "1.0.12"
+version: "1.0.13"

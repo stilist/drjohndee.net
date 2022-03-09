@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.13] - 2022-03-08
 ### Added
 - Add some more place data
 - Add `place_link` and `place_reference` Liquid filters
@@ -378,8 +380,9 @@ details for each edition -- this makes it easy to specify the `numberOfPages` pr
 - Site provides day-by-day access to entries, with additional pages for people and sources
 - Site uses structured data for entries, people, and sources
 
-[Unreleased]: https://github.com/stilist/drjohndee.net/compare/v1.0.12...HEAD
-[1.0.11]: https://github.com/stilist/drjohndee.net/compare/v1.0.11...v1.0.12
+[Unreleased]: https://github.com/stilist/drjohndee.net/compare/v1.0.13...HEAD
+[1.0.13]: https://github.com/stilist/drjohndee.net/compare/v1.0.12...v1.0.13
+[1.0.12]: https://github.com/stilist/drjohndee.net/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/stilist/drjohndee.net/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/stilist/drjohndee.net/compare/v1.0.9...v1.0.10
 [1.0.9]: https://github.com/stilist/drjohndee.net/compare/v1.0.8...v1.0.9
