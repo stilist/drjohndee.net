@@ -11,20 +11,38 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
+        {{ "Pole, William" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Mr. William Pole"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        {{ "Russell, Francis" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "the old Erle of Tavistok"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
         {{ "Dee, John" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
         prefix: "cam to "
         exact: "me"
       - type: TextQuoteSelector
-        prefix: "made acquayntance with "
+        prefix: "acquayntance with "
         exact: "me"
       - type: TextQuoteSelector
         prefix: "to "
         exact: "me"
         suffix: " to"
       - type: TextQuoteSelector
-        prefix: "promised "
+        prefix: "promysed "
         exact: "me"
       - type: TextQuoteSelector
         prefix: "be sent "
@@ -60,10 +78,31 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
+        {{ "Garret" | person_link: "\1" }}
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Nurse Garret"
+      - type: TextQuoteSelector
+        prefix: "pay "
+        exact: "her"
+      - type: TextQuoteSelector
+        prefix: "for "
+        exact: "her"
+      - type: TextQuoteSelector
+        prefix: "brought "
+        exact: "her"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
         {{ "Peckham, George" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
         exact: "Sir George Peckham"
+      - type: TextQuoteSelector
+        exact: "He"
+        suffix: " promysed"
 
   - body:
       type: TextualBody
@@ -73,6 +112,15 @@ annotations:
     selectors:
       - type: TextQuoteSelector
         exact: "Mr. Gerarde"
+
+  - body:
+      type: TextualBody
+      format: "text/html"
+      value: >-
+        <time datetime="1582-07-19">\1
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Saint Margaret’s day"
 
   - body:
       type: TextualBody
@@ -89,5 +137,7 @@ annotations:
       value: >-
         \1</time>
     selectors:
+      - type: TextQuoteSelector
+        exact: "Saint Margaret’s Day"
       - type: TextQuoteSelector
         exact: "A meridie hor. 3½"
