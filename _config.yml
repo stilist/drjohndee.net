@@ -32,7 +32,7 @@ lang: en-US
 # site metadata
 default_calendar_system: "Julian"
 doi: "10.5281/zenodo.4511512"
-github_repository_url: "https://github.com/stilist/john-dee"
+github_repository_url: "https://github.com/stilist/drjohndee.net"
 google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
 icon_name: heiroglyph
 icon_sizes:

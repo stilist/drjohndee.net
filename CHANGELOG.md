@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Volume number is now displayed on transcludes when available
 - Minor tweaks to data files
+- Update `github_repository_url`
 
 ## [1.0.13] - 2022-03-08
 ### Added
