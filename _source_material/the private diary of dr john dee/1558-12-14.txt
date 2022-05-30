@@ -13,5 +13,5 @@ tags:
   - "nativity"
 time_of_day: "11/12"
 ---
-Mary Nevelle, alias Mary Lewknor, borne
+                  Mary Nevelle, alias Mary Lewknor, borne
 inter 11 et meridiem mane, by Chichester.

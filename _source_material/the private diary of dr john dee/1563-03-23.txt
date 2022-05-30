@@ -2,15 +2,14 @@
 edition_key: "book"
 footnotes:
   - "1554-08-25"
-language: "la-renais"
 license: "CC0 1.0"
 location: "page 1"
 people:
-  - "Kelley, Edward"
+  - "Fennar, William"
 tags:
   - "astrology"
   - "nativity"
-time_of_day: "16"
+time_of_day: "23/00"
 ---
-Ed. Kelly natus hora quarta a meridie† ut annotatum
-reliquit pater ejus.
+                Mr. William Fennar a meridie inter horam
+undecimam et duodecimam nocte.

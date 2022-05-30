@@ -1,0 +1,16 @@
+---
+edition_key: "book"
+footnotes:
+  - "1554-08-25"
+language: "la-renais"
+license: "CC0 1.0"
+location: "page 1"
+people:
+  - "Kelley, Edward"
+tags:
+  - "astrology"
+  - "nativity"
+time_of_day: "16"
+---
+           Ed. Kelly natus hora quarta a meridie† ut annotatum
+reliquit pater ejus.

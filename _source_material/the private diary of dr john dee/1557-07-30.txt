@@ -13,5 +13,5 @@ tags:
   - "nativity"
 time_of_day: "16"
 ---
-Mr. Arundell of Cornwayle natus circa [horam]
+            Mr. Arundell of Cornwayle natus circa [horam]
 quartam a meridie.

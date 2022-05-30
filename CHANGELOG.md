@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Convert some entries from Markdown to plain text; adjust indentation
+
 ### Fixed
 - Volume number is now displayed on transcludes when available
 

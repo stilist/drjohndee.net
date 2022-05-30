@@ -13,6 +13,6 @@ tags:
   - "nativity"
 time_of_day: "07"
 ---
-The Lord Willughby born hora septima
-mane, ante meridiem, Lat. 51° 30′, at Wesell in
-Gelderland.
+                the Lord Willughby born hora septima
+mane, ante meridiem, Lat. 51° 30′, at Wesell in Gel-
+derland.

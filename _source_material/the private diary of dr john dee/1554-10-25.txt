@@ -14,5 +14,5 @@ tags:
   - "nativity"
 time_of_day: "04"
 ---
-D. Daniel Vander Meulen
+                                      D. Daniel Vander Meulen
 Antwerpiæ, mane hora quarta.*
