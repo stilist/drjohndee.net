@@ -236,7 +236,9 @@ module HistoricalDiary
         data_record_link('sources', source_key, source_name),
         publishing_info,
       ]
-      output.insert(1, "Volume #{volume['volume_number']}") if volume.key?('volume_number')
+
+      volume_number = attribute_from_object_or_source_record(lookup_object, 'volumeNumber')
+      output.insert(1, "Volume #{volume_number}") if !volume_number.nil?
 
       author_key ||= attribute_from_object_or_source_record(lookup_object, 'author_key')
       author = person_data(author_key)
@@ -259,7 +261,7 @@ module HistoricalDiary
           editor.dig('presentational_name', 'givenName'),
           editor.dig('presentational_name', 'familyName'),
         ].compact.join(' ')
-        out = "Edited by " + data_record_link('people', editor_key, editor_name)
+        out = "Edited by " + person_link(editor_key, editor_name)
         output.insert(2, out)
       end
 
