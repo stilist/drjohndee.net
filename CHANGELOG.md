@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation
+- Improve accessibility of month tables
 
 ### Fixed
 - Volume number is now displayed on transcludes when available

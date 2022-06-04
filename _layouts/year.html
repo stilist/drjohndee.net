@@ -56,11 +56,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <li class="calendar-month">
         {% assign month_data = month_hash | last -%}
 
-        <span class='calendar-monthName'>
+        <span class='calendar-monthName'
+              aria-hidden>
           {{ month_data.name }}
         </span>
 
         <table class='calendar-days'>
+          <caption class="is-assistiveOnly">{{ month_data.name }} {{ page.year }}</caption>
           {% assign first_day = month_data.days | first -%}
 
           {% comment -%}
