@@ -778,6 +778,9 @@ ol.years > .year {
   inline-size: var(--calendar-day-size);
   justify-content: center;
 }
+.calendar-date a:hover {
+  color: var(--link-active-foreground-color);
+}
 .calendar-date--filler {
   color: var(--calendar-filler-color);
 }
