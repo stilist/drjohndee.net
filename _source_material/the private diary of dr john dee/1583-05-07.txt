@@ -4,7 +4,10 @@ license: "CC0 1.0"
 location: "page 20"
 people:
   - "Kelley, Edward"
+places:
+  - "London, London, GB"
 tags:
+  - religion
   - travel
 ---
 E. K. went toward London, and so to go homeward for 10 or 12

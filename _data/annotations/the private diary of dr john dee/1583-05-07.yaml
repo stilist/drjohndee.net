@@ -1,6 +1,6 @@
 ---
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
 #
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
@@ -11,34 +11,34 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Gilbert, Adrian" | person_link: "\1" }}
+        {{ "Kelley, Edward" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Mr. Adrian Gilbert"
+        exact: "E. K."
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Pepler" | person_link: "\1" }}
+        {{ "London, London, GB" | place_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Mr. Pepler"
+        exact: "London"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Brentford, London, GB" | place_link: "\1" }}
+        <span lang="la-renais">\1
     selectors:
       - type: TextQuoteSelector
-        exact: "Braynford"
+        exact: "Dies"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Devon, South West, GB" | place_link: "\1" }}
+        \1</span>
     selectors:
       - type: TextQuoteSelector
-        exact: "Devonshire"
+        exact: "Pascham."

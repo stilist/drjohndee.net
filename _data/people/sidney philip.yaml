@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q315509"
+presentational_name:
+  givenName: Philip
+  familyName: Sidney
+full_name:
+  - text: Sir
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q209690"
+  - text: Philip
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q827311"
+  - text: Sidney
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q13583278"
+birth_date: "1554-11-30"
+death_date: "1586-10-17"

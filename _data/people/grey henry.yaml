@@ -1,0 +1,29 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q5722222"
+presentational_name:
+  givenName: Henry
+  familyName: Grey
+full_name:
+  - text: Sir
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q209690"
+  - text: Henry
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q1158477"
+  - text: Grey
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q2703557"
+  - text: 1st
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
+  - text: "Baron Grey of Groby"
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
+birth_date: "1547"
+death_date: "1614"

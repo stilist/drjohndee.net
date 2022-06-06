@@ -2,8 +2,11 @@
 edition_key: "book"
 license: "CC0 1.0"
 location: "page 21"
+people:
+  - "Dee, Rowland"
+  - "unknown -- nurse Lydgatt"
 tags:
-  - services
+  - "wages"
 ---
 Payd nurse Lydgatt for Rowland
 for two monthes ending the 12th day.

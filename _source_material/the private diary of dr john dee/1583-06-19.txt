@@ -4,9 +4,12 @@ license: "CC0 1.0"
 location: "page 20"
 people:
   - "Laski, Olbracht"
+  - "unknown -- nurse Rowland"
+places:
+  - "Dee's house in Mortlake, London, GB"
 tags:
-  - services
-  - travel
+  - "travel"
+  - "wages"
 ---
 The Lord
 Albert Laski cam to me and lay at my hows all nyght. Nurse

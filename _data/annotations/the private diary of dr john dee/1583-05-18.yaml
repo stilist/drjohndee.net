@@ -1,6 +1,6 @@
 ---
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
 #
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
@@ -11,34 +11,31 @@ annotations:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Gilbert, Adrian" | person_link: "\1" }}
+        {{ "Dee, John" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Mr. Adrian Gilbert"
+        exact: "I"
+      - type: TextQuoteSelector
+        exact: "me"
+        suffix: " at"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Pepler" | person_link: "\1" }}
+        {{ "Dee's house in Mortlake, London, GB" | place_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Mr. Pepler"
+        exact: "Mortlake"
 
   - body:
       type: TextualBody
       format: "text/html"
       value: >-
-        {{ "Brentford, London, GB" | place_link: "\1" }}
+        {{ "Laski, Olbracht" | person_link: "\1" }}
     selectors:
       - type: TextQuoteSelector
-        exact: "Braynford"
-
-  - body:
-      type: TextualBody
-      format: "text/html"
-      value: >-
-        {{ "Devon, South West, GB" | place_link: "\1" }}
-    selectors:
+        exact: "The Prince Albertus Laski"
       - type: TextQuoteSelector
-        exact: "Devonshire"
+        exact: "He"
+        suffix: " cam"

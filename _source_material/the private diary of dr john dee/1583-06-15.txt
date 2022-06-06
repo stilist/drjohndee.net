@@ -3,9 +3,17 @@ edition_key: "book"
 license: "CC0 1.0"
 location: "page 20"
 people:
+  - "Russell, Francis"
   - "Laski, Olbracht"
+  - "Sidney, Philip"
+places:
+  - "Bisham, South East, GB"
+  - "Dee's house in Mortlake, London, GB"
+  - "Oxford, South East, GB"
+  - "University of Oxford, Oxford, South East, GB"
 tags:
-  - travel
+  - "travel"
+time_of_day: "~17"
 ---
 Abowt 5 of the clok cam
 the Polonian Prince Lord Albert Lasky down from Bissham,
