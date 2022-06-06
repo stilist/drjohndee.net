@@ -35,7 +35,10 @@ module HistoricalDiary
              'annotations')
       return object.content if annotations.nil?
 
-      content = object.content.clone
+      # Avoid mutating the original +content+; convert line breaks into spaces.
+      content = object.content
+        .clone
+        .gsub(/\s+/, ' ')
 
       # @note This approach is only usable for exact text matches; it would
       #   need to be much more complicated to work with the full Web Annotation
@@ -66,7 +69,7 @@ module HistoricalDiary
             selector['suffix'],
           ].compact.join('')
 
-          content.gsub!(/#{pattern}/, replacement)
+          content.gsub!(/#{pattern}/m, replacement)
         end
       end
 

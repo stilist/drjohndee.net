@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `github_repository_url`
 - Ensure text direction resets after rendering Hebrew text in `person_link`
 - Fix contrast when hovering on calendar dates
+- Handle hard line breaks when applying annotations
 
 ## [1.0.13] - 2022-03-08
 ### Added
