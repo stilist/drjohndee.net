@@ -1,0 +1,19 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name:
+  givenName: Rowland
+  familyName: Dee
+full_name:
+  - text: Rowland
+    type: givenName
+    language: en
+    id: "https://www.wikidata.org/entity/Q16281035"
+  - text: Dee
+    type: familyName
+    language: cy
+    id: "https://www.wikidata.org/entity/Q37480086"
