@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add people data
 - Add place data
 - Add metadata to entries
+- Documentation for `TimestampRange`
 
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation

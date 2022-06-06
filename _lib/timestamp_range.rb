@@ -28,10 +28,28 @@ end
 # syntax -- for example, `1500-01-01/02`.)
 #
 # The `ISO8601` Ruby gem is much more robust, but has a few issues of its own.
+#
+# @example
+#   TimestampRange.new("1500")
+# @example
+#   TimestampRange.new("1500-01")
+# @example
+#   TimestampRange.new("1500-01-01", "Julian")
+# @example
+#   TimestampRange.new("1500-01-01/1500-01-31")
+# @example
+#   TimestampRange.new("1500-01-01--1500-01-31")
+# @example
+#   TimestampRange.new("1500-01/1500-03-30")
 class TimestampRange
   attr_reader :end_date,
               :start_date
 
+  # @param raw_timestamp [String] An ISO 8601-formatted date or an ISO
+  #   8601-formatted date interval.
+  # @param calendar_system ["Gregorian", "Julian"] Force the date to be parsed
+  #   using the given calendar system, regardless of when the transition to the
+  #   Gregorian calendar occurred.
   def initialize(raw_timestamp, calendar_system="Gregorian")
     @raw_timestamp = raw_timestamp
     @calendar_system = calendar_system
