@@ -144,6 +144,7 @@
   --avatar-author-background-color: var(--neutral-100);
   --avatar-author-foreground-color: var(--neutral-0);
   --highlight-background-color: var(--accent-20);
+  --highlight-foreground-color: var(--accent-80);
   --highlight-outline-color: var(--accent-60);
   --highlight-alternate-background-color: var(--accent-80);
 }
@@ -778,6 +779,8 @@ ol.years > .year {
   inline-size: var(--calendar-day-size);
   justify-content: center;
 }
+.calendar-date a:active,
+.calendar-date a:focus,
 .calendar-date a:hover {
   color: var(--link-active-foreground-color);
 }
@@ -844,6 +847,7 @@ ol.years > .year {
 
 .is-highlighted {
   background-color: var(--highlight-background-color);
+  color: var(--highlight-foreground-color);
   outline: auto;
   outline-color: var(--highlight-outline-color);
 }
