@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation
 - Improve accessibility of month tables
+- Update Jekyll to v4.3.0
 
 ### Fixed
 - Volume number is now displayed on transcludes when available
