@@ -1,0 +1,40 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Casaubon, Meric"
+  author_text: "Meric Caſaubon, D.D."
+  language: "en"
+  license_key: "CC0 1.0"
+  name: >-
+    Of
+    Credulity
+    And
+    Incredulity,
+    In things
+    Natural, Civil, and Divine.
+    Wherein,
+    Among other things, the Sadduciſm of
+    theſe times, in denying Spirits, Witches, and
+    Supernatural Operations, by pregnant inſtan-
+    ces, and evidences, is fully confuted : EPI-
+    CURUS his cauſe, diſcuſſed, and the jugling
+    and falſe dealing, lately uſed, to bring Him,
+    and Atheiſm, into credit, clearly diſcovered :
+    the uſe and neceſſity of Ancient Learning,
+    againſt the Innovating humour, all along pro-
+    ved, and aſſerted.
+editions:
+  book:
+    city: "London, London, GB"
+    date: "1668"
+    id: "https://www.worldcat.org/title/1049969491"
+    oclc_number: "1049969491"
+    publisher: "T. Garthwait, in St. Bartholomews-Hospital, near Smithfield"
+    type: "Book"
+    url: "https://archive.org/details/ofcredulityincre00casa"
+    numberOfPages: 344

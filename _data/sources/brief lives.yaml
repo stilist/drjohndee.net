@@ -1,0 +1,35 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Aubrey, John"
+  language: "en"
+  license_key: "CC0 1.0"
+  name: >-
+    ‘Brief Lives,’ chiefly of Con-
+    temporaries, set down by
+    John Aubrey, between
+    the Years 1669 & 1696
+editions:
+  clarendon:
+    city: "Oxford, South East, GB"
+    date: "1898"
+    id: "https://www.worldcat.org/title/847897822"
+    oclc_number: "847897822"
+    publisher: "Clarendon Press"
+    type: "Book"
+    volumes:
+      "I":
+        editor_key: "Clark, Andrew"
+        numberOfPages: 458
+        url: "https://archive.org/details/briefliveschiefl01aubruoft"
+        volumeNumber: "Volume Ⅰ. (A–H)"
+      "II":
+        editor_key: "Clark, Andrew"
+        numberOfPages: 402
+        url: "https://archive.org/details/briefliveschiefl02aubruoft"
+        volumeNumber: "Volume ⅠⅠ. (I–Y)"

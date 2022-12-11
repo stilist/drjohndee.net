@@ -1,0 +1,63 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Strype, John"
+  language: "en"
+  license_key: "CC0 1.0"
+  name: >-
+    Annals
+    of
+    the Reformation
+    and
+    Establishment of Religion,
+    and Other Various Occurrences
+    in the
+    Church of England,
+    During
+    Queen Elizabeth’s Happy Reign :
+    Together with
+    an Appendix
+    of Original Papers of State, Records, and Letters.
+editions:
+  clarendon:
+    city: "Oxford, South East, GB"
+    date: "1824"
+    date_text: "ⅯⅮⅭⅭⅭⅩⅩⅠⅤ"
+    id: "https://www.worldcat.org/title/"
+    oclc_number: ""
+    publisher: "The Clarendon Press"
+    type: "Book"
+    volumes:
+      "I-I":
+        numberOfPages: 594
+        url: "https://archive.org/details/annalsofreformat11stry"
+        volumeNumber: "Vol. Ⅰ. Part Ⅰ."
+      "I-II":
+        numberOfPages: 606
+        url: "https://archive.org/details/annalsofreformat0102stry"
+        volumeNumber: "Vol. Ⅰ. Part ⅠⅠ."
+      "II-I":
+        numberOfPages: 614
+        url: "https://archive.org/details/annalsofreformat21stry"
+        volumeNumber: "Vol. ⅠⅠ. Part Ⅰ."
+      "II-II":
+        numberOfPages: 750
+        url: "https://archive.org/details/annalsofreformat22stry"
+        volumeNumber: "Vol. ⅠⅠ. Part ⅠⅠ."
+      "III-I":
+        numberOfPages: 782
+        url: "https://archive.org/details/annalsofreformat31stry"
+        volumeNumber: "Vol. ⅠⅠⅠ. Part Ⅰ."
+      "III-II":
+        numberOfPages: 656
+        url: "https://archive.org/details/annalsofreformat0302stry"
+        volumeNumber: "Vol. ⅠⅠⅠ. Part ⅠⅠ."
+      "IV":
+        numberOfPages: 668
+        url: "https://archive.org/details/annalsofreformat182404stry"
+        volumeNumber: "Vol. ⅠⅤ."

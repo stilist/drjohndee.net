@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add place data
 - Add metadata to entries
 - Documentation for `TimestampRange`
+- Try a new approach for source material (`_raw_source_material`) that doesn’t split the material into small pieces
 
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation
