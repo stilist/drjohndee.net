@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve accessibility of month tables
 - Update Jekyll to v4.3.0
 - Update `jekyll-feed` to v0.17.0
+- Update `jekyll-sass-converter` to v3.0.0
+- Update `rouge` to v4.0.1
 
 ### Fixed
 - Volume number is now displayed on transcludes when available
