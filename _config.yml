@@ -85,10 +85,21 @@ plugins:
 #   - vendor/ruby/
 
 exclude:
-  - _cache.nosync # update this to match `cache_dir`
+  - _cache.nosync/ # update this to match `cache_dir`
   - .gitignore
+  - .github/
+  - .ruby-version
+  - .terraform.lock.hcl
   - .terraform/
+  - CHANGELOG.md
+  - CITATION.cff
+  - Code of conduct.md
+  - CONTRIBUTING.md
+  - Developer certificate of origin.txt
+  - LICENSE.md
+  - README.md
   - terraform/
+  - untracked/
 
 collections:
   source_material:
