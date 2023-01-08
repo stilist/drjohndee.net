@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q1883439"
+presentational_name:
+  givenName: Madoc
+full_name:
+  - text: Madoc
+    type: givenName
+    language: "cy"
+    id: "https://www.wikidata.org/entity/Q1883439"
+  - text: ab
+    type: familyName
+    language: "cy"
+    additionalType: "https://w3id.org/pnv#surnamePrefix"
+  - text: Owain Gwynedd
+    type: familyName
+    language: "cy"
+    additionalType: "https://w3id.org/pnv#trailingPatronym"

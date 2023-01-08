@@ -1,0 +1,15 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q733322"
+presentational_name:
+  givenName: "אַשְמְדּאָי‎"
+full_name:
+  - text: "אַשְמְדּאָי‎"
+    type: givenName
+name_is_rtl: true
+name_language: he

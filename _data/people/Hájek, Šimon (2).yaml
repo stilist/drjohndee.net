@@ -5,16 +5,14 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-id: "https://www.wikidata.org/entity/Q1355663"
+person_key: "Hajek, Simon (2)"
 presentational_name:
-  givenName: Tadeáš
+  givenName: Šimon
   familyName: Hájek
 full_name:
-  - text: Tadeáš
+  - text: Šimon
     type: givenName
-    id: "https://www.wikidata.org/entity/Q21069440"
+    id: "https://www.wikidata.org/entity/Q22343561"
   - text: Hájek
     type: familyName
     id: "https://www.wikidata.org/entity/Q164308"
-birth_date: "1525-12-01"
-death_date: "1600-09-01"

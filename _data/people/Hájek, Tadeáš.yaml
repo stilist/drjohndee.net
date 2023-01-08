@@ -1,0 +1,21 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+person_key: "Hajek, Tadeas"
+id: "https://www.wikidata.org/entity/Q1355663"
+presentational_name:
+  givenName: Tadeáš
+  familyName: Hájek
+full_name:
+  - text: Tadeáš
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q21069440"
+  - text: Hájek
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q164308"
+birth_date: "1525-12-01"
+death_date: "1600-09-01"

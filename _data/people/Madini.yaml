@@ -6,12 +6,7 @@
 # details.
 
 presentational_name:
-  givenName: Šimon
-  familyName: Hájek
+  givenName: Madini
 full_name:
-  - text: Šimon
+  - text: Madini
     type: givenName
-    id: "https://www.wikidata.org/entity/Q22343561"
-  - text: Hájek
-    type: familyName
-    id: "https://www.wikidata.org/entity/Q164308"

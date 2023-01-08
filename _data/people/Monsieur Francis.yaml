@@ -1,0 +1,57 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q318380"
+birth_name:
+  givenName: Hercule François
+  additionalName: de France
+presentational_name:
+  honorificPrefix: Monsieur
+  givenName: Francis
+full_name:
+  - text: Monsieur
+    type: honorificPrefix
+    id: "https://www.wikidata.org/entity/Q1092777"
+    language: fr
+  - text: Francis
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q1441346"
+  - text: Duke of Évreux
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+  - text: Duke of Alençon
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://www.wikidata.org/entity/Q1848228"
+  - text: Duke of Château-Thierry
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+  - text: Duke of Anjou
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://www.wikidata.org/entity/Q770768"
+  - text: Duke of Berry
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://en.wikipedia.org/wiki/Duke_of_Berry"
+  - text: Duke of Touraine
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://en.wikipedia.org/wiki/Duke_of_Touraine"
+  - text: Count of Perche
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://www.wikidata.org/entity/Q2629622"
+  - text: Count of Meulan
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+    id: "https://www.wikidata.org/entity/Q1541754"
+  - text: Count of Mantes
+    type: additionalName
+    alternateType: "https://w3id.org/pnv#honorificSuffix"
+birth_date: "1555-03-18"
+death_date: "1584-06-10"

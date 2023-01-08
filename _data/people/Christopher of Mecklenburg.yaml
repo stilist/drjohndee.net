@@ -1,0 +1,23 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q477343"
+presentational_name:
+  givenName: Christopher
+  additionalName: Duke of Mecklenburg-Gadebusch
+full_name:
+  - text: Christopher
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q1084472"
+  - text: Stuart
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q37484532"
+  - text: Duke of Mecklenburg-Gadebusch
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
+birth_date: "1537-07-30"
+death_date: "1592-03-04"
