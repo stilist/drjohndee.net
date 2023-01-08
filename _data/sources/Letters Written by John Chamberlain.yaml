@@ -1,0 +1,25 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Chamberlain, John"
+  editor_key: "Williams, Sarah"
+  license_key: "CC0 1.0"
+  name: >-
+    Letters
+    written by
+    John Chamberlain
+    during
+    the Reign of Queen Elizabeth
+editions:
+  compilation:
+    date: "1861"
+    date_text: "Ⅿ.ⅮⅭⅭⅭ.ⅩⅬⅠ."
+    language: en
+    publisher: "The Camden Society"
+    type: Book
+    url: "https://www.google.com/books?id=ahYpAAAAYAAJ"

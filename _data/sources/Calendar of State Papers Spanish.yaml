@@ -1,0 +1,32 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  language: "en"
+  license_key: "CC0 1.0"
+  name: >-
+    Calendar
+    of
+    Letters and State Papers,
+    Relating to
+    English Affairs
+    Preserved Principally in the
+    Archives of Simancas.
+editions:
+  compilation:
+    city: "London"
+    id: "http://www.worldcat.org/oclc/1125933521"
+    oclc_number: "1125933521"
+    type: "Book"
+    volumes:
+      "II":
+        date: "1894"
+        editor_key: "Hume, Martin"
+        numberOfPages: 843
+        publisher: "Eyre and Spottiswoode"
+        url: "https://archive.org/details/calendarletters00offigoog"
+        volumeNumber: "Vol. ⅠⅠ. Elizabeth. 1568–1579"

@@ -1,0 +1,25 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Shakelton, Francis"
+  language: "en-emodeng"
+  license_key: "CC0 1.0"
+  name: >-
+    A blazyng Starre or
+    burnyng Beacon, ſeene the 10. of
+    October laſte (and yet continew⹀
+    yng) ſet on fire by Gods prouidence, to call
+    all ſinners to earneſt & ſpeedie repentance
+editions:
+  book:
+    city: "London"
+    date: "1580"
+    id: "http://www.worldcat.org/oclc/503846373"
+    oclc_number: 503846373
+    type: Book
+    url: "http://hdl.handle.net/20.500.12024/A11953"

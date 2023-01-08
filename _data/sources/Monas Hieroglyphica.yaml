@@ -1,0 +1,30 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Dee, John"
+  language: "la-renais"
+  license_key: "CC0 1.0"
+  name: >-
+    Monas Hiero-
+    glyphica Ioannis
+    Dee, Londinensis,
+    ad
+    Maximilianvm, Dei
+    gratia Romanorvm, Bo-
+    hemiæ et Hvngariæ re-
+    gem sapientissimvm.
+editions:
+  third:
+    city: "Frankfurt"
+    place_key: "Frankfurt, Hesse, DE"
+    date: "1591"
+    id: "https://www.wikidata.org/entity/Q908061"
+    oclc_number: "705418432"
+    publisher: "Ioannem Wechelum & Petrum Fiſcherum conſortes"
+    type: Book
+    url: "https://archive.org/details/monashieroglyphi00deej"

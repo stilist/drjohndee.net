@@ -1,0 +1,30 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  author_key: "Dee, John"
+  editor_key: "Halliwell, James"
+  license_key: "CC0 1.0"
+  name: >-
+    The
+    Private Diary
+    of
+    Dr. John Dee,
+    and the Catalog of His Manuscripts,
+    from the original manuscripts
+    in the Ashmolean Museum at Oxford, and Trinity
+    College Library, Cambridge
+editions:
+  book:
+    city: "London"
+    date: "1842"
+    id: "http://www.worldcat.org/oclc/1050791672"
+    language: en
+    oclc_number: "1050791672"
+    publisher: "The Camden Society"
+    type: Book
+    url: "https://archive.org/details/privatediaryofdr00deejuoft"

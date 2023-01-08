@@ -1,0 +1,106 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+work:
+  language: en
+  license_key: "CC0 1.0"
+  name: >-
+    Calendar
+    of
+    State Papers,
+    Domestic Series,
+    preserved by
+    Her Majesty’s Public Record Office
+editions:
+  compilation:
+    city: "London"
+    id: "http://www.worldcat.org/oclc/265618046"
+    oclc_number: "265618046"
+    type: Book
+    # > Vols. 2-7 have title: Calendar of state papers, Domestic series, of
+    # > the reign of Elizabeth; v. 8-11, Calendar of state papers, Domestic
+    # > series, of the reign of James I.; v. 12, Calendar of state papers,
+    # > Domestic series, of the reigns of Elizabeth and James I
+    # >
+    # > Edited under the direction of the master of rolls, and with the
+    # > sanction of Her Majesty's secretary of state for the Home department,
+    # > by Robert Lemon, v. 1-2; by Mary Anne Everett Green, v. 3-12
+    # >
+    # > Vol. 2 has imprint, Longman, Green, Longman, Roberts, and Green; v.
+    # > 3-4, Longmans, Green, Reader, and Dyer; v. 5, Longmans, Green and co.;
+    # > v. 6-7, 12, Longman & co., and Trübner & co.; [etc., etc.]
+    # >
+    # > Vol. 1-2, 8-11 were compiled on the principle of indicating rather than
+    # > describing the contents of the papers. Vol. 3-7, 12 give fuller
+    # > descriptions such as are exhaustive of the important contents of the
+    # > papers and in most cases preclude the necessity of consulting the
+    # > originals themselves. cf. Pref., v. 3, 8
+    # >
+    # > [v. 1] 1547-1580: Edward VI., Mary, Elizabeth. 1856.
+    # > [v. 2] 1581-1590: Elizabeth. 1865.
+    # > [v. 3] 1591-1594: Elizabeth. 1867.
+    # > [v. 4] 1595-1597: Elizabeth. 1869.
+    # > [v. 5] 1598-1601: Elizabeth. 1869.
+    # > [v. 6] 1601-1603: Elizabeth; with addenda, 1547-1565. 1870.
+    # > [v. 7] 1566-1579: Elizabeth, addenda, 1566-1579. 1871.
+    # > [v. 8] 1603-1610: James I. 1857.
+    # > [v. 9] 1611-1618: James I. 1858.
+    # > [v. 10] 1619-1623: James I. 1858.
+    # > [v. 11] 1623-1625: James I., with addenda. 1859.
+    # > [v. 12] 1580-1625: Elizabeth and James I., addenda. 1872
+    volumes:
+      "2":
+        date: "1865"
+        editor_key: "Lemon, Robert"
+        name: >-
+          Calendar
+          of
+          State Papers,
+          Domestic Series,
+          of the reign of
+          Elizabeth,
+          1581–1590,
+          preserved in
+          Her Majesty’s Public Record Office
+        numberOfPages: "825"
+        publisher: "Longman, Green, Longman, Roberts, and Green"
+        url: "https://archive.org/details/cu31924091775266"
+        volumeNumber: "2"
+      "4":
+        date: "1869"
+        editor_key: "Green, Mary Anne Everett"
+        name: >-
+          Calendar
+          of
+          State Papers,
+          Domestic Series,
+          of the reign of
+          Elizabeth,
+          1595–1597,
+          preserved in
+          Her Majesty’s Public Record Office
+        numberOfPages: "697"
+        publisher: "Longmans, Green, Reader, and Dyer"
+        url: "https://archive.org/details/bub_gb_ozz8aAZ_niQC"
+        volumeNumber: "4"
+      "5":
+        date: "1869"
+        editor_key: "Green, Mary Anne Everett"
+        name: >-
+          Calendar
+          of
+          State Papers,
+          Domestic Series,
+          of the reign of
+          Elizabeth,
+          1598–1601,
+          preserved in
+          Her Majesty’s Public Record Office
+        numberOfPages: "697"
+        publisher: "Longmans, Green, and Co."
+        url: "https://archive.org/details/cu31924091775290"
+        volumeNumber: "5"
