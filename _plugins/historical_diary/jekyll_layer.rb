@@ -21,6 +21,9 @@ module HistoricalDiary
   # Jekyll's public APIs, going through
   # <tt>HistoricalDiary::JekyllLayer::Utilities#site_object</tt>.
   module JekyllLayer
+    autoload :PersonDrop, "jekyll_layer/person_drop"
+    autoload :PlaceDrop, "jekyll_layer/place_drop"
+    autoload :SourceDrop, "jekyll_layer/source_drop"
     autoload :Utilities, "jekyll_layer/utilities"
   end
 end
