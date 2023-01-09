@@ -16,22 +16,30 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-# Classes that interact with Jekyll's generation pipeline must be eagerly
-# loaded.
-require_relative "jekyll_layer/hash_filters"
-require_relative "jekyll_layer/liquify_filters"
-require_relative "jekyll_layer/tag_filters"
-require_relative "jekyll_layer/year_page_generator"
+require 'jekyll'
 
 module HistoricalDiary
-  # Code in the <tt>HistoricalDiary::JekyllLayer</tt> module assumes access to
-  # Jekyll's public APIs, going through
-  # <tt>HistoricalDiary::JekyllLayer::Utilities#site_object</tt>.
   module JekyllLayer
-    autoload :HistoricalDiaryPage, "jekyll_layer/historical_diary_page"
-    autoload :PersonDrop, "jekyll_layer/person_drop"
-    autoload :PlaceDrop, "jekyll_layer/place_drop"
-    autoload :SourceDrop, "jekyll_layer/source_drop"
-    autoload :Utilities, "jekyll_layer/utilities"
+    class HistoricalDiaryPage < ::Jekyll::Page
+      # Copied from `Jekyll::Document`, under the MIT license.
+      #
+      # @see https://github.com/jekyll/jekyll/blob/a988f9da145262efeb79e285c0bbce62b82ea002/lib/jekyll/document.rb#L342-L348
+      # @see https://github.com/jekyll/jekyll/blob/a988f9da145262efeb79e285c0bbce62b82ea002/LICENSE
+      def <=>(other)
+        return nil unless other.respond_to?(:data)
+
+        cmp = data["date"] <=> other.data["date"]
+        cmp = path <=> other.path if cmp.nil? || cmp.zero?
+        cmp
+      end
+
+      def url_placeholders
+        {
+          :path => @dir,
+          :basename => basename,
+          :output_ext => output_ext,
+        }
+      end
+    end
   end
 end

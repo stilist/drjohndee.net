@@ -18,7 +18,7 @@
 
 require "jekyll"
 require "date"
-require_relative "../_lib/historical_diary_page"
+require_relative "jekyll_layer/historical_diary_page"
 
 module HistoricalDiary
   class DayPage < HistoricalDiaryPage
