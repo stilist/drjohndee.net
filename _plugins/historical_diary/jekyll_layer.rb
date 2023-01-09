@@ -16,6 +16,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
+# Classes that interact with Jekyll's generation pipeline must be eagerly
+# loaded.
+require_relative "jekyll_layer/year_page_generator"
+
 module HistoricalDiary
   # Code in the <tt>HistoricalDiary::JekyllLayer</tt> module assumes access to
   # Jekyll's public APIs, going through
