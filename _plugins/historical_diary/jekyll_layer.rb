@@ -19,6 +19,7 @@
 # Classes that interact with Jekyll's generation pipeline must be eagerly
 # loaded.
 require_relative "jekyll_layer/data_filters"
+require_relative "jekyll_layer/data_page_generator"
 require_relative "jekyll_layer/day_page_generator"
 require_relative "jekyll_layer/hash_filters"
 require_relative "jekyll_layer/liquify_filters"
