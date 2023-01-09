@@ -18,7 +18,7 @@
 
 require "jekyll"
 require_relative "../_lib/data_collection"
-require_relative "../_lib/timestamp_range"
+require_relative "historical_diary/timestamp_range"
 
 # This monkeypatches an `#html?` method into `Jekyll::Document`.
 # `jekyll-sitemap` calls Jekyll's `site.html_pages`. `site.html_pages`

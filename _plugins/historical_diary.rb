@@ -20,5 +20,6 @@ require_relative "historical_diary/jekyll_layer"
 
 module HistoricalDiary
   autoload :MapTile, "historical_diary/lib/map_tile"
+  autoload :TimestampRange, "historical_diary/lib/timestamp_range"
   autoload :VERSION, "historical_diary/version"
 end

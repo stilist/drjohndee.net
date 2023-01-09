@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require 'jekyll'
-require_relative 'timestamp_range'
+require_relative '../_plugins/historical_diary/timestamp_range'
 
 module DataCollection
   # for 'slugify'
@@ -98,7 +98,7 @@ module DataCollection
 
     ensure_transclusions_by_date(collection_name)
 
-    timestamp_range = TimestampRange.new(timestamp, data_collection__default_calendar_system)
+    timestamp_range = HistoricalDiary::TimestampRange.new(timestamp, data_collection__default_calendar_system)
     out = []
     timestamp_range.dates.each do |date|
       out << TRANSCLUSIONS[collection_name][date.strftime('%F')]

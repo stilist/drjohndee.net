@@ -19,7 +19,7 @@
 require "jekyll"
 require_relative "../_lib/data_collection"
 require_relative "../_lib/historical_diary_page"
-require_relative "../_lib/timestamp_range"
+require_relative "historical_diary/timestamp_range"
 
 module HistoricalDiary
   class YearPage < HistoricalDiaryPage
