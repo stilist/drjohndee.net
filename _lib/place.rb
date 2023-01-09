@@ -17,7 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 require_relative "data_collection"
-require_relative "map_tile"
+require_relative "../_plugins/historical_diary/lib/map_tile"
 
 module HistoricalDiary
   class Place

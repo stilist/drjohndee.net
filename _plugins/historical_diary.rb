@@ -19,5 +19,6 @@
 require_relative "historical_diary/jekyll_layer"
 
 module HistoricalDiary
+  autoload :MapTile, "historical_diary/lib/map_tile"
   autoload :VERSION, "historical_diary/version"
 end

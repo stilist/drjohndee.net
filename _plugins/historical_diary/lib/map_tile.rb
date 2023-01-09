@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
+#--
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -15,6 +14,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#++
 
 module HistoricalDiary
   class MapTile
@@ -108,59 +108,58 @@ module HistoricalDiary
     end
 
     private
+      def api_token
+        site.config["mapbox_access_token"]
+      end
 
-    def api_token
-      site.config["mapbox_access_token"]
-    end
+      def renderable?
+        return true if points.is_a?(Array) && !points.empty?
+        bounding_box.is_a?(Array) && bounding_box.length == 4
+      end
 
-    def renderable?
-      return true if points.is_a?(Array) && !points.empty?
-      bounding_box.is_a?(Array) && bounding_box.length == 4
-    end
+      # @see https://docs.mapbox.com/api/maps/static-images/
+      def tile_url(contrast: false, dpi: 1, include_markers: true, size: :medium, theme: :default)
+        if include_markers
+          marker_color = [
+            theme,
+            contrast ? "contrast" : "accent",
+          ].join("_").to_sym
 
-    # @see https://docs.mapbox.com/api/maps/static-images/
-    def tile_url(contrast: false, dpi: 1, include_markers: true, size: :medium, theme: :default)
-      if include_markers
-        marker_color = [
-          theme,
-          contrast ? "contrast" : "accent",
-        ].join("_").to_sym
-
-        markers_array = points.map do |point|
-          "pin-s+#{COLORS[marker_color] || COLORS[:dark_accent]}(#{point[:longitude]},#{point[:latitude]})"
+          markers_array = points.map do |point|
+            "pin-s+#{COLORS[marker_color] || COLORS[:dark_accent]}(#{point[:longitude]},#{point[:latitude]})"
+          end
+          markers = markers_array.join(",")
         end
-        markers = markers_array.join(",")
-      end
 
-      if bounding_box.is_a?(Array) && !bounding_box.empty?
-        location = "[#{bounding_box.join(",")}]"
-      elsif points.length > 1
-        location = "auto"
-      else
-        point = points.first
-        location = [
-          point[:longitude],
-          point[:latitude],
-          ZOOM_LEVELS[point[:record_type]],
-          0
-        ].flatten.join(",")
-      end
+        if bounding_box.is_a?(Array) && !bounding_box.empty?
+          location = "[#{bounding_box.join(",")}]"
+        elsif points.length > 1
+          location = "auto"
+        else
+          point = points.first
+          location = [
+            point[:longitude],
+            point[:latitude],
+            ZOOM_LEVELS[point[:record_type]],
+            0
+          ].flatten.join(",")
+        end
 
-      size_in_px = SIZES[size]
-      parts = [
-        URL_BASE,
-        TILESETS[theme],
-        "static",
-        markers,
-        location,
-        [
-          size_in_px,
-          "x",
-          size_in_px,
-          dpi == 1 ? "" : "@2x",
-        ].join(""),
-      ].compact
-      parts.join("/") + "?access_token=#{api_token}&logo=false"
-    end
+        size_in_px = SIZES[size]
+        parts = [
+          URL_BASE,
+          TILESETS[theme],
+          "static",
+          markers,
+          location,
+          [
+            size_in_px,
+            "x",
+            size_in_px,
+            dpi == 1 ? "" : "@2x",
+          ].join(""),
+        ].compact
+        parts.join("/") + "?access_token=#{api_token}&logo=false"
+      end
   end
 end

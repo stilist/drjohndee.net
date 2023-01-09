@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-require_relative "map_tile"
+require_relative "../_plugins/historical_diary/lib/map_tile"
 require_relative "place"
 
 module HistoricalDiary
