@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `jekyll-feed` to v0.17.0
 - Update `jekyll-sass-converter` to v3.0.0
 - Update `rouge` to v4.0.1
+- Rename `people` and `sources` Data Files to have capital letters and commas
+- Begin refactoring Ruby code
 
 ### Fixed
 - Volume number is now displayed on transcludes when available
