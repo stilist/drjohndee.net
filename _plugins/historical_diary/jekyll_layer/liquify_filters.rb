@@ -8,9 +8,13 @@
 # > through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 #
 # @see https://github.com/gemfarmer/jekyll-liquify/blob/master/lib/jekyll-liquify.rb
-module LiquidFilter
-  def liquify(input)
-    Liquid::Template.parse(input).render(@context)
+module HistoricalDiary
+  module JekyllLayer
+    module LiquidFilters
+      def liquify(input)
+        Liquid::Template.parse(input).render(@context)
+      end
+    end
   end
 end
-Liquid::Template.register_filter(LiquidFilter)
+Liquid::Template.register_filter(HistoricalDiary::JekyllLayer::LiquidFilters)

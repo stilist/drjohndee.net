@@ -18,6 +18,7 @@
 
 # Classes that interact with Jekyll's generation pipeline must be eagerly
 # loaded.
+require_relative "jekyll_layer/liquify_filters"
 require_relative "jekyll_layer/tag_filters"
 require_relative "jekyll_layer/year_page_generator"
 
