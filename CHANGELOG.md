@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `rouge` to v4.0.1
 - Rename `people`, `places`, and `sources` Data Files to have capital letters and commas
 - Begin refactoring Ruby code (namespace, Drops, Ruby on Rails code style)
+- Check for `place_key` in `places` data and `person_key` in `people` data, to handle characters outside a–z / A–Z / 0–9
 
 ### Fixed
 - Volume number is now displayed on transcludes when available

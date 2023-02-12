@@ -37,10 +37,23 @@ module HistoricalDiary
       end
 
       def record
+        if INVALID_KEYS.include?(key)
+          Jekyll.logger.debug "PersonDrop:", "Short-circuiting on invalid key"
+          return {}
+        end
+
         site_object.data["people"].fetch(key)
       rescue KeyError
-        Jekyll.logger.error "PersonDrop:", "'#{key}' doesn't match any records"
-        {}
+        indirect_record = site_object.data["people"].
+          select { |_, value| !value["person_key"].nil? }.
+          values.
+          find { |value| sanitize_key(value["person_key"]) == key }
+
+        if indirect_record.nil?
+          Jekyll.logger.error "PersonDrop:", "'#{key}' doesn't match any records"
+        end
+
+        indirect_record || {}
       end
       alias_method :fallback_data, :record
       private :record
@@ -96,6 +109,13 @@ module HistoricalDiary
 
       private
         attr_reader :identifier
+
+        INVALID_KEYS = [
+          nil,
+          "",
+          # escaped version of `"Various authors"`
+          "Various_authors",
+        ].freeze
 
         def key
           sanitize_key(identifier)
