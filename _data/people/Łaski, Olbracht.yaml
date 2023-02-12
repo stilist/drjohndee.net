@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -15,6 +16,7 @@ full_name:
     type: givenName
   - text: Łaski
     type: familyName
+    language: "pl"
     id: "https://www.wikidata.org/entity/Q65245866"
 birth_date: "1536"
 death_date: "1605-11-23"

@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -7,18 +8,18 @@
 
 id: "https://www.wikidata.org/entity/Q150586"
 presentational_name:
-  jobTitle: Emperor
-  givenName: Rudolf
-  additionalName: ⅠⅠ
+  jobTitle: "Emperor"
+  givenName: "Rudolf"
+  additionalName: "ⅠⅠ"
 full_name:
-  - text: Rudolf
-    type: givenName
+  - text: "Rudolf"
+    type: "givenName"
     id: "https://www.wikidata.org/entity/Q18028491"
-  - text: ⅠⅠ
-    type: additionalName
+  - text: "ⅠⅠ"
+    type: "additionalName"
     additionalType: "https://w3id.org/pnv#disambiguatingDescription"
-  - text: Holy Roman Emperor
-    type: jobTitle
+  - text: "Holy Roman Emperor"
+    type: "jobTitle"
     id: "https://www.wikidata.org/entity/Q181765"
 birth_date: "1552-07-18"
 death_date: "1612-01-20"

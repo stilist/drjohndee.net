@@ -16,7 +16,7 @@ editions:
   "english_1842":
     author_key: "Thompson, A"
     city: "London"
-    place_key: "London, London, GB"
+    place_key: "London, Greater London, GB"
     date: "1842"
     editor_key: "Giles, JA"
     id: "http://www.worldcat.org/oclc/181870237"

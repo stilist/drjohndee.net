@@ -1,0 +1,16 @@
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+place_key: "Konin, Wojewodztwo wielkopolskie, PL"
+presentational_name: "Konin, Polska"
+latitude: 52.216667
+longitude: 18.266667
+locality: "Konin"
+region: "Województwo wielkopolskie"
+country: "PL"
+id: "https://www.wikidata.org/entity/Q52845"
+name_language: "pl"

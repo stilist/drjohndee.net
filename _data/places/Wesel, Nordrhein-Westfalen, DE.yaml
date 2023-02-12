@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Wesel, Deutschland"
+latitude: 51.658611
+longitude: 6.617778
+locality: "Wesel"
+region: "Nordrhein-Westfalen"
+country: "DE"
+id: "https://www.wikidata.org/entity/Q4011"
+name_language: "de"

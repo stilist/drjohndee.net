@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q709102"
+presentational_name:
+  givenName: "Arthur"
+  familyName: "Dee"
+full_name:
+  - text: "Arthur"
+    type: "givenName"
+    language: "en"
+    id: "https://www.wikidata.org/entity/Q1778168"
+  - text: "Dee"
+    type: "familyName"
+    language: "cy"
+    id: "https://www.wikidata.org/entity/Q37480086"
+birth_date: "1579-07-23"
+death_date: "1651-09"

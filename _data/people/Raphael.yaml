@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -7,9 +8,9 @@
 
 id: "https://www.wikidata.org/entity/Q56951"
 presentational_name:
-  givenName: "רְפָאֵל‎"
+  givenName: "רְפָאֵל"
 full_name:
-  - text: "רְפָאֵל‎"
+  - text: "רְפָאֵל"
     type: givenName
+    language: "he"
 name_is_rtl: true
-name_language: he

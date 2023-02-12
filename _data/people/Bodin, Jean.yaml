@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q190944"
+presentational_name:
+  givenName: Jean
+  familyName: Bodin
+full_name:
+  - text: Jean
+    type: givenName
+    language: "fr"
+    id: "https://www.wikidata.org/entity/Q7521081"
+  - text: Bodin
+    type: familyName
+    language: "en"
+    id: "https://www.wikidata.org/entity/Q23817355"
+birth_date: "1530"
+death_date: "1596"

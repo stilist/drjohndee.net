@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+place_key: "St Mary's Church, Wimbledon, Greater London, GB"
+presentational_name: "St Mary’s Church, Wimbledon, England"
+latitude: 51.428614
+longitude: -0.210472
+address: "30 St Mary’s Road"
+locality: "Wimbledon"
+region: "Greater London"
+country: "GB"
+id: "https://www.wikidata.org/entity/Q736742"
+name_language: "en"

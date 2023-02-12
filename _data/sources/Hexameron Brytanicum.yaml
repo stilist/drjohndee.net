@@ -19,7 +19,7 @@ work:
 editions:
   third:
     city: "London"
-    place_key: "London, London, GB"
+    place_key: "London, Greater London, GB"
     date: "1577"
     id: "https://www.wikidata.org/entity/Q908061"
     oclc_number: "216607672"

@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+place_key: "Skalka, Krakow, Wojewodztwo malopolskie, PL"
+presentational_name: "Bazylika św. Michała Archanioła i św. Stanisława Biskupa i Męczennika"
+latitude: 50.048333
+longitude: 19.937778
+locality: "Kraków"
+region: "Wojewodztwo malopolskie"
+country: "PL"
+id: "https://www.wikidata.org/entity/Q1420580"
+url: "http://skalka.paulini.pl/"
+name_language: "pl"

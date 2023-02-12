@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name: "Emden, Deutschland"
+latitude: 53.366944
+longitude: 7.206111
+locality: "Emden"
+region: "Niedersachsen"
+country: "DE"
+id: "https://www.wikidata.org/entity/Q4174"
+name_language: "de"
