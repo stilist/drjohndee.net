@@ -19,8 +19,7 @@
 module HistoricalDiary
   class MapTile
     attr_reader :bounding_box,
-                :points,
-                :site
+                :points
 
     BREAKPOINTS = {
       small: 960,
@@ -108,6 +107,8 @@ module HistoricalDiary
     end
 
     private
+      attr_reader :site
+
       def api_token
         site.config["mapbox_access_token"]
       end

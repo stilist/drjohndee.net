@@ -16,8 +16,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
-
 module HistoricalDiary
   module JekyllLayer
     module Utilities

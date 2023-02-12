@@ -101,14 +101,14 @@ module HistoricalDiary
         end
 
         def latitude
-          return record["latitude"] if record["latitude"].is_a?(Number)
+          return record["latitude"] if numeric?(record["latitude"])
           return if bounding_box.nil?
 
           (bounding_box[1] + bounding_box[3]) / 2
         end
 
         def longitude
-          return record["longitude"] if record["longitude"].is_a?(Number)
+          return record["longitude"] if numeric?(record["longitude"])
           return if bounding_box.nil?
 
           (bounding_box[0] + bounding_box[2]) / 2
@@ -116,6 +116,10 @@ module HistoricalDiary
 
         def precision
           PRECISION_KEYS.find { |key| !record[key].nil? } || "unknown"
+        end
+
+        def numeric?(value)
+          value.is_a?(Numeric)
         end
     end
   end
