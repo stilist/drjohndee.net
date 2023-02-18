@@ -58,7 +58,7 @@ twitter:
   username: stilist
 
 # Build settings
-cache_dir: _cache.nosync # `.nosync` prevents iCloud from syncing files
+cache_dir: &cache_dir _cache.nosync # `.nosync` prevents iCloud from syncing files
 destination: _site.nosync
 plugins:
   - jekyll-feed
@@ -85,7 +85,7 @@ plugins:
 #   - vendor/ruby/
 
 exclude:
-  - _cache.nosync/ # update this to match `cache_dir`
+  - *cache_dir
   - .gitignore
   - .github/
   - .ruby-version
