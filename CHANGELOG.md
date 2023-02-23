@@ -15,10 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation
 - Improve accessibility of month tables
-- Update Jekyll to v4.3.0
+- Update Jekyll and dependencies to current versions
 - Update `jekyll-feed` to v0.17.0
-- Update `jekyll-sass-converter` to v3.0.0
-- Update `rouge` to v4.0.1
 - Rename `people`, `places`, and `sources` Data Files to have capital letters and commas
 - Ruby code is refactored into a plugin following Jekyll conventions
 - Code to generate year and month pages is currently broken
