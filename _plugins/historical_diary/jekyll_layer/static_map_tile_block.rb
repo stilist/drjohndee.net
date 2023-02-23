@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
+#--
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -15,30 +14,16 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-require_relative "../_plugins/historical_diary/lib/map_tile"
-require_relative "place"
+#++
 
 module HistoricalDiary
-  class Places
-    attr_reader :keys,
-                :site
+  module JekyllLayer
+    class StaticMapTileBlock < Liquid::Block
+      def render(context) = place_drop(super, context).static_map_html
 
-    def initialize(keys, site)
-      @keys = keys
-      # passed to `Place`
-      @site = site
-    end
-
-    def static_map_html
-      MapTile.new(points: points,
-                  site: site).static_map_html
-    end
-
-    private
-
-    def points
-      keys.map { |key| Place.new(key, site).point }.compact
+      private
+        def place_drop(key, context) = PlaceDrop.new(key, context: context)
     end
   end
 end
+Liquid::Template.register_tag "static_map_tile", HistoricalDiary::JekyllLayer::StaticMapTileBlock

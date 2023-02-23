@@ -20,7 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `jekyll-sass-converter` to v3.0.0
 - Update `rouge` to v4.0.1
 - Rename `people`, `places`, and `sources` Data Files to have capital letters and commas
-- Begin refactoring Ruby code (namespace, Drops, Ruby on Rails code style)
+- Ruby code is refactored into a plugin following Jekyll conventions
+- Code to generate year and month pages is currently broken
 - Check for `place_key` in `places` data and `person_key` in `people` data, to handle characters outside a–z / A–Z / 0–9
 - Use Yaml alias to put `cache_dir` in `exclude` list
 

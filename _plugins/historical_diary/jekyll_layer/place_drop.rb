@@ -16,47 +16,16 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
-require_relative "utilities"
-
 module HistoricalDiary
   module JekyllLayer
     class PlaceDrop < Jekyll::Drops::Drop
-      include Jekyll::Filters::URLFilters
-      include Utilities
+      include Drop
 
       mutable false
 
-      def initialize(identifier, context:)
-        @identifier = identifier
-
-        @context = context
-        @site = context.registers[:site]
-
-        super record
-      end
-
-      def record
-        if INVALID_KEYS.include?(key)
-          Jekyll.logger.debug "PlaceDrop:", "Short-circuiting on invalid key"
-          return {}
-        end
-
-        site_object.data["places"].fetch(key)
-      rescue KeyError
-        indirect_record = site_object.data["places"].
-          select { |_, value| !value["place_key"].nil? }.
-          values.
-          find { |value| sanitize_key(value["place_key"]) == key }
-
-        if indirect_record.nil?
-          Jekyll.logger.error "PlaceDrop:", "'#{key}' doesn't match any records"
-        end
-
-        indirect_record || {}
-      end
-      alias_method :fallback_data, :record
-      private :record
+      PLURAL_NOUN = "places"
+      SINGULAR_NOUN = "place"
+      DATA_KEY = "#{SINGULAR_NOUN}_key"
 
       def coordinates
         return [] if record.nil?
@@ -66,11 +35,7 @@ module HistoricalDiary
         coordinates = [
           latitude,
           longitude,
-        ].freeze
-      end
-
-      def permalink
-        relative_url("people/#{key.downcase}.html")
+        ]
       end
 
       def point
@@ -81,23 +46,27 @@ module HistoricalDiary
           longitude: longitude,
           name: presentational_name,
           record_type: precision,
-        }.freeze
+        }
+      end
+
+      def presentational_name
+        record["presentational_name"]
+      end
+
+      def static_map_html
+        return @static_map_html if defined? @static_map_html
+        @static_map_html = MapTile.new(bounding_box: bounding_box,
+                                       points: [point],
+                                       site: site_object).static_map_html
       end
 
       private
-        attr_reader :identifier
-
-        INVALID_KEYS = [
-          nil,
-          "",
-        ].freeze
-
         PRECISION_KEYS = %w[
           address
           locality
           region
           country
-        ].freeze
+        ]
 
         def bounding_box
           return if record.nil?
@@ -114,31 +83,23 @@ module HistoricalDiary
           end
         end
 
-        def key
-          sanitize_key(identifier)
-        end
-
         def latitude
-          return record["latitude"] if numeric?(record["latitude"])
+          return record["latitude"] if numeric? record["latitude"]
           return if bounding_box.nil?
 
           (bounding_box[1] + bounding_box[3]) / 2
         end
 
         def longitude
-          return record["longitude"] if numeric?(record["longitude"])
+          return record["longitude"] if numeric? record["longitude"]
           return if bounding_box.nil?
 
           (bounding_box[0] + bounding_box[2]) / 2
         end
 
-        def precision
-          PRECISION_KEYS.find { |key| !record[key].nil? } || "unknown"
-        end
+        def precision = PRECISION_KEYS.find { |key| !record[key].nil? } || "unknown"
 
-        def numeric?(value)
-          value.is_a?(Numeric)
-        end
+        def numeric?(value) = value.is_a?(Numeric)
     end
   end
 end

@@ -19,8 +19,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign record = page.source_key | collection_entry: "sources" -%}
-{% assign source_permalink = page.source_key | collection_entry_url: "sources" -%}
+{% assign record = page.source_key | source_data -%}
+{% assign source_permalink = page.source_key | source_url -%}
 {% assign work = record.work -%}
 <main class="page source">
   <header class="page-header data-source"
@@ -106,7 +106,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {% assign volume = volume_hash | last -%}
           <li itemscope
               itemtype="https://schema.org/PublicationVolume"
-              itemid="{{ page.source_key | collection_entry_url: "sources" }}#edition-{{ edition_key }}--volume-{{ volume_key }}">
+              itemid="{{ page.source_key | source_url }}#edition-{{ edition_key }}--volume-{{ volume_key }}">
             Volume <span itemprop=volumeNumber>{{ volume.volumeNumber }}</span>:
             <span itemprop=numberOfPages>{{ volume.numberOfPages }} pages</span>
             {% if volume.url -%}

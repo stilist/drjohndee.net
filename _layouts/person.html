@@ -19,8 +19,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign record = page.person_key | collection_entry: "people" -%}
-{% assign person_permalink = page.person_key | collection_entry_url: "people" -%}
+{% assign record = page.person_key | person_data -%}
+{% assign person_permalink = page.person_key | person_url -%}
 <main class="page person"
       itemprop=person
       itemscope
@@ -43,38 +43,45 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign text_direction = "ltr" -%}
     {% endif -%}
     <h2 class="page-name"
-        lang="{{ record.name_language }}" translate
+        lang="{{ record.name_language }}"
         dir={{ text_direction }}>
-      <span itemprop="alternateName">{{ page.person_key | person_name }}</span>
+      <span itemprop="alternateName">{{ page.person_key | person_presentational_name }}</span>
+{%comment%}
       {% if record.alias -%}
       alias
-      <span itemprop="alternateName">{{ page.person_key | person_name: "alias" }}</span>
+      <span itemprop="alternateName">{{ page.person_key | person_presentational_name: "alias" }}</span>
       {% endif -%}
       {% if record.birth_name -%}
-      (born <span itemprop="alternateName">{{ page.person_key | person_name: "birth_name" }}</span>)
+      (born <span itemprop="alternateName">{{ page.person_key | person_presentational_name: "birth_name" }}</span>)
       {% endif -%}
+{%endcomment%}
     </h2>
 
+    {% assign has_name_and_title = page.person_key | person_full_name_differs_from_presentational_name -%}
+    {% if has_name_and_title or record.birth_date or record.death_date -%}
     <p class="page-subtitle">
+      {% if has_name_and_title -%}
       <span class="name-and-title">
         {% for part in record.full_name -%}
         <span itemprop="{{ part.type }}"
               additionalType="{{ part.additionalType }}"
-              lang="{{ part.language | default: site.lang }}" translate>{{ part.text }}</span>
+              lang="{{ part.language | default: site.lang }}">{{ part.text }}</span>
         {% endfor -%}
       </span>
+      {% endif -%}
 
       {% if record.birth_date or record.death_date -%}
       <time itemprop=birthDate>{{ record.birth_date | default: "?" }}</time>/<time itemprop=deathDate>{{ record.death_date | default: "?" }}</time>
       {% endif -%}
     </p>
+    {% endif -%}
   </header>
 
-  {% assign biography_data = page.person_key | biography_for_person -%}
-  {% if biography_data.size > 0 -%}
+  {% assign custom_content = page.person_key | person_content -%}
+  {% if custom_content -%}
   <article class="page-content"
            itemprop=articleBody>
-    {% include biography.html person_key=page.person_key -%}
+    {{ custom_content }}
   </article>
   {% endif -%}
 

@@ -16,8 +16,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
-
 module HistoricalDiary
   module JekyllLayer
     module HashFilters
@@ -35,8 +33,8 @@ module HistoricalDiary
       #   {% for person_key of people_keys %}
       #     {{person_key}}
       #   {% endfor %}
-      def hash_keys(object)
-        return object if !object.is_a?(Hash)
+      def hash_keys object
+        return object if !object.is_a? Hash
 
         object.keys
       end
@@ -47,12 +45,12 @@ module HistoricalDiary
       # is similar to the `sort` filter.
       #
       # @see https://ruby-doc.org/3.2.0/Hash.html#class-Hash-label-Entry+Order
-      def sort_hash(object, sort_key = nil)
-        return object if !object.is_a?(Hash)
+      def sort_hash object, sort_key = nil
+        return object if !object.is_a? Hash
         return object.sort_by { |key, _| key }.to_h if sort_key.nil?
         object.sort_by { |_, value| value[sort_key] }.to_h
       end
     end
   end
 end
-Liquid::Template.register_filter(HistoricalDiary::JekyllLayer::HashFilters)
+Liquid::Template.register_filter HistoricalDiary::JekyllLayer::HashFilters

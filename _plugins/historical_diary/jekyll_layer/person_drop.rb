@@ -16,51 +16,16 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
-require_relative "utilities"
-
 module HistoricalDiary
   module JekyllLayer
     class PersonDrop < Jekyll::Drops::Drop
-      include Jekyll::Filters::URLFilters
-      include Utilities
+      include Drop
 
       mutable false
 
-      def initialize(identifier, context:)
-        @identifier = identifier
-
-        @context = context
-        @site = context.registers[:site]
-
-        super record
-      end
-
-      def record
-        if INVALID_KEYS.include?(key)
-          Jekyll.logger.debug "PersonDrop:", "Short-circuiting on invalid key"
-          return {}
-        end
-
-        site_object.data["people"].fetch(key)
-      rescue KeyError
-        indirect_record = site_object.data["people"].
-          select { |_, value| !value["person_key"].nil? }.
-          values.
-          find { |value| sanitize_key(value["person_key"]) == key }
-
-        if indirect_record.nil?
-          Jekyll.logger.error "PersonDrop:", "'#{key}' doesn't match any records"
-        end
-
-        indirect_record || {}
-      end
-      alias_method :fallback_data, :record
-      private :record
-
-      def dig(*args)
-        record.dig(*args)
-      end
+      PLURAL_NOUN = "people"
+      SINGULAR_NOUN = "person"
+      DATA_KEY = "#{SINGULAR_NOUN}_key"
 
       def living_years
         anchors = %w[
@@ -81,17 +46,13 @@ module HistoricalDiary
       #   "test" => "t"
       #   "Test Abc" => "TA"
       #   "חַנִּיאֵל" => "חַ"
-      def name_initials(maximum_characters = 2)
-        record["presentational_name"]
-          values.
-          map { |word| word.unicode_normalize(:nfc).grapheme_clusters.first }.
+      def name_initials maximum_characters = 2
+        input = record["presentational_name"]&.values ||
+          identifier.split(%r!(,?\s|_)!)
+
+        input.map { |word| word.unicode_normalize(:nfc).grapheme_clusters.first }.
           first(maximum_characters).
           join("")
-      end
-
-      def permalink
-        key = record["person_key"] || identifier
-        relative_url("people/#{sanitize_key(key.downcase)}.html")
       end
 
       # @note This returns the name in the order the parts are written in the
@@ -102,24 +63,16 @@ module HistoricalDiary
       #   prefer the given name first. It's not a substitute for proper
       #   internationalization support, though.
       def presentational_name
-        record["presentational_name"]&.
-          values&.
-          join(" ")
+        record["presentational_name"]&.values&.join(" ")
       end
 
       private
-        attr_reader :identifier
-
         INVALID_KEYS = [
           nil,
           "",
           # escaped version of `"Various authors"`
           "Various_authors",
-        ].freeze
-
-        def key
-          sanitize_key(identifier)
-        end
+        ]
     end
   end
 end

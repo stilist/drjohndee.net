@@ -16,30 +16,21 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require 'jekyll'
-
 module HistoricalDiary
   module JekyllLayer
-    class HistoricalDiaryPage < ::Jekyll::Page
-      # Copied from `Jekyll::Document`, under the MIT license.
-      #
-      # @see https://github.com/jekyll/jekyll/blob/a988f9da145262efeb79e285c0bbce62b82ea002/lib/jekyll/document.rb#L342-L348
-      # @see https://github.com/jekyll/jekyll/blob/a988f9da145262efeb79e285c0bbce62b82ea002/LICENSE
-      def <=>(other)
-        return nil unless other.respond_to?(:data)
+    class PersonPageGenerator < Jekyll::Generator
+      include DataPageGenerator
 
-        cmp = data["date"] <=> other.data["date"]
-        cmp = path <=> other.path if cmp.nil? || cmp.zero?
-        cmp
-      end
+      safe true
 
-      def url_placeholders
-        {
-          :path => @dir,
-          :basename => basename,
-          :output_ext => output_ext,
-        }
-      end
+      def drop_class = PersonDrop
+      def page_class = PersonPage
+    end
+
+    class PersonPage < Jekyll::Page
+      include DataPage
+
+      def drop_class = PersonDrop
     end
   end
 end

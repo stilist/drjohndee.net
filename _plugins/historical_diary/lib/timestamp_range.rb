@@ -49,14 +49,14 @@ module HistoricalDiary
     # @param calendar_system ["Gregorian", "Julian"] Force the date to be parsed
     #   using the given calendar system, regardless of when the transition to the
     #   Gregorian calendar occurred.
-    def initialize(raw_timestamp, calendar_system="Gregorian")
+    def initialize raw_timestamp, calendar_system="Gregorian"
       @raw_timestamp = raw_timestamp
       @calendar_system = calendar_system
       parse_raw_timestamp
     end
 
     def dates
-      return @dates if defined?(@dates)
+      return @dates if defined? @dates
 
       current_date = start_date[:object].clone
       @dates = []
@@ -69,13 +69,9 @@ module HistoricalDiary
       @dates
     end
 
-    def intersect?(timestamp_range)
-      !intersection(timestamp_range).empty?
-    end
+    def intersect?(timestamp_range) = !intersection(timestamp_range).empty?
 
-    def intersection(timestamp_range)
-      dates & timestamp_range.dates
-    end
+    def intersection(timestamp_range) = dates & timestamp_range.dates
 
     private
 
@@ -84,14 +80,14 @@ module HistoricalDiary
       # alternative in cases where `/` isn't available. This is useful because it
       # allows filenames in `_source_material` to specify intervals without using
       # a file system path separator as the interval separator.
-      @raw_start, _, @raw_end = @raw_timestamp.split(/(\/|--)/)
+      @raw_start, _, @raw_end = @raw_timestamp.split /(\/|--)/
 
-      @start_date = parse_raw_date(@raw_start)
-      @end_date = parse_raw_date(@raw_end)
+      @start_date = parse_raw_date @raw_start
+      @end_date = parse_raw_date @raw_end
       ensure_end_date
 
-      @start_date.freeze
-      @end_date.freeze
+      @start_date
+      @end_date
     rescue
       raise HistoricalDiary::TimestampRangeError,
             "Unable to parse a timestamp from '#{@raw_timestamp}'"
@@ -100,16 +96,16 @@ module HistoricalDiary
     def parse_raw_date(raw_date)
       return if raw_date.nil?
 
-      year, month, day = raw_date.split('-').map(&:to_i)
+      year, month, day = raw_date.split('-').map &:to_i
 
       iso8601 = [
         year,
         month || 1,
         day || 1,
       ].map { |part| part.to_s.rjust(2, '0') }.
-        join('-')
+        join '-'
 
-      date_time = DateTime.iso8601(iso8601, datetime_start)
+      date_time = DateTime.iso8601 iso8601, datetime_start
       if date_time >= Date.jd(Date::ITALY) && @calendar_system == "Julian"
         adjusted_date_time = date_time.gregorian
       else
@@ -144,7 +140,7 @@ module HistoricalDiary
     end
 
     def ensure_end_date
-      return if @end_date.is_a?(Hash)
+      return if @end_date.is_a? Hash
 
       @end_date = {
         object: @start_date[:object].clone,
@@ -152,10 +148,10 @@ module HistoricalDiary
       }
 
       # `@start_date` is just a year (no month or day)
-      if !@start_date[:explicit_parts].include?(:month)
+      if !@start_date[:explicit_parts].include? :month
         @end_date[:object] = @end_date[:object].next_year.prev_day
       # `@start_date` is a year and month (no day)
-      elsif !@start_date[:explicit_parts].include?(:day)
+      elsif !@start_date[:explicit_parts].include? :day
         # Add one month...
         @end_date[:object] = @end_date[:object].next_month.prev_day
       end
@@ -165,8 +161,6 @@ module HistoricalDiary
       @end_date[:day] = @end_date[:object].day
     end
 
-    def datetime_start
-      @calendar_system == "Julian" ? Date::ENGLAND : Date::ITALY
-    end
+    def datetime_start = @calendar_system == "Julian" ? Date::ENGLAND : Date::ITALY
   end
 end

@@ -17,7 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 {% assign entry = include.entry -%}
-{% assign source_record = entry.source_key | collection_entry: "sources" -%}
+{% assign source_record = entry.source_key | source_data -%}
 
 {% assign author_key = entry | attribute_from_object_or_source_record: "author_key" -%}
 {% include person_data.html person_key=author_key

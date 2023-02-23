@@ -16,10 +16,10 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign pl_record = include.person_key | collection_entry: "people" -%}
-{% if pl_record -%}
-<a href="{{ include.person_key | collection_entry_url: "people" }}">
-  {{ include.person_key | person_name }}</a>&lrm;
+{% assign person_record = include.person_key | person_data -%}
+{% if person_record -%}
+<a href="{{ include.person_key | person_url }}">
+  {{ include.person_key | person_presentational_name }}&lrm;</a>
 {% else -%}
 <pre>{{ include.person_key }}</pre>
 {% endif -%}

@@ -25,7 +25,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
 
     {% if site.author.key -%}
-    Created by <a href="{{ site.author.key | collection_entry_url: "people" }}" class="p-name">{{ site.author.key | person_name }}</a>.
+      Created by
+      <a href="{{ site.author.key | person_url }}" class="p-name">
+        {{ site.author.key | person_presentational_name }}&lrm;</a>.
     {% endif -%}
 
     {% if site.author.email -%}

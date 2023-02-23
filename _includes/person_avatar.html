@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign person_record = include.person_key | collection_entry: "people" -%}
+{% assign person_record = include.person_key | person_data -%}
 {% if include.is_highlighted -%}
 {% assign highlighted_class = "person-avatar--is-highlighted" -%}
 {% else -%}
@@ -26,27 +26,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% if person_record -%}
 <div class="person-avatar {{ highlighted_class }}">
   {% assign link_attributes = include.person_key | data_record_tag_attributes: "people" -%}
-  {% assign person_permalink = include.person_key | collection_entry_url: "people" -%}
+  {% assign person_permalink = include.person_key | person_url -%}
   <a href="{{ person_permalink | relative_url }}"
      lang="{{ person_record.name_language }}" translate
      class="{{ link_attributes.class }}"
      data-key="{{ link_attributes.dataKey }}">
     <span class="person-avatarInitials"
           aria-hidden="true">{{ person_key | person_initials }}</span>
-    <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
+    <span class="is-assistiveOnly">{{ person_key | person_presentational_name }}</span>
   </a>
 </div>
 {% else -%}
 <div class="person-avatar {{ highlighted_class }}">
   {% assign link_attributes = include.person_key | data_record_tag_attributes: "people" -%}
-  {% assign person_permalink = include.person_key | collection_entry_url: "people" -%}
+  {% assign person_permalink = include.person_key | person_url -%}
   <span
      lang="{{ person_record.name_language }}" translate
      class="{{ link_attributes.class }}"
      data-key="{{ link_attributes.dataKey }}">
     <span class="person-avatarInitials"
           aria-hidden="true">{{ person_key | person_initials | upcase }}</span>
-    <span class="is-assistiveOnly">{{ person_key | person_name }}</span>
+    <span class="is-assistiveOnly">{{ person_key | person_presentational_name }}</span>
   </span>
 </div>
 {% endif -%}

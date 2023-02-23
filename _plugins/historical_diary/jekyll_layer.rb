@@ -16,22 +16,28 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
+require "jekyll"
+
 # Classes that interact with Jekyll's generation pipeline must be eagerly
 # loaded.
-require_relative "jekyll_layer/data_filters"
-require_relative "jekyll_layer/data_page_generator"
-require_relative "jekyll_layer/day_page_generator"
 require_relative "jekyll_layer/hash_filters"
 require_relative "jekyll_layer/liquify_filters"
-require_relative "jekyll_layer/tag_filters"
-require_relative "jekyll_layer/year_page_generator"
+require_relative "jekyll_layer/place_filters"
+require_relative "jekyll_layer/place_page_generator"
+require_relative "jekyll_layer/person_filters"
+require_relative "jekyll_layer/person_page_generator"
+require_relative "jekyll_layer/source_filters"
+require_relative "jekyll_layer/source_page_generator"
+require_relative "jekyll_layer/static_map_tile_block"
 
 module HistoricalDiary
   # Code in the <tt>HistoricalDiary::JekyllLayer</tt> module assumes access to
   # Jekyll's public APIs, going through
-  # <tt>HistoricalDiary::JekyllLayer::Utilities#site_object</tt>.
+  # <tt>HistoricalDiary::JekyllLayer::Utilities</tt>.
   module JekyllLayer
-    autoload :HistoricalDiaryPage, "jekyll_layer/historical_diary_page"
+    autoload :DataPage, "jekyll_layer/data_page_generator"
+    autoload :DataPageGenerator, "jekyll_layer/data_page_generator"
+    autoload :Drop, "jekyll_layer/drop"
     autoload :PersonDrop, "jekyll_layer/person_drop"
     autoload :PlaceDrop, "jekyll_layer/place_drop"
     autoload :SourceDrop, "jekyll_layer/source_drop"

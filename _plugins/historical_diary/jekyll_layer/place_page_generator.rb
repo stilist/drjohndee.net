@@ -16,14 +16,21 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require_relative "historical_diary/jekyll_layer"
-
 module HistoricalDiary
-  autoload :Annotation, "historical_diary/lib/annotation"
-  autoload :MapTile, "historical_diary/lib/map_tile"
-  autoload :Redactions, "historical_diary/lib/redactions"
-  autoload :SourceDocument, "historical_diary/lib/source_document"
-  # autoload :SourceDocumentPage, "historical_diary/lib/source_document_page"
-  autoload :TimestampRange, "historical_diary/lib/timestamp_range"
-  autoload :VERSION, "historical_diary/version"
+  module JekyllLayer
+    class PlacePageGenerator < Jekyll::Generator
+      include DataPageGenerator
+
+      safe true
+
+      def drop_class = PlaceDrop
+      def page_class = PlacePage
+    end
+
+    class PlacePage < Jekyll::Page
+      include DataPage
+
+      def drop_class = PlaceDrop
+    end
+  end
 end

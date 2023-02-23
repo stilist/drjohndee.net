@@ -16,64 +16,100 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
-require_relative "data_collection"
+require_relative "utilities"
 
 module HistoricalDiary
   module JekyllLayer
-    class DataPage < Jekyll::Page
-      include DataCollection
+    module DataPageGenerator
+      include Utilities
 
-      def initialize(site, collection_name, key:)
-        singular = DataCollection::PLURAL_TO_SINGULAR[collection_name]
+      def generate site
         @site = site
-        @base = site.source
-        @dir = collection_name
 
-        @basename = slugify_key(key)
-        @ext = ".html"
-        @name = "#{@basename}#{@ext}"
-
-        read_yaml(File.join(@base, "_layouts"), "#{singular}.html")
-
-        @data ||= {}
-        data["#{singular}_key"] = key
-
-        record = send(:"#{singular}_data", key)
-        if record.nil?
-          title = key
-        else
-          title = case collection_name
-                  when "people"
-                    record["presentational_name"].values.join(" ")
-                  when "places"
-                    record["presentational_name"]
-                  when "sources"
-                    record.dig("work", "name")
-                  when "tags"
-                    "Tag: #{key}"
-                  end
-        end
-        data["title"] = title
-
-        data.default_proc = proc do |_, key|
-          site.frontmatter_defaults.find(relative_path, :source_material, key)
+        site.data[drop_class::PLURAL_NOUN].each do |key, data|
+          site.pages << page_class.new(site, data[drop_class::DATA_KEY] || key)
         end
       end
-    end
 
-    class DataGenerator < Jekyll::Generator
-      priority :low
-      safe true
-
-      def generate(site)
-        DataCollection::RENDERED_COLLECTIONS.each do |collection_name|
-          site.data[collection_name].each do |key, _|
-            site.pages << DataPage.new(site, collection_name,
-                                       key: key)
+      protected
+        def method_missing name
+          if REQUIRED_METHODS.include?(name)
+            raise NotImplementedError,
+              "#{self.class.name} must define a ##{name} method"
           end
         end
+
+      private
+        REQUIRED_METHODS = %i[
+          drop_class
+          page_class
+        ]
+    end
+
+    module DataPage
+      include Utilities
+
+      def initialize site, key
+        @key = key
+
+        @site = site
+        @base = site.source
+        @dir  = drop.dirname
+
+        @basename = drop.basename
+        @ext      = ".html"
+        @name     = "#{@basename}#{@ext}"
+
+        Jekyll.logger.debug "DataPage:", "Generating " \
+          "#{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
+
+        layout_directory = File.join @base, "_layouts"
+        read_yaml layout_directory, "#{drop.layout}.html"
+
+        @data = drop.page_data["custom_metadata"].merge({
+          "is_generated" => true,
+          drop_class::DATA_KEY => drop.preferred_key,
+          "title" => drop.presentational_name,
+        })
+
+        data.default_proc = proc do |_, key|
+          site.frontmatter_defaults.find relative_path, :people, key
+        end
       end
+
+      def url_placeholders
+        {
+          :path       => @dir,
+          :basename   => basename,
+          :output_ext => output_ext,
+        }
+      end
+
+      def inspect = super.sub(/(>)/, " @key=#{key.inspect}\\1")
+
+      protected
+        attr_reader :key
+
+        def method_missing name
+          if REQUIRED_METHODS.include?(name)
+            raise NotImplementedError,
+              "#{self.class.name} must define a ##{name} method"
+          end
+        end
+
+      private
+        REQUIRED_METHODS = %i[
+          drop_class
+          page_class
+        ]
+
+        def drop
+          return @drop if defined?(@drop)
+          @drop = nil
+
+          context = context_from_site @site
+          @drop = drop_class.new key, context: context
+        end
     end
   end
 end

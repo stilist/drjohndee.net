@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
+#--
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -15,16 +14,26 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-require "jekyll"
-require_relative "../_lib/place"
+#++
 
 module HistoricalDiary
-  class StaticMapTileBlock < Liquid::Block
-    def render(context)
-      key = super
-      Place.new(key, context.registers[:site]).static_map_html
+  module JekyllLayer
+    module PlaceFilters
+      PLACE_DROPS = {}
+
+      def place_data(key) = place_drop(key)
+
+      def place_language(key) = place_drop(key)["name_language"]
+
+      def place_presentational_name(key) = place_drop(key)["presentational_name"]
+
+      def place_url(key) = place_drop(key).permalink
+
+      private
+        def place_drop(key)
+          PLACE_DROPS[key] ||= PlaceDrop.new(key, context: @context)
+        end
     end
   end
 end
-Liquid::Template.register_tag("static_map_tile", HistoricalDiary::StaticMapTileBlock)
+Liquid::Template.register_filter HistoricalDiary::JekyllLayer::PlaceFilters

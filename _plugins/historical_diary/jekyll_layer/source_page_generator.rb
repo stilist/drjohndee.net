@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
+#--
 # The life and times of Dr John Dee
-# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+# Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -15,25 +14,23 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-require 'jekyll'
-require_relative '../_lib/person'
+#++
 
 module HistoricalDiary
-  module PeopleFilters
-    def person_initials(key, maximum_characters = 2)
-      Person.new(key, @context.registers[:site]).name_initials(maximum_characters)
+  module JekyllLayer
+    class SourcePageGenerator < Jekyll::Generator
+      include DataPageGenerator
+
+      safe true
+
+      def drop_class = SourceDrop
+      def page_class = SourcePage
     end
 
-    def person_name(key, name_key = 'presentational_name')
-      Person.new(key, @context.registers[:site]).name_text(name_key)
-    end
+    class SourcePage < Jekyll::Page
+      include DataPage
 
-    def sorted_people_keys(keys)
-      return keys if !keys.is_a?(Array)
-      keys.sort_by { |key| person_name(key) }
+      def drop_class = SourceDrop
     end
   end
 end
-
-Liquid::Template.register_filter(HistoricalDiary::PeopleFilters)

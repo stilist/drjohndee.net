@@ -19,8 +19,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign record = page.place_key | collection_entry: "places" -%}
-{% assign place_permalink = page.place_key | collection_entry_url: "places" -%}
+{% assign record = page.place_key | place_data -%}
+{% assign place_permalink = page.place_key | place_url -%}
 <article class="page place"
          itemprop=place
          itemscope

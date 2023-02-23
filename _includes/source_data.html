@@ -16,8 +16,8 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
-{% assign source_record = include.source_key | collection_entry: "sources" -%}
-{% assign source_permalink = include.source_key | collection_entry_url: "sources" -%}
+{% assign source_record = include.source_key | source_data -%}
+{% assign source_permalink = include.source_key | source_url -%}
 {% if source_record -%}
   {% if include.volume -%}
   {% assign itemtype = "PublicationVolume" -%}
