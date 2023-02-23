@@ -102,7 +102,7 @@ exclude:
   - untracked/
 
 collections:
-  source_material:
+  source_documents:
 
 defaults:
   - scope:

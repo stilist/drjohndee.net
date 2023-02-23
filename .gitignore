@@ -3,6 +3,7 @@ _site/
 _site.nosync/
 _cache.nosync/
 /.jekyll-cache/
+/untracked/
 /vendor/
 
 .terraform/

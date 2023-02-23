@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add place data
 - Add metadata to entries
 - Documentation for `TimestampRange`
-- Try a new approach for source material (`_raw_source_material`) that doesn’t split the material into small pieces
+- Try a new approach for source material (‘source documents’) that doesn’t split the material into small pieces
 
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation
@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rename `people`, `places`, and `sources` Data Files to have capital letters and commas
 - Ruby code is refactored into a plugin following Jekyll conventions
 - Code to generate year and month pages is currently broken
+- Remove `_source_materials` files in favor of future ‘source documents’ system
 - Check for `place_key` in `places` data and `person_key` in `people` data, to handle characters outside a–z / A–Z / 0–9
 - Use Yaml alias to put `cache_dir` in `exclude` list
 
