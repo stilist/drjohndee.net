@@ -1,0 +1,21 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q188344"
+presentational_name:
+  givenName: Geoffrey
+  additionalName: of Monmouth
+full_name:
+  - text: Geoffrey
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q7041317"
+  - text: of Monmouth
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#disambiguatingDescription"
+birth_date: "1095"
+death_date: "1155"
