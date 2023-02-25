@@ -35,11 +35,15 @@ module HistoricalDiary
 
       def person_presentational_name(key) = person_drop(key).presentational_name
 
-      def person_full_name_differs_from_presentational_name(key)
-        person_presentational_name(key) != person_drop(key)
-                                           .fallback_data['full_name']
+      def person_full_name(key)
+        person_drop(key)
+          .fallback_data['full_name']
           &.map { |x| x['text'] }
           &.join(' ')
+      end
+
+      def person_full_name_differs_from_presentational_name(key)
+        person_presentational_name(key) != person_full_name(key)
       end
 
       def person_url(key) = person_drop(key).permalink

@@ -105,6 +105,10 @@ module HistoricalDiary
               "#{self.class.name} must define a ##{name} method"
       end
 
+      def respond_to_missing?(name, *)
+        REQUIRED_METHODS.include?(name)
+      end
+
       private
 
       REQUIRED_METHODS = %i[
