@@ -1,6 +1,6 @@
 ---
 edition_key: "book"
-license: "CC0 1.0
+license: "CC0 1.0"
 source_key: "Autobiographical Tracts of Dr. John Dee"
 ---
 

@@ -1,7 +1,7 @@
 ---
 volume_key: "I"
 edition_key: "compilation"
-license: "CC0 1.0
+license: "CC0 1.0"
 source_key: "Local Gleanings"
 ---
 

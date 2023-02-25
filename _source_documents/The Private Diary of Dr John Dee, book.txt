@@ -1,6 +1,6 @@
 ---
 edition_key: "book"
-license: "CC0 1.0
+license: "CC0 1.0"
 source_key: "The Private Diary of Dr John Dee"
 ---
 
