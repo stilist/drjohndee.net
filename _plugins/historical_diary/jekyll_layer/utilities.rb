@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -23,19 +25,19 @@ module HistoricalDiary
       # added invariant that `key` must be a string.
       #
       # @see https://github.com/jekyll/jekyll/blob/4.3-stable/lib/jekyll/readers/data_reader.rb#L70-L73
-      def sanitize_key key
-        return key if !key.is_a?(String)
+      def sanitize_key(key)
+        return key unless key.is_a?(String)
 
-        key.gsub(%r![^\w\s-]+|(?<=^|\b\s)\s+(?=$|\s?\b)!, "")
-          .gsub(%r!\s+!, "_")
+        key.gsub(/[^\w\s-]+|(?<=^|\b\s)\s+(?=$|\s?\b)/, '')
+           .gsub(/\s+/, '_')
       end
 
-      def context_from_site site
+      def context_from_site(site)
         # @see https://github.com/jekyll/jekyll/blob/4.3-stable/test/test_filters.rb#L12
-        Liquid::Context.new site.site_payload, {}, site: site
+        Liquid::Context.new site.site_payload, {}, site:
       end
 
-      def site_from_context context
+      def site_from_context(context)
         return if context.nil?
 
         context.registers[:site]
@@ -44,6 +46,7 @@ module HistoricalDiary
       # Indirect access to Jekyll's public <tt>Jekyll::Site</tt> instance.
       def site_object
         return @site if defined? @site
+
         site_from_context @context
       end
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -38,7 +40,7 @@ require 'date'
 # @example
 #   TimestampRange.new("1500-01/1500-03-30")
 module HistoricalDiary
-  class TimestampRangeError < ArgumentError ; end
+  class TimestampRangeError < ArgumentError; end
 
   class TimestampRange
     attr_reader :end_date,
@@ -49,7 +51,7 @@ module HistoricalDiary
     # @param calendar_system ["Gregorian", "Julian"] Force the date to be parsed
     #   using the given calendar system, regardless of when the transition to the
     #   Gregorian calendar occurred.
-    def initialize raw_timestamp, calendar_system="Gregorian"
+    def initialize(raw_timestamp, calendar_system = 'Gregorian')
       @raw_timestamp = raw_timestamp
       @calendar_system = calendar_system
       parse_raw_timestamp
@@ -80,7 +82,7 @@ module HistoricalDiary
       # alternative in cases where `/` isn't available. This is useful because it
       # allows filenames in `_source_material` to specify intervals without using
       # a file system path separator as the interval separator.
-      @raw_start, _, @raw_end = @raw_timestamp.split /(\/|--)/
+      @raw_start, _, @raw_end = @raw_timestamp.split(%r{(/|--)})
 
       @start_date = parse_raw_date @raw_start
       @end_date = parse_raw_date @raw_end
@@ -88,7 +90,7 @@ module HistoricalDiary
 
       @start_date
       @end_date
-    rescue
+    rescue StandardError
       raise HistoricalDiary::TimestampRangeError,
             "Unable to parse a timestamp from '#{@raw_timestamp}'"
     end
@@ -96,21 +98,21 @@ module HistoricalDiary
     def parse_raw_date(raw_date)
       return if raw_date.nil?
 
-      year, month, day = raw_date.split('-').map &:to_i
+      year, month, day = raw_date.split('-').map(&:to_i)
 
       iso8601 = [
         year,
         month || 1,
         day || 1,
-      ].map { |part| part.to_s.rjust(2, '0') }.
-        join '-'
+      ].map { |part| part.to_s.rjust(2, '0') }
+                .join '-'
 
       date_time = DateTime.iso8601 iso8601, datetime_start
-      if date_time >= Date.jd(Date::ITALY) && @calendar_system == "Julian"
-        adjusted_date_time = date_time.gregorian
-      else
-        adjusted_date_time = date_time
-      end
+      adjusted_date_time = if date_time >= Date.jd(Date::ITALY) && @calendar_system == 'Julian'
+                             date_time.gregorian
+                           else
+                             date_time
+                           end
 
       explicit_parts = []
       explicit_parts << :year if year
@@ -129,12 +131,12 @@ module HistoricalDiary
         # it's more important to be factually correct, and not project
         # pre-Gregorian dates as Gregorian.
         object: adjusted_date_time,
-        explicit_parts: explicit_parts,
+        explicit_parts:,
         year: adjusted_date_time.year,
         month: adjusted_date_time.month,
         day: adjusted_date_time.day,
       }
-    rescue
+    rescue StandardError
       raise HistoricalDiary::TimestampRangeError,
             "Unable to parse a timestamp from '#{raw_date}'"
     end
@@ -161,6 +163,6 @@ module HistoricalDiary
       @end_date[:day] = @end_date[:object].day
     end
 
-    def datetime_start = @calendar_system == "Julian" ? Date::ENGLAND : Date::ITALY
+    def datetime_start = @calendar_system == 'Julian' ? Date::ENGLAND : Date::ITALY
   end
 end

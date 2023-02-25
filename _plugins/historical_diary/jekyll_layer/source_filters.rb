@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -36,72 +38,74 @@ module HistoricalDiary
       # > *Note: the City of Publication should only be used if the book was
       # > published before 1900, if the publisher has offices in more than one
       # > country, or if the publisher is unknown in North America.
-      def mla_citation source_key, location, edition_key = nil, volume_key = nil, author_key = nil
+      def mla_citation(source_key, location, edition_key = nil, volume_key = nil, author_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
         data = source_drop key
 
-        publication_date = data["date"]
-        if !publication_date.nil?
-          year = publication_date.match /\A\d{4}/
+        publication_date = data['date']
+        unless publication_date.nil?
+          year = publication_date.match(/\A\d{4}/)
           # Tagging this as an actual date improves the screenreader experience.
-          publication_date = "<time datetime='#{publication_date}'>#{year}</time>" if !year.nil?
+          publication_date = "<time datetime='#{publication_date}'>#{year}</time>" unless year.nil?
         end
 
         publishing_info = [
-          data["city"],
-          data["publisher"],
+          data['city'],
+          data['publisher'],
           publication_date,
-          location&.sub("-", "–"),
-        ].compact.join(", ")
-        publishing_info[0] = publishing_info[0].capitalize if publishing_info.length > 0
+          location&.sub('-', '–'),
+        ].compact.join(', ')
+        if !publishing_info.empty?
+          publishing_info[0] = publishing_info[0].capitalize
+        end
 
-        source_name = data["name"]
+        source_name = data['name']
         output = [
-          data_record_link("sources", source_key, source_name),
+          data_record_link('sources', source_key, source_name),
           publishing_info,
         ]
 
-        volume_number = data["volumeNumber"]
-        output.insert(1, "Volume #{volume_number}") if !volume_number.nil?
+        volume_number = data['volumeNumber']
+        output.insert(1, "Volume #{volume_number}") unless volume_number.nil?
 
-        author_key ||= data["author_key"]
+        author_key ||= data['author_key']
         author = person_data author_key
         if author.nil?
           output.unshift author_key
         else
           author_name = [
-            author.dig("presentational_name", "familyName"),
-            author.dig("presentational_name", "givenName"),
-          ].compact.join ", "
+            author.dig('presentational_name', 'familyName'),
+            author.dig('presentational_name', 'givenName'),
+          ].compact.join ', '
           output.unshift person_link(author_key, author_name)
         end
 
-        editor_key = data["editor_key"]
+        editor_key = data['editor_key']
         editor = person_data editor_key
         if editor.nil?
           output.insert 2, editor_key
         else
           editor_name = [
-            editor.dig("presentational_name", "givenName"),
-            editor.dig("presentational_name", "familyName"),
-          ].compact.join " "
-          out = "Edited by " + person_link(editor_key, editor_name)
+            editor.dig('presentational_name', 'givenName'),
+            editor.dig('presentational_name', 'familyName'),
+          ].compact.join ' '
+          out = "Edited by #{person_link(editor_key, editor_name)}"
           output.insert 2, out
         end
 
-        output.flatten.
-          compact.
-          reject { |part| part.strip == "" }.
-          join(". ").
-          sub(/\.{2,}/, ".") + "."
+        output.flatten
+              .compact
+              .reject { |part| part.strip == '' }
+              .join('. ')
+              .sub(/\.{2,}/, '.') + '.'
       end
 
-      def source_language source_key, edition_key = nil, volume_key = nil
+      def source_language(source_key, edition_key = nil, volume_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
-        source_drop(key)["language"]
+        source_drop(key)['language']
       end
 
-      def source_presentational_name source_key, edition_key = nil, volume_key = nil
+      def source_presentational_name(source_key, edition_key = nil, volume_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
         source_drop(key).presentational_name
       end
@@ -109,9 +113,10 @@ module HistoricalDiary
       def source_url(key) = source_drop(key).permalink
 
       private
-        def source_drop(key)
-          SOURCE_DROPS[key] ||= SourceDrop.new(key, context: @context)
-        end
+
+      def source_drop(key)
+        SOURCE_DROPS[key] ||= SourceDrop.new(key, context: @context)
+      end
     end
   end
 end

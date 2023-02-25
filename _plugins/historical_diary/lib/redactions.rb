@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -16,14 +18,14 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "forwardable"
+require 'forwardable'
 
 module HistoricalDiary
   class Redactions
     attr_reader :notes
 
-    def initialize text, redactions: {}
-      raise ArgumentError if !text.is_a?(String)
+    def initialize(text, redactions: {})
+      raise ArgumentError unless text.is_a?(String)
 
       @redactions = redactions
       @text = text.dup
@@ -39,44 +41,41 @@ module HistoricalDiary
     end
 
     private
-      attr_reader :redactions
 
-      REQUIRED_REFLOW_KEYS = %w[start end value]
+    attr_reader :redactions
 
-      # @TODO
-      def extract_notes!
-        return if redactions["notes"].nil?
-      end
+    REQUIRED_REFLOW_KEYS = %w[start end value]
 
-      def reflow!
-        @text.strip!
-        @text.gsub! /\n/, " "
-        @text.gsub! /\s{2,}/, " "
+    # @TODO
+    def extract_notes!
+      return if redactions['notes'].nil?
+    end
 
-        return if redactions["reflows"].nil?
+    def reflow!
+      @text.strip!
+      @text.tr!("\n", ' ')
+      @text.gsub!(/\s{2,}/, ' ')
 
-        if redactions["reflows"].is_a?(Array)
-          return Annotation.new(@text, annotations: redactions["reflows"]).text
+      return if redactions['reflows'].nil?
+
+      return Annotation.new(@text, annotations: redactions['reflows']).text if redactions['reflows'].is_a?(Array)
+
+      redactions['reflows'].each do |reflow|
+        REQUIRED_REFLOW_KEYS.each do |key|
+          raise ArgumentError, "Reflows must have a '#{key}'" if reflow[key].nil?
         end
 
-        redactions["reflows"].each do |reflow|
-          REQUIRED_REFLOW_KEYS.each do |key|
-            raise ArgumentError, "Reflows must have a '#{key}'" if reflow[key].nil?
-          end
+        pattern_string = [
+          Regexp.escape(reflow['start']),
+          '.*?',
+          Regexp.escape(reflow['end']),
+        ].join
+        pattern = /#{pattern_string}/m
 
-          pattern_string = [
-            Regexp.escape(reflow["start"]),
-            ".*?",
-            Regexp.escape(reflow["end"]),
-          ].join ""
-          pattern = /#{pattern_string}/m
+        raise ArgumentError, "No match for #{pattern_string}" if pattern.match(text).nil?
 
-          if pattern.match(text).nil?
-            raise ArgumentError, "No match for #{pattern_string}"
-          end
-
-          text.sub! pattern, reflow["value"]
-        end
+        text.sub! pattern, reflow['value']
       end
+    end
   end
 end

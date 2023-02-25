@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -16,31 +18,31 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "jekyll"
+require 'jekyll'
 
 # Classes that interact with Jekyll's generation pipeline must be eagerly
 # loaded.
-require_relative "jekyll_layer/hash_filters"
-require_relative "jekyll_layer/liquify_filters"
-require_relative "jekyll_layer/place_filters"
-require_relative "jekyll_layer/place_page_generator"
-require_relative "jekyll_layer/person_filters"
-require_relative "jekyll_layer/person_page_generator"
-require_relative "jekyll_layer/source_filters"
-require_relative "jekyll_layer/source_page_generator"
-require_relative "jekyll_layer/static_map_tile_block"
+require_relative 'jekyll_layer/hash_filters'
+require_relative 'jekyll_layer/liquify_filters'
+require_relative 'jekyll_layer/place_filters'
+require_relative 'jekyll_layer/place_page_generator'
+require_relative 'jekyll_layer/person_filters'
+require_relative 'jekyll_layer/person_page_generator'
+require_relative 'jekyll_layer/source_filters'
+require_relative 'jekyll_layer/source_page_generator'
+require_relative 'jekyll_layer/static_map_tile_block'
 
 module HistoricalDiary
   # Code in the <tt>HistoricalDiary::JekyllLayer</tt> module assumes access to
   # Jekyll's public APIs, going through
   # <tt>HistoricalDiary::JekyllLayer::Utilities</tt>.
   module JekyllLayer
-    autoload :DataPage, "jekyll_layer/data_page_generator"
-    autoload :DataPageGenerator, "jekyll_layer/data_page_generator"
-    autoload :Drop, "jekyll_layer/drop"
-    autoload :PersonDrop, "jekyll_layer/person_drop"
-    autoload :PlaceDrop, "jekyll_layer/place_drop"
-    autoload :SourceDrop, "jekyll_layer/source_drop"
-    autoload :Utilities, "jekyll_layer/utilities"
+    autoload :DataPage, 'jekyll_layer/data_page_generator'
+    autoload :DataPageGenerator, 'jekyll_layer/data_page_generator'
+    autoload :Drop, 'jekyll_layer/drop'
+    autoload :PersonDrop, 'jekyll_layer/person_drop'
+    autoload :PlaceDrop, 'jekyll_layer/place_drop'
+    autoload :SourceDrop, 'jekyll_layer/source_drop'
+    autoload :Utilities, 'jekyll_layer/utilities'
   end
 end

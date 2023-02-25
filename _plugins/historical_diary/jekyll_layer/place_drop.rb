@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -23,8 +25,8 @@ module HistoricalDiary
 
       mutable false
 
-      PLURAL_NOUN = "places"
-      SINGULAR_NOUN = "place"
+      PLURAL_NOUN = 'places'
+      SINGULAR_NOUN = 'place'
       DATA_KEY = "#{SINGULAR_NOUN}_key"
 
       def coordinates
@@ -42,64 +44,66 @@ module HistoricalDiary
         return if record.nil?
 
         {
-          latitude: latitude,
-          longitude: longitude,
+          latitude:,
+          longitude:,
           name: presentational_name,
           record_type: precision,
         }
       end
 
       def presentational_name
-        record["presentational_name"]
+        record['presentational_name']
       end
 
       def static_map_html
         return @static_map_html if defined? @static_map_html
-        @static_map_html = MapTile.new(bounding_box: bounding_box,
+
+        @static_map_html = MapTile.new(bounding_box:,
                                        points: [point],
                                        site: site_object).static_map_html
       end
 
       private
-        PRECISION_KEYS = %w[
-          address
-          locality
-          region
-          country
-        ]
 
-        def bounding_box
-          return if record.nil?
-          return if !record["bounding_box"].is_a?(Array)
+      PRECISION_KEYS = %w[
+        address
+        locality
+        region
+        country
+      ].freeze
 
-          record["bounding_box"].each_with_object([]) do |coordinate, bounding_box|
-            latitude = coordinate["latitude"]
-            longitude = coordinate["longitude"]
+      def bounding_box
+        return if record.nil?
+        return unless record['bounding_box'].is_a?(Array)
 
-            bounding_box[0] = [bounding_box[0], longitude].compact.min
-            bounding_box[1] = [bounding_box[1], latitude].compact.min
-            bounding_box[2] = [bounding_box[2], longitude].compact.max
-            bounding_box[3] = [bounding_box[3], latitude].compact.max
-          end
+        record['bounding_box'].each_with_object([]) do |coordinate, bounding_box|
+          latitude = coordinate['latitude']
+          longitude = coordinate['longitude']
+
+          bounding_box[0] = [bounding_box[0], longitude].compact.min
+          bounding_box[1] = [bounding_box[1], latitude].compact.min
+          bounding_box[2] = [bounding_box[2], longitude].compact.max
+          bounding_box[3] = [bounding_box[3], latitude].compact.max
         end
+      end
 
-        def latitude
-          return record["latitude"] if numeric? record["latitude"]
-          return if bounding_box.nil?
+      def latitude
+        return record['latitude'] if numeric? record['latitude']
+        return if bounding_box.nil?
 
-          (bounding_box[1] + bounding_box[3]) / 2
-        end
+        (bounding_box[1] + bounding_box[3]) / 2
+      end
 
-        def longitude
-          return record["longitude"] if numeric? record["longitude"]
-          return if bounding_box.nil?
+      def longitude
+        return record['longitude'] if numeric? record['longitude']
+        return if bounding_box.nil?
 
-          (bounding_box[0] + bounding_box[2]) / 2
-        end
+        (bounding_box[0] + bounding_box[2]) / 2
+      end
 
-        def precision = PRECISION_KEYS.find { |key| !record[key].nil? } || "unknown"
+      def precision = PRECISION_KEYS.find { |key| !record[key].nil? } || 'unknown'
 
-        def numeric?(value) = value.is_a?(Numeric)
+      def numeric?(value) = value.is_a?(Numeric)
     end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -22,8 +24,9 @@ module HistoricalDiary
       def render(context) = place_drop(super, context).static_map_html
 
       private
-        def place_drop(key, context) = PlaceDrop.new(key, context: context)
+
+      def place_drop(key, context) = PlaceDrop.new(key, context:)
     end
   end
 end
-Liquid::Template.register_tag "static_map_tile", HistoricalDiary::JekyllLayer::StaticMapTileBlock
+Liquid::Template.register_tag 'static_map_tile', HistoricalDiary::JekyllLayer::StaticMapTileBlock

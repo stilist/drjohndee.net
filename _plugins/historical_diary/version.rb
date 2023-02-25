@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -17,5 +19,5 @@
 #++
 
 module HistoricalDiary
-  VERSION = "1.0.13"
+  VERSION = '1.0.13'
 end

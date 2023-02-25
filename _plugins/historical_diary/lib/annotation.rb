@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -18,8 +20,8 @@
 
 module HistoricalDiary
   class Annotation
-    def initialize text, annotations: {}
-      raise ArgumentError if !text.is_a?(String)
+    def initialize(text, annotations: {})
+      raise ArgumentError unless text.is_a?(String)
 
       @annotations = annotations
       @text = text.dup
@@ -32,42 +34,43 @@ module HistoricalDiary
     end
 
     private
-      attr_reader :annotations
 
-      def parsed_annotations
-        annotations.flat_map do |annotation|
-          exact_replacement = annotation["value"]
-          next if exact_replacement.nil?
-          next if annotation["selectors"].nil?
+    attr_reader :annotations
 
-          Jekyll.logger.debug "#{self.class.name}:", annotation.inspect
-          annotation["selectors"].map do |selector|
-            if selector["exact"].nil? || selector["exact"] == ""
-              Jekyll.logger.warn "#{self.class.name}:",
-                                 "Annotation selectors must have an 'exact' key; ignoring"
-              next
-            end
+    def parsed_annotations
+      annotations.flat_map do |annotation|
+        exact_replacement = annotation['value']
+        next if exact_replacement.nil?
+        next if annotation['selectors'].nil?
 
-            prefix = Regexp.escape(selector["prefix"]) if selector["prefix"]
-            exact = "(#{Regexp.escape(selector["exact"])})"
-            suffix = Regexp.escape(selector["suffix"]) if selector["suffix"]
-            pattern = [
-              prefix,
-              exact,
-              suffix,
-            ].compact.join("")
-            replacement = [
-              selector["prefix"],
-              exact_replacement,
-              selector["suffix"],
-            ].compact.join("")
-
-            [
-              /#{pattern}/,
-              replacement,
-            ]
+        Jekyll.logger.debug "#{self.class.name}:", annotation.inspect
+        annotation['selectors'].map do |selector|
+          if selector['exact'].nil? || selector['exact'] == ''
+            Jekyll.logger.warn "#{self.class.name}:",
+                               "Annotation selectors must have an 'exact' key; ignoring"
+            next
           end
+
+          prefix = Regexp.escape(selector['prefix']) if selector['prefix']
+          exact = "(#{Regexp.escape(selector['exact'])})"
+          suffix = Regexp.escape(selector['suffix']) if selector['suffix']
+          pattern = [
+            prefix,
+            exact,
+            suffix,
+          ].compact.join
+          replacement = [
+            selector['prefix'],
+            exact_replacement,
+            selector['suffix'],
+          ].compact.join
+
+          [
+            /#{pattern}/,
+            replacement,
+          ]
         end
       end
+    end
   end
 end

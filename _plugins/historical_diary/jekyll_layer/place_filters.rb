@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -23,16 +25,17 @@ module HistoricalDiary
 
       def place_data(key) = place_drop(key)
 
-      def place_language(key) = place_drop(key)["name_language"]
+      def place_language(key) = place_drop(key)['name_language']
 
-      def place_presentational_name(key) = place_drop(key)["presentational_name"]
+      def place_presentational_name(key) = place_drop(key)['presentational_name']
 
       def place_url(key) = place_drop(key).permalink
 
       private
-        def place_drop(key)
-          PLACE_DROPS[key] ||= PlaceDrop.new(key, context: @context)
-        end
+
+      def place_drop(key)
+        PLACE_DROPS[key] ||= PlaceDrop.new(key, context: @context)
+      end
     end
   end
 end

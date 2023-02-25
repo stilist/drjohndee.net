@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -16,7 +18,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require_relative "utilities"
+require_relative 'utilities'
 
 module HistoricalDiary
   module JekyllLayer
@@ -24,7 +26,7 @@ module HistoricalDiary
       include Jekyll::Filters::URLFilters
       include Utilities
 
-      def initialize identifier, context:
+      def initialize(identifier, context:)
         @identifier = identifier
 
         @context = context
@@ -36,7 +38,7 @@ module HistoricalDiary
       def record
         @record ||= data_for_type self.class::PLURAL_NOUN
       end
-      alias_method :fallback_data, :record
+      alias fallback_data record
       protected :record
 
       def dig(*args) = record.dig(*args)
@@ -46,20 +48,20 @@ module HistoricalDiary
       def preferred_key = record[data_key] || key
 
       def basename = sanitize_key(preferred_key)
-      alias_method :page_data_key, :basename
+      alias page_data_key basename
       private :page_data_key
 
       def page_data
-        page = site_object.pages.find do |page|
-          next if page.data["is_generated"]
+        page = site_object.pages.find do |p|
+          next if p.data['is_generated']
 
-          sanitize_key(page.data[data_key]) == page_data_key
+          sanitize_key(p.data[data_key]) == page_data_key
         end
         return DEFAULT_PAGE_DATA if page.nil?
 
         {
-          "custom_content" => page.content,
-          "custom_metadata" => page.data,
+          'custom_content' => page.content,
+          'custom_metadata' => page.data,
         }
       end
 
@@ -72,56 +74,58 @@ module HistoricalDiary
       end
 
       protected
-        def data_for_type type
-          default_data = {}
 
-          if INVALID_KEYS.include? key
-            Jekyll.logger.debug "#{self.class.name}:",
-                                "Short-circuiting #{type} lookup on invalid " \
-                                "key ('#{key.inspect}')"
-            return default_data
-          end
+      def data_for_type(type)
+        default_data = {}
 
-          if !site_object.data.key?(type)
-            Jekyll.logger.debug "#{self.class.name}:",
-                                "Short-circuiting #{type} lookup--no data exists"
-            return default_data
-          end
-
-          redactions = site_object.data[type]
+        if INVALID_KEYS.include? key
           Jekyll.logger.debug "#{self.class.name}:",
-                              "Searching #{type} data for '#{key}'"
-
-          redactions.fetch(key)
-        rescue KeyError
-          indirect_record = redactions.values.find do |value|
-            sanitize_key(value[data_key]) == key
-          end
-
-          if indirect_record.nil?
-            Jekyll.logger.debug "#{self.class.name}:",
-                                "No #{type} data for '#{key}'"
-          end
-
-          indirect_record || default_data
+                              "Short-circuiting #{type} lookup on invalid " \
+                              "key ('#{key.inspect}')"
+          return default_data
         end
 
-        def key
-          @key ||= sanitize_key(identifier)
+        unless site_object.data.key?(type)
+          Jekyll.logger.debug "#{self.class.name}:",
+                              "Short-circuiting #{type} lookup--no data exists"
+          return default_data
         end
+
+        redactions = site_object.data[type]
+        Jekyll.logger.debug "#{self.class.name}:",
+                            "Searching #{type} data for '#{key}'"
+
+        redactions.fetch(key)
+      rescue KeyError
+        indirect_record = redactions.values.find do |value|
+          sanitize_key(value[data_key]) == key
+        end
+
+        if indirect_record.nil?
+          Jekyll.logger.debug "#{self.class.name}:",
+                              "No #{type} data for '#{key}'"
+        end
+
+        indirect_record || default_data
+      end
+
+      def key
+        @key ||= sanitize_key(identifier)
+      end
 
       private
-        attr_reader :identifier
 
-        DEFAULT_PAGE_DATA = {
-          "custom_content" => nil,
-          "custom_metadata" => {},
-        }
+      attr_reader :identifier
 
-        INVALID_KEYS = [
-          nil,
-          "",
-        ]
+      DEFAULT_PAGE_DATA = {
+        'custom_content' => nil,
+        'custom_metadata' => {},
+      }.freeze
+
+      INVALID_KEYS = [
+        nil,
+        '',
+      ].freeze
     end
   end
 end
