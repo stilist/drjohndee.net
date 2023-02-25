@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Check for `place_key` in `places` data and `person_key` in `people` data, to handle characters outside a–z / A–Z / 0–9
 - Use Yaml alias to put `cache_dir` in `exclude` list
 - Add Rubocop and address most issues
+- Bulk-import `_source_material` documents into 'source documents' system
 
 ### Fixed
 - Volume number is now displayed on transcludes when available

@@ -1,10 +1,10 @@
 ---
 edition_key: "manuscript"
-license: "CC0 1.0"
+license: "CC0 1.0
 source_key: "Harley MS 6986"
 ---
 
-[page 45r]
+[folio 45r]
 
 Most Gratious Soueraine Lady, The God of heauen and earth,
 (who hath mightilie, and evidently, given vnto your most excellent
