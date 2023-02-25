@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2020-2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+reflows:
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      inſtances
+    selectors:
+      - type: TextQuoteSelector
+        exact: "inſtan- ces"
+
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      EPICURUS
+    selectors:
+      - type: TextQuoteSelector
+        exact: "EPI- CURUS"
+
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      proved
+    selectors:
+      - type: TextQuoteSelector
+        exact: "pro- ved"

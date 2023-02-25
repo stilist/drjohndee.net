@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2020-2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+creator_key: "Cole, Jordan"
+reflows:
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      Hieroglyphica
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Hiero- glyphica"
+
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      Bohemiæ
+    selectors:
+      - type: TextQuoteSelector
+        exact: "Bo- hemiæ"
+
+  - body:
+    type: TextualBody
+    format: "text/plain"
+    value: >-
+      regem
+    selectors:
+      - type: TextQuoteSelector
+        exact: "re- gem"
