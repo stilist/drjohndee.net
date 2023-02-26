@@ -21,6 +21,12 @@
 module HistoricalDiary
   module JekyllLayer
     module Utilities
+      # Convenience method for checking if an object is `Numeric` (`Bignum`,
+      # `Float`, `Integer`).
+      #
+      # @see https://docs.ruby-lang.org/en/3.2/Numeric.html
+      def numeric?(value) = value.is_a?(Numeric)
+
       # Copied from <tt>Jekyll::DataReader#sanitize_filename</tt>, with an
       # added invariant that `key` must be a string.
       #

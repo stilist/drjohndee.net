@@ -102,8 +102,6 @@ module HistoricalDiary
       end
 
       def precision = PRECISION_KEYS.find { |key| !record[key].nil? } || 'unknown'
-
-      def numeric?(value) = value.is_a?(Numeric)
     end
   end
 end

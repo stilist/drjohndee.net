@@ -46,7 +46,7 @@ module HistoricalDiary
       # provided) or by key (if `sort_key` isn't provided). The functionality
       # is similar to the `sort` filter.
       #
-      # @see https://ruby-doc.org/3.2.0/Hash.html#class-Hash-label-Entry+Order
+      # @see https://docs.ruby-lang.org/en/3.2/Hash.html#class-Hash-label-Entry+Order
       def sort_hash(object, sort_key = nil)
         return object unless object.is_a? Hash
         return object.sort_by { |key, _| key }.to_h if sort_key.nil?
