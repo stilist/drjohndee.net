@@ -72,12 +72,14 @@ module HistoricalDiary
       def redactions(collection) = data_for_type("#{collection}_redactions")
 
       def source_data
-        site_object.data[PLURAL_NOUN].fetch source_key
+        return @source_data if defined?(@source_data)
+
+        @source_data = site_object.data[PLURAL_NOUN].fetch sanitize_key(source_key)
       rescue KeyError
         Jekyll.logger.error "#{self.class.name}:",
                             "'#{source_key}' doesn't match any records"
 
-        {
+        @source_data = {
           'editions' => {},
         }
       end
