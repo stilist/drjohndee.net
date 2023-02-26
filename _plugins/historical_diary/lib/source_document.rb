@@ -85,16 +85,23 @@ module HistoricalDiary
       process!
 
       # @todo handle preface page numbers like `vii`
-      # @todo `requested` may be a quoted number (`"200"`)
-      case requested
-      when Integer then pages.fetch requested
-      when Range then requested.map { |page_number| pages.fetch(page_number) }
-      else raise ArgumentError, 'Must specify at least one page number'
+      range = case requested
+              when Integer, String then [requested]
+              when Array then requested
+              when Range then requested.to_a
+              else
+                raise ArgumentError, 'Must specify at least one page number'
+              end
+      range.map! do |page|
+        Integer(page, exception: false) || page
       end
+
+      range.map { |page| pages.fetch(page) }
     rescue KeyError => e
-      missing_page = e.message.match(/:\s(\d+)/)
+      missing_page = e.message.match(/:\s\"?(\d+)\"?/)
       raise ArgumentError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
     end
+    alias page []
 
     private
 

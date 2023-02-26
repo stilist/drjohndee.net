@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #--
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2023  Jordan Cole <feedback@drjohndee.net>
@@ -16,7 +18,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require "forwardable"
+require 'forwardable'
 
 module HistoricalDiary
   # An individual 'page' of a <tt>SourceDocument</tt>, representing a physical
@@ -30,7 +32,7 @@ module HistoricalDiary
 
     attr_reader :page_number
 
-    def initialize document:, page_number:, raw_text:
+    def initialize(document:, page_number:, raw_text:)
       @document = document
       @page_number = page_number
       @raw_text = raw_text
@@ -41,14 +43,28 @@ module HistoricalDiary
     def notes
       process!
 
-#  XXX
-require 'byebug';byebug
       {}
     end
 
+    def text
+      process!
+
+      @text
+    end
+
     private
-      attr_reader :document,
-                  :raw_text
+
+    def process!
+      return if @processed
+
+      # XXX
+      @text = raw_text
+
+      @processed = true
+    end
+
+    attr_reader :document,
+                :raw_text
 
 #     # `raw_text` with `notes` removed, and basic transformations
 #     # applied to extract paragraphs and compensate for words split

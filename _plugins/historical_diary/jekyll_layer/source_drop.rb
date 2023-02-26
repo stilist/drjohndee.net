@@ -55,6 +55,24 @@ module HistoricalDiary
 
       def page_numbers = source_document&.page_numbers
 
+      RANGE_PATTERN = /\A(\w+)(?:-(\w+))\z/
+      def page(requested)
+        return if source_document.nil?
+
+        if requested.is_a?(Numeric) then processed = requested
+        elsif requested.is_a?(String)
+          matches = requested.match(RANGE_PATTERN)
+          processed = if matches.nil? then requested
+                      elsif matches[2] then (matches[1]..matches[2])
+                      else requested
+                      end
+        else
+          raise ArgumentError, "'#{requested.inspect}' is not a valid page number"
+        end
+
+        source_document[processed]
+      end
+
       def presentational_name
         Redactions.new(record['name'],
                        redactions: redactions(SINGULAR_NOUN)).text
