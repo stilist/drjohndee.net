@@ -34,7 +34,7 @@ module HistoricalDiary
         return [] if latitude.nil?
         return [] if longitude.nil?
 
-        coordinates = [
+        [
           latitude,
           longitude,
         ]

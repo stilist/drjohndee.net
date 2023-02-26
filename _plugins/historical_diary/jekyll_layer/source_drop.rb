@@ -36,22 +36,22 @@ module HistoricalDiary
       def record
         return @record if defined?(@record)
 
-        # The output shouldn't have any nested properties, so delete the
-        # edition's `volumes` property if present.
-        #
-        # @note This is destructive, so `edition` has to be `#dup`ed to avoid
-        #   changing the actual `source_data`.
-        _edition = edition&.dup || {}
-        _edition.delete 'volumes'
-
-        _work = work || {}
-        _volume = volume || {}
         # Each `#merge`d `Hash` overwrites existing values, so go from least-
         # to most-specific.
-        @record = _work.merge(_edition).merge _volume
+        @record = work.merge(edition).merge volume
       end
 
-      def edition = source_data.dig('editions', edition_key)
+      def edition
+        data = source_data.dig('editions', edition_key)&.dup || {}
+        # The output shouldn't have any nested properties, so delete the
+        # edition's `volumes` property if present.
+        data.delete 'volumes'
+        data
+      end
+
+      def volume = edition.dig('volumes', volume_key)&.dup || {}
+
+      def work = source_data['work']&.dup || {}
 
       def page_numbers = source_document&.page_numbers
 
@@ -59,14 +59,6 @@ module HistoricalDiary
         Redactions.new(record['name'],
                        redactions: redactions(SINGULAR_NOUN)).text
       end
-
-      def volume
-        return if edition.nil?
-
-        edition.dig 'volumes', volume_key
-      end
-
-      def work = source_data['work']
 
       private
 
@@ -107,10 +99,9 @@ module HistoricalDiary
         @source_document = nil
         return if source_document_collection_entry.nil?
 
-        _redactions = redactions 'source_documents', identifier
         @source_document = SourceDocument.new identifier,
                                               raw_text: source_document_collection_entry.content,
-                                              redactions: _redactions
+                                              redactions: redactions('source_documents')
       end
     end
   end

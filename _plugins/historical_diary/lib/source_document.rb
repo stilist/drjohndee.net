@@ -63,7 +63,7 @@ module HistoricalDiary
 
     def initialize(identifier, raw_text:, redactions: nil)
       @identifier = identifier
-      @source_key, @edition_key, @volume_key = parse_identifier identifier
+      @source_key, @edition_key, @volume_key = self.class.parse_identifier identifier
 
       @raw_text = raw_text
       @redactions = redactions
@@ -125,7 +125,7 @@ module HistoricalDiary
       #       "other text"
       #     ]
       raw_pages = raw_text.split(PAGE_PATTERN)
-                          .grepv(/\A(\s+|\[…\])\z/)
+                          .grep_v(/\A(\s+|\[…\])\z/)
                           .map(&:strip)
       raw_pages.each_with_index do |slice, index|
         next unless PAGE_PATTERN.match?(slice)

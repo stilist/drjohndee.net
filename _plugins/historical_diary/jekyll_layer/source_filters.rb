@@ -55,9 +55,7 @@ module HistoricalDiary
           publication_date,
           location&.sub('-', '–'),
         ].compact.join(', ')
-        if !publishing_info.empty?
-          publishing_info[0] = publishing_info[0].capitalize
-        end
+        publishing_info[0] = publishing_info[0].capitalize unless publishing_info.empty?
 
         source_name = data['name']
         output = [
