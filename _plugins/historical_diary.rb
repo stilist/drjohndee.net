@@ -25,7 +25,7 @@ module HistoricalDiary
   autoload :MapTile, 'historical_diary/lib/map_tile'
   autoload :Redactions, 'historical_diary/lib/redactions'
   autoload :SourceDocument, 'historical_diary/lib/source_document'
-  # autoload :SourceDocumentPage, "historical_diary/lib/source_document_page"
+  autoload :SourceDocumentPage, "historical_diary/lib/source_document_page"
   autoload :TimestampRange, 'historical_diary/lib/timestamp_range'
   autoload :VERSION, 'historical_diary/version'
 end
