@@ -98,7 +98,7 @@ module HistoricalDiary
 
       range.map { |page| pages.fetch(page) }
     rescue KeyError => e
-      missing_page = e.message.match(/:\s\"?(\d+)\"?/)
+      missing_page = e.message.match(/:\s"?(\d+)"?/)
       raise ArgumentError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
     end
     alias page []

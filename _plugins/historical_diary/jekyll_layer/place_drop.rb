@@ -27,7 +27,7 @@ module HistoricalDiary
 
       PLURAL_NOUN = 'places'
       SINGULAR_NOUN = 'place'
-      DATA_KEY = "#{SINGULAR_NOUN}_key"
+      DATA_KEY = "#{SINGULAR_NOUN}_key".freeze
 
       def coordinates
         return [] if record.nil?

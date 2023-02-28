@@ -44,7 +44,11 @@ module HistoricalDiary
 
     attr_reader :redactions
 
-    REQUIRED_REFLOW_KEYS = %w[start end value]
+    REQUIRED_REFLOW_KEYS = %w[
+      start
+      end
+      value
+    ].freeze
 
     # @TODO
     def extract_notes!

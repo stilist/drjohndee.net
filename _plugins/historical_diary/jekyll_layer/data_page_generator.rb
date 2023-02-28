@@ -22,6 +22,19 @@ require_relative 'utilities'
 
 module HistoricalDiary
   module JekyllLayer
+    # This module provides a brief way to generate Jekyll Pages for a given
+    # collection of Data Files. It requires a <tt>Jekyll::Drop</tt> subclassed
+    # from <tt>HistoricalDiary::JekyllLayer::Drop</tt>, declared as a
+    # `#drop_class` method, and a <tt>Jekyll::Page</tt> subclass, declared as a
+    # `#page_class` method.
+    #
+    # @example
+    #   class SourceGenerator
+    #     include DataPageGenerator
+    #
+    #     def drop_class = SourceDrop
+    #     def page_class = SourcePage
+    #   end
     module DataPageGenerator
       include Utilities
 
@@ -52,6 +65,16 @@ module HistoricalDiary
       ].freeze
     end
 
+    # This module works together with <tt>DataPageGenerator</tt> to create a
+    # Jekyll Page for a given Data File. It requires the same `#drop_class`
+    # definition as <tt>DataPageGenerator</tt>.
+    #
+    # @example
+    #   class SourcePage
+    #     include DataPage
+    #
+    #     def drop_class = SourceDrop
+    #   end
     module DataPage
       include Utilities
 
@@ -113,7 +136,6 @@ module HistoricalDiary
 
       REQUIRED_METHODS = %i[
         drop_class
-        page_class
       ].freeze
 
       def drop

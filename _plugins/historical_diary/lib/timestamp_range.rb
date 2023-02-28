@@ -20,28 +20,28 @@
 
 require 'date'
 
-# This is a naïve, simplistic implementation of the ISO 8601 date format and
-# interval syntax. It's only capable of handling very basic inputs, but
-# currently that's all I need. (Notably, it can't handle the shorthand interval
-# syntax -- for example, `1500-01-01/02`.)
-#
-# The `ISO8601` Ruby gem is much more robust, but has a few issues of its own.
-#
-# @example
-#   TimestampRange.new("1500")
-# @example
-#   TimestampRange.new("1500-01")
-# @example
-#   TimestampRange.new("1500-01-01", "Julian")
-# @example
-#   TimestampRange.new("1500-01-01/1500-01-31")
-# @example
-#   TimestampRange.new("1500-01-01--1500-01-31")
-# @example
-#   TimestampRange.new("1500-01/1500-03-30")
 module HistoricalDiary
   class TimestampRangeError < ArgumentError; end
 
+  # This is a naïve, simplistic implementation of the ISO 8601 date format and
+  # interval syntax. It's only capable of handling very basic inputs, but
+  # currently that's all I need. (Notably, it can't handle the shorthand interval
+  # syntax -- for example, `1500-01-01/02`.)
+  #
+  # The `ISO8601` Ruby gem is much more robust, but has a few issues of its own.
+  #
+  # @example
+  #   TimestampRange.new("1500")
+  # @example
+  #   TimestampRange.new("1500-01")
+  # @example
+  #   TimestampRange.new("1500-01-01", "Julian")
+  # @example
+  #   TimestampRange.new("1500-01-01/1500-01-31")
+  # @example
+  #   TimestampRange.new("1500-01-01--1500-01-31")
+  # @example
+  #   TimestampRange.new("1500-01/1500-03-30")
   class TimestampRange
     attr_reader :end_date,
                 :start_date

@@ -45,8 +45,8 @@ module HistoricalDiary
                                     .join("\n")
         transclusion = Transclusion.new(candidate_text,
                                         prefix: attributes['prefix'],
-                                        textStart: attributes['textStart'],
-                                        textEnd: attributes['textEnd'],
+                                        text_start: attributes['textStart'],
+                                        text_end: attributes['textEnd'],
                                         suffix: attributes['suffix'])
         text = transclusion.text.gsub /\n{2,}/, "</p>\n<p>"
         Liquid::Template.parse(text)

@@ -20,6 +20,7 @@
 
 module HistoricalDiary
   module JekyllLayer
+    # Generate Jekyll Pages for entries in the `people` Data Files collection.
     class PersonPageGenerator < Jekyll::Generator
       include DataPageGenerator
 
@@ -29,6 +30,8 @@ module HistoricalDiary
       def page_class = PersonPage
     end
 
+    # Generate a Jekyll Page for an entry in the `people` Data Files
+    # collection.
     class PersonPage < Jekyll::Page
       include DataPage
 

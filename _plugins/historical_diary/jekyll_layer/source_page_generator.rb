@@ -20,6 +20,7 @@
 
 module HistoricalDiary
   module JekyllLayer
+    # Generate Jekyll Pages for entries in the `sources` Data Files collection.
     class SourcePageGenerator < Jekyll::Generator
       include DataPageGenerator
 
@@ -29,6 +30,8 @@ module HistoricalDiary
       def page_class = SourcePage
     end
 
+    # Generate a Jekyll Page for an entry in the `sources` Data Files
+    # collection.
     class SourcePage < Jekyll::Page
       include DataPage
 

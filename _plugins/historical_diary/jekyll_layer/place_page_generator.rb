@@ -20,6 +20,7 @@
 
 module HistoricalDiary
   module JekyllLayer
+    # Generate Jekyll Pages for entries in the `places` Data Files collection.
     class PlacePageGenerator < Jekyll::Generator
       include DataPageGenerator
 
@@ -29,6 +30,8 @@ module HistoricalDiary
       def page_class = PlacePage
     end
 
+    # Generate a Jekyll Page for an entry in the `places` Data Files
+    # collection.
     class PlacePage < Jekyll::Page
       include DataPage
 

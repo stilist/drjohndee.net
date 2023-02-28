@@ -29,12 +29,12 @@ module HistoricalDiary
   #
   # @see https://wicg.github.io/scroll-to-text-fragment/
   class Transclusion
-    def initialize(full_text, prefix: nil, textStart:, textEnd:, suffix: nil)
+    def initialize(full_text, text_start:, text_end:, prefix: nil, suffix: nil)
       raise ArgumentError unless full_text.is_a?(String)
 
       @prefix = prefix
-      @textStart = textStart
-      @textEnd = textEnd
+      @text_start = text_start
+      @text_end = text_end
       @suffix = suffix
       @text = full_text.dup.strip
     end
@@ -45,15 +45,15 @@ module HistoricalDiary
       extract
     end
 
-    # Syntax: `:~:text=[prefix-,]textStart[,textEnd][,-suffix]`
+    # Syntax: `:~:text=[prefix-,]text_start[,text_end][,-suffix]`
     #
     # @see https://wicg.github.io/scroll-to-text-fragment/#syntax
     def fragment
       validate!
 
       parts = [
-        textStart.first(EXACT_CUTOFF),
-        textEnd,
+        text_start.first(EXACT_CUTOFF),
+        text_end,
       ]
       parts.unshift("#{prefix}-") unless prefix.nil?
       parts.shift("-#{suffix}") unless suffix.nil?
@@ -72,8 +72,8 @@ module HistoricalDiary
 
     private
 
-    attr_reader :textStart,
-                :textEnd,
+    attr_reader :text_start,
+                :text_end,
                 :location,
                 :prefix,
                 :suffix
@@ -88,11 +88,11 @@ module HistoricalDiary
       return @extract if defined?(@extract)
 
       pattern_parts = [
-        textStart,
+        text_start,
       ]
-      unless textEnd.nil?
+      unless text_end.nil?
         pattern_parts << '.*?'
-        pattern_parts << Regexp.escape(textEnd)
+        pattern_parts << Regexp.escape(text_end)
       end
       pattern_parts.unshift(Regexp.escape(prefix)) unless prefix.nil?
       pattern_parts << Regexp.escape(suffix) unless suffix.nil?

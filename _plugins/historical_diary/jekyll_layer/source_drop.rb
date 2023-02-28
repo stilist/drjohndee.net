@@ -62,8 +62,7 @@ module HistoricalDiary
         if requested.is_a?(Numeric) then processed = requested
         elsif requested.is_a?(String)
           matches = requested.match(RANGE_PATTERN)
-          processed = if matches.nil? then requested
-                      elsif matches[2] then (matches[1]..matches[2])
+          processed = if !matches.nil? && matches[2] then (matches[1]..matches[2])
                       else requested
                       end
         else
