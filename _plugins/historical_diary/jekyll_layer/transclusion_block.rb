@@ -43,28 +43,18 @@ module HistoricalDiary
 
       def render(context)
         @context = context
-        @block_text = super.dup.strip
+        @commentary = super.dup.strip
 
-        if page_text.nil?
-          tidied_attributes = @raw_attributes.strip.gsub /\s{2,}/, "\n"
-
-          <<~HTML
-            #{@block_text}
-
-            <!--
-            Provided transclude doesn't match anything:
-
-            #{tidied_attributes}
-            -->
-          HTML
-        else
-          transcluded = <<~HTML
-            <blockquote><p>#{page_text}</p></blockquote>
-          HTML
-          transcluded << "\n\n#{@block_text}" if @block_text
-        end
+        [
+          page_html,
+          commentary,
+        ].compact.join "\n\n"
       end
+
+      attr_reader :commentary
+      alias fallback_html commentary
     end
   end
 end
-Liquid::Template.register_tag 'transclusion_with_commentary', HistoricalDiary::JekyllLayer::TransclusionBlock
+Liquid::Template.register_tag 'transclusion_with_commentary',
+                              HistoricalDiary::JekyllLayer::TransclusionBlock

@@ -34,6 +34,26 @@ module HistoricalDiary
         end
       end
 
+      def page_html
+        return @page_html if defined? @page_html
+
+        if page_text.nil?
+          return "#{fallback_html}\n\n#{fallback_html_comment}" if respond_to? :fallback_html
+
+          return fallback_html_comment
+        end
+
+        with_paragraphs = page_text.gsub(/\n{2,}/, "</p>\n<p>")
+        <<~HTML
+          <blockquote
+            class="source-material e-content"
+            lang="#{source_drop.language}"
+          >
+            <p>#{with_paragraphs}</p>
+          </blockquote>
+        HTML
+      end
+
       # Get transcluded text for provided attributes.
       def page_text
         return @page_text if defined? @page_text
@@ -48,14 +68,24 @@ module HistoricalDiary
                                         text_start: attributes['textStart'],
                                         text_end: attributes['textEnd'],
                                         suffix: attributes['suffix'])
-        text = transclusion.text.gsub /\n{2,}/, "</p>\n<p>"
-        Liquid::Template.parse(text)
+        Liquid::Template.parse(transclusion.text)
                         .render(@context)
       rescue InvalidTransclusionError
         nil
       end
 
       private
+
+      def fallback_html_comment
+        tidied_attributes = @raw_attributes.strip.gsub(/\s{2,}/, "\n")
+        <<~HTML
+          <!--
+          Provided transclude doesn't match anything:
+
+          #{tidied_attributes}
+          -->
+        HTML
+      end
 
       def source_drop
         return @source_drop if defined? @source_drop

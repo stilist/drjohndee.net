@@ -40,22 +40,10 @@ module HistoricalDiary
       def render(context)
         @context = context
 
-        if page_text.nil?
-          tidied_attributes = raw_attributes.strip.gsub /\s{2,}/, "\n"
-          <<~HTML
-            <!--
-            Provided transclude doesn't match anything:
-
-            #{tidied_attributes}
-            -->
-          HTML
-        else
-          <<~HTML
-            <blockquote><p>#{page_text}</p></blockquote>
-          HTML
-        end
+        page_html
       end
     end
   end
 end
-Liquid::Template.register_tag 'transclusion', HistoricalDiary::JekyllLayer::TransclusionTag
+Liquid::Template.register_tag 'transclusion',
+                              HistoricalDiary::JekyllLayer::TransclusionTag
