@@ -27,7 +27,9 @@ module HistoricalDiary
   # This class is completely independent of Jekyll.
   class SourceDocumentPage
     extend Forwardable
-    def_delegators :document, :identifier, :redactions
+    def_delegators :document,
+                   :identifier,
+                   :redactions
     private :redactions
 
     attr_reader :page_number
@@ -41,9 +43,11 @@ module HistoricalDiary
     end
 
     def notes
+      return @notes if defined? @notes
+
       process!
 
-      {}
+      @notes = document.notes page_number
     end
 
     def text
@@ -54,11 +58,12 @@ module HistoricalDiary
 
     private
 
-    def process!
-      return if @processed
+    def processed? = @processed
 
-      # XXX
-      @text = raw_text
+    def process!
+      return if processed?
+
+      @text = raw_text.dup
 
       @processed = true
     end
@@ -66,19 +71,15 @@ module HistoricalDiary
     attr_reader :document,
                 :raw_text
 
-#     # `raw_text` with `notes` removed, and basic transformations
-#     # applied to extract paragraphs and compensate for words split
-#     # across lines
-#     def chunks
-#       process!
+    #     # `raw_text` with `notes` removed, and basic transformations
+    #     # applied to extract paragraphs and compensate for words split
+    #     # across lines
+    #     def chunks
+    #       process!
 
-#       return @chunks if defined?(@chunks)
+    #       return @chunks if defined?(@chunks)
 
-#       @chunks = @modified_text.split(/\n+/)
-#     end
-
-      def redactions
-        # Redactions.new(raw_text, )
-      end
+    #       @chunks = @modified_text.split(/\n+/)
+    #     end
   end
 end

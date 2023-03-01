@@ -83,9 +83,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% assign custom_footnote_keys = '' | split: '' -%}
   {% assign related_dates = '' | split: '' -%}
 
-  {% if page.documents.size > 0 -%}
+  {% if content.size > 0 -%}
   <main class="page-content"
            itemprop=articleBody>
+    {{ content }}
     <ul class="entries h-entry">
       {% for entry in page.documents -%}
         {% if entry.related_dates -%}
@@ -130,11 +131,25 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </aside>
     {% endif -%}
 
-    {% if page.places_keys.size > 0 -%}
+    {% if page.people.size > 0 -%}
+    <aside class="annotations annotations-places">
+      <h3>People</h3>
+      <ul class="annotation-content">
+        {% assign sanitized_people = page.people | sort | uniq -%}
+        {% for person_key in sanitized_people -%}
+        <li>
+          {% include person_avatar.html person_key=person_key -%}
+        </li>
+        {% endfor -%}
+      </ul>
+    </aside>
+    {% endif -%}
+
+    {% if page.places.size > 0 -%}
     <aside class="annotations annotations-places">
       <h3>Places</h3>
       <ul class="annotation-content">
-        {% assign sanitized_places = page.places_keys | sort | uniq -%}
+        {% assign sanitized_places = page.places | sort | uniq -%}
         {% for place_key in sanitized_places -%}
         <li>
           {% include place_link.html place_key=place_key -%}

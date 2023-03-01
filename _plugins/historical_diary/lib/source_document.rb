@@ -69,8 +69,10 @@ module HistoricalDiary
       @redactions = redactions
 
       # state
+      @notes = {}
       @pages = {}
       @processed = false
+      @raw_page_text = {}
     end
 
     def redactions = @redactions || DEFAULT_REDACTIONS
@@ -84,7 +86,7 @@ module HistoricalDiary
     def [](requested)
       process!
 
-      # @todo handle preface page numbers like `vii`
+      # @todo handle iteration for folio etc
       range = case requested
               when Integer, String then [requested]
               when Array then requested
@@ -92,33 +94,83 @@ module HistoricalDiary
               else
                 raise ArgumentError, 'Must specify at least one page number'
               end
-      range.map! do |page|
-        Integer(page, exception: false) || page
-      end
 
-      range.map { |page| pages.fetch(page) }
+      range.map { |page_number| page(page_number) }
     rescue KeyError => e
       missing_page = e.message.match(/:\s"?(\d+)"?/)
       raise ArgumentError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
     end
-    alias page []
+
+    def notes_for_page(page_number) = notes[page_number]
 
     private
 
-    attr_reader :raw_text
+    attr_reader :notes,
+                :raw_page_text,
+                :raw_text
 
     DEFAULT_REDACTIONS = {
       'chunks' => nil,
       'notes' => nil,
       'reflows' => nil,
     }.freeze
-    PAGE_PATTERN = /(\[page\s\d+\])/
+
+    def page(page_number)
+      return pages[page_number] if pages.key?(page_number)
+
+      Jekyll.logger.debug "#{self.class.name}:",
+                          "Generating SourceDocumentPage for page #{page_number}"
+
+      raw_text = raw_page_text.fetch(page_number, '')
+      page = SourceDocumentPage.new(document: self,
+                                    page_number:,
+                                    raw_text:)
+      raw_page_text.delete page_number
+
+      pages[page_number] = page
+    end
 
     def processed? = @processed
 
+    PAGE_PATTERN = /\s(\w+)\]/
+    PAGE_HEADER_PATTERN = /(\[page\s\w+\])/
     def process!
       return if processed?
 
+      extract_pages!
+      extract_notes!
+
+      @processed = true
+    end
+
+    NOTE_KEY_PATTERN = /\A(\w+)-(.+)\z/
+    def extract_notes!
+      return if redactions['notes'].nil?
+
+      redactions['notes'].each do |key, selectors|
+        page_number = key.match(NOTE_KEY_PATTERN)[1]
+
+        note_text_slices = selectors.map do |selector|
+          text = raw_page_text[selector['page'].to_s]
+          next if text == ''
+
+          pattern_string = [
+            Regexp.escape(selector['start']),
+            '.*?',
+            Regexp.escape(selector['end']),
+          ].join
+          pattern = /#{pattern_string}/m
+
+          text.match(pattern).to_s
+        end
+        note_text = note_text_slices.join
+
+        raw_page_text[page_number].sub!(note_text, '')
+        notes[key] = note_text
+      end
+    end
+
+    def extract_pages!
       # If `raw_text` is
       #
       #     [page 1]\n\nexample\n\n  another line\n\n[…]\n\n[page 2]\n\n  other text\n
@@ -131,32 +183,29 @@ module HistoricalDiary
       #       "[page 2]",
       #       "other text"
       #     ]
-      raw_pages = raw_text.split(PAGE_PATTERN)
+      raw_pages = raw_text.split(PAGE_HEADER_PATTERN)
                           .grep_v(/\A(\s+|\[…\])\z/)
                           .map(&:strip)
-      raw_pages.each_with_index do |slice, index|
-        next unless PAGE_PATTERN.match?(slice)
 
-        page_number = slice.match(/\d+/).to_s.to_i
+      raw_pages.each_with_index do |slice, index|
+        page_header = slice.match(PAGE_HEADER_PATTERN)
+        next if page_header.nil?
+
+        page_number = slice.match(PAGE_PATTERN)[1]
 
         # `+ 1` uses the consistent structure to 'peek' at the page text. If
         # the current `slice` *isn't* followed by page text, the
         # `SourceDocumentPage` will have an empty string as its `raw_text`.
-        # This happens if:
         #
+        # This happens if:
         # * `slice` is the last element of `raw_pages`--that is, `raw_pages`
         #   ends with a page number (example: `"...\n\n[page 5]\n"`)
         # * the page text is blank (example: `"[page 1]\n\n[page 2] ..."`)
-        raw_page_text = raw_pages[index + 1]
-        raw_page_text = nil if PAGE_PATTERN.match?(raw_page_text)
+        text = raw_pages[index + 1]
+        text = nil if PAGE_HEADER_PATTERN.match?(text)
 
-        page = SourceDocumentPage.new document: self,
-                                      page_number:,
-                                      raw_text: raw_page_text || ''
-        @pages[page_number] = page
+        raw_page_text[page_number] = text
       end
-
-      @processed = true
     end
   end
 end

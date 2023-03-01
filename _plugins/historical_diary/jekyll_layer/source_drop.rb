@@ -124,7 +124,7 @@ module HistoricalDiary
 
         @source_document = SourceDocument.new identifier,
                                               raw_text: source_document_collection_entry.content,
-                                              redactions: redactions('source_documents')
+                                              redactions: redactions('source_document')
       end
     end
   end
