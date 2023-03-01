@@ -43,11 +43,12 @@ module HistoricalDiary
           return fallback_html_comment
         end
 
+        lang = attributes['language'] || source_drop.language
         with_paragraphs = page_text.gsub(/\n{2,}/, "</p>\n<p>")
         <<~HTML
           <blockquote
             class="source-material e-content"
-            lang="#{source_drop.language}"
+            lang="#{lang}"
           >
             <p>#{with_paragraphs}</p>
           </blockquote>
