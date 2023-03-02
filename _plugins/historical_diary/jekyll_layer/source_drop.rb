@@ -97,8 +97,9 @@ module HistoricalDiary
 
         @source_data = site_object.data[PLURAL_NOUN].fetch sanitize_key(source_key)
       rescue KeyError
-        Jekyll.logger.error "#{self.class.name}:",
-                            "'#{source_key}' doesn't match any records"
+        Jekyll.logger.error self.class.name do
+          "'#{source_key}' doesn't match any records"
+        end
 
         @source_data = {
           'editions' => {},

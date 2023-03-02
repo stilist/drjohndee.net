@@ -43,13 +43,8 @@ module HistoricalDiary
         next if exact_replacement.nil?
         next if annotation['selectors'].nil?
 
-        Jekyll.logger.debug "#{self.class.name}:", annotation.inspect
         annotation['selectors'].map do |selector|
-          if selector['exact'].nil? || selector['exact'] == ''
-            Jekyll.logger.warn "#{self.class.name}:",
-                               "Annotation selectors must have an 'exact' key; ignoring"
-            next
-          end
+          next if selector['exact'].nil? || selector['exact'] == ''
 
           prefix = Regexp.escape(selector['prefix']) if selector['prefix']
           exact = "(#{Regexp.escape(selector['exact'])})"

@@ -118,9 +118,6 @@ module HistoricalDiary
     def page(page_number)
       return pages[page_number] if pages.key?(page_number)
 
-      Jekyll.logger.debug "#{self.class.name}:",
-                          "Generating SourceDocumentPage for page #{page_number}"
-
       raw_text = raw_page_text.fetch(page_number, '')
       page = SourceDocumentPage.new(document: self,
                                     page_number:,

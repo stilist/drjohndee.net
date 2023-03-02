@@ -79,21 +79,23 @@ module HistoricalDiary
         default_data = {}
 
         if INVALID_KEYS.include? key
-          Jekyll.logger.debug "#{self.class.name}:",
-                              "Short-circuiting #{type} lookup on invalid " \
-                              "key ('#{key.inspect}')"
+          Jekyll.logger.debug self.class.name do
+            "Short-circuiting #{type} lookup on invalid key ('#{key.inspect}')"
+          end
           return default_data
         end
 
         unless site_object.data.key?(type)
-          Jekyll.logger.debug "#{self.class.name}:",
-                              "Short-circuiting #{type} lookup--no data exists"
+          Jekyll.logger.debug self.class.name do
+            "Short-circuiting #{type} lookup--no data exists"
+          end
           return default_data
         end
 
         redactions = site_object.data[type]
-        Jekyll.logger.debug "#{self.class.name}:",
-                            "Searching #{type} data for '#{key}'"
+        Jekyll.logger.debug self.class.name do
+          "Searching #{type} data for '#{key}'"
+        end
 
         redactions.fetch(key)
       rescue KeyError
@@ -102,8 +104,9 @@ module HistoricalDiary
         end
 
         if indirect_record.nil?
-          Jekyll.logger.debug "#{self.class.name}:",
-                              "No #{type} data for '#{key}'"
+          Jekyll.logger.debug self.class.name do
+            "No #{type} data for '#{key}'"
+          end
         end
 
         indirect_record || default_data

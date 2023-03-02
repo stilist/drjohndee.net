@@ -89,9 +89,9 @@ module HistoricalDiary
         @ext      = '.html'
         @name     = "#{@basename}#{@ext}"
 
-        Jekyll.logger.debug 'DataPage:',
-                            "Generating #{drop_class::SINGULAR_NOUN} page " \
-                            "at '#{@dir}/#{@name}'"
+        Jekyll.logger.debug self.class.name do
+          "Generating #{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
+        end
 
         layout_directory = File.join @base, '_layouts'
         read_yaml layout_directory, "#{drop.layout}.html"
