@@ -66,8 +66,8 @@ module HistoricalDiary
                                     .join("\n")
         transclusion = Transclusion.new(candidate_text,
                                         prefix: attributes['prefix'],
-                                        text_start: attributes['textStart'],
-                                        text_end: attributes['textEnd'],
+                                        text_start: attributes['text_start'],
+                                        text_end: attributes['text_end'],
                                         suffix: attributes['suffix'])
         Liquid::Template.parse(transclusion.text)
                         .render(@context)
