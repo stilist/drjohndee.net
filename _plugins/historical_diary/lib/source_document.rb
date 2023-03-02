@@ -200,8 +200,12 @@ module HistoricalDiary
         # * the page text is blank (example: `"[page 1]\n\n[page 2] ..."`)
         text = raw_pages[index + 1]
         text = nil if PAGE_HEADER_PATTERN.match?(text)
+        next if text.nil?
 
-        raw_page_text[page_number] = text
+        sanitized = text
+          .tr("\n", ' ')
+          .gsub(/\s{2,}/, ' ')
+        raw_page_text[page_number] = sanitized
       end
     end
   end
