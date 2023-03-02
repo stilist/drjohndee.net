@@ -74,6 +74,10 @@ module HistoricalDiary
         Liquid::Template.parse(transclusion.text)
                         .render(@context)
       rescue InvalidTransclusionError
+        Jekyll.logger.warn self.class.name do
+          "Transclusion doesn't match anything: #{attributes.inspect}"
+        end
+
         nil
       end
 
