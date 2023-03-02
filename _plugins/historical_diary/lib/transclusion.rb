@@ -91,6 +91,10 @@ module HistoricalDiary
       return if @text.nil?
       return if @text.strip == ''
 
+      @extract = @text.match(pattern)&.to_s
+    end
+
+    def pattern
       pattern_parts = [
         text_start,
       ]
@@ -101,8 +105,7 @@ module HistoricalDiary
       pattern_parts.unshift(Regexp.escape(prefix)) unless prefix.nil?
       pattern_parts << Regexp.escape(suffix) unless suffix.nil?
 
-      pattern = /#{pattern_parts.compact.join}/m
-      @extract = @text.match(pattern)&.to_s
+      /#{pattern_parts.compact.join}/m
     end
   end
 end
