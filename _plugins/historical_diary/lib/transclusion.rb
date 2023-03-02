@@ -87,6 +87,10 @@ module HistoricalDiary
     def extract
       return @extract if defined?(@extract)
 
+      @extract = nil
+      return if @text.nil?
+      return if @text.strip == ''
+
       pattern_parts = [
         text_start,
       ]
