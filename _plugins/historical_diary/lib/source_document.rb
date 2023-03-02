@@ -144,26 +144,27 @@ module HistoricalDiary
     def extract_notes!
       return if redactions['notes'].nil?
 
-      redactions['notes'].each do |key, selectors|
-        page_number = key.match(NOTE_KEY_PATTERN)[1]
+      redactions['notes'].each do |key, note_data|
+        note_text = note_data.each_with_object([]) do |selector, memo|
+          page_number = selector['page']&.to_s
+          next if page_number.nil?
 
-        note_text_slices = selectors.map do |selector|
-          text = raw_page_text[selector['page'].to_s]
-          next if text == ''
+          page_text = raw_page_text[page_number]
+          next if page_text.nil?
 
-          pattern_string = [
-            Regexp.escape(selector['start']),
-            '.*?',
-            Regexp.escape(selector['end']),
-          ].join
-          pattern = /#{pattern_string}/m
+          transclusion = Transclusion.new(page_text,
+                                          prefix: selector['prefix'],
+                                          text_start: selector['textStart'],
+                                          text_end: selector['textEnd'],
+                                          suffix: selector['suffix'])
+          text = transclusion.text
+          memo << text
 
-          text.match(pattern).to_s
+          raw_page_text[page_number].sub!(text, '')
         end
-        note_text = note_text_slices.join
-
-        raw_page_text[page_number].sub!(note_text, '')
-        notes[key] = note_text
+        notes[key] = {
+          text: note_text.join(' '),
+        }.freeze
       end
     end
 
