@@ -10,12 +10,248 @@ source:
   work_key: "The Private Diary of Dr John Dee"
   edition_key: "book"
 
+reflows:
+  "1":
+    - value: "Gelderland"
+      selectors:
+        - exact: "Gel- derland"
+  "2":
+    - value: "Wensday"
+      selectors:
+        - exact: "Wens- day"
+    - value: "Anderson"
+      selectors:
+        - exact: "Ander- son"
+  "3":
+    - value: "warning"
+      selectors:
+        - exact: "warn- ing"
+  "4":
+    - value: "Hertford"
+      selectors:
+        - exact: "Hert- ford"
+    - value: "Norwich"
+      selectors:
+        - exact: "Nor- wich"
+  "5":
+    - value: "Walsingham"
+      selectors:
+        - exact: "Wal- singham"
+    - value: "Franckfurt-uppon-Oder"
+      selectors:
+        - exact: "Franckfurt- uppon-Oder"
+  "6":
+    - value: "themselves"
+      selectors:
+        - exact: "them- selves"
+  "7":
+    - value: "cownsayle"
+      selectors:
+        - exact: "cown- sayle"
+  "8":
+    - value: "Benjamyn"
+      selectors:
+        - exact: "Ben- jamyn"
+  "9":
+    - value: "delivered"
+      selectors:
+        - exact: "de- livered"
+  "10":
+    - value: "Canterbury"
+      selectors:
+        - exact: "Can- terbury"
+    - value: "repeated"
+      selectors:
+        - exact: "re- peated"
+
 notes:
   "1-*":
     - page: 1
-      start: "* It is almost"
-      end: "as an astrologer."
+      prefix: "* "
+      textStart: "It is almost"
+      textEnd: "as an astrologer."
   "1-†":
     - page: 1
-      start: "† “ Anno 1555,"
-      end: "in Worcester.”"
+      prefix: "† "
+      textStart: "“ Anno 1555,"
+      textEnd: "in Worcester.”"
+  "2-*":
+    - page: 2
+      prefix: "* "
+      textStart: "The brother of"
+      textEnd: "before mentioned."
+  "2-†":
+    - page: 2
+      prefix: "† "
+      textStart: "“ Dr. Dee dwelt"
+      textEnd: "came to his.”"
+  "3-*":
+    - page: 3
+      prefix: "* "
+      textStart: "This of course"
+      textEnd: "of Dr. Dee’s.”"
+  "3-†":
+    - page: 3
+      prefix: "† "
+      textStart: "This was his"
+      textEnd: "in the year 1576."
+  "4-*":
+    - page: 4
+      prefix: "* "
+      textStart: "Ashmole informs"
+      textEnd: "best patrons."
+  "4-†":
+    - page: 4
+      prefix: "† "
+      textStart: "Rogers was a"
+      textEnd: "Martin’s-in-the-Fields."
+  "4-‡":
+    - page: 4
+      prefix: "‡ "
+      textStart: "That is, Galfridus"
+      textEnd: "of voyages."
+  "4-§":
+    - page: 4
+      prefix: "§ "
+      textStart: "This is the"
+      textEnd: "Lond. 1577."
+  "6-*":
+    - page: 6
+      prefix: "* "
+      textStart: "His horoscope is"
+      textEnd: "fol. 63"
+  "6-†":
+    - page: 6
+      prefix: "† "
+      textStart: "This person"
+      textEnd: "Oxford biographers."
+  "7-*":
+    - page: 7
+      prefix: "* "
+      textStart: "Dee has occasionally"
+      textEnd: "doth ! ’”"
+  "7-†":
+    - page: 7
+      prefix: "† "
+      textStart: "In a more"
+      textEnd: "revealed to him."
+  "9-*":
+    - page: 9
+      prefix: "* "
+      textStart: "His first wife"
+      textEnd: "fetch my glass"
+    - page: 10
+      textStart: "so famous,"
+      textEnd: "spoken of again."
+  "10-*":
+    - page: 10
+      prefix: "* "
+      textStart: "Dee has made"
+      textEnd: "of the MS."
+  "10-†":
+    - page: 10
+      prefix: "† "
+      textStart: "An original diary"
+      textEnd: "Miscel. 241."
+
+markup:
+  - value: >-
+      {{ "Hickman, Bartholomew" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Barthilmew Hikman"
+  - value: >-
+      {{ "Lower Shuckburgh, West Midlands, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Shugborowh in Warwikshyre"
+  - value: >-
+      {{ "Van Der Meulen, Daniel" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "D. Daniel Vander Meulen"
+  - value: >-
+      {{ "Antwerp, Vlaams Gewest, BE" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Antwerpiæ"
+  - value: >-
+      {{ "Fromond, Jane" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Jane Fromonds"
+  - value: >-
+      {{ "Cheam, Greater London, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Cheyam"
+  - value: >-
+      {{ "Kelley, Edward" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Ed. Kelly"
+  - value: >-
+      {{ "Bertie, Peregrine" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "the Lord Willughby"
+  - value: >-
+      {{ "Wesel, Nordrhein-Westfalen, DE" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Wesell in Gelderland"
+  - value: >-
+      {{ "unknown -- Arundell" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Mr. Arundell"
+  - value: >-
+      {{ "Cornwall, South West, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Cornwayle"
+  - value: >-
+      {{ "Nevelle, Mary" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Mary Nevelle, alias Mary Lewknor"
+  - value: >-
+      {{ "Chichester, South East, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Chichester"
+  - value: >-
+      {{ "Clifford, Margaret" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Margaret Russell Cowntess of Cumberland"
+  - value: >-
+      {{ "Exeter, South West, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Exoniæ"
+  - value: >-
+      {{ "unknown -- Heydon" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Mr. Heydon"
+  - value: >-
+      {{ "Baconsthorpe, East of England, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Baconsthorp in Norfolk"
+  - value: >-
+      {{ "Surrey, South East, GB" | place_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "comitatu Surrey"
+  - value: >-
+      {{ "Fennar, William" | person_link: "\1" }}
+    selectors:
+      - page: 1
+        exact: "Mr. William Fennar"
+  - value: >-
+      {{ "Cooper, Jane" | person_link: "\1" }}
+    selectors:
+      - page: "1-2"
+        exact: "Jane Cooper, now Mystris Kelly"
