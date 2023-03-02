@@ -21,6 +21,8 @@
 module HistoricalDiary
   module JekyllLayer
     module TransclusionLiquidHelpers
+      SOURCE_DROPS = {}
+
       # Parse basic key-value pairs in the form of `key="value"`. Useful for
       # custom Liquid blocks and tags.
       ATTRIBUTE_PATTERN = /(\w+)="(.+?)"/
@@ -94,7 +96,7 @@ module HistoricalDiary
         key = SourceDocument.build_identifier(attributes['source_key'],
                                               attributes['edition_key'],
                                               attributes['volume_key'])
-        SourceDrop.new(key, context: @context)
+        SOURCE_DROPS[key] ||= SourceDrop.new(key, context: @context)
       end
     end
   end
