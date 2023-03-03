@@ -145,7 +145,7 @@ module HistoricalDiary
       return if redactions['notes'].nil?
 
       redactions['notes'].each do |key, note_data|
-        note_text = note_data.each_with_object([]) do |selector, memo|
+        parsed = note_data.each_with_object({}) do |selector, memo|
           page_number = selector['page']&.to_s
           next if page_number.nil?
 
@@ -158,12 +158,17 @@ module HistoricalDiary
                                           text_end: selector['textEnd'],
                                           suffix: selector['suffix'])
           text = transclusion.text
-          memo << text
+
+          memo[:symbol] ||= selector['prefix']
+          (memo[:pages] ||= []) << page_number
+          (memo[:text] ||= []) << text
 
           raw_page_text[page_number].sub!(text, '')
         end
         notes[key] = {
-          text: note_text.join(' '),
+          pages: parsed[:pages].uniq,
+          symbol: parsed[:symbol]&.strip,
+          text: parsed[:text].join(' ').delete_prefix(parsed[:symbol]),
         }.freeze
       end
     end
