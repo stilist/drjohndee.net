@@ -120,8 +120,8 @@ module HistoricalDiary
 
       raw_text = raw_page_text.fetch(page_number, '')
       page = SourceDocumentPage.new(document: self,
-                                    page_number:,
-                                    raw_text:)
+                                    page_number: page_number,
+                                    raw_text: raw_text)
       raw_page_text.delete page_number
 
       pages[page_number] = page

@@ -131,7 +131,7 @@ module HistoricalDiary
         # it's more important to be factually correct, and not project
         # pre-Gregorian dates as Gregorian.
         object: adjusted_date_time,
-        explicit_parts:,
+        explicit_parts: explicit_parts,
         year: adjusted_date_time.year,
         month: adjusted_date_time.month,
         day: adjusted_date_time.day,

@@ -110,8 +110,8 @@ module HistoricalDiary
       def url_placeholders
         {
           path: @dir,
-          basename:,
-          output_ext:,
+          basename: basename,
+          output_ext: output_ext,
         }
       end
 
@@ -144,7 +144,7 @@ module HistoricalDiary
         @drop = nil
 
         context = context_from_site @site
-        @drop = drop_class.new key, context:
+        @drop = drop_class.new key, context: context
       end
     end
   end

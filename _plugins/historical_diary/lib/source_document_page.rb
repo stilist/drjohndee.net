@@ -42,9 +42,7 @@ module HistoricalDiary
       @processed = raw_text.empty?
     end
 
-    def notes = document.notes page_number
-
-    def html = document.html page_number
+    def notes = document.notes(page_number)
 
     def text = raw_text
 

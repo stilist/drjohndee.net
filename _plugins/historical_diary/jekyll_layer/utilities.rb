@@ -40,7 +40,7 @@ module HistoricalDiary
 
       def context_from_site(site)
         # @see https://github.com/jekyll/jekyll/blob/4.3-stable/test/test_filters.rb#L12
-        Liquid::Context.new site.site_payload, {}, site:
+        Liquid::Context.new site.site_payload, {}, site: site
       end
 
       def site_from_context(context)

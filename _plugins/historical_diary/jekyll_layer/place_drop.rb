@@ -44,8 +44,8 @@ module HistoricalDiary
         return if record.nil?
 
         {
-          latitude:,
-          longitude:,
+          latitude: latitude,
+          longitude: longitude,
           name: presentational_name,
           record_type: precision,
         }
@@ -58,7 +58,7 @@ module HistoricalDiary
       def static_map_html
         return @static_map_html if defined? @static_map_html
 
-        @static_map_html = MapTile.new(bounding_box:,
+        @static_map_html = MapTile.new(bounding_box: bounding_box,
                                        points: [point],
                                        site: site_object).static_map_html
       end

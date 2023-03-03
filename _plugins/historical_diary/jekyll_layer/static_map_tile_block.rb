@@ -25,7 +25,7 @@ module HistoricalDiary
 
       private
 
-      def place_drop(key, context) = PlaceDrop.new(key, context:)
+      def place_drop(key, context) = PlaceDrop.new(key, context: context)
     end
   end
 end
