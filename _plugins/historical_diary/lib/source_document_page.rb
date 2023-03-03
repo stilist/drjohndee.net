@@ -42,31 +42,11 @@ module HistoricalDiary
       @processed = raw_text.empty?
     end
 
-    def notes
-      return @notes if defined? @notes
+    def notes = document.notes page_number
 
-      process!
+    def html = document.html page_number
 
-      @notes = document.notes page_number
-    end
-
-    def text
-      process!
-
-      @text
-    end
-
-    private
-
-    def processed? = @processed
-
-    def process!
-      return if processed?
-
-      @text = raw_text.dup
-
-      @processed = true
-    end
+    def text = raw_text
 
     attr_reader :document,
                 :raw_text
