@@ -77,8 +77,10 @@ module HistoricalDiary
       end
 
       def presentational_name
-        Redactions.new(record['name'],
-                       redactions: redactions(SINGULAR_NOUN)).text
+        return @presentational_name if defined? @presentational_name
+
+        @presentational_name = Redactions.new(record['name'],
+                                              redactions: redactions(SINGULAR_NOUN)).text
       end
 
       private
