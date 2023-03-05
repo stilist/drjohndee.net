@@ -21,21 +21,27 @@
 module HistoricalDiary
   module JekyllLayer
     module PlaceFilters
-      PLACE_DROPS = {}
+      include Filter
 
-      def place_data(key) = place_drop(key)
+      alias place_data drop
 
-      def place_language(key) = place_drop(key)['name_language']
+      def place_language(key) = drop(key)['name_language']
 
-      def place_presentational_name(key) = place_drop(key)['presentational_name']
+      def place_presentational_name(key) = drop(key).presentational_name
 
-      def place_url(key) = place_drop(key).permalink
+      def place_link(key, display_text)
+        data_record_link(key, display_text: display_text)
+      end
+
+      def place_reference(key, display_text)
+        data_record_reference(key, display_text: display_text)
+      end
+
+      def place_url(key) = data_record_url(key)
 
       private
 
-      def place_drop(key)
-        PLACE_DROPS[key] ||= PlaceDrop.new(key, context: @context)
-      end
+      def drop_class = PlaceDrop
     end
   end
 end

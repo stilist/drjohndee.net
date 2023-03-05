@@ -42,6 +42,7 @@ module HistoricalDiary
     autoload :DataPage, 'jekyll_layer/data_page_generator'
     autoload :DataPageGenerator, 'jekyll_layer/data_page_generator'
     autoload :Drop, 'jekyll_layer/drop'
+    autoload :Filter, 'jekyll_layer/filter'
     autoload :PersonDrop, 'jekyll_layer/person_drop'
     autoload :PlaceDrop, 'jekyll_layer/place_drop'
     autoload :SourceDrop, 'jekyll_layer/source_drop'
