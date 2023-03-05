@@ -72,8 +72,7 @@ module HistoricalDiary
                                         text_end: attributes['text_end'],
                                         suffix: attributes['suffix'])
         as_html = apply_markup(transclusion.text)
-        Liquid::Template.parse(as_html)
-                        .render(@context)
+        @page_text = Liquid::Template.parse(as_html).render(@context)
       rescue InvalidTransclusionError
         Jekyll.logger.warn self.class.name do
           "Transclusion doesn't match anything: #{attributes.inspect}"
