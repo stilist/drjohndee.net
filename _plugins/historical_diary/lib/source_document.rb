@@ -35,7 +35,6 @@ module HistoricalDiary
   class SourceDocument
     attr_reader :edition_key,
                 :identifier,
-                :pages,
                 :source_key,
                 :volume_key
 
@@ -78,22 +77,20 @@ module HistoricalDiary
       @identifier = identifier
       @source_key, @edition_key, @volume_key = self.class.parse_identifier identifier
 
-      @raw_text = raw_text
+      @raw_text = raw_text.dup
       @redactions = redactions
 
       # state
+      @completed_initial_parsing = false
       @notes = {}
-      @pages = {}
-      @processed = false
-      @raw_page_text = {}
+      @parsed_pages = {}
+      @raw_text_by_page = {}
     end
-
-    def redactions = @redactions || DEFAULT_REDACTIONS
 
     def page_numbers
       process!
 
-      pages.keys
+      parsed_pages.keys
     end
 
     def [](requested)
@@ -102,50 +99,61 @@ module HistoricalDiary
       range = self.class.page_range(requested)
       range.map { |page_number| page(page_number) }
     rescue KeyError => e
-      missing_page = e.message.match(/:\s"?(\d+)"?/)
+      missing_page = e.message.match(/:\s"?(\w+)"?/)
       raise ArgumentError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
+    end
+
+    def markup_redactions_for_page(page_number)
+      return @markup_redactions[page_number] if defined? @markup_redactions
+
+      @markup_redactions = annotations('markup')
+
+      @markup_redactions[page_number]
     end
 
     def notes_for_page(page_number) = notes[page_number]
 
     private
 
+    attr_accessor :completed_initial_parsing
     attr_reader :notes,
-                :raw_page_text,
-                :raw_text
-
-    DEFAULT_REDACTIONS = {
-      'chunks' => nil,
-      'notes' => nil,
-      'reflows' => nil,
-    }.freeze
+                :pages,
+                :parsed_pages,
+                :raw_text_by_page,
+                :raw_text,
+                :redactions
 
     def page(page_number)
-      return pages[page_number] if pages.key?(page_number)
+      return parsed_pages[page_number] if parsed_pages.key?(page_number)
 
-      raw_text = raw_page_text.fetch(page_number, '')
+      raw_page_text = raw_text_by_page.delete page_number
       page = SourceDocumentPage.new(document: self,
                                     page_number: page_number,
-                                    raw_text: raw_text)
-      raw_page_text.delete page_number
-
-      pages[page_number] = page
+                                    raw_text: raw_page_text)
+      parsed_pages[page_number] = page
     end
 
-    def processed? = @processed
+    def completed_initial_parsing? = completed_initial_parsing
 
-    PAGE_PATTERN = /\s(\w+)\]/
-    PAGE_HEADER_PATTERN = /(\[page\s\w+\])/
     def process!
-      return if processed?
+      return if completed_initial_parsing?
 
-      extract_pages!
+      parse_pages!
+
+      apply_reflows!
       extract_notes!
 
-      @processed = true
+      completed_initial_parsing = true
     end
 
-    NOTE_KEY_PATTERN = /\A(\w+)-(.+)\z/
+    def apply_reflows!
+      annotations('reflows').each do |page_number, reflows|
+        annotation = Annotation.new(raw_text_by_page[page_number],
+                                    annotations: reflows)
+        raw_text_by_page[page_number] = annotation.text
+      end
+    end
+
     def extract_notes!
       return if redactions['notes'].nil?
 
@@ -154,7 +162,7 @@ module HistoricalDiary
           page_number = selector['page']&.to_s
           next if page_number.nil?
 
-          page_text = raw_page_text[page_number]
+          page_text = raw_text_by_page[page_number]
           next if page_text.nil?
 
           transclusion = Transclusion.new(page_text,
@@ -168,7 +176,7 @@ module HistoricalDiary
           (memo[:pages] ||= []) << page_number
           (memo[:text] ||= []) << text
 
-          raw_page_text[page_number].sub!(text, '')
+          raw_text_by_page[page_number].sub!(text, '')
         end
         notes[key] = {
           pages: parsed[:pages].uniq,
@@ -178,7 +186,14 @@ module HistoricalDiary
       end
     end
 
-    def extract_pages!
+    # @note If the `PAGE_NUMBER` capture group is merged into
+    #   `PAGE_HEADER_PATTERN` the added capture group changes the output of
+    #   `#split` by creating an extra array member for each page number. (For
+    #   example, `[page 1]\n\ntest` would parse as `["[page 1]", "1", "test"]`
+    #   instead of `["[page 1]", "test"]`.)
+    PAGE_NUMBER = /\s(\w+)\]/
+    PAGE_HEADER_PATTERN = /(\[page\s\w+\])/
+    def parse_pages!
       # If `raw_text` is
       #
       #     [page 1]\n\nexample\n\n  another line\n\n[…]\n\n[page 2]\n\n  other text\n
@@ -199,7 +214,7 @@ module HistoricalDiary
         page_header = slice.match(PAGE_HEADER_PATTERN)
         next if page_header.nil?
 
-        page_number = slice.match(PAGE_PATTERN)[1]
+        page_number = slice.match(PAGE_NUMBER)[1]
 
         # `+ 1` uses the consistent structure to 'peek' at the page text. If
         # the current `slice` *isn't* followed by page text, the
@@ -216,7 +231,27 @@ module HistoricalDiary
         sanitized = text
           .tr("\n", ' ')
           .gsub(/\s{2,}/, ' ')
-        raw_page_text[page_number] = sanitized
+        raw_text_by_page[page_number] = sanitized
+      end
+    end
+
+    def annotations(key)
+      return {} if redactions[key].nil?
+
+      redactions[key].each_with_object({}) do |reflow, memo|
+        reflow['selectors'].each do |selector|
+          page_number = selector['page']
+          next if page_number.nil?
+
+          (memo[page_number] ||= []) << {
+            'value' => reflow['value'],
+            'selectors' => [{
+              'prefix' => selector['prefix'],
+              'exact' => selector['exact'],
+              'suffix' => selector['suffix'],
+            }],
+          }.compact.freeze
+        end
       end
     end
   end
