@@ -51,6 +51,16 @@ module HistoricalDiary
       #   #=> ["Annals of the Reformation and Establishment of Religion", "clarendon", "II-I"]
       def parse_identifier(identifier) = identifier.split(', ')
 
+      # Combine keys for source, edition, and volume into a comma-separated
+      # identifier.
+      #
+      # @example
+      #   build_identifier("Local Gleanings")
+      #   #=> "Local Gleanings"
+      #   build_identifier("Brief Lives", "clarendon")
+      #   #=> "Brief Lives, clarendon"
+      #   build_identifier("Annals of the Reformation and Establishment of Religion", "clarendon", "II-I")
+      #   #=> "Annals of the Reformation and Establishment of Religion, clarendon, II-I"
       def build_identifier(source_key, edition_key, volume_key)
         [
           source_key,
