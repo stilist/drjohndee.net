@@ -93,9 +93,6 @@ module HistoricalDiary
           "Generating #{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
         end
 
-        layout_directory = File.join @base, '_layouts'
-        read_yaml layout_directory, "#{drop.layout}.html"
-
         @data = drop.page_data['custom_metadata'].merge({
                                                           'is_generated' => true,
                                                           drop_class::DATA_KEY => drop.preferred_key,

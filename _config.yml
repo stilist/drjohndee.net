@@ -114,3 +114,15 @@ defaults:
       type: "posts"
     values:
       layout: "date"
+  - scope:
+      path: "people/"
+    values:
+      layout: "person"
+  - scope:
+      path: "places/"
+    values:
+      layout: "place"
+  - scope:
+      path: "sources/"
+    values:
+      layout: "source"
