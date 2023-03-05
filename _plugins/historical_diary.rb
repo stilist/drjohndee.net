@@ -26,5 +26,6 @@ module HistoricalDiary
   autoload :SourceDocument, 'historical_diary/lib/source_document'
   autoload :SourceDocumentPage, 'historical_diary/lib/source_document_page'
   autoload :TimestampRange, 'historical_diary/lib/timestamp_range'
+  autoload :Transclusion, 'historical_diary/lib/transclusion'
   autoload :VERSION, 'historical_diary/version'
 end
