@@ -71,7 +71,8 @@ module HistoricalDiary
                                         text_start: attributes['text_start'],
                                         text_end: attributes['text_end'],
                                         suffix: attributes['suffix'])
-        Liquid::Template.parse(transclusion.text)
+        as_html = apply_markup(transclusion.text)
+        Liquid::Template.parse(as_html)
                         .render(@context)
       rescue InvalidTransclusionError
         Jekyll.logger.warn self.class.name do
@@ -82,6 +83,16 @@ module HistoricalDiary
       end
 
       private
+
+      def apply_markup(text)
+        range = SourceDocument.page_range(attributes['page'])
+
+        annotations = range.flat_map do |page_number|
+          source_drop.markup_redactions_for_page(page_number)
+        end
+
+        Annotation.new(text, annotations: annotations.compact).text
+      end
 
       def fallback_html_comment
         tidied_attributes = @raw_attributes.strip.gsub(/\s{2,}/, "\n")

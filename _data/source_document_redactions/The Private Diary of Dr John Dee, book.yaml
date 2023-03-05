@@ -11,247 +11,805 @@ source:
   edition_key: "book"
 
 reflows:
-  "1":
-    - value: "Gelderland"
-      selectors:
-        - exact: "Gel- derland"
-  "2":
-    - value: "Wensday"
-      selectors:
-        - exact: "Wens- day"
-    - value: "Anderson"
-      selectors:
-        - exact: "Ander- son"
-  "3":
-    - value: "warning"
-      selectors:
-        - exact: "warn- ing"
-  "4":
-    - value: "Hertford"
-      selectors:
-        - exact: "Hert- ford"
-    - value: "Norwich"
-      selectors:
-        - exact: "Nor- wich"
-  "5":
-    - value: "Walsingham"
-      selectors:
-        - exact: "Wal- singham"
-    - value: "Franckfurt-uppon-Oder"
-      selectors:
-        - exact: "Franckfurt- uppon-Oder"
-  "6":
-    - value: "themselves"
-      selectors:
-        - exact: "them- selves"
-  "7":
-    - value: "cownsayle"
-      selectors:
-        - exact: "cown- sayle"
-  "8":
-    - value: "Benjamyn"
-      selectors:
-        - exact: "Ben- jamyn"
-  "9":
-    - value: "delivered"
-      selectors:
-        - exact: "de- livered"
-  "10":
-    - value: "Canterbury"
-      selectors:
-        - exact: "Can- terbury"
-    - value: "repeated"
-      selectors:
-        - exact: "re- peated"
+  - value: "Gelderland"
+    selectors:
+      - page: "1"
+        exact: "Gel- derland"
+  - value: "Wensday"
+    selectors:
+      - page: "2"
+        exact: "Wens- day"
+  - value: "Anderson"
+    selectors:
+      - page: "2"
+        exact: "Ander- son"
+  - value: "warning"
+    selectors:
+      - page: "3"
+        exact: "warn- ing"
+  - value: "Hertford"
+    selectors:
+      - page: "4"
+        exact: "Hert- ford"
+  - value: "Norwich"
+    selectors:
+      - page: "4"
+        exact: "Nor- wich"
+  - value: "Walsingham"
+    selectors:
+      - page: "5"
+        exact: "Wal- singham"
+  - value: "Franckfurt-uppon-Oder"
+    selectors:
+      - page: "5"
+        exact: "Franckfurt- uppon-Oder"
+  - value: "themselves"
+    selectors:
+      - page: "6"
+        exact: "them- selves"
+  - value: "cownsayle"
+    selectors:
+      - page: "7"
+        exact: "cown- sayle"
+  - value: "Benjamyn"
+    selectors:
+      - page: "8"
+        exact: "Ben- jamyn"
+  - value: "delivered"
+    selectors:
+      - page: "9"
+        exact: "de- livered"
+  - value: "Canterbury"
+    selectors:
+      - page: "10"
+        exact: "Can- terbury"
+  - value: "repeated"
+    selectors:
+      - page: "10"
+        exact: "re- peated"
 
 notes:
   "1-*":
-    - page: 1
+    - page: "1"
       prefix: "* "
       textStart: "It is almost"
       textEnd: "as an astrologer."
   "1-†":
-    - page: 1
+    - page: "1"
       prefix: "† "
       textStart: "“ Anno 1555,"
       textEnd: "in Worcester.”"
   "2-*":
-    - page: 2
+    - page: "2"
       prefix: "* "
       textStart: "The brother of"
       textEnd: "before mentioned."
   "2-†":
-    - page: 2
+    - page: "2"
       prefix: "† "
       textStart: "“ Dr. Dee dwelt"
       textEnd: "came to his.”"
   "3-*":
-    - page: 3
+    - page: "3"
       prefix: "* "
       textStart: "This of course"
       textEnd: "of Dr. Dee’s.”"
   "3-†":
-    - page: 3
+    - page: "3"
       prefix: "† "
       textStart: "This was his"
       textEnd: "in the year 1576."
   "4-*":
-    - page: 4
+    - page: "4"
       prefix: "* "
       textStart: "Ashmole informs"
       textEnd: "best patrons."
   "4-†":
-    - page: 4
+    - page: "4"
       prefix: "† "
       textStart: "Rogers was a"
       textEnd: "Martin’s-in-the-Fields."
   "4-‡":
-    - page: 4
+    - page: "4"
       prefix: "‡ "
       textStart: "That is, Galfridus"
       textEnd: "of voyages."
   "4-§":
-    - page: 4
+    - page: "4"
       prefix: "§ "
       textStart: "This is the"
       textEnd: "Lond. 1577."
   "6-*":
-    - page: 6
+    - page: "6"
       prefix: "* "
       textStart: "His horoscope is"
       textEnd: "fol. 63"
   "6-†":
-    - page: 6
+    - page: "6"
       prefix: "† "
       textStart: "This person"
       textEnd: "Oxford biographers."
   "7-*":
-    - page: 7
+    - page: "7"
       prefix: "* "
       textStart: "Dee has occasionally"
       textEnd: "doth ! ’”"
   "7-†":
-    - page: 7
+    - page: "7"
       prefix: "† "
       textStart: "In a more"
       textEnd: "revealed to him."
   "9-*":
-    - page: 9
+    - page: "9"
       prefix: "* "
       textStart: "His first wife"
       textEnd: "fetch my glass"
-    - page: 10
+    - page: "10"
       textStart: "so famous,"
       textEnd: "spoken of again."
   "10-*":
-    - page: 10
+    - page: "10"
       prefix: "* "
       textStart: "Dee has made"
       textEnd: "of the MS."
   "10-†":
-    - page: 10
+    - page: "10"
       prefix: "† "
       textStart: "An original diary"
       textEnd: "Miscel. 241."
 
 markup:
+  # 1554-08-25
+  - value: >-
+      <time datetime="1554-09-04">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Aug. 25th"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Aug."
+        suffix: " 25th"
   - value: >-
       {{ "Hickman, Bartholomew" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Barthilmew Hikman"
+      - page: "1"
+        exact: "his"
+        suffix: " reporte"
   - value: >-
       {{ "Lower Shuckburgh, West Midlands, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Shugborowh in Warwikshyre"
+  - value: >-
+      <time datetime="1554-09-04T12+00/26T00+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "toward evening"
+  - value: >-
+      {{ "Dee, John" | person_link: "\1" }}
+    selectors:
+      - page: "1"
+        exact: "My"
+        suffix: " conjecture"
+  # 1554-10-25
+  - value: >-
+      <time datetime="1554-11-04">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Oct. 25th"
+  - value: >-
+      <abbr title="October">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Oct."
+        suffix: " 25th"
   - value: >-
       {{ "Van Der Meulen, Daniel" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "D. Daniel Vander Meulen"
+  - value: >-
+      <abbr>\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "D."
+        suffix: " Daniel Vander"
   - value: >-
       {{ "Antwerp, Vlaams Gewest, BE" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Antwerpiæ"
+  - value: >-
+      <time datetime="1554-11-04T04+01">\1</time>
+    selectors:
+      - page: "1"
+        exact: "mane hora quarta"
+  # 1555-04-22
+  - value: >-
+      <time datetime="1555-05-02">\1</time>
+    selectors:
+      - page: "1"
+        exact: "April 22nd"
   - value: >-
       {{ "Fromond, Jane" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Jane Fromonds"
   - value: >-
       {{ "Cheam, Greater London, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Cheyam"
+  - value: >-
+      <time datetime="1555-05-02T12+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "at none"
+  # 1555-08-01
+  - value: >-
+      <time datetime="1555-08-11">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Aug. 1st"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Aug."
+        suffix: " 1st,"
   - value: >-
       {{ "Kelley, Edward" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Ed. Kelly"
+  - value: >-
+      <abbr title="Edouardus">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Ed."
+        suffix: " Kelly"
+  - value: >-
+      <time datetime="1555-08-11T16+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "hora quarta a meridie"
+  # 1555-10-12
+  - value: >-
+      <time datetime="1555-10-22">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Oct. 12th"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Oct."
+        suffix: " 12th,"
   - value: >-
       {{ "Bertie, Peregrine" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "the Lord Willughby"
+  - value: >-
+      <time datetime="1555-10-22T07+01">\1</time>
+    selectors:
+      - page: "1"
+        exact: "hora septima mane, ante meridiem"
   - value: >-
       {{ "Wesel, Nordrhein-Westfalen, DE" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Wesell in Gelderland"
+  - value: >-
+      <span lang="la-renais">\1</span>
+    selectors:
+      - page: "1"
+        exact: "hora septima mane, ante meridiem"
+  - value: >-
+      <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="51.5" />
+        \1
+      </span>
+    selectors:
+      - page: "1"
+        exact: "Lat. 51° 30′"
+  - value: >-
+      <abbr title="latitude">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Lat."
+  # 1557-07-30
+  - value: >-
+      <time datetime="1557-08-09">\1</time>
+    selectors:
+      - page: "1"
+        exact: "July 30th"
   - value: >-
       {{ "unknown -- Arundell" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Mr. Arundell"
   - value: >-
       {{ "Cornwall, South West, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Cornwayle"
+  - value: >-
+      <time datetime="1557-08-09T16+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "circa [horam] quartam a meridie"
+  - value: >-
+      <ins>horam</span>
+    selectors:
+      - page: "1"
+        exact: "[horam]"
+  # 1558-12-14
+  - value: >-
+      <time datetime="1558-12-24">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Dec. 14th"
+  - value: >-
+      <abbr>\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Dec."
+        suffix: " 14th"
   - value: >-
       {{ "Nevelle, Mary" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Mary Nevelle, alias Mary Lewknor"
+  - value: >-
+      <time datetime="1558-12-24T11+00/12+00" lang="la-renais">\1</time>
+    selectors:
+      - page: "1"
+        exact: "inter 11 et meridiem mane"
   - value: >-
       {{ "Chichester, South East, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Chichester"
+  # 1560-07-08
+  - value: >-
+      <time datetime="1560-07-08">\1</time>
+    selectors:
+      - page: "1"
+        exact: "July 8th"
   - value: >-
       {{ "Clifford, Margaret" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Margaret Russell Cowntess of Cumberland"
+  - value: >-
+      <time datetime="1560-07-08T09:09+00" lang="la-renais">\1</time>
+    selectors:
+      - page: "1"
+        exact: "hora 2 min. 9 Exoniæ mane"
   - value: >-
       {{ "Exeter, South West, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Exoniæ"
+  # 1561-08-14
+  - value: >-
+      <time datetime="1561-08-24">\1</time>
+    selectors:
+      - page: "1"
+        exact: "Aug. 14th"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "1"
+        exact: "Aug."
+        suffix: " 14th,"
   - value: >-
       {{ "unknown -- Heydon" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Mr. Heydon"
   - value: >-
       {{ "Baconsthorpe, East of England, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Baconsthorp in Norfolk"
+  - value: >-
+      <span lang="la-renais">\1</span>
+    selectors:
+      - page: "1"
+        exact: "hora noctis 11½ natus in comitatu"
+  - value: >-
+      <time datetime="1561-08-24T23:30+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "hora noctis 11½"
   - value: >-
       {{ "Surrey, South East, GB" | place_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "comitatu Surrey"
+  # 1563-03-23
+  - value: >-
+      <time datetime="1563-04-02">\1</time>
+    selectors:
+      - page: "1"
+        exact: "March 23rd"
   - value: >-
       {{ "Fennar, William" | person_link: "\1" }}
     selectors:
-      - page: 1
+      - page: "1"
         exact: "Mr. William Fennar"
+  - value: >-
+      <time datetime="1563-04-02T23+00/03T00+00">\1</time>
+    selectors:
+      - page: "1"
+        exact: "a meridie inter horam undecimam et duodecimam nocte"
+  # 1563-07-03
+  - value: >-
+      <time datetime="1563-07-03">\1</time>
+    selectors:
+      - page: "1"
+        exact: "June 23rd"
   - value: >-
       {{ "Cooper, Jane" | person_link: "\1" }}
     selectors:
-      - page: "1-2"
-        exact: "Jane Cooper, now Mystris Kelly"
+      - page: "1"
+        exact: "Jane Cooper"
+      - page: "2"
+        exact: "Mystris Kelly"
+  - value: >-
+      <time datetime="1563-07-03T12+00/04T00+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "toward evening"
+  # 1563-09-28
+  - value: >-
+      <time datetime="1563-10-08">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Sept. 28th"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Sept."
+        suffix: " 28th,"
+  - value: >-
+      {{ "Ask, John" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mr. John Ask"
+  - value: >-
+      <time datetime="1563-10-08T00+00/12+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "ante meridiem"
+  - value: >-
+      <span lang="en-emodeng">\1</span>
+    selectors:
+      - page: "2"
+        exact: "by York six myle on this syde"
+  - value: >-
+      {{ "York, Yorkshire and the Humber, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "York"
+  - value: >-
+      {{ "Mownson, Elizabeth" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Elizabeth Mownson"
+  - value: >-
+      <time datetime="~1563-10-08T09+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "circa horam 9 mane"
+  - value: >-
+      {{ "Mownson, Thomas" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Thomæ Mownson"
+  - value: >-
+      {{ "unknown -- Brown" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Brown"
+  # 1564-03-01
+  - value: >-
+      {{ "Cooke, Brigit" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mrs. Brigit Cooke"
+      - page: "2"
+        prefix: "But "
+        exact: "she"
+        suffix: " thinketh"
+      - page: "2"
+        prefix: "thinketh "
+        exact: "herself"
+        suffix: " to be"
+      - page: "2"
+        exact: "Mrs. Brigit Cooke"
+  - value: >-
+      <time datetime="~1564-03-11T07+00/19+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "before none or after"
+  - value: >-
+      <time datetime="1593-03-11" lang="la-renais">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Saynt David’s Day, which is the first day of March, being Wensday"
+      - page: "2"
+        exact: "anno 1593, Martii primo"
+  - value: >-
+      {{ "Dee, John" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        prefix: "but "
+        exact: "I"
+        suffix: " cannot yet"
+  # 1564-06-20
+  - value: >-
+      <time datetime="1564-06-30">\1</time>
+    selectors:
+      - page: "2"
+        exact: "June 20th"
+  - value: >-
+      {{ "unknown -- Hudson" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mr. Hudson"
+  - value: >-
+      <time datetime="1564-06-30T07+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "hora septima ante meridiem"
+  # 1564-08-21
+  - value: >-
+      <time datetime="1564-08-31">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Aug. 21st"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Aug."
+        suffix: " 21st,"
+  - value: >-
+      {{ "Goose, Winifred" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Wenefride Goose"
+  - value: >-
+      <time datetime="1564-08-31T09+00/10+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "inter 9 et 10 a meridie"
+  - value: >-
+      <span lang="en-emodeng">\1</span>
+    selectors:
+      - page: "2"
+        exact: "by Kingstone"
+  # 1565-09-12
+  - value: >-
+      <time datetime="1565-09-22">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Sept. 12th"
+  - value: >-
+      <abbr title="August">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Sept."
+        suffix: " 12th,"
+  - value: >-
+      {{ "Pontoys, John" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "John Pontoys"
+  - value: >-
+      <time datetime="1565-09-22T09+00/10">\1</time>
+    selectors:
+      - page: "2"
+        exact: "inter 9 et 10 ante meridiem"
+  - value: >-
+      {{ "Stony Stratford, South East, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Stony-Stratford"
+  - value: >-
+      <time datetime="1565-09-22T08:43+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "hora 8 min. 43"
+  - value: >-
+      <abbr title="minute">\1</time>
+    selectors:
+      - page: "2"
+        exact: "min."
+  # 1565-10-17
+  - value: >-
+      <time datetime="1565-10-27">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Oct. 17th"
+  - value: >-
+      <abbr title="October">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Oct."
+        suffix: " 17th,"
+  - value: >-
+      {{ "Kelley, Thomas" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Thomas Kelley"
+  - value: >-
+      <time datetime="1565-10-27T16+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "hora quarta a meridie"
+  - value: >-
+      {{ "Worcester, West Midlands, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Wurceter"
+  # 1565-12-21
+  - value: >-
+      <time datetime="1565-12-31">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Dec. 21st"
+  - value: >-
+      <abbr title="December">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Dec."
+        suffix: " 21st,"
+  - value: >-
+      {{ "Mownson, Thomas" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mr. Thomas Mownson"
+  - value: >-
+      <time datetime="1565-12-31T11+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "at 11 of the clok in the morning"
+  # 1568-07-14
+  - value: >-
+      <time datetime="1568-07-24">\1</time>
+    selectors:
+      - page: "2"
+        exact: "July 14th"
+  - value: >-
+      {{ "Emery, William" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "William Emery"
+  - value: >-
+      {{ "Danbury, East of England, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Danbery in Essex"
+  - value: >-
+      <time datetime="1568-07-24T23+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "post undecimam horam noctis"
+  # 1568-09-24
+  - value: >-
+      <time datetime="1568-10-04">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Sept. 24th"
+  - value: >-
+      <abbr title="September">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Sept."
+        suffix: " 24th,"
+  - value: >-
+      {{ "Anderson, Margaret" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Margaret Anderson"
+  - value: >-
+      <time datetime="1568-10-04T07+00/08+00">\1</time>
+    selectors:
+      - page: "2"
+        exact: "mane inter 7 et 8"
+  # 1571-02-15
+  - value: >-
+      {{ "Swallow, Samuel" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Samuel Swallow"
+  - value: >-
+      {{ "Thaxted, East of England, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Thaxstede in Essex"
+  - value: >-
+      <time datetime="1571-02-25">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Feb. 15th"
+  - value: >-
+      <abbr title="February">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Feb."
+        suffix: " 15th"
+  - value: >-
+      <time datetime="~1571-02-25T11:30+00" lang="la-renais">\1</time>
+    selectors:
+      - page: "2"
+        exact: "ante meridiem, inter horam undecimam et duodecimam, forte hora media post undecimam"
+  # 1575-07-31
+  - value: >-
+      <time datetime="1575-08-10">\1</time>
+    selectors:
+      - page: "2"
+        exact: "July 31st"
+  - value: >-
+      {{ "Steward, Simeon" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Simeon Stuard"
+  - value: >-
+      {{ "Shinfield, South East, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Shinfelde"
+  - value: >-
+      {{ "Huicke, Robert" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "his grandfather"
+      - page: "2"
+        exact: "Dr. Huyck"
+  # 1577-01-16
+  - value: >-
+      <time datetime="1577-01-26">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Jan. 16th"
+  - value: >-
+      <abbr title="January">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "Jan."
+        suffix: " 16th,"
+  - value: >-
+      {{ "Dudley, Robert" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "The Erle of Lecester"
+  - value: >-
+      {{ "Sidney, Phillip" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mr. Phillip Sydney"
+  - value: >-
+      {{ "Dyer, Edward" | person_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "Mr. Dyer"
+  - value: >-
+      <abbr title="et cetera" lang="la-renais">\1</abbr>
+    selectors:
+      - page: "2"
+        exact: "&c."
+  - value: >-
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_link: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "my howse"
