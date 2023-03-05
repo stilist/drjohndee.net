@@ -79,8 +79,10 @@ module HistoricalDiary
       def presentational_name
         return @presentational_name if defined? @presentational_name
 
-        @presentational_name = Redactions.new(record['name'],
-                                              redactions: redactions(SINGULAR_NOUN)).text
+        annotations = redactions(SINGULAR_NOUN)['reflows']
+        annotation = Annotation.new(record['name'],
+                                    annotations: annotations)
+        @presentational_name = annotation.text
       end
 
       private

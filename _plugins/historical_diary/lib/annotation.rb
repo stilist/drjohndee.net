@@ -20,24 +20,34 @@
 
 module HistoricalDiary
   class Annotation
-    def initialize(text, annotations: {})
+    def initialize(text, annotations: [])
       raise ArgumentError unless text.is_a?(String)
 
       @annotations = annotations
       @text = text.dup
+      @processed = false
     end
 
     def text
+      return @text if processed?
+
       parsed_annotations.each do |pattern, replacement|
         @text.gsub! pattern, replacement
       end
+      @processed = true
+
+      @text
     end
 
     private
 
     attr_reader :annotations
 
+    def processed? = @processed
+
     def parsed_annotations
+      return [] if annotations.nil?
+
       annotations.flat_map do |annotation|
         exact_replacement = annotation['value']
         next if exact_replacement.nil?
