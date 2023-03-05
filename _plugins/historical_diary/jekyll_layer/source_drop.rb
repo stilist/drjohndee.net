@@ -18,12 +18,21 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
+require 'forwardable'
+
 module HistoricalDiary
   module JekyllLayer
     # Combined <tt>SourceDocument</tt> and `source` Data File, for use in
     # Jekyll-specific code.
     class SourceDrop < Jekyll::Drops::Drop
       include Drop
+
+      extend Forwardable
+      def_delegators :source_document,
+                     :markup_redactions_for_page,
+                     :notes_for_page,
+                     :page,
+                     :page_numbers
 
       mutable false
 
@@ -53,28 +62,9 @@ module HistoricalDiary
 
       def work = source_data['work']&.dup || {}
 
-      def page_numbers = source_document&.page_numbers
+      def page(requested) = source_document[requested]
 
-      RANGE_PATTERN = /\A(\w+)(?:-(\w+))\z/
-      def page(requested)
-        return if source_document.nil?
-
-        if requested.is_a?(Numeric) then processed = requested
-        elsif requested.is_a?(String)
-          matches = requested.match(RANGE_PATTERN)
-          processed = if !matches.nil? && matches[2] then (matches[1]..matches[2])
-                      else requested
-                      end
-        else
-          raise ArgumentError, "'#{requested.inspect}' is not a valid page number"
-        end
-
-        source_document[processed]
-      end
-
-      def language
-        record['language'] || site_object.config['lang']
-      end
+      def language = record['language'] || site_object.config['lang']
 
       def presentational_name
         return @presentational_name if defined? @presentational_name

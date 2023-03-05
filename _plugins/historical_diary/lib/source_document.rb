@@ -59,6 +59,19 @@ module HistoricalDiary
           volume_key,
         ].compact.join ', '
       end
+
+      # @todo handle iteration for folio, Roman numerals, etc
+      def page_range(requested)
+        case requested
+        when Integer then [requested.to_s]
+        when String
+          parts = requested.split('-')
+          (parts.first..parts.last)
+        when Array, Range then requested
+        else
+          raise ArgumentError, 'Must specify at least one page number'
+        end
+      end
     end
 
     def initialize(identifier, raw_text:, redactions: nil)
@@ -86,15 +99,7 @@ module HistoricalDiary
     def [](requested)
       process!
 
-      # @todo handle iteration for folio etc
-      range = case requested
-              when Integer, String then [requested]
-              when Array then requested
-              when Range then requested.to_a
-              else
-                raise ArgumentError, 'Must specify at least one page number'
-              end
-
+      range = self.class.page_range(requested)
       range.map { |page_number| page(page_number) }
     rescue KeyError => e
       missing_page = e.message.match(/:\s"?(\d+)"?/)

@@ -28,9 +28,7 @@ module HistoricalDiary
   class SourceDocumentPage
     extend Forwardable
     def_delegators :document,
-                   :identifier,
-                   :redactions
-    private :redactions
+                   :identifier
 
     attr_reader :page_number
 
@@ -38,26 +36,15 @@ module HistoricalDiary
       @document = document
       @page_number = page_number
       @raw_text = raw_text
-
-      @processed = raw_text.empty?
     end
 
-    def notes = document.notes(page_number)
+    def notes = document.notes_for_page(page_number)
 
     def text = raw_text
 
+    private
+
     attr_reader :document,
                 :raw_text
-
-    #     # `raw_text` with `notes` removed, and basic transformations
-    #     # applied to extract paragraphs and compensate for words split
-    #     # across lines
-    #     def chunks
-    #       process!
-
-    #       return @chunks if defined?(@chunks)
-
-    #       @chunks = @modified_text.split(/\n+/)
-    #     end
   end
 end
