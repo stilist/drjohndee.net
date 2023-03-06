@@ -83,35 +83,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% assign custom_footnote_keys = '' | split: '' -%}
   {% assign related_dates = '' | split: '' -%}
 
-  {% if content.size > 0 -%}
   <main class="page-content"
            itemprop=articleBody>
     {{ content }}
-    <ul class="entries h-entry">
-      {% for entry in page.documents -%}
-        {% if entry.related_dates -%}
-        {% for related_date in entry.related_dates -%}
-          {% assign related_dates = related_dates | push: related_date %}
-        {% endfor -%}
-        {% endif -%}
-
-        {% if entry.footnotes -%}
-        {% for footnote in entry.footnotes -%}
-          {% capture footnote_key %}{{ entry.source_key }}/{{footnote}}{% endcapture -%}
-          {% assign custom_footnote_keys = custom_footnote_keys | push: footnote_key %}
-        {% endfor -%}
-        {% endif -%}
-
-        <li class="entry">
-          {% include entry.html entry=entry -%}
-        </li>
-      {% endfor %}
-    </ul>
   </main>
-  {% endif -%}
-
-  {% assign commentary_keys = page.timestamp | commentary_for_date -%}
-  {% include transcludes.html keys=commentary_keys collection="commentary" -%}
 
   <section class='secondary'>
     {% if related_dates.size > 0 -%}
@@ -152,7 +127,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% assign sanitized_places = page.places | sort | uniq -%}
         {% for place_key in sanitized_places -%}
         <li>
-          {% include place_link.html place_key=place_key -%}
+          {{ place_key | place_link }}
         </li>
         {% endfor -%}
       </ul>
@@ -164,9 +139,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <h3>Tags</h3>
       <ul class="annotation-content">
         {% assign sanitized_tags = page.tags | sort | uniq -%}
-        {% for tag_text in sanitized_tags -%}
+        {% for tag_key in sanitized_tags -%}
         <li>
-          {% include tag_link.html tag_text=tag_text -%}
+          {{ tag_key | tag_link }}
         </li>
         {% endfor -%}
       </ul>
@@ -179,15 +154,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <ul class="annotation-content">
         {% for source_key in page.sources_keys -%}
         <li>
-          {% include source_link.html source_key=source_key -%}
+          {{ source_key | source_link }}
         </li>
         {% endfor -%}
       </ul>
     </aside>
     {% endif -%}
-
-    {% assign footnote_keys = page.timestamp | relevant_footnotes -%}
-    {% assign all_footnote_keys = footnote_keys | concat: custom_footnote_keys -%}
-    {% include transcludes.html keys=all_footnote_keys collection="footnotes" -%}
   </section>
 </article>

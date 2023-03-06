@@ -50,7 +50,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <h3 class="page-subtitle">
       {% if work.author_key -%}
       {% include person_data.html person_key=work.author_key itemprop="author" -%}
-      Written by {% include person_link.html person_key=work.author_key -%}
+      Written by {{ work.author_key | person_link }}
       {% endif -%}
 
       {% if work.author_key and work.editor_key -%}
@@ -61,7 +61,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
       {% if work.editor_key -%}
       {% include person_data.html person_key=work.editor_key itemprop="editor" -%}
-      by {% include person_link.html person_key=work.editor_key -%}
+      by {{ work.editor_key | person_link }}
       {% endif -%}
     </h3>
     {% endif -%}

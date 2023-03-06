@@ -45,11 +45,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <ul class="grouping topics">
     {% for tag_hash in site.tags -%}
     <li class="grouping-item topic">
-      {% assign tag_text = tag_hash | first -%}
-      {% include tag_link.html tag_text=tag_text -%}
+      {% assign tag_key = tag_hash | first -%}
+      {{ tag_key | tag_link }}
+
       {% assign tag_count = tag_hash | last | size -%}
       {% if tag_count == 1 -%}
-      (1 entry)
+      ({{ tag_count }} entry)
       {% else -%}
       ({{ tag_count }} entries)
       {% endif -%}
@@ -64,7 +65,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign sorted_keys = site.data.people | hash_keys | sort_people_keys -%}
     {% for person_key in sorted_keys -%}
     <li class="grouping-item person">
-      {% include person_link.html person_key=person_key -%}
+      {{ person_key | person_link }}
+
       {% assign related_dates = person_key | dates_for_person -%}
       {% if related_dates.size == 1 -%}
       (1 appearance)
@@ -82,7 +84,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign sorted_keys = site.data.places | hash_keys | sort -%}
     {% for place_key in sorted_keys -%}
     <li class="grouping-item place">
-      {% include place_link.html place_key=place_key -%}
+      {{ place_key | place_link }}
+
       {% assign related_dates = place_key | dates_for_place -%}
       {% if related_dates.size == 1 -%}
       (1 appearance)
@@ -100,7 +103,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% assign sorted_keys = site.data.sources | hash_keys | sort_hash -%}
     {% for source_key in sorted_keys -%}
     <li class="grouping-item source">
-      {% include source_link.html source_key=source_key -%}
+      {{ source_key | source_link }}
     </li>
     {% endfor -%}
   </ul>

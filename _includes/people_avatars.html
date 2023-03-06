@@ -30,7 +30,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% assign sorted_keys = include.people_keys | sort -%}
 {% for person_key in sorted_keys -%}
   {% if person_key != highlighted_person_key -%}
-  {% assign person_record = person_key | person_data -%}
   <li>
     {% include person_avatar.html person_key=person_key -%}
   </li>

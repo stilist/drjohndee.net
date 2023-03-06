@@ -138,8 +138,6 @@ module HistoricalDiary
       def drop
         return @drop if defined?(@drop)
 
-        @drop = nil
-
         context = context_from_site @site
         @drop = drop_class.new key, context: context
       end

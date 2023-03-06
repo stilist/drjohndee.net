@@ -26,14 +26,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h2>
   </header>
 
-  <article class="page-content"
-           itemprop=articleBody>
-    {% assign tagged_dates = page.tag_key | collection_entry: "tags" | sort -%}
-    {% if tagged_dates.size > 0 -%}
+  <article class="page-content" itemprop=articleBody>
+    {% if page.linked_docs.size > 0 -%}
     <ul>
-      {% for date in tagged_dates -%}
-      <li>{% include day_page_link.html date=date %}</li>
+      {% for doc in page.linked_docs -%}
+      <li>
+        <a href="{{ doc.url }}">
+          <time datetime="{{ doc.date | date: "%Y-%m-%d" }}">
+            {{ doc.date | date: "%A, %e %B %Y" }}
+          </time>
+        </a>
+      </li>
       {% endfor -%}
+    </ul>
     {% endif -%}
   </article>
 
