@@ -20,35 +20,29 @@
 
 module HistoricalDiary
   module JekyllLayer
-    module PlaceFilters
+    module TagFilters
       include Filter
 
-      def place_data(key) = drop(key, drop_class: place_drop_class)
+      def tag_data(key) = drop(key, drop_class: tag_drop_class)
 
-      def place_language(key) = drop(key, drop_class: place_drop_class)['name_language']
-
-      def place_presentational_name(key)
-        drop(key, drop_class: place_drop_class).presentational_name
-      end
-
-      def place_link(key, display_text = '')
+      def tag_link(key, display_text = nil)
         data_record_link(key,
                          display_text: display_text,
-                         drop_class: place_drop_class)
+                         drop_class: tag_drop_class)
       end
 
-      def place_reference(key, display_text = '')
+      def tag_reference(key, display_text = nil)
         data_record_reference(key,
                               display_text: display_text,
-                              drop_class: place_drop_class)
+                              drop_class: tag_drop_class)
       end
 
-      def place_url(key) = data_record_url(key, drop_class: place_drop_class)
+      def tag_url(key) = data_record_url(key, drop_class: tag_drop_class)
 
       private
 
-      def place_drop_class = PlaceDrop
+      def tag_drop_class = TagDrop
     end
   end
 end
-Liquid::Template.register_filter HistoricalDiary::JekyllLayer::PlaceFilters
+Liquid::Template.register_filter HistoricalDiary::JekyllLayer::TagFilters

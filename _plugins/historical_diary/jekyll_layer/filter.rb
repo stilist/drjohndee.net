@@ -29,38 +29,48 @@ module HistoricalDiary
 
       protected
 
-      def data_record_link(key, display_text: nil)
-        attributes = data_record_tag_attributes(key, data_type: drop_class::PLURAL_NOUN)
+      def data_record_link(key, drop_class:, display_text: nil)
+        attributes = data_record_tag_attributes(key,
+                                                data_type: drop_class::PLURAL_NOUN,
+                                                drop_class: drop_class)
+        text = display_text || attributes["default_text"]
 
         <<~HTML
           <a
-            href="#{data_record_url(key)}"
+            href="#{data_record_url(key, drop_class: drop_class)}"
             class="#{attributes['class']}"
-            data-key="#{attributes['dataKey']}">#{display_text || key}</a>
+            data-key="#{attributes['data_key']}">#{text}</a>
         HTML
       end
 
-      def data_record_reference(key, display_text: nil)
-        attributes = data_record_tag_attributes(key, data_type: drop_class::PLURAL_NOUN)
+      def data_record_reference(key, drop_class:, display_text: nil)
+        attributes = data_record_tag_attributes(key,
+                                                data_type: drop_class::PLURAL_NOUN,
+                                                drop_class: drop_class)
+        text = display_text || attributes["default_text"]
 
         <<~HTML
           <span
             class="#{attributes['class']}"
-            data-key="#{attributes['dataKey']}">#{display_text || key}</span>
+            data-key="#{attributes['data_key']}">#{text}</span>
         HTML
       end
 
-      def data_record_tag_attributes(key, data_type:)
+      def data_record_tag_attributes(key, data_type:, drop_class:)
         {
           "class" => "data-entity data-#{data_type}",
-          "dataKey" => "#{data_type}/#{sanitize_key(key)}",
+          "data_key" => "#{data_type}/#{sanitize_key(key)}",
+          "default_text" => drop(key, drop_class: drop_class).presentational_name,
         }.freeze
       end
 
-      def data_record_url(key) = drop(key).permalink
+      def data_record_url(key, drop_class:)
+        drop(key, drop_class: drop_class).permalink
+      end
 
-      def drop(key)
-        DROPS[key] ||= drop_class.new(key, context: @context)
+      def drop(key, drop_class:)
+        cache_key = "#{drop_class.name}/#{key}"
+        DROPS[cache_key] ||= drop_class.new(key, context: @context)
       end
     end
   end

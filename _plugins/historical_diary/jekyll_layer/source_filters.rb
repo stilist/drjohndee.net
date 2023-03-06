@@ -23,7 +23,7 @@ module HistoricalDiary
     module SourceFilters
       include Filter
 
-      alias source_data drop
+      def source_data(key) = drop(key, drop_class: source_drop_class)
 
       # > Author. Title. Title of container (do not list container for standalone
       # > books, e.g. novels), Other contributors (translators or editors),
@@ -40,7 +40,7 @@ module HistoricalDiary
       # > country, or if the publisher is unknown in North America.
       def mla_citation(source_key, location, edition_key = nil, volume_key = nil, author_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
-        data = drop key
+        data = drop key, drop_class: source_drop_class
 
         publication_date = data['date']
         unless publication_date.nil?
@@ -100,27 +100,31 @@ module HistoricalDiary
 
       def source_language(source_key, edition_key = nil, volume_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
-        drop(key).language
+        drop(key, drop_class: source_drop_class).language
       end
 
       def source_presentational_name(source_key, edition_key = nil, volume_key = nil)
         key = SourceDocument.build_identifier source_key, edition_key, volume_key
-        drop(key).presentational_name
+        drop(key, drop_class: source_drop_class).presentational_name
       end
 
-      def source_link(key, display_text)
-        data_record_link(key, display_text: display_text)
+      def source_link(key, display_text = '')
+        data_record_link(key,
+                         display_text: display_text,
+                         drop_class: source_drop_class)
       end
 
-      def source_reference(key, display_text)
-        data_record_reference(key, display_text: display_text)
+      def source_reference(key, display_text = '')
+        data_record_reference(key,
+                              display_text: display_text,
+                              drop_class: source_drop_class)
       end
 
-      def source_url(key) = data_record_url(key)
+      def source_url(key) = data_record_url(key, drop_class: source_drop_class)
 
       private
 
-      def drop_class = PersonDrop
+      def source_drop_class = SourceDrop
     end
   end
 end

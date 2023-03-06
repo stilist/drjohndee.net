@@ -31,6 +31,8 @@ require_relative 'jekyll_layer/person_page_generator'
 require_relative 'jekyll_layer/source_filters'
 require_relative 'jekyll_layer/source_page_generator'
 require_relative 'jekyll_layer/static_map_tile_block'
+require_relative 'jekyll_layer/tag_filters'
+require_relative 'jekyll_layer/tag_page_generator'
 require_relative 'jekyll_layer/transclusion_block'
 require_relative 'jekyll_layer/transclusion_tag'
 
@@ -46,6 +48,7 @@ module HistoricalDiary
     autoload :PersonDrop, 'jekyll_layer/person_drop'
     autoload :PlaceDrop, 'jekyll_layer/place_drop'
     autoload :SourceDrop, 'jekyll_layer/source_drop'
+    autoload :TagDrop, 'jekyll_layer/tag_drop'
     autoload :TransclusionLiquidHelpers, 'jekyll_layer/transclusion_liquid_helpers'
     autoload :Utilities, 'jekyll_layer/utilities'
   end
