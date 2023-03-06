@@ -29,6 +29,8 @@ url: "https://www.drjohndee.net" # the base hostname & protocol for your site, e
 
 lang: en-US
 
+permalink: /:year/:month/:day:output_ext
+
 # site metadata
 default_calendar_system: "Julian"
 doi: "10.5281/zenodo.4511512"
@@ -54,8 +56,6 @@ theme_color:
   light: "#994900"
   # --accent-60--components (light theme)
   light_wide_gamut: "0.6 0.29 0"
-twitter:
-  username: stilist
 
 # Build settings
 cache_dir: &cache_dir _cache.nosync # `.nosync` prevents iCloud from syncing files
@@ -126,3 +126,7 @@ defaults:
       path: "sources/"
     values:
       layout: "source"
+  - scope:
+      path: "tags/"
+    values:
+      layout: "tag"
