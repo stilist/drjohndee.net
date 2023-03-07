@@ -8,29 +8,14 @@
 
 creator_key: "Cole, Jordan"
 reflows:
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      inſtances
+  - value: inſtances
     selectors:
-      - type: TextQuoteSelector
-        exact: "inſtan- ces"
+      - exact: "inſtan- ces"
 
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      EPICURUS
+  - value: EPICURUS
     selectors:
-      - type: TextQuoteSelector
-        exact: "EPI- CURUS"
+      - exact: "EPI- CURUS"
 
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      proved
+  - value: proved
     selectors:
-      - type: TextQuoteSelector
-        exact: "pro- ved"
+      - exact: "pro- ved"

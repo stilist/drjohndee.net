@@ -7,12 +7,8 @@
 # details.
 
 creator_key: "Cole, Jordan"
+source_key: "Brief Lives"
 reflows:
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      Contemporaries
+  - value: Contemporaries
     selectors:
-      - type: TextQuoteSelector
-        exact: "Con- temporaries"
+      - exact: "Con- temporaries"

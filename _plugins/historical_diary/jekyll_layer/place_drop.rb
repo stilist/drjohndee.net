@@ -47,7 +47,7 @@ module HistoricalDiary
           latitude: latitude,
           longitude: longitude,
           name: presentational_name,
-          record_type: precision,
+          record_type: precision.to_sym,
         }
       end
 

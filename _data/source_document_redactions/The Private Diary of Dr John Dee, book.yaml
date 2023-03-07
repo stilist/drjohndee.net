@@ -172,15 +172,15 @@ markup:
         exact: "Aug."
         suffix: " 25th"
   - value: >-
-      {{ "Hickman, Bartholomew" | person_link: "\1" }}
+      {{ "Hickman, Bartholomew" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Barthilmew Hikman"
       - page: "1"
         exact: "his"
-        suffix: " reporte"
+        suffix: " own reporte"
   - value: >-
-      {{ "Lower Shuckburgh, West Midlands, GB" | place_link: "\1" }}
+      {{ "Lower Shuckburgh, West Midlands, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Shugborowh in Warwikshyre"
@@ -190,7 +190,7 @@ markup:
       - page: "1"
         exact: "toward evening"
   - value: >-
-      {{ "Dee, John" | person_link: "\1" }}
+      {{ "Dee, John" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "My"
@@ -208,7 +208,7 @@ markup:
         exact: "Oct."
         suffix: " 25th"
   - value: >-
-      {{ "Van Der Meulen, Daniel" | person_link: "\1" }}
+      {{ "Van Der Meulen, Daniel" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "D. Daniel Vander Meulen"
@@ -219,7 +219,7 @@ markup:
         exact: "D."
         suffix: " Daniel Vander"
   - value: >-
-      {{ "Antwerp, Vlaams Gewest, BE" | place_link: "\1" }}
+      {{ "Antwerp, Vlaams Gewest, BE" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Antwerpiæ"
@@ -235,12 +235,12 @@ markup:
       - page: "1"
         exact: "April 22nd"
   - value: >-
-      {{ "Fromond, Jane" | person_link: "\1" }}
+      {{ "Fromond, Jane" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Jane Fromonds"
   - value: >-
-      {{ "Cheam, Greater London, GB" | place_link: "\1" }}
+      {{ "Cheam, Greater London, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Cheyam"
@@ -262,7 +262,7 @@ markup:
         exact: "Aug."
         suffix: " 1st,"
   - value: >-
-      {{ "Kelley, Edward" | person_link: "\1" }}
+      {{ "Kelley, Edward" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Ed. Kelly"
@@ -290,7 +290,7 @@ markup:
         exact: "Oct."
         suffix: " 12th,"
   - value: >-
-      {{ "Bertie, Peregrine" | person_link: "\1" }}
+      {{ "Bertie, Peregrine" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "the Lord Willughby"
@@ -300,7 +300,7 @@ markup:
       - page: "1"
         exact: "hora septima mane, ante meridiem"
   - value: >-
-      {{ "Wesel, Nordrhein-Westfalen, DE" | place_link: "\1" }}
+      {{ "Wesel, Nordrhein-Westfalen, DE" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Wesell in Gelderland"
@@ -329,12 +329,12 @@ markup:
       - page: "1"
         exact: "July 30th"
   - value: >-
-      {{ "unknown -- Arundell" | person_link: "\1" }}
+      {{ "unknown -- Arundell" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Mr. Arundell"
   - value: >-
-      {{ "Cornwall, South West, GB" | place_link: "\1" }}
+      {{ "Cornwall, South West, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Cornwayle"
@@ -361,7 +361,7 @@ markup:
         exact: "Dec."
         suffix: " 14th"
   - value: >-
-      {{ "Nevelle, Mary" | person_link: "\1" }}
+      {{ "Nevelle, Mary" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Mary Nevelle, alias Mary Lewknor"
@@ -371,7 +371,7 @@ markup:
       - page: "1"
         exact: "inter 11 et meridiem mane"
   - value: >-
-      {{ "Chichester, South East, GB" | place_link: "\1" }}
+      {{ "Chichester, South East, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Chichester"
@@ -382,7 +382,7 @@ markup:
       - page: "1"
         exact: "July 8th"
   - value: >-
-      {{ "Clifford, Margaret" | person_link: "\1" }}
+      {{ "Clifford, Margaret" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Margaret Russell Cowntess of Cumberland"
@@ -392,7 +392,7 @@ markup:
       - page: "1"
         exact: "hora 2 min. 9 Exoniæ mane"
   - value: >-
-      {{ "Exeter, South West, GB" | place_link: "\1" }}
+      {{ "Exeter, South West, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Exoniæ"
@@ -409,12 +409,12 @@ markup:
         exact: "Aug."
         suffix: " 14th,"
   - value: >-
-      {{ "unknown -- Heydon" | person_link: "\1" }}
+      {{ "unknown -- Heydon" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Mr. Heydon"
   - value: >-
-      {{ "Baconsthorpe, East of England, GB" | place_link: "\1" }}
+      {{ "Baconsthorpe, East of England, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Baconsthorp in Norfolk"
@@ -429,7 +429,7 @@ markup:
       - page: "1"
         exact: "hora noctis 11½"
   - value: >-
-      {{ "Surrey, South East, GB" | place_link: "\1" }}
+      {{ "Surrey, South East, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "comitatu Surrey"
@@ -440,7 +440,7 @@ markup:
       - page: "1"
         exact: "March 23rd"
   - value: >-
-      {{ "Fennar, William" | person_link: "\1" }}
+      {{ "Fennar, William" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Mr. William Fennar"
@@ -449,14 +449,14 @@ markup:
     selectors:
       - page: "1"
         exact: "a meridie inter horam undecimam et duodecimam nocte"
-  # 1563-07-03
+  # 1563-06-23
   - value: >-
       <time datetime="1563-07-03">\1</time>
     selectors:
       - page: "1"
         exact: "June 23rd"
   - value: >-
-      {{ "Cooper, Jane" | person_link: "\1" }}
+      {{ "Cooper, Jane" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Jane Cooper"
@@ -480,7 +480,7 @@ markup:
         exact: "Sept."
         suffix: " 28th,"
   - value: >-
-      {{ "Ask, John" | person_link: "\1" }}
+      {{ "Ask, John" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. John Ask"
@@ -495,12 +495,12 @@ markup:
       - page: "2"
         exact: "by York six myle on this syde"
   - value: >-
-      {{ "York, Yorkshire and the Humber, GB" | place_link: "\1" }}
+      {{ "York, Yorkshire and the Humber, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "York"
   - value: >-
-      {{ "Mownson, Elizabeth" | person_link: "\1" }}
+      {{ "Mownson, Elizabeth" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Elizabeth Mownson"
@@ -510,18 +510,18 @@ markup:
       - page: "2"
         exact: "circa horam 9 mane"
   - value: >-
-      {{ "Mownson, Thomas" | person_link: "\1" }}
+      {{ "Mownson, Thomas" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Thomæ Mownson"
   - value: >-
-      {{ "unknown -- Brown" | person_link: "\1" }}
+      {{ "unknown -- Brown" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Brown"
   # 1564-03-01
   - value: >-
-      {{ "Cooke, Brigit" | person_link: "\1" }}
+      {{ "Cooke, Brigit" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mrs. Brigit Cooke"
@@ -533,8 +533,6 @@ markup:
         prefix: "thinketh "
         exact: "herself"
         suffix: " to be"
-      - page: "2"
-        exact: "Mrs. Brigit Cooke"
   - value: >-
       <time datetime="~1564-03-11T07+00/19+00">\1</time>
     selectors:
@@ -548,7 +546,7 @@ markup:
       - page: "2"
         exact: "anno 1593, Martii primo"
   - value: >-
-      {{ "Dee, John" | person_link: "\1" }}
+      {{ "Dee, John" | person_reference: "\1" }}
     selectors:
       - page: "2"
         prefix: "but "
@@ -561,7 +559,7 @@ markup:
       - page: "2"
         exact: "June 20th"
   - value: >-
-      {{ "unknown -- Hudson" | person_link: "\1" }}
+      {{ "unknown -- Hudson" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. Hudson"
@@ -583,7 +581,7 @@ markup:
         exact: "Aug."
         suffix: " 21st,"
   - value: >-
-      {{ "Goose, Winifred" | person_link: "\1" }}
+      {{ "Goose, Winifred" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Wenefride Goose"
@@ -610,7 +608,7 @@ markup:
         exact: "Sept."
         suffix: " 12th,"
   - value: >-
-      {{ "Pontoys, John" | person_link: "\1" }}
+      {{ "Pontoys, John" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "John Pontoys"
@@ -620,7 +618,7 @@ markup:
       - page: "2"
         exact: "inter 9 et 10 ante meridiem"
   - value: >-
-      {{ "Stony Stratford, South East, GB" | place_link: "\1" }}
+      {{ "Stony Stratford, South East, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Stony-Stratford"
@@ -647,7 +645,7 @@ markup:
         exact: "Oct."
         suffix: " 17th,"
   - value: >-
-      {{ "Kelley, Thomas" | person_link: "\1" }}
+      {{ "Kelley, Thomas" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Thomas Kelley"
@@ -657,7 +655,7 @@ markup:
       - page: "2"
         exact: "hora quarta a meridie"
   - value: >-
-      {{ "Worcester, West Midlands, GB" | place_link: "\1" }}
+      {{ "Worcester, West Midlands, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Wurceter"
@@ -674,7 +672,7 @@ markup:
         exact: "Dec."
         suffix: " 21st,"
   - value: >-
-      {{ "Mownson, Thomas" | person_link: "\1" }}
+      {{ "Mownson, Thomas" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. Thomas Mownson"
@@ -690,12 +688,12 @@ markup:
       - page: "2"
         exact: "July 14th"
   - value: >-
-      {{ "Emery, William" | person_link: "\1" }}
+      {{ "Emery, William" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "William Emery"
   - value: >-
-      {{ "Danbury, East of England, GB" | place_link: "\1" }}
+      {{ "Danbury, East of England, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Danbery in Essex"
@@ -717,7 +715,7 @@ markup:
         exact: "Sept."
         suffix: " 24th,"
   - value: >-
-      {{ "Anderson, Margaret" | person_link: "\1" }}
+      {{ "Anderson, Margaret" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Margaret Anderson"
@@ -728,12 +726,12 @@ markup:
         exact: "mane inter 7 et 8"
   # 1571-02-15
   - value: >-
-      {{ "Swallow, Samuel" | person_link: "\1" }}
+      {{ "Swallow, Samuel" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Samuel Swallow"
   - value: >-
-      {{ "Thaxted, East of England, GB" | place_link: "\1" }}
+      {{ "Thaxted, East of England, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Thaxstede in Essex"
@@ -760,17 +758,17 @@ markup:
       - page: "2"
         exact: "July 31st"
   - value: >-
-      {{ "Steward, Simeon" | person_link: "\1" }}
+      {{ "Steward, Simeon" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Simeon Stuard"
   - value: >-
-      {{ "Shinfield, South East, GB" | place_link: "\1" }}
+      {{ "Shinfield, South East, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Shinfelde"
   - value: >-
-      {{ "Huicke, Robert" | person_link: "\1" }}
+      {{ "Huicke, Robert" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "his grandfather"
@@ -789,17 +787,17 @@ markup:
         exact: "Jan."
         suffix: " 16th,"
   - value: >-
-      {{ "Dudley, Robert" | person_link: "\1" }}
+      {{ "Dudley, Robert" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "The Erle of Lecester"
   - value: >-
-      {{ "Sidney, Phillip" | person_link: "\1" }}
+      {{ "Sidney, Phillip" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. Phillip Sydney"
   - value: >-
-      {{ "Dyer, Edward" | person_link: "\1" }}
+      {{ "Dyer, Edward" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. Dyer"
@@ -809,7 +807,7 @@ markup:
       - page: "2"
         exact: "&c."
   - value: >-
-      {{ "Dee's house in Mortlake, Greater London, GB" | place_link: "\1" }}
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "my howse"

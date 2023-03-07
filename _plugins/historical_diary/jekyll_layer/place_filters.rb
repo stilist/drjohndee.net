@@ -31,13 +31,13 @@ module HistoricalDiary
         drop(key, drop_class: place_drop_class).presentational_name
       end
 
-      def place_link(key, display_text = '')
+      def place_link(key, display_text = nil)
         data_record_link(key,
                          display_text: display_text,
                          drop_class: place_drop_class)
       end
 
-      def place_reference(key, display_text = '')
+      def place_reference(key, display_text = nil)
         data_record_reference(key,
                               display_text: display_text,
                               drop_class: place_drop_class)

@@ -52,13 +52,13 @@ module HistoricalDiary
         person_presentational_name(key) != person_full_name(key)
       end
 
-      def person_link(key, display_text = '')
+      def person_link(key, display_text = nil)
         data_record_link(key,
                          display_text: display_text,
                          drop_class: person_drop_class)
       end
 
-      def person_reference(key, display_text = '')
+      def person_reference(key, display_text = nil)
         data_record_reference(key,
                               display_text: display_text,
                               drop_class: person_drop_class)

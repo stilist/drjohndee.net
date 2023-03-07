@@ -108,13 +108,13 @@ module HistoricalDiary
         drop(key, drop_class: source_drop_class).presentational_name
       end
 
-      def source_link(key, display_text = '')
+      def source_link(key, display_text = nil)
         data_record_link(key,
                          display_text: display_text,
                          drop_class: source_drop_class)
       end
 
-      def source_reference(key, display_text = '')
+      def source_reference(key, display_text = nil)
         data_record_reference(key,
                               display_text: display_text,
                               drop_class: source_drop_class)

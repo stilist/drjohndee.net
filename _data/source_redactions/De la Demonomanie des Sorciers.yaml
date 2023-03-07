@@ -8,20 +8,10 @@
 
 creator_key: "Cole, Jordan"
 reflows:
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      Demonomanie
+  - value: Demonomanie
     selectors:
-      - type: TextQuoteSelector
-        exact: "Demonoma- nie"
+      - exact: "Demonoma- nie"
 
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      Sorciers
+  - value: Sorciers
     selectors:
-      - type: TextQuoteSelector
-        exact: "Sor- ciers"
+      - exact: "Sor- ciers"

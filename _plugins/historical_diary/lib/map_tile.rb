@@ -55,9 +55,9 @@ module HistoricalDiary
       { query: %i[light], theme: :light },
     ].freeze
     TILESETS = {
-      dark: 'mapbox/dark-v10',
-      default: 'mapbox/light-v10',
-      light: 'mapbox/light-v10',
+      dark: 'mapbox/dark-v11',
+      default: 'mapbox/light-v11',
+      light: 'mapbox/light-v11',
     }.freeze
     URL_BASE = 'https://api.mapbox.com/styles/v1'
     # These values should give reasonable output in most cases. If you need

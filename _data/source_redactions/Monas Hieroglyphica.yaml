@@ -8,29 +8,14 @@
 
 creator_key: "Cole, Jordan"
 reflows:
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      Hieroglyphica
+  - value: Hieroglyphica
     selectors:
-      - type: TextQuoteSelector
-        exact: "Hiero- glyphica"
+      - exact: "Hiero- glyphica"
 
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      Bohemiæ
+  - value: Bohemiæ
     selectors:
-      - type: TextQuoteSelector
-        exact: "Bo- hemiæ"
+      - exact: "Bo- hemiæ"
 
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      regem
+  - value: regem
     selectors:
-      - type: TextQuoteSelector
-        exact: "re- gem"
+      - exact: "re- gem"

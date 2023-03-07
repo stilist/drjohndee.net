@@ -80,9 +80,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
   </nav>
 
-  {% assign custom_footnote_keys = '' | split: '' -%}
-  {% assign related_dates = '' | split: '' -%}
-
   <main class="page-content"
            itemprop=articleBody>
     {{ content }}
@@ -124,8 +121,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <aside class="annotations annotations-places">
       <h3>Places</h3>
       <ul class="annotation-content">
-        {% assign sanitized_places = page.places | sort | uniq -%}
-        {% for place_key in sanitized_places -%}
+        {% for place_key in page.places -%}
         <li>
           {{ place_key | place_link }}
         </li>
