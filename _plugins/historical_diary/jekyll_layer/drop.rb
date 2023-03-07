@@ -73,6 +73,8 @@ module HistoricalDiary
         @data_key ||= "#{self.class::SINGULAR_NOUN}_key"
       end
 
+      def language = nil
+
       protected
 
       def data_for_type(type)

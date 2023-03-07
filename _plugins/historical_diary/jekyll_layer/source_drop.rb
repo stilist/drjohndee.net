@@ -64,7 +64,9 @@ module HistoricalDiary
 
       def page(requested) = source_document[requested]
 
-      def language = record['language'] || site_object.config['lang']
+      def language = record['language']
+
+      def presentational_name_language = record['name_language'] || language
 
       def presentational_name
         return @presentational_name if defined? @presentational_name

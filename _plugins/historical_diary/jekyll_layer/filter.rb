@@ -33,13 +33,15 @@ module HistoricalDiary
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
-        text = display_text || attributes["default_text"]
+        default_text = attributes.delete 'default_text'
+        text = display_text || default_text
+
+        html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
+                         .join ' '
 
         <<~HTML
-          <a
-            href="#{data_record_url(key, drop_class: drop_class)}"
-            class="#{attributes['class']}"
-            data-key="#{attributes['data_key']}">#{text}</a>
+          <a #{html}
+            href="#{data_record_url(key, drop_class: drop_class)}">#{text}</a>
         HTML
       end
 
@@ -47,21 +49,24 @@ module HistoricalDiary
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
-        text = display_text || attributes["default_text"]
+        default_text = attributes.delete 'default_text'
+        text = display_text || default_text
+
+        html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
+                         .join ' '
 
         <<~HTML
-          <span
-            class="#{attributes['class']}"
-            data-key="#{attributes['data_key']}">#{text}</span>
+          <span #{html}>#{text}</span>
         HTML
       end
 
       def data_record_tag_attributes(key, data_type:, drop_class:)
         {
           "class" => "data-entity data-#{data_type}",
-          "data_key" => "#{data_type}/#{sanitize_key(key)}",
+          "data-key" => "#{data_type}/#{sanitize_key(key)}",
           "default_text" => drop(key, drop_class: drop_class).presentational_name,
-        }.freeze
+          "lang" => drop(key, drop_class: drop_class).language,
+        }.compact
       end
 
       def data_record_url(key, drop_class:)
