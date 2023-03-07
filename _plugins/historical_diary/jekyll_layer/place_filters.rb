@@ -31,15 +31,15 @@ module HistoricalDiary
         drop(key, drop_class: place_drop_class).presentational_name
       end
 
-      def place_link(key, display_text = nil)
+      def place_link(key, display_content = nil)
         data_record_link(key,
-                         display_text: display_text,
+                         display_content: display_content,
                          drop_class: place_drop_class)
       end
 
-      def place_reference(key, display_text = nil)
+      def place_reference(key, display_content = nil)
         data_record_reference(key,
-                              display_text: display_text,
+                              display_content: display_content,
                               drop_class: place_drop_class)
       end
 

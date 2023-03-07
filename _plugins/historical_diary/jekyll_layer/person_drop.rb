@@ -50,7 +50,7 @@ module HistoricalDiary
       #   "חַנִּיאֵל" => "חַ"
       def name_initials(maximum_characters = 2)
         input = record['presentational_name']&.values ||
-                identifier.split(/(,?\s|_)/)
+                identifier.gsub(/[,_]/, ' ').split(/\s+/)
 
         input.map { |word| word.unicode_normalize(:nfc).grapheme_clusters.first }
              .first(maximum_characters)

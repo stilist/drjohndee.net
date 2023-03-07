@@ -52,15 +52,29 @@ module HistoricalDiary
         person_presentational_name(key) != person_full_name(key)
       end
 
-      def person_link(key, display_text = nil)
+      def person_avatar(key, highlighted = false)
+        data = person_drop_class.new(key, context: @context)
+
+        content = <<~HTML
+          <span class="person-avatarInitials"
+                aria-hidden="true">#{person_initials(key)}</span>
+          <span class="is-assistiveOnly">#{person_full_name(key)}</span>
+        HTML
+
+        if data.key?('full_name') then person_link(key, content)
+        else person_reference(key, content)
+        end
+      end
+
+      def person_link(key, display_content = nil)
         data_record_link(key,
-                         display_text: display_text,
+                         display_content: display_content,
                          drop_class: person_drop_class)
       end
 
-      def person_reference(key, display_text = nil)
+      def person_reference(key, display_content = nil)
         data_record_reference(key,
-                              display_text: display_text,
+                              display_content: display_content,
                               drop_class: person_drop_class)
       end
 

@@ -29,34 +29,34 @@ module HistoricalDiary
 
       protected
 
-      def data_record_link(key, drop_class:, display_text: nil)
+      def data_record_link(key, drop_class:, display_content: nil)
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
         default_text = attributes.delete 'default_text'
-        text = display_text || default_text
+        content = display_content || default_text
 
         html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
                          .join ' '
 
         <<~HTML
           <a #{html}
-            href="#{data_record_url(key, drop_class: drop_class)}">#{text}</a>
+            href="#{data_record_url(key, drop_class: drop_class)}">#{content}</a>
         HTML
       end
 
-      def data_record_reference(key, drop_class:, display_text: nil)
+      def data_record_reference(key, drop_class:, display_content: nil)
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
         default_text = attributes.delete 'default_text'
-        text = display_text || default_text
+        content = display_content || default_text
 
         html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
                          .join ' '
 
         <<~HTML
-          <span #{html}>#{text}</span>
+          <span #{html}>#{content}</span>
         HTML
       end
 

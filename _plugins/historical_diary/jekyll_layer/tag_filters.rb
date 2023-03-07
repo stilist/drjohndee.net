@@ -25,15 +25,15 @@ module HistoricalDiary
 
       def tag_data(key) = drop(key, drop_class: tag_drop_class)
 
-      def tag_link(key, display_text = nil)
+      def tag_link(key, display_content = nil)
         data_record_link(key,
-                         display_text: display_text,
+                         display_content: display_content,
                          drop_class: tag_drop_class)
       end
 
-      def tag_reference(key, display_text = nil)
+      def tag_reference(key, display_content = nil)
         data_record_reference(key,
-                              display_text: display_text,
+                              display_content: display_content,
                               drop_class: tag_drop_class)
       end
 

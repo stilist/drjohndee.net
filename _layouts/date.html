@@ -109,8 +109,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <ul class="annotation-content">
         {% assign sanitized_people = page.people | sort | uniq -%}
         {% for person_key in sanitized_people -%}
-        <li>
-          {% include person_avatar.html person_key=person_key -%}
+        <li class="person-avatar">
+          {{ person_key | person_avatar }}
         </li>
         {% endfor -%}
       </ul>
