@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -7,7 +8,7 @@
 
 work:
   author_key: "Various authors"
-  language: en
+  language: "en-GB"
   license_key: "CC0 1.0"
   name: >-
     Philobiblon Society.

@@ -6,14 +6,8 @@
 # This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
 # details.
 
-creator_key: "Cole, Jordan"
 source_key: "A Blazyng Starre"
 reflows:
-  - body:
-    type: TextualBody
-    format: "text/plain"
-    value: >-
-      continewyng
+  - value: continewyng
     selectors:
-      - type: TextQuoteSelector
-        exact: "continew⹀ yng"
+      - exact: "continew⹀ yng"

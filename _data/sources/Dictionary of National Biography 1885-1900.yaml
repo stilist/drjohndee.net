@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -6,7 +7,7 @@
 # details.
 
 work:
-  language: en
+  language: en-GB
   license: "CC0 1.0"
   name: >-
     Dictionary of National Biography, 1885–1900

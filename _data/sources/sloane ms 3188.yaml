@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -21,7 +22,9 @@ editions:
     date: "1583"
     name: >-
       Anno 1581 1582 Mysteriorum Liber Primus. Mortlaci, Ⅰ
+    name_langue: "la-renais"
     type: Manuscript
   book:
+    date: "1672"
     type: Book
     url: "http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Sloane_MS_3188"

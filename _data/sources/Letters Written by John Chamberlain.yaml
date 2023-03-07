@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -15,11 +16,12 @@ work:
     John Chamberlain
     during
     the Reign of Queen Elizabeth
+  name_language: "en-GB"
 editions:
   compilation:
     date: "1861"
     date_text: "Ⅿ.ⅮⅭⅭⅭ.ⅩⅬⅠ."
-    language: en
+    language: "en-emodeng"
     publisher: "The Camden Society"
     type: Book
     url: "https://www.google.com/books?id=ahYpAAAAYAAJ"

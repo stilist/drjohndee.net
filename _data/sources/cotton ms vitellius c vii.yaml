@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
@@ -11,7 +12,7 @@ work:
     Cotton MS Vitellius C ⅤⅠⅠ
 editions:
   manuscript:
-    language: en
+    language: "en-GB"
     publisher: "The Chetham Society"
     type: Manuscript
     url: "http://searcharchives.bl.uk/IAMS_VU2:IAMS040-001103011"

@@ -1,3 +1,4 @@
+%YAML 1.2
 ---
 # The life and times of Dr John Dee
 # Copyright (C) 2020-2022  Jordan Cole <feedback@drjohndee.net>
@@ -14,6 +15,7 @@ work:
     temporaries, set down by
     John Aubrey, between
     the Years 1669 & 1696
+  name_language: "en-GB"
 editions:
   clarendon:
     city: "Oxford, South East, GB"

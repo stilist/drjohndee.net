@@ -1,0 +1,191 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+source:
+  work_key: "Brief Lives"
+  edition_key: "clarendon"
+
+# reflows:
+#   210:
+#     - start: "in-"
+#       end: "strument"
+#       value: "instrument"
+#     - start: "sea-"
+#       end: "quadrant"
+#       value: "\\1"
+#   211:
+#     - start: "Trout-"
+#       end: "bec"
+#       value: "Troutbec"
+#     - start: "gen-"
+#       end: "tleman"
+#       value: "gentleman"
+#     - start: "Nor-"
+#       end: "wich"
+#       value: "Norwich"
+#     - start: "ambas-"
+#       end: "sador"
+#       value: "ambassador"
+#   213:
+#     - start: "sick-"
+#       end: "nesse"
+#       value: "sicknesse"
+#     - start: "inscript-"
+#       end: "tions"
+#       value: "inscriptions"
+
+# notes:
+#   210:
+#     "†":
+#       start: "† Mrs. Dee,"
+#       end: "her the same."
+#     "*":
+#       exact: "* MS. Aubr. 7, fol. 18v."
+#     "**":
+#       start: "** MS. Aubr. 6, fol. 37:"
+#       end: "in MS. Aubr. 23, fol. 77."
+#     "***":
+#       start: "*** In a letter from Elias Ashmole to"
+#       end: "Anthony Wood: MS. Ballard 14, fol. 13."
+#     "****":
+#       start: "**** In a letter from Dr. John"
+#       end: "Wood F. 49, fol. 101."
+#     "*****":
+#       exact: "***** MS. Aubr. 8, fol. 6.ͬ"
+#   211:
+#     "†":
+#       start: "† J. Dee’s"
+#       end: "(sonne of Arthur)."
+#     "*":
+#       exact: "* MS. Aubr. 23, fol. 78."
+#     "**":
+#       exact: "** MS. Aubr. 23, fol. 77v."
+#     "***":
+#       exact: "*** MS. Aubr. 8, fol. 9v."
+#     "****":
+#       exact: "**** MS. Aubr. 6, fol. 37."
+#     "a":
+#       exact: "a See supra, pp. 61–65."
+#     "b":
+#       exact: "b Sir William Boswell."
+#     "1":
+#       214:
+#         start: "1 In MS. Aubr. 6, fol. 36,"
+#         end: "of the ascendant,’ etc."
+#     "2":
+#       214:
+#         start: "2 In MS. Aubr. 7, fol. 6,"
+#         end: "he left with Ashmole."
+#     "3":
+#       214:
+#         start: "3 In MS. Aubr. 6, fol. 37,"
+#         end: "Memorandum in"
+#       215:
+#         start: "the scutcheon at the"
+#         end: "factum est istud.’"
+#   212:
+#     "†":
+#       start: "† Vide Almanac,"
+#       end: "at Brecon."
+#     "a":
+#       exact: "a Anthony Wood notes, ‘ false.’"
+#     "b":
+#       start: "b See Clark’s Wood’s Life and"
+#       end: "Times, ⅰⅰ. 158."
+#     "c":
+#       exact: "c Dupl. with ‘ sanguine.’"
+#     "d":
+#       exact: "d ‘ 1672 ’ is added in pencil."
+#     "4":
+#       215:
+#         start: "4 Aubrey’s conversation"
+#         end: "fol. 192."
+#   213:
+#     "†":
+#       start: "† A Brief History"
+#       end: "accepted not.’"
+#     "*":
+#       exact: "* MS. Aubr. 6, fol. 38."
+
+# chunks:
+#   210:
+#     - exact: "John Davys (1550—1605)."
+#     - start: "* Memorandum —:"
+#       end: "Streights."
+#     - exact: "Arthur Dee (1579–1651)."
+#     - start: "** ‘ Arthur Dee,’"
+#       end: "Ephemerides."
+#     - exact: "Obiit Norwychi about 1650."
+#     - start: "*** 〈Arthur Dee told"
+#       end: "speculator.’"
+#     - start: "**** 〈Arthur Dee〉"
+#       end: "Browne’s.’"
+#     - exact: "John Dee (1527–1608)."
+#     - 210:
+#         start: "***** John Dee"
+#         end: "had a very"
+#       211:
+#         start: "faire cleare"
+#         end: "exceeding."
+#   211:
+#     - start: "* ‘ Johannes Dee, natus"
+#       end: "Ashmole, esq."
+#     - start: "** From Elias Ashmole"
+#       end: "in . . . London."
+#     - start: "*** John Dee"
+#       end: "marginall notes."
+#     - start: "**** I left about"
+#       end: "prince of South Wales."
+#     - start: "My great-grandfather,"
+#       end: "were often together."
+#     - start: "Arthur Dee, M.D.,"
+#       end: "somewhere in Kent."
+#   212:
+#     - start: "Memorandum:—Sir William"
+#       end: "see or gett."
+#     - start: "Quaere A. Wood"
+#       end: "Tuscany b."
+#     - start: "Meredith Lloyd sayes"
+#       end: "digge after it."
+#     - start: "Memorandum :—he told"
+#       end: "knowen the like."
+#     - start: "His picture in a wooden"
+#       end: "A very handsome man."
+#     - exact: "Investigatio cinerum Δ"
+#     - 212:
+#         start: "Old goodwife Faldo"
+#         end: "had a stone"
+#       213:
+#         start: "(marble)"
+#         end: "she knew this."
+#   213:
+#     - start: "He is buried"
+#       end: "quaere nomen."
+#     - start: "He dyed within"
+#       end: "Wharton’s Almanac."
+#     - start: "* He built"
+#       end: "that work’t it."
+#     - start: "A stone was"
+#       end: "himselfe)."
+#     - 213:
+#         exact: "He used to distill egge-shells, and ’twas from hence"
+#       214:
+#         start: "that Ben Johnson"
+#         end: "he meant."
+#   214:
+#     - start: "He was a great"
+#       end: "them friends."
+#     - start: "He was tall"
+#       end: "and a slitt."
+#     - exact: "A mighty good man he was."
+#     - start: "He was sent"
+#       end: "into Poland."
+#     - start: "Memorandum :—his"
+#       end: "was a witch."
+#     - start: "In J. David"
+#       end: "peritissimus.’"

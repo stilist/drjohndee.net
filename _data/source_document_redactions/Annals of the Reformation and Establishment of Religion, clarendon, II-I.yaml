@@ -1,0 +1,24 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+source:
+  work_key: "Annals of the Reformation and Establishment of Religion"
+  edition_key: "clarendon"
+  volume_key: "II-I"
+
+# reflows:
+#   523:
+#     - start: "un-"
+#       end: "dertaken"
+#       value: "undertaken"
+#     - start: "mathemati-"
+#       end: "cian"
+#       value: "mathematician"
+#     - start: "Ro-"
+#       end: "land"
+#       value: "Roland"
