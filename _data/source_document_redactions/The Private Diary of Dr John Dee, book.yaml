@@ -179,16 +179,18 @@ markup:
       - page: "1"
         exact: "his"
         suffix: " own reporte"
+  # out-of-order to resolve ambiguity in `exact`
+  - value: >-
+      <time datetime="1554-09-04T12+00/05T00+00">\1</time>
+    selectors:
+      - page: "1"
+        prefix: "Warwikshyre "
+        exact: "toward evening"
   - value: >-
       {{ "Lower Shuckburgh, West Midlands, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Shugborowh in Warwikshyre"
-  - value: >-
-      <time datetime="1554-09-04T12+00/26T00+00">\1</time>
-    selectors:
-      - page: "1"
-        exact: "toward evening"
   - value: >-
       {{ "Dee, John" | person_reference: "\1" }}
     selectors:
@@ -208,7 +210,7 @@ markup:
         exact: "Oct."
         suffix: " 25th"
   - value: >-
-      {{ "Van Der Meulen, Daniel" | person_reference: "\1" }}
+      {{ "van der Meulen, Daniel" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "D. Daniel Vander Meulen"
@@ -243,7 +245,7 @@ markup:
       {{ "Cheam, Greater London, GB" | place_reference: "\1" }}
     selectors:
       - page: "1"
-        exact: "Cheyam"
+        exact: "Cheyham"
   - value: >-
       <time datetime="1555-05-02T12+00">\1</time>
     selectors:
@@ -260,14 +262,14 @@ markup:
     selectors:
       - page: "1"
         exact: "Aug."
-        suffix: " 1st,"
+        suffix: " 1st"
   - value: >-
       {{ "Kelley, Edward" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "Ed. Kelly"
   - value: >-
-      <abbr title="Edouardus">\1</abbr>
+      <abbr title='Eduardus'>\1</abbr>
     selectors:
       - page: "1"
         exact: "Ed."
@@ -284,18 +286,18 @@ markup:
       - page: "1"
         exact: "Oct. 12th"
   - value: >-
-      <abbr title="August">\1</abbr>
+      <abbr title="October">\1</abbr>
     selectors:
       - page: "1"
         exact: "Oct."
-        suffix: " 12th,"
+        suffix: " 12th"
   - value: >-
       {{ "Bertie, Peregrine" | person_reference: "\1" }}
     selectors:
       - page: "1"
         exact: "the Lord Willughby"
   - value: >-
-      <time datetime="1555-10-22T07+01">\1</time>
+      <time datetime="1555-10-22T07+01" lang="la-renais">\1</time>
     selectors:
       - page: "1"
         exact: "hora septima mane, ante meridiem"
@@ -304,11 +306,6 @@ markup:
     selectors:
       - page: "1"
         exact: "Wesell in Gelderland"
-  - value: >-
-      <span lang="la-renais">\1</span>
-    selectors:
-      - page: "1"
-        exact: "hora septima mane, ante meridiem"
   - value: >-
       <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
         <meta itemprop="latitude" content="51.5" />
@@ -344,7 +341,7 @@ markup:
       - page: "1"
         exact: "circa [horam] quartam a meridie"
   - value: >-
-      <ins>horam</span>
+      <ins>horam</ins>
     selectors:
       - page: "1"
         exact: "[horam]"
@@ -355,7 +352,7 @@ markup:
       - page: "1"
         exact: "Dec. 14th"
   - value: >-
-      <abbr>\1</abbr>
+      <abbr title="December">\1</abbr>
     selectors:
       - page: "1"
         exact: "Dec."
@@ -377,7 +374,7 @@ markup:
         exact: "Chichester"
   # 1560-07-08
   - value: >-
-      <time datetime="1560-07-08">\1</time>
+      <time datetime="1560-07-18">\1</time>
     selectors:
       - page: "1"
         exact: "July 8th"
@@ -387,7 +384,7 @@ markup:
       - page: "1"
         exact: "Margaret Russell Cowntess of Cumberland"
   - value: >-
-      <time datetime="1560-07-08T09:09+00" lang="la-renais">\1</time>
+      <time datetime="1560-07-18T02:09+00" lang="la-renais">\1</time>
     selectors:
       - page: "1"
         exact: "hora 2 min. 9 Exoniæ mane"
@@ -407,7 +404,7 @@ markup:
     selectors:
       - page: "1"
         exact: "Aug."
-        suffix: " 14th,"
+        suffix: " 14th"
   - value: >-
       {{ "unknown -- Heydon" | person_reference: "\1" }}
     selectors:
@@ -422,7 +419,7 @@ markup:
       <span lang="la-renais">\1</span>
     selectors:
       - page: "1"
-        exact: "hora noctis 11½ natus in comitatu"
+        exact: "hora noctis 11½"
   - value: >-
       <time datetime="1561-08-24T23:30+00">\1</time>
     selectors:
@@ -466,6 +463,7 @@ markup:
       <time datetime="1563-07-03T12+00/04T00+00">\1</time>
     selectors:
       - page: "2"
+        prefix: ", "
         exact: "toward evening"
   # 1563-09-28
   - value: >-
@@ -474,11 +472,11 @@ markup:
       - page: "2"
         exact: "Sept. 28th"
   - value: >-
-      <abbr title="August">\1</abbr>
+      <abbr title="September">\1</abbr>
     selectors:
       - page: "2"
         exact: "Sept."
-        suffix: " 28th,"
+        suffix: " 28th"
   - value: >-
       {{ "Ask, John" | person_reference: "\1" }}
     selectors:
@@ -489,6 +487,7 @@ markup:
     selectors:
       - page: "2"
         exact: "ante meridiem"
+        suffix: ", by"
   - value: >-
       <span lang="en-emodeng">\1</span>
     selectors:
@@ -567,6 +566,7 @@ markup:
       <time datetime="1564-06-30T07+00">\1</time>
     selectors:
       - page: "2"
+        prefix: ", "
         exact: "hora septima ante meridiem"
   # 1564-08-21
   - value: >-
@@ -628,7 +628,7 @@ markup:
       - page: "2"
         exact: "hora 8 min. 43"
   - value: >-
-      <abbr title="minute">\1</time>
+      <abbr title="minute">\1</abbr>
     selectors:
       - page: "2"
         exact: "min."
@@ -790,9 +790,9 @@ markup:
       {{ "Dudley, Robert" | person_reference: "\1" }}
     selectors:
       - page: "2"
-        exact: "The Erle of Lecester"
+        exact: "the Erle of Lecester"
   - value: >-
-      {{ "Sidney, Phillip" | person_reference: "\1" }}
+      {{ "Sidney, Philip" | person_reference: "\1" }}
     selectors:
       - page: "2"
         exact: "Mr. Phillip Sydney"

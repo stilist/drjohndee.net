@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+presentational_name:
+  givenName: Brigit
+  familyName: Cooke
+
+full_name:
+  - text: Brigit
+    type: givenName
+    language: "sga"
+    id: "https://www.wikidata.org/entity/Q18145781"
+  - text: Cooke
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q658676"
+
+birth_date: "1564-03-11"

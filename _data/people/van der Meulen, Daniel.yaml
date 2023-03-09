@@ -10,6 +10,9 @@ presentational_name:
   givenName: Daniel
   surnamePrefix: van der
   familyName: Meulen
+name_initials:
+  - D
+  - M
 
 full_name:
   - text: Daniel

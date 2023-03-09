@@ -44,6 +44,6 @@ birth_date: "1516-02-18"
 death_date: "1558-11-17"
 calendar: "Julian"
 
-relations:
+parents:
   father: "Henry VIII"
   mother: "Catherine of Aragon"

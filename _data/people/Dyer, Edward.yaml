@@ -11,10 +11,10 @@ presentational_name:
   givenName: Edward
   familyName: Dyer
 full_name:
-  - text: Philip
+  - text: Edward
     type: givenName
     id: "https://www.wikidata.org/entity/Q278835"
-  - text: Sidney
+  - text: Dyer
     type: familyName
     id: "https://www.wikidata.org/entity/Q16869738"
 birth_date: "1543"

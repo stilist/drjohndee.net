@@ -1,0 +1,43 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2021  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+id: "https://www.wikidata.org/entity/Q7605533"
+presentational_name:
+  givenName: Margaret
+  familyName: Clifford
+
+full_name:
+  - text: Margaret
+    type: givenName
+    id: "https://www.wikidata.org/entity/Q4963612"
+  - text: Russell
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q1158262"
+    end_date: "1577-06-24"
+  - text: Clifford
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q18572439"
+    start_date: "1577-06-24"
+  - text: Countess of Cumberland
+    type: additionalName
+    additionalType: "https://w3id.org/pnv#honorificSuffix"
+    start_date: "1577-06-24"
+
+calendar: "Gregorian"
+birth_date: "1560-07-18"
+birth_location: "Exeter, South West, GB"
+death_date: "1616-05-24"
+death_location: "Brougham Castle, Brougham, North West, GB"
+
+parents:
+  father: "Russell, Francis"
+  mother: "Russell, Margaret"
+
+spouses:
+  - name: "Clifford, George"
+    start_date: "1577-06-24"

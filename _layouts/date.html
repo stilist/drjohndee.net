@@ -104,9 +104,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {% endif -%}
 
     {% if page.people.size > 0 -%}
-    <aside class="annotations annotations-places">
+    <aside class="annotations annotations-people">
       <h3>People</h3>
-      <ul class="annotation-content">
+      <ul class="annotation-content people-avatars">
         {% assign sanitized_people = page.people | sort | uniq -%}
         {% for person_key in sanitized_people -%}
         <li class="person-avatar">
