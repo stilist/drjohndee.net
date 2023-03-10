@@ -30,9 +30,9 @@ full_name:
 
 calendar: "Gregorian"
 birth_date: "1560-07-18"
-birth_location: "Exeter, South West, GB"
+birth_place: "Exeter, South West, GB"
 death_date: "1616-05-24"
-death_location: "Brougham Castle, Brougham, North West, GB"
+death_place: "Brougham Castle, Brougham, North West, GB"
 
 parents:
   father: "Russell, Francis"

@@ -55,18 +55,24 @@ module HistoricalDiary
         html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
                          .join ' '
 
-        <<~HTML
-          <span #{html}>#{content}</span>
-        HTML
+        metadata = drop(key, drop_class: drop_class).microdata['meta'] || []
+        meta_tags = metadata.map { |key, value| "<meta itemprop='#{key}' content='#{value}'>" }
+                            .join ' '
+        "<span #{html}>#{meta_tags} #{content}</span>"
       end
 
       def data_record_tag_attributes(key, data_type:, drop_class:)
-        {
+        html = {
           "class" => "data-entity data-#{data_type}",
           "data-key" => "#{data_type}/#{sanitize_key(key)}",
           "default_text" => drop(key, drop_class: drop_class).presentational_name,
           "lang" => drop(key, drop_class: drop_class).language,
         }.compact
+
+        microdata = drop(key, drop_class: drop_class).microdata
+                                                     .slice('itemid', 'itemscope', 'itemtype')
+
+        html.merge(microdata)
       end
 
       def data_record_url(key, drop_class:)

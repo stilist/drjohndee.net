@@ -7,16 +7,15 @@
 # details.
 
 presentational_name:
-  givenName: "Bartholomew"
-  familyName: "Hickman"
+  givenName: William
+  familyName: Emery
 
 full_name:
-  - text: Bartholomew
+  - text: William
     type: givenName
-    id: "https://www.wikidata.org/entity/Q4926315"
-  - text: Hickman
+    id: "https://www.wikidata.org/entity/Q12344159"
+  - text: Emery
     type: familyName
-    id: "https://www.wikidata.org/entity/Q16870774"
+    id: "https://www.wikidata.org/entity/Q16275674"
 
-# see 1554-08-25
-birth_date: "1554-09-04"
+birth_date: "1568-07-24"

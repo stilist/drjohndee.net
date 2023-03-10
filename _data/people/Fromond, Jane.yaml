@@ -7,18 +7,31 @@
 # details.
 
 id: "https://www.wikidata.org/entity/Q19001456"
-birth_name:
-  givenName: Jane
-  familyName: Fromond
+
 presentational_name:
   givenName: Jane
   familyName: Dee
+
+spouses:
+  # see 1578-02-15
+  - name: "Dee, John"
+    start_date: &dee_marriage "1578-02-15"
+
 full_name:
   - text: Jane
     type: givenName
     id: "https://www.wikidata.org/entity/Q1682564"
+  - text: Fromond
+    type: familyName
+    id: "https://www.wikidata.org/entity/Q27205691"
+    end_date: *dee_marriage
   - text: Dee
     type: familyName
     id: "https://www.wikidata.org/entity/Q37480086"
+    start_date: *dee_marriage
+
+# see 1555-04-22
 birth_date: "1554-04-22"
+# see 1555-04-22
+birth_place: "Cheam, Greater London, GB"
 death_date: "1604"

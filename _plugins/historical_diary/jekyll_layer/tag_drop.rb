@@ -30,6 +30,8 @@ module HistoricalDiary
       DATA_KEY = "#{SINGULAR_NOUN}_key".freeze
 
       def presentational_name = identifier
+
+      def microdata = {}.freeze
     end
   end
 end

@@ -7,13 +7,11 @@
 # details.
 
 id: "https://www.wikidata.org/entity/Q3459641"
+
 presentational_name:
   givenName: Peregrine
   familyName: Bertie
   additionalName: Baron Willoughby de Eresby
-name_initials:
-  - L
-  - W
 
 full_name:
   - text: Peregrine
@@ -30,5 +28,12 @@ full_name:
     type: additionalName
     id: "https://www.wikidata.org/entity/Q808681"
     additionalType: "https://w3id.org/pnv#honorificSuffix"
+
+name_initials:
+  - L
+  - W
+
+# see 1555-10-12
 birth_date: "1555-10-22"
+birth_place: "Wesel, Nordrhein-Westfalen, DE"
 death_date: "1601-06-25"

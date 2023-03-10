@@ -43,7 +43,7 @@ module HistoricalDiary
 
       def dig(*args) = record.dig(*args)
 
-      def permalink = relative_url("#{dirname}/#{basename}.html")
+      def permalink = absolute_url("#{dirname}/#{basename}.html")
 
       def preferred_key = record[data_key] || key
 
@@ -74,6 +74,18 @@ module HistoricalDiary
       end
 
       def language = nil
+
+      def microdata
+        {
+          'itemid' => "#{permalink}##{self.class::SINGULAR_NOUN}",
+          'itemscope' => nil,
+          'itemtype' => "https://schema.org/#{self.class::SINGULAR_NOUN.capitalize}",
+          'meta' => {
+            'name' => presentational_name,
+            'url' => permalink,
+          },
+        }.freeze
+      end
 
       protected
 

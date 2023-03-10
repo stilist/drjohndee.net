@@ -602,7 +602,7 @@ markup:
       - page: "2"
         exact: "Sept. 12th"
   - value: >-
-      <abbr title="August">\1</abbr>
+      <abbr title="September">\1</abbr>
     selectors:
       - page: "2"
         exact: "Sept."
@@ -739,13 +739,13 @@ markup:
       <time datetime="1571-02-25">\1</time>
     selectors:
       - page: "2"
-        exact: "Feb. 15th"
+        exact: "Feb. 15"
   - value: >-
       <abbr title="February">\1</abbr>
     selectors:
       - page: "2"
         exact: "Feb."
-        suffix: " 15th"
+        suffix: " 15"
   - value: >-
       <time datetime="~1571-02-25T11:30+00" lang="la-renais">\1</time>
     selectors:
@@ -757,6 +757,11 @@ markup:
     selectors:
       - page: "2"
         exact: "July 31st"
+  - value: >-
+      <time datetime="1575-08-10T23:30+00" lang="la-renais">\1</time>
+    selectors:
+      - page: "2"
+        exact: "natus ante diluculum per horam 11½"
   - value: >-
       {{ "Steward, Simeon" | person_reference: "\1" }}
     selectors:
