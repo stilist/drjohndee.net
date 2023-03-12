@@ -33,11 +33,13 @@ module HistoricalDiary
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
+        microdata = drop(key, drop_class: drop_class).microdata
+                                                     .except('meta')
+        with_microdata = attributes.merge(microdata)
+        html = serialize_attributes(with_microdata)
+
         default_text = attributes.delete 'default_text'
         content = display_content || default_text
-
-        html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
-                         .join ' '
 
         <<~HTML
           <a #{html}
@@ -45,34 +47,44 @@ module HistoricalDiary
         HTML
       end
 
+      def data_record_microdata(key, drop_class:, itemprop:)
+        microdata = drop(key, drop_class: drop_class).microdata
+        outer = microdata.except('meta')
+
+        <<~HTML
+          <span
+            itemprop="#{itemprop}"
+            #{serialize_attributes(outer)}>
+            #{serialize_microdata(microdata['meta'])}
+          </span>
+        HTML
+      end
+
       def data_record_reference(key, drop_class:, display_content: nil)
         attributes = data_record_tag_attributes(key,
                                                 data_type: drop_class::PLURAL_NOUN,
                                                 drop_class: drop_class)
+        microdata = drop(key, drop_class: drop_class).microdata
+                                                     .except('meta')
+        with_microdata = attributes.merge(microdata)
+        html = serialize_attributes(with_microdata)
+
         default_text = attributes.delete 'default_text'
         content = display_content || default_text
 
-        html = attributes.map { |key, value| "#{key}=\"#{value}\"" }
-                         .join ' '
-
-        metadata = drop(key, drop_class: drop_class).microdata['meta'] || []
-        meta_tags = metadata.map { |key, value| "<meta itemprop='#{key}' content='#{value}'>" }
-                            .join ' '
-        "<span #{html}>#{meta_tags} #{content}</span>"
+        metadata = drop(key, drop_class: drop_class).microdata
+                                                    .fetch('meta', [])
+        meta_tags = serialize_microdata(metadata)
+        "<span itemscope #{html}>#{meta_tags} #{content}</span>"
       end
 
       def data_record_tag_attributes(key, data_type:, drop_class:)
-        html = {
+        {
           "class" => "data-entity data-#{data_type}",
           "data-key" => "#{data_type}/#{sanitize_key(key)}",
           "default_text" => drop(key, drop_class: drop_class).presentational_name,
           "lang" => drop(key, drop_class: drop_class).language,
         }.compact
-
-        microdata = drop(key, drop_class: drop_class).microdata
-                                                     .slice('itemid', 'itemscope', 'itemtype')
-
-        html.merge(microdata)
       end
 
       def data_record_url(key, drop_class:)
@@ -82,6 +94,22 @@ module HistoricalDiary
       def drop(key, drop_class:)
         cache_key = "#{drop_class.name}/#{key}"
         DROPS[cache_key] ||= drop_class.new(key, context: @context)
+      end
+
+      def serialize_attributes(attributes)
+        mapped = attributes.map do |key, value|
+          next key if value.nil?
+
+          "#{key}=\"#{value}\""
+        end
+
+        mapped.join ' '
+      end
+
+      def serialize_microdata(microdata)
+        microdata.compact
+                 .map { |key, value| "<meta itemprop='#{key}' content='#{value}'>" }
+                 .join
       end
     end
   end

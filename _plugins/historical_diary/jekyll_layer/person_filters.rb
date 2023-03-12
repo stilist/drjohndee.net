@@ -78,6 +78,12 @@ module HistoricalDiary
                               drop_class: person_drop_class)
       end
 
+      def person_microdata(key, itemprop)
+        data_record_microdata(key,
+                              drop_class: person_drop_class,
+                              itemprop: itemprop)
+      end
+
       def person_url(key) = data_record_url(key, drop_class: person_drop_class)
 
       def sort_people_keys(keys)

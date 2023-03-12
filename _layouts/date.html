@@ -26,12 +26,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% endif -%}
 
   <nav class="page-header">
-    <h2 class="page-name p-name"
-        itemprop="name">
+    <h2 class="page-name p-name">
       <meta itemprop=headline content="{{ page.title }}">
       <meta itemprop=datePublished content="{{ page.date | date: '%F' }}">
 
-      <span class='display-date'>
+      {% assign author_key = page.author_key | default: site.author.key -%}
+      {{ author_key | person_microdata: 'author' }}
+
+      <span class="display-date"
+            itemprop="name">
         <span class='day-name'>{{ page.date | date: '%A' }}</span>,
         <time class="dt-published"
               datetime="{{ page.date | date: '%F' }}">
@@ -57,8 +60,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>←</span>
         <span class="is-assistiveOnly">View the previous entry, on</span>
-        <time datetime="{{ page.previous.timestamp }}">
-          {{ page.previous.timestamp }}
+        <time datetime="{{ page.previous.date | date: '%F' }}">
+          {{ page.previous.date | date: '%F' }}
         </time>
       </a>
       {% else -%}
@@ -71,8 +74,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>→</span>
         <span class="is-assistiveOnly">View the next entry, on</span>
-        <time datetime="{{ page.next.timestamp }}">
-          {{ page.next.timestamp }}
+        <time datetime="{{ page.next.date | date: '%F' }}">
+          {{ page.next.date | date: '%F' }}
         </time>
       </a>
       {% endif -%}
