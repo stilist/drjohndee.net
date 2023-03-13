@@ -28,20 +28,20 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <nav class="page-header">
     <h2 class="page-name p-name">
       <meta itemprop=headline content="{{ page.title }}">
-      <meta itemprop=datePublished content="{{ page.date | date: '%F' }}">
+      <meta itemprop=datePublished content="{{ page.date | date: "%F" }}">
 
       {% assign author_key = page.author_key | default: site.author.key -%}
-      {{ author_key | person_microdata: 'author' }}
+      {{ author_key | person_microdata: "author" }}
 
       <span class="display-date"
             itemprop="name">
-        <span class='day-name'>{{ page.date | date: '%A' }}</span>,
+        <span class="day-name">{{ page.date | date: "%A" }}</span>,
         <time class="dt-published"
-              datetime="{{ page.date | date: '%F' }}">
-          {{ page.date | date: '%e %B' }}
+              datetime="{{ page.date | date: "%F" }}">
+          {{ page.date | date: "%e %B" }}
         </time>
       </span>
-      {% assign year = page.date | date: '%Y' -%}
+      {% assign year = page.date | date: "%Y" -%}
       <a href="{{ year | relative_url }}.html">
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>{{ year }}</span>
@@ -53,15 +53,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </h2>
 
     {% if page.next or page.previous -%}
-    <div class='page-nextPrevious'>
+    <div class="page-nextPrevious">
       {% if page.previous -%}
       <a href="{{ page.previous.url }}"
          class="page-nextPrevious--isPrevious">
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>←</span>
         <span class="is-assistiveOnly">View the previous entry, on</span>
-        <time datetime="{{ page.previous.date | date: '%F' }}">
-          {{ page.previous.date | date: '%F' }}
+        <time datetime="{{ page.previous.date | date: "%F" }}">
+          {{ page.previous.date | date: "%F" }}
         </time>
       </a>
       {% else -%}
@@ -74,8 +74,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <span class="page-nextPrevious--indicator"
               aria-hidden=true>→</span>
         <span class="is-assistiveOnly">View the next entry, on</span>
-        <time datetime="{{ page.next.date | date: '%F' }}">
-          {{ page.next.date | date: '%F' }}
+        <time datetime="{{ page.next.date | date: "%F" }}">
+          {{ page.next.date | date: "%F" }}
         </time>
       </a>
       {% endif -%}
@@ -88,7 +88,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     {{ content }}
   </main>
 
-  <section class='secondary'>
+  <section class="secondary">
     {% if related_dates.size > 0 -%}
     <aside class="annotations annotations-related_dates">
       <h3>Related dates</h3>
@@ -96,7 +96,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         {% assign unique_related_dates = related_dates | uniq -%}
         {% for related_date in unique_related_dates -%}
         <li>
-          {% assign date_path = related_date | split: '-' | join: '/' -%}
+          {% assign date_path = related_date | split: "-" | join: "/" -%}
           <a href="{{ date_path | relative_url }}.html">
             <time datetime="{{ related_date }}">{{ related_date }}</time>
           </a>

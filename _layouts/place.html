@@ -32,6 +32,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% if site.license_key -%}
   <meta itemprop=license content="{{ site.license_key | license_url }}">
   {% endif -%}
+  {% if record.latitude or record.longitude %}
   <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
     {% if record.latitude -%}
     <meta itemprop="latitude" content="{{ record.latitude }}">
@@ -40,6 +41,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <meta itemprop="longitude" content="{{ record.longitude }}">
     {% endif -%}
   </span>
+  {% endif %}
 
   <header class="page-header">
     <h2 class="page-name"
