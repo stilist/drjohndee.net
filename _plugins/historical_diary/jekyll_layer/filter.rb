@@ -80,10 +80,10 @@ module HistoricalDiary
 
       def data_record_tag_attributes(key, data_type:, drop_class:)
         {
-          "class" => "data-entity data-#{data_type}",
-          "data-key" => "#{data_type}/#{sanitize_key(key)}",
-          "default_text" => drop(key, drop_class: drop_class).presentational_name,
-          "lang" => drop(key, drop_class: drop_class).language,
+          'class' => "data-entity data-#{data_type}",
+          'data-key' => "#{data_type}/#{sanitize_key(key)}",
+          'default_text' => drop(key, drop_class: drop_class).presentational_name,
+          'lang' => drop(key, drop_class: drop_class).language,
         }.compact
       end
 

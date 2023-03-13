@@ -80,27 +80,13 @@ module HistoricalDiary
 
       def initialize(site, key)
         @key = key
-
         @site = site
-        @base = site.source
-        @dir  = drop.dirname
 
-        @basename = drop.basename
-        @ext      = '.html'
-        @name     = "#{@basename}#{@ext}"
+        set_instance_variables
+        set_up_data
 
         Jekyll.logger.debug self.class.name do
           "Generating #{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
-        end
-
-        @data = drop.page_data['custom_metadata'].merge({
-                                                          'is_generated' => true,
-                                                          drop_class::DATA_KEY => drop.preferred_key,
-                                                          'title' => drop.presentational_name,
-                                                        })
-
-        data.default_proc = proc do |_, key|
-          site.frontmatter_defaults.find relative_path, :people, key
         end
       end
 
@@ -140,6 +126,29 @@ module HistoricalDiary
 
         context = context_from_site @site
         @drop = drop_class.new key, context: context
+      end
+
+      def set_instance_variables
+        @base = site.source
+        @dir  = drop.dirname
+
+        @basename = drop.basename
+        @ext      = '.html'
+        @name     = "#{@basename}#{@ext}"
+      end
+
+      def set_up_data
+        standard_metadata = {
+          'is_generated' => true,
+          'title' => drop.presentational_name,
+          drop_class::DATA_KEY => drop.preferred_key,
+        }
+        @data = drop.page_data['custom_metadata']
+                    .merge(standard_metadata)
+
+        data.default_proc = proc do |_, key|
+          site.frontmatter_defaults.find relative_path, :people, key
+        end
       end
     end
   end

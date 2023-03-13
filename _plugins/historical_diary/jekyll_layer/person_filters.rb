@@ -52,7 +52,7 @@ module HistoricalDiary
         person_presentational_name(key) != person_full_name(key)
       end
 
-      def person_avatar(key, highlighted = false)
+      def person_avatar(key)
         data = person_drop_class.new(key, context: @context)
 
         content = <<~HTML
