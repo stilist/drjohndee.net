@@ -64,11 +64,9 @@ module HistoricalDiary
           <span class="is-assistiveOnly">#{person_full_name(key)}</span>
         HTML
 
-        if data['full_name']
-          person_link key, content
-        else
-          person_reference key, content
-        end
+        return person_link(key, content) if data['full_name']
+
+        person_reference key, content
       end
 
       def person_link(key, display_content = nil, itemprop = nil)

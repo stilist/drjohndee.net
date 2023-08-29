@@ -47,9 +47,8 @@ module HistoricalDiary
              .gsub(/\s+/, '_')
         end
 
-        def shared_cache
-          @@shared_cache ||= ::Jekyll::Cache.new Module.nesting.last.to_s
-        end
+        @shared_cache = ::Jekyll::Cache.new Module.nesting.last.to_s
+        def shared_cache = UncategorizedHelpers.instance_variable_get(:@shared_cache)
       end
     end
   end

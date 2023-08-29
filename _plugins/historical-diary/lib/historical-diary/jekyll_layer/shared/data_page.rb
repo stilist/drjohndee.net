@@ -41,7 +41,7 @@ module HistoricalDiary
           set_instance_variables
           set_up_data
 
-          ::Jekyll.logger.debug self.class.name do
+          Jekyll.logger.debug self.class.name do
             "Generating #{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
           end
         end
@@ -92,11 +92,6 @@ module HistoricalDiary
         end
 
         def set_up_data
-          standard_metadata = {
-            'is_generated' => true,
-            'title' => drop['presentational_name'],
-            drop_class::DATA_KEY => drop.preferred_key,
-          }.freeze
           @data = drop.page_data['custom_metadata']
                       .merge standard_metadata
 
@@ -105,6 +100,14 @@ module HistoricalDiary
                                            drop_class::PLURAL_NOUN,
                                            key
           end
+        end
+
+        def standard_metadata
+          {
+            'is_generated' => true,
+            'title' => drop['presentational_name'],
+            drop_class::DATA_KEY => drop.preferred_key,
+          }.freeze
         end
       end
     end

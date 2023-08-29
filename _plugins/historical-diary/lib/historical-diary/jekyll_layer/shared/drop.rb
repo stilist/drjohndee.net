@@ -93,12 +93,6 @@ module HistoricalDiary
         def language = nil
 
         def microdata
-          begin
-            name = presentational_name
-          rescue NameError
-            name = record['presentational_name']
-          end
-
           {
             'itemid' => "#{permalink}##{self.class::SINGULAR_NOUN}",
             'itemscope' => nil,
@@ -166,6 +160,12 @@ module HistoricalDiary
           nil,
           '',
         ].freeze
+
+        def name
+          presentational_name
+        rescue NameError
+          record['presentational_name']
+        end
       end
     end
   end
