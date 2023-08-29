@@ -27,6 +27,7 @@ module HistoricalDiary
     # modules.
     module Shared
       autoload :Attributes,                resolve_path('shared/attributes')
+      autoload :Config,                    resolve_path('shared/config')
       autoload :DataPage,                  resolve_path('shared/data_page')
       autoload :DataPageGenerator,         resolve_path('shared/data_page_generator')
       autoload :Drop,                      resolve_path('shared/drop')

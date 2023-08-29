@@ -30,6 +30,7 @@ module HistoricalDiary
     #   {% endcommentary %}
     class CommentaryBlock < Liquid::Block
       include Shared::Attributes
+      include Shared::Config
       include Shared::Site
 
       def initialize(_, block_arguments, _)
@@ -38,13 +39,14 @@ module HistoricalDiary
         @raw_attributes = block_arguments
       end
 
+      # rubocop:disable Metric/MethodLength
       def render(context)
+        @context = context
         @commentary = super.dup.strip
 
-        attributes = attributes_to_hash(@raw_attributes)
+        attributes = attributes_to_hash @raw_attributes
 
-        site = site_from_context context
-        lang = attributes['language'] || site.config['lang']
+        lang = attributes['language'] || config(:subject_person_key)
 
         author_key = attributes['author_key']
         citation_input = "{{ \"#{author_key}\" | person_link }}"
@@ -70,6 +72,7 @@ module HistoricalDiary
           </figure>
         HTML
       end
+      # rubocop:enable Metric/MethodLength
 
       attr_reader :commentary
     end
