@@ -90,6 +90,8 @@ module HistoricalDiary
           @data_key ||= "#{self.class::SINGULAR_NOUN}_key"
         end
 
+        def exists? = !record.nil? && !record.empty?
+
         def language = nil
 
         def microdata
