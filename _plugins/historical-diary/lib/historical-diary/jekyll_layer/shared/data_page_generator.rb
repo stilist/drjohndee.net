@@ -22,10 +22,10 @@ module HistoricalDiary
   module JekyllLayer
     module Shared
       # This module provides a brief way to generate Jekyll Pages for a given
-      # collection of Data Files. It requires a <tt>Jekyll::Drop</tt> subclassed
-      # from <tt>HistoricalDiary::JekyllLayer::Drop</tt>, declared as a
-      # `#drop_class` method, and a <tt>Jekyll::Page</tt> subclass, declared as a
-      # `#page_class` method.
+      # collection of Data Files. It requires a <tt>Jekyll::Drop</tt>
+      # subclassed from <tt>HistoricalDiary::JekyllLayer::Drop</tt>, declared
+      # as a `#drop_class` method, and a <tt>Jekyll::Page</tt> subclass,
+      # declared as a `#page_class` method.
       #
       # @example
       #   class SourceGenerator

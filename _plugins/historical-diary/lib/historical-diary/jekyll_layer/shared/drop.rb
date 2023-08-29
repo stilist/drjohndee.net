@@ -23,6 +23,19 @@ require 'forwardable'
 module HistoricalDiary
   module JekyllLayer
     module Shared
+      # Convenience wrapper for interacting with site data files in a Liquid
+      # Drop.
+      #
+      # @example
+      #   class PersonDrop
+      #     include Shared::Drop
+      #
+      #     PLURAL_NOUN = 'people'
+      #     SINGULAR_NOUN = 'person'
+      #     DATA_KEY = "#{SINGULAR_NOUN}_key"
+      #
+      #     # ...
+      #   end
       module Drop
         include Jekyll::Filters::URLFilters
         include Site

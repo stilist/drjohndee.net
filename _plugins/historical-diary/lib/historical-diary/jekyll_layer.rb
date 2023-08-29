@@ -19,6 +19,8 @@
 #++
 
 module HistoricalDiary
+  # The <tt>JekyllLayer</tt> module has all the plugin code that directly
+  # interacts with Jekyll.
   module JekyllLayer
     autoload :Shared, File.expand_path('jekyll_layer/shared', __dir__)
   end

@@ -21,10 +21,15 @@
 module HistoricalDiary
   module JekyllLayer
     module Shared
+      # Convenience methods for working with a <tt>Jekyll::Site</tt> object.
       module Site
+        # Create a <tt>Liquid::Context</tt> from a <tt>Jekyll::Site</tt>
+        # instance.
+        #
         # @see https://github.com/jekyll/jekyll/blob/4.3-stable/test/test_filters.rb#L12
         def context_from_site(site) = Liquid::Context.new(site.site_payload, {}, site:)
 
+        # Get a <tt>Liquid::Context</tt>'s internal <tt>Jekyll::Site</tt>.
         def site_from_context(context) = context&.registers&.dig(:site)
 
         # Indirect access to Jekyll's public <tt>Jekyll::Site</tt> instance.

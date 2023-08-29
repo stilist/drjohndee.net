@@ -21,12 +21,22 @@
 module HistoricalDiary
   module JekyllLayer
     module Shared
+      # Convenience wrapper for building HTML microdata based on a
+      # <tt>Drop</tt>.
+      #
+      # @example
+      #   module PlaceFilters
+      #     include Shared::Filters
+      #
+      #     # ...
+      #   end
       module Filters
         include Attributes
         include UncategorizedHelpers
 
         protected
 
+        # Wrapper around a `drop_class` Drop for a single record.
         def filter_drop(key, drop_class:)
           shared_cache.getset "#{drop_class.name}/#{key}" do
             drop_class.new key, context: @context
@@ -52,6 +62,8 @@ module HistoricalDiary
                                 itemprop:
         end
 
+        # Build a chunk of HTML microdata for a record. Use `display_content`
+        # and `extra_attributes` for more control over the output.
         def data_record_microdata(key, drop_class:, itemprop:, display_content: nil, extra_attributes: {})
           microdata = filter_drop(key, drop_class:).microdata
           outer = microdata.except('meta').merge extra_attributes
@@ -64,6 +76,8 @@ module HistoricalDiary
           ].join
         end
 
+        # Wrapper around <tt>#data_record_microdata</tt> that automatically
+        # merges in <tt>#data_record_tag_attributes</tt>.
         def data_record_reference(key, drop_class:, display_content: nil, itemprop: nil)
           attributes = data_record_tag_attributes(key,
                                                   data_type: drop_class::PLURAL_NOUN,
@@ -80,6 +94,7 @@ module HistoricalDiary
 
         private
 
+        # Build a <tt>Hash</tt> of HTML attributes for a given record.
         def data_record_tag_attributes(key, data_type:, drop_class:)
           drop = filter_drop(key, drop_class:)
 
@@ -95,6 +110,7 @@ module HistoricalDiary
           filter_drop(key, drop_class:).permalink
         end
 
+        # Convert a <tt>Hash</tt> into HTML microdata in a `<meta>` tag.
         def serialize_metadata(metadata)
           return '' if metadata.nil?
 

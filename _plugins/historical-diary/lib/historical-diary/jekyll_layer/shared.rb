@@ -23,6 +23,8 @@ def resolve_path(path) = File.expand_path(path, __dir__)
 
 module HistoricalDiary
   module JekyllLayer
+    # Abstracted Jekyll-specific code that's useful in multiple classes or
+    # modules.
     module Shared
       autoload :Attributes,                resolve_path('shared/attributes')
       autoload :DataPage,                  resolve_path('shared/data_page')

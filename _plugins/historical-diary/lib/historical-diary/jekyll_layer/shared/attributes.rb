@@ -21,6 +21,7 @@
 module HistoricalDiary
   module JekyllLayer
     module Shared
+      # Convert between Liquid arguments and HTML attributes.
       module Attributes
         include UncategorizedHelpers
 
