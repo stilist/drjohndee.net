@@ -44,6 +44,9 @@ module HistoricalDiary
           Jekyll.logger.debug self.class.name do
             "Generating #{drop_class::SINGULAR_NOUN} page at '#{@dir}/#{@name}'"
           end
+
+          # @note Copied from `Jekyll::Page#initialize`.
+          Jekyll::Hooks.trigger :pages, :post_init, self
         end
 
         def url_placeholders
@@ -105,6 +108,7 @@ module HistoricalDiary
         def standard_metadata
           {
             'is_generated' => true,
+            'last_modified_at' => DateTime.now.to_date,
             'title' => drop['presentational_name'],
             drop_class::DATA_KEY => drop.preferred_key,
           }.freeze
