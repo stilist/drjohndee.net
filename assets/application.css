@@ -473,11 +473,11 @@ sup {
 /* @see https://webaim.org/techniques/css/invisiblecontent/ */
 .is-assistiveOnly {
   block-size: 1px;
-  left: -1px;
+  inline-size: 1px;
+  inset-block-start: auto;
+  inset-inline-start: -1px;
   overflow: hidden;
   position: absolute;
-  top: auto;
-  inline-size: 1px;
 }
 
 
@@ -800,10 +800,10 @@ ol.years > .year {
   background-color: transparent;
   border: var(--avatar-border-inline-size) solid currentColor;
   display: block;
+  inset-block-start: calc(var(--avatar-border-inline-size) * -1);
   inset-inline-start: calc(var(--avatar-border-inline-size) * -1);
   position: absolute;
   text-decoration: none;
-  top: calc(var(--avatar-border-inline-size) * -1);
 }
 .person-avatarInitials {
   align-items: center;
