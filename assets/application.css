@@ -665,6 +665,9 @@ ol.years > .year {
 .page-content li {
   line-height: calc(var(--vertical-rhythm) * 2);
 }
+.page-content [itemtype='https://schema.org/Comment'] {
+  margin-inline-start: calc(var(--column-inline-size) / 2);
+}
 
 .secondary {
   grid-area: secondary;
