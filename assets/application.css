@@ -431,6 +431,18 @@ blockquote::before {
 blockquote > :last-child {
   margin-block-end: 0;
 }
+del::before,
+del::after,
+ins::before,
+ins::after {
+  color: var(--neutral-40);
+}
+del::before {
+  content: '‹';
+}
+del::after {
+  content: '›';
+}
 h1,
 h2 {
   font-weight: 400;
@@ -452,12 +464,16 @@ hr {
   margin-inline-start: -15%;
   position: relative;
 }
-@supports not (inset-inline-start: 0) {
-  hr {
-    left: 50%;
-  }
+ins {
+  color: var(--neutral-70);
+  text-decoration: none;
 }
-
+ins::before {
+  content: '[';
+}
+ins::after {
+  content: ']';
+}
 p {
   line-height: var(--content-line-height);
 }
