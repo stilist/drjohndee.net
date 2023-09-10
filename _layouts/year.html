@@ -31,9 +31,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <div class='page-nextPrevious'>
       {% if page.previous -%}
       <a href="{{ page.previous.url }}"
-         class="page-nextPrevious--isPrevious"
-         aria-label="View the previous year, {{ page.year | minus: 1 }}">
-        ← {{ page.year | minus: 1 }}
+         class="page-nextPrevious--isPrevious">
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>←</span>
+        <span class="is-assistiveOnly">View the previous year,</span>
+        <time datetime="{{ page.year | minus: 1 }}">
+          {{ page.year | minus: 1 }}
+        </time>
       </a>
       {% else -%}
       <span class="page-nextPrevious--isPrevious"
@@ -41,9 +45,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% endif -%}
       {% if page.next -%}
       <a href="{{ page.next.url }}"
-         class="page-nextPrevious--isNext"
-         aria-label="View the following year, {{ page.year | plus: 1 }}">
-        → {{ page.year | plus: 1 }}
+         class="page-nextPrevious--isNext">
+        <span class="is-assistiveOnly">View the next year,</span>
+        <time datetime="{{ page.year | plus: 1 }}">
+          {{ page.year | plus: 1 }}
+        </time>
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>→</span>
       </a>
       {% endif -%}
     </div>

@@ -71,12 +71,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       {% if page.next -%}
       <a href="{{ page.next.url }}"
          class="page-nextPrevious--isNext">
-        <span class="page-nextPrevious--indicator"
-              aria-hidden=true>→</span>
         <span class="is-assistiveOnly">View the next entry, on</span>
         <time datetime="{{ page.next.date | date: "%F" }}">
           {{ page.next.date | date: "%F" }}
         </time>
+        <span class="page-nextPrevious--indicator"
+              aria-hidden=true>→</span>
       </a>
       {% endif -%}
     </div>
