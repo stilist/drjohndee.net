@@ -550,14 +550,10 @@ ol.years > .year {
   padding-inline-end: calc(var(--column-inline-size)
                          + var(--gutter-inline-size));
 }
-.page-name,
-.page-nextPrevious {
-  display: inline-block;
-  line-height: calc(var(--vertical-rhythm) * 3);
-}
 .page-name {
   font-size: 2.625rem;
   font-weight: 700;
+  line-height: calc(var(--vertical-rhythm) * 3);
   margin-block-end: calc(var(--vertical-rhythm) * -0.1);
   margin-block-start: 0;
   position: relative;
@@ -571,30 +567,15 @@ ol.years > .year {
   padding-inline-end: 2px;
 }
 .page-nextPrevious {
-  align-items: stretch;
-  block-size: calc(var(--vertical-rhythm) * 3);
-  flex-direction: column;
-  inline-size: calc(var(--column-inline-size) * 2);
-  padding-inline-start: 1rem;
-  vertical-align: top;
+  block-size: calc(var(--vertical-rhythm) * 1.5);
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1rem;
 }
 .page-nextPrevious--isNext,
 .page-nextPrevious--isPrevious {
-  display: block;
-  flex-grow: 1;
-  inline-size: 100%;
-  position: relative;
-  /* half of container's `line-height` */
-  block-size: calc(var(--vertical-rhythm) * 1.5);
+  display: flex;
   line-height: calc(var(--vertical-rhythm) * 1.5);
-}
-.page-nextPrevious--isNext {
-  align-self: end;
-  bottom: calc(var(--vertical-rhythm) * -0.3);
-}
-.page-nextPrevious--isPrevious {
-  align-self: start;
-  top: calc(var(--vertical-rhythm) * -0.3);
 }
 
 .source-material {
