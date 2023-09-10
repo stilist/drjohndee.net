@@ -60,12 +60,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <main class="page-content page-content--isCalendarYear">
     <ol class="calendar">
-      {% for month_hash in page.months -%}
+      {% for month_data in page.months -%}
       <li class="calendar-month">
-        {% assign month_data = month_hash | last -%}
-
         <span class='calendar-monthName'
-              aria-hidden>
+              aria-hidden=true>
           {{ month_data.name }}
         </span>
 
@@ -85,7 +83,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           {% endfor -%}
 
           {% for day in month_data.days -%}
-          {% if day.day_of_week == 0-%}<tr>{% endif -%}
+          {% if day.day_of_week == 0 -%}<tr>{% endif -%}
           {% if day.type == "no-content" or day.type == "filler" -%}
           {% assign aria = "aria-hidden='true'" -%}
           {% else -%}
@@ -95,8 +93,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             {% if day.type == "content" -%}
             <a href="{{ day.url | relative_url }}">
             {% endif -%}
-            <time datetime="{{ day.string }}">
-              {{ day.day_number }}
+            <time datetime="{{ day.date | date: "%F" }}">
+              {{ day.date | date: "%e" }}
             </time>
             {% if day.type == "content" -%}
             </a>
