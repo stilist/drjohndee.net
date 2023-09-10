@@ -428,21 +428,6 @@ blockquote::before {
   inset-inline-start: calc(var(--gutter-inline-size) * -0.5);
   position: absolute;
 }
-@supports not (inset-block-end: 0) {
-  blockquote::before {
-    bottom: 0;
-  }
-}
-@supports not (inset-block-start: 0) {
-  blockquote::before {
-    top: 0;
-  }
-}
-@supports not (inset-inline-start: 0) {
-  blockquote::before {
-    left: calc(var(--gutter-inline-size) * -0.5);
-  }
-}
 blockquote > :last-child {
   margin-block-end: 0;
 }
@@ -740,11 +725,6 @@ ol.years > .year {
   inset-inline-start: calc(var(--content-inline-size) * 0.20);
   position: absolute;
 }
-@supports not (inset-inline-start: 0) {
-  .entries::after {
-    left: calc(var(--content-inline-size) * 0.20);
-  }
-}
 #site-footer .doi {
   font-family: var(--font-monospace);
 }
@@ -824,11 +804,6 @@ ol.years > .year {
   position: absolute;
   text-decoration: none;
   top: calc(var(--avatar-border-inline-size) * -1);
-}
-@supports not (inset-inline-start: 0) {
-  .person-avatar a {
-    left: calc(var(--avatar-border-inline-size) * -1);
-  }
 }
 .person-avatarInitials {
   align-items: center;
