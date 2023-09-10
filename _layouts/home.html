@@ -20,7 +20,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endcomment -%}
 
 <div class="home">
-  {% assign years = site.subject_person_key | living_years %}
+  {% assign years = site.historical_diary.subject_person_key | person_living_years %}
 
   {% if years.size > 1 -%}
   <h2>Browse by year</h2>
