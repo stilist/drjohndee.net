@@ -27,14 +27,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <nav class="page-header">
     <h2 class="page-name p-name">
-      <meta itemprop=headline content="{{ page.title }}">
+      <meta itemprop="headline name" content="{{ page.title }}">
       <meta itemprop=datePublished content="{{ page.date | date: "%F" }}">
 
       {% assign author_key = page.author_key | default: site.author.key -%}
       {{ author_key | person_microdata: "author" }}
 
-      <span class="display-date"
-            itemprop="name">
+      <span class="display-date">
         <span class="day-name">{{ page.date | date: "%A" }}</span>,
         <time class="dt-published"
               datetime="{{ page.date | date: "%F" }}">
