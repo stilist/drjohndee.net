@@ -692,6 +692,9 @@ ol.years > .year {
 .annotations-footnotes {
   grid-area: secondary;
 }
+.annotations-people li + li {
+  margin-block-start: auto;
+}
 .annotations-footnotes h3 {
   margin-block-end: calc(var(--vertical-rhythm) * 0.4);
 }
@@ -766,6 +769,7 @@ ol.years > .year {
 }
 .calendar-date--filler {
   color: var(--calendar-filler-color);
+  opacity: 0.2;
 }
 .calendar-date--content {
   background-color: var(--calendar-highlight-background-color);
