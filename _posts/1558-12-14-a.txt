@@ -1,8 +1,9 @@
 ---
 license: "CC0 1.0"
-date: "1563-07-03"
 people:
-  - "Cooper, Jane"
+  - "Nevelle, Mary"
+places:
+  - "Chichester, South East, GB"
 tags:
   - "astrology"
   - "nativity"
@@ -12,7 +13,7 @@ tags:
   edition_key="book"
   footnotes="1-*"
   language="en-emodeng"
-  page="1-2"
-  text_start="June 23rd, Jane"
-  text_end="toward evening."
+  page="1"
+  text_start="Dec. 14th, Mary"
+  text_end="by Chichester."
 %}

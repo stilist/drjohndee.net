@@ -1,10 +1,9 @@
 ---
 license: "CC0 1.0"
-date: "1555-05-02"
 people:
-  - "Fromond, Jane"
+  - "van der Meulen, Daniel"
 places:
-  - "Cheam, Greater London, GB"
+  - "Antwerp, Vlaams Gewest, BE"
 tags:
   - "astrology"
   - "nativity"
@@ -13,8 +12,8 @@ tags:
   source_key="The Private Diary of Dr John Dee"
   edition_key="book"
   footnotes="1-*"
-  language="en-emodeng"
+  language="la-renais"
   page="1"
-  text_start="April 22nd, Jane"
-  text_end="Cheyham at none."
+  text_start="Oct. 25th, D. Daniel"
+  text_end="mane hora quarta."
 %}

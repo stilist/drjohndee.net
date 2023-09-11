@@ -1,12 +1,9 @@
 ---
 license: "CC0 1.0"
-date: "1563-10-08"
 people:
-  - "Ask, John"
-  - "Mownson, Elizabeth"
-  - "unknown -- Brown"
+  - "unknown -- Arundell"
 places:
-  - "York, Yorkshire and the Humber, GB"
+  - "Cornwall, South West, GB"
 tags:
   - "astrology"
   - "nativity"
@@ -16,7 +13,7 @@ tags:
   edition_key="book"
   footnotes="1-*"
   language="la-renais"
-  page="2"
-  text_start="Sept. 28th,"
-  text_end="magistri Brown."
+  page="1"
+  text_start="July 30th, Mr."
+  text_end="quartam a meridie."
 %}

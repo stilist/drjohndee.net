@@ -1,0 +1,35 @@
+---
+license: "CC0 1.0"
+people:
+  - "Bertie, Peregrine"
+places:
+  - "Wesel, Nordrhein-Westfalen, DE"
+tags:
+  - "astrology"
+  - "nativity"
+---
+{% transclusion_with_commentary
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  footnotes="1-*"
+  language="en-emodeng"
+  page="1"
+  text_start="Oct. 12th, the"
+  text_end="derland."
+%}
+  {% commentary author_key="Cole, Jordan" %}
+    <p>
+      Although there <em>is</em> a Wesell in Gelderland (in the Netherlands),
+      the latitude given is a much closer match for Wesel in Germany:
+      <a href="https://www.wikidata.org/wiki/Q2395920">the Dutch
+        <span lang="nl">buurtschap</span>
+      </a>
+      is at
+      <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="52.149444">52° 8′ 58″ N</span>,
+      <a href="https://www.wikidata.org/wiki/Q4011">the German city</a>
+      <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="51.658611">51° 39′ 31″ N</span>.
+    </p>
+  {% endcommentary %}
+{% endtransclusion_with_commentary %}

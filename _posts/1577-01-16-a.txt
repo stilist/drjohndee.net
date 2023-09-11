@@ -1,6 +1,6 @@
 ---
+author_key: "Dee, John"
 license: "CC0 1.0"
-date: "1577-01-26"
 people:
   - "Dudley, Robert"
   - "Dyer, Edward"

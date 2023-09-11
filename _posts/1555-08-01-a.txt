@@ -1,6 +1,5 @@
 ---
 license: "CC0 1.0"
-date: "1555-08-11"
 people:
   - "Kelley, Edward"
 tags:

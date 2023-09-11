@@ -1,6 +1,5 @@
 ---
 license: "CC0 1.0"
-date: "1554-09-04"
 people:
   - "Dee, John"
   - "Hickman, Bartholomew"

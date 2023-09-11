@@ -1,10 +1,11 @@
 ---
 license: "CC0 1.0"
-date: "1554-11-04"
 people:
-  - "van der Meulen, Daniel"
+  - "Ask, John"
+  - "Mownson, Elizabeth"
+  - "unknown -- Brown"
 places:
-  - "Antwerp, Vlaams Gewest, BE"
+  - "York, Yorkshire and the Humber, GB"
 tags:
   - "astrology"
   - "nativity"
@@ -14,7 +15,7 @@ tags:
   edition_key="book"
   footnotes="1-*"
   language="la-renais"
-  page="1"
-  text_start="Oct. 25th, D. Daniel"
-  text_end="mane hora quarta."
+  page="2"
+  text_start="Sept. 28th,"
+  text_end="magistri Brown."
 %}

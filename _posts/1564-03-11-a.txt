@@ -1,10 +1,9 @@
 ---
+calendar: "Gregorian"
 license: "CC0 1.0"
-date: "1560-07-18"
 people:
-  - "Clifford, Margaret"
-places:
-  - "Exeter, South West, GB"
+  - "Cooke, Brigit"
+  - "Dee, John"
 tags:
   - "astrology"
   - "nativity"
@@ -14,7 +13,7 @@ tags:
   edition_key="book"
   footnotes="1-*"
   language="en-emodeng"
-  page="1"
-  text_start="July 8th, Margaret"
-  text_end="Exoniæ mane."
+  page="2"
+  text_start="Mrs. Brigit Cooke"
+  text_end="cannot be so."
 %}

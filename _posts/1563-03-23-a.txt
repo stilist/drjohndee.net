@@ -1,10 +1,7 @@
 ---
 license: "CC0 1.0"
-date: "1557-08-09"
 people:
-  - "unknown -- Arundell"
-places:
-  - "Cornwall, South West, GB"
+  - "Fennar, William"
 tags:
   - "astrology"
   - "nativity"
@@ -15,6 +12,6 @@ tags:
   footnotes="1-*"
   language="la-renais"
   page="1"
-  text_start="July 30th, Mr."
-  text_end="quartam a meridie."
+  text_start="March 23rd,"
+  text_end="duodecimam nocte."
 %}
