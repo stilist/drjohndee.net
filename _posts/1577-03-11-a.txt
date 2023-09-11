@@ -1,0 +1,32 @@
+---
+license: "CC0 1.0"
+date: "1577-03-21"
+people:
+  - "Dee, John"
+tags:
+  - "medicine"
+---
+{% transclusion_with_commentary
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="3"
+  text_start="March 11th,"
+  text_end="creatures !"
+  time_of_day="09"
+%}
+  {% commentary author_key="Cole, Jordan" %}
+    <p>
+      <q lang="en-emodeng">Oyle of Hypericon</q>
+      refers to an oil infusion of
+      <span itemscope itemtype="http://schema.org/DietarySupplement">
+        <meta itemprop="sameAs" content="https://www.wikidata.org/entity/Q156935">
+        <span itemprop="activeIngredient">Hypericum</span>,
+        which is commonly known as
+        <span itemprop="name nonProprietaryName">
+          <a itemprop="url"
+            href="https://thenaturopathicherbalist.com/2015/09/14/hypericum-perforatum/">
+            <abbr>St.</abbr> John’s wort</a></span></span>.
+    </p>
+  {% endcommentary %}
+{% endtransclusion_with_commentary %}

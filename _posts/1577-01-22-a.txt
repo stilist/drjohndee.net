@@ -1,0 +1,20 @@
+---
+license: "CC0 1.0"
+date: "1577-02-01"
+people:
+  - "Dee, John"
+  - "Russell, Francis"
+places:
+  - "Dee's house in Mortlake, Greater London, GB"
+tags:
+  - "people visiting Dee"
+  - "travel"
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="2-3"
+  text_start="Jan. 22nd,"
+  text_end="my howse."
+%}
