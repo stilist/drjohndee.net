@@ -69,7 +69,7 @@ module HistoricalDiary
           outer = microdata.except('meta').merge extra_attributes
 
           [
-            "<span itemprop='#{itemprop}' #{hash_to_attributes outer}>",
+            "<span itemscope itemprop='#{itemprop}' #{hash_to_attributes outer}>",
             serialize_metadata(microdata['meta']),
             display_content,
             '</span>',
