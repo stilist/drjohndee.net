@@ -202,7 +202,12 @@ module HistoricalDiary
     #   example, `[page 1]\n\ntest` would parse as `["[page 1]", "1", "test"]`
     #   instead of `["[page 1]", "test"]`.)
     PAGE_NUMBER = /\s(\w+)\]/
-    PAGE_HEADER_PATTERN = /(\[page\s\w+\])/
+    PAGE_HEADER_PATTERN = /
+      (\[
+        (?:page|folio)
+        \s\w+
+      \])
+    /x
     def parse_pages!
       # If `raw_text` is
       #
