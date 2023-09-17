@@ -816,3 +816,39 @@ markup:
     selectors:
       - page: "2"
         exact: "my howse"
+
+  # ...
+
+  # 1588-11-20
+  - value: >-
+      <time datetime="1588-11-20">\1</time>
+    selectors:
+      - page: "29"
+        exact: "Nov. 20th, this Sonday"
+  # A guess; the alternative is Peter Vok.
+  - value: >-
+      {{ "William of Rosenberg" | person_reference: "\1" }}
+    selectors:
+      - page: "29"
+        prefix: "dynner "
+        exact: "the Lord"
+  # William of Rosenberg's wife in 1588
+  - value: >-
+      {{ "Polyxena of Pernstein" | person_reference: "\1" }}
+    selectors:
+      - page: "29"
+        exact: "Lady Rosenberg"
+  - value: >-
+      {{ "Trebon, Johocesky kraj, CZ" | place_reference: "\1" }}
+    selectors:
+      - page: "29"
+        prefix: "went from "
+        exact: "Trebon"
+        suffix: " toward"
+  - value: >-
+      {{ "Praha, CZ" | place_reference: "\1" }}
+    selectors:
+      - page: "29"
+        prefix: "toward "
+        exact: "Prage"
+        suffix: "."

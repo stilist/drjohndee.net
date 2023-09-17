@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2023  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+place_key: "Trebon, Johocesky kraj, CZ"
+presentational_name: "Třeboň, Česká republika"
+latitude: 49.003611
+longitude: 14.770556
+region: "Jihočeský kraj"
+country: "CZ"
+id: "https://www.wikidata.org/entity/Q773312"
+name_language: "cz"

@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation for `TimestampRange`
 - Use a new approach for source material (‘source documents’) that doesn’t split the material into small pieces
 - Add `commentary` Liquid tag
-- Add `transclude` and `transclude_with_commentary` Liquid tags to reference material in source documents
+- Add `transclude` and `transclude_with_commentary` Liquid tags to reference material from source documents
+- Add `correspondence` Liquid tag
 
 ### Changed
 - Convert some entries from Markdown to plain text; adjust indentation

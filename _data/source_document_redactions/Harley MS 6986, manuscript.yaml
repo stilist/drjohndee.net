@@ -1,0 +1,99 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2023  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+source:
+  work_key: "Harley MS 6986"
+  edition_key: "manuscript"
+
+markup:
+  - value: >-
+      </p><p>\1
+    selectors:
+      - page: "45r"
+        exact: "Trebon . in the kingdome of Boemia"
+
+  - value: >-
+      \1<br>
+    selectors:
+      - page: "45r"
+        exact: "Trebon . in the kingdome of Boemia"
+      - page: "45r"
+        exact: "stylo vete[ri]"
+      - page: "45r"
+        exact: "Your Sacred and most excellent"
+      - page: "45r"
+        prefix: "    "
+        exact: "Royall Maiesties"
+      - page: "45r"
+        exact: "Most humble and dutifull"
+      - page: "45r"
+        exact: "Subiect, and Servant :"
+
+  - value: >-
+      {{ "Queen Elizabeth I" | person_reference: "\1" }}
+    selectors:
+      - page: "45r"
+        exact: "Most Gratious Soueraine Lady"
+      - page: "45r"
+        exact: "your most excellent Royall Maiestie"
+        suffix: ", this"
+      - page: "45r"
+        exact: "your"
+        suffix: " mortall enemies"
+      - page: "45r"
+        exact: "your most Royall Highnes"
+      - page: "45r"
+        exact: "your most excellent Maiestie Royall"
+      - page: "45r"
+        exact: "your"
+        suffix: " most gratious Royall"
+      - page: "45r"
+        exact: "your most excellent Royall Maiesties"
+      - page: "45r"
+        exact: "your"
+        suffix: "Brytiſh Earthly Paradise"
+      - page: "45r"
+        exact: "your Sacred Maiesties"
+      - page: "45r"
+        prefix: "God, and "
+        exact: "your most Excellent Royall Maiestie"
+      - page: "45r"
+        exact: "your most excellent Royall Maiestie"
+        suffix: ", the Incomparablest"
+      - page: "45r"
+        exact: "Your Sacred and most excellent Royall Maiesties"
+
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "45r"
+        prefix: "CALLING "
+        exact: "me"
+      - page: "45r"
+        exact: "I"
+        suffix: ", and myne"
+      - page: "45r"
+        exact: "Iohn Dee"
+
+  - value: >-
+      {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - page: "45r"
+        exact: "M.ͬ Kelley"
+
+  - value: >-
+      {{ "Trebon, Johocesky kraj, CZ" | place_reference: "\1" }}
+    selectors:
+      - page: "45r"
+        exact: "Trebon . in the kingdome of Boemia"
+
+  - value: >-
+      <time datetime="1588-11-20">\1</time>
+    selectors:
+      - page: "45r"
+        exact: "the .10th. of Nouembre : Aº. Dn͠i : 1588 : stylo vete[ri]"
