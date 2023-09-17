@@ -112,13 +112,18 @@ module HistoricalDiary
       end
 
       def source_document_collection_entry
-        documents = site_object.collections['source_documents'].docs
-        documents.find do |doc|
+        return @source_document_collection_entry if defined? @source_document_collection_entry
+
+        @source_document_collection_entry = documents.find do |doc|
           [
             doc.basename_without_ext,
             sanitize_key(doc.basename_without_ext),
           ].include? key
         end
+      end
+
+      def documents
+        site_object.collections['source_documents'].docs
       end
 
       # Wrapper around an underlying <tt>SourceDocument</tt>.

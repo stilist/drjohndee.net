@@ -28,24 +28,18 @@ module HistoricalDiary
 
       def person_data(key) = filter_drop(key, drop_class: person_drop_class)
 
-      def person_content(key)
-        filter_drop(key, drop_class: person_drop_class).page_data['custom_content']
-      end
+      def person_content(key) = person_data(key).page_data['custom_content']
 
       def person_initials(key, maximum_characters = 2)
-        filter_drop(key, drop_class: person_drop_class).name_initials maximum_characters
+        person_data(key).name_initials maximum_characters
       end
 
-      def person_living_years(key)
-        filter_drop(key, drop_class: person_drop_class).living_years
-      end
+      def person_living_years(key) = person_data(key).living_years
 
-      def person_presentational_name(key)
-        filter_drop(key, drop_class: person_drop_class)['presentational_name']
-      end
+      def person_presentational_name(key) = person_data(key)['presentational_name']
 
       def person_full_name(key)
-        filter_drop(key, drop_class: person_drop_class)
+        person_data(key)
           .fallback_data['full_name']
           &.map { |x| x['text'] }
           &.join(' ')
@@ -56,15 +50,13 @@ module HistoricalDiary
       end
 
       def person_avatar(key)
-        data = person_drop_class.new key, context: @context
-
         content = <<~HTML
           <span class="person-avatarInitials"
                 aria-hidden="true">#{person_initials(key)}</span>
           <span class="is-assistiveOnly">#{person_full_name(key)}</span>
         HTML
 
-        return person_link(key, content) if data['full_name']
+        return person_link(key, content) if person_data(key)['full_name']
 
         person_reference key, content
       end
@@ -91,7 +83,7 @@ module HistoricalDiary
 
       def person_url(key) = data_record_url(key, drop_class: person_drop_class)
 
-      def sort_people_keys(keys)
+      def sort_peoplekeys(keys)
         return keys unless keys.is_a? Array
 
         keys.sort_by { person_presentational_name _1 }

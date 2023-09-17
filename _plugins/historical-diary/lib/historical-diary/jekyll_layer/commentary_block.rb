@@ -46,7 +46,7 @@ module HistoricalDiary
 
         attributes = attributes_to_hash @raw_attributes
 
-        lang = attributes['language'] || config(:subject_person_key)
+        lang = attributes['language'] || site_object.config[:lang]
 
         author_key = attributes['author_key']
         citation_input = "{{ \"#{author_key}\" | person_link }}"
@@ -60,7 +60,7 @@ module HistoricalDiary
             <div
               itemprop="text"
               lang="#{lang}">
-              #{@commentary}
+              #{commentary}
             </div>
             <figcaption>
               — <span
