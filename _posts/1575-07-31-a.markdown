@@ -1,10 +1,10 @@
 ---
 license: "CC0 1.0"
-date: "1568-07-24"
 people:
-  - "Emery, William"
+  - "Huicke, Robert"
+  - "Steward, Simeon"
 places:
-  - "Danbury, East of England, GB"
+  - "Shinfield, South East, GB"
 tags:
   - "astrology"
   - "nativity"
@@ -15,6 +15,6 @@ tags:
   footnotes="1-*"
   language="en-emodeng"
   page="2"
-  text_start="July 14th, William"
-  text_end="horam noctis."
+  text_start="July 31st,"
+  text_end="physicien."
 %}

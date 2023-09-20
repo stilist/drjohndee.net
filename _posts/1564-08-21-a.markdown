@@ -1,8 +1,7 @@
 ---
 license: "CC0 1.0"
-date: "1568-10-04"
 people:
-  - "Anderson, Margaret"
+  - "Goose, Winifred"
 tags:
   - "astrology"
   - "nativity"
@@ -13,6 +12,6 @@ tags:
   footnotes="1-*"
   language="la-renais"
   page="2"
-  text_start="Sept. 24th,"
-  text_end="inter 7 et 8."
+  text_start="Aug. 21st, Wenefride"
+  text_end="by Kingstone."
 %}

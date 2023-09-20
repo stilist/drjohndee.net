@@ -1,5 +1,4 @@
 ---
-author_key: "Dee, John"
 license: "CC0 1.0"
 people:
   - "Dudley, Robert"

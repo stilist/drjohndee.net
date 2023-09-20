@@ -1,10 +1,9 @@
 ---
 license: "CC0 1.0"
-date: "1571-02-25"
 people:
-  - "Swallow, Samuel"
+  - "Pontoys, John"
 places:
-  - "Thaxted, East of England, GB"
+  - "Stony Stratford, South East, GB"
 tags:
   - "astrology"
   - "nativity"
@@ -13,8 +12,8 @@ tags:
   source_key="The Private Diary of Dr John Dee"
   edition_key="book"
   footnotes="1-*"
-  language="en-emodeng"
+  language="la-renais"
   page="2"
-  text_start="Samuel Swallow"
-  text_end="post undecimam."
+  text_start="Sept. 12th, John"
+  text_end="8 min. 43."
 %}

@@ -1,6 +1,5 @@
 ---
 license: "CC0 1.0"
-date: "1577-02-01"
 people:
   - "Dee, John"
   - "Russell, Francis"
