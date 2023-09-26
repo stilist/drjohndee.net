@@ -22,13 +22,19 @@ require_relative 'shared'
 
 module HistoricalDiary
   module JekyllLayer
-    # Adds a `{% transclusion_with_commentary %}` Liquid block.
+    # Adds a `{% transclusion_with_commentary %}` Liquid block. The block takes
+    # the same attributes as the `{% transclusion %}` Liquid tag; the
+    # difference is the ability to provide commentary on the transclusion.
     #
     # @example
     #   {% transclusion_with_commentary
-    #      source_key="John Dee (1527-1608)"
-    #      edition_key="book"
-    #      page="30-31"
+    #     source_key="The Private Diary of Dr John Dee"
+    #     edition_key="book"
+    #     footnotes="1-*"
+    #     language="en-emodeng"
+    #     page="1"
+    #     text_start="Oct. 12th, the"
+    #     text_end="derland."
     #   %}
     #     Commentary...
     #   {% endtransclusion_with_commentary %}

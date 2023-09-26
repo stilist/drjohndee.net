@@ -22,14 +22,35 @@ require_relative 'shared'
 
 module HistoricalDiary
   module JekyllLayer
-    # Adds a `{% transclusion %}` Liquid block.
+    # Adds a `{% transclusion %}` Liquid block that transcludes text (with
+    # redactions) from a source document.
     #
-    # @example
-    #   {% transclusion
-    #      source_key="John Dee (1527-1608)"
-    #      edition_key="book"
-    #      page="30-31"
-    #   %}
+    # Example with only required arguments
+    # ```
+    # {% transclusion
+    #    source_key="The Private Diary of Dr John Dee"
+    #    edition_key="book"
+    #    page="1"
+    #    text_start="Aug. 25th,"
+    #    text_end="circumstances."
+    # %}
+    # ```
+    #
+    # Example with optional arguments
+    # ```
+    # {% transclusion
+    #   source_key="The Private Diary of Dr John Dee"
+    #   edition_key="book"
+    #   volume_key="I"
+    #   footnotes="1-*"
+    #   language="en-emodeng"
+    #   page="1"
+    #   prefix="1554. "
+    #   suffix=" Oct. 25th"
+    #   text_start="Aug. 25th,"
+    #   text_end="circumstances."
+    # %}
+    # ```
     class TransclusionTag < Liquid::Tag
       include Shared::TransclusionLiquidHelpers
 
