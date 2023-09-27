@@ -157,6 +157,96 @@ notes:
       prefix: "† "
       textStart: "An original diary"
       textEnd: "Miscel. 241."
+  "12-*":
+    - page: "12"
+      prefix: "* "
+      textStart: "Dr. Dee in the"
+      textEnd: "me ! ”"
+  "13-*":
+    - page: "13"
+      prefix: "* "
+      textStart: "This probably gave"
+      textEnd: "upon an hundred.”"
+  "15-*":
+    - page: "15"
+      prefix: "* "
+      textStart: "Just above this"
+      textEnd: "probably the former."
+  "19-*":
+    - page: "19"
+      prefix: "* "
+      textStart: "This work, although"
+      textEnd: "truely spent.”"
+  "20-*":
+    - page: "20"
+      prefix: "* "
+      textStart: "“ The year of our"
+      textEnd: "by a single day."
+  "21-*":
+    - page: "21"
+      prefix: "* "
+      textStart: "“ Her Majestie being"
+      textEnd: "Memoriall, p. 511."
+  "22-*":
+    - page: "22"
+      prefix: "* "
+      textStart: "He frequently speaks"
+      textEnd: "title of Illustrissimus."
+  "22-†":
+    - page: "22"
+      prefix: "† "
+      textStart: "It is almost"
+      textEnd: "to Edward Kelly."
+  "24-*":
+    - page: "24"
+      prefix: "* "
+      textStart: "That is, Thomas"
+      textEnd: "John Carp."
+  "29-*":
+    - page: "29"
+      prefix: "* "
+      textStart: "This refers to"
+      textEnd: "Encyclopedia Metropolitana."
+  "32-*":
+    - page: "32"
+      prefix: "* "
+      textStart: "Where, according"
+      textEnd: "by her Majesty."
+  "33-*":
+    - page: "33"
+      prefix: "* "
+      textStart: "There are a great"
+      textEnd: "able to discover."
+  "34-*":
+    - page: "34"
+      prefix: "* "
+      textStart: "Dee has preserved"
+      textEnd: "be sufficient."
+  "37-*":
+    - page: "37"
+      prefix: "* "
+      textStart: "See the “ Compendious"
+      textEnd: "of this."
+  "38-*":
+    - page: "38"
+      prefix: "* "
+      textStart: "Now in the"
+      textEnd: "immortalized."
+  "41-*":
+    - page: "41"
+      prefix: "* "
+      textStart: "This entry"
+      textEnd: "Ashm. 1790."
+  "43-*":
+    - page: "43"
+      prefix: "* "
+      textStart: "This notice"
+      textEnd: "Mortlake."
+  "63-*":
+    - page: "63"
+      prefix: "* "
+      textStart: "In a note"
+      textEnd: "and my wife.”"
 
 markup:
   # 1554-08-25
