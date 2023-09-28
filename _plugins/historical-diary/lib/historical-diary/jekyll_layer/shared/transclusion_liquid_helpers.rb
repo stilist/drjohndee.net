@@ -72,14 +72,7 @@ module HistoricalDiary
         def cache_key_from_attributes
           return @cache_key_from_attributes if defined? @cache_key_from_attributes
 
-          cache_key_parts = %w[
-            page
-            prefix
-            text_start
-            text_end
-            suffix
-          ]
-          @cache_key_from_attributes = attributes.slice(*cache_key_parts)
+          @cache_key_from_attributes = attributes.slice(*SELECTOR_KEYS)
                                                  .values
                                                  .compact
                                                  .join('//')
@@ -138,6 +131,19 @@ module HistoricalDiary
             #{tidied_attributes}
             -->
           HTML
+        end
+
+        SELECTOR_KEYS = %w[
+          page
+          prefix
+          text_start
+          text_end
+          suffix
+        ].freeze
+        def selector
+          return @selector if defined? @selector
+
+          @selector = attributes.slice(*SELECTOR_KEYS)
         end
 
         def transclusion_source_key
