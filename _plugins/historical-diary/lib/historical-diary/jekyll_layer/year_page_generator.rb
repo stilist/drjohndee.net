@@ -53,7 +53,7 @@ module HistoricalDiary
         # @note Without the parentheses this parses incorrectly and `@drop` is
         #   `nil`.
         @drop = PersonDrop.new(key, context:)
-        unless @drop.exists?
+        unless @drop.exist?
           Jekyll.logger.warn self.class.name do
             'Configured subject_person_key does not exist in people Data Files'
           end
