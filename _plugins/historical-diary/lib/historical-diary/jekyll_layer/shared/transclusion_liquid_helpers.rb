@@ -141,9 +141,11 @@ module HistoricalDiary
         end
 
         def transclusion_source_key
-          SourceDocument.build_identifier attributes['source_key'],
-                                          attributes['edition_key'],
-                                          attributes['volume_key']
+          return @transclusion_source_key if defined? @transclusion_source_key
+
+          @transclusion_source_key = SourceDocument.build_identifier attributes['source_key'],
+                                                                     attributes['edition_key'],
+                                                                     attributes['volume_key']
         end
 
         def source_drop
