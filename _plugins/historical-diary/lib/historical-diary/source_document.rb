@@ -38,6 +38,8 @@ module HistoricalDiary
                 :source_key,
                 :volume_key
 
+    class InvalidRedactionError < StandardError; end
+
     class << self
       # Parse a comma-separated identifier into keys for source, edition, and
       # volume.
@@ -180,7 +182,11 @@ module HistoricalDiary
                                           text_start: selector['textStart'],
                                           text_end: selector['textEnd'],
                                           suffix: selector['suffix'])
-          text = transclusion.text
+          begin
+            text = transclusion.text
+          rescue InvalidTransclusionError
+            raise InvalidRedactionError, selector.inspect
+          end
 
           memo[:symbol] ||= selector['prefix']
           (memo[:pages] ||= []) << page_number
