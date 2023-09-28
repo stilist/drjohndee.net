@@ -80,7 +80,7 @@ module HistoricalDiary
 
         # Get transcluded text for provided attributes.
         def page_text
-          return '' if attributes['page'].nil?
+          return nil if attributes['page'].nil?
 
           shared_cache.getset cache_key_from_attributes do
             candidate_text = source_drop.page(attributes['page'])
