@@ -38,6 +38,7 @@ module HistoricalDiary
                 :source_key,
                 :volume_key
 
+    class InvalidPageError < StandardError; end
     class InvalidRedactionError < StandardError; end
 
     class << self
@@ -80,7 +81,7 @@ module HistoricalDiary
           (parts.first..parts.last)
         when Array, Range then requested
         else
-          raise ArgumentError, 'Must specify at least one page number'
+          raise InvalidPageError, 'Must specify at least one page number'
         end
       end
     end
@@ -112,7 +113,7 @@ module HistoricalDiary
       range.map { |page_number| page(page_number) }
     rescue KeyError => e
       missing_page = e.message.match(/:\s"?(\w+)"?/)
-      raise ArgumentError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
+      raise InvalidPageError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
     end
 
     def markup_redactions_for_page(page_number)
