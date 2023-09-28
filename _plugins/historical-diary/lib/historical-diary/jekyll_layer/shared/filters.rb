@@ -50,10 +50,11 @@ module HistoricalDiary
           extra_attributes = attributes.except 'default_text'
           content = display_content || attributes['default_text']
 
+          # @note Does not set `itemprop=url` because `#data_record_microdata`
+          #   returns a `<meta>` tag with that itemprop.
           link = <<~HTML
             <a #{hash_to_attributes extra_attributes}
-              href="#{data_record_url(key, drop_class:)}"
-              itemprop="url">#{content}</a>
+              href="#{data_record_url(key, drop_class:)}">#{content}</a>
           HTML
 
           data_record_microdata key,
