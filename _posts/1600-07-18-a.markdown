@@ -1,0 +1,11 @@
+---
+license: CC0 1.0
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="62"
+  text_start="July 18th,"
+  text_end="gotten from Cambridge."
+%}

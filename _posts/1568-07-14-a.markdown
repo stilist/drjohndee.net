@@ -1,12 +1,12 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Emery, William"
+- Emery, William
 places:
-  - "Danbury, East of England, GB"
+- Danbury, East of England, GB
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

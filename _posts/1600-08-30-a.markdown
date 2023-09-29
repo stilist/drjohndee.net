@@ -1,0 +1,13 @@
+---
+license: CC0 1.0
+tags:
+- weather
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="63"
+  text_start="Aug. 30th,"
+  text_end="with rayne."
+%}

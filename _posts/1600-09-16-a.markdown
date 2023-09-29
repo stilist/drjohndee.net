@@ -1,0 +1,13 @@
+---
+license: CC0 1.0
+tags:
+- travel
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="63"
+  text_start="Sept. 16th,"
+  text_end="did viset me."
+%}

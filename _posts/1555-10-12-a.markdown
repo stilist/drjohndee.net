@@ -1,12 +1,12 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Bertie, Peregrine"
+- Bertie, Peregrine
 places:
-  - "Wesel, Nordrhein-Westfalen, DE"
+- Wesel, Nordrhein-Westfalen, DE
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion_with_commentary
   source_key="The Private Diary of Dr John Dee"

@@ -27,6 +27,14 @@ reflows:
     selectors:
       - page: "3"
         exact: "warn- ing"
+  - value: "Antiquaries"
+    selectors:
+      - page: "3"
+        exact: "Antiqua- ries"
+  - value: "published"
+    selectors:
+      - page: "3"
+        exact: "pub- lished"
   - value: "Hertford"
     selectors:
       - page: "4"
@@ -51,6 +59,10 @@ reflows:
     selectors:
       - page: "7"
         exact: "cown- sayle"
+  - value: "traditionary"
+    selectors:
+      - page: "7"
+        exact: "tradi- tionary"
   - value: "Benjamyn"
     selectors:
       - page: "8"
@@ -67,6 +79,678 @@ reflows:
     selectors:
       - page: "10"
         exact: "re- peated"
+  - value: "Majestie"
+    selectors:
+      - page: "10"
+        exact: "Ma- jestie"
+  - value: "Snedgreene"
+    selectors:
+      - page: "11"
+        exact: "Sned- greene"
+  - value: "Katarin"
+    selectors:
+      - page: "11"
+        exact: "Ka- tarin"
+  - value: "Chamber"
+    selectors:
+      - page: "11"
+        exact: "Cham- ber"
+  - value: "Katharin"
+    selectors:
+      - page: "11"
+        exact: "Katha- rin"
+  - value: "Davyes"
+    selectors:
+      - page: "11"
+        exact: "Da- vyes"
+  - value: "ινγρατεφυλνες"
+    selectors:
+      - page: "11"
+        exact: "ινγρατε- φυλνες"
+  - value: "sicknes"
+    selectors:
+      - page: "12"
+        exact: "sick- nes"
+  - value: "diligentiam"
+    selectors:
+      - page: "12"
+        exact: "dili- gentiam"
+  - value: "Mensitam"
+    selectors:
+      - page: "12"
+        exact: "Men- sitam"
+  - value: "wheruppon"
+    selectors:
+      - page: "12"
+        exact: "wher- uppon"
+  - value: "hisself"
+    selectors:
+      - page: "12"
+        exact: "his- self"
+  - value: "unseamely"
+    selectors:
+      - page: "13"
+        exact: "un- seamely"
+  - value: "honestly"
+    selectors:
+      - page: "13"
+        exact: "ho- nestly"
+  - value: "Tosseter"
+    selectors:
+      - page: "13"
+        exact: "Tos- seter"
+  - value: "Monsieur"
+    selectors:
+      - page: "13"
+        exact: "Mon- sieur"
+  - value: "Bromley"
+    selectors:
+      - page: "13"
+        exact: "Brom- ley"
+  - value: "Skullthrop"
+    selectors:
+      - page: "14"
+        exact: "Skull- throp"
+  - value: "spirituall"
+    selectors:
+      - page: "14"
+        exact: "spiri- tuall"
+  - value: "sanguinis"
+    selectors:
+      - page: "14"
+        exact: "san- guinis"
+  - value: "septentrione"
+    selectors:
+      - page: "15"
+        exact: "sep- tentrione"
+  - value: "horizontem"
+    selectors:
+      - page: "15"
+        exact: "horizon- tem"
+  - value: "son-in-law"
+    selectors:
+      - page: "15"
+        exact: "son-in- law"
+  - value: "promised"
+    selectors:
+      - page: "15"
+        exact: "pro- mised"
+  - value: "unduely"
+    selectors:
+      - page: "15"
+        exact: "un- duely"
+  - value: "Watergate"
+    selectors:
+      - page: "16"
+        exact: "Water- gate"
+  - value: "acquayntance"
+    selectors:
+      - page: "16"
+        exact: "ac- quayntance"
+  - value: "untrue"
+    selectors:
+      - page: "16"
+        exact: "un- true"
+  - value: "toward"
+    selectors:
+      - page: "17"
+        exact: "to- ward"
+  - value: "Leonard"
+    selectors:
+      - page: "17"
+        exact: "Leo- nard"
+  - value: "Tundridge"
+    selectors:
+      - page: "17"
+        exact: "Tun- dridge"
+  - value: "mathematically"
+    selectors:
+      - page: "18"
+        exact: "mathe- matically"
+  - value: "expound"
+    selectors:
+      - page: "18"
+        exact: "ex- pownd"
+  - value: "Leonard"
+    selectors:
+      - page: "18"
+        exact: "Leo- nard"
+  - value: "Secretarie"
+    selectors:
+      - page: "18"
+        exact: "Secre- tarie"
+  - value: "gratiously"
+    selectors:
+      - page: "18-19"
+        exact: "gra- tiously"
+  - value: "manuscript"
+    selectors:
+      - page: "19"
+        exact: "manu- script"
+  - value: "Ashmole"
+    selectors:
+      - page: "19"
+        exact: "Ash- mole"
+  - value: "accompting"
+    selectors:
+      - page: "19"
+        exact: "accompt- ing"
+  - value: "Richemond"
+    selectors:
+      - page: "20"
+        exact: "Riche- mond"
+  - value: "company"
+    selectors:
+      - page: "20"
+        exact: "com- pany"
+  - value: "disposition"
+    selectors:
+      - page: "21"
+        exact: "dis- position"
+  - value: "Burrow"
+    selectors:
+      - page: "21"
+        exact: "Bur- row"
+  - value: "princeps"
+    selectors:
+      - page: "21"
+        exact: "prin- ceps"
+  - value: "Transylvania"
+    selectors:
+      - page: "22"
+        exact: "Transyl- vania"
+  - value: "Garlando"
+    selectors:
+      - page: "22"
+        exact: "Gar- lando"
+  - value: "missus"
+    selectors:
+      - page: "22"
+        exact: "mis- sus"
+  - value: "Brunswik"
+    selectors:
+      - page: "22"
+        exact: "Bruns- wik"
+  - value: "passport"
+    selectors:
+      - page: "22"
+        exact: "pass- port"
+  - value: "Reinholdt"
+    selectors:
+      - page: "22"
+        exact: "Rein- holdt"
+  - value: "Rosenberg"
+    selectors:
+      - page: "22"
+        exact: "Ro- senberg"
+  - value: "Illustrissimum"
+    selectors:
+      - page: "23"
+        exact: "Illus- trissimum"
+  - value: "Illustrissimus"
+    selectors:
+      - page: "23"
+        exact: "Illus- trissimus"
+  - value: "contented"
+    selectors:
+      - page: "24"
+        exact: "con- tented"
+  - value: "meridiem"
+    selectors:
+      - page: "26"
+        exact: "meri- diem"
+  - value: "promys"
+    selectors:
+      - page: "26"
+        exact: "pro- mys"
+  - value: "Peregrinus"
+    selectors:
+      - page: "26"
+        exact: "Peregri- nus"
+  - value: "accusatio"
+    selectors:
+      - page: "27"
+        exact: "accu- satio"
+  - value: "confirmed"
+    selectors:
+      - page: "27"
+        exact: "con- firmed"
+  - value: "laudet"
+    selectors:
+      - page: "27"
+        exact: "lau- det"
+  - value: "Illustrissimus"
+    selectors:
+      - page: "27"
+        exact: "Illus- trissimus"
+  - value: "scholemaster"
+    selectors:
+      - page: "28"
+        exact: "schole- master"
+  - value: "Budweiss"
+    selectors:
+      - page: "28"
+        exact: "Bud- weiss"
+  - value: "precedente"
+    selectors:
+      - page: "30"
+        exact: "pre- cedente"
+  - value: "Zacharias"
+    selectors:
+      - page: "30"
+        exact: "Zacha- rias"
+  - value: "saddell"
+    selectors:
+      - page: "30"
+        exact: "sad- dell"
+  - value: "Rosenberg"
+    selectors:
+      - page: "30"
+        exact: "Ro- senberg"
+  - value: "Hungarish"
+    selectors:
+      - page: "31"
+        exact: "Hunga- rish"
+  - value: "Hilton"
+    selectors:
+      - page: "31"
+        exact: "Hil- ton"
+  - value: "letters"
+    selectors:
+      - page: "31"
+        exact: "let- ters"
+  - value: "travayle"
+    selectors:
+      - page: "32"
+        exact: "tra- vayle"
+  - value: "Greven"
+    selectors:
+      - page: "32"
+        exact: "Gre- ven"
+  - value: "veteri"
+    selectors:
+      - page: "32"
+        exact: "ve- teri"
+  - value: "Hilton"
+    selectors:
+      - page: "32"
+        exact: "Hil- ton"
+  - value: "Gravesende"
+    selectors:
+      - page: "32"
+        exact: "Graves- ende"
+  - value: "carryed"
+    selectors:
+      - page: "32"
+        exact: "car- ryed"
+  - value: "Hungary"
+    selectors:
+      - page: "32-33"
+        exact: "Hun- gary"
+  - value: "apprehended"
+    selectors:
+      - page: "33"
+        exact: "appre- hended"
+  - value: "Edward"
+    selectors:
+      - page: "33"
+        exact: "Ed- ward"
+  - value: "Katharyne"
+    selectors:
+      - page: "34"
+        exact: "Ka- tharyne"
+  - value: "propositione"
+    selectors:
+      - page: "34"
+        exact: "pro- positione"
+  - value: "hogshed"
+    selectors:
+      - page: "34"
+        exact: "hogs- hed"
+  - value: "Hankinson"
+    selectors:
+      - page: "34"
+        exact: "Han- kinson"
+  - value: "Mortlak"
+    selectors:
+      - page: "34"
+        exact: "Mort- lak"
+  - value: "affliction"
+    selectors:
+      - page: "35"
+        exact: "afflic- tion"
+  - value: "hirself"
+    selectors:
+      - page: "35"
+        exact: "hir- self"
+  - value: "afternone"
+    selectors:
+      - page: "36"
+        exact: "after- none"
+  - value: "Majestie"
+    selectors:
+      - page: "36"
+        exact: "Ma- jestie"
+  - value: "graciously"
+    selectors:
+      - page: "37"
+        exact: "gra- ciously"
+  - value: "yesternight"
+    selectors:
+      - page: "37"
+        exact: "yester- night"
+  - value: "Chelsey"
+    selectors:
+      - page: "37"
+        exact: "Chel- sey"
+  - value: "Majestie"
+    selectors:
+      - page: "37"
+        exact: "Ma- jestie"
+  - value: "shillings"
+    selectors:
+      - page: "38"
+        exact: "shil- lings"
+  - value: "beforehande"
+    selectors:
+      - page: "38"
+        exact: "before- hande"
+  - value: "Harbert"
+    selectors:
+      - page: "38"
+        exact: "Har- bert"
+  - value: "Bartilmew"
+    selectors:
+      - page: "38"
+        exact: "Bar- tilmew"
+  - value: "Aspland"
+    selectors:
+      - page: "38"
+        exact: "Asp- land"
+  - value: "Hollandiæ"
+    selectors:
+      - page: "38"
+        exact: "Hol- landiæ"
+  - value: "wanton"
+    selectors:
+      - page: "38"
+        exact: "wan- ton"
+  - value: "Mownson"
+    selectors:
+      - page: "39"
+        exact: "Mown- son"
+  - value: "melancholek"
+    selectors:
+      - page: "40"
+        exact: "melan- cholek"
+  - value: "Market-Harborogh"
+    selectors:
+      - page: "41"
+        exact: "Market- Harborogh"
+  - value: "wagonman"
+    selectors:
+      - page: "41"
+        exact: "wagon- man"
+  - value: "extremely"
+    selectors:
+      - page: "41"
+        exact: "ex- tremely"
+  - value: "capitaynate"
+    selectors:
+      - page: "43"
+        exact: "capi- taynate"
+  - value: "Maynard"
+    selectors:
+      - page: "43"
+        exact: "May- nard"
+  - value: "commendation"
+    selectors:
+      - page: "43"
+        exact: "commen- dation"
+  - value: "bastaned"
+    selectors:
+      - page: "43"
+        exact: "bas- taned"
+  - value: "mydsommer"
+    selectors:
+      - page: "45"
+        exact: "mydsom- mer"
+  - value: "bargayn"
+    selectors:
+      - page: "45"
+        exact: "bar- gayn"
+  - value: "Stokden"
+    selectors:
+      - page: "45"
+        exact: "Stok- den"
+  - value: "Mistres"
+    selectors:
+      - page: "46"
+        exact: "Mis- tres"
+  - value: "Cumberland"
+    selectors:
+      - page: "47"
+        exact: "Cumber- land"
+  - value: "Marshalsea"
+    selectors:
+      - page: "47"
+        exact: "Marshal- sea"
+  - value: "Brandeburgensis"
+    selectors:
+      - page: "47"
+        exact: "Brandeburgen- sis"
+  - value: "Marshalsea"
+    selectors:
+      - page: "48"
+        exact: "Mar- shalsea"
+  - value: "Barthilmew"
+    selectors:
+      - page: "48"
+        exact: "Barthil- mew"
+  - value: "intended"
+    selectors:
+      - page: "49"
+        exact: "in- tended"
+  - value: "delivered"
+    selectors:
+      - page: "49"
+        exact: "deli- vered"
+  - value: "Archbishop"
+    selectors:
+      - page: "49"
+        exact: "Arch- bishop"
+  - value: "Magdalen"
+    selectors:
+      - page: "49"
+        exact: "Mag- dalen"
+  - value: "Northamptonshire"
+    selectors:
+      - page: "50"
+        exact: "North- amptonshire"
+  - value: "Hallowtyd"
+    selectors:
+      - page: "50"
+        exact: "Hal- lowtyd"
+  - value: "meridie"
+    selectors:
+      - page: "50-51"
+        exact: "me- ridie"
+  - value: "without"
+    selectors:
+      - page: "51"
+        exact: "with- out"
+  - value: "Rowley"
+    selectors:
+      - page: "51"
+        exact: "Row- ley"
+  - value: "Manchester"
+    selectors:
+      - page: "51"
+        exact: "Man- chester"
+  - value: "Garland"
+    selectors:
+      - page: "51"
+        exact: "Gar- land"
+  - value: "Dymmock"
+    selectors:
+      - page: "52"
+        exact: "Dym- mock"
+  - value: "recreate"
+    selectors:
+      - page: "52"
+        exact: "re- create"
+  - value: "borrowed"
+    selectors:
+      - page: "52"
+        exact: "bor- rowed"
+  - value: "Awbrey"
+    selectors:
+      - page: "52"
+        exact: "Aw- brey"
+  - value: "Mistres"
+    selectors:
+      - page: "52"
+        exact: "Mis- tres"
+  - value: "natalis"
+    selectors:
+      - page: "53"
+        exact: "nata- lis"
+  - value: "gratiously"
+    selectors:
+      - page: "53"
+        exact: "grati- ously"
+  - value: "Sergeant"
+    selectors:
+      - page: "53"
+        exact: "Ser- geant"
+  - value: "Hetherley"
+    selectors:
+      - page: "53"
+        exact: "He- therley"
+  - value: "goodwife"
+    selectors:
+      - page: "54"
+        exact: "good- wife"
+  - value: "Manchester"
+    selectors:
+      - page: "54"
+        exact: "Manches- ter"
+  - value: "Mister"
+    selectors:
+      - page: "54"
+        exact: "Mis- ter"
+  - value: "esquier"
+    selectors:
+      - page: "55"
+        exact: "es- quier"
+  - value: "possession"
+    selectors:
+      - page: "55"
+        exact: "pos- session"
+  - value: "Saxton"
+    selectors:
+      - page: "55"
+        exact: "Sax- ton"
+  - value: "Salford"
+    selectors:
+      - page: "55"
+        exact: "Sal- ford"
+  - value: "servyce"
+    selectors:
+      - page: "56"
+        exact: "ser- vyce"
+  - value: "Manchester"
+    selectors:
+      - page: "57"
+        exact: "Man- chester"
+  - value: "Bradshaw"
+    selectors:
+      - page: "57"
+        exact: "Brad- shaw"
+  - value: "began"
+    selectors:
+      - page: "58"
+        exact: "be- gan"
+  - value: "geometricall"
+    selectors:
+      - page: "58"
+        exact: "geometri- call"
+  - value: "unlawfull"
+    selectors:
+      - page: "58-59"
+        exact: "un- lawfull"
+  - value: "Bradley"
+    selectors:
+      - page: "59"
+        exact: "Brad- ley"
+  - value: "describing"
+    selectors:
+      - page: "59"
+        exact: "de- scribing"
+  - value: "methowght"
+    selectors:
+      - page: "59"
+        exact: "me- thowght"
+  - value: "Maleficarum"
+    selectors:
+      - page: "59"
+        exact: "Malefica- rum"
+  - value: "Walkeson"
+    selectors:
+      - page: "60"
+        exact: "Walke- son"
+  - value: "Market-Harborow"
+    selectors:
+      - page: "60"
+        exact: "Market- Harborow"
+  - value: "Bartholomæus"
+    selectors:
+      - page: "60"
+        exact: "Bartholo- mæus"
+  - value: "Bradshaw"
+    selectors:
+      - page: "60"
+        exact: "Brad- shaw"
+  - value: "noctem"
+    selectors:
+      - page: "61"
+        exact: "noc- tem"
+  - value: "twelvemonth"
+    selectors:
+      - page: "61"
+        exact: "twelve- month"
+  - value: "spirituum"
+    selectors:
+      - page: "62"
+        exact: "spiri- tuum"
+  - value: "manifold"
+    selectors:
+      - page: "62"
+        exact: "ma- nifold"
+  - value: "Robert"
+    selectors:
+      - page: "62"
+        exact: "Ro- bert"
+  - value: "admitted"
+    selectors:
+      - page: "62"
+        exact: "ad- mitted"
+  - value: "Randall"
+    selectors:
+      - page: "62"
+        exact: "Ran- dall"
+  - value: "philosopher’s"
+    selectors:
+      - page: "62"
+        exact: "philoso- pher’s"
+  - value: "Katharina"
+    selectors:
+      - page: "63"
+        exact: "Ka- tharina"
+  - value: "Cletheraw"
+    selectors:
+      - page: "64"
+        exact: "Clethe- raw"
 
 notes:
   "1-*":
@@ -231,12 +915,12 @@ notes:
     - page: "38"
       prefix: "* "
       textStart: "Now in the"
-      textEnd: "immortalized."
+      textEnd: "Ashm. 1790."
   "41-*":
     - page: "41"
       prefix: "* "
       textStart: "This entry"
-      textEnd: "Ashm. 1790."
+      textEnd: "immortalized."
   "43-*":
     - page: "43"
       prefix: "* "
@@ -398,9 +1082,7 @@ markup:
         exact: "Wesell in Gelderland"
   - value: >-
       <span itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-        <meta itemprop="latitude" content="51.5" />
-        \1
-      </span>
+        <meta itemprop="latitude" content="51.5">\1</span>
     selectors:
       - page: "1"
         exact: "Lat. 51° 30′"
@@ -880,7 +1562,6 @@ markup:
     selectors:
       - page: "2"
         exact: "Jan."
-        suffix: " 16th,"
   - value: >-
       {{ "Dudley, Robert" | person_reference: "\1" }}
     selectors:
@@ -905,7 +1586,615 @@ markup:
       {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
     selectors:
       - page: "2"
+        prefix: "came to "
         exact: "my howse"
+  # 1577-01-22
+  - value: >-
+      <time datetime="1577-02-01">\1</time>
+    selectors:
+      - page: "2"
+        exact: "Jan. 22nd"
+  - value: >-
+      {{ "Russell, Francis" | person_reference: "\1" }}
+    selectors:
+      - page: "2"
+        exact: "The Erle of Bedford"
+  - value: >-
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "3"
+        prefix: "cam to "
+        exact: "my howse"
+  # 1577-03-01
+  - value: >-
+      <time datetime="1577-03-01">\1</time>
+    selectors:
+      - page: "3"
+        exact: "Feb. 19th"
+  - value: >-
+      <abbr title="February">\1</abbr>
+    selectors:
+      - page: "3"
+        exact: "Feb."
+        suffix: " 19th"
+  - value: >-
+      <abbr title="southwest">\1</abbr>
+    selectors:
+      - page: "3"
+        exact: "S.W."
+
+  # ...
+
+  # 1577-11-16 (text: -06)
+  - value: >-
+      <time datetime="1577-11-16">\1</time>
+    selectors:
+      - page: "3"
+        exact: "Nov. 6th"
+  - value: >-
+      {{ "Gilbert, Humphrey" | person_reference: "\1" }}
+    selectors:
+      - page: "3"
+        exact: "Sir Umfrey Gilbert"
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "3"
+        prefix: "to "
+        exact: "me"
+        suffix: " to"
+  - value: >-
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "3"
+        prefix: "to "
+        exact: "Mortlak"
+        suffix: "."
+
+  # ...
+
+  # 1578-08-05 xx
+  - value: >-
+      {{ "Gilbert, Humphrey" | person_reference: "\1" }}
+    selectors:
+      - page: "4"
+        exact: "Sir Umfrey Gilbert"
+
+  # ...
+
+  # 1579-10-18 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "6"
+        exact: "Mr. Adrian Gilbert"
+
+  # ...
+
+  # 1580-06-03 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "7"
+        exact: "Mr. A. Gilbert"
+
+  # ...
+
+  # 1580-08-28 xx
+  - value: >-
+      {{ "Gilbert, Humphrey" | person_reference: "\1" }}
+    selectors:
+      - page: "8"
+        exact: "Sir Humfrey Gilbert"
+      - page: "8"
+        prefix: "for "
+        exact: "his"
+        suffix: " graunt"
+
+  # ...
+
+  # 1580-09-10 xx
+  - value: >-
+      {{ "Gilbert, Humphrey" | person_reference: "\1" }}
+    selectors:
+      - page: "8"
+        exact: "Sir Humfry Gilbert"
+      - page: "8"
+        prefix: "request to "
+        exact: "him"
+      # A bit ambiguous. Could refer to either Gilbert or Stoner.
+      - page: "8"
+        prefix: "promises in "
+        exact: "his"
+
+  # ...
+
+  # 1581-07-12 xx
+  - value: >-
+      <span lang="en-Grek-emodeng" translate>\1
+    selectors:
+      - page: "11"
+        prefix: "noone "
+        exact: "ρογερ ἱς"
+  - value: >-
+      \1</span>
+    selectors:
+      - page: "11"
+        exact: "παρτελι τελ"
+        suffix: ". At the"
+  - value: >-
+      {{ "Dudley, Robert" | person_reference: "\1" }}
+    selectors:
+      - page: "11"
+        exact: "the Erle of Lecester"
+  - value: >-
+      {{ "Radclyffe, Thomas" | person_reference: "\1" }}
+    selectors:
+      - page: "12"
+        exact: "the Erle of Sussex, Lord Chamberlayn"
+
+  # ...
+
+  # 1581-10-08 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "13"
+        exact: "Mr. Barnabas Sawle"
+
+  # 1581-10-09 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "13"
+        exact: "Barnabas Saul"
+        suffix: ", lying"
+
+  # ...
+
+  # 1582-01-27 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        prefix: "Jan. 27th, "
+        exact: "Barnabas Sawl"
+
+  # 1582-02-12 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        exact: "Barnabas Saul"
+        suffix: "and his"
+      - page: "14"
+        exact: "Saul his"
+      - page: "14"
+        exact: "his"
+        suffix: " lawyers at"
+
+  # 1582-02-20 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        prefix: "letter from "
+        exact: "Barnabas Saul"
+
+  # 1582-02-21 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        prefix: "toward "
+        exact: "Barnabas"
+
+  # ...
+
+  # 1582-03-06 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        exact: "Barnabas Saul"
+        suffix: " cam this"
+      - page: "14"
+        exact: "He"
+        suffix: " confessed"
+      - page: "14"
+        prefix: "that "
+        exact: "he"
+
+  # 1582-03-08 xx
+  - value: >-
+      {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        exact: "his frende"
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "14"
+        exact: "Barnabas"
+      - page: "14"
+        exact: "he"
+        suffix: " lay not"
+      - page: "14"
+        exact: "he"
+        suffix: " went, I say"
+
+  # 1582-03-09 xx
+  - value: >-
+      {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - page: "15"
+        exact: "Mr. Talbot"
+        suffix: "* declared"
+      - page: "15"
+        prefix: "mak "
+        exact: "his frend"
+      - page: "15"
+        exact: "his frende the lerned man"
+      - page: "15"
+        prefix: "But "
+        exact: "his frend"
+      - page: "15"
+        prefix: "told "
+        exact: "him"
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "15"
+        exact: "Barnabas"
+      - page: "15"
+        prefix: "that "
+        exact: "he"
+        suffix: " was"
+
+  # 1582-03-22 xx
+  - value: >-
+      {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - page: "15"
+        prefix: "March 22nd, "
+        exact: "Mr. Talbot"
+      - page: "15"
+        prefix: "to take "
+        exact: "his"
+
+  # ...
+
+  # 1582-07-16 xx
+  - value: >-
+      {{ "Pole, William" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Mr. William Pole"
+  - value: >-
+      {{ "Russell, Francis" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "the old Erle of Tavistok"
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        prefix: "cam to "
+        exact: "me"
+      - page: "16"
+        prefix: "acquayntance with "
+        exact: "me"
+      - page: "16"
+        prefix: "to "
+        exact: "me"
+        suffix: " to"
+      - page: "16"
+        prefix: "promysed "
+        exact: "me"
+      - page: "16"
+        prefix: "be sent "
+        exact: "me"
+  - value: >-
+      {{ "Fromond, Jane" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Jane my wife"
+      - page: "16"
+        prefix: ": "
+        exact: "she"
+        suffix: " went by water"
+      - page: "16"
+        prefix: "went with "
+        exact: "her"
+      - page: "16"
+        exact: "Jane"
+        suffix: " this night"
+      - page: "16"
+        prefix: "in "
+        exact: "her"
+        suffix: " belly"
+      - page: "16"
+        exact: "she"
+        suffix: " vomyted"
+  - value: >-
+      {{ "Garret" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Nurse Garret"
+      - page: "16"
+        prefix: "pay "
+        exact: "her"
+      - page: "16"
+        prefix: "for "
+        exact: "her"
+      - page: "16"
+        prefix: "brought "
+        exact: "her"
+  - value: >-
+      {{ "Peckham, George" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Sir George Peckham"
+      - page: "16"
+        exact: "He"
+        suffix: " promysed"
+  - value: >-
+      {{ "Gerard, Thomas" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Mr. Gerarde"
+  - value: >-
+      <time datetime="1582-07-19">\1
+    selectors:
+      - page: "16"
+        exact: "Saint Margaret’s day"
+  - value: >-
+      <time datetime="1582-07-16T15Z">\1
+    selectors:
+      - page: "16"
+        exact: "A meridie hor. 3½"
+  - value: >-
+      \1</time>
+    selectors:
+      - page: "16"
+        exact: "Saint Margaret’s Day"
+      - page: "16"
+        exact: "A meridie hor. 3½"
+
+  # ...
+
+  # 1582-07-19 xx
+  - value: >-
+      {{ "Barnabas Saul" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "Barnabas Saul"
+      - page: "16"
+        exact: "hym"
+      - page: "16"
+        exact: "his"
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "16"
+        prefix: "see "
+        exact: "me"
+      - page: "16"
+        prefix: ": "
+        exact: "I"
+        suffix: " chyd"
+  - value: >-
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "16"
+        exact: "at Mortlak"
+
+  # ...
+
+  # 1583-01-23 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "18"
+        prefix: "found "
+        exact: "Mr. Awdrian Gilbert"
+
+  # 1583-01-24 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "18"
+        prefix: ", "
+        exact: "Mr. Awdrian Gilbert"
+        suffix: ", and"
+
+  # ...
+
+  # 1583-03-06 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "19"
+        prefix: ", and "
+        exact: "Mr. Adrian Gilbert"
+
+  # ...
+
+  # 1583-04-18 xx
+  - value: >-
+      {{ "Queen Elizabeth I" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "The Quene"
+      - page: "20"
+        exact: "her"
+      - page: "20"
+        exact: "she"
+  - value: >-
+      {{ "Richmond Palace, South East, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Richemond"
+  - value: >-
+      {{ "Palace of Placentia, Greenwich, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Grenwich"
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        prefix: "called for "
+        exact: "me"
+      - page: "20"
+        prefix: "and gave "
+        exact: "me"
+  - value: >-
+      {{ "Raleigh, Walter" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Mr. Rawly his"
+  - value: >-
+      <q lang="la-renais">quod
+    selectors:
+      - page: "20"
+        exact: "“ quod"
+  - value: >-
+      aufertur,</q>
+    selectors:
+      - page: "20"
+        exact: "aufertur,”"
+
+  # 1583-04-14 xx
+  - value: >-
+      {{ "Dee, Rowland" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Rowland"
+
+  # 1583-05-01 xx
+  - value: >-
+      {{ "Łaski, Olbracht" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        prefix: "May 1st, "
+        exact: "Albertus Laski"
+  - value: >-
+      {{ "PL" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Polonus"
+  - value: >-
+      {{ "London, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Londinum"
+
+  # 1583-05-04 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Mr. Adrian Gilbert"
+  - value: >-
+      {{ "Pepler" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Mr. Pepler"
+  - value: >-
+      {{ "Brentford, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Braynford"
+  - value: >-
+      {{ "Devon, South West, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Devonshire"
+
+  # 1583-05-07 xx
+  - value: >-
+      {{ "Kelley, Edward" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "E. K."
+  - value: >-
+      <span lang="la-renais">\1
+    selectors:
+      - page: "20"
+        exact: "Dies"
+  - value: >-
+      \1</span>
+    selectors:
+      - page: "20"
+        exact: "Pascham."
+
+  # 1583-05-13 xx
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        prefix: "May 13th, "
+        exact: "I"
+      - page: "20"
+        exact: "my"
+        suffix: " lease"
+  - value: >-
+      {{ "Laski, Olbracht" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        prefix: "acquaynted with "
+        exact: "Albertus Laski"
+  - value: >-
+      {{ "Dudley, Robert" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "the Erle of Lecester his"
+  - value: >-
+      {{ "Duckett, Lionel" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Sir Leonell Ducket"
+  - value: >-
+      {{ "Palace of Placentia, Greenwich, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "the court at Greenwich"
+  - value: >-
+      {{ "Devon, South West, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Devonshyre"
+
+  # 1583-05-18 xx
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "I"
+      - page: "20"
+        exact: "me"
+        suffix: " at"
+  - value: >-
+      {{ "Dee's house in Mortlake, Greater London, GB" | place_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "Mortlake"
+  - value: >-
+      {{ "Łaski, Olbracht" | person_reference: "\1" }}
+    selectors:
+      - page: "20"
+        exact: "The Prince Albertus Łaski"
+      - page: "20"
+        exact: "He"
+        suffix: " cam"
+
+  # 1583-08-14 xx
+  - value: >-
+      {{ "Dee, Rowland" | person_reference: "\1" }}
+    selectors:
+      - page: "21"
+        exact: "Rowland"
 
   # ...
 
@@ -942,3 +2231,23 @@ markup:
         prefix: "toward "
         exact: "Prage"
         suffix: "."
+
+  # ...
+
+  # 1589-12-29 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "32"
+        exact: "Mr. Adrian Gilbert"
+      - page: "32"
+        prefix: "at "
+        exact: "his"
+        suffix: " hands"
+
+  # 1590-01-26 xx
+  - value: >-
+      {{ "Gilbert, Adrian" | person_reference: "\1" }}
+    selectors:
+      - page: "33"
+        exact: "Mr. Adrian Gilbert"

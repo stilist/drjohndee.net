@@ -1,0 +1,11 @@
+---
+license: CC0 1.0
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="63-64"
+  text_start="Oct. 13th,"
+  text_end="my dyning-room."
+%}

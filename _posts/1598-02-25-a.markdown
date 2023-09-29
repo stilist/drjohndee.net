@@ -1,0 +1,14 @@
+---
+license: CC0 1.0
+tags:
+- weather
+---
+<!-- https://en.wikipedia.org/wiki/Solar_eclipse_of_March_7,_1598 -->
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="61"
+  text_start="Feb. 25th,"
+  text_end="9½ mane."
+%}

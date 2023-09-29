@@ -1,10 +1,10 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "unknown -- Hudson"
+- unknown -- Hudson
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

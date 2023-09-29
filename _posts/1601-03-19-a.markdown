@@ -1,0 +1,15 @@
+---
+license: CC0 1.0
+people:
+- Hickman, Bartholomew
+tags:
+- correspondence
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="64"
+  text_start="March 19th,"
+  text_end="by a carryer of Oldham."
+%}

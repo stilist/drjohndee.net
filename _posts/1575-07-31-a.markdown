@@ -1,13 +1,13 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Huicke, Robert"
-  - "Steward, Simeon"
+- Huicke, Robert
+- Steward, Simeon
 places:
-  - "Shinfield, South East, GB"
+- Shinfield, South East, GB
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

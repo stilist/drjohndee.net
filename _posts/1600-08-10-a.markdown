@@ -1,0 +1,13 @@
+---
+license: CC0 1.0
+people:
+- Dee, Katherine
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="63"
+  text_start="Aug. 10th,"
+  text_end="et Maria Nicolls."
+%}

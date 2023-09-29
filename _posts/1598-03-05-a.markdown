@@ -1,0 +1,13 @@
+---
+license: CC0 1.0
+tags:
+- death
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="61"
+  text_start="March 5th,"
+  text_end="after Candelmas Day."
+%}

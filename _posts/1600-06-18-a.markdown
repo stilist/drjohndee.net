@@ -1,0 +1,16 @@
+---
+license: CC0 1.0
+people:
+- Dee, John
+- Fromond, Jane
+tags:
+- travel
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="62"
+  text_start="June 18th,"
+  text_end="cam to Manchester."
+%}

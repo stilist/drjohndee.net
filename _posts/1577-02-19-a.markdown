@@ -1,9 +1,9 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Dee, John"
+- Dee, John
 tags:
-  - "weather"
+- weather
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

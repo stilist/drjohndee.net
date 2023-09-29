@@ -1,12 +1,12 @@
 ---
-calendar: "Gregorian"
-license: "CC0 1.0"
+calendar: Gregorian
+license: CC0 1.0
 people:
-  - "Cooke, Brigit"
-  - "Dee, John"
+- Cooke, Brigit
+- Dee, John
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

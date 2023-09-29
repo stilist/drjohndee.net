@@ -1,0 +1,11 @@
+---
+license: CC0 1.0
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="64"
+  text_start="Nov. 4th,"
+  text_end="Mr. James Ashton of Chaterdon."
+%}

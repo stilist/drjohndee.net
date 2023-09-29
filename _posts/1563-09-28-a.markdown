@@ -1,14 +1,14 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Ask, John"
-  - "Mownson, Elizabeth"
-  - "unknown -- Brown"
+- Ask, John
+- Mownson, Elizabeth
+- unknown -- Brown
 places:
-  - "York, Yorkshire and the Humber, GB"
+- York, Yorkshire and the Humber, GB
 tags:
-  - "astrology"
-  - "nativity"
+- astrology
+- nativity
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"

@@ -1,0 +1,12 @@
+---
+license: CC0 1.0
+---
+{% transclusion
+  source_key="The Private Diary of Dr John Dee"
+  edition_key="book"
+  language="en-emodeng"
+  page="61"
+  text_start="Jan. 28th,"
+  text_end="a twelvemonth."
+%}
+

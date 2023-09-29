@@ -1,13 +1,13 @@
 ---
-license: "CC0 1.0"
+license: CC0 1.0
 people:
-  - "Dee, John"
-  - "Russell, Francis"
+- Dee, John
+- Russell, Francis
 places:
-  - "Dee's house in Mortlake, Greater London, GB"
+- Dee's house in Mortlake, Greater London, GB
 tags:
-  - "people visiting Dee"
-  - "travel"
+- people visiting Dee
+- travel
 ---
 {% transclusion
   source_key="The Private Diary of Dr John Dee"
