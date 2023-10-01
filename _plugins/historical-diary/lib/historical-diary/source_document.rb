@@ -139,10 +139,10 @@ module HistoricalDiary
     def page(page_number)
       return parsed_pages[page_number] if parsed_pages.key?(page_number)
 
-      raw_page_text = raw_text_by_page.delete page_number
+      raw_text = raw_text_by_page.delete page_number
       page = SourceDocumentPage.new(document: self,
                                     page_number:,
-                                    raw_text: raw_page_text)
+                                    raw_text:)
       parsed_pages[page_number] = page
     end
 
