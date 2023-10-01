@@ -19,19 +19,23 @@
 #++
 
 module HistoricalDiary
-  # - body:
-  #     type: TextualBody
-  #     format: "text/plain"
-  #     value: >-
-  #       continewyng
-  #   target:
-  #     selectors:
-  #       - type: TextQuoteSelector
-  #         exact: "continew⹀ yng"
+  # Rewrite `text` using one or more annotation hashes.
   #
-  #   - value: continewyng
-  #     selectors:
-  #       - exact: "continew⹀ yng"
+  # An annotation takes the form
+  #
+  # ```ruby
+  # {
+  #   value: "Gelderland"
+  #   selectors: [{
+  #     prefix: "Wessell in "
+  #     exact: "Gel- derland"
+  #     suffix: "."
+  #   }]
+  # }
+  # ```
+  #
+  # `prefix` and `suffix` are optional, and are useful to disambiguate multiple
+  # matches.
   class Annotation
     def initialize(text, annotations: [])
       raise ArgumentError unless text.is_a? String
