@@ -119,7 +119,7 @@ module HistoricalDiary
     def markup_redactions_for_page(page_number)
       return @markup_redactions[page_number] if defined? @markup_redactions
 
-      @markup_redactions = annotations('markup')
+      @markup_redactions = redactions_by_page('markup')
 
       @markup_redactions[page_number]
     end
@@ -160,7 +160,7 @@ module HistoricalDiary
     end
 
     def apply_reflows!
-      annotations('reflows').each do |page_number, reflows|
+      redactions_by_page('reflows').each do |page_number, reflows|
         annotation = Annotation.new(raw_text_by_page[page_number],
                                     annotations: reflows)
         raw_text_by_page[page_number] = annotation.text
@@ -256,7 +256,10 @@ module HistoricalDiary
       end
     end
 
-    def annotations(key)
+    # Rewrite `key` redactions from an array to a hash that's keyed by page
+    # number. This makes it easy to find the redactions that are relevant for
+    # a given page number.
+    def redactions_by_page(key)
       return {} if redactions[key].nil?
 
       redactions[key].each_with_object({}) do |reflow, memo|
