@@ -98,7 +98,7 @@ module HistoricalDiary
 
     def pattern
       pattern_parts = [
-        text_start,
+        Regexp.escape(text_start),
       ]
       unless text_end.nil?
         pattern_parts << '.*?'
