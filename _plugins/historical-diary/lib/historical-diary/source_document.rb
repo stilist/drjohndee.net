@@ -161,9 +161,23 @@ module HistoricalDiary
 
     def apply_reflows!
       redactions_by_page('reflows').each do |page_number, reflows|
-        annotation = Annotation.new(raw_text_by_page[page_number],
-                                    annotations: reflows)
-        raw_text_by_page[page_number] = annotation.text
+        start_page, end_page = page_number.split '-'
+
+        if end_page.nil?
+          annotation = Annotation.new(raw_text_by_page[page_number],
+                                      annotations: reflows)
+          raw_text_by_page[page_number] = annotation.text
+        else
+          # Handle cross-page reflows by 'moving' the whole word to
+          # `start_page`.
+          reflows.each do |reflow|
+            # @note Possible but unlikely that there will be more than one
+            #   selector; deal with it if needed.
+            head, tail = reflow['selectors'].first['exact'].split '- '
+            raw_text_by_page[start_page].sub!(/#{head}\z/, reflow['value'])
+            raw_text_by_page[end_page].sub!(/\A#{tail}/, '')
+          end
+        end
       end
     end
 
