@@ -38,8 +38,9 @@ permalink: /:year/:month/:day:output_ext
 # site metadata
 historical_diary:
   default_calendar_system: "Julian"
+  doi: "10.5281/zenodo.4511512"
+  mapbox_access_token: "pk.eyJ1Ijoic3RpbGlzdCIsImEiOiJ2cXFLaVcwIn0.IrZVlgan0nuWCSTGlzbteg"
   subject_person_key: "Dee, John"
-doi: "10.5281/zenodo.4511512"
 github_repository_url: "https://github.com/stilist/drjohndee.net"
 google_site_verification_key: "uYkaZuprDK3QILI95IPoJrtWcy0RJIgPGVMrLGIvsQM"
 icon_name: heiroglyph
@@ -51,7 +52,6 @@ icon_sizes:
   - 128
   - 192
 license_key: "CC BY-SA 4.0"
-mapbox_access_token: "pk.eyJ1Ijoic3RpbGlzdCIsImEiOiJ2cXFLaVcwIn0.IrZVlgan0nuWCSTGlzbteg"
 theme_color:
   # --accent-60 (dark theme)
   dark: "#ae7022"
