@@ -88,8 +88,6 @@ module HistoricalDiary
 
       def person_link(attribute_name, itemprop)
         input = "{{ \"#{attributes[attribute_name]}\" | person_link: nil, \"#{itemprop}\" }}"
-        # require 'byebug'
-        # byebug
         liquify_string input, context
       end
     end

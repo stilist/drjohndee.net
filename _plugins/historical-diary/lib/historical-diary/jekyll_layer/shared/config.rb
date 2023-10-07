@@ -22,12 +22,12 @@ module HistoricalDiary
   module JekyllLayer
     module Shared
       # Convenience methods for reading the <tt>Jekyll::Site</tt> config. It
-      # can only be used in files that `include Shared::Site`.
+      # can only be used in files that `include Shared::Config`.
       module Config
         class ConfigIsMissingRequiredKeyError < ArgumentError; end
 
         DEFAULT_CONFIG = {
-          default_calendar_system: 'Gregorian',
+          calendar_system: 'Gregorian',
           lang: 'en',
         }.freeze
         private_constant :DEFAULT_CONFIG
