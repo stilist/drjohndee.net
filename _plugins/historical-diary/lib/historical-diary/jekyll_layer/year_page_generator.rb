@@ -65,7 +65,7 @@ module HistoricalDiary
       def key
         return @key if defined? @key
 
-        @key = config! :subject_person_key
+        @key = config! :subject_person_key, scoped: true
       rescue Shared::Config::ConfigIsMissingRequiredKeyError
         Jekyll.logger.warn self.class.name do
           'Plugin config needs a subject_person_key to generate year pages'

@@ -46,7 +46,7 @@ module HistoricalDiary
 
         attributes = attributes_to_hash @raw_attributes
 
-        lang = attributes['language'] || site_object.config[:lang]
+        lang = attributes['language'] || config(:lang)
 
         author_key = attributes['author_key']
         citation_input = "{{ \"#{author_key}\" | person_link }}"

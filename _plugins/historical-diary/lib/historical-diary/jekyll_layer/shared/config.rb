@@ -37,24 +37,31 @@ module HistoricalDiary
 
         # Attempt to retrieve a plugin-specific config value. If the config
         # doesn't define `key`, this may return a default value.
-        def config(key) = config_without_fallback(key) || DEFAULT_CONFIG[key.to_sym]
+        def config(key, scoped: false)
+          config_without_fallback(key, scoped:) || DEFAULT_CONFIG[key.to_sym]
+        end
 
         # The same as `#config`, but raises `ConfigIsMissingKeyError` if the
         # key is not set.
-        def config!(key)
-          value = config_without_fallback key
+        def config!(key, scoped: false)
+          value = config_without_fallback(key, scoped:)
           return value unless value.nil?
 
-          raise ConfigIsMissingRequiredKeyError,
-                "Site config does not define '#{key}' in the #{CONFIG_NAMESPACE} namespace"
+          message = "Site config does not define '#{key}'"
+          message << " in the #{CONFIG_NAMESPACE} namespace" if scoped
+          raise ConfigIsMissingRequiredKeyError, message
         end
 
         private
 
         # Attempt to retrieve a plugin-specific config value, which may not be
         # set in the config.
-        def config_without_fallback(key)
-          site_object.config.dig CONFIG_NAMESPACE, key.to_s
+        def config_without_fallback(key, scoped:)
+          if scoped
+            site_object.config.dig CONFIG_NAMESPACE, key.to_s
+          else
+            site_object.config[key.to_s]
+          end
         end
       end
     end
