@@ -1,0 +1,141 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2023  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+source:
+  work_key: "BLL01000891143"
+  edition_key: "manuscript"
+
+reflows:
+  - value: "Highneſſe"
+    selectors:
+      - page: "1"
+        exact: "High- neſſe"
+  - value: "diſgracefull"
+    selectors:
+      - page: "1"
+        exact: "diſgrace- neſſe"
+  - value: "other"
+    selectors:
+      - page: "1"
+        exact: "o- ther"
+  - value: "Coniurer"
+    selectors:
+      - page: "1"
+        exact: "Con- iurer"
+  - value: "many"
+    selectors:
+      - page: "1"
+        exact: "ma- ny"
+  - value: "vndoing"
+    selectors:
+      - page: "1"
+        exact: "vndo- ing"
+
+markup:
+  - value: >-
+      <p>\1
+    selectors:
+      - page: "1"
+        exact: "In moſt humble"
+
+  - value: >-
+      <time datetime="1592-01-07">\1
+    selectors:
+      - page: "1"
+        exact: "Anno 1592."
+
+  - value: >-
+      \1</time>
+    selectors:
+      - page: "1"
+        exact: "7. Ianuarÿ"
+
+  - value: >-
+      {{ "Dee, John" | person_reference: "\1" }}
+    selectors:
+      - page: "1"
+        exact: "moſt diſtreſſed Seruant"
+      - page: "1"
+        exact: "Iohn Dee"
+      - page: "1"
+        exact: "ſayd Seruant"
+      - page: "1"
+        prefix: "and to "
+        exact: "him"
+      - page: "1"
+        prefix: "againſt "
+        exact: "him"
+      - page: "1"
+        prefix: "Namely, That "
+        exact: "he"
+      - page: "1"
+        exact: "ſaid Suppliant"
+      - page: "1"
+        prefix: "diuers "
+        exact: "his"
+        suffix: " earneſt"
+      - page: "1"
+        exact: "himſelfe"
+      - page: "1"
+        prefix: "of "
+        exact: "him"
+      - page: "1"
+        prefix: "vnto "
+        exact: "him"
+      - page: "1"
+        prefix: "of "
+        exact: "his"
+        suffix: " doing"
+      - page: "1"
+        prefix: "vpon "
+        exact: "his"
+        suffix: " ſaid"
+      - page: "1"
+        exact: "his"
+        suffix: " vtter"
+
+  - value: >-
+      Highneſſe
+    selectors:
+      - page: "1"
+        exact: |-2
+          High-
+          neſſe
+
+  - value: >-
+      {{ "King James VI and I" | person_reference: "\1" }}
+    selectors:
+      - page: "1"
+        exact: "the Kings moſt excellent maieſtie"
+      - page: "1"
+        exact: "your Royall Maieſtie"
+      - page: "1"
+        exact: "your Highneſſe"
+      - page: "1"
+        exact: "you"
+        suffix: " are our King"
+      - page: "1"
+        exact: "your ſacred Maieſtie"
+      - page: "1"
+        exact: "your own royall"
+      - page: "1"
+        exact: "your Maieſties"
+      - page: "1"
+        exact: "good, and gratious King"
+      - page: "1"
+        prefix: "that "
+        exact: "your Maieſtie"
+      - page: "1"
+        prefix: "make "
+        exact: "your Maieſtie"
+
+  - value: >-
+      {{ "Queen Elizabeth I" | person_reference: "\1" }}
+    selectors:
+      - page: "1"
+        exact: "Queen Elizabeth"

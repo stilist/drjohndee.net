@@ -1,0 +1,22 @@
+---
+license: CC0 1.0
+people:
+- Dee, John
+- King James VI and I
+- Queen Elizabeth I
+tags:
+- correspondence
+---
+{% correspondence
+  author_key="Dee, John"
+  recipient_key="King James VI and I"
+%}
+  {% transclusion
+    source_key="BLL01000891143"
+    edition_key="manuscript"
+    language="en-emodeng"
+    page="1"
+    text_start="To the Kings"
+    text_end="Amen."
+  %}
+{% endcorrespondence %}
