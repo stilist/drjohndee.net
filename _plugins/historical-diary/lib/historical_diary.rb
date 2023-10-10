@@ -40,9 +40,9 @@ def resolve_path(path) = File.expand_path(path, __dir__)
 # cross-links.
 module HistoricalDiary
   autoload :Annotation,         resolve_path('historical-diary/annotation')
-  autoload :MapTile,            resolve_path('historical-diary/map_tile')
   autoload :SourceDocument,     resolve_path('historical-diary/source_document')
   autoload :SourceDocumentPage, resolve_path('historical-diary/source_document_page')
+  autoload :StaticMap,          resolve_path('historical-diary/static_map')
   autoload :VERSION,            resolve_path('historical-diary/version')
   autoload :Transclusion,       resolve_path('historical-diary/transclusion')
 end

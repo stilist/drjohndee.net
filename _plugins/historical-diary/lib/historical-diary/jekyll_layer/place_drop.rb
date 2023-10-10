@@ -24,6 +24,7 @@ module HistoricalDiary
   module JekyllLayer
     # Wrapper for a `places` Data File.
     class PlaceDrop < Jekyll::Drops::Drop
+      include Shared::Config
       include Shared::Drop
 
       mutable false
@@ -57,9 +58,10 @@ module HistoricalDiary
       def static_map_html
         return @static_map_html if defined? @static_map_html
 
-        @static_map_html = MapTile.new(bounding_box:,
-                                       points: [point],
-                                       site: site_object).static_map_html
+        map_api_key = config! 'mapbox_access_token', scoped: true
+        @static_map_html = StaticMap.new(bounding_box:,
+                                         map_api_key:,
+                                         points: [point]).html
       end
 
       private
