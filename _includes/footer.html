@@ -41,10 +41,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     <a href='{{ site.github_repository_url }}'>View the project’s source files</a>.
     {% endif -%}
 
-    {% if site.doi -%}
-    <a href="https://doi.org/{{ site.doi }}" rel=identifier>
+    {% if site.historical_diary.doi -%}
+    <a href="https://doi.org/{{ site.historical_diary.doi }}" rel=identifier>
       <abbr title="digital object identifier">DOI</abbr>:
-      <span class="doi">{{ site.doi }}</span></a>.
+      <span class="doi">{{ site.historical_diary.doi }}</span></a>.
     {% endif -%}
 
     This website doesn’t track you.
