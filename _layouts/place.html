@@ -70,7 +70,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <main class="page-content"
            itemprop=articleBody>
-    {% static_map_tile %}{{ page.place_key }}{% endstatic_map_tile %}
+    {{ page.place_key | static_map_tile }}
   </main>
 
   <section class='secondary'>
