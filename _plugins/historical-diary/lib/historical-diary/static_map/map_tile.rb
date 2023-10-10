@@ -19,7 +19,7 @@
 #++
 
 module HistoricalDiary
-  # Build the URL to a specific rendering of a map tile.
+  # Build the URL for a specific rendering of a map tile.
   class MapTile
     COLORS = {
       # --accent-70
@@ -57,6 +57,8 @@ module HistoricalDiary
       valid_bounding_box? || valid_centerpoint? || valid_markers?
     end
 
+    # Build the URL for a specific tile appearance.
+    #
     # @see https://docs.mapbox.com/api/maps/static-images/
     def url(more_contrast:, size:, dpi: 1, theme: :default)
       parts = [
