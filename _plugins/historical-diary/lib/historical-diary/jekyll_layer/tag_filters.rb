@@ -29,12 +29,14 @@ module HistoricalDiary
       include Shared::Site
       include Shared::UncategorizedHelpers
 
-      def tag_data(key) = drop(key, drop_class: tag_drop_class)
+      def tag_name(key) = tag_data(key).presentational_name
+
+      def tag_data(key) = filter_drop(key, drop_class: tag_drop_class)
 
       def tag_link(key, display_content = nil)
-        data_record_link(key,
+        data_record_link key,
                          display_content:,
-                         drop_class: tag_drop_class)
+                         drop_class: tag_drop_class
       end
 
       def tag_static_map_html(key)
@@ -51,9 +53,9 @@ module HistoricalDiary
       end
 
       def tag_reference(key, display_content = nil)
-        data_record_reference(key,
+        data_record_reference key,
                               display_content:,
-                              drop_class: tag_drop_class)
+                              drop_class: tag_drop_class
       end
 
       def tag_url(key) = data_record_url(key, drop_class: tag_drop_class)

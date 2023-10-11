@@ -31,7 +31,7 @@ module HistoricalDiary
       SINGULAR_NOUN = 'tag'
       DATA_KEY = "#{SINGULAR_NOUN}_key".freeze
 
-      def presentational_name = identifier
+      def presentational_name = record['presentational_name'] || identifier
 
       def microdata = {}.freeze
     end
