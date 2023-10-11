@@ -23,6 +23,9 @@ module HistoricalDiary
     # Overrides Jekyll’s default title for posts (taken from the post’s
     # filename), replacing it with the post’s publish date.
     class ManipulatePostMetadataGenerator < Jekyll::Generator
+      safe true
+      priority :highest
+
       def generate(site)
         posts = site.posts.docs
         posts.each do |post|
