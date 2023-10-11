@@ -95,11 +95,11 @@ module HistoricalDiary
             as_html = apply_markup transclusion.text
             Liquid::Template.parse(as_html).render @context
           end
-        rescue SourceDocument::InvalidRedactionError => error
-          shared_cache.getset error.message do
+        rescue SourceDocument::InvalidRedactionError => e
+          shared_cache.getset e.message do
             Jekyll.logger.error self.class.name do
               "Source document '#{transclusion_source_key}' has invalid " \
-              "'notes' selector; no text can be transcluded: #{error.message}"
+                "'notes' selector; no text can be transcluded: #{e.message}"
             end
 
             nil

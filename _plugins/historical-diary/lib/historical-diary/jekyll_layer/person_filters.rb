@@ -41,7 +41,7 @@ module HistoricalDiary
       def person_full_name(key)
         person_data(key)
           .fallback_data['full_name']
-          &.map { |x| x['text'] }
+          &.map { _1['text'] }
           &.join(' ')
       end
 
@@ -62,32 +62,26 @@ module HistoricalDiary
       end
 
       def person_link(key, display_content = nil, itemprop = nil)
-        data_record_link(key,
+        data_record_link key,
                          display_content:,
                          drop_class: person_drop_class,
-                         itemprop:)
+                         itemprop:
       end
 
       def person_reference(key, display_content = nil, itemprop = nil)
-        data_record_reference(key,
+        data_record_reference key,
                               display_content:,
                               drop_class: person_drop_class,
-                              itemprop:)
+                              itemprop:
       end
 
       def person_microdata(key, itemprop)
-        data_record_microdata(key,
+        data_record_microdata key,
                               drop_class: person_drop_class,
-                              itemprop:)
+                              itemprop:
       end
 
       def person_url(key) = data_record_url(key, drop_class: person_drop_class)
-
-      def sort_peoplekeys(keys)
-        return keys unless keys.is_a? Array
-
-        keys.sort_by { person_presentational_name _1 }
-      end
 
       private
 

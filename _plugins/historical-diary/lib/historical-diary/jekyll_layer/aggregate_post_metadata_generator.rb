@@ -27,23 +27,15 @@ module HistoricalDiary
     # Iterate through posts to set create `places_for_X` data, so that
     # per-drop pages can render a map.
     class AggregatePostMetadataGenerator < Jekyll::Generator
+      include Shared::UncategorizedHelpers
+
       priority :lowest
       safe true
 
       def generate(site)
         @site = site
 
-        site.posts.docs.each do |post|
-          values = post.data['places']
-          next if values.nil? || values.empty?
-
-          DROP_CLASSES.each do |drop_class|
-            drop_keys = post.data[drop_class::PLURAL_NOUN]
-            next if drop_keys.nil? || drop_keys.empty?
-
-            drop_keys.each { add_data(drop_class:, drop_key: _1, values:) }
-          end
-        end
+        site.posts.docs.each { process_post _1 }
       end
 
       private
@@ -63,6 +55,22 @@ module HistoricalDiary
         site.data[data_key] ||= {}
         site.data[data_key][drop_key] ||= Set.new
         site.data[data_key][drop_key].merge(values)
+      end
+
+      def process_post(post)
+        unsanitized_values = post.data['places']
+        return if unsanitized_values.nil? || unsanitized_values.empty?
+
+        values = unsanitized_values.map { sanitize_key _1 }
+
+        DROP_CLASSES.each do |drop_class|
+          drop_keys = post.data[drop_class::PLURAL_NOUN]
+          next if drop_keys.nil? || drop_keys.empty?
+
+          drop_keys.each do |drop_key|
+            add_data(drop_class:, drop_key: sanitize_key(drop_key), values:)
+          end
+        end
       end
     end
   end
