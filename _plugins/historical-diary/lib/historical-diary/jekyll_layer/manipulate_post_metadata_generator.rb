@@ -18,12 +18,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require_relative 'shared'
-
 module HistoricalDiary
   module JekyllLayer
-    # Overrides Jekyll’s default title for posts (taken from the post’s)
-    # filename, replacing it with the post’s publish date.
+    # Overrides Jekyll’s default title for posts (taken from the post’s
+    # filename), replacing it with the post’s publish date.
     class ManipulatePostMetadataGenerator < Jekyll::Generator
       def generate(site)
         posts = site.posts.docs

@@ -22,7 +22,8 @@ module HistoricalDiary
   module JekyllLayer
     module Shared
       # Convenience methods for reading the <tt>Jekyll::Site</tt> config. It
-      # can only be used in files that `include Shared::Config`.
+      # can only be used in files that `include` both `Shared::Config` and
+      # `Shared::Site`.
       module Config
         class ConfigIsMissingRequiredKeyError < ArgumentError; end
 
