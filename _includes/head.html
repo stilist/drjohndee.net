@@ -49,11 +49,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   {% assign author_key = page.author_key | default: site.author.key -%}
   <meta name="author" content="{{ author_key | person_presentational_name }}">
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="{{ page.lang | default: site.lang | replace: "-", "_" }}">
 
   <meta property="og:title" content="{{ page.title | escape }}">
-  <meta property="twitter:title" content="{{ page.title | escape }}">
 
   {% if site.description -%}
   <meta name="description" content="{{ site.description | escape }}">
