@@ -24,7 +24,10 @@ module HistoricalDiary
   module JekyllLayer
     # Liquid filters for working with data from `tags` Data Files.
     module TagFilters
+      include Shared::Config
       include Shared::Filters
+      include Shared::Site
+      include Shared::UncategorizedHelpers
 
       def tag_data(key) = drop(key, drop_class: tag_drop_class)
 
@@ -32,6 +35,19 @@ module HistoricalDiary
         data_record_link(key,
                          display_content:,
                          drop_class: tag_drop_class)
+      end
+
+      def tag_static_map_html(key)
+        place_keys = site_object.data.dig 'places_for_tag', key
+        return '' if place_keys.nil?
+
+        points = place_keys.map { PlaceDrop.new _1, context: @context }
+                           .select(&:exist?)
+                           .map(&:point)
+        return "<pre>#{place_keys.join('\n')}</pre>" if points.empty? && (Jekyll.env == 'development')
+
+        map_api_key = config! 'mapbox_access_token', scoped: true
+        StaticMap.new(map_api_key:, points:).html
       end
 
       def tag_reference(key, display_content = nil)

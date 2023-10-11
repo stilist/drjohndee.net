@@ -89,14 +89,24 @@ module HistoricalDiary
             .select { _1.key?(:latitude) && _1.key?(:longitude) }
     end
 
+    def media_query(size_name, theme)
+      query = [
+        MEDIA_QUERIES[theme],
+      ]
+      query << MEDIA_QUERIES[size_name] if MEDIA_QUERIES.key?(size_name)
+
+      query.map { "(#{_1})" }
+           .join(' and ')
+    end
+
     def size_source(theme)
-      media_query = MEDIA_QUERIES[theme]
       SIZE_SCALE_FACTORS.map do |size_name, scale_factor|
-        size = BASE_TILE_SIZE * scale_factor
+        size = (BASE_TILE_SIZE * scale_factor).to_i
+        media = media_query size_name, theme
 
         <<~HTML
           <source
-            media='(#{media_query}) and (#{MEDIA_QUERIES[size_name]})'
+            media='#{media}'
             srcset='#{tile_url(size:, theme:)}, #{tile_url(dpi: 2, size:, theme:)} 2x'
           >
         HTML

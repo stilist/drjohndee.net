@@ -55,15 +55,8 @@ module HistoricalDiary
       #   "חַנִּיאֵל" => "חַ"
       def name_initials(maximum_characters = 2)
         input = record['name_initials'] ||
-                record['presentational_name']&.values
-        if input.nil?
-          input = identifier.delete_prefix('unknown -- ')
-                            .split(', ')
-                            .reverse
-                            .join(' ')
-                            .gsub(/[,_]/, ' ')
-                            .split(/\s+/)
-        end
+                record['presentational_name']&.values ||
+                initials_from_identifier
 
         input.map { _1.unicode_normalize(:nfc).grapheme_clusters.first }
              .first(maximum_characters)
@@ -85,6 +78,15 @@ module HistoricalDiary
         # escaped version of `"Various authors"`
         'Various_authors',
       ].freeze
+
+      private
+
+      def initials_from_identifier
+        identifier.delete_prefix('unknown -- ')
+                  .gsub(/[_]/, ' ')
+                  .split(', ')
+                  .reverse
+      end
     end
   end
 end
