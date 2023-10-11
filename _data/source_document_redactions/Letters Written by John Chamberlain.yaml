@@ -1,0 +1,73 @@
+%YAML 1.2
+---
+# The life and times of Dr John Dee
+# Copyright (C) 2022  Jordan Cole <feedback@drjohndee.net>
+#
+# This file is provided under the CC BY-SA 4.0 license. See LICENSE.md for
+# details.
+
+source:
+  work_key: "Letters Written by John Chamberlain"
+  edition_key: "compilation"
+
+notes:
+  "46-a":
+    - page: "46"
+      prefix: "a "
+      textStart: "Ca"
+      textEnd: "ry."
+  "46-b":
+    - page: "46"
+      prefix: "b "
+      textStart: "Son of"
+      textEnd: "ⅰⅴ. 317.]"
+  "46-c":
+    - page: "46"
+      prefix: "c "
+      textStart: "Lord Ormond"
+      textEnd: "of Ireland."
+  "47-a":
+    - page: "47"
+      prefix: "a "
+      textStart: "Francis,"
+      textEnd: "ⅰⅰ. 405.]"
+  "47-b":
+    - page: "47"
+      prefix: "b "
+      textStart: "Probably Dr. Moffatt,"
+      textEnd: "British Museum."
+  "47-c":
+    - page: "47"
+      prefix: "c "
+      textStart: "“ The first part"
+      textEnd: "Sir John Hayward."
+  "159-a":
+    - page: "159"
+      prefix: "a "
+      textStart: "Earl of Essex"
+      textEnd: "Earl of Gowrie."
+  "159-b":
+    - page: "159"
+      prefix: "b "
+      textStart: "There is an"
+      textEnd: "Oct. 1602."
+  "159-c":
+    - page: "159"
+      prefix: "c "
+      textStart: "See the Spanish"
+      textEnd: "3 and 10."
+  "160-a":
+    - page: "160"
+      prefix: "a "
+      textStart: "William Perkins,"
+      textEnd: "No. 4173.]"
+  "160-b":
+    - page: "160"
+      prefix: "b "
+      textStart: "By Mrs. Bodley’s"
+      textEnd: "p. 118."
+  "160-c":
+    - page: "160"
+      prefix: "c "
+      textStart: "Secretary to"
+      textEnd: "p. 151.]"
