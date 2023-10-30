@@ -27,7 +27,7 @@ end
 # Performance-booster for watching directories on Windows
 gem 'wdm', '~> 0.1.1', platforms: %i[mingw x64_mingw mswin]
 
-gem 'rubocop', '~> 1.56.0'
+gem 'rubocop', '~> 1.57.0'
 gem 'rubocop-performance', '~> 1.19.0'
 
 gem 'byebug', '~> 11.1.3'
