@@ -15,7 +15,11 @@ require:
 AllCops:
   NewCops: enable
   Include:
-    - '_plugins/**/*.rb'
+    - "_plugins/**/*.rb"
+
+Style/Documentation:
+  Exclude:
+    - "_plugins/**/*_test.rb"
 
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
