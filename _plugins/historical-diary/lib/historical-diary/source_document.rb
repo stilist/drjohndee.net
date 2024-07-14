@@ -19,6 +19,7 @@
 #++
 
 require_relative 'source_documents/identifier'
+require_relative 'source_documents/page_range'
 
 module HistoricalDiary
   # A collection of `SourceDocuments::Page`s, representing a source such
@@ -50,6 +51,9 @@ module HistoricalDiary
                   :edition,
                   :volume
 
+    def_delegator :page_range,
+                  :[]
+
     def initialize(identifier, raw_text:, redactions: nil)
       @identifier = identifier
 
@@ -63,21 +67,7 @@ module HistoricalDiary
       @raw_text_by_page = {}
     end
 
-    def page_numbers
-      process!
-
-      parsed_pages.keys
-    end
-
-    def [](requested)
-      process!
-
-      range = self.class.page_range(requested)
-      range.map { |page_number| page(page_number) }
-    rescue KeyError => e
-      missing_page = e.message.match(/:\s"?(\w+)"?/)
-      raise InvalidPageError, "The raw source for '#{identifier}' doesn't include page #{missing_page[1]}"
-    end
+    alias [] page
 
     def markup_redactions_for_page(page_number)
       return @markup_redactions[page_number] if defined? @markup_redactions
