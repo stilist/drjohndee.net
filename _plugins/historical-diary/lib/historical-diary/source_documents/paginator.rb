@@ -22,6 +22,8 @@ require 'forwardable'
 
 module HistoricalDiary
   module SourceDocuments
+    class InvalidPageRangeError < RangeError; end
+
     # Produces an ordered hash of pages (page number => page text) from a
     # string of raw text.
     class Paginator
@@ -46,6 +48,29 @@ module HistoricalDiary
 
       def pages
         @pages ||= extracted_pages
+      end
+
+      # Select a single page, or a range of pages. Always returns an array to
+      # keep things simple for the caller.
+      #
+      # @example
+      #
+      #     # given page numbers `['ⅰ', 'ⅰⅰ', 'ⅰⅰⅰ', '1', '5']`...
+      #     ['ⅰ'] #=> ['ⅰ']
+      #     ['ⅰ', 'ⅰⅰⅰ'] #=> ['ⅰ', 'ⅰⅰ', 'ⅰⅰⅰ']
+      #     ['ⅰⅰ', '1'] #=> ['ⅰⅰ', 'ⅰⅰⅰ', '1']
+      #     ['1', '5'] #=> ['1', '5']
+      def [](first_key, last_key = nil)
+        first_index = keys.index first_key
+        raise InvalidPageRangeError, first_key if first_index.nil?
+
+        return [first_key] if last_key.nil?
+
+        last_index = keys.index last_key
+        raise InvalidPageRangeError, last_key if last_index.nil?
+        raise InvalidPageRangeError, "#{first_key}..#{last_key}" if last_index <= first_index
+
+        keys[first_index..last_index]
       end
 
       private
@@ -77,6 +102,8 @@ module HistoricalDiary
         @extracted_pages.freeze
       end
 
+      def keys = pages.keys
+
       def sanitize_text(text)
         return if text.nil?
 
@@ -92,7 +119,7 @@ module HistoricalDiary
         return [] unless raw_text.match? PAGE_HEADER_PATTERN
 
         pages = raw_text.split PAGE_HEADER_PATTERN
-        return pages if pages.empty?
+        return [] if pages.empty?
 
         # Ignore any text before the first header.
         pages.shift unless pages.first.match? PAGE_HEADER_PATTERN

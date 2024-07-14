@@ -52,11 +52,9 @@ module HistoricalDiary
                   :edition,
                   :volume
 
-    def_delegator :page_range,
-                  :[]
-
     def_delegator :paginator,
-                  :pages
+                  :pages,
+                  :[]
 
     def initialize(identifier, raw_text:, redactions: nil)
       @identifier = identifier
