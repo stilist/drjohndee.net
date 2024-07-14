@@ -20,6 +20,7 @@
 
 require_relative 'source_documents/identifier'
 require_relative 'source_documents/page_range'
+require_relative 'source_documents/paginator'
 
 module HistoricalDiary
   # A collection of `SourceDocuments::Page`s, representing a source such
@@ -54,6 +55,9 @@ module HistoricalDiary
     def_delegator :page_range,
                   :[]
 
+    def_delegator :paginator,
+                  :pages
+
     def initialize(identifier, raw_text:, redactions: nil)
       @identifier = identifier
 
@@ -80,6 +84,10 @@ module HistoricalDiary
     def notes_for_page(page_number) = notes[page_number]
 
     private
+
+    def paginator
+      @paginator ||= SourceDocuments::Paginator.new(raw_text)
+    end
 
     attr_accessor :completed_initial_parsing
     attr_reader :notes,

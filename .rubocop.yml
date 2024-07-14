@@ -17,6 +17,10 @@ AllCops:
   Include:
     - "_plugins/**/*.rb"
 
+Metrics/ClassLength:
+  Exclude:
+    - "_plugins/**/*_test.rb"
+
 Style/Documentation:
   Exclude:
     - "_plugins/**/*_test.rb"
