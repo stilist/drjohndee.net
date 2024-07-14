@@ -81,6 +81,10 @@ module HistoricalDiary
 
     def notes_for_page(page_number) = notes[page_number]
 
+    attr_reader :identifier,
+                :raw_text,
+                :redactions
+
     private
 
     def paginator
