@@ -18,77 +18,40 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
+require_relative 'source_documents/identifier'
+
 module HistoricalDiary
-  # A collection of <tt>SourceDocumentPage</tt>s, representing a source such as
-  # a book or manuscript.
-  #
-  # An identifier has a 'source key' and 'edition key', and optionally a 'volume
-  # key'; the keys are combined into a string separated by `", "`. For example,
-  # in the identifier `"Brief Lives, clarendon"`, the source key is `"Brief
-  # Lives` and the edition key is `clarendon`. The source key should match a
-  # Jekyll Data File that provides metadata about the source. (For example,
-  # `_data/sources/Brief Lives.yaml`.)
+  # A collection of `SourceDocuments::Page`s, representing a source such
+  # as a book or manuscript.
   #
   # This class is completely independent of Jekyll, and doesn't internally use
   # the identifier to retrieve data, but other classes may use the parsed
   # identifier for that purpose.
   class SourceDocument
-    attr_reader :edition_key,
-                :identifier,
-                :source_key,
-                :volume_key
-
     class InvalidPageError < StandardError; end
+
     class InvalidRedactionError < StandardError; end
 
     class << self
-      # Parse a comma-separated identifier into keys for source, edition, and
-      # volume.
-      #
-      # @example
-      #   parse_identifier("Local Gleanings")
-      #   #=> ["Local Gleanings"]
-      #   parse_identifier("Brief Lives, clarendon")
-      #   #=> ["Brief Lives", "clarendon"]
-      #   parse_identifier("Annals of the Reformation and Establishment of Religion, clarendon, II-I")
-      #   #=> ["Annals of the Reformation and Establishment of Religion", "clarendon", "II-I"]
-      def parse_identifier(identifier) = identifier.split(', ')
-
-      # Combine keys for source, edition, and volume into a comma-separated
-      # identifier.
-      #
-      # @example
-      #   build_identifier("Local Gleanings")
-      #   #=> "Local Gleanings"
-      #   build_identifier("Brief Lives", "clarendon")
-      #   #=> "Brief Lives, clarendon"
-      #   build_identifier("Annals of the Reformation and Establishment of Religion", "clarendon", "II-I")
-      #   #=> "Annals of the Reformation and Establishment of Religion, clarendon, II-I"
-      def build_identifier(source_key, edition_key, volume_key)
-        [
-          source_key,
-          edition_key,
-          volume_key,
-        ].compact.join ', '
+      def build_identifier(source, edition = nil, volume = nil)
+        SourceDocuments::Identifier.new(source:, edition:, volume:)
       end
 
-      # @todo handle iteration for folio, Roman numerals, etc
-      def page_range(requested)
-        case requested
-        when Integer then [requested.to_s]
-        when String
-          parts = requested.split('-')
-          (parts.first..parts.last)
-        when Array, Range then requested
-        else
-          raise InvalidPageError, 'Must specify at least one page number'
-        end
+      def parse_identifier(identifier)
+        return identifier if identifier.is_a? SourceDocuments::Identifier
+
+        build_identifier(*identifier.split(','))
       end
     end
 
+    extend Forwardable
+    def_delegator :identifier,
+                  :source,
+                  :edition,
+                  :volume
+
     def initialize(identifier, raw_text:, redactions: nil)
       @identifier = identifier
-      @source_key, @edition_key, @volume_key = self.class.parse_identifier identifier
 
       @raw_text = raw_text.dup
       @redactions = redactions
