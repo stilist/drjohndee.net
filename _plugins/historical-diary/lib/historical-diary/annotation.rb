@@ -34,8 +34,18 @@ module HistoricalDiary
   # }
   # ```
   #
-  # `prefix` and `suffix` are optional, and are useful to disambiguate multiple
-  # matches.
+  # This example would find the string `"Wessell in Gel- derland."` (where the
+  # `" "` after `"-"` is a literal space or a newline) and replace
+  # `"Gel- derland"` with `"Gelderland"`.
+  #
+  # Notes:
+  # * The annotation is applied as many times as it matches.
+  # * Annotations are applied in the order they’re declared.
+  # * `prefix` and `suffix` are optional, and are useful to disambiguate
+  #   multiple matches.
+  # * `exact` can be an arbitrary value, including HTML.
+  # * `value` can use the `\1` regular expression backreference to use `exact`’s
+  #   text.
   class Annotation
     def initialize(text, annotations: [])
       raise ArgumentError unless text.is_a? String
