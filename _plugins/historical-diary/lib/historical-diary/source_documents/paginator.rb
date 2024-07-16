@@ -43,39 +43,7 @@ module HistoricalDiary
 
       def initialize(raw_text)
         @raw_text = raw_text
-        @extracted_pages = {}
       end
-
-      def pages
-        @pages ||= extracted_pages
-      end
-
-      # Select a single page, or a range of pages. Always returns an array to
-      # keep things simple for the caller.
-      #
-      # @example
-      #
-      #     # given page numbers `['ⅰ', 'ⅰⅰ', 'ⅰⅰⅰ', '1', '5']`...
-      #     ['ⅰ'] #=> ['ⅰ']
-      #     ['ⅰ', 'ⅰⅰⅰ'] #=> ['ⅰ', 'ⅰⅰ', 'ⅰⅰⅰ']
-      #     ['ⅰⅰ', '1'] #=> ['ⅰⅰ', 'ⅰⅰⅰ', '1']
-      #     ['1', '5'] #=> ['1', '5']
-      def [](first_key, last_key = nil)
-        first_index = keys.index first_key
-        raise InvalidPageRangeError, first_key if first_index.nil?
-
-        return [first_key] if last_key.nil?
-
-        last_index = keys.index last_key
-        raise InvalidPageRangeError, last_key if last_index.nil?
-        raise InvalidPageRangeError, "#{first_key}..#{last_key}" if last_index <= first_index
-
-        keys[first_index..last_index]
-      end
-
-      private
-
-      attr_reader :raw_text
 
       # If `raw_text` is
       #
@@ -87,20 +55,47 @@ module HistoricalDiary
       #       "1r" => "example\n\n  another line",
       #       "30v" => "other text",
       #     }
-      #
-      # Ruby preserves the insertion order of hash keys, so to load a range of
-      # pages calling code can scan forward from the first page’s number to the
-      # last page’s number.
-      def extracted_pages
-        return @extracted_pages if raw_text.nil?
+      def pages
+        return @pages if defined? @pages
+
+        @pages = {}
+        return @pages if raw_text.nil?
 
         segmented_pages.each_slice(2) do |page_header, text|
           page_number = page_header.gsub(/(\[|\]|#{PAGE_WORD_PATTERN})/o, '')
-          @extracted_pages[page_number] = sanitize_text text
+          @pages[page_number] = sanitize_text text
         end
 
-        @extracted_pages.freeze
+        @pages
       end
+
+      # Get the page number for a single page, or a range of pages. Always
+      # returns an array to keep things simple for the caller.
+      #
+      # Given page numbers `['ⅰ', 'ⅰⅰ', '١', '1', '5']`,
+      # * `['ⅰ']` returns [`ⅰ`]
+      # * `['ⅰ', '١']` returns [`ⅰ`, `ⅰⅰ`, `١`]
+      # * `['ⅰⅰ', '1']` returns [`ⅰⅰ`, `١`, `1`]
+      # * `['1', '5']` returns [`1`, `5`]
+      def [](first_key, last_key = nil)
+        first_index = keys.index first_key
+        raise InvalidPageRangeError, first_key if first_index.nil?
+
+        return [first_key] if last_key.nil?
+
+        last_index = keys.index last_key
+        raise InvalidPageRangeError, last_key if last_index.nil?
+        raise InvalidPageRangeError, "#{first_key}..#{last_key}" if last_index <= first_index
+
+        # Ruby preserves the insertion order of hash keys, so to load a range of
+        # pages calling code can scan forward from the first page’s number to
+        # the last page’s number.
+        keys[first_index..last_index]
+      end
+
+      private
+
+      attr_reader :raw_text
 
       def keys = pages.keys
 
@@ -116,8 +111,6 @@ module HistoricalDiary
       end
 
       def segmented_pages
-        return [] unless raw_text.match? PAGE_HEADER_PATTERN
-
         pages = raw_text.split PAGE_HEADER_PATTERN
         return [] if pages.empty?
 

@@ -4,7 +4,11 @@ require 'test/unit'
 require_relative '../../../lib/historical-diary/source_documents/paginator'
 
 class TestSourceDocumentsPaginator < Test::Unit::TestCase
-  def instance(raw_text)
+  def instance(pages)
+    raw_text = case pages
+               when Array then pages.map { |key| "[page #{key}]" }.join("\n\n")
+               else pages
+               end
     HistoricalDiary::SourceDocuments::Paginator.new(raw_text)
   end
 
@@ -34,22 +38,22 @@ class TestSourceDocumentsPaginator < Test::Unit::TestCase
   end
 
   def test_invalid_header_no_number
-    paginator = instance('[test]')
+    paginator = instance('[page]')
     assert_equal({}, paginator.pages)
   end
 
   def test_invalid_header_page_number_whitespace
-    paginator = instance('[test  ]')
+    paginator = instance('[page  ]')
     assert_equal({}, paginator.pages)
   end
 
   def test_invalid_header_page_number_punctuation
-    paginator = instance('[test .]')
+    paginator = instance('[page .]')
     assert_equal({}, paginator.pages)
   end
 
   def test_bare_header_page
-    paginator = instance('[page 1]')
+    paginator = instance(%w[1])
     assert_equal({ '1' => nil }, paginator.pages)
   end
 
@@ -245,46 +249,46 @@ class TestSourceDocumentsPaginator < Test::Unit::TestCase
   end
 
   def test_single_valid_roman_numeral
-    assert_equal %w[ⅰ], instance('[page ⅰ]')['ⅰ']
+    assert_equal %w[ⅰ], instance(%w[ⅰ])['ⅰ']
   end
 
   def test_single_valid_western_arabic_numeral
-    assert_equal %w[1], instance('[page 1]')['1']
+    assert_equal %w[1], instance(%w[1])['1']
   end
 
   def test_single_valid_eastern_arabic_numeral
-    assert_equal %w[١], instance('[page ١]')['١']
+    assert_equal %w[١], instance(%w[١])['١']
   end
 
   def test_invalid_range_end
     assert_raise HistoricalDiary::SourceDocuments::InvalidPageRangeError do
-      instance('[page 1]')['1', '2']
+      instance(%w[1])['1', '2']
     end
   end
 
   def test_reversed_range
     assert_raise HistoricalDiary::SourceDocuments::InvalidPageRangeError do
-      instance("[page 1]\n[page 2]")['2', '1']
+      instance(%w[1 2])['2', '1']
     end
   end
 
   def test_simple_range
-    assert_equal %w[1 2], instance("[page 1]\n[page 2]")['1', '2']
+    assert_equal %w[1 2], instance(%w[1 2])['1', '2']
   end
 
   def test_skipped_range
-    assert_equal %w[1 2 3], instance("[page 1]\n[page 2]\n[page 3]")['1', '3']
+    assert_equal %w[1 2 3], instance(%w[1 2 3])['1', '3']
   end
 
   def test_middle_of_range
-    assert_equal %w[1 ١], instance("[page ⅰ]\n[page 1]\n[page ١]\n[page 3]")['1', '١']
+    assert_equal %w[1 2], instance(%w[ⅰ 1 2 3])['1', '2']
   end
 
   def test_cross_digit_set
-    assert_equal %w[ⅰ 1 ١], instance("[page ⅰ]\n[page 1]\n[page ١]")['ⅰ', '١']
+    assert_equal %w[ⅰ 1 ١], instance(%w[ⅰ 1 ١])['ⅰ', '١']
   end
 
   def test_gap_in_range
-    assert_equal %w[1 5], instance("[page 1]\n[page 5]")['1', '5']
+    assert_equal %w[1 5], instance(%w[1 5])['1', '5']
   end
 end
