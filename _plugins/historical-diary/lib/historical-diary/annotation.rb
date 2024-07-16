@@ -59,6 +59,8 @@ module HistoricalDiary
       return @text if processed?
 
       parsed_annotations.each do |pattern, replacement|
+        next if pattern.nil? || replacement.nil?
+
         @text.gsub! pattern, replacement
       end
       @processed = true
