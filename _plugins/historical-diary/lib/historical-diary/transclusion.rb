@@ -18,26 +18,27 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require 'cgi'
-
 module HistoricalDiary
   class InvalidTransclusionError < ArgumentError; end
 
   # Select a substring from `full_text`, using selectors to locate the
   # substring.
-
-  # Based on the  W3C's draft specification for Text Fragments. If the string
-  # doesn't contain the given Text Fragment methods will raise
+  #
+  # Based on the  W3C’s draft specification for Text Fragments. If the string
+  # doesn’t contain the given Text Fragment methods will raise
   # `InvalidTransclusionError`.
+  #
+  # @note This normalizes `full_text` and all selectors to Unicode NFC.
   class Transclusion
     def initialize(full_text, text_start:, text_end:, prefix: nil, suffix: nil)
-      raise ArgumentError unless full_text.is_a?(String)
+      raise InvalidTransclusionError, 'full_text must be a string' unless full_text.is_a?(String)
+      raise InvalidTransclusionError, 'text_start must be a string' unless text_start.is_a?(String)
 
-      @prefix = prefix
-      @text_start = text_start
-      @text_end = text_end
-      @suffix = suffix
-      @text = full_text.dup.strip
+      @prefix = sanitize_for_regexp(prefix)
+      @text_start = sanitize_for_regexp(text_start)
+      @text_end = sanitize_for_regexp(text_end)
+      @suffix = sanitize_for_regexp(suffix)
+      @text = normalize(full_text)
     end
 
     def text
@@ -45,32 +46,6 @@ module HistoricalDiary
 
       extract
     end
-
-    # Build a transclusion URL fragment.
-    #
-    # Syntax: `:~:text=[prefix-,]text_start[,text_end][,-suffix]`
-    #
-    # @see https://wicg.github.io/scroll-to-text-fragment/#syntax
-    def fragment
-      validate!
-
-      parts = [
-        text_start.first(EXACT_CUTOFF),
-        text_end,
-      ]
-      parts.unshift("#{prefix}-") unless prefix.nil?
-      parts.shift("-#{suffix}") unless suffix.nil?
-
-      encoded = parts.compact.map { CGI.escape _1 }
-                     .join ','
-      ":~:text=#{encoded}"
-    end
-
-    # > Text snippets shorter than 300 characters are encouraged to be encoded
-    # > using an exact match.
-    #
-    # @see https://wicg.github.io/scroll-to-text-fragment/#prefer-exact-matching-to-range-based
-    EXACT_CUTOFF = 300
 
     private
 
@@ -80,10 +55,16 @@ module HistoricalDiary
                 :prefix,
                 :suffix
 
+    def normalize(text)
+      text.dup.strip.unicode_normalize(:nfc)
+    rescue ArgumentError
+      raise InvalidTransclusionError, 'Invalid UTF-8'
+    end
+
     def validate!
       @valid = !extract.nil? if @valid.nil?
 
-      raise InvalidTransclusionError unless @valid
+      raise InvalidTransclusionError, 'pattern did not match text' unless @valid
     end
 
     def extract
@@ -91,23 +72,29 @@ module HistoricalDiary
 
       @extract = nil
       return if @text.nil?
-      return if @text.strip == ''
 
-      @extract = @text.match(pattern)&.to_s
+      match = @text.match(pattern)
+      return if match.nil?
+
+      @extract = match[:text]
+    end
+
+    def sanitize_for_regexp(text)
+      return if text.nil?
+
+      Regexp.escape(normalize(text))
     end
 
     def pattern
-      pattern_parts = [
-        Regexp.escape(text_start),
-      ]
-      unless text_end.nil?
-        pattern_parts << '.*?'
-        pattern_parts << Regexp.escape(text_end)
-      end
-      pattern_parts.unshift(Regexp.escape(prefix)) unless prefix.nil?
-      pattern_parts << Regexp.escape(suffix) unless suffix.nil?
+      text_pattern = text_start
+      text_pattern << ".*?#{text_end}" unless text_end.nil?
 
-      /#{pattern_parts.compact.join}/m
+      pattern_parts = "(?<text>#{text_pattern})"
+
+      pattern_parts.prepend("#{prefix}\\p{Space}*") unless prefix.nil?
+      pattern_parts << "\\p{Space}*#{suffix}" unless suffix.nil?
+
+      /#{pattern_parts}/m
     end
   end
 end
