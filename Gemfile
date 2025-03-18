@@ -31,3 +31,4 @@ gem 'rubocop', '~> 1.74.0'
 gem 'rubocop-performance', '~> 1.24.0'
 
 gem 'byebug', '~> 11.1.3'
+gem 'test-unit'
