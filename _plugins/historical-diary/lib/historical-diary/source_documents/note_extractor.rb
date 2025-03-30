@@ -18,8 +18,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #++
 
-require 'forwardable'
-require_relative '../source_document'
+# require 'forwardable'
+# require_relative '../source_document'
 require_relative '../transclusion'
 
 module HistoricalDiary
@@ -27,28 +27,36 @@ module HistoricalDiary
     # Extract notes from `document`’s text, rewriting pages to remove the note
     # text.
     #
-    # @note This class should be run after `Reflows`, because notes may have
-    # reflows.
+    # @note This class should be run after `Reflows`, because notes can be
+    #   reflowed.
     class NoteExtractor
-      extend Forwardable
-      def_delegators :document,
-                     :pages,
-                     :redactions
-
-      def initialize(document)
-        @document = document
+      def initialize(raw_pages, redactions:)
+        @has_processed = false
         @notes = {}
+        @raw_pages = raw_pages
+        @redactions = redactions
       end
 
       def notes
-        return @notes if @notes.any?
+        return @notes if processed?
 
         extract_and_rewrite!
+        @notes
+      end
+
+      def pages
+        return @raw_pages if processed?
+
+        extract_and_rewrite!
+        @raw_pages
       end
 
       private
 
-      attr_reader :document
+      attr_reader :raw_pages,
+                  :redactions
+
+      def processed? = @has_processed
 
       def extract_and_rewrite!
         return if redactions['notes'].nil?
@@ -58,7 +66,7 @@ module HistoricalDiary
             page_number = selector['page']&.to_s
             next memo if page_number.nil?
 
-            page_text = pages[page_number]
+            page_text = @raw_pages[page_number]
             next memo if page_text.nil?
 
             transclusion = Transclusion.new(page_text,
@@ -76,17 +84,22 @@ module HistoricalDiary
             (memo[:pages] ||= []) << page_number
             (memo[:text] ||= []) << text
 
-            pages[page_number] = pages[page_number].sub(/^\s*#{Regexp.escape(text)}\n?/, '')
+            prefix = selector['prefix'] ? "#{Regexp.escape(selector['prefix'])}\\p{Space}*" : ''
+            extraction_pattern = /^\p{Space}*#{prefix}#{Regexp.escape(text)}\n?/
+
+            @raw_pages[page_number] = @raw_pages[page_number].sub(extraction_pattern, '')
           end
 
           next if parsed.empty?
 
-          notes[key] = {
+          @notes[key] = {
             pages: parsed[:pages].uniq,
             symbol: parsed[:symbol]&.strip,
             text: parsed[:text].join(' ').delete_prefix(parsed[:symbol]),
           }
         end
+
+        @has_processed = true
       end
     end
   end
